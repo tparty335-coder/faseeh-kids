@@ -84,6 +84,7 @@ flutter:
     - assets/audio/stories/
     - assets/audio/feedback/
     - assets/audio/sfx/
+    - assets/audio/instructions/
     - assets/images/
     - assets/images/mascot/
     - assets/images/backgrounds/

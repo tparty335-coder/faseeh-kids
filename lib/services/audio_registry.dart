@@ -1,5 +1,7 @@
 /// Audio Registry — maps audio keys to asset file paths
-/// 28 Arabic letters × 7 variants = 196 letter entries + feedback entries
+/// 28 Arabic letters × 7 core variants = 196 letter entries
+/// + extended variants (harakat demos, positions, mudud)
+/// + feedback + SFX + instructions + stories
 class AudioRegistry {
   AudioRegistry._();
 
@@ -14,7 +16,7 @@ class AudioRegistry {
   ];
 
   // ═══════════════════════════════════════════
-  // Variant suffixes
+  // Core variant suffixes (required for every letter)
   // ═══════════════════════════════════════════
   static const List<String> variants = [
     'name',     // Letter name: ألف
@@ -26,14 +28,34 @@ class AudioRegistry {
     'sentence', // Example sentence
   ];
 
+  // ═══════════════════════════════════════════
+  // Extended variant suffixes (rich content from MOE CDs)
+  // ═══════════════════════════════════════════
+  static const List<String> extendedVariants = [
+    'fatha_demo',   // Extended fatha demonstration
+    'kasra_demo',   // Extended kasra demonstration
+    'damma_demo',   // Extended damma demonstration
+    'sukoon',       // With sukoon: بْ
+    'madd_alif',    // Madd with alif: بَا
+    'madd_demo',    // Full madd demonstration
+    'word2',        // Second example word
+    'word3',        // Third example word
+    'word4',        // Fourth example word
+    'pos_start',    // Letter at start of word
+    'pos_middle',   // Letter in middle of word
+    'pos_end',      // Letter at end of word
+  ];
+
   /// Master audio map: key -> asset path
   /// Keys follow pattern: {letter}_{variant}
-  /// e.g., 'alif_name' -> 'assets/audio/letters/alif_name.mp3'
   static final Map<String, String> audioMap = {
-    // ──── Letters (196 entries) ────
+    // ──── Core Letters (196 entries) ────
     ..._generateLetterEntries(),
 
-    // ──── Feedback Phrases (10 entries) ────
+    // ──── Extended Letters (available from MOE CDs) ────
+    ..._generateExtendedLetterEntries(),
+
+    // ──── Feedback Phrases (human voice from MOE CDs) ────
     'feedback_excellent': 'assets/audio/feedback/excellent.mp3',
     'feedback_great': 'assets/audio/feedback/great.mp3',
     'feedback_wonderful': 'assets/audio/feedback/wonderful.mp3',
@@ -54,13 +76,57 @@ class AudioRegistry {
     'sfx_level_up': 'assets/audio/sfx/level_up.mp3',
     'sfx_streak': 'assets/audio/sfx/streak.mp3',
     'sfx_celebration': 'assets/audio/sfx/celebration.mp3',
+
+    // ──── Alif Story & Exploration (from MOE CD) ────
+    'story_alif_welcome': 'assets/audio/stories/alif_welcome.mp3',
+    'story_alif_intro': 'assets/audio/stories/alif_intro.mp3',
+    'story_alif_goal': 'assets/audio/stories/alif_goal.mp3',
+    'story_alif_full': 'assets/audio/stories/alif_story_full.mp3',
+    'story_alif_harakat': 'assets/audio/stories/alif_harakat_full.mp3',
+    'story_alif_harakat_demo': 'assets/audio/stories/alif_harakat_demo.mp3',
+    'story_alif_mudud': 'assets/audio/stories/alif_mudud_full.mp3',
+    'story_alif_words': 'assets/audio/stories/alif_words_demo.mp3',
+    'story_alif_sentences': 'assets/audio/stories/alif_sentences_demo.mp3',
+    'story_alif_review': 'assets/audio/stories/alif_review.mp3',
+    for (int i = 1; i <= 9; i++)
+      'story_alif_explore_${i.toString().padLeft(2, "0")}':
+          'assets/audio/stories/alif_explore_${i.toString().padLeft(2, "0")}.mp3',
+
+    // ──── Alif Tracing Instructions (from MOE CD) ────
+    for (int i = 1; i <= 20; i++)
+      'instr_alif_trace_${i.toString().padLeft(2, "0")}':
+          'assets/audio/instructions/alif_trace_step_${i.toString().padLeft(2, "0")}.mp3',
+    'instr_alif_trace_full': 'assets/audio/instructions/alif_trace_full.mp3',
+    'instr_alif_trace_praise': 'assets/audio/instructions/alif_trace_praise.mp3',
+
+    // ──── Alif Quiz/Game Instructions (from MOE CD) ────
+    'instr_alif_quiz_bee': 'assets/audio/instructions/alif_quiz_bee_intro.mp3',
+    'instr_alif_quiz_bee_explain': 'assets/audio/instructions/alif_quiz_bee_explain.mp3',
+    'instr_alif_quiz_circle': 'assets/audio/instructions/alif_quiz_circle_intro.mp3',
+    'instr_alif_quiz_fish': 'assets/audio/instructions/alif_quiz_fish_intro.mp3',
+    'instr_alif_quiz_fish_explain': 'assets/audio/instructions/alif_quiz_fish_explain.mp3',
+    'instr_alif_paint': 'assets/audio/instructions/alif_paint_intro.mp3',
+    'instr_alif_paint_explain': 'assets/audio/instructions/alif_paint_explain.mp3',
+    'instr_alif_words': 'assets/audio/instructions/alif_words_intro.mp3',
   };
 
-  /// Generate all letter audio entries programmatically
+  /// Generate core letter audio entries programmatically
   static Map<String, String> _generateLetterEntries() {
     final entries = <String, String>{};
     for (final letter in letterKeys) {
       for (final variant in variants) {
+        final key = '${letter}_$variant';
+        entries[key] = 'assets/audio/letters/$key.mp3';
+      }
+    }
+    return entries;
+  }
+
+  /// Generate extended letter audio entries (MOE CD content)
+  static Map<String, String> _generateExtendedLetterEntries() {
+    final entries = <String, String>{};
+    for (final letter in letterKeys) {
+      for (final variant in extendedVariants) {
         final key = '${letter}_$variant';
         entries[key] = 'assets/audio/letters/$key.mp3';
       }
@@ -74,9 +140,40 @@ class AudioRegistry {
   /// Check if an audio key exists
   static bool hasKey(String key) => audioMap.containsKey(key);
 
-  /// Get all keys for a specific letter
+  /// Get all core keys for a specific letter
   static List<String> keysForLetter(String letterKey) {
     return variants.map((v) => '${letterKey}_$v').toList();
+  }
+
+  /// Get all keys (core + extended) for a specific letter
+  static List<String> allKeysForLetter(String letterKey) {
+    final keys = <String>[];
+    for (final v in variants) {
+      keys.add('${letterKey}_$v');
+    }
+    for (final v in extendedVariants) {
+      keys.add('${letterKey}_$v');
+    }
+    return keys;
+  }
+
+  /// Get tracing instruction keys for a letter
+  static List<String> tracingKeysForLetter(String letterKey) {
+    final keys = <String>[];
+    for (int i = 1; i <= 20; i++) {
+      final key = 'instr_${letterKey}_trace_${i.toString().padLeft(2, "0")}';
+      if (audioMap.containsKey(key)) {
+        keys.add(key);
+      }
+    }
+    return keys;
+  }
+
+  /// Get story/exploration keys for a letter
+  static List<String> storyKeysForLetter(String letterKey) {
+    return audioMap.keys
+        .where((k) => k.startsWith('story_$letterKey'))
+        .toList();
   }
 
   /// Total number of audio entries
