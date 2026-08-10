@@ -49,10 +49,13 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
       child: Scaffold(
         backgroundColor: AppColors.backgroundDay,
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              children: [
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  children: [
                 Align(
                   alignment: Alignment.topRight,
                   child: IconButton(
@@ -181,6 +184,8 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                 ),
               ],
             ),
+          ),
+          ),
           ),
         ),
       ),

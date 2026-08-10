@@ -110,13 +110,30 @@ class AudioRegistry {
     'instr_alif_words': 'assets/audio/instructions/alif_words_intro.mp3',
   };
 
+  /// Get the correct subdirectory for a given variant
+  static String _getFolderForVariant(String variant) {
+    if (['name', 'sound', 'pos_start', 'pos_middle', 'pos_end'].contains(variant)) {
+      return 'core';
+    } else if (['fatha', 'kasra', 'damma', 'sukoon'].contains(variant)) {
+      return 'short_vowels';
+    } else if (['word', 'word2', 'word3', 'word4'].contains(variant)) {
+      return 'words';
+    } else if (['sentence', 'fatha_demo', 'kasra_demo', 'damma_demo'].contains(variant)) {
+      return 'phrases';
+    } else if (['madd_alif', 'madd_demo'].contains(variant)) {
+      return 'long_vowels';
+    }
+    return 'core';
+  }
+
   /// Generate core letter audio entries programmatically
   static Map<String, String> _generateLetterEntries() {
     final entries = <String, String>{};
     for (final letter in letterKeys) {
       for (final variant in variants) {
         final key = '${letter}_$variant';
-        entries[key] = 'assets/audio/letters/$key.mp3';
+        final folder = _getFolderForVariant(variant);
+        entries[key] = 'assets/audio/letters/$folder/$key.mp3';
       }
     }
     return entries;
@@ -128,7 +145,8 @@ class AudioRegistry {
     for (final letter in letterKeys) {
       for (final variant in extendedVariants) {
         final key = '${letter}_$variant';
-        entries[key] = 'assets/audio/letters/$key.mp3';
+        final folder = _getFolderForVariant(variant);
+        entries[key] = 'assets/audio/letters/$folder/$key.mp3';
       }
     }
     return entries;

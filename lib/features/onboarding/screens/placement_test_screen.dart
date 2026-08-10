@@ -328,7 +328,7 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
 
                   SizedBox(
                     width: 200,
-                    height: 56,
+                    height: 64,
                     child: ElevatedButton(
                       onPressed: _finishTest,
                       style: ElevatedButton.styleFrom(

@@ -81,13 +81,10 @@ class AppRouter {
   static const String placementTest = '/placement-test';
   static const String homeMap = '/home';
   static const String lesson = '/lesson/:lessonId';
-  static const String activity = '/activity/:activityId';
   static const String celebration = '/celebration';
   static const String parentGate = '/parent-gate';
   static const String parentDashboard = '/parent-dashboard';
   static const String progressReport = '/progress-report';
-  static const String settings = '/settings';
-  static const String profileManagement = '/profile-management';
   static const String rewardsStore = '/rewards-store';
   static const String profile = '/profile';
   static const String storyReader = '/story/:storyId';

@@ -63,15 +63,20 @@ class ListenActivityScreen extends ConsumerWidget {
         const SizedBox(height: 40),
         
         // Vowels
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _VowelButton(letter: letter.letter, vowel: 'َ', variant: 'fatha', letterKey: key, fontSize: vowelFontSize),
-            const SizedBox(width: 20),
-            _VowelButton(letter: letter.letter, vowel: 'ِ', variant: 'kasra', letterKey: key, fontSize: vowelFontSize),
-            const SizedBox(width: 20),
-            _VowelButton(letter: letter.letter, vowel: 'ُ', variant: 'damma', letterKey: key, fontSize: vowelFontSize),
-          ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _VowelButton(letter: letter.letter, vowel: 'َ', variant: 'fatha', letterKey: key, fontSize: vowelFontSize),
+              const SizedBox(width: 20),
+              _VowelButton(letter: letter.letter, vowel: 'ِ', variant: 'kasra', letterKey: key, fontSize: vowelFontSize),
+              const SizedBox(width: 20),
+              _VowelButton(letter: letter.letter, vowel: 'ُ', variant: 'damma', letterKey: key, fontSize: vowelFontSize),
+              const SizedBox(width: 20),
+              _VowelButton(letter: letter.letter, vowel: 'ْ', variant: 'sukoon', letterKey: key, fontSize: vowelFontSize),
+            ],
+          ),
         ).animate().fadeIn(delay: 300.ms),
         
         const Spacer(),

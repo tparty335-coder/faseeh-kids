@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive/hive.dart';
 
 // Mocks to allow compilation if models are missing
 class ParentSettings {
@@ -60,8 +61,11 @@ final parentSettingsProvider = NotifierProvider<ParentSettingsNotifier, ParentSe
 );
 
 final childProfilesProvider = StateProvider<List<ChildProfile>>((ref) {
+  final box = Hive.box('app_settings');
+  final name = box.get('child_name', defaultValue: 'طفل');
+  final age = box.get('child_age', defaultValue: 6);
   return [
-    const ChildProfile(id: '1', name: 'أحمد', age: 6, avatar: 'avatar1.png'),
+    ChildProfile(id: '1', name: name as String, age: age as int, avatar: 'avatar1.png'),
   ];
 });
 

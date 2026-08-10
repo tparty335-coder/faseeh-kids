@@ -7,6 +7,9 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/screens/listen_activity_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/trace_activity_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/words_activity_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/positions_activity_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/long_vowels_activity_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/phrases_activity_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/quiz_activity_screen.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -132,38 +135,68 @@ class LetterLessonScreen extends ConsumerWidget {
                   ),
                 ],
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _ActivityButton(
-                    iconData: Icons.volume_up_rounded,
-                    label: 'استمع',
-                    isActive: lessonState.currentActivity == LessonActivity.listen,
-                    isCompleted: lessonState.completedActivities > 0,
-                    onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.listen),
-                  ),
-                  _ActivityButton(
-                    iconData: Icons.edit_rounded,
-                    label: 'اكتب',
-                    isActive: lessonState.currentActivity == LessonActivity.trace,
-                    isCompleted: lessonState.completedActivities > 1,
-                    onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.trace),
-                  ),
-                  _ActivityButton(
-                    iconData: Icons.auto_stories_rounded,
-                    label: 'كلمات',
-                    isActive: lessonState.currentActivity == LessonActivity.words,
-                    isCompleted: lessonState.completedActivities > 2,
-                    onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.words),
-                  ),
-                  _ActivityButton(
-                    iconData: Icons.extension_rounded,
-                    label: 'تمرين',
-                    isActive: lessonState.currentActivity == LessonActivity.quiz,
-                    isCompleted: lessonState.completedActivities > 3,
-                    onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.quiz),
-                  ),
-                ],
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    _ActivityButton(
+                      iconData: Icons.volume_up_rounded,
+                      label: 'استمع',
+                      isActive: lessonState.currentActivity == LessonActivity.listen,
+                      isCompleted: lessonState.completedActivities > 0,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.listen),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.edit_rounded,
+                      label: 'اكتب',
+                      isActive: lessonState.currentActivity == LessonActivity.trace,
+                      isCompleted: lessonState.completedActivities > 1,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.trace),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.auto_stories_rounded,
+                      label: 'كلمات',
+                      isActive: lessonState.currentActivity == LessonActivity.words,
+                      isCompleted: lessonState.completedActivities > 2,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.words),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.text_rotation_none_rounded,
+                      label: 'أوضاع',
+                      isActive: lessonState.currentActivity == LessonActivity.positions,
+                      isCompleted: lessonState.completedActivities > 3,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.positions),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.straighten_rounded,
+                      label: 'مدود',
+                      isActive: lessonState.currentActivity == LessonActivity.longVowels,
+                      isCompleted: lessonState.completedActivities > 4,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.longVowels),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.format_quote_rounded,
+                      label: 'جمل',
+                      isActive: lessonState.currentActivity == LessonActivity.phrases,
+                      isCompleted: lessonState.completedActivities > 5,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.phrases),
+                    ),
+                    const SizedBox(width: 8),
+                    _ActivityButton(
+                      iconData: Icons.extension_rounded,
+                      label: 'تمرين',
+                      isActive: lessonState.currentActivity == LessonActivity.quiz,
+                      isCompleted: lessonState.completedActivities > 6,
+                      onTap: () => ref.read(currentLessonProvider.notifier).setActivity(LessonActivity.quiz),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -180,6 +213,12 @@ class LetterLessonScreen extends ConsumerWidget {
         return const TraceActivityScreen();
       case LessonActivity.words:
         return const WordsActivityScreen();
+      case LessonActivity.positions:
+        return const PositionsActivityScreen();
+      case LessonActivity.longVowels:
+        return const LongVowelsActivityScreen();
+      case LessonActivity.phrases:
+        return const PhrasesActivityScreen();
       case LessonActivity.quiz:
         return const QuizActivityScreen();
     }

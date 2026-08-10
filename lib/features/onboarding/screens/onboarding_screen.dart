@@ -79,7 +79,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: const Text(
                     'تخطي',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 22,
                       color: AppColors.textSecondaryDay,
                     ),
                   ),
@@ -127,7 +127,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: SizedBox(
                   width: 200,
-                  height: 56,
+                  height: 64,
                   child: ElevatedButton(
                     onPressed: _nextPage,
                     style: ElevatedButton.styleFrom(
@@ -141,8 +141,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Text(
                       isLastPage ? 'ابدأ المغامرة!' : 'التالي',
                       style: const TextStyle(
-                        fontSize: 20,
+                        fontSize: 22,
                         fontWeight: FontWeight.w700,
+                        height: 1.2,
                       ),
                     ),
                   ),
@@ -175,7 +176,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // Illustration area with real falcon mascot image
           Builder(
             builder: (context) {
-              final size = (MediaQuery.sizeOf(context).width * 0.45).clamp(140.0, 220.0);
+              final size = (MediaQuery.sizeOf(context).width * 0.45).clamp(180.0, 320.0);
               return Container(
                 width: size,
                 height: size,
@@ -210,7 +211,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             page.title,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 28,
+              fontSize: 36,
               fontWeight: FontWeight.w700,
               color: AppColors.textPrimaryDay,
             ),
@@ -226,7 +227,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             page.subtitle,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 16,
+              fontSize: 22,
               height: 1.6,
               color: AppColors.textSecondaryDay,
             ),
