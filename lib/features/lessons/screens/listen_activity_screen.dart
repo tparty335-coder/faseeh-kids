@@ -5,6 +5,7 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:faseeh_kids/services/audio_manager.dart';
+import 'package:faseeh_kids/services/audio_registry.dart';
 
 class ListenActivityScreen extends ConsumerWidget {
   const ListenActivityScreen({super.key});
@@ -16,17 +17,23 @@ class ListenActivityScreen extends ConsumerWidget {
 
     if (letter == null) return const SizedBox.shrink();
 
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final circleSize = (screenWidth * 0.55).clamp(160.0, 280.0);
+    final letterFontSize = (circleSize * 0.6).clamp(60.0, 170.0);
+    final vowelFontSize = (screenWidth * 0.1).clamp(28.0, 56.0);
+    final key = AudioRegistry.letterKeyFromChar(letter.letter);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         // Huge Letter
         GestureDetector(
           onTap: () {
-            AudioManager.instance.speakText('حرف ${letter.name}');
+            AudioManager.instance.playLetterAudio(key, 'name');
           },
           child: Container(
-            width: 250,
-            height: 250,
+            width: circleSize,
+            height: circleSize,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.white,
@@ -41,9 +48,10 @@ class ListenActivityScreen extends ConsumerWidget {
             child: Center(
               child: Text(
                 letter.letter,
-                style: const TextStyle(
-                  fontSize: 150,
+                style: TextStyle(
+                  fontSize: letterFontSize,
                   color: AppColors.desertSand,
+                  fontFamily: 'Cairo',
                   height: 1,
                 ),
               ),
@@ -58,11 +66,11 @@ class ListenActivityScreen extends ConsumerWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _VowelButton(letter: letter.letter, vowel: 'َ', sound: 'Fatha'),
+            _VowelButton(letter: letter.letter, vowel: 'َ', variant: 'fatha', letterKey: key, fontSize: vowelFontSize),
             const SizedBox(width: 20),
-            _VowelButton(letter: letter.letter, vowel: 'ِ', sound: 'Kasra'),
+            _VowelButton(letter: letter.letter, vowel: 'ِ', variant: 'kasra', letterKey: key, fontSize: vowelFontSize),
             const SizedBox(width: 20),
-            _VowelButton(letter: letter.letter, vowel: 'ُ', sound: 'Damma'),
+            _VowelButton(letter: letter.letter, vowel: 'ُ', variant: 'damma', letterKey: key, fontSize: vowelFontSize),
           ],
         ).animate().fadeIn(delay: 300.ms),
         
@@ -102,12 +110,16 @@ class ListenActivityScreen extends ConsumerWidget {
 class _VowelButton extends StatelessWidget {
   final String letter;
   final String vowel;
-  final String sound;
+  final String variant;
+  final String letterKey;
+  final double fontSize;
 
   const _VowelButton({
     required this.letter,
     required this.vowel,
-    required this.sound,
+    required this.variant,
+    required this.letterKey,
+    required this.fontSize,
   });
 
   @override
@@ -123,17 +135,16 @@ class _VowelButton extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Text(
             '$letter$vowel',
-            style: const TextStyle(fontSize: 48, color: AppColors.skyBlue),
+            style: TextStyle(fontSize: fontSize, color: AppColors.skyBlue, fontFamily: 'Cairo'),
           ),
         ),
         const SizedBox(height: 8),
         IconButton(
           icon: const Icon(Icons.volume_up, color: AppColors.desertSand),
           onPressed: () {
-            AudioManager.instance.speakText('$letter$vowel');
+            AudioManager.instance.playLetterAudio(letterKey, variant);
           },
         ),
-        const Text('👄', style: TextStyle(fontSize: 24)),
       ],
     );
   }

@@ -19,6 +19,11 @@ class ProfileScreen extends ConsumerWidget {
     final badges = ref.watch(badgesProvider);
     
     final earnedBadgesCount = badges.where((b) => b.isEarned).length;
+    
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final avatarSize = (screenWidth * 0.25).clamp(80.0, 160.0);
+    final avatarFontSize = (avatarSize * 0.5).clamp(40.0, 80.0);
+    final ringSize = (screenWidth * 0.2).clamp(60.0, 100.0);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -45,15 +50,15 @@ class ProfileScreen extends ConsumerWidget {
                   alignment: Alignment.bottomRight,
                   children: [
                     Container(
-                      width: 120,
-                      height: 120,
+                      width: avatarSize,
+                      height: avatarSize,
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.2),
                         shape: BoxShape.circle,
                         border: Border.all(color: AppColors.primary, width: 4),
                       ),
-                      child: const Center(
-                        child: Text('👦', style: TextStyle(fontSize: 64)),
+                      child: Center(
+                        child: Text('👦', style: TextStyle(fontSize: avatarFontSize)),
                       ),
                     ).animate().scale(duration: const Duration(milliseconds: 500), curve: Curves.easeOutBack),
                     Container(
@@ -98,8 +103,8 @@ class ProfileScreen extends ConsumerWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 80,
-                      height: 80,
+                      width: ringSize,
+                      height: ringSize,
                       child: Stack(
                         alignment: Alignment.center,
                         children: [

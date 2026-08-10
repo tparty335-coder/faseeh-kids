@@ -63,6 +63,7 @@ dependencies:
 
   # ─── Existing Dependencies (kept) ───
   cupertino_icons: ^1.0.8
+  purchases_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:
@@ -79,12 +80,25 @@ flutter:
 
   # ─── Assets (P0-T050) ───
   assets:
-    - assets/audio/letters/
-    - assets/audio/words/
+    # Letters — core identity (name, sound, positions)
+    - assets/audio/letters/core/
+    # Letters — short vowels (fatha, kasra, damma, sukoon) = phoneme layer
+    - assets/audio/letters/short_vowels/
+    # Letters — long vowels / mudud (maad) = blending layer
+    - assets/audio/letters/long_vowels/
+    # Letters — vocabulary words per letter
+    - assets/audio/letters/words/
+    # Letters — demo sentences and harakat demonstrations
+    - assets/audio/letters/phrases/
+    # Narrated stories and exploration audio
     - assets/audio/stories/
+    # Feedback & encouragement sounds (correct, try_again, excellent...)
     - assets/audio/feedback/
-    - assets/audio/sfx/
+    # Game & activity instructions
     - assets/audio/instructions/
+    # UI sound effects
+    - assets/audio/sfx/
+    # Images
     - assets/images/
     - assets/images/mascot/
     - assets/images/backgrounds/

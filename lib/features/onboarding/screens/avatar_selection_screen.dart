@@ -35,10 +35,10 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
     if (_selectedIndex == null) return;
     context.go(
       AppRouter.nameInput,
-      extra: {
-        'ageGroup': widget.ageGroup ?? AgeGroup.preschool3to5,
-        'avatarIndex': _selectedIndex,
-      },
+      extra: NameInputArgs(
+        ageGroup: widget.ageGroup ?? AgeGroup.preschool3to5,
+        avatarIndex: _selectedIndex!,
+      ),
     );
   }
 

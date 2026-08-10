@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
+import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class WordsActivityScreen extends ConsumerWidget {
@@ -129,7 +130,11 @@ class _WordCard extends StatelessWidget {
             child: IconButton(
               icon: const Icon(Icons.volume_up, color: AppColors.skyBlue, size: 32),
               onPressed: () {
-                AudioManager.instance.speakText(word);
+                // Use playByKey with fallback to TTS for the word
+                AudioManager.instance.playByKey(
+                  '${AudioRegistry.letterKeyFromChar(targetLetter)}_word',
+                  fallbackText: word,
+                );
               },
             ),
           ),

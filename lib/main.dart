@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:faseeh_kids/firebase_options.dart';
 import 'package:faseeh_kids/core/theme/app_theme.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/storage/hive_init.dart';
+import 'package:faseeh_kids/services/revenue_cat_service.dart';
 
 /// فصيح الصغار — Faseeh Kids
 /// Arabic Language Learning App for Children (3-10 years)
@@ -28,10 +33,26 @@ void main() async {
   // Initialize Hive local database
   await HiveInit.init();
 
-  // TODO: Initialize Firebase (Phase 10)
-  // await Firebase.initializeApp();
+  // ──── Firebase Initialization ────
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
-  // Run the app wrapped in ProviderScope for Riverpod
+  // ──── RevenueCat Initialization ────
+  await RevenueCatService.instance.init();
+
+  // ──── Crashlytics: Catch all Flutter errors ────
+  FlutterError.onError = (errorDetails) {
+    FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+  };
+
+  // ──── Crashlytics: Catch async errors outside Flutter framework ────
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+
+  // Run the app inside a zone to catch any remaining errors
   runApp(
     const ProviderScope(
       child: FaseehKidsApp(),

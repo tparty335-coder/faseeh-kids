@@ -5,6 +5,7 @@ import 'package:faseeh_kids/core/theme/app_colors.dart';
 import '../logic/parent_provider.dart';
 import '../widgets/settings_toggle.dart';
 
+import 'package:faseeh_kids/features/rewards/logic/rewards_provider.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 
 class ParentDashboardScreen extends ConsumerWidget {
@@ -94,14 +95,17 @@ class ParentDashboardScreen extends ConsumerWidget {
                           ],
                         ),
                         const Divider(),
-                        const ListTile(
+                        ListTile(
                           contentPadding: EdgeInsets.zero,
-                          leading: Icon(Icons.star, color: Colors.orange),
-                          title: Text('الحروف المتقنة'),
-                          trailing: Text('١٢ / ٢٨', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                          leading: const Icon(Icons.star, color: Colors.orange),
+                          title: const Text('الحروف المتقنة'),
+                          trailing: Text(
+                            '${ref.watch(progressStatsProvider).lettersMastered} / ٢٨',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
                         ),
                         LinearProgressIndicator(
-                          value: 12 / 28,
+                          value: ref.watch(progressStatsProvider).completionPercentage,
                           backgroundColor: Colors.grey.shade200,
                           color: Colors.green,
                           minHeight: 8,
@@ -111,9 +115,9 @@ class ParentDashboardScreen extends ConsumerWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            _buildStatItem('الوقت', '٤٥ دقيقة', Icons.timer),
-                            _buildStatItem('الدقة', '٪٨٥', Icons.check_circle),
-                            _buildStatItem('الاستمرارية', '٣ أيام', Icons.local_fire_department),
+                            _buildStatItem('الوقت', '${ref.watch(progressStatsProvider).lettersMastered * 5} دقيقة', Icons.timer),
+                            _buildStatItem('الدقة', '${(ref.watch(progressStatsProvider).completionPercentage * 100).toInt()}%', Icons.check_circle),
+                            _buildStatItem('الاستمرارية', '${ref.watch(streakProvider)} أيام', Icons.local_fire_department),
                           ],
                         ),
                       ],

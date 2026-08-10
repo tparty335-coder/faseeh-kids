@@ -6,6 +6,7 @@ import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
+import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 import 'dart:math';
 
 class QuizActivityScreen extends ConsumerStatefulWidget {
@@ -81,7 +82,11 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
           _generateOptions();
         } else {
           ref.read(currentLessonProvider.notifier).completeCurrentActivity();
-          // Lesson complete!
+          // Unlock next letter in the map!
+          final letter = ref.read(currentLessonProvider).letter;
+          if (letter != null) {
+            ref.read(unlockedUnitsProvider.notifier).unlockNext(letter.letter);
+          }
         }
       });
     } else {
@@ -96,6 +101,11 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
 
     if (letter == null || _options.isEmpty) return const SizedBox.shrink();
 
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final optionSize = (screenWidth * 0.2).clamp(72.0, 140.0);
+    final optionFontSize = (optionSize * 0.5).clamp(32.0, 72.0);
+    final titleFontSize = (screenWidth * 0.08).clamp(24.0, 48.0);
+
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -104,10 +114,11 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
           children: [
             Text(
               'أين حرف ${letter.letter}؟',
-              style: const TextStyle(
-                fontSize: 40,
+              style: TextStyle(
+                fontSize: titleFontSize,
                 fontWeight: FontWeight.bold,
                 color: AppColors.desertSand,
+                fontFamily: 'Cairo',
               ),
             ),
             const SizedBox(height: 8),
@@ -134,8 +145,8 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                   onTap: () => _onOptionSelected(option),
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 300),
-                    width: 120,
-                    height: 120,
+                    width: optionSize,
+                    height: optionSize,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: isCorrectChoice 
@@ -155,7 +166,8 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                       child: Text(
                         option,
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: optionFontSize,
+                          fontFamily: 'Cairo',
                           color: isSelected ? Colors.white : AppColors.skyBlue,
                         ),
                       ),
@@ -178,6 +190,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Cairo',
                   color: _isCorrect == true ? AppColors.oasisGreen : Colors.orange,
                 ),
               ),

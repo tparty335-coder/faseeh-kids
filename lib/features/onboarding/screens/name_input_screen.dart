@@ -28,11 +28,11 @@ class _NameInputScreenState extends State<NameInputScreen> {
     if (_formKey.currentState?.validate() ?? false) {
       context.go(
         AppRouter.placementTest,
-        extra: {
-          'ageGroup': widget.ageGroup,
-          'avatarIndex': widget.avatarIndex,
-          'name': _controller.text.trim(),
-        },
+        extra: PlacementTestArgs(
+          ageGroup: widget.ageGroup,
+          avatarIndex: widget.avatarIndex,
+          childName: _controller.text.trim(),
+        ),
       );
     }
   }

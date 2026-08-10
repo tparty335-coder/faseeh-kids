@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/screens/listen_activity_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/trace_activity_screen.dart';
@@ -10,6 +11,7 @@ import 'package:faseeh_kids/features/lessons/screens/quiz_activity_screen.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:faseeh_kids/services/audio_manager.dart';
+import 'package:faseeh_kids/services/audio_registry.dart';
 
 class LetterLessonScreen extends ConsumerWidget {
   const LetterLessonScreen({super.key});
@@ -27,6 +29,7 @@ class LetterLessonScreen extends ConsumerWidget {
     }
 
     final progress = ref.watch(lessonProgressProvider);
+    final key = AudioRegistry.letterKeyFromChar(letter.letter);
 
     return Directionality(
       textDirection: TextDirection.rtl,
@@ -39,6 +42,14 @@ class LetterLessonScreen extends ConsumerWidget {
             icon: const Icon(Icons.arrow_back, color: AppColors.desertSand),
             onPressed: () => context.pop(),
           ),
+          actions: [
+            // 🏠 Home Button — Fix #4
+            IconButton(
+              icon: const Icon(Icons.home_rounded, color: AppColors.desertSand, size: 28),
+              tooltip: 'الرئيسية',
+              onPressed: () => context.go(AppRouter.homeMap),
+            ),
+          ],
           title: Row(
             children: [
               Expanded(
@@ -78,6 +89,7 @@ class LetterLessonScreen extends ConsumerWidget {
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                       color: AppColors.desertSand,
+                      fontFamily: 'Cairo',
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -89,7 +101,8 @@ class LetterLessonScreen extends ConsumerWidget {
                     child: IconButton(
                       icon: const Icon(Icons.volume_up, color: AppColors.skyBlue, size: 32),
                       onPressed: () {
-                        AudioManager.instance.speakText('حرف ${letter.name}');
+                        // Fix #1: Use playLetterAudio instead of speakText
+                        AudioManager.instance.playLetterAudio(key, 'name');
                       },
                     ),
                   ).animate().scale(delay: 200.ms, duration: 300.ms),

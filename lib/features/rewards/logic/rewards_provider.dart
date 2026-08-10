@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 
 class BadgeModel {
   final String id;
@@ -30,7 +31,29 @@ class ProgressStats {
   });
 }
 
+final progressStatsProvider = Provider<ProgressStats>((ref) {
+  final unlocked = ref.watch(unlockedUnitsProvider);
+  final count = unlocked.length;
+  return ProgressStats(
+    lettersMastered: count,
+    completionPercentage: (count / 28.0).clamp(0.0, 1.0),
+  );
+});
+
+final xpProvider = Provider<int>((ref) {
+  final unlocked = ref.watch(unlockedUnitsProvider);
+  return unlocked.length * 50;
+});
+
+final streakProvider = Provider<int>((ref) {
+  final unlocked = ref.watch(unlockedUnitsProvider);
+  return (unlocked.length / 2).ceil().clamp(1, 30);
+});
+
 final badgesProvider = Provider<List<BadgeModel>>((ref) {
+  final unlocked = ref.watch(unlockedUnitsProvider);
+  final count = unlocked.length;
+
   return [
     BadgeModel(
       id: 'explorer',
@@ -38,8 +61,8 @@ final badgesProvider = Provider<List<BadgeModel>>((ref) {
       name: 'المكتشف',
       description: 'أكملت اختبار تحديد المستوى بنجاح!',
       category: 'إنجازات',
-      isEarned: true,
-      dateEarned: DateTime.now().subtract(const Duration(days: 5)),
+      isEarned: count >= 1,
+      dateEarned: count >= 1 ? DateTime.now() : null,
     ),
     BadgeModel(
       id: 'alif_star',
@@ -47,8 +70,8 @@ final badgesProvider = Provider<List<BadgeModel>>((ref) {
       name: 'نجم الألف',
       description: 'أتقنت الحرف الأول',
       category: 'أحرف',
-      isEarned: true,
-      dateEarned: DateTime.now().subtract(const Duration(days: 2)),
+      isEarned: unlocked.contains('أ'),
+      dateEarned: unlocked.contains('أ') ? DateTime.now() : null,
     ),
     BadgeModel(
       id: 'daily_flame',
@@ -56,51 +79,35 @@ final badgesProvider = Provider<List<BadgeModel>>((ref) {
       name: 'مشعل اليوم',
       description: 'تعلمت لـ 3 أيام متتالية',
       category: 'مثابرة',
-      isEarned: true,
-      dateEarned: DateTime.now(),
+      isEarned: count >= 3,
+      dateEarned: count >= 3 ? DateTime.now() : null,
     ),
-    const BadgeModel(
+    BadgeModel(
       id: 'weekly_champion',
       icon: '🏆',
       name: 'بطل الأسبوع',
       description: 'تعلمت لـ 7 أيام متتالية',
       category: 'مثابرة',
+      isEarned: count >= 7,
+      dateEarned: count >= 7 ? DateTime.now() : null,
     ),
-    const BadgeModel(
-      id: 'little_reader',
-      icon: '📚',
-      name: 'قارئ صغير',
-      description: 'أكملت قصتك الأولى',
-      category: 'إنجازات',
-    ),
-    const BadgeModel(
+    BadgeModel(
       id: 'letter_expert',
       icon: '🎯',
       name: 'خبير الحروف',
       description: 'أتقنت 10 حروف',
       category: 'أحرف',
+      isEarned: count >= 10,
+      dateEarned: count >= 10 ? DateTime.now() : null,
     ),
-    const BadgeModel(
+    BadgeModel(
       id: 'diamond',
       icon: '💎',
       name: 'الماسي',
       description: 'أتقنت جميع الحروف الـ 28',
       category: 'أحرف',
+      isEarned: count >= 28,
+      dateEarned: count >= 28 ? DateTime.now() : null,
     ),
   ];
-});
-
-final xpProvider = Provider<int>((ref) {
-  return 1540;
-});
-
-final streakProvider = Provider<int>((ref) {
-  return 4;
-});
-
-final progressStatsProvider = Provider<ProgressStats>((ref) {
-  return const ProgressStats(
-    lettersMastered: 3,
-    completionPercentage: 0.15,
-  );
 });

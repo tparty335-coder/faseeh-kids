@@ -211,4 +211,14 @@ class AudioRegistry {
     'qaaf': 'قِطَّة', 'kaaf': 'كَلْب', 'laam': 'لَيْمُون', 'meem': 'مَوْز',
     'noon': 'نَحْلَة', 'haa': 'هِلَال', 'waaw': 'وَرْدَة', 'yaa': 'يَد',
   };
+  /// Reverse lookup: Arabic character → registry key (cached)
+  static final Map<String, String> _charToKey = {
+    for (final entry in letterCharsArabic.entries) entry.value: entry.key,
+  };
+
+  /// Convert Arabic letter character to its AudioRegistry key
+  /// e.g., 'أ' → 'alif', 'ب' → 'baa'
+  static String letterKeyFromChar(String letterChar) {
+    return _charToKey[letterChar] ?? 'alif';
+  }
 }

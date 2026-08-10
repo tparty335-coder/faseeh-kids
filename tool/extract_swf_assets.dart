@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:convert';
 import 'dart:typed_data';
 
 class ExtractedAssetReport {
@@ -74,8 +75,18 @@ Future<ExtractedAssetReport> processSwfFile(File swfFile, Directory audioOutDir,
   if (sig == 'CWS') {
     final uncompressedLength = bytes[4] | (bytes[5] << 8) | (bytes[6] << 16) | (bytes[7] << 24);
     final compressedPayload = bytes.sublist(8);
-    final rawZlib = ZLibCodec(raw: false);
-    final decompressed = rawZlib.decode(compressedPayload);
+    final decompressedBuilder = BytesBuilder();
+    final sink = zlib.decoder.startChunkedConversion(
+      ChunkedConversionSink<List<int>>.withCallback((chunks) {
+        for (final chunk in chunks) decompressedBuilder.add(chunk);
+      }),
+    );
+    try {
+      sink.add(compressedPayload);
+      sink.close();
+    } catch (_) {}
+
+    final decompressed = decompressedBuilder.toBytes();
     final builder = BytesBuilder();
     builder.add([0x46, 0x57, 0x53, bytes[3]]);
     builder.add([
@@ -99,12 +110,10 @@ Future<ExtractedAssetReport> processSwfFile(File swfFile, Directory audioOutDir,
     );
   }
 
-  // Parse SWF tags
-  int bitOffset = 8 * 8;
-  int nbits = (swfBytes[bitOffset >> 3] >> (8 - 5)) & 0x1F;
-  bitOffset += 5 + 4 * nbits;
-  int pos = (bitOffset + 7) >> 3;
-  pos += 4; // frame rate + frame count
+  // Parse SWF header and RECT bounds
+  final int nbits = swfBytes[8] >> 3;
+  final int rectBytes = (5 + 4 * nbits + 7) ~/ 8;
+  int pos = 8 + rectBytes + 4; // 8 bytes header + RECT + 2 bytes FrameRate + 2 bytes FrameCount
 
   int soundCount = 0;
   int jpegCount = 0;

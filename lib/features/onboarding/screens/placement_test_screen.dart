@@ -250,6 +250,10 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
 
   Widget _buildResultScreen() {
     final result = _result!;
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final scoreCircleSize = (screenWidth * 0.4).clamp(120.0, 200.0);
+    final scoreFontSize = (scoreCircleSize * 0.3).clamp(32.0, 60.0);
+    
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
@@ -263,8 +267,8 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
                 children: [
                   // Score circle
                   Container(
-                    width: 160,
-                    height: 160,
+                    width: scoreCircleSize,
+                    height: scoreCircleSize,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: AppColors.primaryDay.withValues(alpha: 0.15),
@@ -276,8 +280,8 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
                         children: [
                           Text(
                             '${result.correctCount}',
-                            style: const TextStyle(
-                              fontSize: 48,
+                            style: TextStyle(
+                              fontSize: scoreFontSize,
                               fontWeight: FontWeight.w800,
                               color: AppColors.primaryDay,
                             ),

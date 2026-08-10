@@ -29,6 +29,41 @@ import 'package:faseeh_kids/features/parent_dashboard/screens/progress_report_sc
 // ─── Stories ───
 import 'package:faseeh_kids/features/stories/screens/story_reader_screen.dart';
 
+// ─── Paywall ───
+import 'package:faseeh_kids/features/paywall/screens/paywall_screen.dart';
+
+/// Strongly Typed Route Argument Classes (Prevents runtime Map casting crashes)
+class NameInputArgs {
+  final AgeGroup ageGroup;
+  final int avatarIndex;
+  const NameInputArgs({
+    this.ageGroup = AgeGroup.preschool3to5,
+    this.avatarIndex = 0,
+  });
+}
+
+class PlacementTestArgs {
+  final AgeGroup ageGroup;
+  final int avatarIndex;
+  final String childName;
+  const PlacementTestArgs({
+    this.ageGroup = AgeGroup.preschool3to5,
+    this.avatarIndex = 0,
+    this.childName = 'طفل',
+  });
+}
+
+class CelebrationArgs {
+  final int stars;
+  final int xpEarned;
+  final String? badgeIcon;
+  const CelebrationArgs({
+    this.stars = 3,
+    this.xpEarned = 20,
+    this.badgeIcon,
+  });
+}
+
 /// Faseeh Kids App Router
 /// Defines all navigation routes using GoRouter
 class AppRouter {
@@ -57,6 +92,7 @@ class AppRouter {
   static const String profile = '/profile';
   static const String storyReader = '/story/:storyId';
   static const String letterExplorer = '/letter/:letterId';
+  static const String paywall = '/paywall';
 
   /// Custom slide transition (RTL aware)
   static CustomTransitionPage<void> _slideTransition({
@@ -137,7 +173,7 @@ class AppRouter {
         path: avatarSelection,
         name: 'avatarSelection',
         pageBuilder: (context, state) {
-          final ageGroup = state.extra as AgeGroup? ?? AgeGroup.preschool3to5;
+          final ageGroup = state.extra is AgeGroup ? state.extra as AgeGroup : AgeGroup.preschool3to5;
           return _slideTransition(
             state: state,
             child: AvatarSelectionScreen(ageGroup: ageGroup),
@@ -148,12 +184,12 @@ class AppRouter {
         path: nameInput,
         name: 'nameInput',
         pageBuilder: (context, state) {
-          final data = state.extra as Map<String, dynamic>? ?? {};
+          final args = state.extra is NameInputArgs ? state.extra as NameInputArgs : const NameInputArgs();
           return _slideTransition(
             state: state,
             child: NameInputScreen(
-              ageGroup: data['ageGroup'] as AgeGroup? ?? AgeGroup.preschool3to5,
-              avatarIndex: data['avatarIndex'] as int? ?? 0,
+              ageGroup: args.ageGroup,
+              avatarIndex: args.avatarIndex,
             ),
           );
         },
@@ -162,13 +198,13 @@ class AppRouter {
         path: placementTest,
         name: 'placementTest',
         pageBuilder: (context, state) {
-          final data = state.extra as Map<String, dynamic>? ?? {};
+          final args = state.extra is PlacementTestArgs ? state.extra as PlacementTestArgs : const PlacementTestArgs();
           return _slideTransition(
             state: state,
             child: PlacementTestScreen(
-              ageGroup: data['ageGroup'] as AgeGroup? ?? AgeGroup.preschool3to5,
-              avatarIndex: data['avatarIndex'] as int? ?? 0,
-              childName: data['name'] as String? ?? 'طفل',
+              ageGroup: args.ageGroup,
+              avatarIndex: args.avatarIndex,
+              childName: args.childName,
             ),
           );
         },
@@ -201,13 +237,13 @@ class AppRouter {
         path: celebration,
         name: 'celebration',
         pageBuilder: (context, state) {
-          final data = state.extra as Map<String, dynamic>? ?? {};
+          final args = state.extra is CelebrationArgs ? state.extra as CelebrationArgs : const CelebrationArgs();
           return _scaleTransition(
             state: state,
             child: CelebrationScreen(
-              stars: data['stars'] as int? ?? 3,
-              xpEarned: data['xpEarned'] as int? ?? 20,
-              badgeIcon: data['badgeIcon'] as String?,
+              stars: args.stars,
+              xpEarned: args.xpEarned,
+              badgeIcon: args.badgeIcon,
             ),
           );
         },
@@ -281,6 +317,19 @@ class AppRouter {
           );
         },
       ),
+
+      // ─── Paywall ───
+      GoRoute(
+        path: paywall,
+        name: 'paywall',
+        pageBuilder: (context, state) {
+          return _slideTransition(
+            state: state,
+            child: const PaywallScreen(),
+          );
+        },
+      ),
     ],
   );
 }
+

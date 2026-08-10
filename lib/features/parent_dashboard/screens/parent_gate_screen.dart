@@ -2,7 +2,10 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/constants.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
 
 class ParentGateScreen extends StatefulWidget {
   const ParentGateScreen({super.key});
@@ -24,10 +27,52 @@ class _ParentGateScreenState extends State<ParentGateScreen> {
   int countdown = 10;
   Timer? _countdownTimer;
 
+  static const String _lockoutKey = 'parent_gate_lockout_until';
+
   @override
   void initState() {
     super.initState();
+    _checkPersistentLockout();
+  }
+
+  void _checkPersistentLockout() {
+    final box = Hive.box(AppConstants.parentSettingsBox);
+    final lockoutUntilStr = box.get(_lockoutKey) as String?;
+    if (lockoutUntilStr != null) {
+      final lockoutUntil = DateTime.tryParse(lockoutUntilStr);
+      if (lockoutUntil != null && DateTime.now().isBefore(lockoutUntil)) {
+        final remainingSeconds = lockoutUntil.difference(DateTime.now()).inSeconds;
+        if (remainingSeconds > 0) {
+          _startPersistentLockoutTimer(remainingSeconds);
+          return;
+        }
+      }
+    }
     _generateProblem();
+  }
+
+  void _startPersistentLockoutTimer(int seconds) {
+    setState(() {
+      isLocked = true;
+      lockTimer = seconds;
+    });
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (lockTimer > 0) {
+        setState(() {
+          lockTimer--;
+        });
+      } else {
+        final box = Hive.box(AppConstants.parentSettingsBox);
+        box.delete(_lockoutKey);
+        setState(() {
+          isLocked = false;
+          failedAttempts = 0;
+        });
+        _generateProblem();
+        timer.cancel();
+      }
+    });
   }
 
   void _generateProblem() {
@@ -67,23 +112,11 @@ class _ParentGateScreenState extends State<ParentGateScreen> {
   }
 
   void _lockOut() {
-    isLocked = true;
-    lockTimer = 60;
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (lockTimer > 0) {
-        setState(() {
-          lockTimer--;
-        });
-      } else {
-        setState(() {
-          isLocked = false;
-          failedAttempts = 0;
-          _generateProblem();
-        });
-        timer.cancel();
-      }
-    });
+    final lockoutUntil = DateTime.now().add(const Duration(seconds: 60));
+    final box = Hive.box(AppConstants.parentSettingsBox);
+    box.put(_lockoutKey, lockoutUntil.toIso8601String());
+
+    _startPersistentLockoutTimer(60);
   }
 
   void _onKeyPress(String key) {
@@ -97,7 +130,7 @@ class _ParentGateScreenState extends State<ParentGateScreen> {
     if (input.length == answer.toString().length) {
       if (int.tryParse(input) == answer) {
         _countdownTimer?.cancel();
-        context.go('/parent-dashboard'); // Navigate to dashboard
+        context.go(AppRouter.parentDashboard); // Navigate to dashboard using typed route
       } else {
         _handleFailure();
       }

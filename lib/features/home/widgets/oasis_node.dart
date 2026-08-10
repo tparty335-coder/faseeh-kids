@@ -7,12 +7,14 @@ enum NodeStatus { locked, current, completed }
 class OasisNode extends StatelessWidget {
   final String letter;
   final NodeStatus status;
+  final bool isPremiumLocked;
   final VoidCallback? onTap;
 
   const OasisNode({
     super.key,
     required this.letter,
     required this.status,
+    this.isPremiumLocked = false,
     this.onTap,
   });
 
@@ -68,7 +70,7 @@ class OasisNode extends StatelessWidget {
                 fontFamily: 'Cairo',
               ),
             ),
-            if (isCompleted)
+            if (isCompleted && !isPremiumLocked)
               Positioned(
                 bottom: 0,
                 right: 0,
@@ -79,6 +81,20 @@ class OasisNode extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(Icons.check, color: Colors.white, size: 16),
+                ),
+              ),
+            if (isPremiumLocked && !isLocked)
+              Positioned(
+                bottom: -2,
+                right: -2,
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: const Color(0xFFFFD700), width: 1.5),
+                  ),
+                  child: const Icon(Icons.lock_rounded, color: Color(0xFFFFD700), size: 14),
                 ),
               ),
             if (isCurrent)
