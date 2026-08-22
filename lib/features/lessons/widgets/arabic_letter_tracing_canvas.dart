@@ -6,12 +6,12 @@ import 'package:faseeh_kids/services/audio_service.dart';
 /// تعريف مقطع كتابة الحرف (Stroke)
 class LetterStroke {
   final int index;
-  final String label; // "١" or "1"
+  final String label; // "١", "٢", "٣", "٤"
   final Offset start; // Normalized (0.0 to 1.0)
   final Offset end;   // Normalized (0.0 to 1.0)
   final List<Offset> pathPoints; // Normalized path points
   final String hintText;
-  final bool isTapOnly; // للنقاط مثل نقطة الباء
+  final bool isTapOnly;
 
   const LetterStroke({
     required this.index,
@@ -24,7 +24,7 @@ class LetterStroke {
   });
 }
 
-/// بيانات مقاطع الحروف العربية ومواضعها المختلفة
+/// بيانات مقاطع الحروف العربية ومواضعها بدقة متناهية
 class ArabicLetterTracingData {
   static List<LetterStroke> getStrokesForLetter(String letter, {String position = 'isolated'}) {
     if (letter == 'ب') {
@@ -34,114 +34,138 @@ class ArabicLetterTracingData {
     return _getAlifStrokes(position);
   }
 
-  // ─── مقاطع حرف الألف ───
+  // ─── مقاطع حرف الألف (أ) بجميع مواضعه ───
+  // الألف المنفصلة أو أول الكلمة تتكون من 4 حركات هندسية دقيقة:
+  // 1. عصا الألف من أعلى إلى أسفل
+  // 2. رأس الهمزة العلوي (دوران لليمين)
+  // 3. بطن الهمزة الدائري (نزول ودوران لليسار)
+  // 4. ذيل الهمزة وقاعدتها الأفقية (استقامة لليمين)
   static List<LetterStroke> _getAlifStrokes(String position) {
     if (position == 'middle' || position == 'end') {
       // الألف المتصلة (ـأ)
       return [
-        // 1. خط الاتصال الأفقي من اليمين
+        // 1. خط الاتصال الأفقي من اليمين لليسار
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.85, 0.78),
-          end: const Offset(0.50, 0.78),
+          start: const Offset(0.85, 0.82),
+          end: const Offset(0.50, 0.82),
           pathPoints: [
-            const Offset(0.85, 0.78),
-            const Offset(0.68, 0.78),
-            const Offset(0.50, 0.78),
+            const Offset(0.85, 0.82),
+            const Offset(0.68, 0.82),
+            const Offset(0.50, 0.82),
           ],
-          hintText: 'ابدأ من النقطة (١) واسحب خط الاتصال لليسار ⬅️',
+          hintText: '١. ابدأ من النقطة (١) واسحب خط الاتصال ⬅️',
         ),
-        // 2. عصا الألف صعوداً للأعلى
+        // 2. صعود عصا الألف للأعلى
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.50, 0.78),
-          end: const Offset(0.50, 0.26),
+          start: const Offset(0.50, 0.82),
+          end: const Offset(0.50, 0.38),
           pathPoints: [
-            const Offset(0.50, 0.78),
-            const Offset(0.50, 0.52),
-            const Offset(0.50, 0.26),
+            const Offset(0.50, 0.82),
+            const Offset(0.50, 0.60),
+            const Offset(0.50, 0.38),
           ],
-          hintText: 'من النقطة (٢) اسحب عصا الألف للأعلى ⬆️',
+          hintText: '٢. من النقطة (٢) اصعد بعصا الألف للأعلى ⬆️',
         ),
-        // 3. قوس الهمزة
+        // 3. رأس الهمزة العلوي
         LetterStroke(
           index: 3,
           label: '٣',
-          start: const Offset(0.58, 0.12),
-          end: const Offset(0.42, 0.18),
+          start: const Offset(0.43, 0.12),
+          end: const Offset(0.57, 0.12),
           pathPoints: [
-            const Offset(0.58, 0.12),
-            const Offset(0.54, 0.08),
-            const Offset(0.46, 0.08),
-            const Offset(0.42, 0.14),
-            const Offset(0.42, 0.18),
+            const Offset(0.43, 0.12),
+            const Offset(0.50, 0.08),
+            const Offset(0.57, 0.12),
           ],
-          hintText: 'من النقطة (٣) ارسم قوس الهمزة ↶',
+          hintText: '٣. من النقطة (٣) دوّر رأس الهمزة لليمين ↷',
         ),
-        // 4. قاعدة الهمزة
+        // 4. بطن الهمزة الدائري
         LetterStroke(
           index: 4,
           label: '٤',
-          start: const Offset(0.42, 0.18),
-          end: const Offset(0.58, 0.22),
+          start: const Offset(0.57, 0.12),
+          end: const Offset(0.43, 0.22),
           pathPoints: [
-            const Offset(0.42, 0.18),
-            const Offset(0.48, 0.20),
-            const Offset(0.54, 0.21),
-            const Offset(0.58, 0.22),
+            const Offset(0.57, 0.12),
+            const Offset(0.56, 0.18),
+            const Offset(0.43, 0.22),
           ],
-          hintText: 'من النقطة (٤) ارسم قاعدة الهمزة ➡️',
+          hintText: '٤. من النقطة (٤) انزل بقوس الهمزة لليسار ↶',
+        ),
+        // 5. قاعدة وذيل الهمزة
+        LetterStroke(
+          index: 5,
+          label: '٥',
+          start: const Offset(0.43, 0.22),
+          end: const Offset(0.60, 0.24),
+          pathPoints: [
+            const Offset(0.43, 0.22),
+            const Offset(0.52, 0.23),
+            const Offset(0.60, 0.24),
+          ],
+          hintText: '٥. من النقطة (٥) ارسم ذيل الهمزة باستقامة ➡️',
         ),
       ];
     }
 
-    // الألف المنفصلة أو في أول الكلمة (أ)
+    // الألف المنفصلة أو أول الكلمة (أ)
     return [
       // 1. عصا الألف (من الأعلى إلى الأسفل)
       LetterStroke(
         index: 1,
         label: '١',
-        start: const Offset(0.50, 0.28),
+        start: const Offset(0.50, 0.38),
         end: const Offset(0.50, 0.88),
         pathPoints: [
-          const Offset(0.50, 0.28),
-          const Offset(0.50, 0.43),
-          const Offset(0.50, 0.58),
-          const Offset(0.50, 0.73),
+          const Offset(0.50, 0.38),
+          const Offset(0.50, 0.52),
+          const Offset(0.50, 0.68),
           const Offset(0.50, 0.88),
         ],
-        hintText: 'ابدأ من النقطة (١) في الأعلى واسحب لأسفل ⬇️',
+        hintText: '١. ابدأ من النقطة (١) واسحب عصا الألف لأسفل ⬇️',
       ),
-      // 2. قوس رأس الهمزة
+      // 2. رأس الهمزة العلوي (دوران لليمين)
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.58, 0.12),
-        end: const Offset(0.42, 0.18),
+        start: const Offset(0.43, 0.12),
+        end: const Offset(0.57, 0.12),
         pathPoints: [
-          const Offset(0.58, 0.12),
-          const Offset(0.55, 0.08),
-          const Offset(0.47, 0.08),
-          const Offset(0.42, 0.13),
-          const Offset(0.42, 0.18),
+          const Offset(0.43, 0.12),
+          const Offset(0.50, 0.08),
+          const Offset(0.57, 0.12),
         ],
-        hintText: 'ابدأ من النقطة (٢) وارسم قوس الهمزة ↶',
+        hintText: '٢. ابدأ من النقطة (٢) ودوّر رأس الهمزة لليمين ↷',
       ),
-      // 3. قاعدة الهمزة
+      // 3. بطن الهمزة الدائري (نزول ودوران لليسار)
       LetterStroke(
         index: 3,
         label: '٣',
-        start: const Offset(0.42, 0.18),
-        end: const Offset(0.58, 0.22),
+        start: const Offset(0.57, 0.12),
+        end: const Offset(0.43, 0.22),
         pathPoints: [
-          const Offset(0.42, 0.18),
-          const Offset(0.47, 0.20),
-          const Offset(0.53, 0.21),
-          const Offset(0.58, 0.22),
+          const Offset(0.57, 0.12),
+          const Offset(0.56, 0.18),
+          const Offset(0.43, 0.22),
         ],
-        hintText: 'ابدأ من النقطة (٣) وارسم قاعدة الهمزة ➡️',
+        hintText: '٣. من النقطة (٣) انزل بقوس الهمزة لليسار ↶',
+      ),
+      // 4. قاعدة وذيل الهمزة (خط مستقيم لليمين)
+      LetterStroke(
+        index: 4,
+        label: '٤',
+        start: const Offset(0.43, 0.22),
+        end: const Offset(0.60, 0.24),
+        pathPoints: [
+          const Offset(0.43, 0.22),
+          const Offset(0.52, 0.23),
+          const Offset(0.60, 0.24),
+        ],
+        hintText: '٤. من النقطة (٤) ارسم ذيل الهمزة باستقامة ➡️',
       ),
     ];
   }
@@ -387,16 +411,28 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
     if (_isAllCompleted || _currentStrokeIndex >= _strokes.length) return;
 
     final stroke = _strokes[_currentStrokeIndex];
-    final startPx = Offset(
-      stroke.start.dx * canvasSize.width,
-      stroke.start.dy * canvasSize.height,
-    );
+    final guidePx = stroke.pathPoints.map((p) => Offset(
+      p.dx * canvasSize.width,
+      p.dy * canvasSize.height,
+    )).toList();
 
+    if (guidePx.isEmpty) return;
+
+    final startPx = guidePx.first;
     final touchPos = details.localPosition;
-    final dist = (touchPos - startPx).distance;
+    final distToStart = (touchPos - startPx).distance;
 
-    // دائرة التسامح لبداية النقطة (Tolerance radius = 48px)
-    if (dist <= 48.0) {
+    // دائرة التسامح لبداية النقطة (Tolerance radius = 65px للأطفال)
+    bool isNearStart = distToStart <= 65.0;
+
+    // التحقق أيضاً مما إذا كان اللمس قريباً من النقطة الثانية في المسار
+    if (!isNearStart && guidePx.length > 1) {
+      if ((touchPos - guidePx[1]).distance <= 60.0) {
+        isNearStart = true;
+      }
+    }
+
+    if (isNearStart) {
       if (stroke.isTapOnly) {
         _completeCurrentStroke([startPx]);
         return;
@@ -409,7 +445,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
         _highestReachedPointIndex = 0;
       });
     } else {
-      // ضغط على نقطة خاطئة أو في المنتصف
+      // لمس نقطة خاطئة أو بعيدة عن النقطة المحددة
       setState(() {
         _isWrongStartShake = true;
       });
@@ -429,13 +465,14 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       p.dy * canvasSize.height,
     )).toList();
 
+    if (guidePx.isEmpty) return;
+
     // التحقق من التقدم على المسار
-    final nextTargetIndex = _highestReachedPointIndex + 1;
-    if (nextTargetIndex < guidePx.length) {
-      final target = guidePx[nextTargetIndex];
+    for (int i = _highestReachedPointIndex + 1; i < guidePx.length; i++) {
+      final target = guidePx[i];
       final distToTarget = (touchPos - target).distance;
-      if (distToTarget < 45.0) {
-        _highestReachedPointIndex = nextTargetIndex;
+      if (distToTarget <= 65.0) {
+        _highestReachedPointIndex = i;
       }
     }
 
@@ -443,8 +480,9 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       _currentDrawingPoints.add(touchPos);
     });
 
-    // هل وصل لنهاية المقطع؟
-    if (_highestReachedPointIndex >= guidePx.length - 1) {
+    // هل وصل لنهاية المقطع أو اقترب من النقطة الأخيرة؟
+    final distToEnd = (touchPos - guidePx.last).distance;
+    if (_highestReachedPointIndex >= guidePx.length - 1 || distToEnd <= 55.0) {
       _completeCurrentStroke(guidePx);
     }
   }
@@ -458,8 +496,10 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       p.dy * canvasSize.height,
     )).toList();
 
-    // إذا وصل لأكثر من 80% من المسار نعتبره مكتملاً ونسحبه للنهاية
-    if (_highestReachedPointIndex >= guidePx.length - 2) {
+    if (guidePx.isEmpty) return;
+
+    // إذا قطع التلميذ نصف المسار أو وصل لأكثر من نقطة، نعتبره مكتملاً ونسحبه للنهاية
+    if (_highestReachedPointIndex >= (guidePx.length / 2).floor() || guidePx.length <= 2) {
       _completeCurrentStroke(guidePx);
     } else {
       // لم يكمل المقطع بشكل كافٍ -> إعادة المحاولة لهذا المقطع

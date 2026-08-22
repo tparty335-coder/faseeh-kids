@@ -165,6 +165,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
           Expanded(
             child: PageView.builder(
               controller: _pageController,
+              physics: const NeverScrollableScrollPhysics(), // منع إزاحة الشاشة أثناء سحب الإصبع والرسم
               onPageChanged: (index) {
                 setState(() => _currentStep = index);
                 _playAudio(_steps[index]['audio'] as String);

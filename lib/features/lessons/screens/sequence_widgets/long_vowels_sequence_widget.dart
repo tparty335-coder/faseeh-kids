@@ -72,6 +72,8 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
     },
   ];
 
+  int _audioPlaySession = 0;
+
   @override
   void initState() {
     super.initState();
@@ -96,18 +98,55 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
 
   @override
   void dispose() {
+    _audioPlaySession++;
     _pageController.dispose();
     AudioService.instance.stop();
     super.dispose();
   }
 
   void _playPageAudio(Map<String, dynamic> page) async {
+    final session = ++_audioPlaySession;
+    await AudioService.instance.stop();
+
+    if (page['type'] == 'intro') {
+      try {
+        // 1. تشغيل تعريف ماهية المد
+        await AudioService.instance.playAsset('audio/stories/alif_mudud_intro.mp3');
+
+        // الانتظار حتى انتهاء الملف الأول (أو بحد أقصى 10 ثوانٍ)
+        try {
+          await AudioService.instance
+              .onPlayerComplete(AudioChannel.voice)
+              ?.first
+              .timeout(const Duration(seconds: 10));
+        } catch (_) {}
+
+        if (session != _audioPlaySession || !mounted) return;
+        await Future.delayed(const Duration(milliseconds: 350));
+        if (session != _audioPlaySession || !mounted) return;
+
+        // 2. تشغيل شرح أنواع المد الثلاثة مباشرة في نفس الصفحة
+        await AudioService.instance.playAsset('audio/stories/alif_mudud_types.mp3');
+      } catch (e) {
+        debugPrint('Madd intro sequence error: $e');
+      }
+    } else {
+      try {
+        final path = page['audioFile'] as String;
+        await AudioService.instance.playAsset(path);
+      } catch (e) {
+        debugPrint('Madd audio error: $e');
+      }
+    }
+  }
+
+  void _playSpecificMaddAudio(String audioPath) async {
+    _audioPlaySession++;
     await AudioService.instance.stop();
     try {
-      final path = page['audioFile'] as String;
-      await AudioService.instance.playAsset(path);
+      await AudioService.instance.playAsset(audioPath);
     } catch (e) {
-      debugPrint('Madd audio error: $e');
+      debugPrint('Specific madd audio error: $e');
     }
   }
 
@@ -341,6 +380,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                   subtitle: 'فَتْحَةٌ طَوِيلَةٌ مِثْلُ: آمَال',
                   color: const Color(0xFFD32F2F),
                   mark: 'آ',
+                  audioPath: 'audio/stories/alif_madd_amal.mp3',
                 ),
                 const SizedBox(height: 8),
 
@@ -349,6 +389,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                   subtitle: 'ضَمَّةٌ طَوِيلَةٌ مِثْلُ: الأُولَى',
                   color: const Color(0xFFF57C00),
                   mark: 'أُو',
+                  audioPath: 'audio/stories/alif_madd_oula.mp3',
                 ),
                 const SizedBox(height: 8),
 
@@ -357,31 +398,35 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                   subtitle: 'كَسْرَةٌ طَوِيلَةٌ مِثْلُ: إِينَاس',
                   color: const Color(0xFF1976D2),
                   mark: 'إِي',
+                  audioPath: 'audio/stories/alif_madd_inas.mp3',
                 ),
 
                 const SizedBox(height: 14),
 
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: color.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.volume_up_rounded, color: color, size: 24),
-                      const SizedBox(width: 8),
-                      Text(
-                        'اضْغَطْ لِسَمَاعِ شَرْحِ قَاعِدَةِ الْمَدِّ',
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: color,
+                GestureDetector(
+                  onTap: () => _playPageAudio(page),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: color.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.volume_up_rounded, color: color, size: 24),
+                        const SizedBox(width: 8),
+                        Text(
+                          'اضْغَطْ لِسَمَاعِ شَرْحِ قَاعِدَةِ الْمَدِّ وَأَنْوَاعِهِ',
+                          style: TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: color,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -397,59 +442,64 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
     required String subtitle,
     required Color color,
     required String mark,
+    required String audioPath,
   }) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withValues(alpha: 0.25)),
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-            decoration: BoxDecoration(
-              color: color,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Text(
-              mark,
-              style: const TextStyle(
-                fontFamily: 'Cairo',
-                fontSize: 22,
-                fontWeight: FontWeight.w900,
-                color: Colors.white,
+    return GestureDetector(
+      onTap: () => _playSpecificMaddAudio(audioPath),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: color.withValues(alpha: 0.25)),
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              decoration: BoxDecoration(
+                color: color,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Text(
+                mark,
+                style: const TextStyle(
+                  fontFamily: 'Cairo',
+                  fontSize: 22,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w900,
-                    color: color,
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: color,
+                    ),
                   ),
-                ),
-                Text(
-                  subtitle,
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade700,
+                  Text(
+                    subtitle,
+                    style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey.shade700,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            Icon(Icons.volume_up_rounded, color: color.withValues(alpha: 0.7), size: 22),
+          ],
+        ),
       ),
     );
   }
