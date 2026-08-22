@@ -17,70 +17,116 @@ class LongVowelsActivityScreen extends ConsumerWidget {
     if (letter == null) return const SizedBox.shrink();
 
     final key = AudioRegistry.letterKeyFromChar(letter.letter);
-    
+    final size = MediaQuery.sizeOf(context);
+    final isTablet = size.width > 600;
+
     final vowels = [
-      {'label': 'المد بالألف', 'variant': 'madd_alif', 'char': '${letter.letter}َا'},
-      {'label': 'المد بالواو', 'variant': 'madd_demo', 'char': '${letter.letter}ُو'},
-      {'label': 'المد بالياء', 'variant': 'madd_demo', 'char': '${letter.letter}ِي'},
+      {'label': 'المد بالألف', 'char': '${letter.letter}َا', 'color': const Color(0xFFE53935)},
+      {'label': 'المد بالواو', 'char': '${letter.letter}ُو', 'color': const Color(0xFF1E88E5)},
+      {'label': 'المد بالياء', 'char': '${letter.letter}ِي', 'color': const Color(0xFF43A047)},
     ];
 
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 24.0),
+        // Title
+        Container(
+          margin: const EdgeInsets.only(top: 24, bottom: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          decoration: BoxDecoration(
+            color: AppColors.oasisGreen.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: AppColors.oasisGreen.withValues(alpha: 0.5), width: 2),
+          ),
           child: Text(
             'الحركات الطويلة (المدود)',
             style: TextStyle(
-              fontSize: 28,
+              fontSize: isTablet ? 36 : 28,
               fontWeight: FontWeight.bold,
-              color: AppColors.desertSand,
+              color: AppColors.oasisGreen,
+              fontFamily: 'Cairo',
             ),
           ),
-        ),
-        
-        Expanded(
-          child: ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            itemCount: vowels.length,
-            itemBuilder: (context, index) {
-              final vowel = vowels[index];
-              return _LongVowelCard(
-                label: vowel['label']!,
-                displayChar: vowel['char']!,
-                letterKey: key,
-                variant: vowel['variant']!,
-              )
-                  .animate()
-                  .fadeIn(delay: Duration(milliseconds: 200 * index))
-                  .slideX(begin: 0.2, end: 0);
-            },
+        ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.2),
+
+        // 3 Mudud Cards
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: vowels.map((vowel) {
+              return Expanded(
+                child: _LongVowelCard(
+                  label: vowel['label'] as String,
+                  displayChar: vowel['char'] as String,
+                  color: vowel['color'] as Color,
+                  isTablet: isTablet,
+                ).animate().scale(delay: 200.ms, duration: 400.ms, curve: Curves.easeOutBack),
+              );
+            }).toList(),
           ),
         ),
-        
+
+        const SizedBox(height: 50),
+
+        // BIG Central Play Button for the Full Demo
+        GestureDetector(
+          onTap: () {
+            // This plays the full madd demo audio which contains the explanation and examples
+            AudioManager.instance.playLetterAudio(key, 'madd_demo');
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: isTablet ? 48 : 32, vertical: isTablet ? 24 : 16),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(colors: [AppColors.desertSand, Color(0xFFC79244)]),
+              borderRadius: BorderRadius.circular(40),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.desertSand.withValues(alpha: 0.4),
+                  blurRadius: 16,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.volume_up_rounded, color: Colors.white, size: 40),
+                const SizedBox(width: 16),
+                Text(
+                  'استمع لشرح المدود',
+                  style: TextStyle(
+                    fontSize: isTablet ? 26 : 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'Cairo',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ).animate().fadeIn(delay: 500.ms).slideY(begin: 0.2),
+
+        const Spacer(),
+
+        // Next Activity Button
         Padding(
           padding: const EdgeInsets.only(bottom: 24.0),
-          child: ElevatedButton(
+          child: ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.oasisGreen,
               foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
+              padding: EdgeInsets.symmetric(horizontal: isTablet ? 40 : 24, vertical: isTablet ? 18 : 14),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+              elevation: 4,
             ),
             onPressed: () {
               ref.read(currentLessonProvider.notifier).completeCurrentActivity();
               ref.read(currentLessonProvider.notifier).nextActivity();
             },
-            child: const Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text('التالي', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                SizedBox(width: 8),
-                Icon(Icons.arrow_forward_ios, size: 20),
-              ],
-            ),
-          ),
+            icon: const Icon(Icons.check_circle_outline, size: 28),
+            label: Text('انتهيت', style: TextStyle(fontSize: isTablet ? 24 : 20, fontWeight: FontWeight.bold, fontFamily: 'Cairo')),
+          ).animate().scale(delay: 600.ms),
         ),
       ],
     );
@@ -90,62 +136,62 @@ class LongVowelsActivityScreen extends ConsumerWidget {
 class _LongVowelCard extends StatelessWidget {
   final String label;
   final String displayChar;
-  final String letterKey;
-  final String variant;
+  final Color color;
+  final bool isTablet;
 
   const _LongVowelCard({
     required this.label,
     required this.displayChar,
-    required this.letterKey,
-    required this.variant,
+    required this.color,
+    required this.isTablet,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
+      padding: EdgeInsets.symmetric(vertical: isTablet ? 32 : 24, horizontal: 8),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.skyBlue.withValues(alpha: 0.3), width: 2),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: color.withValues(alpha: 0.3), width: 3),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
+            color: color.withValues(alpha: 0.1),
+            blurRadius: 15,
+            spreadRadius: 2,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
-      child: Row(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
-              color: AppColors.skyBlue.withValues(alpha: 0.1),
-              shape: BoxShape.circle,
+              color: color.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(12),
             ),
-            child: IconButton(
-              icon: const Icon(Icons.volume_up, color: AppColors.skyBlue, size: 32),
-              onPressed: () {
-                AudioManager.instance.playLetterAudio(letterKey, variant);
-              },
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: isTablet ? 18 : 14,
+                color: color,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Cairo',
+              ),
             ),
           ),
-          const SizedBox(width: 24),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(fontSize: 16, color: AppColors.textSecondary, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  displayChar,
-                  style: const TextStyle(fontSize: 48, fontFamily: 'Cairo', color: AppColors.skyBlue, height: 1.2),
-                ),
-              ],
+          SizedBox(height: isTablet ? 24 : 16),
+          Text(
+            displayChar,
+            style: TextStyle(
+              fontSize: isTablet ? 72 : 48,
+              fontFamily: 'Cairo',
+              color: AppColors.textPrimaryDay,
+              height: 1.0,
             ),
           ),
         ],

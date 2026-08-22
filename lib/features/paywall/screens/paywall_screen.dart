@@ -11,7 +11,6 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:faseeh_kids/core/providers/purchase_provider.dart';
-import 'package:faseeh_kids/services/revenue_cat_service.dart';
 
 class PaywallScreen extends ConsumerStatefulWidget {
   const PaywallScreen({super.key});
@@ -126,7 +125,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
           height: i % 3 == 0 ? 3 : 2,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white.withOpacity(0.3 + (i % 4) * 0.1),
+            color: Colors.white.withValues(alpha: 0.3 + (i % 4) * 0.1),
           ),
         ).animate(onPlay: (c) => c.repeat()).fadeIn(
           duration: Duration(milliseconds: 1200 + i * 150),
@@ -155,7 +154,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFFFFD700).withOpacity(0.4),
+                    color: const Color(0xFFFFD700).withValues(alpha: 0.4),
                     blurRadius: 30,
                     spreadRadius: 5,
                   ),
@@ -223,8 +222,8 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.white.withOpacity(0.08),
-        border: Border.all(color: Colors.white.withOpacity(0.15)),
+        color: Colors.white.withValues(alpha: 0.08),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
       ),
       child: Column(
         children: features.asMap().entries.map((entry) {
@@ -263,7 +262,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
         height: 72,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.white.withOpacity(0.06),
+          color: Colors.white.withValues(alpha: 0.06),
         ),
       )),
     );
@@ -293,8 +292,8 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               color: isSelected
-                  ? const Color(0xFFFFD700).withOpacity(0.15)
-                  : Colors.white.withOpacity(0.06),
+                  ? const Color(0xFFFFD700).withValues(alpha: 0.15)
+                  : Colors.white.withValues(alpha: 0.06),
               border: Border.all(
                 color: isSelected ? const Color(0xFFFFD700) : Colors.white24,
                 width: isSelected ? 2 : 1,
@@ -402,8 +401,8 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               color: isSelected
-                  ? const Color(0xFFFFD700).withOpacity(0.15)
-                  : Colors.white.withOpacity(0.06),
+                  ? const Color(0xFFFFD700).withValues(alpha: 0.15)
+                  : Colors.white.withValues(alpha: 0.06),
               border: Border.all(
                 color: isSelected ? const Color(0xFFFFD700) : Colors.white24,
                 width: isSelected ? 2 : 1,
@@ -496,7 +495,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
           backgroundColor: const Color(0xFFFFD700),
           foregroundColor: Colors.black,
           elevation: 8,
-          shadowColor: const Color(0xFFFFD700).withOpacity(0.5),
+          shadowColor: const Color(0xFFFFD700).withValues(alpha: 0.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),

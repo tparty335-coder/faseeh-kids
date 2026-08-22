@@ -47,4 +47,5 @@ app.*.map.json
 android/.gradle/
 *.zip
 docs/
-
+scratch/
+key.properties

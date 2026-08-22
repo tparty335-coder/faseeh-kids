@@ -184,7 +184,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                 ],
         ),
         transform: isSelected
-            ? (Matrix4.identity()..scale(1.03))
+            ? Matrix4.diagonal3Values(1.03, 1.03, 1.03)
             : Matrix4.identity(),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),

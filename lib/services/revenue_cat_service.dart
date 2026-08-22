@@ -96,7 +96,7 @@ class RevenueCatService {
   // ─── Purchase a package ───
   Future<bool> purchase(Package package) async {
     try {
-      final result = await Purchases.purchasePackage(package);
+      final result = await Purchases.purchase(PurchaseParams.package(package));
       _customerInfo = result.customerInfo;
       _isPremium = _customerInfo!.entitlements.active.containsKey(premiumEntitlement);
       return _isPremium;
@@ -112,6 +112,7 @@ class RevenueCatService {
       return false;
     }
   }
+
 
   // ─── Restore purchases ───
   Future<bool> restorePurchases() async {

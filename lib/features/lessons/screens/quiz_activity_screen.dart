@@ -4,9 +4,12 @@ import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
+import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/home/logic/home_provider.dart';
+import 'package:flutter/services.dart';
+import 'package:faseeh_kids/core/widgets/mascot_widget.dart';
 import 'dart:math';
 
 class QuizActivityScreen extends ConsumerStatefulWidget {
@@ -23,6 +26,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
   String? _selectedLetter;
   bool? _isCorrect;
   List<String> _options = [];
+  String _hintWord = '';
 
   @override
   void initState() {
@@ -30,6 +34,13 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
     _confettiController = ConfettiController(duration: const Duration(seconds: 1));
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _generateOptions();
+      final letter = ref.read(currentLessonProvider).letter;
+      if (letter != null) {
+        final key = AudioRegistry.letterKeyFromChar(letter.letter);
+        Future.delayed(const Duration(milliseconds: 400), () {
+          AudioManager.instance.playByKey('instr_${key}_quiz_fish_explain');
+        });
+      }
     });
   }
 
@@ -55,6 +66,9 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
       _options = options.toList()..shuffle();
       _selectedLetter = null;
       _isCorrect = null;
+      if (letter.exampleWords.isNotEmpty) {
+        _hintWord = letter.exampleWords[_questionIndex % letter.exampleWords.length];
+      }
     });
   }
 
@@ -70,6 +84,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
     });
     
     if (correct) {
+      HapticFeedback.heavyImpact();
       _confettiController.play();
       AudioManager.instance.playFeedback('excellent');
       Future.delayed(const Duration(seconds: 2), () {
@@ -90,6 +105,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
         }
       });
     } else {
+      HapticFeedback.vibrate();
       AudioManager.instance.playFeedback('try_again');
     }
   }
@@ -112,14 +128,33 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'أين حرف ${letter.letter}؟',
-              style: TextStyle(
-                fontSize: titleFontSize,
-                fontWeight: FontWeight.bold,
-                color: AppColors.desertSand,
-                fontFamily: 'Cairo',
-              ),
+            MascotWidget(
+              state: (_isCorrect == true) ? MascotState.celebrating : ((_isCorrect == false) ? MascotState.encouraging : MascotState.thinking),
+              width: screenWidth * 0.25,
+              height: screenWidth * 0.25,
+            ),
+            const SizedBox(height: 24),
+            Column(
+              children: [
+                Text(
+                  'أين حرف ${letter.letter}؟',
+                  style: TextStyle(
+                    fontSize: titleFontSize,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.desertSand,
+                    fontFamily: 'Cairo',
+                  ),
+                ),
+                if (_hintWord.isNotEmpty)
+                  Text(
+                    'في كلمة: $_hintWord',
+                    style: TextStyle(
+                      fontSize: titleFontSize * 0.7,
+                      fontFamily: 'Cairo',
+                      color: AppColors.desertSand.withValues(alpha: 0.8),
+                    ),
+                  ),
+              ],
             ),
             const SizedBox(height: 8),
             Text(

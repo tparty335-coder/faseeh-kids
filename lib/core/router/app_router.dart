@@ -8,13 +8,12 @@ import 'package:faseeh_kids/features/onboarding/screens/onboarding_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/age_selection_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/avatar_selection_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/name_input_screen.dart';
-import 'package:faseeh_kids/features/onboarding/screens/placement_test_screen.dart';
 
 // ─── Home / Oasis Map ───
 import 'package:faseeh_kids/features/home/screens/oasis_map_screen.dart';
 
 // ─── Lessons ───
-import 'package:faseeh_kids/features/lessons/screens/letter_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
 
 // ─── Rewards & Profile ───
 import 'package:faseeh_kids/features/rewards/screens/celebration_screen.dart';
@@ -194,17 +193,10 @@ class AppRouter {
       GoRoute(
         path: placementTest,
         name: 'placementTest',
-        pageBuilder: (context, state) {
-          final args = state.extra is PlacementTestArgs ? state.extra as PlacementTestArgs : const PlacementTestArgs();
-          return _slideTransition(
-            state: state,
-            child: PlacementTestScreen(
-              ageGroup: args.ageGroup,
-              avatarIndex: args.avatarIndex,
-              childName: args.childName,
-            ),
-          );
-        },
+        pageBuilder: (context, state) => _slideTransition(
+          state: state,
+          child: const OasisMapScreen(),
+        ),
       ),
 
       // ─── Main App: Oasis Map (Home) ───
@@ -224,7 +216,7 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: const LetterLessonScreen(),
+            child: const UniversalLetterHubScreen(),
           );
         },
       ),
@@ -310,7 +302,7 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: const LetterLessonScreen(),
+            child: const UniversalLetterHubScreen(),
           );
         },
       ),

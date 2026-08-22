@@ -15,28 +15,53 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/core/providers/purchase_provider.dart';
 
-class OasisMapScreen extends ConsumerWidget {
+class OasisMapScreen extends ConsumerStatefulWidget {
   const OasisMapScreen({super.key});
+
+  @override
+  ConsumerState<OasisMapScreen> createState() => _OasisMapScreenState();
+}
+
+class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
+  final ScrollController _scrollController = ScrollController();
 
   // Dynamic: pull all 28 letters from the data source
   List<String> get letters => arabicLetters.map((l) => l.letter).toList();
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        // Scroll to the bottom where letter Alif starts
+        _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final unlockedUnits = ref.watch(unlockedUnitsProvider);
     final currentUnit = ref.watch(currentUnitProvider);
     final currentIndex = ref.watch(homeNavIndexProvider);
 
     final screenWidth = MediaQuery.sizeOf(context).width;
-    const double nodeHeightStep = 110.0;
-    final double totalMapHeight = letters.length * nodeHeightStep + 240.0;
-    final double mapAmplitude = (screenWidth * 0.3).clamp(80.0, 160.0);
+    const double nodeHeightStep = 125.0;
+    final double totalMapHeight = letters.length * nodeHeightStep + 360.0;
+    final double mapAmplitude = (screenWidth * 0.28).clamp(80.0, 140.0);
 
     // Calculate node coordinates along mathematical S-curve
     List<Offset> getNodePositions(double width) {
       final centerX = width / 2;
       return List.generate(letters.length, (index) {
-        final y = totalMapHeight - (index * nodeHeightStep + 160.0);
+        // Starting at 240px from bottom gives letter Alif (index 0) comfortable, prominent visibility
+        final y = totalMapHeight - (index * nodeHeightStep + 240.0);
         final x = centerX + math.sin(index * 0.75) * mapAmplitude;
         return Offset(x, y);
       });
@@ -48,14 +73,10 @@ class OasisMapScreen extends ConsumerWidget {
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-              image: const AssetImage('assets/images/backgrounds/desert_path_map.jpg'),
+              image: AssetImage('assets/images/backgrounds/desert_path_map.jpg'),
               fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                Colors.amber.withValues(alpha: 0.15),
-                BlendMode.overlay,
-              ),
             ),
           ),
           child: SafeArea(
@@ -63,14 +84,15 @@ class OasisMapScreen extends ConsumerWidget {
               children: [
                 // Scrollable Geometrically-Mapped Oasis Path
                 SingleChildScrollView(
+                  controller: _scrollController,
                   physics: const BouncingScrollPhysics(),
-                  padding: const EdgeInsets.only(top: 80, bottom: 120),
+                  padding: const EdgeInsets.only(top: 80, bottom: 140),
                   child: SizedBox(
                     height: totalMapHeight,
                     width: screenWidth,
                     child: Stack(
                       children: [
-                        // Custom Painter for the winding dashed desert road path
+                        // Custom Painter for the winding desert road path
                         CustomPaint(
                           painter: _OasisPathPainter(
                             positions: positions,
@@ -125,7 +147,7 @@ class OasisMapScreen extends ConsumerWidget {
                                       AudioManager.instance.playFeedback('try_again');
                                     }
                                   },
-                                ).animate().fadeIn(delay: (index * 60).ms, duration: 400.ms),
+                                ).animate().fadeIn(delay: (index * 40).ms, duration: 350.ms),
                               );
                             },
                           ),
@@ -137,41 +159,43 @@ class OasisMapScreen extends ConsumerWidget {
 
                 // Top Progress Bar with Parent Gate Button
                 Positioned(
-                  top: 16,
+                  top: 12,
                   left: 16,
                   right: 16,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.92),
+                      color: Colors.white.withValues(alpha: 0.95),
                       borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: AppColors.desertSand.withValues(alpha: 0.5), width: 1.5),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.1),
-                          blurRadius: 8,
+                          color: Colors.black.withValues(alpha: 0.12),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
                         )
                       ],
                     ),
                     child: Row(
                       children: [
                         IconButton(
-                          icon: const Icon(Icons.family_restroom, color: AppColors.desertSand),
+                          icon: const Icon(Icons.family_restroom, color: AppColors.desertSand, size: 26),
                           tooltip: 'بوابة الآباء',
                           onPressed: () {
                             context.push(AppRouter.parentGate);
                           },
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 6),
                         const Text(
                           'التقدم الكلي',
                           style: TextStyle(
                             fontFamily: 'Cairo',
                             fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                            fontSize: 15,
                             color: AppColors.textPrimary,
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        const SizedBox(width: 10),
                         Expanded(
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
@@ -183,18 +207,19 @@ class OasisMapScreen extends ConsumerWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        const SizedBox(width: 10),
                         Text(
                           '${((unlockedUnits.length / letters.length) * 100).toInt()}%',
                           style: const TextStyle(
                             fontFamily: 'Cairo',
                             fontWeight: FontWeight.bold,
+                            fontSize: 15,
                             color: AppColors.textPrimary,
                           ),
                         ),
                       ],
                     ),
-                  ).animate().slideY(begin: -1.0, end: 0, duration: 600.ms),
+                  ).animate().slideY(begin: -1.0, end: 0, duration: 500.ms),
                 ),
 
                 // Bottom Navigation Bar
@@ -214,7 +239,7 @@ class OasisMapScreen extends ConsumerWidget {
                         context.push(AppRouter.profile);
                       }
                     },
-                  ).animate().slideY(begin: 1.0, end: 0, duration: 600.ms),
+                  ).animate().slideY(begin: 1.0, end: 0, duration: 500.ms),
                 ),
               ],
             ),
@@ -225,7 +250,7 @@ class OasisMapScreen extends ConsumerWidget {
   }
 }
 
-/// Custom Painter to draw smooth connecting curve between stage nodes
+/// Custom Painter to draw smooth connecting desert trail between stage nodes
 class _OasisPathPainter extends CustomPainter {
   final List<Offset> positions;
   final int unlockedCount;
@@ -253,8 +278,8 @@ class _OasisPathPainter extends CustomPainter {
 
     // Outer shadow / border path
     final borderPaint = Paint()
-      ..color = Colors.brown.withValues(alpha: 0.25)
-      ..strokeWidth = 14.0
+      ..color = const Color(0xFFD4A017).withValues(alpha: 0.4)
+      ..strokeWidth = 16.0
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
@@ -262,8 +287,8 @@ class _OasisPathPainter extends CustomPainter {
 
     // Inner desert road path
     final roadPaint = Paint()
-      ..color = AppColors.desertSand.withValues(alpha: 0.6)
-      ..strokeWidth = 8.0
+      ..color = const Color(0xFFFFF3E0).withValues(alpha: 0.9)
+      ..strokeWidth = 10.0
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
@@ -275,4 +300,3 @@ class _OasisPathPainter extends CustomPainter {
     return oldDelegate.positions != positions || oldDelegate.unlockedCount != unlockedCount;
   }
 }
-

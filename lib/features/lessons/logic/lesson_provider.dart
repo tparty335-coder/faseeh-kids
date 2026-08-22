@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 
-enum LessonActivity { listen, trace, words, positions, longVowels, phrases, quiz }
+enum LessonActivity { story, song, listen, trace, words, positions, longVowels, phrases, explore, games, quiz }
 
 class LessonState {
   final ArabicLetter? letter;

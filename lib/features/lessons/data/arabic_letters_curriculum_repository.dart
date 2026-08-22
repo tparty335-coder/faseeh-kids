@@ -12,7 +12,10 @@ class CurriculumRepository {
   FullLetterCurriculum getCurriculumForLetter(String letterChar) {
     final key = AudioRegistry.letterKeyFromChar(letterChar);
     final name = AudioRegistry.letterNamesArabic[key] ?? letterChar;
-    final word1 = AudioRegistry.exampleWords[key] ?? '';
+    final String w1 = key == 'alif' ? 'أَسَد' : (AudioRegistry.exampleWords[key] ?? '');
+    final String w2 = key == 'alif' ? 'أُذُن' : w1;
+    final String w3 = key == 'alif' ? 'إِبْرَة' : w1;
+    final String w4 = key == 'alif' ? 'آمَال' : w1;
 
     return FullLetterCurriculum(
       key: key,
@@ -56,48 +59,48 @@ class CurriculumRepository {
           id: '${key}_pos_start',
           position: LetterPosition.start,
           displayChar: '$letterCharـ',
-          exampleWord: word1,
+          exampleWord: w1,
           audioKey: '${key}_pos_start',
         ),
         PositionAsset(
           id: '${key}_pos_middle',
           position: LetterPosition.middle,
           displayChar: 'ـ$letterCharـ',
-          exampleWord: word1,
+          exampleWord: w1,
           audioKey: '${key}_pos_middle',
         ),
         PositionAsset(
           id: '${key}_pos_end',
           position: LetterPosition.end,
           displayChar: 'ـ$letterChar',
-          exampleWord: word1,
+          exampleWord: w1,
           audioKey: '${key}_pos_end',
         ),
       ],
       words: [
         WordExampleAsset(
           id: '${key}_word1',
-          word: word1,
-          diacriticsWord: word1,
+          word: w1,
+          diacriticsWord: w1,
           audioKey: '${key}_word',
           sentenceAudioKey: '${key}_sentence',
         ),
         WordExampleAsset(
           id: '${key}_word2',
-          word: word1,
-          diacriticsWord: word1,
+          word: w2,
+          diacriticsWord: w2,
           audioKey: '${key}_word2',
         ),
         WordExampleAsset(
           id: '${key}_word3',
-          word: word1,
-          diacriticsWord: word1,
+          word: w3,
+          diacriticsWord: w3,
           audioKey: '${key}_word3',
         ),
         WordExampleAsset(
           id: '${key}_word4',
-          word: word1,
-          diacriticsWord: word1,
+          word: w4,
+          diacriticsWord: w4,
           audioKey: '${key}_word4',
         ),
       ],

@@ -36,7 +36,24 @@ class WordsActivityScreen extends ConsumerWidget {
             itemCount: letter.exampleWords.length,
             itemBuilder: (context, index) {
               final word = letter.exampleWords[index];
-              return _WordCard(word: word, targetLetter: letter.letter)
+              final letterKey = AudioRegistry.letterKeyFromChar(letter.letter);
+              // Map each word to its known image filename
+              final wordImageMap = <String, String>{
+                'أَسَد': '${letterKey}_word_asad',
+                'أُذُن': '${letterKey}_word_udhun',
+                'إِبْرَة': '${letterKey}_word_ibra',
+                'آمَال': '${letterKey}_word_amal',
+              };
+              final imgKey = wordImageMap[word];
+              final imagePath = imgKey != null
+                  ? 'assets/images/lessons/$letterKey/$imgKey.jpg'
+                  : null;
+              return _WordCard(
+                word: word,
+                targetLetter: letter.letter,
+                index: index,
+                imageAssetPath: imagePath,
+              )
                   .animate()
                   .fadeIn(delay: Duration(milliseconds: 200 * index))
                   .slideX(begin: 0.2, end: 0);
@@ -77,8 +94,15 @@ class WordsActivityScreen extends ConsumerWidget {
 class _WordCard extends StatelessWidget {
   final String word;
   final String targetLetter;
+  final int index;
+  final String? imageAssetPath;
 
-  const _WordCard({required this.word, required this.targetLetter});
+  const _WordCard({
+    required this.word,
+    required this.targetLetter,
+    required this.index,
+    this.imageAssetPath,
+  });
 
   List<TextSpan> _buildHighlightedText() {
     List<TextSpan> spans = [];
@@ -130,9 +154,10 @@ class _WordCard extends StatelessWidget {
             child: IconButton(
               icon: const Icon(Icons.volume_up, color: AppColors.skyBlue, size: 32),
               onPressed: () {
-                // Use playByKey with fallback to TTS for the word
+                final key = AudioRegistry.letterKeyFromChar(targetLetter);
+                final suffix = index == 0 ? 'word' : 'word${index + 1}';
                 AudioManager.instance.playByKey(
-                  '${AudioRegistry.letterKeyFromChar(targetLetter)}_word',
+                  '${key}_$suffix',
                   fallbackText: word,
                 );
               },
@@ -147,25 +172,21 @@ class _WordCard extends StatelessWidget {
               ),
             ),
           ),
-          // Vocabulary card illustration badge (responsive)
+          // Word illustration — shows image if available, falls back to icon
           Builder(
             builder: (context) {
-              final badgeSize = (MediaQuery.sizeOf(context).width * 0.16).clamp(56.0, 80.0);
-              return Container(
-                width: badgeSize,
-                height: badgeSize,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.sandWarm.withValues(alpha: 0.2),
-                  border: Border.all(color: AppColors.accent, width: 2),
-                ),
-                child: Center(
-                  child: Icon(
-                    Icons.auto_stories_rounded,
-                    size: badgeSize * 0.5,
-                    color: AppColors.accent,
-                  ),
-                ),
+              final badgeSize = (MediaQuery.sizeOf(context).width * 0.18).clamp(64.0, 96.0);
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(badgeSize * 0.25),
+                child: imageAssetPath != null
+                    ? Image.asset(
+                        imageAssetPath!,
+                        width: badgeSize,
+                        height: badgeSize,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => _fallbackBadge(badgeSize),
+                      )
+                    : _fallbackBadge(badgeSize),
               )
                   .animate()
                   .scale(duration: 400.ms, curve: Curves.elasticOut)
@@ -177,4 +198,17 @@ class _WordCard extends StatelessWidget {
       ),
     );
   }
+
+  Widget _fallbackBadge(double size) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(size * 0.25),
+          color: AppColors.sandWarm.withValues(alpha: 0.2),
+          border: Border.all(color: AppColors.accent, width: 2),
+        ),
+        child: Center(
+          child: Icon(Icons.auto_stories_rounded, size: size * 0.5, color: AppColors.accent),
+        ),
+      );
 }

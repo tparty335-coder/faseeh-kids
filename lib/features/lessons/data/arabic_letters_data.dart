@@ -17,7 +17,7 @@ class ArabicLetter {
 }
 
 const List<ArabicLetter> arabicLetters = [
-  ArabicLetter(letter: 'أ', name: 'أَلِف', nameEn: 'Alif', sound: 'أَ', exampleWords: ['أَرْنَب', 'أَسَد', 'أَنَانَاس'], unitIndex: 1),
+  ArabicLetter(letter: 'أ', name: 'أَلِف', nameEn: 'Alif', sound: 'أَ', exampleWords: ['أَسَد', 'أُذُن', 'إِبْرَة'], unitIndex: 1),
   ArabicLetter(letter: 'ب', name: 'بَاء', nameEn: 'Baa', sound: 'بَ', exampleWords: ['بَطَّة', 'بَاب', 'بَقَرَة'], unitIndex: 1),
   ArabicLetter(letter: 'ت', name: 'تَاء', nameEn: 'Taa', sound: 'تَ', exampleWords: ['تُفَّاحَة', 'تِمْسَاح', 'تَاج'], unitIndex: 1),
   ArabicLetter(letter: 'ث', name: 'ثَاء', nameEn: 'Thaa', sound: 'ثَ', exampleWords: ['ثَعْلَب', 'ثُعْبَان', 'ثَلْج'], unitIndex: 1),

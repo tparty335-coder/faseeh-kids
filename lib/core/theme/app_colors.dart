@@ -162,4 +162,82 @@ class AppColors {
 
   /// Accent — alias for accentDay
   static const Color accent = accentDay;
+
+  // ═══════════════════════════════════════════
+  // 🔤 LETTER LESSON COLORS (CD-extracted)
+  // ═══════════════════════════════════════════
+
+  /// Baa — dark maroon top bar
+  static const Color baaTopBar = Color(0xFF4A1010);
+
+  /// Baa — letter purple
+  static const Color baaLetterPurple = Color(0xFF8E24AA);
+
+  /// Baa — word pink text
+  static const Color baaWordPink = Color(0xFFF48FB1);
+
+  /// Baa — highlighted letter yellow
+  static const Color baaHighlightYellow = Color(0xFFFFD700);
+
+  /// Baa — card cream background
+  static const Color baaCardBg = Color(0xFFFFFDE7);
+
+  /// Baa — card green dotted border
+  static const Color baaCardBorder = Color(0xFF66BB6A);
+
+  /// Baa — golden rope
+  static const Color baaRope = Color(0xFFD4A017);
+
+  /// Baa — objectives yellow circle
+  static const Color baaObjectivesYellow = Color(0xFFFFD740);
+
+  /// Baa — objectives title pink
+  static const Color baaObjectivesTitle = Color(0xFFE91E8C);
+
+  /// Baa — objectives text blue
+  static const Color baaObjectivesText = Color(0xFF1565C0);
+
+  /// Baa — card red border
+  static const Color baaCardRed = Color(0xFFC62828);
+
+  /// Baa — speaker button orange
+  static const Color baaSpeaker = Color(0xFFF57C00);
+
+  // ═══ Lesson shared colors ═══
+
+  /// Sky blue for backgrounds
+  static const Color lessonSky = Color(0xFF87CEEB);
+
+  /// Grass green for backgrounds
+  static const Color lessonGrass = Color(0xFF5CB85C);
+
+  /// Forest dark green
+  static const Color lessonForest = Color(0xFF2D6A2D);
+
+  /// Tree trunk brown
+  static const Color lessonTrunk = Color(0xFF5C3317);
+
+  /// Haraka fatha red
+  static const Color harakaFatha = Color(0xFFE53935);
+
+  /// Haraka damma orange
+  static const Color harakaDamma = Color(0xFFFF6F00);
+
+  /// Haraka kasra blue
+  static const Color harakaKasra = Color(0xFF1E88E5);
+
+  /// Haraka sukoon grey
+  static const Color harakaSukoon = Color(0xFF757575);
+
+  /// Madd alif purple
+  static const Color maddAlif = Color(0xFF8E24AA);
+
+  /// Madd waw dark pink
+  static const Color maddWaw = Color(0xFFD81B60);
+
+  /// Madd yaa teal
+  static const Color maddYaa = Color(0xFF00897B);
+
+  /// Next button orange
+  static const Color nextButton = Color(0xFFFF9800);
 }

@@ -221,7 +221,7 @@ class AudioRegistry {
 
   /// Example words for each letter
   static const Map<String, String> exampleWords = {
-    'alif': 'أَرْنَب', 'baa': 'بَيْت', 'taa': 'تُفَّاحَة', 'thaa': 'ثَعْلَب',
+    'alif': 'أَسَد', 'baa': 'بَيْت', 'taa': 'تُفَّاحَة', 'thaa': 'ثَعْلَب',
     'jeem': 'جَمَل', 'haa_h': 'حِصَان', 'khaa': 'خَرُوف', 'daal': 'دُبّ',
     'dhaal': 'ذِئْب', 'raa': 'رُمَّان', 'zaay': 'زَرَافَة', 'seen': 'سَمَكَة',
     'sheen': 'شَجَرَة', 'saad': 'صَقْر', 'daad': 'ضِفْدَع', 'taa_t': 'طَائِر',
