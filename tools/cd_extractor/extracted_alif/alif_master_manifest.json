@@ -1,0 +1,3965 @@
+{
+  "letter": "أ",
+  "letter_name": "ألف",
+  "letter_key": "alif",
+  "total_audio_files": 203,
+  "total_authentic_images": 8,
+  "authentic_vowel_examples": [
+    {
+      "word": "akala",
+      "arabic": "أَكَلَ",
+      "haraka": "fatha",
+      "position": "start",
+      "image_path": "assets/images/lessons/alif/alif_word_akala.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_akala.jpg",
+      "width": 221,
+      "height": 180
+    },
+    {
+      "word": "saala",
+      "arabic": "سَأَلَ",
+      "haraka": "fatha",
+      "position": "middle",
+      "image_path": "assets/images/lessons/alif/alif_word_saala.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_saala.jpg",
+      "width": 221,
+      "height": 184
+    },
+    {
+      "word": "qaraa",
+      "arabic": "قَرَأَ",
+      "haraka": "fatha",
+      "position": "end",
+      "image_path": "assets/images/lessons/alif/alif_word_qaraa.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_qaraa.jpg",
+      "width": 221,
+      "height": 177
+    },
+    {
+      "word": "udhun",
+      "arabic": "أُذُن",
+      "haraka": "damma",
+      "position": "start",
+      "image_path": "assets/images/lessons/alif/alif_word_udhun.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_udhun.jpg",
+      "width": 221,
+      "height": 178
+    },
+    {
+      "word": "ummi",
+      "arabic": "أُمِّي",
+      "haraka": "damma",
+      "position": "start",
+      "image_path": "assets/images/lessons/alif/alif_word_ummi.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_ummi.jpg",
+      "width": 221,
+      "height": 176
+    },
+    {
+      "word": "ibra",
+      "arabic": "إِبْرَة",
+      "haraka": "kasra",
+      "position": "start",
+      "image_path": "assets/images/lessons/alif/alif_word_ibra.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_ibra.jpg",
+      "width": 221,
+      "height": 209
+    },
+    {
+      "word": "inas",
+      "arabic": "إِينَاس",
+      "haraka": "kasra",
+      "position": "start",
+      "image_path": "assets/images/lessons/alif/alif_word_inas.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_inas.jpg",
+      "width": 221,
+      "height": 198
+    },
+    {
+      "word": "ras",
+      "arabic": "رَأْس",
+      "haraka": "sukoon",
+      "position": "middle",
+      "image_path": "assets/images/lessons/alif/alif_word_ras.jpg",
+      "full_scene_path": "assets/images/lessons/alif/alif_scene_ras.jpg",
+      "width": 221,
+      "height": 180
+    }
+  ],
+  "modules": {
+    "story": [
+      {
+        "index": 6,
+        "filename": "ahdaf_a1_sound_0001.mp3",
+        "module": "story",
+        "size_bytes": 58224,
+        "duration_sec": 3.64,
+        "duration_ms": 3640,
+        "transcript": "استمع الى القصه ثم فكر معنا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0001.mp3"
+      },
+      {
+        "index": 7,
+        "filename": "ahdaf_a1_sound_0002.mp3",
+        "module": "story",
+        "size_bytes": 88317,
+        "duration_sec": 5.52,
+        "duration_ms": 5520,
+        "transcript": "والان استمع الى الاغنيه وقم بغنائها مع اصحابك",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0002.mp3"
+      },
+      {
+        "index": 8,
+        "filename": "ahdaf_a1_sound_0003.mp3",
+        "module": "story",
+        "size_bytes": 114231,
+        "duration_sec": 7.14,
+        "duration_ms": 7140,
+        "transcript": "في يوم من الايام كان الاسد يسير في الغابه يفكر في طعامه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0003.mp3"
+      },
+      {
+        "index": 9,
+        "filename": "ahdaf_a1_sound_0004.mp3",
+        "module": "story",
+        "size_bytes": 113395,
+        "duration_sec": 7.09,
+        "duration_ms": 7090,
+        "transcript": "الف ارنب يجري يلعب اسد يظهر خلف الارنب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0004.mp3"
+      },
+      {
+        "index": 10,
+        "filename": "ahdaf_a1_sound_0005.mp3",
+        "module": "story",
+        "size_bytes": 12789,
+        "duration_sec": 1.28,
+        "duration_ms": 1280,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0005.mp3"
+      },
+      {
+        "index": 11,
+        "filename": "ahdaf_a1_sound_0006.mp3",
+        "module": "story",
+        "size_bytes": 44850,
+        "duration_sec": 2.8,
+        "duration_ms": 2800,
+        "transcript": "اختفى الارنب خلف الاشجار",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0006.mp3"
+      },
+      {
+        "index": 12,
+        "filename": "ahdaf_a1_sound_0007.mp3",
+        "module": "story",
+        "size_bytes": 54463,
+        "duration_sec": 3.4,
+        "duration_ms": 3400,
+        "transcript": "قال الاسد اين ذهب الارنب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0007.mp3"
+      },
+      {
+        "index": 13,
+        "filename": "ahdaf_a1_sound_0008.mp3",
+        "module": "story",
+        "size_bytes": 79540,
+        "duration_sec": 4.97,
+        "duration_ms": 4970,
+        "transcript": "الاسد يسير في الغابه يفكر في طعامه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0008.mp3"
+      },
+      {
+        "index": 14,
+        "filename": "ahdaf_a1_sound_0009.mp3",
+        "module": "story",
+        "size_bytes": 115485,
+        "duration_sec": 7.22,
+        "duration_ms": 7220,
+        "transcript": "اخذ الاسد يبحث عن الارنب هنا وهناك ولكنه لم يجده",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0009.mp3"
+      },
+      {
+        "index": 15,
+        "filename": "ahdaf_a1_sound_0010.mp3",
+        "module": "story",
+        "size_bytes": 20190,
+        "duration_sec": 1.26,
+        "duration_ms": 1260,
+        "transcript": "قصه الحرف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0010.mp3"
+      },
+      {
+        "index": 16,
+        "filename": "ahdaf_a1_sound_0011.mp3",
+        "module": "story",
+        "size_bytes": 72853,
+        "duration_sec": 4.55,
+        "duration_ms": 4550,
+        "transcript": "من يعرف مكان الارنب يضغط عليه بالماوس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0011.mp3"
+      },
+      {
+        "index": 17,
+        "filename": "ahdaf_a1_sound_0012.mp3",
+        "module": "story",
+        "size_bytes": 8060,
+        "duration_sec": 2.69,
+        "duration_ms": 2690,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0012.mp3"
+      },
+      {
+        "index": 18,
+        "filename": "ahdaf_a1_sound_0013.mp3",
+        "module": "story",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0013.mp3"
+      },
+      {
+        "index": 19,
+        "filename": "ahdaf_a1_sound_0014.mp3",
+        "module": "story",
+        "size_bytes": 56135,
+        "duration_sec": 3.51,
+        "duration_ms": 3510,
+        "transcript": "حاول الاسد الجري وراء الارن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0014.mp3"
+      },
+      {
+        "index": 20,
+        "filename": "ahdaf_a1_sound_0015.mp3",
+        "module": "story",
+        "size_bytes": 119246,
+        "duration_sec": 7.45,
+        "duration_ms": 7450,
+        "transcript": "استمع الى الصوت واضغط على الصوره المناسبه لما استمعت اليه حسب احداث القصه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0015.mp3"
+      },
+      {
+        "index": 21,
+        "filename": "ahdaf_a1_sound_0016.mp3",
+        "module": "story",
+        "size_bytes": 102110,
+        "duration_sec": 6.38,
+        "duration_ms": 6380,
+        "transcript": "فهو لم ياكل اليوم شيئا وفجاه شاهد ارنبا في الطريق",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0016.mp3"
+      },
+      {
+        "index": 22,
+        "filename": "ahdaf_a1_sound_0017.mp3",
+        "module": "story",
+        "size_bytes": 38998,
+        "duration_sec": 2.44,
+        "duration_ms": 2440,
+        "transcript": "وفجاه اختفى الا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0017.mp3"
+      },
+      {
+        "index": 23,
+        "filename": "ahdaf_a1_sound_0018.mp3",
+        "module": "story",
+        "size_bytes": 92915,
+        "duration_sec": 5.81,
+        "duration_ms": 5810,
+        "transcript": "حاول الاسد الجري وراء الارنب ولكنه فش",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0018.mp3"
+      },
+      {
+        "index": 24,
+        "filename": "ahdaf_a1_sound_0019.mp3",
+        "module": "story",
+        "size_bytes": 51955,
+        "duration_sec": 3.25,
+        "duration_ms": 3250,
+        "transcript": "شاهد الاسد ارنبا في الطريق",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0019.mp3"
+      },
+      {
+        "index": 25,
+        "filename": "ahdaf_a1_sound_0020.mp3",
+        "module": "story",
+        "size_bytes": 18100,
+        "duration_sec": 1.13,
+        "duration_ms": 1130,
+        "transcript": "احسنت",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0020.mp3"
+      },
+      {
+        "index": 26,
+        "filename": "ahdaf_a1_sound_0021.mp3",
+        "module": "story",
+        "size_bytes": 48611,
+        "duration_sec": 3.04,
+        "duration_ms": 3040,
+        "transcript": "فكر معنا اين اختفى الارنب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0021.mp3"
+      },
+      {
+        "index": 27,
+        "filename": "ahdaf_a1_sound_0022.mp3",
+        "module": "story",
+        "size_bytes": 234378,
+        "duration_sec": 23.44,
+        "duration_ms": 23440,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0022.mp3"
+      },
+      {
+        "index": 28,
+        "filename": "ahdaf_a1_sound_0023.mp3",
+        "module": "story",
+        "size_bytes": 7442,
+        "duration_sec": 0.93,
+        "duration_ms": 930,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0023.mp3"
+      },
+      {
+        "index": 31,
+        "filename": "ahdaf_a1_sound_0337.mp3",
+        "module": "story",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0337.mp3"
+      }
+    ],
+    "vowels_and_mudud": [
+      {
+        "index": 32,
+        "filename": "ahdaf_a2_sound_0001.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 8905,
+        "duration_sec": 0.56,
+        "duration_ms": 560,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0001.mp3"
+      },
+      {
+        "index": 33,
+        "filename": "ahdaf_a2_sound_0002.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 289774,
+        "duration_sec": 18.11,
+        "duration_ms": 18110,
+        "transcript": "الف فتحه ا والفتحه عباره عن شرطه توضع فوق الحرف فتصبح فتحه وهذه الفتحه حولت صوت الحرف داخل الكلمه الى ايه فتنطق الف فتحه ايه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0002.mp3"
+      },
+      {
+        "index": 34,
+        "filename": "ahdaf_a2_sound_0003.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 24370,
+        "duration_sec": 1.52,
+        "duration_ms": 1520,
+        "transcript": "ومد بالياء",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0003.mp3"
+      },
+      {
+        "index": 35,
+        "filename": "ahdaf_a2_sound_0004.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 22698,
+        "duration_sec": 1.42,
+        "duration_ms": 1420,
+        "transcript": "مد بالواو",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0004.mp3"
+      },
+      {
+        "index": 36,
+        "filename": "ahdaf_a2_sound_0005.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 64912,
+        "duration_sec": 4.06,
+        "duration_ms": 4059,
+        "transcript": "هو المد ثلاثه انواع مد بالالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0005.mp3"
+      },
+      {
+        "index": 37,
+        "filename": "ahdaf_a2_sound_0006.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 146832,
+        "duration_sec": 9.18,
+        "duration_ms": 9180,
+        "transcript": "المد هو اطاله زمن صوت الحركه الفتحه او الضمه او الكسره الى الضعف او اكثر",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0006.mp3"
+      },
+      {
+        "index": 38,
+        "filename": "ahdaf_a2_sound_0007.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 24788,
+        "duration_sec": 1.55,
+        "duration_ms": 1550,
+        "transcript": "ما هو المد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0007.mp3"
+      },
+      {
+        "index": 39,
+        "filename": "ahdaf_a2_sound_0008.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 33147,
+        "duration_sec": 2.07,
+        "duration_ms": 2070,
+        "transcript": "الالف الممد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0008.mp3"
+      },
+      {
+        "index": 40,
+        "filename": "ahdaf_a2_sound_0009.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 51537,
+        "duration_sec": 3.22,
+        "duration_ms": 3220,
+        "transcript": "الف فتحه ا اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0009.mp3"
+      },
+      {
+        "index": 41,
+        "filename": "ahdaf_a2_sound_0010.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 69509,
+        "duration_sec": 4.34,
+        "duration_ms": 4340,
+        "transcript": "وكلمه ايناس بها مد بالياء",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0010.mp3"
+      },
+      {
+        "index": 42,
+        "filename": "ahdaf_a2_sound_0011.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 69509,
+        "duration_sec": 4.34,
+        "duration_ms": 4340,
+        "transcript": "وكلمه الاولى بها مد بالواو",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0011.mp3"
+      },
+      {
+        "index": 43,
+        "filename": "ahdaf_a2_sound_0012.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 73271,
+        "duration_sec": 4.58,
+        "duration_ms": 4580,
+        "transcript": "كلمه امال بها مد بالالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0012.mp3"
+      },
+      {
+        "index": 44,
+        "filename": "ahdaf_a2_sound_0013.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 30639,
+        "duration_sec": 1.91,
+        "duration_ms": 1910,
+        "transcript": "انظر ولاح",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0013.mp3"
+      },
+      {
+        "index": 45,
+        "filename": "ahdaf_a2_sound_0014.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 22280,
+        "duration_sec": 1.39,
+        "duration_ms": 1390,
+        "transcript": "ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0014.mp3"
+      },
+      {
+        "index": 46,
+        "filename": "ahdaf_a2_sound_0015.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 49447,
+        "duration_sec": 3.09,
+        "duration_ms": 3090,
+        "transcript": "الف كسره اي اب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0015.mp3"
+      },
+      {
+        "index": 47,
+        "filename": "ahdaf_a2_sound_0016.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 227498,
+        "duration_sec": 14.22,
+        "duration_ms": 14220,
+        "transcript": "واعلم ان الشرط التي توضع اسفل الحرف تسمى كسره وهذه الكسره تغير صوت الحرف داخل الكلمه انظر الف كسره اي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0016.mp3"
+      },
+      {
+        "index": 48,
+        "filename": "ahdaf_a2_sound_0017.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 41088,
+        "duration_sec": 2.57,
+        "duration_ms": 2570,
+        "transcript": "الف كسره",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0017.mp3"
+      },
+      {
+        "index": 49,
+        "filename": "ahdaf_a2_sound_0018.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 17682,
+        "duration_sec": 1.11,
+        "duration_ms": 1110,
+        "transcript": "سال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0018.mp3"
+      },
+      {
+        "index": 50,
+        "filename": "ahdaf_a2_sound_0019.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 15592,
+        "duration_sec": 0.97,
+        "duration_ms": 970,
+        "transcript": "قرا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0019.mp3"
+      },
+      {
+        "index": 52,
+        "filename": "ahdaf_a2_sound_0021.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 35655,
+        "duration_sec": 2.23,
+        "duration_ms": 2230,
+        "transcript": "اصوات حرف الالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0021.mp3"
+      },
+      {
+        "index": 53,
+        "filename": "ahdaf_a2_sound_0022.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 38998,
+        "duration_sec": 2.44,
+        "duration_ms": 2440,
+        "transcript": "الف ثم امي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0022.mp3"
+      },
+      {
+        "index": 54,
+        "filename": "ahdaf_a2_sound_0023.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 8060,
+        "duration_sec": 2.69,
+        "duration_ms": 2690,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0023.mp3"
+      },
+      {
+        "index": 55,
+        "filename": "ahdaf_a2_sound_0024.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 50701,
+        "duration_sec": 3.17,
+        "duration_ms": 3170,
+        "transcript": "كلمه ايناس بها مد بالي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0024.mp3"
+      },
+      {
+        "index": 56,
+        "filename": "ahdaf_a2_sound_0025.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 56135,
+        "duration_sec": 3.51,
+        "duration_ms": 3510,
+        "transcript": "كلمه الاولى بها مد بالواو",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0025.mp3"
+      },
+      {
+        "index": 57,
+        "filename": "ahdaf_a2_sound_0026.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 56135,
+        "duration_sec": 3.51,
+        "duration_ms": 3510,
+        "transcript": "كلمه امال بها مد بالالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0026.mp3"
+      },
+      {
+        "index": 58,
+        "filename": "ahdaf_a2_sound_0027.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 40252,
+        "duration_sec": 2.52,
+        "duration_ms": 2520,
+        "transcript": "الف فتحه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0027.mp3"
+      },
+      {
+        "index": 59,
+        "filename": "ahdaf_a2_sound_0028.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 16428,
+        "duration_sec": 1.03,
+        "duration_ms": 1030,
+        "transcript": "اكل",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0028.mp3"
+      },
+      {
+        "index": 60,
+        "filename": "ahdaf_a2_sound_0029.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 189881,
+        "duration_sec": 11.87,
+        "duration_ms": 11870,
+        "transcript": "والحركات الطويله هي امال بها مد بالالف الاولى بها مد بالواو ايناس بها مد بالياء",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0029.mp3"
+      },
+      {
+        "index": 61,
+        "filename": "ahdaf_a2_sound_0030.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 230424,
+        "duration_sec": 14.4,
+        "duration_ms": 14400,
+        "transcript": "اذا ابنائي الاعزاء الحركات القصيره هي الفتحه في كلمه اسد والضمه في كلمه اذن والكسره في كلمه ابره",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0030.mp3"
+      },
+      {
+        "index": 62,
+        "filename": "ahdaf_a2_sound_0031.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 463645,
+        "duration_sec": 28.98,
+        "duration_ms": 28980,
+        "transcript": "وانظر الى الكلمات امال فهي ممدوده بالالف فتوضع فوقه فتحه ويليها الف فنقول امال وقد يمد الحرف بالواو فتوضع فوقه ضمه يليها واو مثل اولى ويمد الحرف بالياء فتوضع تحته كسره يليها ياء مثل ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0031.mp3"
+      },
+      {
+        "index": 63,
+        "filename": "ahdaf_a2_sound_0032.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 280997,
+        "duration_sec": 17.56,
+        "duration_ms": 17560,
+        "transcript": "انظر الى كلمه اسد مضبوطه بالفتحه وكلمه اذن مضبوطه بالضمه وكلمه ابره مضبوطه بالكسره وتسمى بالحركات القصيره",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0032.mp3"
+      },
+      {
+        "index": 64,
+        "filename": "ahdaf_a2_sound_0033.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 26041,
+        "duration_sec": 1.63,
+        "duration_ms": 1630,
+        "transcript": "وكلمه فا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0033.mp3"
+      },
+      {
+        "index": 65,
+        "filename": "ahdaf_a2_sound_0034.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 96259,
+        "duration_sec": 6.02,
+        "duration_ms": 6020,
+        "transcript": "انظر كلمه راس فهنا حرف الالف بدون حركه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0034.mp3"
+      },
+      {
+        "index": 66,
+        "filename": "ahdaf_a2_sound_0035.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 127606,
+        "duration_sec": 7.98,
+        "duration_ms": 7980,
+        "transcript": "واعلم ايضا ان السكون فوق الحرف يجعل الحرف بدون حركه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0035.mp3"
+      },
+      {
+        "index": 67,
+        "filename": "ahdaf_a2_sound_0036.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 38998,
+        "duration_sec": 2.44,
+        "duration_ms": 2440,
+        "transcript": "الف ضمه اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0036.mp3"
+      },
+      {
+        "index": 68,
+        "filename": "ahdaf_a2_sound_0037.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 152683,
+        "duration_sec": 9.54,
+        "duration_ms": 9540,
+        "transcript": "واعلم ان الضمه فوق الحرف تغير صوت الحرف داخل الكلمه فنقول الف ضمه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0037.mp3"
+      },
+      {
+        "index": 69,
+        "filename": "ahdaf_a2_sound_0038.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 39834,
+        "duration_sec": 2.49,
+        "duration_ms": 2490,
+        "transcript": "الف ضمه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0038.mp3"
+      },
+      {
+        "index": 70,
+        "filename": "ahdaf_a2_sound_0039.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0039.mp3"
+      },
+      {
+        "index": 71,
+        "filename": "ahdaf_a2_sound_0040.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 19354,
+        "duration_sec": 1.21,
+        "duration_ms": 1210,
+        "transcript": "ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0040.mp3"
+      },
+      {
+        "index": 72,
+        "filename": "ahdaf_a2_sound_0041.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0041.mp3"
+      },
+      {
+        "index": 74,
+        "filename": "ahdaf_a2_sound_0043.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 17682,
+        "duration_sec": 1.11,
+        "duration_ms": 1110,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0043.mp3"
+      },
+      {
+        "index": 75,
+        "filename": "ahdaf_a2_sound_0044.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 15592,
+        "duration_sec": 0.97,
+        "duration_ms": 970,
+        "transcript": "اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0044.mp3"
+      },
+      {
+        "index": 76,
+        "filename": "ahdaf_a2_sound_0045.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 12249,
+        "duration_sec": 0.77,
+        "duration_ms": 770,
+        "transcript": "اولى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0045.mp3"
+      },
+      {
+        "index": 77,
+        "filename": "ahdaf_a2_sound_0666.mp3",
+        "module": "vowels_and_mudud",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0666.mp3"
+      }
+    ],
+    "writing_tracing": [
+      {
+        "index": 78,
+        "filename": "ahdaf_a3_sound_0001.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 80794,
+        "duration_sec": 5.05,
+        "duration_ms": 5050,
+        "transcript": "والان هيا نتعلم معا كيفيه كتابه حرف الالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0001.mp3"
+      },
+      {
+        "index": 79,
+        "filename": "ahdaf_a3_sound_0002.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 86228,
+        "duration_sec": 5.39,
+        "duration_ms": 5390,
+        "transcript": "يكتب حرف الالف بطرق مختلفه حسب مكانه في الكلمه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0002.mp3"
+      },
+      {
+        "index": 80,
+        "filename": "ahdaf_a3_sound_0003.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 29385,
+        "duration_sec": 1.84,
+        "duration_ms": 1840,
+        "transcript": "ونكتبه هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0003.mp3"
+      },
+      {
+        "index": 81,
+        "filename": "ahdaf_a3_sound_0004.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 90825,
+        "duration_sec": 5.68,
+        "duration_ms": 5680,
+        "transcript": "اما اذا جاء حرف الالف في وسط الكلمه فانه ياتي بهذا الشكل",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0004.mp3"
+      },
+      {
+        "index": 82,
+        "filename": "ahdaf_a3_sound_0005.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 70763,
+        "duration_sec": 4.42,
+        "duration_ms": 4420,
+        "transcript": "اما حرف الالف في اخر الكلمه فانه يكتب هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0005.mp3"
+      },
+      {
+        "index": 83,
+        "filename": "ahdaf_a3_sound_0006.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 76197,
+        "duration_sec": 4.76,
+        "duration_ms": 4760,
+        "transcript": "والان نتعلم سويا كيفيه كتابه كل شكل بالتفصيل",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0006.mp3"
+      },
+      {
+        "index": 84,
+        "filename": "ahdaf_a3_sound_0007.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 17264,
+        "duration_sec": 1.08,
+        "duration_ms": 1080,
+        "transcript": "قرا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0007.mp3"
+      },
+      {
+        "index": 85,
+        "filename": "ahdaf_a3_sound_0008.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 169401,
+        "duration_sec": 10.59,
+        "duration_ms": 10590,
+        "transcript": "مرحبا بكم يا اصدقائي انا صديقكم القلم وسوف نتعلم سويا كيفيه كتابه كل حرف من حروف لغتنا الجميله",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0008.mp3"
+      },
+      {
+        "index": 86,
+        "filename": "ahdaf_a3_sound_0009.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 13503,
+        "duration_sec": 0.84,
+        "duration_ms": 840,
+        "transcript": "اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0009.mp3"
+      },
+      {
+        "index": 87,
+        "filename": "ahdaf_a3_sound_0010.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 13503,
+        "duration_sec": 0.84,
+        "duration_ms": 840,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0010.mp3"
+      },
+      {
+        "index": 88,
+        "filename": "ahdaf_a3_sound_0011.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 20190,
+        "duration_sec": 1.26,
+        "duration_ms": 1260,
+        "transcript": "ويكتب هك",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0011.mp3"
+      },
+      {
+        "index": 89,
+        "filename": "ahdaf_a3_sound_0012.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 60314,
+        "duration_sec": 3.77,
+        "duration_ms": 3770,
+        "transcript": "ياتي حرف الالف في اول الكلمه بهذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0012.mp3"
+      },
+      {
+        "index": 90,
+        "filename": "ahdaf_a3_sound_0013.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0013.mp3"
+      },
+      {
+        "index": 91,
+        "filename": "ahdaf_a3_sound_0014.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 8060,
+        "duration_sec": 2.69,
+        "duration_ms": 2690,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0014.mp3"
+      },
+      {
+        "index": 92,
+        "filename": "ahdaf_a3_sound_0015.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 79540,
+        "duration_sec": 4.97,
+        "duration_ms": 4970,
+        "transcript": "فاذا جاء حرف الالف في اول الكلمه فانه يكتب هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0015.mp3"
+      },
+      {
+        "index": 93,
+        "filename": "ahdaf_a3_sound_0016.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 73689,
+        "duration_sec": 4.61,
+        "duration_ms": 4610,
+        "transcript": "اذا جاء حرف الالف في وسط الكلمه فانه يكتب هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0016.mp3"
+      },
+      {
+        "index": 94,
+        "filename": "ahdaf_a3_sound_0017.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 29385,
+        "duration_sec": 1.84,
+        "duration_ms": 1840,
+        "transcript": "ويكتب ايضا هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0017.mp3"
+      },
+      {
+        "index": 95,
+        "filename": "ahdaf_a3_sound_0018.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 53209,
+        "duration_sec": 3.33,
+        "duration_ms": 3330,
+        "transcript": "ياتي حرف الالف في اخر الكلمه بهذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0018.mp3"
+      },
+      {
+        "index": 96,
+        "filename": "ahdaf_a3_sound_0019.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 35237,
+        "duration_sec": 2.2,
+        "duration_ms": 2200,
+        "transcript": "يكتب حرف الالف هكذا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0019.mp3"
+      },
+      {
+        "index": 97,
+        "filename": "ahdaf_a3_sound_0020.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 16846,
+        "duration_sec": 1.05,
+        "duration_ms": 1050,
+        "transcript": "حرف الال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0020.mp3"
+      },
+      {
+        "index": 98,
+        "filename": "ahdaf_a3_sound_0021.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 16846,
+        "duration_sec": 1.05,
+        "duration_ms": 1050,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0021.mp3"
+      },
+      {
+        "index": 99,
+        "filename": "ahdaf_a3_sound_0345.mp3",
+        "module": "writing_tracing",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0345.mp3"
+      }
+    ],
+    "vocabulary_words": [
+      {
+        "index": 100,
+        "filename": "ahdaf_a4_sound_0001.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "كتاب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0001.mp3"
+      },
+      {
+        "index": 101,
+        "filename": "ahdaf_a4_sound_0002.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 16010,
+        "duration_sec": 1.0,
+        "duration_ms": 1000,
+        "transcript": "تفاحه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0002.mp3"
+      },
+      {
+        "index": 102,
+        "filename": "ahdaf_a4_sound_0003.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13085,
+        "duration_sec": 0.82,
+        "duration_ms": 820,
+        "transcript": "باب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0003.mp3"
+      },
+      {
+        "index": 103,
+        "filename": "ahdaf_a4_sound_0004.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "زرا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0004.mp3"
+      },
+      {
+        "index": 104,
+        "filename": "ahdaf_a4_sound_0005.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "حصان",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0005.mp3"
+      },
+      {
+        "index": 105,
+        "filename": "ahdaf_a4_sound_0006.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 14339,
+        "duration_sec": 0.9,
+        "duration_ms": 900,
+        "transcript": "الاولى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0006.mp3"
+      },
+      {
+        "index": 106,
+        "filename": "ahdaf_a4_sound_0007.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "اهرام",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0007.mp3"
+      },
+      {
+        "index": 107,
+        "filename": "ahdaf_a4_sound_0008.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13085,
+        "duration_sec": 0.82,
+        "duration_ms": 820,
+        "transcript": "امال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0008.mp3"
+      },
+      {
+        "index": 108,
+        "filename": "ahdaf_a4_sound_0009.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 12249,
+        "duration_sec": 0.77,
+        "duration_ms": 770,
+        "transcript": "‏face",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0009.mp3"
+      },
+      {
+        "index": 109,
+        "filename": "ahdaf_a4_sound_0010.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "امي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0010.mp3"
+      },
+      {
+        "index": 110,
+        "filename": "ahdaf_a4_sound_0011.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 11413,
+        "duration_sec": 0.71,
+        "duration_ms": 710,
+        "transcript": "رقص",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0011.mp3"
+      },
+      {
+        "index": 111,
+        "filename": "ahdaf_a4_sound_0012.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0012.mp3"
+      },
+      {
+        "index": 112,
+        "filename": "ahdaf_a4_sound_0013.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 16010,
+        "duration_sec": 1.0,
+        "duration_ms": 1000,
+        "transcript": "ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0013.mp3"
+      },
+      {
+        "index": 113,
+        "filename": "ahdaf_a4_sound_0014.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 12249,
+        "duration_sec": 0.77,
+        "duration_ms": 770,
+        "transcript": "قرا",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0014.mp3"
+      },
+      {
+        "index": 114,
+        "filename": "ahdaf_a4_sound_0015.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 9323,
+        "duration_sec": 0.58,
+        "duration_ms": 580,
+        "transcript": "اب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0015.mp3"
+      },
+      {
+        "index": 115,
+        "filename": "ahdaf_a4_sound_0016.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 13921,
+        "duration_sec": 0.87,
+        "duration_ms": 870,
+        "transcript": "سال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0016.mp3"
+      },
+      {
+        "index": 116,
+        "filename": "ahdaf_a4_sound_0017.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 11831,
+        "duration_sec": 0.74,
+        "duration_ms": 740,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0017.mp3"
+      },
+      {
+        "index": 117,
+        "filename": "ahdaf_a4_sound_0018.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 8905,
+        "duration_sec": 0.56,
+        "duration_ms": 560,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0018.mp3"
+      },
+      {
+        "index": 118,
+        "filename": "ahdaf_a4_sound_0019.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 12667,
+        "duration_sec": 0.79,
+        "duration_ms": 790,
+        "transcript": "ارن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0019.mp3"
+      },
+      {
+        "index": 119,
+        "filename": "ahdaf_a4_sound_0020.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 14339,
+        "duration_sec": 0.9,
+        "duration_ms": 900,
+        "transcript": "اش",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0020.mp3"
+      },
+      {
+        "index": 120,
+        "filename": "ahdaf_a4_sound_0021.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 87064,
+        "duration_sec": 5.44,
+        "duration_ms": 5440,
+        "transcript": "اضغط على الكلمه لتستمع اليها وتشاهد صورتها",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0021.mp3"
+      },
+      {
+        "index": 121,
+        "filename": "ahdaf_a4_sound_0022.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 30221,
+        "duration_sec": 1.89,
+        "duration_ms": 1890,
+        "transcript": "كلمات الحرف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0022.mp3"
+      },
+      {
+        "index": 124,
+        "filename": "ahdaf_a4_sound_0642.mp3",
+        "module": "vocabulary_words",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0642.mp3"
+      }
+    ],
+    "games_quizzes": [
+      {
+        "index": 125,
+        "filename": "ahdaf_a5_bee_sound_0001.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 73689,
+        "duration_sec": 4.61,
+        "duration_ms": 4610,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي راس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0001.mp3"
+      },
+      {
+        "index": 126,
+        "filename": "ahdaf_a5_bee_sound_0002.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 72017,
+        "duration_sec": 4.5,
+        "duration_ms": 4500,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0002.mp3"
+      },
+      {
+        "index": 127,
+        "filename": "ahdaf_a5_bee_sound_0003.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 73271,
+        "duration_sec": 4.58,
+        "duration_ms": 4580,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0003.mp3"
+      },
+      {
+        "index": 128,
+        "filename": "ahdaf_a5_bee_sound_0004.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 72017,
+        "duration_sec": 4.5,
+        "duration_ms": 4500,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي اس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0004.mp3"
+      },
+      {
+        "index": 129,
+        "filename": "ahdaf_a5_bee_sound_0005.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 42951,
+        "duration_sec": 2.68,
+        "duration_ms": 2680,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0005.mp3"
+      },
+      {
+        "index": 130,
+        "filename": "ahdaf_a5_bee_sound_0006.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 11622,
+        "duration_sec": 1.45,
+        "duration_ms": 1450,
+        "transcript": "اجابه صحي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0006.mp3"
+      },
+      {
+        "index": 131,
+        "filename": "ahdaf_a5_bee_sound_0007.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 107961,
+        "duration_sec": 6.75,
+        "duration_ms": 6750,
+        "transcript": "اضغط على حرف الالف بحركته المناسبه لكل كلمه من الكلمات الاتيه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0007.mp3"
+      },
+      {
+        "index": 132,
+        "filename": "ahdaf_a5_bee_sound_0008.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 13921,
+        "duration_sec": 1.74,
+        "duration_ms": 1740,
+        "transcript": "خليه الحرف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0008.mp3"
+      },
+      {
+        "index": 133,
+        "filename": "ahdaf_a5_bee_sound_0009.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0009.mp3"
+      },
+      {
+        "index": 134,
+        "filename": "ahdaf_a5_bee_sound_0010.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 13503,
+        "duration_sec": 0.84,
+        "duration_ms": 840,
+        "transcript": "اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0010.mp3"
+      },
+      {
+        "index": 135,
+        "filename": "ahdaf_a5_bee_sound_0011.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15175,
+        "duration_sec": 0.95,
+        "duration_ms": 950,
+        "transcript": "رق",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0011.mp3"
+      },
+      {
+        "index": 136,
+        "filename": "ahdaf_a5_bee_sound_0012.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0012.mp3"
+      },
+      {
+        "index": 137,
+        "filename": "ahdaf_a5_bee_sound_0013.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0013.mp3"
+      },
+      {
+        "index": 138,
+        "filename": "ahdaf_a5_bee_sound_0014.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14877,
+        "duration_sec": 1.49,
+        "duration_ms": 1490,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0014.mp3"
+      },
+      {
+        "index": 139,
+        "filename": "ahdaf_a5_bee_sound_0015.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 7442,
+        "duration_sec": 0.93,
+        "duration_ms": 930,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0015.mp3"
+      },
+      {
+        "index": 142,
+        "filename": "ahdaf_a5_bee_sound_0248.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0248.mp3"
+      },
+      {
+        "index": 143,
+        "filename": "ahdaf_a5_cir_sound_0001.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 62822,
+        "duration_sec": 3.93,
+        "duration_ms": 3930,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0001.mp3"
+      },
+      {
+        "index": 144,
+        "filename": "ahdaf_a5_cir_sound_0002.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 7233,
+        "duration_sec": 0.9,
+        "duration_ms": 900,
+        "transcript": "ت",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0002.mp3"
+      },
+      {
+        "index": 145,
+        "filename": "ahdaf_a5_cir_sound_0003.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 42951,
+        "duration_sec": 2.68,
+        "duration_ms": 2680,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0003.mp3"
+      },
+      {
+        "index": 146,
+        "filename": "ahdaf_a5_cir_sound_0004.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 62822,
+        "duration_sec": 3.93,
+        "duration_ms": 3930,
+        "transcript": "اضغط على الصوره التي بها حرف الف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0004.mp3"
+      },
+      {
+        "index": 147,
+        "filename": "ahdaf_a5_cir_sound_0005.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 19772,
+        "duration_sec": 1.24,
+        "duration_ms": 1240,
+        "transcript": "السي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0005.mp3"
+      },
+      {
+        "index": 148,
+        "filename": "ahdaf_a5_cir_sound_0006.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0006.mp3"
+      },
+      {
+        "index": 149,
+        "filename": "ahdaf_a5_cir_sound_0007.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15175,
+        "duration_sec": 0.95,
+        "duration_ms": 950,
+        "transcript": "رق",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0007.mp3"
+      },
+      {
+        "index": 150,
+        "filename": "ahdaf_a5_cir_sound_0008.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15592,
+        "duration_sec": 0.97,
+        "duration_ms": 970,
+        "transcript": "اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0008.mp3"
+      },
+      {
+        "index": 151,
+        "filename": "ahdaf_a5_cir_sound_0009.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 11622,
+        "duration_sec": 1.45,
+        "duration_ms": 1450,
+        "transcript": "اجابه صحي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0009.mp3"
+      },
+      {
+        "index": 154,
+        "filename": "ahdaf_a5_cir_sound_0468.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0468.mp3"
+      },
+      {
+        "index": 155,
+        "filename": "ahdaf_a5_fish_sound_0001.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 62822,
+        "duration_sec": 3.93,
+        "duration_ms": 3930,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0001.mp3"
+      },
+      {
+        "index": 156,
+        "filename": "ahdaf_a5_fish_sound_0002.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 64912,
+        "duration_sec": 4.06,
+        "duration_ms": 4059,
+        "transcript": "اضغط على الكلمه التي بها حرف الالف",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0002.mp3"
+      },
+      {
+        "index": 157,
+        "filename": "ahdaf_a5_fish_sound_0003.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 28549,
+        "duration_sec": 1.78,
+        "duration_ms": 1780,
+        "transcript": "صيد الكلمات",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0003.mp3"
+      },
+      {
+        "index": 158,
+        "filename": "ahdaf_a5_fish_sound_0004.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0004.mp3"
+      },
+      {
+        "index": 159,
+        "filename": "ahdaf_a5_fish_sound_0005.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15175,
+        "duration_sec": 0.95,
+        "duration_ms": 950,
+        "transcript": "رق",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0005.mp3"
+      },
+      {
+        "index": 160,
+        "filename": "ahdaf_a5_fish_sound_0006.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0006.mp3"
+      },
+      {
+        "index": 161,
+        "filename": "ahdaf_a5_fish_sound_0007.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 6264,
+        "duration_sec": 0.63,
+        "duration_ms": 630,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0007.mp3"
+      },
+      {
+        "index": 163,
+        "filename": "ahdaf_a5_fish_sound_0009.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "اكل",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0009.mp3"
+      },
+      {
+        "index": 164,
+        "filename": "ahdaf_a5_fish_sound_0010.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 14757,
+        "duration_sec": 0.92,
+        "duration_ms": 920,
+        "transcript": "اذن",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0010.mp3"
+      },
+      {
+        "index": 165,
+        "filename": "ahdaf_a5_fish_sound_0011.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 7442,
+        "duration_sec": 0.93,
+        "duration_ms": 930,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0011.mp3"
+      },
+      {
+        "index": 166,
+        "filename": "ahdaf_a5_fish_sound_0012.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 11622,
+        "duration_sec": 1.45,
+        "duration_ms": 1450,
+        "transcript": "اجابه صحي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0012.mp3"
+      },
+      {
+        "index": 169,
+        "filename": "ahdaf_a5_fish_sound_0285.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0285.mp3"
+      },
+      {
+        "index": 170,
+        "filename": "ahdaf_a5_paint_sound_0001.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 77032,
+        "duration_sec": 4.81,
+        "duration_ms": 4810,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي اولى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0001.mp3"
+      },
+      {
+        "index": 171,
+        "filename": "ahdaf_a5_paint_sound_0002.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 87481,
+        "duration_sec": 5.47,
+        "duration_ms": 5470,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0002.mp3"
+      },
+      {
+        "index": 172,
+        "filename": "ahdaf_a5_paint_sound_0003.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 62822,
+        "duration_sec": 3.93,
+        "duration_ms": 3930,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0003.mp3"
+      },
+      {
+        "index": 173,
+        "filename": "ahdaf_a5_paint_sound_0004.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 81212,
+        "duration_sec": 5.08,
+        "duration_ms": 5080,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي امال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0004.mp3"
+      },
+      {
+        "index": 174,
+        "filename": "ahdaf_a5_paint_sound_0005.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 35237,
+        "duration_sec": 2.2,
+        "duration_ms": 2200,
+        "transcript": "احسنت اولى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0005.mp3"
+      },
+      {
+        "index": 175,
+        "filename": "ahdaf_a5_paint_sound_0006.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 41088,
+        "duration_sec": 2.57,
+        "duration_ms": 2570,
+        "transcript": "احسنت ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0006.mp3"
+      },
+      {
+        "index": 176,
+        "filename": "ahdaf_a5_paint_sound_0007.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 35655,
+        "duration_sec": 2.23,
+        "duration_ms": 2230,
+        "transcript": "احسنت امال",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0007.mp3"
+      },
+      {
+        "index": 177,
+        "filename": "ahdaf_a5_paint_sound_0008.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0008.mp3"
+      },
+      {
+        "index": 178,
+        "filename": "ahdaf_a5_paint_sound_0009.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 36908,
+        "duration_sec": 4.61,
+        "duration_ms": 4610,
+        "transcript": "والان لون حروف الكلمه بالوانك المفضله",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0009.mp3"
+      },
+      {
+        "index": 179,
+        "filename": "ahdaf_a5_paint_sound_0010.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 26041,
+        "duration_sec": 3.26,
+        "duration_ms": 3260,
+        "transcript": "اضغط على الكلمه التي بها",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0010.mp3"
+      },
+      {
+        "index": 180,
+        "filename": "ahdaf_a5_paint_sound_0011.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 10368,
+        "duration_sec": 1.3,
+        "duration_ms": 1300,
+        "transcript": "التلوين",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0011.mp3"
+      },
+      {
+        "index": 181,
+        "filename": "ahdaf_a5_paint_sound_0012.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 17891,
+        "duration_sec": 2.24,
+        "duration_ms": 2240,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0012.mp3"
+      },
+      {
+        "index": 183,
+        "filename": "ahdaf_a5_paint_sound_0267.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0267.mp3"
+      },
+      {
+        "index": 184,
+        "filename": "ahdaf_a5_words_sound_0001.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 87481,
+        "duration_sec": 5.47,
+        "duration_ms": 5470,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0001.mp3"
+      },
+      {
+        "index": 185,
+        "filename": "ahdaf_a5_words_sound_0002.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 37947,
+        "duration_sec": 2.37,
+        "duration_ms": 2370,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0002.mp3"
+      },
+      {
+        "index": 186,
+        "filename": "ahdaf_a5_words_sound_0003.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 40670,
+        "duration_sec": 5.08,
+        "duration_ms": 5080,
+        "transcript": "اسحب اسم الصوره وضعها مكان النقط فيما ياتي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0003.mp3"
+      },
+      {
+        "index": 187,
+        "filename": "ahdaf_a5_words_sound_0004.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 41088,
+        "duration_sec": 2.57,
+        "duration_ms": 2570,
+        "transcript": "احسنت ايناس",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0004.mp3"
+      },
+      {
+        "index": 188,
+        "filename": "ahdaf_a5_words_sound_0005.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 9114,
+        "duration_sec": 1.14,
+        "duration_ms": 1140,
+        "transcript": "ممتاز",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0005.mp3"
+      },
+      {
+        "index": 189,
+        "filename": "ahdaf_a5_words_sound_0006.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 10368,
+        "duration_sec": 1.3,
+        "duration_ms": 1300,
+        "transcript": "لعبه الك",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0006.mp3"
+      },
+      {
+        "index": 190,
+        "filename": "ahdaf_a5_words_sound_0007.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 15384,
+        "duration_sec": 1.92,
+        "duration_ms": 1920,
+        "transcript": "حاول مره اخرى",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0007.mp3"
+      },
+      {
+        "index": 191,
+        "filename": "ahdaf_a5_words_sound_0008.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 32311,
+        "duration_sec": 4.04,
+        "duration_ms": 4040,
+        "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0008.mp3"
+      },
+      {
+        "index": 192,
+        "filename": "ahdaf_a5_words_sound_0009.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 18518,
+        "duration_sec": 1.16,
+        "duration_ms": 1160,
+        "transcript": "كتاب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0009.mp3"
+      },
+      {
+        "index": 194,
+        "filename": "ahdaf_a5_words_sound_0011.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 21444,
+        "duration_sec": 1.34,
+        "duration_ms": 1340,
+        "transcript": "تفاحه",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0011.mp3"
+      },
+      {
+        "index": 195,
+        "filename": "ahdaf_a5_words_sound_0012.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 13503,
+        "duration_sec": 0.84,
+        "duration_ms": 840,
+        "transcript": "اسد",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0012.mp3"
+      },
+      {
+        "index": 196,
+        "filename": "ahdaf_a5_words_sound_0013.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 17264,
+        "duration_sec": 1.08,
+        "duration_ms": 1080,
+        "transcript": "اهرام",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0013.mp3"
+      },
+      {
+        "index": 197,
+        "filename": "ahdaf_a5_words_sound_0014.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 17264,
+        "duration_sec": 1.08,
+        "duration_ms": 1080,
+        "transcript": "ارنب",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0014.mp3"
+      },
+      {
+        "index": 198,
+        "filename": "ahdaf_a5_words_sound_0015.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 42951,
+        "duration_sec": 2.68,
+        "duration_ms": 2680,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0015.mp3"
+      },
+      {
+        "index": 200,
+        "filename": "ahdaf_a5_words_sound_0380.mp3",
+        "module": "games_quizzes",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0380.mp3"
+      }
+    ],
+    "main_navigation": [
+      {
+        "index": 1,
+        "filename": "Main_sound_0001.mp3",
+        "module": "main_navigation",
+        "size_bytes": 256455,
+        "duration_sec": 16.03,
+        "duration_ms": 16030,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/Main_sound_0001.mp3"
+      },
+      {
+        "index": 3,
+        "filename": "Main_sound_0003.mp3",
+        "module": "main_navigation",
+        "size_bytes": 214123,
+        "duration_sec": 26.77,
+        "duration_ms": 26770,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/Main_sound_0003.mp3"
+      },
+      {
+        "index": 4,
+        "filename": "Main_sound_0004.mp3",
+        "module": "main_navigation",
+        "size_bytes": 117575,
+        "duration_sec": 7.35,
+        "duration_ms": 7350,
+        "transcript": "امامك مجموعه من الاسئله الشقيه اختر نوع السؤال الذي تحب ان تجيب عليه",
+        "raw_path": "scratch/extracted_alif/audio/Main_sound_0004.mp3"
+      },
+      {
+        "index": 5,
+        "filename": "Main_sound_0873.mp3",
+        "module": "main_navigation",
+        "size_bytes": 94432,
+        "duration_sec": 47.22,
+        "duration_ms": 47220,
+        "transcript": "",
+        "raw_path": "scratch/extracted_alif/audio/Main_sound_0873.mp3"
+      }
+    ]
+  },
+  "all_audio_transcripts": [
+    {
+      "index": 1,
+      "filename": "Main_sound_0001.mp3",
+      "module": "main_navigation",
+      "size_bytes": 256455,
+      "duration_sec": 16.03,
+      "duration_ms": 16030,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/Main_sound_0001.mp3"
+    },
+    {
+      "index": 2,
+      "filename": "Main_sound_0002.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/Main_sound_0002.mp3"
+    },
+    {
+      "index": 3,
+      "filename": "Main_sound_0003.mp3",
+      "module": "main_navigation",
+      "size_bytes": 214123,
+      "duration_sec": 26.77,
+      "duration_ms": 26770,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/Main_sound_0003.mp3"
+    },
+    {
+      "index": 4,
+      "filename": "Main_sound_0004.mp3",
+      "module": "main_navigation",
+      "size_bytes": 117575,
+      "duration_sec": 7.35,
+      "duration_ms": 7350,
+      "transcript": "امامك مجموعه من الاسئله الشقيه اختر نوع السؤال الذي تحب ان تجيب عليه",
+      "raw_path": "scratch/extracted_alif/audio/Main_sound_0004.mp3"
+    },
+    {
+      "index": 5,
+      "filename": "Main_sound_0873.mp3",
+      "module": "main_navigation",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/Main_sound_0873.mp3"
+    },
+    {
+      "index": 6,
+      "filename": "ahdaf_a1_sound_0001.mp3",
+      "module": "story",
+      "size_bytes": 58224,
+      "duration_sec": 3.64,
+      "duration_ms": 3640,
+      "transcript": "استمع الى القصه ثم فكر معنا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0001.mp3"
+    },
+    {
+      "index": 7,
+      "filename": "ahdaf_a1_sound_0002.mp3",
+      "module": "story",
+      "size_bytes": 88317,
+      "duration_sec": 5.52,
+      "duration_ms": 5520,
+      "transcript": "والان استمع الى الاغنيه وقم بغنائها مع اصحابك",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0002.mp3"
+    },
+    {
+      "index": 8,
+      "filename": "ahdaf_a1_sound_0003.mp3",
+      "module": "story",
+      "size_bytes": 114231,
+      "duration_sec": 7.14,
+      "duration_ms": 7140,
+      "transcript": "في يوم من الايام كان الاسد يسير في الغابه يفكر في طعامه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0003.mp3"
+    },
+    {
+      "index": 9,
+      "filename": "ahdaf_a1_sound_0004.mp3",
+      "module": "story",
+      "size_bytes": 113395,
+      "duration_sec": 7.09,
+      "duration_ms": 7090,
+      "transcript": "الف ارنب يجري يلعب اسد يظهر خلف الارنب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0004.mp3"
+    },
+    {
+      "index": 10,
+      "filename": "ahdaf_a1_sound_0005.mp3",
+      "module": "story",
+      "size_bytes": 12789,
+      "duration_sec": 1.28,
+      "duration_ms": 1280,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0005.mp3"
+    },
+    {
+      "index": 11,
+      "filename": "ahdaf_a1_sound_0006.mp3",
+      "module": "story",
+      "size_bytes": 44850,
+      "duration_sec": 2.8,
+      "duration_ms": 2800,
+      "transcript": "اختفى الارنب خلف الاشجار",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0006.mp3"
+    },
+    {
+      "index": 12,
+      "filename": "ahdaf_a1_sound_0007.mp3",
+      "module": "story",
+      "size_bytes": 54463,
+      "duration_sec": 3.4,
+      "duration_ms": 3400,
+      "transcript": "قال الاسد اين ذهب الارنب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0007.mp3"
+    },
+    {
+      "index": 13,
+      "filename": "ahdaf_a1_sound_0008.mp3",
+      "module": "story",
+      "size_bytes": 79540,
+      "duration_sec": 4.97,
+      "duration_ms": 4970,
+      "transcript": "الاسد يسير في الغابه يفكر في طعامه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0008.mp3"
+    },
+    {
+      "index": 14,
+      "filename": "ahdaf_a1_sound_0009.mp3",
+      "module": "story",
+      "size_bytes": 115485,
+      "duration_sec": 7.22,
+      "duration_ms": 7220,
+      "transcript": "اخذ الاسد يبحث عن الارنب هنا وهناك ولكنه لم يجده",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0009.mp3"
+    },
+    {
+      "index": 15,
+      "filename": "ahdaf_a1_sound_0010.mp3",
+      "module": "story",
+      "size_bytes": 20190,
+      "duration_sec": 1.26,
+      "duration_ms": 1260,
+      "transcript": "قصه الحرف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0010.mp3"
+    },
+    {
+      "index": 16,
+      "filename": "ahdaf_a1_sound_0011.mp3",
+      "module": "story",
+      "size_bytes": 72853,
+      "duration_sec": 4.55,
+      "duration_ms": 4550,
+      "transcript": "من يعرف مكان الارنب يضغط عليه بالماوس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0011.mp3"
+    },
+    {
+      "index": 17,
+      "filename": "ahdaf_a1_sound_0012.mp3",
+      "module": "story",
+      "size_bytes": 8060,
+      "duration_sec": 2.69,
+      "duration_ms": 2690,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0012.mp3"
+    },
+    {
+      "index": 18,
+      "filename": "ahdaf_a1_sound_0013.mp3",
+      "module": "story",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0013.mp3"
+    },
+    {
+      "index": 19,
+      "filename": "ahdaf_a1_sound_0014.mp3",
+      "module": "story",
+      "size_bytes": 56135,
+      "duration_sec": 3.51,
+      "duration_ms": 3510,
+      "transcript": "حاول الاسد الجري وراء الارن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0014.mp3"
+    },
+    {
+      "index": 20,
+      "filename": "ahdaf_a1_sound_0015.mp3",
+      "module": "story",
+      "size_bytes": 119246,
+      "duration_sec": 7.45,
+      "duration_ms": 7450,
+      "transcript": "استمع الى الصوت واضغط على الصوره المناسبه لما استمعت اليه حسب احداث القصه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0015.mp3"
+    },
+    {
+      "index": 21,
+      "filename": "ahdaf_a1_sound_0016.mp3",
+      "module": "story",
+      "size_bytes": 102110,
+      "duration_sec": 6.38,
+      "duration_ms": 6380,
+      "transcript": "فهو لم ياكل اليوم شيئا وفجاه شاهد ارنبا في الطريق",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0016.mp3"
+    },
+    {
+      "index": 22,
+      "filename": "ahdaf_a1_sound_0017.mp3",
+      "module": "story",
+      "size_bytes": 38998,
+      "duration_sec": 2.44,
+      "duration_ms": 2440,
+      "transcript": "وفجاه اختفى الا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0017.mp3"
+    },
+    {
+      "index": 23,
+      "filename": "ahdaf_a1_sound_0018.mp3",
+      "module": "story",
+      "size_bytes": 92915,
+      "duration_sec": 5.81,
+      "duration_ms": 5810,
+      "transcript": "حاول الاسد الجري وراء الارنب ولكنه فش",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0018.mp3"
+    },
+    {
+      "index": 24,
+      "filename": "ahdaf_a1_sound_0019.mp3",
+      "module": "story",
+      "size_bytes": 51955,
+      "duration_sec": 3.25,
+      "duration_ms": 3250,
+      "transcript": "شاهد الاسد ارنبا في الطريق",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0019.mp3"
+    },
+    {
+      "index": 25,
+      "filename": "ahdaf_a1_sound_0020.mp3",
+      "module": "story",
+      "size_bytes": 18100,
+      "duration_sec": 1.13,
+      "duration_ms": 1130,
+      "transcript": "احسنت",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0020.mp3"
+    },
+    {
+      "index": 26,
+      "filename": "ahdaf_a1_sound_0021.mp3",
+      "module": "story",
+      "size_bytes": 48611,
+      "duration_sec": 3.04,
+      "duration_ms": 3040,
+      "transcript": "فكر معنا اين اختفى الارنب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0021.mp3"
+    },
+    {
+      "index": 27,
+      "filename": "ahdaf_a1_sound_0022.mp3",
+      "module": "story",
+      "size_bytes": 234378,
+      "duration_sec": 23.44,
+      "duration_ms": 23440,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0022.mp3"
+    },
+    {
+      "index": 28,
+      "filename": "ahdaf_a1_sound_0023.mp3",
+      "module": "story",
+      "size_bytes": 7442,
+      "duration_sec": 0.93,
+      "duration_ms": 930,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0023.mp3"
+    },
+    {
+      "index": 29,
+      "filename": "ahdaf_a1_sound_0024.mp3",
+      "module": "sfx_short",
+      "size_bytes": 3654,
+      "duration_sec": 0.37,
+      "duration_ms": 370,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0024.mp3"
+    },
+    {
+      "index": 30,
+      "filename": "ahdaf_a1_sound_0025.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0025.mp3"
+    },
+    {
+      "index": 31,
+      "filename": "ahdaf_a1_sound_0337.mp3",
+      "module": "story",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a1_sound_0337.mp3"
+    },
+    {
+      "index": 32,
+      "filename": "ahdaf_a2_sound_0001.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 8905,
+      "duration_sec": 0.56,
+      "duration_ms": 560,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0001.mp3"
+    },
+    {
+      "index": 33,
+      "filename": "ahdaf_a2_sound_0002.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 289774,
+      "duration_sec": 18.11,
+      "duration_ms": 18110,
+      "transcript": "الف فتحه ا والفتحه عباره عن شرطه توضع فوق الحرف فتصبح فتحه وهذه الفتحه حولت صوت الحرف داخل الكلمه الى ايه فتنطق الف فتحه ايه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0002.mp3"
+    },
+    {
+      "index": 34,
+      "filename": "ahdaf_a2_sound_0003.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 24370,
+      "duration_sec": 1.52,
+      "duration_ms": 1520,
+      "transcript": "ومد بالياء",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0003.mp3"
+    },
+    {
+      "index": 35,
+      "filename": "ahdaf_a2_sound_0004.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 22698,
+      "duration_sec": 1.42,
+      "duration_ms": 1420,
+      "transcript": "مد بالواو",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0004.mp3"
+    },
+    {
+      "index": 36,
+      "filename": "ahdaf_a2_sound_0005.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 64912,
+      "duration_sec": 4.06,
+      "duration_ms": 4059,
+      "transcript": "هو المد ثلاثه انواع مد بالالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0005.mp3"
+    },
+    {
+      "index": 37,
+      "filename": "ahdaf_a2_sound_0006.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 146832,
+      "duration_sec": 9.18,
+      "duration_ms": 9180,
+      "transcript": "المد هو اطاله زمن صوت الحركه الفتحه او الضمه او الكسره الى الضعف او اكثر",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0006.mp3"
+    },
+    {
+      "index": 38,
+      "filename": "ahdaf_a2_sound_0007.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 24788,
+      "duration_sec": 1.55,
+      "duration_ms": 1550,
+      "transcript": "ما هو المد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0007.mp3"
+    },
+    {
+      "index": 39,
+      "filename": "ahdaf_a2_sound_0008.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 33147,
+      "duration_sec": 2.07,
+      "duration_ms": 2070,
+      "transcript": "الالف الممد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0008.mp3"
+    },
+    {
+      "index": 40,
+      "filename": "ahdaf_a2_sound_0009.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 51537,
+      "duration_sec": 3.22,
+      "duration_ms": 3220,
+      "transcript": "الف فتحه ا اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0009.mp3"
+    },
+    {
+      "index": 41,
+      "filename": "ahdaf_a2_sound_0010.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 69509,
+      "duration_sec": 4.34,
+      "duration_ms": 4340,
+      "transcript": "وكلمه ايناس بها مد بالياء",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0010.mp3"
+    },
+    {
+      "index": 42,
+      "filename": "ahdaf_a2_sound_0011.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 69509,
+      "duration_sec": 4.34,
+      "duration_ms": 4340,
+      "transcript": "وكلمه الاولى بها مد بالواو",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0011.mp3"
+    },
+    {
+      "index": 43,
+      "filename": "ahdaf_a2_sound_0012.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 73271,
+      "duration_sec": 4.58,
+      "duration_ms": 4580,
+      "transcript": "كلمه امال بها مد بالالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0012.mp3"
+    },
+    {
+      "index": 44,
+      "filename": "ahdaf_a2_sound_0013.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 30639,
+      "duration_sec": 1.91,
+      "duration_ms": 1910,
+      "transcript": "انظر ولاح",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0013.mp3"
+    },
+    {
+      "index": 45,
+      "filename": "ahdaf_a2_sound_0014.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 22280,
+      "duration_sec": 1.39,
+      "duration_ms": 1390,
+      "transcript": "ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0014.mp3"
+    },
+    {
+      "index": 46,
+      "filename": "ahdaf_a2_sound_0015.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 49447,
+      "duration_sec": 3.09,
+      "duration_ms": 3090,
+      "transcript": "الف كسره اي اب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0015.mp3"
+    },
+    {
+      "index": 47,
+      "filename": "ahdaf_a2_sound_0016.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 227498,
+      "duration_sec": 14.22,
+      "duration_ms": 14220,
+      "transcript": "واعلم ان الشرط التي توضع اسفل الحرف تسمى كسره وهذه الكسره تغير صوت الحرف داخل الكلمه انظر الف كسره اي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0016.mp3"
+    },
+    {
+      "index": 48,
+      "filename": "ahdaf_a2_sound_0017.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 41088,
+      "duration_sec": 2.57,
+      "duration_ms": 2570,
+      "transcript": "الف كسره",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0017.mp3"
+    },
+    {
+      "index": 49,
+      "filename": "ahdaf_a2_sound_0018.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 17682,
+      "duration_sec": 1.11,
+      "duration_ms": 1110,
+      "transcript": "سال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0018.mp3"
+    },
+    {
+      "index": 50,
+      "filename": "ahdaf_a2_sound_0019.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 15592,
+      "duration_sec": 0.97,
+      "duration_ms": 970,
+      "transcript": "قرا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0019.mp3"
+    },
+    {
+      "index": 51,
+      "filename": "ahdaf_a2_sound_0020.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0020.mp3"
+    },
+    {
+      "index": 52,
+      "filename": "ahdaf_a2_sound_0021.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 35655,
+      "duration_sec": 2.23,
+      "duration_ms": 2230,
+      "transcript": "اصوات حرف الالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0021.mp3"
+    },
+    {
+      "index": 53,
+      "filename": "ahdaf_a2_sound_0022.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 38998,
+      "duration_sec": 2.44,
+      "duration_ms": 2440,
+      "transcript": "الف ثم امي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0022.mp3"
+    },
+    {
+      "index": 54,
+      "filename": "ahdaf_a2_sound_0023.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 8060,
+      "duration_sec": 2.69,
+      "duration_ms": 2690,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0023.mp3"
+    },
+    {
+      "index": 55,
+      "filename": "ahdaf_a2_sound_0024.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 50701,
+      "duration_sec": 3.17,
+      "duration_ms": 3170,
+      "transcript": "كلمه ايناس بها مد بالي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0024.mp3"
+    },
+    {
+      "index": 56,
+      "filename": "ahdaf_a2_sound_0025.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 56135,
+      "duration_sec": 3.51,
+      "duration_ms": 3510,
+      "transcript": "كلمه الاولى بها مد بالواو",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0025.mp3"
+    },
+    {
+      "index": 57,
+      "filename": "ahdaf_a2_sound_0026.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 56135,
+      "duration_sec": 3.51,
+      "duration_ms": 3510,
+      "transcript": "كلمه امال بها مد بالالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0026.mp3"
+    },
+    {
+      "index": 58,
+      "filename": "ahdaf_a2_sound_0027.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 40252,
+      "duration_sec": 2.52,
+      "duration_ms": 2520,
+      "transcript": "الف فتحه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0027.mp3"
+    },
+    {
+      "index": 59,
+      "filename": "ahdaf_a2_sound_0028.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 16428,
+      "duration_sec": 1.03,
+      "duration_ms": 1030,
+      "transcript": "اكل",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0028.mp3"
+    },
+    {
+      "index": 60,
+      "filename": "ahdaf_a2_sound_0029.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 189881,
+      "duration_sec": 11.87,
+      "duration_ms": 11870,
+      "transcript": "والحركات الطويله هي امال بها مد بالالف الاولى بها مد بالواو ايناس بها مد بالياء",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0029.mp3"
+    },
+    {
+      "index": 61,
+      "filename": "ahdaf_a2_sound_0030.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 230424,
+      "duration_sec": 14.4,
+      "duration_ms": 14400,
+      "transcript": "اذا ابنائي الاعزاء الحركات القصيره هي الفتحه في كلمه اسد والضمه في كلمه اذن والكسره في كلمه ابره",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0030.mp3"
+    },
+    {
+      "index": 62,
+      "filename": "ahdaf_a2_sound_0031.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 463645,
+      "duration_sec": 28.98,
+      "duration_ms": 28980,
+      "transcript": "وانظر الى الكلمات امال فهي ممدوده بالالف فتوضع فوقه فتحه ويليها الف فنقول امال وقد يمد الحرف بالواو فتوضع فوقه ضمه يليها واو مثل اولى ويمد الحرف بالياء فتوضع تحته كسره يليها ياء مثل ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0031.mp3"
+    },
+    {
+      "index": 63,
+      "filename": "ahdaf_a2_sound_0032.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 280997,
+      "duration_sec": 17.56,
+      "duration_ms": 17560,
+      "transcript": "انظر الى كلمه اسد مضبوطه بالفتحه وكلمه اذن مضبوطه بالضمه وكلمه ابره مضبوطه بالكسره وتسمى بالحركات القصيره",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0032.mp3"
+    },
+    {
+      "index": 64,
+      "filename": "ahdaf_a2_sound_0033.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 26041,
+      "duration_sec": 1.63,
+      "duration_ms": 1630,
+      "transcript": "وكلمه فا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0033.mp3"
+    },
+    {
+      "index": 65,
+      "filename": "ahdaf_a2_sound_0034.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 96259,
+      "duration_sec": 6.02,
+      "duration_ms": 6020,
+      "transcript": "انظر كلمه راس فهنا حرف الالف بدون حركه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0034.mp3"
+    },
+    {
+      "index": 66,
+      "filename": "ahdaf_a2_sound_0035.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 127606,
+      "duration_sec": 7.98,
+      "duration_ms": 7980,
+      "transcript": "واعلم ايضا ان السكون فوق الحرف يجعل الحرف بدون حركه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0035.mp3"
+    },
+    {
+      "index": 67,
+      "filename": "ahdaf_a2_sound_0036.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 38998,
+      "duration_sec": 2.44,
+      "duration_ms": 2440,
+      "transcript": "الف ضمه اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0036.mp3"
+    },
+    {
+      "index": 68,
+      "filename": "ahdaf_a2_sound_0037.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 152683,
+      "duration_sec": 9.54,
+      "duration_ms": 9540,
+      "transcript": "واعلم ان الضمه فوق الحرف تغير صوت الحرف داخل الكلمه فنقول الف ضمه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0037.mp3"
+    },
+    {
+      "index": 69,
+      "filename": "ahdaf_a2_sound_0038.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 39834,
+      "duration_sec": 2.49,
+      "duration_ms": 2490,
+      "transcript": "الف ضمه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0038.mp3"
+    },
+    {
+      "index": 70,
+      "filename": "ahdaf_a2_sound_0039.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0039.mp3"
+    },
+    {
+      "index": 71,
+      "filename": "ahdaf_a2_sound_0040.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 19354,
+      "duration_sec": 1.21,
+      "duration_ms": 1210,
+      "transcript": "ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0040.mp3"
+    },
+    {
+      "index": 72,
+      "filename": "ahdaf_a2_sound_0041.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0041.mp3"
+    },
+    {
+      "index": 73,
+      "filename": "ahdaf_a2_sound_0042.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1456,
+      "duration_sec": 0.73,
+      "duration_ms": 730,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0042.mp3"
+    },
+    {
+      "index": 74,
+      "filename": "ahdaf_a2_sound_0043.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 17682,
+      "duration_sec": 1.11,
+      "duration_ms": 1110,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0043.mp3"
+    },
+    {
+      "index": 75,
+      "filename": "ahdaf_a2_sound_0044.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 15592,
+      "duration_sec": 0.97,
+      "duration_ms": 970,
+      "transcript": "اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0044.mp3"
+    },
+    {
+      "index": 76,
+      "filename": "ahdaf_a2_sound_0045.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 12249,
+      "duration_sec": 0.77,
+      "duration_ms": 770,
+      "transcript": "اولى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0045.mp3"
+    },
+    {
+      "index": 77,
+      "filename": "ahdaf_a2_sound_0666.mp3",
+      "module": "vowels_and_mudud",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a2_sound_0666.mp3"
+    },
+    {
+      "index": 78,
+      "filename": "ahdaf_a3_sound_0001.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 80794,
+      "duration_sec": 5.05,
+      "duration_ms": 5050,
+      "transcript": "والان هيا نتعلم معا كيفيه كتابه حرف الالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0001.mp3"
+    },
+    {
+      "index": 79,
+      "filename": "ahdaf_a3_sound_0002.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 86228,
+      "duration_sec": 5.39,
+      "duration_ms": 5390,
+      "transcript": "يكتب حرف الالف بطرق مختلفه حسب مكانه في الكلمه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0002.mp3"
+    },
+    {
+      "index": 80,
+      "filename": "ahdaf_a3_sound_0003.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 29385,
+      "duration_sec": 1.84,
+      "duration_ms": 1840,
+      "transcript": "ونكتبه هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0003.mp3"
+    },
+    {
+      "index": 81,
+      "filename": "ahdaf_a3_sound_0004.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 90825,
+      "duration_sec": 5.68,
+      "duration_ms": 5680,
+      "transcript": "اما اذا جاء حرف الالف في وسط الكلمه فانه ياتي بهذا الشكل",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0004.mp3"
+    },
+    {
+      "index": 82,
+      "filename": "ahdaf_a3_sound_0005.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 70763,
+      "duration_sec": 4.42,
+      "duration_ms": 4420,
+      "transcript": "اما حرف الالف في اخر الكلمه فانه يكتب هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0005.mp3"
+    },
+    {
+      "index": 83,
+      "filename": "ahdaf_a3_sound_0006.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 76197,
+      "duration_sec": 4.76,
+      "duration_ms": 4760,
+      "transcript": "والان نتعلم سويا كيفيه كتابه كل شكل بالتفصيل",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0006.mp3"
+    },
+    {
+      "index": 84,
+      "filename": "ahdaf_a3_sound_0007.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 17264,
+      "duration_sec": 1.08,
+      "duration_ms": 1080,
+      "transcript": "قرا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0007.mp3"
+    },
+    {
+      "index": 85,
+      "filename": "ahdaf_a3_sound_0008.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 169401,
+      "duration_sec": 10.59,
+      "duration_ms": 10590,
+      "transcript": "مرحبا بكم يا اصدقائي انا صديقكم القلم وسوف نتعلم سويا كيفيه كتابه كل حرف من حروف لغتنا الجميله",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0008.mp3"
+    },
+    {
+      "index": 86,
+      "filename": "ahdaf_a3_sound_0009.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 13503,
+      "duration_sec": 0.84,
+      "duration_ms": 840,
+      "transcript": "اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0009.mp3"
+    },
+    {
+      "index": 87,
+      "filename": "ahdaf_a3_sound_0010.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 13503,
+      "duration_sec": 0.84,
+      "duration_ms": 840,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0010.mp3"
+    },
+    {
+      "index": 88,
+      "filename": "ahdaf_a3_sound_0011.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 20190,
+      "duration_sec": 1.26,
+      "duration_ms": 1260,
+      "transcript": "ويكتب هك",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0011.mp3"
+    },
+    {
+      "index": 89,
+      "filename": "ahdaf_a3_sound_0012.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 60314,
+      "duration_sec": 3.77,
+      "duration_ms": 3770,
+      "transcript": "ياتي حرف الالف في اول الكلمه بهذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0012.mp3"
+    },
+    {
+      "index": 90,
+      "filename": "ahdaf_a3_sound_0013.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0013.mp3"
+    },
+    {
+      "index": 91,
+      "filename": "ahdaf_a3_sound_0014.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 8060,
+      "duration_sec": 2.69,
+      "duration_ms": 2690,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0014.mp3"
+    },
+    {
+      "index": 92,
+      "filename": "ahdaf_a3_sound_0015.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 79540,
+      "duration_sec": 4.97,
+      "duration_ms": 4970,
+      "transcript": "فاذا جاء حرف الالف في اول الكلمه فانه يكتب هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0015.mp3"
+    },
+    {
+      "index": 93,
+      "filename": "ahdaf_a3_sound_0016.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 73689,
+      "duration_sec": 4.61,
+      "duration_ms": 4610,
+      "transcript": "اذا جاء حرف الالف في وسط الكلمه فانه يكتب هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0016.mp3"
+    },
+    {
+      "index": 94,
+      "filename": "ahdaf_a3_sound_0017.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 29385,
+      "duration_sec": 1.84,
+      "duration_ms": 1840,
+      "transcript": "ويكتب ايضا هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0017.mp3"
+    },
+    {
+      "index": 95,
+      "filename": "ahdaf_a3_sound_0018.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 53209,
+      "duration_sec": 3.33,
+      "duration_ms": 3330,
+      "transcript": "ياتي حرف الالف في اخر الكلمه بهذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0018.mp3"
+    },
+    {
+      "index": 96,
+      "filename": "ahdaf_a3_sound_0019.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 35237,
+      "duration_sec": 2.2,
+      "duration_ms": 2200,
+      "transcript": "يكتب حرف الالف هكذا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0019.mp3"
+    },
+    {
+      "index": 97,
+      "filename": "ahdaf_a3_sound_0020.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 16846,
+      "duration_sec": 1.05,
+      "duration_ms": 1050,
+      "transcript": "حرف الال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0020.mp3"
+    },
+    {
+      "index": 98,
+      "filename": "ahdaf_a3_sound_0021.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 16846,
+      "duration_sec": 1.05,
+      "duration_ms": 1050,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0021.mp3"
+    },
+    {
+      "index": 99,
+      "filename": "ahdaf_a3_sound_0345.mp3",
+      "module": "writing_tracing",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a3_sound_0345.mp3"
+    },
+    {
+      "index": 100,
+      "filename": "ahdaf_a4_sound_0001.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "كتاب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0001.mp3"
+    },
+    {
+      "index": 101,
+      "filename": "ahdaf_a4_sound_0002.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 16010,
+      "duration_sec": 1.0,
+      "duration_ms": 1000,
+      "transcript": "تفاحه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0002.mp3"
+    },
+    {
+      "index": 102,
+      "filename": "ahdaf_a4_sound_0003.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13085,
+      "duration_sec": 0.82,
+      "duration_ms": 820,
+      "transcript": "باب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0003.mp3"
+    },
+    {
+      "index": 103,
+      "filename": "ahdaf_a4_sound_0004.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "زرا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0004.mp3"
+    },
+    {
+      "index": 104,
+      "filename": "ahdaf_a4_sound_0005.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "حصان",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0005.mp3"
+    },
+    {
+      "index": 105,
+      "filename": "ahdaf_a4_sound_0006.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 14339,
+      "duration_sec": 0.9,
+      "duration_ms": 900,
+      "transcript": "الاولى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0006.mp3"
+    },
+    {
+      "index": 106,
+      "filename": "ahdaf_a4_sound_0007.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "اهرام",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0007.mp3"
+    },
+    {
+      "index": 107,
+      "filename": "ahdaf_a4_sound_0008.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13085,
+      "duration_sec": 0.82,
+      "duration_ms": 820,
+      "transcript": "امال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0008.mp3"
+    },
+    {
+      "index": 108,
+      "filename": "ahdaf_a4_sound_0009.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 12249,
+      "duration_sec": 0.77,
+      "duration_ms": 770,
+      "transcript": "‏face",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0009.mp3"
+    },
+    {
+      "index": 109,
+      "filename": "ahdaf_a4_sound_0010.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "امي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0010.mp3"
+    },
+    {
+      "index": 110,
+      "filename": "ahdaf_a4_sound_0011.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 11413,
+      "duration_sec": 0.71,
+      "duration_ms": 710,
+      "transcript": "رقص",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0011.mp3"
+    },
+    {
+      "index": 111,
+      "filename": "ahdaf_a4_sound_0012.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0012.mp3"
+    },
+    {
+      "index": 112,
+      "filename": "ahdaf_a4_sound_0013.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 16010,
+      "duration_sec": 1.0,
+      "duration_ms": 1000,
+      "transcript": "ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0013.mp3"
+    },
+    {
+      "index": 113,
+      "filename": "ahdaf_a4_sound_0014.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 12249,
+      "duration_sec": 0.77,
+      "duration_ms": 770,
+      "transcript": "قرا",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0014.mp3"
+    },
+    {
+      "index": 114,
+      "filename": "ahdaf_a4_sound_0015.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 9323,
+      "duration_sec": 0.58,
+      "duration_ms": 580,
+      "transcript": "اب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0015.mp3"
+    },
+    {
+      "index": 115,
+      "filename": "ahdaf_a4_sound_0016.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 13921,
+      "duration_sec": 0.87,
+      "duration_ms": 870,
+      "transcript": "سال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0016.mp3"
+    },
+    {
+      "index": 116,
+      "filename": "ahdaf_a4_sound_0017.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 11831,
+      "duration_sec": 0.74,
+      "duration_ms": 740,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0017.mp3"
+    },
+    {
+      "index": 117,
+      "filename": "ahdaf_a4_sound_0018.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 8905,
+      "duration_sec": 0.56,
+      "duration_ms": 560,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0018.mp3"
+    },
+    {
+      "index": 118,
+      "filename": "ahdaf_a4_sound_0019.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 12667,
+      "duration_sec": 0.79,
+      "duration_ms": 790,
+      "transcript": "ارن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0019.mp3"
+    },
+    {
+      "index": 119,
+      "filename": "ahdaf_a4_sound_0020.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 14339,
+      "duration_sec": 0.9,
+      "duration_ms": 900,
+      "transcript": "اش",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0020.mp3"
+    },
+    {
+      "index": 120,
+      "filename": "ahdaf_a4_sound_0021.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 87064,
+      "duration_sec": 5.44,
+      "duration_ms": 5440,
+      "transcript": "اضغط على الكلمه لتستمع اليها وتشاهد صورتها",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0021.mp3"
+    },
+    {
+      "index": 121,
+      "filename": "ahdaf_a4_sound_0022.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 30221,
+      "duration_sec": 1.89,
+      "duration_ms": 1890,
+      "transcript": "كلمات الحرف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0022.mp3"
+    },
+    {
+      "index": 122,
+      "filename": "ahdaf_a4_sound_0023.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0023.mp3"
+    },
+    {
+      "index": 123,
+      "filename": "ahdaf_a4_sound_0100.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1560,
+      "duration_sec": 0.31,
+      "duration_ms": 310,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0100.mp3"
+    },
+    {
+      "index": 124,
+      "filename": "ahdaf_a4_sound_0642.mp3",
+      "module": "vocabulary_words",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a4_sound_0642.mp3"
+    },
+    {
+      "index": 125,
+      "filename": "ahdaf_a5_bee_sound_0001.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 73689,
+      "duration_sec": 4.61,
+      "duration_ms": 4610,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي راس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0001.mp3"
+    },
+    {
+      "index": 126,
+      "filename": "ahdaf_a5_bee_sound_0002.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 72017,
+      "duration_sec": 4.5,
+      "duration_ms": 4500,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0002.mp3"
+    },
+    {
+      "index": 127,
+      "filename": "ahdaf_a5_bee_sound_0003.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 73271,
+      "duration_sec": 4.58,
+      "duration_ms": 4580,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0003.mp3"
+    },
+    {
+      "index": 128,
+      "filename": "ahdaf_a5_bee_sound_0004.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 72017,
+      "duration_sec": 4.5,
+      "duration_ms": 4500,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي اس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0004.mp3"
+    },
+    {
+      "index": 129,
+      "filename": "ahdaf_a5_bee_sound_0005.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 42951,
+      "duration_sec": 2.68,
+      "duration_ms": 2680,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0005.mp3"
+    },
+    {
+      "index": 130,
+      "filename": "ahdaf_a5_bee_sound_0006.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 11622,
+      "duration_sec": 1.45,
+      "duration_ms": 1450,
+      "transcript": "اجابه صحي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0006.mp3"
+    },
+    {
+      "index": 131,
+      "filename": "ahdaf_a5_bee_sound_0007.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 107961,
+      "duration_sec": 6.75,
+      "duration_ms": 6750,
+      "transcript": "اضغط على حرف الالف بحركته المناسبه لكل كلمه من الكلمات الاتيه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0007.mp3"
+    },
+    {
+      "index": 132,
+      "filename": "ahdaf_a5_bee_sound_0008.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 13921,
+      "duration_sec": 1.74,
+      "duration_ms": 1740,
+      "transcript": "خليه الحرف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0008.mp3"
+    },
+    {
+      "index": 133,
+      "filename": "ahdaf_a5_bee_sound_0009.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0009.mp3"
+    },
+    {
+      "index": 134,
+      "filename": "ahdaf_a5_bee_sound_0010.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 13503,
+      "duration_sec": 0.84,
+      "duration_ms": 840,
+      "transcript": "اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0010.mp3"
+    },
+    {
+      "index": 135,
+      "filename": "ahdaf_a5_bee_sound_0011.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15175,
+      "duration_sec": 0.95,
+      "duration_ms": 950,
+      "transcript": "رق",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0011.mp3"
+    },
+    {
+      "index": 136,
+      "filename": "ahdaf_a5_bee_sound_0012.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0012.mp3"
+    },
+    {
+      "index": 137,
+      "filename": "ahdaf_a5_bee_sound_0013.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0013.mp3"
+    },
+    {
+      "index": 138,
+      "filename": "ahdaf_a5_bee_sound_0014.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14877,
+      "duration_sec": 1.49,
+      "duration_ms": 1490,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0014.mp3"
+    },
+    {
+      "index": 139,
+      "filename": "ahdaf_a5_bee_sound_0015.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 7442,
+      "duration_sec": 0.93,
+      "duration_ms": 930,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0015.mp3"
+    },
+    {
+      "index": 140,
+      "filename": "ahdaf_a5_bee_sound_0016.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0016.mp3"
+    },
+    {
+      "index": 141,
+      "filename": "ahdaf_a5_bee_sound_0073.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1560,
+      "duration_sec": 0.31,
+      "duration_ms": 310,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0073.mp3"
+    },
+    {
+      "index": 142,
+      "filename": "ahdaf_a5_bee_sound_0248.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_bee_sound_0248.mp3"
+    },
+    {
+      "index": 143,
+      "filename": "ahdaf_a5_cir_sound_0001.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 62822,
+      "duration_sec": 3.93,
+      "duration_ms": 3930,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0001.mp3"
+    },
+    {
+      "index": 144,
+      "filename": "ahdaf_a5_cir_sound_0002.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 7233,
+      "duration_sec": 0.9,
+      "duration_ms": 900,
+      "transcript": "ت",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0002.mp3"
+    },
+    {
+      "index": 145,
+      "filename": "ahdaf_a5_cir_sound_0003.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 42951,
+      "duration_sec": 2.68,
+      "duration_ms": 2680,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0003.mp3"
+    },
+    {
+      "index": 146,
+      "filename": "ahdaf_a5_cir_sound_0004.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 62822,
+      "duration_sec": 3.93,
+      "duration_ms": 3930,
+      "transcript": "اضغط على الصوره التي بها حرف الف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0004.mp3"
+    },
+    {
+      "index": 147,
+      "filename": "ahdaf_a5_cir_sound_0005.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 19772,
+      "duration_sec": 1.24,
+      "duration_ms": 1240,
+      "transcript": "السي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0005.mp3"
+    },
+    {
+      "index": 148,
+      "filename": "ahdaf_a5_cir_sound_0006.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0006.mp3"
+    },
+    {
+      "index": 149,
+      "filename": "ahdaf_a5_cir_sound_0007.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15175,
+      "duration_sec": 0.95,
+      "duration_ms": 950,
+      "transcript": "رق",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0007.mp3"
+    },
+    {
+      "index": 150,
+      "filename": "ahdaf_a5_cir_sound_0008.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15592,
+      "duration_sec": 0.97,
+      "duration_ms": 970,
+      "transcript": "اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0008.mp3"
+    },
+    {
+      "index": 151,
+      "filename": "ahdaf_a5_cir_sound_0009.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 11622,
+      "duration_sec": 1.45,
+      "duration_ms": 1450,
+      "transcript": "اجابه صحي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0009.mp3"
+    },
+    {
+      "index": 152,
+      "filename": "ahdaf_a5_cir_sound_0010.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0010.mp3"
+    },
+    {
+      "index": 153,
+      "filename": "ahdaf_a5_cir_sound_0300.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1560,
+      "duration_sec": 0.31,
+      "duration_ms": 310,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0300.mp3"
+    },
+    {
+      "index": 154,
+      "filename": "ahdaf_a5_cir_sound_0468.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_cir_sound_0468.mp3"
+    },
+    {
+      "index": 155,
+      "filename": "ahdaf_a5_fish_sound_0001.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 62822,
+      "duration_sec": 3.93,
+      "duration_ms": 3930,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0001.mp3"
+    },
+    {
+      "index": 156,
+      "filename": "ahdaf_a5_fish_sound_0002.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 64912,
+      "duration_sec": 4.06,
+      "duration_ms": 4059,
+      "transcript": "اضغط على الكلمه التي بها حرف الالف",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0002.mp3"
+    },
+    {
+      "index": 157,
+      "filename": "ahdaf_a5_fish_sound_0003.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 28549,
+      "duration_sec": 1.78,
+      "duration_ms": 1780,
+      "transcript": "صيد الكلمات",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0003.mp3"
+    },
+    {
+      "index": 158,
+      "filename": "ahdaf_a5_fish_sound_0004.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0004.mp3"
+    },
+    {
+      "index": 159,
+      "filename": "ahdaf_a5_fish_sound_0005.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15175,
+      "duration_sec": 0.95,
+      "duration_ms": 950,
+      "transcript": "رق",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0005.mp3"
+    },
+    {
+      "index": 160,
+      "filename": "ahdaf_a5_fish_sound_0006.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0006.mp3"
+    },
+    {
+      "index": 161,
+      "filename": "ahdaf_a5_fish_sound_0007.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 6264,
+      "duration_sec": 0.63,
+      "duration_ms": 630,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0007.mp3"
+    },
+    {
+      "index": 162,
+      "filename": "ahdaf_a5_fish_sound_0008.mp3",
+      "module": "sfx_short",
+      "size_bytes": 2349,
+      "duration_sec": 0.23,
+      "duration_ms": 230,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0008.mp3"
+    },
+    {
+      "index": 163,
+      "filename": "ahdaf_a5_fish_sound_0009.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "اكل",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0009.mp3"
+    },
+    {
+      "index": 164,
+      "filename": "ahdaf_a5_fish_sound_0010.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 14757,
+      "duration_sec": 0.92,
+      "duration_ms": 920,
+      "transcript": "اذن",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0010.mp3"
+    },
+    {
+      "index": 165,
+      "filename": "ahdaf_a5_fish_sound_0011.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 7442,
+      "duration_sec": 0.93,
+      "duration_ms": 930,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0011.mp3"
+    },
+    {
+      "index": 166,
+      "filename": "ahdaf_a5_fish_sound_0012.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 11622,
+      "duration_sec": 1.45,
+      "duration_ms": 1450,
+      "transcript": "اجابه صحي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0012.mp3"
+    },
+    {
+      "index": 167,
+      "filename": "ahdaf_a5_fish_sound_0013.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0013.mp3"
+    },
+    {
+      "index": 168,
+      "filename": "ahdaf_a5_fish_sound_0164.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1560,
+      "duration_sec": 0.31,
+      "duration_ms": 310,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0164.mp3"
+    },
+    {
+      "index": 169,
+      "filename": "ahdaf_a5_fish_sound_0285.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_fish_sound_0285.mp3"
+    },
+    {
+      "index": 170,
+      "filename": "ahdaf_a5_paint_sound_0001.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 77032,
+      "duration_sec": 4.81,
+      "duration_ms": 4810,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي اولى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0001.mp3"
+    },
+    {
+      "index": 171,
+      "filename": "ahdaf_a5_paint_sound_0002.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 87481,
+      "duration_sec": 5.47,
+      "duration_ms": 5470,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0002.mp3"
+    },
+    {
+      "index": 172,
+      "filename": "ahdaf_a5_paint_sound_0003.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 62822,
+      "duration_sec": 3.93,
+      "duration_ms": 3930,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0003.mp3"
+    },
+    {
+      "index": 173,
+      "filename": "ahdaf_a5_paint_sound_0004.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 81212,
+      "duration_sec": 5.08,
+      "duration_ms": 5080,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي امال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0004.mp3"
+    },
+    {
+      "index": 174,
+      "filename": "ahdaf_a5_paint_sound_0005.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 35237,
+      "duration_sec": 2.2,
+      "duration_ms": 2200,
+      "transcript": "احسنت اولى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0005.mp3"
+    },
+    {
+      "index": 175,
+      "filename": "ahdaf_a5_paint_sound_0006.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 41088,
+      "duration_sec": 2.57,
+      "duration_ms": 2570,
+      "transcript": "احسنت ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0006.mp3"
+    },
+    {
+      "index": 176,
+      "filename": "ahdaf_a5_paint_sound_0007.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 35655,
+      "duration_sec": 2.23,
+      "duration_ms": 2230,
+      "transcript": "احسنت امال",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0007.mp3"
+    },
+    {
+      "index": 177,
+      "filename": "ahdaf_a5_paint_sound_0008.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0008.mp3"
+    },
+    {
+      "index": 178,
+      "filename": "ahdaf_a5_paint_sound_0009.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 36908,
+      "duration_sec": 4.61,
+      "duration_ms": 4610,
+      "transcript": "والان لون حروف الكلمه بالوانك المفضله",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0009.mp3"
+    },
+    {
+      "index": 179,
+      "filename": "ahdaf_a5_paint_sound_0010.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 26041,
+      "duration_sec": 3.26,
+      "duration_ms": 3260,
+      "transcript": "اضغط على الكلمه التي بها",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0010.mp3"
+    },
+    {
+      "index": 180,
+      "filename": "ahdaf_a5_paint_sound_0011.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 10368,
+      "duration_sec": 1.3,
+      "duration_ms": 1300,
+      "transcript": "التلوين",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0011.mp3"
+    },
+    {
+      "index": 181,
+      "filename": "ahdaf_a5_paint_sound_0012.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 17891,
+      "duration_sec": 2.24,
+      "duration_ms": 2240,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0012.mp3"
+    },
+    {
+      "index": 182,
+      "filename": "ahdaf_a5_paint_sound_0013.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0013.mp3"
+    },
+    {
+      "index": 183,
+      "filename": "ahdaf_a5_paint_sound_0267.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_paint_sound_0267.mp3"
+    },
+    {
+      "index": 184,
+      "filename": "ahdaf_a5_words_sound_0001.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 87481,
+      "duration_sec": 5.47,
+      "duration_ms": 5470,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0001.mp3"
+    },
+    {
+      "index": 185,
+      "filename": "ahdaf_a5_words_sound_0002.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 37947,
+      "duration_sec": 2.37,
+      "duration_ms": 2370,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0002.mp3"
+    },
+    {
+      "index": 186,
+      "filename": "ahdaf_a5_words_sound_0003.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 40670,
+      "duration_sec": 5.08,
+      "duration_ms": 5080,
+      "transcript": "اسحب اسم الصوره وضعها مكان النقط فيما ياتي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0003.mp3"
+    },
+    {
+      "index": 187,
+      "filename": "ahdaf_a5_words_sound_0004.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 41088,
+      "duration_sec": 2.57,
+      "duration_ms": 2570,
+      "transcript": "احسنت ايناس",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0004.mp3"
+    },
+    {
+      "index": 188,
+      "filename": "ahdaf_a5_words_sound_0005.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 9114,
+      "duration_sec": 1.14,
+      "duration_ms": 1140,
+      "transcript": "ممتاز",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0005.mp3"
+    },
+    {
+      "index": 189,
+      "filename": "ahdaf_a5_words_sound_0006.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 10368,
+      "duration_sec": 1.3,
+      "duration_ms": 1300,
+      "transcript": "لعبه الك",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0006.mp3"
+    },
+    {
+      "index": 190,
+      "filename": "ahdaf_a5_words_sound_0007.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 15384,
+      "duration_sec": 1.92,
+      "duration_ms": 1920,
+      "transcript": "حاول مره اخرى",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0007.mp3"
+    },
+    {
+      "index": 191,
+      "filename": "ahdaf_a5_words_sound_0008.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 32311,
+      "duration_sec": 4.04,
+      "duration_ms": 4040,
+      "transcript": "اجابه خاطئه الاجابه الصحيحه هي",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0008.mp3"
+    },
+    {
+      "index": 192,
+      "filename": "ahdaf_a5_words_sound_0009.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 18518,
+      "duration_sec": 1.16,
+      "duration_ms": 1160,
+      "transcript": "كتاب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0009.mp3"
+    },
+    {
+      "index": 193,
+      "filename": "ahdaf_a5_words_sound_0010.mp3",
+      "module": "sfx_short",
+      "size_bytes": 2288,
+      "duration_sec": 0.57,
+      "duration_ms": 570,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0010.mp3"
+    },
+    {
+      "index": 194,
+      "filename": "ahdaf_a5_words_sound_0011.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 21444,
+      "duration_sec": 1.34,
+      "duration_ms": 1340,
+      "transcript": "تفاحه",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0011.mp3"
+    },
+    {
+      "index": 195,
+      "filename": "ahdaf_a5_words_sound_0012.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 13503,
+      "duration_sec": 0.84,
+      "duration_ms": 840,
+      "transcript": "اسد",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0012.mp3"
+    },
+    {
+      "index": 196,
+      "filename": "ahdaf_a5_words_sound_0013.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 17264,
+      "duration_sec": 1.08,
+      "duration_ms": 1080,
+      "transcript": "اهرام",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0013.mp3"
+    },
+    {
+      "index": 197,
+      "filename": "ahdaf_a5_words_sound_0014.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 17264,
+      "duration_sec": 1.08,
+      "duration_ms": 1080,
+      "transcript": "ارنب",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0014.mp3"
+    },
+    {
+      "index": 198,
+      "filename": "ahdaf_a5_words_sound_0015.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 42951,
+      "duration_sec": 2.68,
+      "duration_ms": 2680,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0015.mp3"
+    },
+    {
+      "index": 199,
+      "filename": "ahdaf_a5_words_sound_0016.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0016.mp3"
+    },
+    {
+      "index": 200,
+      "filename": "ahdaf_a5_words_sound_0380.mp3",
+      "module": "games_quizzes",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a5_words_sound_0380.mp3"
+    },
+    {
+      "index": 201,
+      "filename": "ahdaf_a_sound_0001.mp3",
+      "module": "unknown",
+      "size_bytes": 600039,
+      "duration_sec": 60.0,
+      "duration_ms": 60000,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a_sound_0001.mp3"
+    },
+    {
+      "index": 202,
+      "filename": "ahdaf_a_sound_0002.mp3",
+      "module": "sfx_short",
+      "size_bytes": 1566,
+      "duration_sec": 0.16,
+      "duration_ms": 160,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a_sound_0002.mp3"
+    },
+    {
+      "index": 203,
+      "filename": "ahdaf_a_sound_0203.mp3",
+      "module": "unknown",
+      "size_bytes": 94432,
+      "duration_sec": 47.22,
+      "duration_ms": 47220,
+      "transcript": "",
+      "raw_path": "scratch/extracted_alif/audio/ahdaf_a_sound_0203.mp3"
+    }
+  ]
+}
