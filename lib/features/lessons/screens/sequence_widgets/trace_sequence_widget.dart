@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
+import 'package:faseeh_kids/features/lessons/widgets/arabic_letter_tracing_canvas.dart';
 
 class TraceSequenceWidget extends StatefulWidget {
   final VoidCallback onNext;
@@ -28,42 +28,50 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
     {
       'title': 'كَيْفِيَّةُ كِتَابَةِ حَرْفِ الْأَلِفِ',
       'subtitle': 'نَبْدَأُ مِنْ أَعْلَى إِلَى أَسْفَلَ، ثُمَّ نَكْتُبُ الْهَمْزَةَ',
+      'positionCode': 'isolated',
       'letterShape': 'أ',
       'position': 'رَسْمُ الْحَرْفِ',
-      'exampleWord': '',
+      'exampleWord': 'أَسَد',
+      'exampleEmoji': '🦁',
+      'imageFile': 'assets/images/lessons/alif/alif_word_asad.jpg',
       'audio': 'audio/stories/alif_trace_intro.mp3',
-      'color': Color(0xFF1E88E5),
-      'icon': Icons.edit_rounded,
+      'color': Color(0xFF673AB7),
     },
     {
       'title': 'الْأَلِفُ فِي أَوَّلِ الْكَلِمَةِ',
-      'subtitle': 'يَأْتِي مُنْفَصِلاً غَيْرَ مُتَّصِلٍ بِمَا بَعْدَهُ',
+      'subtitle': 'يَأْتِي مُنْفَصِلاً غَيْرَ مُتَّصِلٍ بِمَا بَعْدَهُ: أَكَلَ',
+      'positionCode': 'start',
       'letterShape': 'أ',
       'position': 'أَوَّلُ الْكَلِمَةِ',
       'exampleWord': 'أَكَلَ',
+      'exampleEmoji': '🍽️',
+      'imageFile': 'assets/images/lessons/alif/alif_scene_akala.jpg',
       'audio': 'audio/stories/alif_pos_start.mp3',
       'color': Color(0xFFE53935),
-      'icon': Icons.start_rounded,
     },
     {
       'title': 'الْأَلِفُ فِي وَسَطِ الْكَلِمَةِ',
-      'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَلَا يَتَّصِلُ بِمَا بَعْدَهُ',
+      'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَلَا يَتَّصِلُ بِمَا بَعْدَهُ: سَأَلَ',
+      'positionCode': 'middle',
       'letterShape': 'ـأ',
       'position': 'وَسَطُ الْكَلِمَةِ',
       'exampleWord': 'سَأَلَ',
+      'exampleEmoji': '🙋‍♂️',
+      'imageFile': 'assets/images/lessons/alif/alif_scene_saala.jpg',
       'audio': 'audio/stories/alif_pos_middle.mp3',
       'color': Color(0xFFFF8F00),
-      'icon': Icons.horizontal_rule_rounded,
     },
     {
       'title': 'الْأَلِفُ فِي آخِرِ الْكَلِمَةِ',
-      'subtitle': 'يَأْتِي مُتَّصِلاً بِمَا قَبْلَهُ أَوْ مُنْفَصِلاً',
-      'letterShape': 'ـأ / أ',
+      'subtitle': 'يَأْتِي مُتَّصِلاً بِمَا قَبْلَهُ أَوْ مُنْفَصِلاً: قَرَأَ',
+      'positionCode': 'end',
+      'letterShape': 'ـأ',
       'position': 'آخِرُ الْكَلِمَةِ',
       'exampleWord': 'قَرَأَ',
+      'exampleEmoji': '📖',
+      'imageFile': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
       'audio': 'audio/stories/alif_pos_end.mp3',
       'color': Color(0xFF43A047),
-      'icon': Icons.check_circle_outline_rounded,
     },
   ];
 
@@ -117,6 +125,8 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final isTablet = MediaQuery.sizeOf(context).width > 600;
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Column(
@@ -134,7 +144,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
-                    'كِتَابَةُ وَمَوَاضِعُ الْحَرْفِ (${_currentStep + 1}/${_steps.length})',
+                    'كِتَابَةُ وَمَوَاضِعُ الْحَرْفِ (${_currentStep + 1}/${_steps.length}) — ${_steps[_currentStep]['position']}',
                     style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 13,
@@ -165,119 +175,111 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                 final color = s['color'] as Color;
                 final shape = s['letterShape'] as String;
                 final example = s['exampleWord'] as String;
+                final imageFile = s['imageFile'] as String;
+                final positionCode = s['positionCode'] as String;
 
                 return SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      // Title & Subtitle Card
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                        decoration: BoxDecoration(
-                          color: color.withValues(alpha: 0.08),
-                          borderRadius: BorderRadius.circular(24),
-                          border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
-                        ),
-                        child: Column(
-                          children: [
-                            Text(
-                              s['title'] as String,
-                              style: TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: color,
-                              ),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxWidth: isTablet ? 600 : double.infinity),
+                      child: Column(
+                        children: [
+                          // 1. بطاقة الصورة الأصلية للدرس ومثال الموضع
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                            decoration: BoxDecoration(
+                              color: color.withValues(alpha: 0.08),
+                              borderRadius: BorderRadius.circular(22),
+                              border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
                             ),
-                            const SizedBox(height: 4),
-                            Text(
-                              s['subtitle'] as String,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: 13,
-                                color: AppColors.textPrimaryDay,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      const SizedBox(height: 16),
-
-                      // Large Letter Shape Card
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(28),
-                          border: Border.all(color: Colors.grey.shade200),
-                          boxShadow: const [
-                            BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, 3)),
-                          ],
-                        ),
-                        child: Column(
-                          children: [
-                            // Big Shape
-                            Text(
-                              shape,
-                              style: TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: 80,
-                                fontWeight: FontWeight.w900,
-                                color: color,
-                              ),
-                            ).animate().scale(duration: 400.ms, curve: Curves.elasticOut),
-
-                            const SizedBox(height: 8),
-
-                            // Position tag
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                              decoration: BoxDecoration(
-                                color: color.withValues(alpha: 0.12),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Text(
-                                s['position'] as String,
-                                style: TextStyle(
-                                  fontFamily: 'Cairo',
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: color,
-                                ),
-                              ),
-                            ),
-
-                            if (example.isNotEmpty) ...[
-                              const SizedBox(height: 16),
-                              const Divider(),
-                              const SizedBox(height: 8),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Text(
-                                    'مِثَالٌ: ',
-                                    style: TextStyle(fontFamily: 'Cairo', fontSize: 16, color: Colors.grey),
-                                  ),
-                                  Text(
-                                    example,
-                                    style: TextStyle(
-                                      fontFamily: 'Cairo',
-                                      fontSize: 26,
-                                      fontWeight: FontWeight.bold,
-                                      color: color,
+                            child: Row(
+                              children: [
+                                // صورة الدرس الأصلية
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(14),
+                                  child: SizedBox(
+                                    width: 80,
+                                    height: 60,
+                                    child: Image.asset(
+                                      imageFile,
+                                      fit: BoxFit.cover,
+                                      errorBuilder: (_, __, ___) => Container(
+                                        color: Colors.grey.shade200,
+                                        child: const Icon(Icons.image, color: Colors.grey),
+                                      ),
                                     ),
                                   ),
-                                ],
-                              ),
-                            ],
-                          ],
-                        ),
+                                ),
+                                const SizedBox(width: 14),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            s['title'] as String,
+                                            style: TextStyle(
+                                              fontFamily: 'Cairo',
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w900,
+                                              color: color,
+                                            ),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                            decoration: BoxDecoration(
+                                              color: color,
+                                              borderRadius: BorderRadius.circular(10),
+                                            ),
+                                            child: Text(
+                                              shape,
+                                              style: const TextStyle(
+                                                fontFamily: 'Cairo',
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(height: 2),
+                                      Text(
+                                        'مِثَالٌ: $example',
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey.shade800,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          const SizedBox(height: 12),
+
+                          // 2. لوحة التتبع والكتابة التفاعلية بأسلوب لينغو بنانا
+                          ArabicLetterTracingCanvas(
+                            letterChar: widget.letterChar,
+                            position: positionCode,
+                            exampleWord: example,
+                            exampleEmoji: s['exampleEmoji'] as String,
+                            primaryColor: color,
+                            onComplete: () {
+                              AudioService.instance.playAsset('audio/instructions/alif_trace_praise.mp3');
+                            },
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 );
               },
@@ -348,4 +350,5 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
     );
   }
 }
+
 
