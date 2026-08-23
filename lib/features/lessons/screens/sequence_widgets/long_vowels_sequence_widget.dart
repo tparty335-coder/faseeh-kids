@@ -72,8 +72,6 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
     },
   ];
 
-  int _audioPlaySession = 0;
-
   @override
   void initState() {
     super.initState();
@@ -98,14 +96,12 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
 
   @override
   void dispose() {
-    _audioPlaySession++;
     _pageController.dispose();
     AudioService.instance.stop();
     super.dispose();
   }
 
   void _playPageAudio(Map<String, dynamic> page) async {
-    _audioPlaySession++;
     await AudioService.instance.stop();
 
     if (page['type'] == 'intro') {
@@ -126,7 +122,6 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
   }
 
   void _playSpecificMaddAudio(String audioPath) async {
-    _audioPlaySession++;
     await AudioService.instance.stop();
     try {
       await AudioService.instance.playAsset(audioPath);
