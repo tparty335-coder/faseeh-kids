@@ -507,8 +507,6 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
   }
 
   void _completeCurrentStroke(List<Offset> guidePx) {
-    AudioService.instance.playAsset('audio/stories/alif_correct.mp3');
-
     setState(() {
       _completedStrokePaths.add(List.from(guidePx));
       _currentDrawingPoints.clear();
@@ -518,10 +516,11 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
 
       if (_currentStrokeIndex >= _strokes.length) {
         _isAllCompleted = true;
-        AudioService.instance.playAsset('audio/feedback/champion.mp3');
         if (widget.onComplete != null) {
           widget.onComplete!();
         }
+      } else {
+        AudioService.instance.playAsset('audio/stories/alif_correct.mp3');
       }
     });
   }

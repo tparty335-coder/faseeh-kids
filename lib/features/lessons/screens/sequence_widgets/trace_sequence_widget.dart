@@ -35,6 +35,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
       'exampleEmoji': '🦁',
       'imageFile': 'assets/images/lessons/alif/alif_word_asad.jpg',
       'audio': 'audio/stories/alif_trace_intro.mp3',
+      'wordAudio': 'audio/stories/alif_word_asad.mp3',
       'color': Color(0xFF673AB7),
     },
     {
@@ -47,6 +48,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
       'exampleEmoji': '🍽️',
       'imageFile': 'assets/images/lessons/alif/alif_scene_akala.jpg',
       'audio': 'audio/stories/alif_pos_start.mp3',
+      'wordAudio': 'audio/stories/alif_word_akala.mp3',
       'color': Color(0xFFE53935),
     },
     {
@@ -59,6 +61,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
       'exampleEmoji': '🙋‍♂️',
       'imageFile': 'assets/images/lessons/alif/alif_scene_saala.jpg',
       'audio': 'audio/stories/alif_pos_middle.mp3',
+      'wordAudio': 'audio/stories/alif_word_saala.mp3',
       'color': Color(0xFFFF8F00),
     },
     {
@@ -71,6 +74,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
       'exampleEmoji': '📖',
       'imageFile': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
       'audio': 'audio/stories/alif_pos_end.mp3',
+      'wordAudio': 'audio/stories/alif_word_qaraa.mp3',
       'color': Color(0xFF43A047),
     },
   ];
@@ -187,81 +191,90 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                       child: Column(
                         children: [
                           // 1. بطاقة الصورة الأصلية للدرس ومثال الموضع
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                            decoration: BoxDecoration(
-                              color: color.withValues(alpha: 0.08),
-                              borderRadius: BorderRadius.circular(22),
-                              border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
-                            ),
-                            child: Row(
-                              children: [
-                                // صورة الدرس الأصلية
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(14),
-                                  child: SizedBox(
-                                    width: 80,
-                                    height: 60,
-                                    child: Image.asset(
-                                      imageFile,
-                                      fit: BoxFit.cover,
-                                      errorBuilder: (_, __, ___) => Container(
-                                        color: Colors.grey.shade200,
-                                        child: const Icon(Icons.image, color: Colors.grey),
+                          GestureDetector(
+                            onTap: () => _playAudio(s['wordAudio'] as String),
+                            child: Container(
+                              width: double.infinity,
+                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                              decoration: BoxDecoration(
+                                color: color.withValues(alpha: 0.08),
+                                borderRadius: BorderRadius.circular(22),
+                                border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
+                              ),
+                              child: Row(
+                                children: [
+                                  // صورة الدرس الأصلية
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(14),
+                                    child: SizedBox(
+                                      width: 80,
+                                      height: 60,
+                                      child: Image.asset(
+                                        imageFile,
+                                        fit: BoxFit.cover,
+                                        errorBuilder: (_, __, ___) => Container(
+                                          color: Colors.grey.shade200,
+                                          child: const Icon(Icons.image, color: Colors.grey),
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                const SizedBox(width: 14),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            s['title'] as String,
-                                            style: TextStyle(
-                                              fontFamily: 'Cairo',
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w900,
-                                              color: color,
+                                  const SizedBox(width: 14),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              s['title'] as String,
+                                              style: TextStyle(
+                                                fontFamily: 'Cairo',
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w900,
+                                                color: color,
+                                              ),
                                             ),
-                                          ),
-                                          const SizedBox(width: 8),
-                                          Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                            decoration: BoxDecoration(
-                                              color: color,
-                                              borderRadius: BorderRadius.circular(10),
+                                            const SizedBox(width: 8),
+                                            Container(
+                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                              decoration: BoxDecoration(
+                                                color: color,
+                                                borderRadius: BorderRadius.circular(10),
+                                              ),
+                                              child: Text(
+                                                shape,
+                                                style: const TextStyle(
+                                                  fontFamily: 'Cairo',
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
                                             ),
-                                            child: Text(
-                                              shape,
-                                              style: const TextStyle(
+                                          ],
+                                        ),
+                                        const SizedBox(height: 2),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'مِثَالٌ: $example',
+                                              style: TextStyle(
                                                 fontFamily: 'Cairo',
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.bold,
-                                                color: Colors.white,
+                                                color: Colors.grey.shade800,
                                               ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 2),
-                                      Text(
-                                        'مِثَالٌ: $example',
-                                        style: TextStyle(
-                                          fontFamily: 'Cairo',
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.grey.shade800,
+                                            const SizedBox(width: 6),
+                                            Icon(Icons.volume_up_rounded, size: 18, color: color),
+                                          ],
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
 
@@ -275,7 +288,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                             exampleEmoji: s['exampleEmoji'] as String,
                             primaryColor: color,
                             onComplete: () {
-                              AudioService.instance.playAsset('audio/instructions/alif_trace_praise.mp3');
+                              _playAudio(s['wordAudio'] as String);
                             },
                           ),
                         ],
