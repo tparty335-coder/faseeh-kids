@@ -584,62 +584,74 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
           const SizedBox(height: 14),
 
           // ─── 2. إطار رسم الحرف المتوهج (Lingo Banana Canvas Box) ───
-          Center(
-            child: AnimatedBuilder(
-              animation: _pulseController,
-              builder: (context, child) {
-                return Container(
-                  width: 320,
-                  height: 340,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2D144B), // خلفية بنفسجية داكنة فاخرة
-                    borderRadius: BorderRadius.circular(28),
-                    border: Border.all(
-                      color: _isWrongStartShake
-                          ? Colors.redAccent
-                          : Colors.white.withValues(alpha: 0.85),
-                      width: _isWrongStartShake ? 3.5 : 2.5,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: _isWrongStartShake
-                            ? Colors.redAccent.withValues(alpha: 0.4)
-                            : widget.primaryColor.withValues(alpha: 0.35),
-                        blurRadius: 16,
-                        spreadRadius: 2,
-                        offset: const Offset(0, 6),
-                      ),
-                    ],
-                  ),
-                  child: child,
-                );
-              },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(26),
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    final size = Size(constraints.maxWidth, constraints.maxHeight);
+          LayoutBuilder(
+            builder: (context, outerConstraints) {
+              final screenWidth = MediaQuery.sizeOf(context).width;
+              final isTablet = screenWidth > 600;
+              // تكبير تناسبي: على الفون ~320, على التابلت ~480 (مع حد أقصى)
+              final canvasWidth = isTablet
+                  ? (screenWidth * 0.55).clamp(320.0, 520.0)
+                  : 320.0;
+              final canvasHeight = canvasWidth * (340.0 / 320.0); // نفس النسبة
 
-                    return GestureDetector(
-                      onPanStart: (details) => _onPanStart(details, size),
-                      onPanUpdate: (details) => _onPanUpdate(details, size),
-                      onPanEnd: (details) => _onPanEnd(details, size),
-                      child: CustomPaint(
-                        size: size,
-                        painter: _ArabicLetterPainter(
-                          strokes: _strokes,
-                          currentStrokeIndex: _currentStrokeIndex,
-                          completedStrokePaths: _completedStrokePaths,
-                          currentDrawingPoints: _currentDrawingPoints,
-                          pulseValue: _pulseController.value,
-                          isAllCompleted: _isAllCompleted,
+              return Center(
+                child: AnimatedBuilder(
+                  animation: _pulseController,
+                  builder: (context, child) {
+                    return Container(
+                      width: canvasWidth,
+                      height: canvasHeight,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2D144B), // خلفية بنفسجية داكنة فاخرة
+                        borderRadius: BorderRadius.circular(28),
+                        border: Border.all(
+                          color: _isWrongStartShake
+                              ? Colors.redAccent
+                              : Colors.white.withValues(alpha: 0.85),
+                          width: _isWrongStartShake ? 3.5 : 2.5,
                         ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: _isWrongStartShake
+                                ? Colors.redAccent.withValues(alpha: 0.4)
+                                : widget.primaryColor.withValues(alpha: 0.35),
+                            blurRadius: 16,
+                            spreadRadius: 2,
+                            offset: const Offset(0, 6),
+                          ),
+                        ],
                       ),
+                      child: child,
                     );
                   },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(26),
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        final size = Size(constraints.maxWidth, constraints.maxHeight);
+
+                        return GestureDetector(
+                          onPanStart: (details) => _onPanStart(details, size),
+                          onPanUpdate: (details) => _onPanUpdate(details, size),
+                          onPanEnd: (details) => _onPanEnd(details, size),
+                          child: CustomPaint(
+                            size: size,
+                            painter: _ArabicLetterPainter(
+                              strokes: _strokes,
+                              currentStrokeIndex: _currentStrokeIndex,
+                              completedStrokePaths: _completedStrokePaths,
+                              currentDrawingPoints: _currentDrawingPoints,
+                              pulseValue: _pulseController.value,
+                              isAllCompleted: _isAllCompleted,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ),
-              ),
-            ),
+              );
+            },
           ),
 
           const SizedBox(height: 14),

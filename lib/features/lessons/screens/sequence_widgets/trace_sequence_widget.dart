@@ -187,7 +187,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: Center(
                     child: ConstrainedBox(
-                      constraints: BoxConstraints(maxWidth: isTablet ? 600 : double.infinity),
+                      constraints: BoxConstraints(maxWidth: isTablet ? 700 : double.infinity),
                       child: Column(
                         children: [
                           // 1. بطاقة الصورة الأصلية للدرس ومثال الموضع
@@ -203,12 +203,12 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                               ),
                               child: Row(
                                 children: [
-                                  // صورة الدرس الأصلية
+                                  // صورة الدرس الأصلية — تتناسب مع حجم الشاشة
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(14),
                                     child: SizedBox(
-                                      width: 80,
-                                      height: 60,
+                                      width: isTablet ? 120.0 : 80.0,
+                                      height: isTablet ? 90.0 : 60.0,
                                       child: Image.asset(
                                         imageFile,
                                         fit: BoxFit.cover,
