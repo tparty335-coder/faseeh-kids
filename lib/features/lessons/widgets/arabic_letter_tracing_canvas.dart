@@ -12,6 +12,7 @@ class LetterStroke {
   final List<Offset> pathPoints; // Normalized path points
   final String hintText;
   final bool isTapOnly;
+  final double strokeWidth; // عرض الخط - قابل للتخصيص لكل مقطع
 
   const LetterStroke({
     required this.index,
@@ -21,6 +22,7 @@ class LetterStroke {
     required this.pathPoints,
     required this.hintText,
     this.isTapOnly = false,
+    this.strokeWidth = 22.0,
   });
 }
 
@@ -30,142 +32,161 @@ class ArabicLetterTracingData {
     if (letter == 'ب') {
       return _getBaaStrokes(position);
     }
-    // الافتراضي: حرف الألف
     return _getAlifStrokes(position);
   }
 
-  // ─── مقاطع حرف الألف (أ) بجميع مواضعه ───
-  // الألف المنفصلة أو أول الكلمة تتكون من 4 حركات هندسية دقيقة:
-  // 1. عصا الألف من أعلى إلى أسفل
-  // 2. رأس الهمزة العلوي (دوران لليمين)
-  // 3. بطن الهمزة الدائري (نزول ودوران لليسار)
-  // 4. ذيل الهمزة وقاعدتها الأفقية (استقامة لليمين)
+  // ─── مقاطع حرف الألف (أ) ───────────────────────────────────────────
+  //
+  //  الألف مكوّنة من جزأين:
+  //  ① عصا الألف: خط عمودي من الأعلى للأسفل
+  //  ② الهمزة (ء): قوس كبير يبدأ من اليسار، يصعد لليمين ثم ينزل
+  //     + ذيل الهمزة: خط أفقي قصير
+  //
+  //  المقاسات المثالية على لوحة 300×340 px (نسب مئوية):
+  //  - الهمزة تمتد من x=0.22 إلى x=0.76 = 54% = 162px (واضحة كفاية)
+  //  - الهمزة ارتفاعها من y=0.02 إلى y=0.26 = 24% = 82px
+  // ──────────────────────────────────────────────────────────────────────
   static List<LetterStroke> _getAlifStrokes(String position) {
+
+    // ─── الهمزة مشتركة في كل المواضع (فقط موضعها على المحور Y يختلف) ───
+    // قوس الهمزة الرئيسي: يبدأ من أسفل-اليسار، يصعد لليمين ثم ينزل
+    // هكذا يرسم أطفال المدارس حرف الهمزة:
+    // ابدأ من اليسار (منتصف الهمزة)، صعوداً لليمين، ثم دوران لأسفل-اليسار
+
     if (position == 'middle' || position == 'end') {
-      // الألف المتصلة (ـأ)
+      // ─── الألف المتصلة (ـأ) ───
       return [
-        // 1. خط الاتصال الأفقي من اليمين لليسار
+        // ① خط الاتصال من اليمين لليسار (ـ)
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.85, 0.82),
+          start: const Offset(0.88, 0.82),
           end: const Offset(0.50, 0.82),
           pathPoints: [
-            const Offset(0.85, 0.82),
+            const Offset(0.88, 0.82),
             const Offset(0.68, 0.82),
             const Offset(0.50, 0.82),
           ],
-          hintText: '١. ابدأ من النقطة (١) واسحب خط الاتصال ⬅️',
+          hintText: '① ابدأ من اليمين واسحب خط الاتصال ⬅️',
+          strokeWidth: 20.0,
         ),
-        // 2. صعود عصا الألف للأعلى
+        // ② عصا الألف صاعدة للأعلى (ا)
         LetterStroke(
           index: 2,
           label: '٢',
           start: const Offset(0.50, 0.82),
-          end: const Offset(0.50, 0.38),
+          end: const Offset(0.50, 0.30),
           pathPoints: [
             const Offset(0.50, 0.82),
-            const Offset(0.50, 0.60),
-            const Offset(0.50, 0.38),
+            const Offset(0.50, 0.56),
+            const Offset(0.50, 0.30),
           ],
-          hintText: '٢. من النقطة (٢) اصعد بعصا الألف للأعلى ⬆️',
+          hintText: '② من النقطة ② اصعد بعصا الألف للأعلى ⬆️',
+          strokeWidth: 20.0,
         ),
-        // 3. رأس الهمزة العلوي
+        // ③ رأس وقوس الهمزة (من أعلى يميناً)
         LetterStroke(
           index: 3,
           label: '٣',
-          start: const Offset(0.43, 0.12),
-          end: const Offset(0.57, 0.12),
+          start: const Offset(0.42, 0.06),
+          end: const Offset(0.68, 0.12),
           pathPoints: [
-            const Offset(0.43, 0.12),
-            const Offset(0.50, 0.08),
-            const Offset(0.57, 0.12),
+            const Offset(0.42, 0.06),
+            const Offset(0.58, 0.05),
+            const Offset(0.68, 0.12),
           ],
-          hintText: '٣. من النقطة (٣) دوّر رأس الهمزة لليمين ↷',
+          hintText: '③ ابدأ من أعلى ودَوّر رأس الهمزة لليمين ↷',
+          strokeWidth: 16.0,
         ),
-        // 4. بطن الهمزة الدائري
+        // ④ بطن الهمزة (نزول ودوران لليسار)
         LetterStroke(
           index: 4,
           label: '٤',
-          start: const Offset(0.57, 0.12),
-          end: const Offset(0.43, 0.22),
+          start: const Offset(0.68, 0.12),
+          end: const Offset(0.40, 0.19),
           pathPoints: [
-            const Offset(0.57, 0.12),
-            const Offset(0.56, 0.18),
-            const Offset(0.43, 0.22),
+            const Offset(0.68, 0.12),
+            const Offset(0.62, 0.17),
+            const Offset(0.40, 0.19),
           ],
-          hintText: '٤. من النقطة (٤) انزل بقوس الهمزة لليسار ↶',
+          hintText: '④ من النقطة ④ انزل بقوس الهمزة لليسار ↶',
+          strokeWidth: 16.0,
         ),
-        // 5. قاعدة وذيل الهمزة
+        // ⑤ ذيل الهمزة (باستقامة لليسار)
         LetterStroke(
           index: 5,
           label: '٥',
-          start: const Offset(0.43, 0.22),
-          end: const Offset(0.60, 0.24),
+          start: const Offset(0.40, 0.19),
+          end: const Offset(0.24, 0.22),
           pathPoints: [
-            const Offset(0.43, 0.22),
-            const Offset(0.52, 0.23),
-            const Offset(0.60, 0.24),
+            const Offset(0.40, 0.19),
+            const Offset(0.32, 0.21),
+            const Offset(0.24, 0.22),
           ],
-          hintText: '٥. من النقطة (٥) ارسم ذيل الهمزة باستقامة ➡️',
+          hintText: '⑤ من النقطة ⑤ اسحب ذيل الهمزة لليسار ⬅️',
+          strokeWidth: 16.0,
         ),
       ];
     }
 
-    // الألف المنفصلة أو أول الكلمة (أ)
+    // ─── الألف المنفصلة أو أول الكلمة (أ) ───
     return [
-      // 1. عصا الألف (من الأعلى إلى الأسفل)
+      // ① عصا الألف (من الأعلى إلى الأسفل)
       LetterStroke(
         index: 1,
         label: '١',
-        start: const Offset(0.50, 0.38),
+        start: const Offset(0.50, 0.30),
         end: const Offset(0.50, 0.88),
         pathPoints: [
-          const Offset(0.50, 0.38),
-          const Offset(0.50, 0.52),
-          const Offset(0.50, 0.68),
+          const Offset(0.50, 0.30),
+          const Offset(0.50, 0.50),
+          const Offset(0.50, 0.70),
           const Offset(0.50, 0.88),
         ],
-        hintText: '١. ابدأ من النقطة (١) واسحب عصا الألف لأسفل ⬇️',
+        hintText: '① ابدأ من أعلى واسحب عصا الألف لأسفل ⬇️',
+        strokeWidth: 20.0,
       ),
-      // 2. رأس الهمزة العلوي (دوران لليمين)
+      // ② رأس الهمزة العلوي (من أعلى دوراناً لليمين)
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.43, 0.12),
-        end: const Offset(0.57, 0.12),
+        start: const Offset(0.42, 0.06),
+        end: const Offset(0.68, 0.12),
         pathPoints: [
-          const Offset(0.43, 0.12),
-          const Offset(0.50, 0.08),
-          const Offset(0.57, 0.12),
+          const Offset(0.42, 0.06),
+          const Offset(0.58, 0.05),
+          const Offset(0.68, 0.12),
         ],
-        hintText: '٢. ابدأ من النقطة (٢) ودوّر رأس الهمزة لليمين ↷',
+        hintText: '② ابدأ من أعلى ودَوّر رأس الهمزة لليمين ↷',
+        strokeWidth: 16.0,
       ),
-      // 3. بطن الهمزة الدائري (نزول ودوران لليسار)
+      // ③ بطن الهمزة الدائري (نزول ودوران لليسار)
       LetterStroke(
         index: 3,
         label: '٣',
-        start: const Offset(0.57, 0.12),
-        end: const Offset(0.43, 0.22),
+        start: const Offset(0.68, 0.12),
+        end: const Offset(0.40, 0.19),
         pathPoints: [
-          const Offset(0.57, 0.12),
-          const Offset(0.56, 0.18),
-          const Offset(0.43, 0.22),
+          const Offset(0.68, 0.12),
+          const Offset(0.62, 0.17),
+          const Offset(0.40, 0.19),
         ],
-        hintText: '٣. من النقطة (٣) انزل بقوس الهمزة لليسار ↶',
+        hintText: '③ من النقطة ③ انزل بقوس الهمزة لليسار ↶',
+        strokeWidth: 16.0,
       ),
-      // 4. قاعدة وذيل الهمزة (خط مستقيم لليمين)
+      // ④ ذيل وقاعدة الهمزة (باستقامة للخلف ناحية اليسار)
       LetterStroke(
         index: 4,
         label: '٤',
-        start: const Offset(0.43, 0.22),
-        end: const Offset(0.60, 0.24),
+        start: const Offset(0.40, 0.19),
+        end: const Offset(0.24, 0.22),
         pathPoints: [
-          const Offset(0.43, 0.22),
-          const Offset(0.52, 0.23),
-          const Offset(0.60, 0.24),
+          const Offset(0.40, 0.19),
+          const Offset(0.32, 0.21),
+          const Offset(0.24, 0.22),
         ],
-        hintText: '٤. من النقطة (٤) ارسم ذيل الهمزة باستقامة ➡️',
+        hintText: '④ من النقطة ④ اسحب ذيل الهمزة لليسار ⬅️',
+        strokeWidth: 16.0,
       ),
     ];
   }
@@ -683,15 +704,18 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                   size: 22,
                 ),
                 const SizedBox(width: 8),
-                Text(
-                  currentHint,
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: _isAllCompleted
-                        ? AppColors.oasisGreen
-                        : (_isWrongStartShake ? Colors.red : AppColors.textPrimaryDay),
+                Flexible(
+                  child: Text(
+                    currentHint,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: _isAllCompleted
+                          ? AppColors.oasisGreen
+                          : (_isWrongStartShake ? Colors.red : AppColors.textPrimaryDay),
+                    ),
                   ),
                 ),
               ],
@@ -740,19 +764,18 @@ class _ArabicLetterPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // ── 1. رسم المسار الشفاف العريض (Guide Track) لجميع مقاطع الحرف ──
-    final trackPaint = Paint()
-      ..color = Colors.white.withValues(alpha: 0.16)
-      ..strokeWidth = 38.0
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..style = PaintingStyle.stroke;
-
+    // ── 1. رسم المسار الشفاف العريض (Guide Track) — كل مقطع بعرضه ──
     for (final stroke in strokes) {
       final points = stroke.pathPoints.map((p) => Offset(p.dx * size.width, p.dy * size.height)).toList();
       if (points.length == 1) {
         canvas.drawCircle(points.first, 18.0, Paint()..color = Colors.white.withValues(alpha: 0.16));
       } else if (points.isNotEmpty) {
+        final trackPaint = Paint()
+          ..color = Colors.white.withValues(alpha: 0.16)
+          ..strokeWidth = stroke.strokeWidth + 16.0
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round
+          ..style = PaintingStyle.stroke;
         final path = Path();
         path.moveTo(points.first.dx, points.first.dy);
         for (int i = 1; i < points.length; i++) {
@@ -775,7 +798,6 @@ class _ArabicLetterPainter extends CustomPainter {
         ..style = PaintingStyle.stroke;
 
       if (points.length == 1) {
-        // نقطة منقطة
         canvas.drawCircle(
           points.first,
           10.0,
@@ -783,8 +805,6 @@ class _ArabicLetterPainter extends CustomPainter {
         );
       } else {
         _drawDashedPolyline(canvas, points, dashPaint);
-
-        // رسم سهم الاتجاه في نهاية المقطع
         if (points.length >= 2) {
           final last = points.last;
           final prev = points[points.length - 2];
@@ -794,26 +814,29 @@ class _ArabicLetterPainter extends CustomPainter {
       }
     }
 
-    // ── 3. رسم المقاطع المكتملة بلون متوهج زاهٍ ──
-    final completedPaint = Paint()
-      ..color = isAllCompleted ? const Color(0xFF00E676) : const Color(0xFFFFB300)
-      ..strokeWidth = 34.0
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..style = PaintingStyle.stroke;
-
-    for (final pathPoints in completedStrokePaths) {
+    // ── 3. رسم المقاطع المكتملة — كل مقطع بعرضه الخاص ──
+    final baseColor = isAllCompleted ? const Color(0xFF00E676) : const Color(0xFFFFB300);
+    for (int i = 0; i < completedStrokePaths.length; i++) {
+      final pathPoints = completedStrokePaths[i];
+      final sw = (i < strokes.length) ? strokes[i].strokeWidth : 22.0;
+      final completedPaint = Paint()
+        ..color = baseColor
+        ..strokeWidth = sw
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..style = PaintingStyle.stroke;
       if (pathPoints.length == 1) {
-        canvas.drawCircle(pathPoints.first, 15.0, Paint()..color = completedPaint.color);
+        canvas.drawCircle(pathPoints.first, sw * 0.6, Paint()..color = baseColor);
       } else if (pathPoints.isNotEmpty) {
         final p = Path();
         p.moveTo(pathPoints.first.dx, pathPoints.first.dy);
-        for (int i = 1; i < pathPoints.length; i++) {
-          p.lineTo(pathPoints[i].dx, pathPoints[i].dy);
+        for (int j = 1; j < pathPoints.length; j++) {
+          p.lineTo(pathPoints[j].dx, pathPoints[j].dy);
         }
         canvas.drawPath(p, completedPaint);
       }
     }
+
 
     // ── 4. رسم الخط الحالي أثناء السحب بإصبع التلميذ ──
     if (currentDrawingPoints.isNotEmpty) {

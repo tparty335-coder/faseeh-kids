@@ -105,30 +105,15 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
   }
 
   void _playPageAudio(Map<String, dynamic> page) async {
-    final session = ++_audioPlaySession;
+    _audioPlaySession++;
     await AudioService.instance.stop();
 
     if (page['type'] == 'intro') {
       try {
-        // 1. تشغيل تعريف ماهية المد
+        // تشغيل تعريف ماهية المد وأنواعه الثلاثة كاملة من الأسطوانة الأصلية
         await AudioService.instance.playAsset('audio/stories/alif_mudud_intro.mp3');
-
-        // الانتظار حتى انتهاء الملف الأول (أو بحد أقصى 10 ثوانٍ)
-        try {
-          await AudioService.instance
-              .onPlayerComplete(AudioChannel.voice)
-              ?.first
-              .timeout(const Duration(seconds: 10));
-        } catch (_) {}
-
-        if (session != _audioPlaySession || !mounted) return;
-        await Future.delayed(const Duration(milliseconds: 350));
-        if (session != _audioPlaySession || !mounted) return;
-
-        // 2. تشغيل شرح أنواع المد الثلاثة مباشرة في نفس الصفحة
-        await AudioService.instance.playAsset('audio/stories/alif_mudud_types.mp3');
       } catch (e) {
-        debugPrint('Madd intro sequence error: $e');
+        debugPrint('Madd intro audio error: $e');
       }
     } else {
       try {
