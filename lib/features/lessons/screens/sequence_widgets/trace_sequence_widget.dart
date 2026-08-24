@@ -23,67 +23,128 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
   final PageController _pageController = PageController();
   int _currentStep = 0;
 
-  // ─── مراحل كتابة ومواضع حرف الألف (مطابقة للأسطوانة الأصلية ahdaf_a3) ───
-  static const List<Map<String, dynamic>> _steps = [
-    {
-      'title': 'كَيْفِيَّةُ كِتَابَةِ حَرْفِ الْأَلِفِ',
-      'subtitle': 'نَبْدَأُ مِنْ أَعْلَى إِلَى أَسْفَلَ، ثُمَّ نَكْتُبُ الْهَمْزَةَ',
-      'positionCode': 'isolated',
-      'letterShape': 'أ',
-      'position': 'رَسْمُ الْحَرْفِ',
-      'exampleWord': 'أَسَد',
-      'exampleEmoji': '🦁',
-      'imageFile': 'assets/images/lessons/alif/alif_word_asad.jpg',
-      'audio': 'audio/stories/alif_trace_intro.mp3',
-      'wordAudio': 'audio/stories/alif_word_asad.mp3',
-      'color': Color(0xFF673AB7),
-    },
-    {
-      'title': 'الْأَلِفُ فِي أَوَّلِ الْكَلِمَةِ',
-      'subtitle': 'يَأْتِي مُنْفَصِلاً غَيْرَ مُتَّصِلٍ بِمَا بَعْدَهُ: أَكَلَ',
-      'positionCode': 'start',
-      'letterShape': 'أ',
-      'position': 'أَوَّلُ الْكَلِمَةِ',
-      'exampleWord': 'أَكَلَ',
-      'exampleEmoji': '🍽️',
-      'imageFile': 'assets/images/lessons/alif/alif_scene_akala.jpg',
-      'audio': 'audio/stories/alif_pos_start.mp3',
-      'wordAudio': 'audio/stories/alif_word_akala.mp3',
-      'color': Color(0xFFE53935),
-    },
-    {
-      'title': 'الْأَلِفُ فِي وَسَطِ الْكَلِمَةِ',
-      'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَلَا يَتَّصِلُ بِمَا بَعْدَهُ: سَأَلَ',
-      'positionCode': 'middle',
-      'letterShape': 'ـأ',
-      'position': 'وَسَطُ الْكَلِمَةِ',
-      'exampleWord': 'سَأَلَ',
-      'exampleEmoji': '🙋‍♂️',
-      'imageFile': 'assets/images/lessons/alif/alif_scene_saala.jpg',
-      'audio': 'audio/stories/alif_pos_middle.mp3',
-      'wordAudio': 'audio/stories/alif_word_saala.mp3',
-      'color': Color(0xFFFF8F00),
-    },
-    {
-      'title': 'الْأَلِفُ فِي آخِرِ الْكَلِمَةِ',
-      'subtitle': 'يَأْتِي مُتَّصِلاً بِمَا قَبْلَهُ أَوْ مُنْفَصِلاً: قَرَأَ',
-      'positionCode': 'end',
-      'letterShape': 'ـأ',
-      'position': 'آخِرُ الْكَلِمَةِ',
-      'exampleWord': 'قَرَأَ',
-      'exampleEmoji': '📖',
-      'imageFile': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
-      'audio': 'audio/stories/alif_pos_end.mp3',
-      'wordAudio': 'audio/stories/alif_word_qaraa.mp3',
-      'color': Color(0xFF43A047),
-    },
-  ];
+  List<Map<String, dynamic>> get _steps => _getStepsForLetter(widget.letterChar);
+
+  static List<Map<String, dynamic>> _getStepsForLetter(String letter) {
+    if (letter == 'ب') {
+      return [
+        {
+          'title': 'كَيْفِيَّةُ كِتَابَةِ حَرْفِ الْبَاءِ',
+          'subtitle': 'نَبْدَأُ مِنَ السِّنَّةِ الْيُمْنَى ثُمَّ جِسْمِ الْبَاءِ ثُمَّ النُّقْطَةِ',
+          'positionCode': 'isolated',
+          'letterShape': 'ب',
+          'position': 'رَسْمُ الْحَرْفِ',
+          'exampleWord': 'بَقَرَة',
+          'exampleEmoji': '🐄',
+          'imageFile': 'assets/images/lessons/baa/baa_words.jpg',
+          'audio': 'audio/lessons/baa/short/baa_77.mp3',
+          'wordAudio': 'audio/word_baqara.mp3',
+          'color': const Color(0xFF673AB7),
+        },
+        {
+          'title': 'الْبَاءُ فِي أَوَّلِ الْكَلِمَةِ',
+          'subtitle': 'يَتَّصِلُ بِمَا بَعْدَهُ: بِنْت',
+          'positionCode': 'start',
+          'letterShape': 'بـ',
+          'position': 'أَوَّلُ الْكَلِمَةِ',
+          'exampleWord': 'بِنْت',
+          'exampleEmoji': '👧',
+          'imageFile': 'assets/images/lessons/baa/baa_drag_words.jpg',
+          'audio': 'audio/lessons/baa/medium/baa_79.mp3',
+          'wordAudio': 'audio/lessons/baa/short/baa_90.mp3',
+          'color': const Color(0xFFE53935),
+        },
+        {
+          'title': 'الْبَاءُ فِي وَسَطِ الْكَلِمَةِ',
+          'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَبِمَا بَعْدَهُ: ثُعْبَان',
+          'positionCode': 'middle',
+          'letterShape': 'ـبـ',
+          'position': 'وَسَطُ الْكَلِمَةِ',
+          'exampleWord': 'ثُعْبَان',
+          'exampleEmoji': '🐍',
+          'imageFile': 'assets/images/lessons/baa/baa_fishing.jpg',
+          'audio': 'audio/lessons/baa/medium/baa_80.mp3',
+          'wordAudio': 'audio/lessons/baa/short/baa_30.mp3',
+          'color': const Color(0xFFFF8F00),
+        },
+        {
+          'title': 'الْبَاءُ فِي آخِرِ الْكَلِمَةِ',
+          'subtitle': 'يَأْتِي مُتَّصِلاً أَوْ مُنْفَصِلاً: بَاب',
+          'positionCode': 'end',
+          'letterShape': 'ـب',
+          'position': 'آخِرُ الْكَلِمَةِ',
+          'exampleWord': 'بَاب',
+          'exampleEmoji': '🚪',
+          'imageFile': 'assets/images/lessons/baa/baa_circus.jpg',
+          'audio': 'audio/lessons/baa/medium/baa_81.mp3',
+          'wordAudio': 'audio/lessons/baa/short/baa_4.mp3',
+          'color': const Color(0xFF43A047),
+        },
+      ];
+    }
+
+    // افتراضي لحرف الألف (مطابقة للأسطوانة الأصلية ahdaf_a3)
+    return [
+      {
+        'title': 'كَيْفِيَّةُ كِتَابَةِ حَرْفِ الْأَلِفِ',
+        'subtitle': 'نَبْدَأُ مِنْ أَعْلَى إِلَى أَسْفَلَ، ثُمَّ نَكْتُبُ الْهَمْزَةَ',
+        'positionCode': 'isolated',
+        'letterShape': 'أ',
+        'position': 'رَسْمُ الْحَرْفِ',
+        'exampleWord': 'أَسَد',
+        'exampleEmoji': '🦁',
+        'imageFile': 'assets/images/lessons/alif/alif_word_asad.jpg',
+        'audio': 'audio/stories/alif_trace_intro.mp3',
+        'wordAudio': 'audio/stories/alif_word_asad.mp3',
+        'color': const Color(0xFF673AB7),
+      },
+      {
+        'title': 'الْأَلِفُ فِي أَوَّلِ الْكَلِمَةِ',
+        'subtitle': 'يَأْتِي مُنْفَصِلاً غَيْرَ مُتَّصِلٍ بِمَا بَعْدَهُ: أَكَلَ',
+        'positionCode': 'start',
+        'letterShape': 'أ',
+        'position': 'أَوَّلُ الْكَلِمَةِ',
+        'exampleWord': 'أَكَلَ',
+        'exampleEmoji': '🍽️',
+        'imageFile': 'assets/images/lessons/alif/alif_scene_akala.jpg',
+        'audio': 'audio/stories/alif_pos_start.mp3',
+        'wordAudio': 'audio/stories/alif_word_akala.mp3',
+        'color': const Color(0xFFE53935),
+      },
+      {
+        'title': 'الْأَلِفُ فِي وَسَطِ الْكَلِمَةِ',
+        'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَلَا يَتَّصِلُ بِمَا بَعْدَهُ: سَأَلَ',
+        'positionCode': 'middle',
+        'letterShape': 'ـأ',
+        'position': 'وَسَطُ الْكَلِمَةِ',
+        'exampleWord': 'سَأَلَ',
+        'exampleEmoji': '🙋‍♂️',
+        'imageFile': 'assets/images/lessons/alif/alif_scene_saala.jpg',
+        'audio': 'audio/stories/alif_pos_middle.mp3',
+        'wordAudio': 'audio/stories/alif_word_saala.mp3',
+        'color': const Color(0xFFFF8F00),
+      },
+      {
+        'title': 'الْأَلِفُ فِي آخِرِ الْكَلِمَةِ',
+        'subtitle': 'يَأْتِي مُتَّصِلاً بِمَا قَبْلَهُ أَوْ مُنْفَصِلاً: قَرَأَ',
+        'positionCode': 'end',
+        'letterShape': 'ـأ',
+        'position': 'آخِرُ الْكَلِمَةِ',
+        'exampleWord': 'قَرَأَ',
+        'exampleEmoji': '📖',
+        'imageFile': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
+        'audio': 'audio/stories/alif_pos_end.mp3',
+        'wordAudio': 'audio/stories/alif_word_qaraa.mp3',
+        'color': const Color(0xFF43A047),
+      },
+    ];
+  }
 
   @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(milliseconds: 400), () {
-      if (mounted) _playAudio(_steps[0]['audio'] as String);
+      if (mounted && _steps.isNotEmpty) _playAudio(_steps[0]['audio'] as String);
     });
   }
 

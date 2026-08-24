@@ -24,51 +24,67 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
   bool _foundRabbit = false;
   late final ConfettiController _confettiController;
 
-  // ═══ 6 مشاهد مطابقة للأسطوانة الأصلية بالدليل والتوثيق ═══
-  static const List<Map<String, dynamic>> _storyFrames = [
-    {
-      'title': 'الْمَشْهَدُ الْأَوَّلُ',
-      'caption': 'فِي يَوْمٍ مِنَ الْأَيَّامِ، كَانَ الْأَسَدُ يَسِيرُ فِي الْغَابَةِ يُفَكِّرُ فِي طَعَامِهِ',
-      'image': 'assets/images/lessons/alif/alif_cd_story_1.png',
-      'audio': 'audio/stories/alif_story_1.mp3',
-      'isInteractive': false,
-    },
-    {
-      'title': 'الْمَشْهَدُ الثَّانِي',
-      'caption': 'فَهُوَ لَمْ يَأْكُلِ الْيَوْمَ شَيْئًا. وَفَجْأَةً شَاهَدَ أَرْنَبًا فِي الطَّرِيقِ',
-      'image': 'assets/images/lessons/alif/alif_cd_story_2.png',
-      'audio': 'audio/stories/alif_story_2.mp3',
-      'isInteractive': false,
-    },
-    {
-      'title': 'الْمَشْهَدُ الثَّالِثُ',
-      'caption': 'حَاوَلَ الْأَسَدُ الْجَرْيَ وَرَاءَ الْأَرْنَبِ، وَلَكِنَّهُ فَشِلَ',
-      'image': 'assets/images/lessons/alif/alif_cd_story_3.png',
-      'audio': 'audio/stories/alif_story_3.mp3',
-      'isInteractive': false,
-    },
-    {
-      'title': 'الْمَشْهَدُ الرَّابِعُ',
-      'caption': 'وَفَجْأَةً اخْتَفَى الْأَرْنَبُ. قَالَ الْأَسَدُ: أَيْنَ ذَهَبَ الْأَرْنَبُ؟',
-      'image': 'assets/images/lessons/alif/alif_cd_story_4.png',
-      'audio': 'audio/stories/alif_story_4.mp3',
-      'isInteractive': false,
-    },
-    {
-      'title': 'الْمَشْهَدُ الْخَامِسُ',
-      'caption': 'فَكِّرْ مَعَنَا: أَيْنَ اخْتَفَى الْأَرْنَبُ؟',
-      'image': 'assets/images/lessons/alif/alif_cd_story_5.png',
-      'audio': 'audio/stories/alif_story_5.mp3',
-      'isInteractive': false,
-    },
-    {
-      'title': 'سُؤَالُ الْفَهْمِ',
-      'caption': 'مَنْ يَعْرِفُ مَكَانَ الْأَرْنَبِ يَضْغَطْ عَلَيْهِ!',
-      'image': 'assets/images/lessons/alif/alif_cd_story_6.png',
-      'audio': 'audio/stories/alif_story_6.mp3',
-      'isInteractive': true,
-    },
-  ];
+  List<Map<String, dynamic>> get _storyFrames => _getStoryFramesForLetter(widget.letterChar);
+
+  static List<Map<String, dynamic>> _getStoryFramesForLetter(String letter) {
+    if (letter == 'ب') {
+      return [
+        {
+          'title': 'قِصَّةُ حَرْفِ الْبَاءِ',
+          'caption': 'بَاءٌ بَطَّةٌ وَضَعَتْ بَيْضَةً خَلْفَ الْبَقَرَةِ جَنْبَ الشَّجَرَةِ',
+          'image': 'assets/images/lessons/baa/baa_story.jpg',
+          'audio': 'audio/lessons/baa/long/baa_1.mp3',
+          'isInteractive': false,
+        },
+      ];
+    }
+
+    // افتراضي لحرف الألف (مطابقة للأسطوانة الأصلية)
+    return [
+      {
+        'title': 'الْمَشْهَدُ الْأَوَّلُ',
+        'caption': 'فِي يَوْمٍ مِنَ الْأَيَّامِ، كَانَ الْأَسَدُ يَسِيرُ فِي الْغَابَةِ يُفَكِّرُ فِي طَعَامِهِ',
+        'image': 'assets/images/lessons/alif/alif_cd_story_1.png',
+        'audio': 'audio/stories/alif_story_1.mp3',
+        'isInteractive': false,
+      },
+      {
+        'title': 'الْمَشْهَدُ الثَّانِي',
+        'caption': 'فَهُوَ لَمْ يَأْكُلِ الْيَوْمَ شَيْئًا. وَفَجْأَةً شَاهَدَ أَرْنَبًا فِي الطَّرِيقِ',
+        'image': 'assets/images/lessons/alif/alif_cd_story_2.png',
+        'audio': 'audio/stories/alif_story_2.mp3',
+        'isInteractive': false,
+      },
+      {
+        'title': 'الْمَشْهَدُ الثَّالِثُ',
+        'caption': 'حَاوَلَ الْأَسَدُ الْجَرْيَ وَرَاءَ الْأَرْنَبِ، وَلَكِنَّهُ فَشِلَ',
+        'image': 'assets/images/lessons/alif/alif_cd_story_3.png',
+        'audio': 'audio/stories/alif_story_3.mp3',
+        'isInteractive': false,
+      },
+      {
+        'title': 'الْمَشْهَدُ الرَّابِعُ',
+        'caption': 'وَفَجْأَةً اخْتَفَى الْأَرْنَبُ. قَالَ الْأَسَدُ: أَيْنَ ذَهَبَ الْأَرْنَبُ؟',
+        'image': 'assets/images/lessons/alif/alif_cd_story_4.png',
+        'audio': 'audio/stories/alif_story_4.mp3',
+        'isInteractive': false,
+      },
+      {
+        'title': 'الْمَشْهَدُ الْخَامِسُ',
+        'caption': 'فَكِّرْ مَعَنَا: أَيْنَ اخْتَفَى الْأَرْنَبُ؟',
+        'image': 'assets/images/lessons/alif/alif_cd_story_5.png',
+        'audio': 'audio/stories/alif_story_5.mp3',
+        'isInteractive': false,
+      },
+      {
+        'title': 'سُؤَالُ الْفَهْمِ',
+        'caption': 'مَنْ يَعْرِفُ مَكَانَ الْأَرْنَبِ يَضْغَطْ عَلَيْهِ!',
+        'image': 'assets/images/lessons/alif/alif_cd_story_6.png',
+        'audio': 'audio/stories/alif_story_6.mp3',
+        'isInteractive': true,
+      },
+    ];
+  }
 
   @override
   void initState() {

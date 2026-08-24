@@ -27,50 +27,102 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
   // ─────────────────────────────────────────────────────────────────────
   // صفحات المدود: الصفحة 0 هي شرح معنى المد وأنواعه، ثم أمثلة الأسطوانة الثلاثة
   // ─────────────────────────────────────────────────────────────────────
-  static const List<Map<String, dynamic>> _pages = [
-    {
-      'type': 'intro',
-      'id': 'madd_intro',
-      'label': 'تَعْرِيفُ الْمَدِّ وَأَنْوَاعُهُ',
-      'color': Color(0xFF6A1B9A),
-      'title': 'الْحَرَكَاتُ الطَّوِيلَةُ (الْمُدُودُ)',
-      'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
-      'audioFile': 'audio/stories/alif_mudud_intro.mp3',
-    },
-    {
-      'type': 'example',
-      'id': 'madd_alif',
-      'label': 'الْمَدُّ بِالأَلِفِ (آ)',
-      'maddChar': 'آ',
-      'color': Color(0xFFD32F2F),
-      'explanation': 'فَتْحَةٌ يَلِيهَا أَلِفٌ مِثْلُ: آمَال',
-      'exampleWord': 'آمَال',
-      'audioFile': 'audio/stories/alif_madd_amal.mp3',
-      'imageFile': 'assets/images/lessons/alif/alif_word_amal.jpg',
-    },
-    {
-      'type': 'example',
-      'id': 'madd_waw',
-      'label': 'الْمَدُّ بِالْوَاوِ (أُو)',
-      'maddChar': 'أُو',
-      'color': Color(0xFFF57C00),
-      'explanation': 'ضَمَّةٌ يَلِيهَا وَاوٌ مِثْلُ: الأُولَى',
-      'exampleWord': 'الأُولَى',
-      'audioFile': 'audio/stories/alif_madd_oula.mp3',
-      'imageFile': 'assets/images/lessons/alif/alif_word_oula.jpg',
-    },
-    {
-      'type': 'example',
-      'id': 'madd_yaa',
-      'label': 'الْمَدُّ بِالْيَاءِ (إِي)',
-      'maddChar': 'إِي',
-      'color': Color(0xFF1976D2),
-      'explanation': 'كَسْرَةٌ يَلِيهَا يَاءٌ مِثْلُ: إِينَاس',
-      'exampleWord': 'إِينَاس',
-      'audioFile': 'audio/stories/alif_madd_inas.mp3',
-      'imageFile': 'assets/images/lessons/alif/alif_scene_inas.jpg',
-    },
-  ];
+  List<Map<String, dynamic>> get _pages => _getPagesForLetter(widget.letterChar);
+
+  static List<Map<String, dynamic>> _getPagesForLetter(String letter) {
+    if (letter == 'ب') {
+      return [
+        {
+          'type': 'intro',
+          'id': 'madd_intro',
+          'label': 'تَعْرِيفُ الْمَدِّ وَأَنْوَاعُهُ',
+          'color': const Color(0xFF6A1B9A),
+          'title': 'الْحَرَكَاتُ الطَّوِيلَةُ (الْمُدُودُ)',
+          'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
+          'audioFile': 'audio/stories/alif_mudud_intro.mp3',
+        },
+        {
+          'type': 'example',
+          'id': 'madd_alif',
+          'label': 'الْمَدُّ بِالأَلِفِ (بَا)',
+          'maddChar': 'بَا',
+          'color': const Color(0xFFD32F2F),
+          'explanation': 'فَتْحَةٌ يَلِيهَا أَلِفٌ مِثْلُ: بَاب',
+          'exampleWord': 'بَاب',
+          'audioFile': 'audio/lessons/baa/short/baa_4.mp3',
+          'imageFile': 'assets/images/lessons/baa/baa_madd.jpg',
+        },
+        {
+          'type': 'example',
+          'id': 'madd_waw',
+          'label': 'الْمَدُّ بِالْوَاوِ (بُو)',
+          'maddChar': 'بُو',
+          'color': const Color(0xFFF57C00),
+          'explanation': 'ضَمَّةٌ يَلِيهَا وَاوٌ مِثْلُ: حُبُوب',
+          'exampleWord': 'حُبُوب',
+          'audioFile': 'audio/lessons/baa/short/baa_49.mp3',
+          'imageFile': 'assets/images/lessons/baa/baa_bee.jpg',
+        },
+        {
+          'type': 'example',
+          'id': 'madd_yaa',
+          'label': 'الْمَدُّ بِالْيَاءِ (بِي)',
+          'maddChar': 'بِي',
+          'color': const Color(0xFF1976D2),
+          'explanation': 'كَسْرَةٌ يَلِيهَا يَاءٌ مِثْلُ: طَبِيب',
+          'exampleWord': 'طَبِيب',
+          'audioFile': 'audio/lessons/baa/medium/baa_46.mp3',
+          'imageFile': 'assets/images/lessons/baa/baa_words.jpg',
+        },
+      ];
+    }
+
+    // افتراضي لحرف الألف (مطابقة للأسطوانة الأصلية ahdaf_a2)
+    return [
+      {
+        'type': 'intro',
+        'id': 'madd_intro',
+        'label': 'تَعْرِيفُ الْمَدِّ وَأَنْوَاعُهُ',
+        'color': const Color(0xFF6A1B9A),
+        'title': 'الْحَرَكَاتُ الطَّوِيلَةُ (الْمُدُودُ)',
+        'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
+        'audioFile': 'audio/stories/alif_mudud_intro.mp3',
+      },
+      {
+        'type': 'example',
+        'id': 'madd_alif',
+        'label': 'الْمَدُّ بِالأَلِفِ (آ)',
+        'maddChar': 'آ',
+        'color': const Color(0xFFD32F2F),
+        'explanation': 'فَتْحَةٌ يَلِيهَا أَلِفٌ مِثْلُ: آمَال',
+        'exampleWord': 'آمَال',
+        'audioFile': 'audio/stories/alif_madd_amal.mp3',
+        'imageFile': 'assets/images/lessons/alif/alif_word_amal.jpg',
+      },
+      {
+        'type': 'example',
+        'id': 'madd_waw',
+        'label': 'الْمَدُّ بِالْوَاوِ (أُو)',
+        'maddChar': 'أُو',
+        'color': const Color(0xFFF57C00),
+        'explanation': 'ضَمَّةٌ يَلِيهَا وَاوٌ مِثْلُ: الأُولَى',
+        'exampleWord': 'الأُولَى',
+        'audioFile': 'audio/stories/alif_madd_oula.mp3',
+        'imageFile': 'assets/images/lessons/alif/alif_word_oula.jpg',
+      },
+      {
+        'type': 'example',
+        'id': 'madd_yaa',
+        'label': 'الْمَدُّ بِالْيَاءِ (إِي)',
+        'maddChar': 'إِي',
+        'color': const Color(0xFF1976D2),
+        'explanation': 'كَسْرَةٌ يَلِيهَا يَاءٌ مِثْلُ: إِينَاس',
+        'exampleWord': 'إِينَاس',
+        'audioFile': 'audio/stories/alif_madd_inas.mp3',
+        'imageFile': 'assets/images/lessons/alif/alif_scene_inas.jpg',
+      },
+    ];
+  }
 
   @override
   void initState() {

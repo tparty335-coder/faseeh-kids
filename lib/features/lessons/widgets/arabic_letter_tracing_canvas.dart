@@ -260,6 +260,46 @@ class ArabicLetterTracingData {
           isTapOnly: true,
         ),
       ];
+    } else if (position == 'end') {
+      // الباء في آخر الكلمة متصلة (ـب)
+      return [
+        // 1. خط الاتصال الأيمن
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.85, 0.65),
+          end: const Offset(0.18, 0.65),
+          pathPoints: [
+            const Offset(0.85, 0.65),
+            const Offset(0.50, 0.65),
+            const Offset(0.18, 0.65),
+          ],
+          hintText: 'ابدأ من النقطة (١) واسحب خط الاتصال لليسار ⬅️',
+        ),
+        // 2. السنّة اليسرى صعوداً
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.18, 0.65),
+          end: const Offset(0.18, 0.45),
+          pathPoints: [
+            const Offset(0.18, 0.65),
+            const Offset(0.18, 0.55),
+            const Offset(0.18, 0.45),
+          ],
+          hintText: 'من النقطة (٢) ارفع السنّة اليسرى للأعلى ⬆️',
+        ),
+        // 3. نقطة الباء بالأسفل
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: const Offset(0.50, 0.82),
+          end: const Offset(0.50, 0.82),
+          pathPoints: [const Offset(0.50, 0.82)],
+          hintText: 'اضغط على النقطة (٣) لوضع نقطة الباء •',
+          isTapOnly: true,
+        ),
+      ];
     }
 
     // الباء الكاملة المنفصلة (ب)

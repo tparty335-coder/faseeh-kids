@@ -144,8 +144,77 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
     },
   ];
 
-  List<Map<String, dynamic>> get _words =>
-      widget.letterChar == 'أ' ? _alifWords : _defaultWords;
+  static const List<Map<String, dynamic>> _baaWords = [
+    {
+      'word': 'بَقَرَة',
+      'haraka': 'الْفَتْحَة (بَ)',
+      'harakaChar': 'َ',
+      'color': Color(0xFFD32F2F),
+      'image': 'baa_words.jpg',
+      'audio': 'audio/word_baqara.mp3',
+      'emoji': '🐄',
+    },
+    {
+      'word': 'بَاب',
+      'haraka': 'الْمَدُّ بِالأَلِفِ (بَا)',
+      'harakaChar': 'َا',
+      'color': Color(0xFFEF6C00),
+      'image': 'baa_madd.jpg',
+      'audio': 'audio/lessons/baa/short/baa_4.mp3',
+      'emoji': '🚪',
+    },
+    {
+      'word': 'بِطِّيخ',
+      'haraka': 'الْكَسْرَة (بِ)',
+      'harakaChar': 'ِ',
+      'color': Color(0xFF2E7D32),
+      'image': 'baa_sounds.jpg',
+      'audio': 'audio/lessons/baa/short/baa_13.mp3',
+      'emoji': '🍉',
+    },
+    {
+      'word': 'بِنْت',
+      'haraka': 'الْكَسْرَةُ مَعَ السُّكُونِ',
+      'harakaChar': 'ِ',
+      'color': Color(0xFF1565C0),
+      'image': 'baa_drag_words.jpg',
+      'audio': 'audio/lessons/baa/short/baa_90.mp3',
+      'emoji': '👧',
+    },
+    {
+      'word': 'حُبُوب',
+      'haraka': 'الْمَدُّ بِالْوَاوِ (بُو)',
+      'harakaChar': 'ُو',
+      'color': Color(0xFF8E24AA),
+      'image': 'baa_bee.jpg',
+      'audio': 'audio/lessons/baa/short/baa_49.mp3',
+      'emoji': '🌾',
+    },
+    {
+      'word': 'طَبِيب',
+      'haraka': 'الْمَدُّ بِالْيَاءِ (بِي)',
+      'harakaChar': 'ِي',
+      'color': Color(0xFF00897B),
+      'image': 'baa_words.jpg',
+      'audio': 'audio/lessons/baa/medium/baa_46.mp3',
+      'emoji': '🩺',
+    },
+    {
+      'word': 'حَبْل',
+      'haraka': 'السُّكُونُ (بْ)',
+      'harakaChar': 'ْ',
+      'color': Color(0xFF5D4037),
+      'image': 'baa_circus.jpg',
+      'audio': 'audio/lessons/baa/short/baa_15.mp3',
+      'emoji': '🪢',
+    },
+  ];
+
+  List<Map<String, dynamic>> get _words {
+    if (widget.letterChar == 'ب') return _baaWords;
+    if (widget.letterChar == 'أ') return _alifWords;
+    return _defaultWords;
+  }
 
   String _resolve(String template) {
     final lk = AudioRegistry.letterKeyFromChar(widget.letterChar);
@@ -203,7 +272,11 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
 
   void _playWordAudio(Map<String, dynamic> w) async {
     await AudioService.instance.stop();
-    await AudioService.instance.playAsset('audio/${_resolve(w['audio'])}');
+    final audioPath = w['audio'] as String;
+    final resolvedPath = audioPath.startsWith('audio/')
+        ? audioPath
+        : 'audio/${_resolve(audioPath)}';
+    await AudioService.instance.playAsset(resolvedPath);
   }
 
   @override
@@ -250,7 +323,10 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
   Widget _buildWordPage(Map<String, dynamic> w) {
     final color = w['color'] as Color;
     final lk = AudioRegistry.letterKeyFromChar(widget.letterChar);
-    final imgPath = 'assets/images/lessons/$lk/${_resolve(w['image'])}';
+    final img = w['image'] as String;
+    final imgPath = img.startsWith('assets/')
+        ? img
+        : 'assets/images/lessons/$lk/${_resolve(img)}';
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),

@@ -28,102 +28,182 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   // ─── Data: mirrors original CD ahdaf_a2 exactly ──────────────────────────
   // الفتحة: 3 أمثلة (أول/وسط/آخر الكلمة)
   // الضمة، الكسرة، السكون: مثالان لكل حركة
-  static const List<Map<String, dynamic>> _harakat = [
-    {
-      'id': 'fatha',
-      'label': 'الْفَتْحَةُ (أَ)',
-      'vowelMark': 'أَ',
-      'color': Color(0xFFE53935),
-      'explanation': 'الْفَتْحَةُ عِبَارَةٌ عَنْ شَرْطَةٍ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ (أَ)',
-      'ruleAudio': 'audio/stories/alif_fatha_rule.mp3',
-      'examples': [
+  List<Map<String, dynamic>> get _harakat => _getHarakatForLetter(widget.letterChar);
+
+  static List<Map<String, dynamic>> _getHarakatForLetter(String letter) {
+    if (letter == 'ب') {
+      return [
         {
-          'word': 'أَكَلَ',
-          'position': 'أَلِفٌ فِي أَوَّلِ الْكَلِمَةِ',
-          'audio': 'audio/stories/alif_word_akala.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_akala.jpg',
+          'id': 'fatha',
+          'label': 'الْفَتْحَةُ (بَ)',
+          'vowelMark': 'بَ',
+          'color': const Color(0xFFE53935),
+          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَقُلْ (بَ)',
+          'ruleAudio': 'audio/baa_fatha_rule.mp3',
+          'examples': [
+            {
+              'word': 'بَقَرَة',
+              'position': 'بَاءٌ فِي أَوَّلِ الْكَلِمَةِ مَفْتُوحَة',
+              'audio': 'audio/word_baqara.mp3',
+              'image': 'assets/images/lessons/baa/baa_words.jpg',
+            },
+          ],
         },
         {
-          'word': 'سَأَلَ',
-          'position': 'أَلِفٌ فِي وَسَطِ الْكَلِمَةِ',
-          'audio': 'audio/stories/alif_word_saala.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_saala.jpg',
+          'id': 'damma',
+          'label': 'الضَّمَّةُ (بُ)',
+          'vowelMark': 'بُ',
+          'color': const Color(0xFFFF6F00),
+          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَضُمَّ وَقُلْ (بُ)',
+          'ruleAudio': 'audio/baa_damma_rule.mp3',
+          'examples': [
+            {
+              'word': 'بُرْتُقَال',
+              'position': 'بَاءٌ مَضْمُومَة',
+              'audio': 'audio/lessons/baa/short/baa_12.mp3',
+              'image': 'assets/images/lessons/baa/baa_wheel.jpg',
+            },
+          ],
         },
         {
-          'word': 'قَرَأَ',
-          'position': 'أَلِفٌ فِي آخِرِ الْكَلِمَةِ',
-          'audio': 'audio/stories/alif_word_qaraa.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
-        },
-      ],
-    },
-    {
-      'id': 'damma',
-      'label': 'الضَّمَّةُ (أُ)',
-      'vowelMark': 'أُ',
-      'color': Color(0xFFFF6F00),
-      'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُغَيِّرُ صَوْتَهُ إِلَى (أُ)',
-      'ruleAudio': 'audio/stories/alif_damma_rule.mp3',
-      'examples': [
-        {
-          'word': 'أُذُن',
-          'position': '',
-          'audio': 'audio/stories/alif_word_udhun.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_udhun.jpg',
-        },
-        {
-          'word': 'أُمِّي',
-          'position': '',
-          'audio': 'audio/stories/alif_word_ummi.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_ummi.jpg',
-        },
-      ],
-    },
-    {
-      'id': 'kasra',
-      'label': 'الْكَسْرَةُ (إِ)',
-      'vowelMark': 'إِ',
-      'color': Color(0xFF1E88E5),
-      'explanation': 'الشَّرْطَةُ الَّتِي تُوضَعُ أَسْفَلَ الْحَرْفِ تُسَمَّى كَسْرَةً (إِ)',
-      'ruleAudio': 'audio/stories/alif_kasra_rule.mp3',
-      'examples': [
-        {
-          'word': 'إِبْرَة',
-          'position': '',
-          'audio': 'audio/stories/alif_word_ibra.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_ibra.jpg',
+          'id': 'kasra',
+          'label': 'الْكَسْرَةُ (بِ)',
+          'vowelMark': 'بِ',
+          'color': const Color(0xFF1E88E5),
+          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَانْخَفِضْ وَقُلْ (بِ)',
+          'ruleAudio': 'audio/baa_kasra_rule.mp3',
+          'examples': [
+            {
+              'word': 'بِنْت',
+              'position': 'بَاءٌ مَكْسُورَة',
+              'audio': 'audio/lessons/baa/short/baa_90.mp3',
+              'image': 'assets/images/lessons/baa/baa_drag_words.jpg',
+            },
+            {
+              'word': 'بِطِّيخ',
+              'position': 'بَاءٌ مَكْسُورَة',
+              'audio': 'audio/lessons/baa/short/baa_13.mp3',
+              'image': 'assets/images/lessons/baa/baa_sounds.jpg',
+            },
+          ],
         },
         {
-          'word': 'إِينَاس',
-          'position': '',
-          'audio': 'audio/stories/alif_word_inas.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_inas.jpg',
+          'id': 'sukoon',
+          'label': 'عَلَامَةُ السُّكُونِ (بْ)',
+          'vowelMark': 'بْ',
+          'color': const Color(0xFF5D4037),
+          'explanation': 'حَرْفُ الْبَاءِ حَرْفٌ سَاكِنٌ تَضَعُ فِيهِ شَفَتَيْكَ مَعًا ثُمَّ تَفْتَحُهُمَا',
+          'ruleAudio': 'audio/baa_intro.mp3',
+          'examples': [
+            {
+              'word': 'حَبْل',
+              'position': 'بَاءٌ سَاكِنَة',
+              'audio': 'audio/lessons/baa/short/baa_15.mp3',
+              'image': 'assets/images/lessons/baa/baa_circus.jpg',
+            },
+          ],
         },
-      ],
-    },
-    {
-      'id': 'sukoon',
-      'label': 'عَلَامَةُ السُّكُونِ (أْ)',
-      'vowelMark': 'أْ',
-      'color': Color(0xFF5D4037),
-      'explanation': 'السُّكُونُ فَوْقَ الْحَرْفِ يَجْعَلُ الْحَرْفَ بِدُونِ حَرَكَةٍ',
-      'ruleAudio': 'audio/stories/alif_sukoon_rule.mp3',
-      'examples': [
-        {
-          'word': 'فَأْس',
-          'position': '',
-          'audio': 'audio/stories/alif_word_faas.mp3',
-          'image': 'assets/images/lessons/alif/alif_word_faas.jpg',
-        },
-        {
-          'word': 'رَأْس',
-          'position': '',
-          'audio': 'audio/stories/alif_word_ras_explain.mp3',
-          'image': 'assets/images/lessons/alif/alif_scene_ras.jpg',
-        },
-      ],
-    },
-  ];
+      ];
+    }
+
+    // افتراضي لحرف الألف (مطابقة للأسطوانة الأصلية ahdaf_a2)
+    return [
+      {
+        'id': 'fatha',
+        'label': 'الْفَتْحَةُ (أَ)',
+        'vowelMark': 'أَ',
+        'color': const Color(0xFFE53935),
+        'explanation': 'الْفَتْحَةُ عِبَارَةٌ عَنْ شَرْطَةٍ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ (أَ)',
+        'ruleAudio': 'audio/stories/alif_fatha_rule.mp3',
+        'examples': [
+          {
+            'word': 'أَكَلَ',
+            'position': 'أَلِفٌ فِي أَوَّلِ الْكَلِمَةِ',
+            'audio': 'audio/stories/alif_word_akala.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_akala.jpg',
+          },
+          {
+            'word': 'سَأَلَ',
+            'position': 'أَلِفٌ فِي وَسَطِ الْكَلِمَةِ',
+            'audio': 'audio/stories/alif_word_saala.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_saala.jpg',
+          },
+          {
+            'word': 'قَرَأَ',
+            'position': 'أَلِفٌ فِي آخِرِ الْكَلِمَةِ',
+            'audio': 'audio/stories/alif_word_qaraa.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_qaraa.jpg',
+          },
+        ],
+      },
+      {
+        'id': 'damma',
+        'label': 'الضَّمَّةُ (أُ)',
+        'vowelMark': 'أُ',
+        'color': const Color(0xFFFF6F00),
+        'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُغَيِّرُ صَوْتَهُ إِلَى (أُ)',
+        'ruleAudio': 'audio/stories/alif_damma_rule.mp3',
+        'examples': [
+          {
+            'word': 'أُذُن',
+            'position': '',
+            'audio': 'audio/stories/alif_word_udhun.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_udhun.jpg',
+          },
+          {
+            'word': 'أُمِّي',
+            'position': '',
+            'audio': 'audio/stories/alif_word_ummi.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_ummi.jpg',
+          },
+        ],
+      },
+      {
+        'id': 'kasra',
+        'label': 'الْكَسْرَةُ (إِ)',
+        'vowelMark': 'إِ',
+        'color': const Color(0xFF1E88E5),
+        'explanation': 'الشَّرْطَةُ الَّتِي تُوضَعُ أَسْفَلَ الْحَرْفِ تُسَمَّى كَسْرَةً (إِ)',
+        'ruleAudio': 'audio/stories/alif_kasra_rule.mp3',
+        'examples': [
+          {
+            'word': 'إِبْرَة',
+            'position': '',
+            'audio': 'audio/stories/alif_word_ibra.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_ibra.jpg',
+          },
+          {
+            'word': 'إِينَاس',
+            'position': '',
+            'audio': 'audio/stories/alif_word_inas.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_inas.jpg',
+          },
+        ],
+      },
+      {
+        'id': 'sukoon',
+        'label': 'عَلَامَةُ السُّكُونِ (أْ)',
+        'vowelMark': 'أْ',
+        'color': const Color(0xFF5D4037),
+        'explanation': 'السُّكُونُ فَوْقَ الْحَرْفِ يَجْعَلُ الْحَرْفَ بِدُونِ حَرَكَةٍ',
+        'ruleAudio': 'audio/stories/alif_sukoon_rule.mp3',
+        'examples': [
+          {
+            'word': 'فَأْس',
+            'position': '',
+            'audio': 'audio/stories/alif_word_faas.mp3',
+            'image': 'assets/images/lessons/alif/alif_word_faas.jpg',
+          },
+          {
+            'word': 'رَأْس',
+            'position': '',
+            'audio': 'audio/stories/alif_word_ras_explain.mp3',
+            'image': 'assets/images/lessons/alif/alif_scene_ras.jpg',
+          },
+        ],
+      },
+    ];
+  }
 
   // Sub-example index per haraka page
   final Map<int, int> _exampleIndex = {0: 0, 1: 0, 2: 0, 3: 0};

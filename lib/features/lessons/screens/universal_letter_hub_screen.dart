@@ -7,7 +7,6 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/screens/lesson_sequence_screen.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
 
@@ -329,19 +328,11 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                     height: isTablet ? 74 : 64,
                     child: ElevatedButton.icon(
                       onPressed: () {
-                        if (letter.letter == 'ب') {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const BaaLessonScreen(),
-                            ),
-                          );
-                        } else {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const LessonSequenceScreen(),
-                            ),
-                          );
-                        }
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const LessonSequenceScreen(),
+                          ),
+                        );
                       },
                       icon: const Icon(Icons.play_circle_fill_rounded, size: 34),
                       label: Text(
