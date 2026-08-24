@@ -11,6 +11,7 @@ import 'package:faseeh_kids/features/onboarding/screens/name_input_screen.dart';
 
 // ─── Home / Oasis Map ───
 import 'package:faseeh_kids/features/home/screens/oasis_map_screen.dart';
+import 'package:faseeh_kids/features/home/screens/luxury_oasis_showcase_screen.dart';
 
 // ─── Lessons ───
 import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
@@ -206,6 +207,14 @@ class AppRouter {
         pageBuilder: (context, state) => _slideTransition(
           state: state,
           child: const OasisMapScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/luxury_oasis',
+        name: 'luxuryOasis',
+        pageBuilder: (context, state) => _scaleTransition(
+          state: state,
+          child: const LuxuryOasisShowcaseScreen(),
         ),
       ),
 

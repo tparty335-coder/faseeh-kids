@@ -222,6 +222,52 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                   ).animate().slideY(begin: -1.0, end: 0, duration: 500.ms),
                 ),
 
+                // Floating Luxury Map Preview Badge
+                Positioned(
+                  top: 72,
+                  left: 16,
+                  child: GestureDetector(
+                    onTap: () => context.push('/luxury_oasis'),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFF0F172A), Color(0xFF1E293B)],
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: const Color(0xFFFFD54F), width: 1.5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFFFFD54F).withValues(alpha: 0.35),
+                            blurRadius: 12,
+                            spreadRadius: 1,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Icon(Icons.auto_awesome, color: Color(0xFFFFD54F), size: 18),
+                          SizedBox(width: 6),
+                          Text(
+                            'المعاينة الفاخرة 🌙',
+                            style: TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFFFFE082),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(
+                        begin: const Offset(0.97, 0.97),
+                        end: const Offset(1.03, 1.03),
+                        duration: 2000.ms,
+                      ),
+                ),
+
                 // Bottom Navigation Bar
                 Positioned(
                   bottom: 0,
