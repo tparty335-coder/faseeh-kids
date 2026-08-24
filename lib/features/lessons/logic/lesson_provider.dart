@@ -41,6 +41,10 @@ class LessonNotifier extends StateNotifier<LessonState> {
   void completeCurrentActivity() {
     state = state.copyWith(completedActivities: state.completedActivities + 1);
   }
+
+  void completeLesson() {
+    state = state.copyWith(completedActivities: LessonActivity.values.length);
+  }
   
   void nextActivity() {
     int nextIndex = state.currentActivity.index + 1;

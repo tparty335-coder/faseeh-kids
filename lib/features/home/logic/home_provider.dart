@@ -19,10 +19,13 @@ class ProgressNotifier extends Notifier<List<String>> {
     final box = Hive.box(AppConstants.lessonProgressBox);
     final stored = box.get(_hiveKey);
     if (stored != null && stored is List) {
-      return List<String>.from(stored);
+      final list = List<String>.from(stored);
+      if (!list.contains('أ')) list.insert(0, 'أ');
+      if (!list.contains('ب')) list.add('ب');
+      return list;
     }
-    // First launch: unlock only the first letter
-    return [arabicLetters.first.letter];
+    // Default unlocked letters: 'أ' and 'ب'
+    return ['أ', 'ب'];
   }
 
   /// Unlock the next letter after completing a lesson
