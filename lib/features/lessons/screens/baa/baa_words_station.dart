@@ -122,7 +122,7 @@ class _BaaWordsStationState extends State<BaaWordsStation> {
                     border: Border.all(color: Colors.white, width: isSelected ? 3.5 : 2),
                     boxShadow: [
                       BoxShadow(
-                        color: color.withOpacity(0.4),
+                        color: color.withValues(alpha: 0.4),
                         blurRadius: isSelected ? 12 : 6,
                         offset: const Offset(0, 3),
                       ),
@@ -166,7 +166,7 @@ class _BaaWordsStationState extends State<BaaWordsStation> {
                 icon: const Icon(Icons.arrow_back_ios_new, size: 18),
                 label: const Text('السابق', style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.9),
+                  backgroundColor: Colors.white.withValues(alpha: 0.9),
                   foregroundColor: Colors.brown.shade800,
                   side: BorderSide(color: Colors.brown.shade400, width: 2),
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

@@ -97,7 +97,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
           child: Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.92),
+              color: Colors.white.withValues(alpha: 0.92),
               borderRadius: BorderRadius.circular(24),
               border: Border.all(color: const Color(0xFF81C784), width: 3),
               boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10)],
@@ -147,8 +147,8 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: Colors.amber.withOpacity(0.6), width: 3),
-                color: Colors.amber.withOpacity(0.15),
+                border: Border.all(color: Colors.amber.withValues(alpha: 0.6), width: 3),
+                color: Colors.amber.withValues(alpha: 0.15),
               ),
               child: const Icon(Icons.touch_app_rounded, color: Colors.amber, size: 36),
             ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(begin: const Offset(0.9, 0.9), end: const Offset(1.1, 1.1)),
@@ -193,7 +193,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                 icon: const Icon(Icons.arrow_back_ios_new, size: 18),
                 label: const Text('السابق', style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.9),
+                  backgroundColor: Colors.white.withValues(alpha: 0.9),
                   foregroundColor: Colors.brown.shade800,
                   side: BorderSide(color: Colors.brown.shade400, width: 2),
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

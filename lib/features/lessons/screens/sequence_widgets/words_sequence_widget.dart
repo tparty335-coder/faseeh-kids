@@ -151,7 +151,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'َ',
       'color': Color(0xFFD32F2F),
       'image': 'baa_words.jpg',
-      'audio': 'audio/word_baqara.mp3',
+      'audio': 'audio/letters/words/baa_word.mp3',
       'emoji': '🐄',
     },
     {
@@ -160,7 +160,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'َا',
       'color': Color(0xFFEF6C00),
       'image': 'baa_madd.jpg',
-      'audio': 'audio/lessons/baa/short/baa_4.mp3',
+      'audio': 'audio/letters/words/baa_word.mp3',
       'emoji': '🚪',
     },
     {
@@ -169,7 +169,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ِ',
       'color': Color(0xFF2E7D32),
       'image': 'baa_sounds.jpg',
-      'audio': 'audio/lessons/baa/short/baa_13.mp3',
+      'audio': 'audio/letters/words/baa_word4.mp3',
       'emoji': '🍉',
     },
     {
@@ -178,7 +178,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ِ',
       'color': Color(0xFF1565C0),
       'image': 'baa_drag_words.jpg',
-      'audio': 'audio/lessons/baa/short/baa_90.mp3',
+      'audio': 'audio/letters/short_vowels/baa_kasra.mp3',
       'emoji': '👧',
     },
     {
@@ -187,7 +187,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ُو',
       'color': Color(0xFF8E24AA),
       'image': 'baa_bee.jpg',
-      'audio': 'audio/lessons/baa/short/baa_49.mp3',
+      'audio': 'audio/letters/words/baa_word2.mp3',
       'emoji': '🌾',
     },
     {
@@ -196,7 +196,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ِي',
       'color': Color(0xFF00897B),
       'image': 'baa_words.jpg',
-      'audio': 'audio/lessons/baa/medium/baa_46.mp3',
+      'audio': 'audio/letters/words/baa_word3.mp3',
       'emoji': '🩺',
     },
     {
@@ -205,7 +205,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ْ',
       'color': Color(0xFF5D4037),
       'image': 'baa_circus.jpg',
-      'audio': 'audio/lessons/baa/short/baa_15.mp3',
+      'audio': 'audio/letters/words/baa_word3.mp3',
       'emoji': '🪢',
     },
   ];

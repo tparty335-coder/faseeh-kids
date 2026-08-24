@@ -133,7 +133,7 @@ class _BaaWritingStationState extends State<BaaWritingStation> {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                   decoration: BoxDecoration(
-                    color: isSelected ? const Color(0xFFF57C00) : Colors.white.withOpacity(0.9),
+                    color: isSelected ? const Color(0xFFF57C00) : Colors.white.withValues(alpha: 0.9),
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: const Color(0xFFF57C00), width: 2),
                   ),
@@ -160,7 +160,7 @@ class _BaaWritingStationState extends State<BaaWritingStation> {
           bottom: 90,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
               borderRadius: BorderRadius.circular(24),
               border: Border.all(color: const Color(0xFFFFB74D), width: 3),
               boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10)],
@@ -240,7 +240,7 @@ class _BaaWritingStationState extends State<BaaWritingStation> {
                 icon: const Icon(Icons.arrow_back_ios_new, size: 18),
                 label: const Text('السابق', style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
                 style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.9),
+                  backgroundColor: Colors.white.withValues(alpha: 0.9),
                   foregroundColor: Colors.brown.shade800,
                   side: BorderSide(color: Colors.brown.shade400, width: 2),
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

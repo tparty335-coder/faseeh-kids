@@ -30,11 +30,46 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
     if (letter == 'ب') {
       return [
         {
-          'title': 'قِصَّةُ حَرْفِ الْبَاءِ',
-          'caption': 'بَاءٌ بَطَّةٌ وَضَعَتْ بَيْضَةً خَلْفَ الْبَقَرَةِ جَنْبَ الشَّجَرَةِ',
+          'title': 'الْمَشْهَدُ الْأَوَّلُ — تَعَرَّفْ عَلَى الْحَرْفِ',
+          'caption': 'حَرْفُ الْبَاءِ — صَوْتُهُ (بَ) مِثْلُ: بَطَّة وَبَاب وَبَقَرَة',
           'image': 'assets/images/lessons/baa/baa_story.jpg',
-          'audio': 'audio/lessons/baa/long/baa_1.mp3',
+          'audio': 'audio/letters/core/baa_name.mp3',
           'isInteractive': false,
+        },
+        {
+          'title': 'الْمَشْهَدُ الثَّانِي — الْبَاءُ فِي أَوَّلِ الْكَلِمَةِ',
+          'caption': 'يَأْتِي حَرْفُ الْبَاءِ فِي أَوَّلِ الْكَلِمَةِ — مِثَالٌ: بَقَرَة',
+          'image': 'assets/images/lessons/baa/baa_words.jpg',
+          'audio': 'audio/letters/core/baa_pos_start.mp3',
+          'isInteractive': false,
+        },
+        {
+          'title': 'الْمَشْهَدُ الثَّالِثُ — الْبَاءُ فِي وَسَطِ الْكَلِمَةِ',
+          'caption': 'يَأْتِي حَرْفُ الْبَاءِ فِي وَسَطِ الْكَلِمَةِ — مِثَالٌ: ثُعْبَان',
+          'image': 'assets/images/lessons/baa/baa_fishing.jpg',
+          'audio': 'audio/letters/core/baa_pos_middle.mp3',
+          'isInteractive': false,
+        },
+        {
+          'title': 'الْمَشْهَدُ الرَّابِعُ — الْبَاءُ فِي آخِرِ الْكَلِمَةِ',
+          'caption': 'يَأْتِي حَرْفُ الْبَاءِ فِي آخِرِ الْكَلِمَةِ — مِثَالٌ: بَاب',
+          'image': 'assets/images/lessons/baa/baa_madd.jpg',
+          'audio': 'audio/letters/core/baa_pos_end.mp3',
+          'isInteractive': false,
+        },
+        {
+          'title': 'الْمَشْهَدُ الْخَامِسُ — جُمْلَةُ الْحَرْفِ',
+          'caption': 'اسْتَمِعْ إِلَى جُمْلَةِ حَرْفِ الْبَاءِ وَأَعِدْ تَرْدِيدَهَا',
+          'image': 'assets/images/lessons/baa/baa_bee.jpg',
+          'audio': 'audio/letters/phrases/baa_sentence.mp3',
+          'isInteractive': false,
+        },
+        {
+          'title': 'سُؤَالُ الْفَهْمِ — أَيْنَ حَرْفُ الْبَاءِ؟',
+          'caption': 'اضْغَطْ عَلَى الصُّورَةِ الَّتِي تَبْدَأُ بِحَرْفِ الْبَاءِ!',
+          'image': 'assets/images/lessons/baa/baa_words.jpg',
+          'audio': 'audio/letters/phrases/baa_fatha_demo.mp3',
+          'isInteractive': true,
         },
       ];
     }

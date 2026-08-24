@@ -37,9 +37,9 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'id': 'madd_intro',
           'label': 'تَعْرِيفُ الْمَدِّ وَأَنْوَاعُهُ',
           'color': const Color(0xFF6A1B9A),
-          'title': 'الْحَرَكَاتُ الطَّوِيلَةُ (الْمُدُودُ)',
-          'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
-          'audioFile': 'audio/stories/alif_mudud_intro.mp3',
+          'title': 'الْحَرَكَاتُ الطَّوِيلَةُ مَعَ حَرْفِ الْبَاءِ',
+          'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
+          'audioFile': 'audio/letters/long_vowels/baa_madd_demo.mp3',
         },
         {
           'type': 'example',
@@ -49,7 +49,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'color': const Color(0xFFD32F2F),
           'explanation': 'فَتْحَةٌ يَلِيهَا أَلِفٌ مِثْلُ: بَاب',
           'exampleWord': 'بَاب',
-          'audioFile': 'audio/lessons/baa/short/baa_4.mp3',
+          'audioFile': 'audio/letters/words/baa_word.mp3',
           'imageFile': 'assets/images/lessons/baa/baa_madd.jpg',
         },
         {
@@ -60,7 +60,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'color': const Color(0xFFF57C00),
           'explanation': 'ضَمَّةٌ يَلِيهَا وَاوٌ مِثْلُ: حُبُوب',
           'exampleWord': 'حُبُوب',
-          'audioFile': 'audio/lessons/baa/short/baa_49.mp3',
+          'audioFile': 'audio/letters/words/baa_word2.mp3',
           'imageFile': 'assets/images/lessons/baa/baa_bee.jpg',
         },
         {
@@ -71,7 +71,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'color': const Color(0xFF1976D2),
           'explanation': 'كَسْرَةٌ يَلِيهَا يَاءٌ مِثْلُ: طَبِيب',
           'exampleWord': 'طَبِيب',
-          'audioFile': 'audio/lessons/baa/medium/baa_46.mp3',
+          'audioFile': 'audio/letters/words/baa_word3.mp3',
           'imageFile': 'assets/images/lessons/baa/baa_words.jpg',
         },
       ];
