@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -194,10 +194,8 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
     final rd = _rounds[_round];
     final card = rd.cards[cardIdx];
 
-    // Always speak the word that was dragged
-    await _playWordAudio(card.audioPath);
-
     if (card.isCorrect) {
+      await _playWordAudio(card.audioPath); // Play ONLY when correct word is dropped
       setState(() {
         _roundDone = true;
         _score++;
@@ -280,6 +278,30 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
             width: 175 * scaleX,
             height: 580 * scaleY,
             child: Container(color: Colors.white),
+          ),
+          // Top bar text mask (blue to match top bar)
+          Positioned(
+            left: ox + 160 * scaleX,
+            top: oy,
+            width: 800 * scaleX,
+            height: 45 * scaleY,
+            child: Container(color: const Color(0xFFA96428)),
+          ),
+          // Train mask (blue background)
+          Positioned(
+            right: ox,
+            bottom: oy,
+            width: 450 * scaleX,
+            height: 115 * scaleY,
+            child: Container(color: const Color(0xFF58AED7)),
+          ),
+          // Hand mask (blue background)
+          Positioned(
+            left: ox,
+            bottom: oy,
+            width: 250 * scaleX,
+            height: 150 * scaleY,
+            child: Container(color: const Color(0xFF58AED7)),
           ),
           // Drop target zone
           _buildDropTarget(rd, ox, oy, scaleX, scaleY),
@@ -406,8 +428,6 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
     final isHint = _showCorrectAnswer && card.isCorrect;
 
     Widget face = GestureDetector(
-      // Tap the card to HEAR the word (even without dragging)
-      onTap: () => _playWordAudio(card.audioPath),
       child: Container(
         width: cardW,
         height: cardH,
@@ -457,7 +477,6 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
         : Draggable<int>(
             data: i,
             maxSimultaneousDrags: 1,
-            onDragStarted: () => _playWordAudio(card.audioPath),
             feedback: Material(
               color: Colors.transparent,
               child: Opacity(
