@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -120,7 +120,11 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
   }
 
   Future<void> _playInstruction() =>
-      AudioService.instance.playAsset('audio/stories/alif_mudud_intro.mp3', channel: AudioChannel.voice);
+      AudioService.instance.playAsset(
+        !_isWordSelected 
+          ? 'audio/instructions/coloring_madd_instruction.mp3'
+          : 'audio/instructions/coloring_paint_instruction.mp3', 
+        channel: AudioChannel.voice);
   Future<void> _playCorrect() =>
       AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
   Future<void> _playWrong() =>
