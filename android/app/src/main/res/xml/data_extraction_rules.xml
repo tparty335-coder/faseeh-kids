@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Preserve user learning progress, unlocked letters, stars, and preferences -->
+        <include domain="database" path="." />
+        <include domain="sharedpref" path="." />
+        <include domain="file" path="hive/" />
+        <include domain="file" path="app_flutter/" />
+        <!-- Exclude temporary and cache files -->
+        <exclude domain="root" path="cache/" />
+        <exclude domain="file" path="cache/" />
+    </cloud-backup>
+    <device-to-device-transfer>
+        <!-- Seamless migration when upgrading/changing device -->
+        <include domain="database" path="." />
+        <include domain="sharedpref" path="." />
+        <include domain="file" path="hive/" />
+        <include domain="file" path="app_flutter/" />
+        <exclude domain="root" path="cache/" />
+        <exclude domain="file" path="cache/" />
+    </device-to-device-transfer>
+</data-extraction-rules>

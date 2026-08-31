@@ -1,0 +1,91 @@
+assets/audio/instructions/alif_trace_step_01.mp3  ===>  كتاب
+assets/audio/instructions/alif_trace_step_02.mp3  ===>  تفاحه
+assets/audio/instructions/alif_trace_step_03.mp3  ===>  باب
+assets/audio/instructions/alif_trace_step_04.mp3  ===>  زرا
+assets/audio/instructions/alif_trace_step_05.mp3  ===>  حصان
+assets/audio/instructions/alif_trace_step_06.mp3  ===>  الاولى
+assets/audio/instructions/alif_trace_step_07.mp3  ===>  اهرام
+assets/audio/instructions/alif_trace_step_08.mp3  ===>  امال
+assets/audio/instructions/alif_trace_step_09.mp3  ===>  ‏face
+assets/audio/instructions/alif_trace_step_10.mp3  ===>  امي
+assets/audio/instructions/alif_trace_step_11.mp3  ===>  رقص
+assets/audio/instructions/alif_trace_step_12.mp3  ===>  اذن
+assets/audio/instructions/alif_trace_step_13.mp3  ===>  ايناس
+assets/audio/instructions/alif_trace_step_14.mp3  ===>  قرا
+assets/audio/instructions/alif_trace_step_15.mp3  ===>  اب
+assets/audio/instructions/alif_trace_step_16.mp3  ===>  سال
+assets/audio/instructions/alif_trace_step_17.mp3  ===>  [غير منطوق أو غير واضح / Non-verbal SFX]
+assets/audio/instructions/alif_trace_step_18.mp3  ===>  [غير منطوق أو غير واضح / Non-verbal SFX]
+assets/audio/instructions/alif_trace_step_19.mp3  ===>  ارن
+assets/audio/instructions/alif_trace_step_20.mp3  ===>  اش
+assets/audio/instructions/alif_words_intro.mp3  ===>  اجابه خاطئه الاجابه الصحيحه هي ايناس
+assets/audio/letters/words/alif_word.mp3  ===>  [غير منطوق أو غير واضح / Non-verbal SFX]
+assets/audio/letters/words/alif_word2.mp3  ===>  انظر ولاح
+assets/audio/letters/words/alif_word3.mp3  ===>  ايناس
+assets/audio/letters/words/alif_word4.mp3  ===>  الف كسره اي اب
+assets/audio/letters/words/alif_word_cd_1.mp3  ===>  كتاب
+assets/audio/letters/words/alif_word_cd_10.mp3  ===>  امي
+assets/audio/letters/words/alif_word_cd_11.mp3  ===>  رقص
+assets/audio/letters/words/alif_word_cd_12.mp3  ===>  اذن
+assets/audio/letters/words/alif_word_cd_13.mp3  ===>  ايناس
+assets/audio/letters/words/alif_word_cd_14.mp3  ===>  قرا
+assets/audio/letters/words/alif_word_cd_15.mp3  ===>  اب
+assets/audio/letters/words/alif_word_cd_16.mp3  ===>  سال
+assets/audio/letters/words/alif_word_cd_2.mp3  ===>  تفاحه
+assets/audio/letters/words/alif_word_cd_3.mp3  ===>  باب
+assets/audio/letters/words/alif_word_cd_4.mp3  ===>  زرا
+assets/audio/letters/words/alif_word_cd_5.mp3  ===>  حصان
+assets/audio/letters/words/alif_word_cd_6.mp3  ===>  الاولى
+assets/audio/letters/words/alif_word_cd_7.mp3  ===>  اهرام
+assets/audio/letters/words/alif_word_cd_8.mp3  ===>  امال
+assets/audio/letters/words/alif_word_cd_9.mp3  ===>  ‏face
+assets/audio/letters/words/baa_word_baab.mp3  ===>  باب
+assets/audio/letters/words/baa_word_baqara.mp3  ===>  بقره
+assets/audio/letters/words/baa_word_bint.mp3  ===>  بنت
+assets/audio/letters/words/baa_word_huboob.mp3  ===>  حبوب
+assets/audio/letters/words/baa_word_kalb.mp3  ===>  [خطأ: Decoding failed. ffmpeg returned error code: 3199971767
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 8.1.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 16.1.0 (Rev2, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
+  libavutil      60. 26.102 / 60. 26.102
+  libavcodec     62. 28.102 / 62. 28.102
+  libavformat    62. 12.102 / 62. 12.102
+  libavdevice    62.  3.102 / 62.  3.102
+  libavfilter    11. 14.102 / 11. 14.102
+  libswscale      9.  5.102 /  9.  5.102
+  libswresample   6.  3.102 /  6.  3.102
+[in#0 @ 000001c775930a00] Format mp3 detected only with low score of 1, misdetection possible!
+[in#0 @ 000001c775930a00] Failed to find two consecutive MPEG audio frames.
+[in#0 @ 000001c7759b1040] Error opening input: Invalid data found when processing input
+Error opening input file assets/audio/letters/words/baa_word_kalb.mp3.
+Error opening input files: Invalid data found when processing input
+]
+assets/audio/letters/words/baa_word_kataba.mp3  ===>  يكتب
+assets/audio/letters/words/baa_word_tabeeb.mp3  ===>  طبيب
+assets/audio/letters/words/baa_word_thuban.mp3  ===>  ثعبان
+assets/audio/stories/alif_word_akala.mp3  ===>  اكل
+assets/audio/stories/alif_word_asad.mp3  ===>  اسد
+assets/audio/stories/alif_word_faas.mp3  ===>  وكلمه فا
+assets/audio/stories/alif_word_ibra.mp3  ===>  [غير منطوق أو غير واضح / Non-verbal SFX]
+assets/audio/stories/alif_word_inas.mp3  ===>  ايناس
+assets/audio/stories/alif_word_qaraa.mp3  ===>  قرا
+assets/audio/stories/alif_word_ras.mp3  ===>  انظر كلمه راس فهنا حرف الالف بدون حركه
+assets/audio/stories/alif_word_ras_explain.mp3  ===>  انظر كلمه راس فهنا حرف الالف بدون حركه
+assets/audio/stories/alif_word_saala.mp3  ===>  سال
+assets/audio/stories/alif_word_taj.mp3  ===>  تاج
+assets/audio/stories/alif_word_udhun.mp3  ===>  اذن
+assets/audio/stories/alif_word_ummi.mp3  ===>  امي
+assets/audio/stories/alif_words_demo.mp3  ===>  اذا ابنائي الاعزاء الحركات القصيره هي الفتحه في كلمه اسد والضمه في كلمه اذن والكسره في كلمه ابره
+assets/audio/stories/alif_words_intro.mp3  ===>  اضغط على الكلمه لتستمع اليها وتشاهد صورتها
+assets/audio/word_ahram.mp3  ===>  اهرام
+assets/audio/word_akala.mp3  ===>  اكل
+assets/audio/word_arnab.mp3  ===>  ارنب
+assets/audio/word_asad.mp3  ===>  اسد
+assets/audio/word_baqara.mp3  ===>  بقره
+assets/audio/word_ibil.mp3  ===>  ابل
+assets/audio/word_qaraa.mp3  ===>  [غير منطوق أو غير واضح / Non-verbal SFX]
+assets/audio/word_saala.mp3  ===>  سال
+assets/audio/word_timsah.mp3  ===>  تمساح

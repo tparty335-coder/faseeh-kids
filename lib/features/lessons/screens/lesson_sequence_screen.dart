@@ -13,6 +13,7 @@ import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/short_vowe
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/long_vowels_sequence_widget.dart';
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/words_sequence_widget.dart';
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/trace_sequence_widget.dart';
+import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
 
 class LessonSequenceScreen extends ConsumerStatefulWidget {
   const LessonSequenceScreen({super.key});
@@ -40,7 +41,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
   }
 
   void _nextPage() {
-    if (_currentPageIndex < 4) {
+    if (_currentPageIndex < 5) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
@@ -269,7 +270,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    '${_currentPageIndex + 1} / 5',
+                    '${_currentPageIndex + 1} / 6',
                     style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 13,
@@ -285,7 +286,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
               preferredSize: const Size.fromHeight(6),
               child: ClipRRect(
                 child: LinearProgressIndicator(
-                  value: (_currentPageIndex + 1) / 5.0,
+                  value: (_currentPageIndex + 1) / 6.0,
                   backgroundColor: Colors.grey.shade200,
                   valueColor: const AlwaysStoppedAnimation<Color>(AppColors.oasisGreen),
                   minHeight: 6,
@@ -322,6 +323,44 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                 isActive: _currentPageIndex == 3,
               ),
               TraceSequenceWidget(onNext: _nextPage, onPrevious: _previousPage, letterChar: letterChar),
+              // ─── 6. محطة ألعاب وأسئلة الحرف (صيد الكلمات) ───
+              Column(
+                children: [
+                  Expanded(child: const GamesActivityScreen()),
+                  Container(
+                    color: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: _previousPage,
+                          icon: const Icon(Icons.arrow_back_ios_rounded, size: 16),
+                          label: const Text('السابق: الكتابة', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: AppColors.primaryDay,
+                            side: const BorderSide(color: AppColors.primaryDay, width: 2),
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                          ),
+                        ),
+                        ElevatedButton.icon(
+                          onPressed: _handleLessonCompleted,
+                          icon: const Icon(Icons.check_circle_rounded, size: 20),
+                          label: const Text('إنهاء الدرس 🎉', style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.oasisGreen,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                            elevation: 4,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

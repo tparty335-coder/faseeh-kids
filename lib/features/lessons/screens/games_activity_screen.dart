@@ -3,12 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
-import 'package:faseeh_kids/features/games/screens/audio_recognition_game.dart';
-import 'package:faseeh_kids/features/games/screens/word_builder_game.dart';
-import 'package:faseeh_kids/features/games/screens/catch_letter_game.dart';
-import 'package:faseeh_kids/features/games/screens/coloring_game.dart';
+import 'package:faseeh_kids/features/games/screens/word_fishing_game.dart';
+import 'package:faseeh_kids/features/games/screens/beehive_game.dart';
+import 'package:faseeh_kids/features/games/screens/circus_game.dart';
+import 'package:faseeh_kids/features/games/screens/words_match_game.dart';
+import 'package:faseeh_kids/features/games/screens/coloring_madd_game.dart';
 
-enum _GameType { audio, word, catch_, coloring }
+enum _GameType { fishing, beehive, circus, words, coloring }
 
 class GamesActivityScreen extends ConsumerStatefulWidget {
   const GamesActivityScreen({super.key});
@@ -22,40 +23,45 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
 
   static const List<_GameCard> _games = [
     _GameCard(
-      type: _GameType.audio,
-      emoji: '🔊',
-      title: 'تمييز الصوت',
-      subtitle: 'استمع واختر الحرف الصحيح',
+      type: _GameType.fishing,
+      emoji: '🎣',
+      title: 'صيد الكلمات',
+      subtitle: 'اضغط على الكلمة التي بها حرف (أ)',
+      gradient: [Color(0xFF0277BD), Color(0xFF29B6F6)],
+    ),
+    _GameCard(
+      type: _GameType.beehive,
+      emoji: '🐝',
+      title: 'خلية الحرف',
+      subtitle: 'اختر حرف الألف بحركته المناسبة',
+      gradient: [Color(0xFFF9A825), Color(0xFFFFD54F)],
+    ),
+    _GameCard(
+      type: _GameType.circus,
+      emoji: '🎪',
+      title: 'السيرك',
+      subtitle: 'اضغط على الصورة التي بها حرف (أ)',
+      gradient: [Color(0xFFC62828), Color(0xFFEF9A9A)],
+    ),
+    _GameCard(
+      type: _GameType.words,
+      emoji: '📖',
+      title: 'لعبة الكلمات',
+      subtitle: 'اضغط على اسم الصورة الصحيح',
       gradient: [Color(0xFF1565C0), Color(0xFF42A5F5)],
-    ),
-    _GameCard(
-      type: _GameType.word,
-      emoji: '🔤',
-      title: 'تركيب الكلمة',
-      subtitle: 'رتّب الحروف لتكوّن كلمة',
-      gradient: [Color(0xFF2E7D32), Color(0xFF66BB6A)],
-    ),
-    _GameCard(
-      type: _GameType.catch_,
-      emoji: '🎯',
-      title: 'صيد الحرف',
-      subtitle: 'اصطد الحرف الصحيح!',
-      gradient: [Color(0xFF6A1B9A), Color(0xFFAB47BC)],
     ),
     _GameCard(
       type: _GameType.coloring,
       emoji: '🎨',
-      title: 'لعبة التلوين',
-      subtitle: 'لوّن حروف المدود',
-      gradient: [Color(0xFFE53935), Color(0xFFEF9A9A)],
+      title: 'التلوين',
+      subtitle: 'اضغط على الكلمة التي بها مد',
+      gradient: [Color(0xFF2E7D32), Color(0xFF66BB6A)],
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    if (_selectedGame != null) {
-      return _buildGameScreen(_selectedGame!);
-    }
+    if (_selectedGame != null) return _buildGameScreen(_selectedGame!);
 
     final size = MediaQuery.sizeOf(context);
     final isTablet = size.width > 600;
@@ -87,9 +93,7 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
               mainAxisSpacing: isTablet ? 20 : 14,
               childAspectRatio: 0.9,
               children: _games.asMap().entries.map((entry) {
-                final i = entry.key;
-                final game = entry.value;
-                return _buildGameTile(game, i, isTablet);
+                return _buildGameTile(entry.value, entry.key, isTablet);
               }).toList(),
             ),
           ),
@@ -142,7 +146,7 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
                 game.subtitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: isTablet ? 14 : 12,
+                  fontSize: isTablet ? 14 : 11,
                   color: Colors.white70,
                   fontFamily: 'Cairo',
                 ),
@@ -160,26 +164,53 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
   Widget _buildGameScreen(_GameType type) {
     return Column(
       children: [
-        // Back to games menu bar
         Container(
-          color: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              )
+            ],
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(
-                icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand),
+              Row(
+                children: [
+                  const Text('🕹️', style: TextStyle(fontSize: 24)),
+                  const SizedBox(width: 8),
+                  Text(
+                    _getGameTitle(type).replaceAll(RegExp(r'^[^\s]+\s'), ''), // Remove emoji
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.desertSand,
+                      fontFamily: 'Cairo',
+                    ),
+                  ),
+                ],
+              ),
+              ElevatedButton.icon(
                 onPressed: () {
                   HapticFeedback.lightImpact();
                   setState(() => _selectedGame = null);
                 },
-              ),
-              Text(
-                _getGameTitle(type),
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.desertSand,
-                  fontFamily: 'Cairo',
+                icon: const Icon(Icons.apps_rounded, size: 20),
+                label: const Text(
+                  'العودة إلى الألعاب',
+                  style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.desertSand,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  elevation: 2,
                 ),
               ),
             ],
@@ -192,28 +223,28 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
 
   String _getGameTitle(_GameType type) {
     switch (type) {
-      case _GameType.audio: return '🔊 تمييز الصوت';
-      case _GameType.word: return '🔤 تركيب الكلمة';
-      case _GameType.catch_: return '🎯 صيد الحرف';
-      case _GameType.coloring: return '🎨 لعبة التلوين';
+      case _GameType.fishing:  return '🎣 صيد الكلمات';
+      case _GameType.beehive:  return '🐝 خلية الحرف';
+      case _GameType.circus:   return '🎪 السيرك';
+      case _GameType.words:    return '📖 لعبة الكلمات';
+      case _GameType.coloring: return '🎨 التلوين';
     }
   }
 
   Widget _buildGame(_GameType type) {
     switch (type) {
-      case _GameType.audio: return const AudioRecognitionGame();
-      case _GameType.word: return const WordBuilderGame();
-      case _GameType.catch_: return const CatchLetterGame();
-      case _GameType.coloring: return const ColoringGame();
+      case _GameType.fishing:  return const WordFishingGame();
+      case _GameType.beehive:  return const BeehiveGame();
+      case _GameType.circus:   return const CircusGame();
+      case _GameType.words:    return const WordsMatchGame();
+      case _GameType.coloring: return const ColoringMaddGame();
     }
   }
 }
 
 class _GameCard {
   final _GameType type;
-  final String emoji;
-  final String title;
-  final String subtitle;
+  final String emoji, title, subtitle;
   final List<Color> gradient;
   const _GameCard({
     required this.type,

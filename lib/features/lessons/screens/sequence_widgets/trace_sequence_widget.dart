@@ -402,11 +402,11 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                 ElevatedButton.icon(
                   onPressed: _nextStep,
                   label: Text(
-                    _currentStep == _steps.length - 1 ? 'إنهاء الدرس 🎉' : 'التالي',
+                    _currentStep == _steps.length - 1 ? 'التالي: ألعاب الحرف 🎮' : 'التالي',
                     style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   icon: Icon(
-                    _currentStep == _steps.length - 1 ? Icons.check_circle_rounded : Icons.arrow_forward_ios_rounded,
+                    _currentStep == _steps.length - 1 ? Icons.videogame_asset_rounded : Icons.arrow_forward_ios_rounded,
                     size: 18,
                   ),
                   style: ElevatedButton.styleFrom(

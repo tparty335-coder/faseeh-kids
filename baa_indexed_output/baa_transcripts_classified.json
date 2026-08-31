@@ -1,0 +1,929 @@
+[
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_11.mp3",
+    "key": "short/baa_11.mp3",
+    "filename": "baa_11.mp3",
+    "size_bytes": 13085,
+    "status": "OK",
+    "exact_text": "صيد الكلمات",
+    "category": "game_instruction"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_12.mp3",
+    "key": "short/baa_12.mp3",
+    "filename": "baa_12.mp3",
+    "size_bytes": 11622,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_13.mp3",
+    "key": "short/baa_13.mp3",
+    "filename": "baa_13.mp3",
+    "size_bytes": 11622,
+    "status": "OK",
+    "exact_text": "اجابه صحي",
+    "category": "praise_correct"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_14.mp3",
+    "key": "short/baa_14.mp3",
+    "filename": "baa_14.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_15.mp3",
+    "key": "short/baa_15.mp3",
+    "filename": "baa_15.mp3",
+    "size_bytes": 15384,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_16.mp3",
+    "key": "short/baa_16.mp3",
+    "filename": "baa_16.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_17.mp3",
+    "key": "short/baa_17.mp3",
+    "filename": "baa_17.mp3",
+    "size_bytes": 15384,
+    "status": "OK",
+    "exact_text": "حاول مره اخرى",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_18.mp3",
+    "key": "short/baa_18.mp3",
+    "filename": "baa_18.mp3",
+    "size_bytes": 6264,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_19.mp3",
+    "key": "short/baa_19.mp3",
+    "filename": "baa_19.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_20.mp3",
+    "key": "short/baa_20.mp3",
+    "filename": "baa_20.mp3",
+    "size_bytes": 9114,
+    "status": "OK",
+    "exact_text": "ممتاز",
+    "category": "praise_correct"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_21.mp3",
+    "key": "short/baa_21.mp3",
+    "filename": "baa_21.mp3",
+    "size_bytes": 15384,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_22.mp3",
+    "key": "short/baa_22.mp3",
+    "filename": "baa_22.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_23.mp3",
+    "key": "short/baa_23.mp3",
+    "filename": "baa_23.mp3",
+    "size_bytes": 18309,
+    "status": "OK",
+    "exact_text": "بو حبو",
+    "category": "example_madd_waw"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_24.mp3",
+    "key": "short/baa_24.mp3",
+    "filename": "baa_24.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_25.mp3",
+    "key": "short/baa_25.mp3",
+    "filename": "baa_25.mp3",
+    "size_bytes": 9532,
+    "status": "OK",
+    "exact_text": "كلمات",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_26.mp3",
+    "key": "short/baa_26.mp3",
+    "filename": "baa_26.mp3",
+    "size_bytes": 8905,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_27.mp3",
+    "key": "short/baa_27.mp3",
+    "filename": "baa_27.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_29.mp3",
+    "key": "short/baa_29.mp3",
+    "filename": "baa_29.mp3",
+    "size_bytes": 7024,
+    "status": "OK",
+    "exact_text": "يكتب",
+    "category": "example_word_kataba"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_3.mp3",
+    "key": "short/baa_3.mp3",
+    "filename": "baa_3.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_30.mp3",
+    "key": "short/baa_30.mp3",
+    "filename": "baa_30.mp3",
+    "size_bytes": 7233,
+    "status": "OK",
+    "exact_text": "ثعبان",
+    "category": "example_word_thuban"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_31.mp3",
+    "key": "short/baa_31.mp3",
+    "filename": "baa_31.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_32.mp3",
+    "key": "short/baa_32.mp3",
+    "filename": "baa_32.mp3",
+    "size_bytes": 4935,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_33.mp3",
+    "key": "short/baa_33.mp3",
+    "filename": "baa_33.mp3",
+    "size_bytes": 5770,
+    "status": "OK",
+    "exact_text": "ط",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_34.mp3",
+    "key": "short/baa_34.mp3",
+    "filename": "baa_34.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_35.mp3",
+    "key": "short/baa_35.mp3",
+    "filename": "baa_35.mp3",
+    "size_bytes": 6397,
+    "status": "OK",
+    "exact_text": "حبو",
+    "category": "example_madd_waw"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_36.mp3",
+    "key": "short/baa_36.mp3",
+    "filename": "baa_36.mp3",
+    "size_bytes": 4558,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_37.mp3",
+    "key": "short/baa_37.mp3",
+    "filename": "baa_37.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_38.mp3",
+    "key": "short/baa_38.mp3",
+    "filename": "baa_38.mp3",
+    "size_bytes": 5770,
+    "status": "OK",
+    "exact_text": "لب",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_39.mp3",
+    "key": "short/baa_39.mp3",
+    "filename": "baa_39.mp3",
+    "size_bytes": 4517,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_4.mp3",
+    "key": "short/baa_4.mp3",
+    "filename": "baa_4.mp3",
+    "size_bytes": 12667,
+    "status": "OK",
+    "exact_text": "باب",
+    "category": "example_madd_alif"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_40.mp3",
+    "key": "short/baa_40.mp3",
+    "filename": "baa_40.mp3",
+    "size_bytes": 8487,
+    "status": "OK",
+    "exact_text": "بر",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_41.mp3",
+    "key": "short/baa_41.mp3",
+    "filename": "baa_41.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_43.mp3",
+    "key": "short/baa_43.mp3",
+    "filename": "baa_43.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_45.mp3",
+    "key": "short/baa_45.mp3",
+    "filename": "baa_45.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_47.mp3",
+    "key": "short/baa_47.mp3",
+    "filename": "baa_47.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_48.mp3",
+    "key": "short/baa_48.mp3",
+    "filename": "baa_48.mp3",
+    "size_bytes": 7233,
+    "status": "OK",
+    "exact_text": "طبي",
+    "category": "example_madd_yaa"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_49.mp3",
+    "key": "short/baa_49.mp3",
+    "filename": "baa_49.mp3",
+    "size_bytes": 9950,
+    "status": "OK",
+    "exact_text": "حبوب",
+    "category": "example_madd_waw"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_5.mp3",
+    "key": "short/baa_5.mp3",
+    "filename": "baa_5.mp3",
+    "size_bytes": 19145,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_50.mp3",
+    "key": "short/baa_50.mp3",
+    "filename": "baa_50.mp3",
+    "size_bytes": 10577,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_55.mp3",
+    "key": "short/baa_55.mp3",
+    "filename": "baa_55.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_59.mp3",
+    "key": "short/baa_59.mp3",
+    "filename": "baa_59.mp3",
+    "size_bytes": 16480,
+    "status": "OK",
+    "exact_text": "وفي الحقل",
+    "category": "story_narration_3"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_61.mp3",
+    "key": "short/baa_61.mp3",
+    "filename": "baa_61.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_63.mp3",
+    "key": "short/baa_63.mp3",
+    "filename": "baa_63.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_65.mp3",
+    "key": "short/baa_65.mp3",
+    "filename": "baa_65.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_66.mp3",
+    "key": "short/baa_66.mp3",
+    "filename": "baa_66.mp3",
+    "size_bytes": 4935,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_68.mp3",
+    "key": "short/baa_68.mp3",
+    "filename": "baa_68.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_69.mp3",
+    "key": "short/baa_69.mp3",
+    "filename": "baa_69.mp3",
+    "size_bytes": 9114,
+    "status": "OK",
+    "exact_text": "ممتاز",
+    "category": "praise_correct"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_70.mp3",
+    "key": "short/baa_70.mp3",
+    "filename": "baa_70.mp3",
+    "size_bytes": 10368,
+    "status": "OK",
+    "exact_text": "لعبه",
+    "category": "game_instruction"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_77.mp3",
+    "key": "short/baa_77.mp3",
+    "filename": "baa_77.mp3",
+    "size_bytes": 14966,
+    "status": "OK",
+    "exact_text": "يكتب حرف الباء هكذا",
+    "category": "writing_instruction"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_78.mp3",
+    "key": "short/baa_78.mp3",
+    "filename": "baa_78.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_83.mp3",
+    "key": "short/baa_83.mp3",
+    "filename": "baa_83.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_84.mp3",
+    "key": "short/baa_84.mp3",
+    "filename": "baa_84.mp3",
+    "size_bytes": 11413,
+    "status": "OK",
+    "exact_text": "يكتب",
+    "category": "example_word_kataba"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_85.mp3",
+    "key": "short/baa_85.mp3",
+    "filename": "baa_85.mp3",
+    "size_bytes": 14339,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_89.mp3",
+    "key": "short/baa_89.mp3",
+    "filename": "baa_89.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_9.mp3",
+    "key": "short/baa_9.mp3",
+    "filename": "baa_9.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_90.mp3",
+    "key": "short/baa_90.mp3",
+    "filename": "baa_90.mp3",
+    "size_bytes": 9532,
+    "status": "OK",
+    "exact_text": "بنت",
+    "category": "example_word_bint"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_91.mp3",
+    "key": "short/baa_91.mp3",
+    "filename": "baa_91.mp3",
+    "size_bytes": 18518,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_92.mp3",
+    "key": "short/baa_92.mp3",
+    "filename": "baa_92.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_94.mp3",
+    "key": "short/baa_94.mp3",
+    "filename": "baa_94.mp3",
+    "size_bytes": 1566,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_2.wav",
+    "key": "short/baa_2.wav",
+    "filename": "baa_2.wav",
+    "size_bytes": 18984,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_60.wav",
+    "key": "short/baa_60.wav",
+    "filename": "baa_60.wav",
+    "size_bytes": 44,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\short\\baa_76.wav",
+    "key": "short/baa_76.wav",
+    "filename": "baa_76.wav",
+    "size_bytes": 44,
+    "status": "EMPTY",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_28.mp3",
+    "key": "medium/baa_28.mp3",
+    "filename": "baa_28.mp3",
+    "size_bytes": 29385,
+    "status": "OK",
+    "exact_text": "ب فتحه",
+    "category": "rule_fatha"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_42.mp3",
+    "key": "medium/baa_42.mp3",
+    "filename": "baa_42.mp3",
+    "size_bytes": 51746,
+    "status": "OK",
+    "exact_text": "هو المد ثلاثه",
+    "category": "rule_madd_intro"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_44.mp3",
+    "key": "medium/baa_44.mp3",
+    "filename": "baa_44.mp3",
+    "size_bytes": 49447,
+    "status": "OK",
+    "exact_text": "والان ن",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_46.mp3",
+    "key": "medium/baa_46.mp3",
+    "filename": "baa_46.mp3",
+    "size_bytes": 27086,
+    "status": "OK",
+    "exact_text": "طبيب",
+    "category": "example_madd_yaa"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_51.mp3",
+    "key": "medium/baa_51.mp3",
+    "filename": "baa_51.mp3",
+    "size_bytes": 41715,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_52.mp3",
+    "key": "medium/baa_52.mp3",
+    "filename": "baa_52.mp3",
+    "size_bytes": 41715,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_53.mp3",
+    "key": "medium/baa_53.mp3",
+    "filename": "baa_53.mp3",
+    "size_bytes": 41715,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_54.mp3",
+    "key": "medium/baa_54.mp3",
+    "filename": "baa_54.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_56.mp3",
+    "key": "medium/baa_56.mp3",
+    "filename": "baa_56.mp3",
+    "size_bytes": 58851,
+    "status": "OK",
+    "exact_text": "امامك مجموعه من",
+    "category": "activity_instruction"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_57.mp3",
+    "key": "medium/baa_57.mp3",
+    "filename": "baa_57.mp3",
+    "size_bytes": 33381,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_58.mp3",
+    "key": "medium/baa_58.mp3",
+    "filename": "baa_58.mp3",
+    "size_bytes": 20647,
+    "status": "OK",
+    "exact_text": "وياخذ معه",
+    "category": "story_narration_2"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_6.mp3",
+    "key": "medium/baa_6.mp3",
+    "filename": "baa_6.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_62.mp3",
+    "key": "medium/baa_62.mp3",
+    "filename": "baa_62.mp3",
+    "size_bytes": 41715,
+    "status": "OK",
+    "exact_text": "وفي المساء",
+    "category": "story_narration_5"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_64.mp3",
+    "key": "medium/baa_64.mp3",
+    "filename": "baa_64.mp3",
+    "size_bytes": 21026,
+    "status": "OK",
+    "exact_text": "بي طبي",
+    "category": "example_madd_yaa"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_67.mp3",
+    "key": "medium/baa_67.mp3",
+    "filename": "baa_67.mp3",
+    "size_bytes": 32102,
+    "status": "OK",
+    "exact_text": "كلمه",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_7.mp3",
+    "key": "medium/baa_7.mp3",
+    "filename": "baa_7.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_71.mp3",
+    "key": "medium/baa_71.mp3",
+    "filename": "baa_71.mp3",
+    "size_bytes": 26041,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_72.mp3",
+    "key": "medium/baa_72.mp3",
+    "filename": "baa_72.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_73.mp3",
+    "key": "medium/baa_73.mp3",
+    "filename": "baa_73.mp3",
+    "size_bytes": 26041,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_74.mp3",
+    "key": "medium/baa_74.mp3",
+    "filename": "baa_74.mp3",
+    "size_bytes": 26041,
+    "status": "OK",
+    "exact_text": "اجابه خاطئه",
+    "category": "feedback_retry"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_75.mp3",
+    "key": "medium/baa_75.mp3",
+    "filename": "baa_75.mp3",
+    "size_bytes": 34610,
+    "status": "OK",
+    "exact_text": "اما حرف الباء في اخر",
+    "category": "letter_position_end"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_79.mp3",
+    "key": "medium/baa_79.mp3",
+    "filename": "baa_79.mp3",
+    "size_bytes": 37744,
+    "status": "OK",
+    "exact_text": "ياتي حرف الباء في",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_8.mp3",
+    "key": "medium/baa_8.mp3",
+    "filename": "baa_8.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_80.mp3",
+    "key": "medium/baa_80.mp3",
+    "filename": "baa_80.mp3",
+    "size_bytes": 49447,
+    "status": "OK",
+    "exact_text": "اما اذا جاء حرف",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_81.mp3",
+    "key": "medium/baa_81.mp3",
+    "filename": "baa_81.mp3",
+    "size_bytes": 43805,
+    "status": "OK",
+    "exact_text": "ياتي حرف الباء في اخر",
+    "category": "letter_position_end"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_82.mp3",
+    "key": "medium/baa_82.mp3",
+    "filename": "baa_82.mp3",
+    "size_bytes": 43805,
+    "status": "OK",
+    "exact_text": "ياتي حرف الباء في اخر",
+    "category": "letter_position_end"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_86.mp3",
+    "key": "medium/baa_86.mp3",
+    "filename": "baa_86.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_87.mp3",
+    "key": "medium/baa_87.mp3",
+    "filename": "baa_87.mp3",
+    "size_bytes": 42951,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_93.mp3",
+    "key": "medium/baa_93.mp3",
+    "filename": "baa_93.mp3",
+    "size_bytes": 27504,
+    "status": "OK",
+    "exact_text": "باء كسره",
+    "category": "rule_kasra"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\medium\\baa_95.mp3",
+    "key": "medium/baa_95.mp3",
+    "filename": "baa_95.mp3",
+    "size_bytes": 26041,
+    "status": "OK",
+    "exact_text": "باء ضمه",
+    "category": "rule_damma"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\long\\baa_1.mp3",
+    "key": "long/baa_1.mp3",
+    "filename": "baa_1.mp3",
+    "size_bytes": 265037,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\long\\baa_10.mp3",
+    "key": "long/baa_10.mp3",
+    "filename": "baa_10.mp3",
+    "size_bytes": 106499,
+    "status": "OK",
+    "exact_text": "لاحظ ابن الحبيب",
+    "category": "example_word"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\lessons\\baa\\long\\baa_88.wav",
+    "key": "long/baa_88.wav",
+    "filename": "baa_88.wav",
+    "size_bytes": 116187,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_damma_rule.mp3",
+    "key": "audio/baa_damma_rule.mp3",
+    "filename": "baa_damma_rule.mp3",
+    "size_bytes": 28944,
+    "status": "OK",
+    "exact_text": "ضع شفتيك معا ثم افتح وضم وقل",
+    "category": "rule_damma"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_damma_sound.mp3",
+    "key": "audio/baa_damma_sound.mp3",
+    "filename": "baa_damma_sound.mp3",
+    "size_bytes": 10656,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_fatha_rule.mp3",
+    "key": "audio/baa_fatha_rule.mp3",
+    "filename": "baa_fatha_rule.mp3",
+    "size_bytes": 27216,
+    "status": "OK",
+    "exact_text": "ضع شفتيك معا ثم افتح وقلبه",
+    "category": "rule_fatha"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_fatha_sound.mp3",
+    "key": "audio/baa_fatha_sound.mp3",
+    "filename": "baa_fatha_sound.mp3",
+    "size_bytes": 10656,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_intro.mp3",
+    "key": "audio/baa_intro.mp3",
+    "filename": "baa_intro.mp3",
+    "size_bytes": 37440,
+    "status": "OK",
+    "exact_text": "حرف الباء حرف ساكن تضع فيه شفتيك معا ثم تفتحهما",
+    "category": "intro"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_kasra_rule.mp3",
+    "key": "audio/baa_kasra_rule.mp3",
+    "filename": "baa_kasra_rule.mp3",
+    "size_bytes": 29664,
+    "status": "OK",
+    "exact_text": "ضع شفتيك معا في مفتاح وانخفض وقل",
+    "category": "rule_kasra"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\baa_kasra_sound.mp3",
+    "key": "audio/baa_kasra_sound.mp3",
+    "filename": "baa_kasra_sound.mp3",
+    "size_bytes": 10656,
+    "status": "UNTRANSCRIBED",
+    "exact_text": "",
+    "category": "SKIP_EMPTY"
+  },
+  {
+    "file": "D:\\Projects\\faseeh_kids\\assets\\audio\\word_baqara.mp3",
+    "key": "audio/word_baqara.mp3",
+    "filename": "word_baqara.mp3",
+    "size_bytes": 11232,
+    "status": "OK",
+    "exact_text": "بقره",
+    "category": "example_word_baqara"
+  }
+]

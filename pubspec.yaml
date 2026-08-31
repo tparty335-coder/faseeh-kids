@@ -1,5 +1,5 @@
-name: faseeh_kids
-description: "فصيح الصغار - تطبيق تعليم اللغة العربية للأطفال | Arabic Language Learning App for Kids"
+﻿name: faseeh_kids
+description: "ظپطµظٹط­ ط§ظ„طµط؛ط§ط± - طھط·ط¨ظٹظ‚ طھط¹ظ„ظٹظ… ط§ظ„ظ„ط؛ط© ط§ظ„ط¹ط±ط¨ظٹط© ظ„ظ„ط£ط·ظپط§ظ„ | Arabic Language Learning App for Kids"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -12,58 +12,58 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # ─── Core State Management (P0-T005) ───
+  # â”€â”€â”€ Core State Management (P0-T005) â”€â”€â”€
   flutter_riverpod: ^2.4.9
 
-  # ─── Local Database (P0-T006) ───
+  # â”€â”€â”€ Local Database (P0-T006) â”€â”€â”€
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # ─── Navigation (P0-T007) ───
+  # â”€â”€â”€ Navigation (P0-T007) â”€â”€â”€
   go_router: ^13.1.0
 
-  # ─── Audio (P0-T008) ───
+  # â”€â”€â”€ Audio (P0-T008) â”€â”€â”€
   audioplayers: ^5.2.1
 
-  # ─── Typography (P0-T009) ───
+  # â”€â”€â”€ Typography (P0-T009) â”€â”€â”€
   google_fonts: ^6.2.1
 
-  # ─── Animations (P0-T010) ───
+  # â”€â”€â”€ Animations (P0-T010) â”€â”€â”€
   flutter_animate: ^4.2.0
 
-  # ─── Text-to-Speech (P0-T011) ───
+  # â”€â”€â”€ Text-to-Speech (P0-T011) â”€â”€â”€
   flutter_tts: ^4.2.0
 
-  # ─── Celebration Effects (P0-T012) ───
+  # â”€â”€â”€ Celebration Effects (P0-T012) â”€â”€â”€
   confetti: ^0.7.0
 
-  # ─── SVG Support (P0-T013) ───
+  # â”€â”€â”€ SVG Support (P0-T013) â”€â”€â”€
   flutter_svg: ^2.0.9
 
-  # ─── Sharing (P0-T014) ───
+  # â”€â”€â”€ Sharing (P0-T014) â”€â”€â”€
   share_plus: ^10.1.4
 
-  # ─── Path Drawing (P0-T015) ───
+  # â”€â”€â”€ Path Drawing (P0-T015) â”€â”€â”€
   path_drawing: ^1.0.1
 
-  # ─── Internationalization (P0-T016) ───
+  # â”€â”€â”€ Internationalization (P0-T016) â”€â”€â”€
   intl: ^0.20.2
 
-  # ─── Code Generation Annotations (P0-T017) ───
+  # â”€â”€â”€ Code Generation Annotations (P0-T017) â”€â”€â”€
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
 
-  # ─── Firebase Suite (P0-T018 to P0-T022) ───
+  # â”€â”€â”€ Firebase Suite (P0-T018 to P0-T022) â”€â”€â”€
   firebase_core: ^4.13.0
   firebase_auth: ^6.5.7
   cloud_firestore: ^6.8.0
   firebase_analytics: ^12.4.6
   firebase_crashlytics: ^5.2.7
 
-  # ─── Loading Shimmer (P0-T023) ───
+  # â”€â”€â”€ Loading Shimmer (P0-T023) â”€â”€â”€
   shimmer: ^3.0.0
 
-  # ─── Existing Dependencies (kept) ───
+  # â”€â”€â”€ Existing Dependencies (kept) â”€â”€â”€
   cupertino_icons: ^1.0.8
   purchases_flutter: ^10.8.0
 
@@ -72,7 +72,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
-  # ─── Code Generation (P0-T017) ───
+  # â”€â”€â”€ Code Generation (P0-T017) â”€â”€â”€
   freezed: ^2.4.7
   json_serializable: ^6.7.1
   build_runner: ^2.4.8
@@ -80,19 +80,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # ─── Assets (P0-T050) ───
+  # â”€â”€â”€ Assets (P0-T050) â”€â”€â”€
   assets:
-    # Letters — core identity (name, sound, positions)
+    # Letters â€” core identity (name, sound, positions)
     - assets/audio/letters/core/
-    # Letters — short vowels (fatha, kasra, damma, sukoon) = phoneme layer
+    # Letters â€” short vowels (fatha, kasra, damma, sukoon) = phoneme layer
     - assets/audio/letters/short_vowels/
-    # Letters — long vowels / mudud (maad) = blending layer
+    # Letters â€” long vowels / mudud (maad) = blending layer
     - assets/audio/letters/long_vowels/
-    # Letters — vocabulary words per letter
+    # Letters â€” vocabulary words per letter
     - assets/audio/letters/words/
-    # Letters — demo sentences and harakat demonstrations
+    # Letters â€” demo sentences and harakat demonstrations
     - assets/audio/letters/phrases/
     # Narrated stories and exploration audio
+    - assets/audio/
     - assets/audio/stories/
     # Feedback & encouragement sounds (correct, try_again, excellent...)
     - assets/audio/feedback/
@@ -108,6 +109,11 @@ flutter:
     - assets/images/ui/
     - assets/images/lessons/alif/
     - assets/images/lessons/baa/
+    - assets/images/games/fishing/
+    - assets/images/games/beehive/
+    - assets/images/games/circus/
+    - assets/images/games/words/
+    - assets/images/games/coloring/
     - assets/audio/lessons/baa/long/
     - assets/audio/lessons/baa/medium/
     - assets/audio/lessons/baa/short/

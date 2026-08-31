@@ -1,0 +1,212 @@
+{
+  "letter": "ب",
+  "letter_name": "بَاء",
+  "letter_key": "baa",
+  "generated_at": "2026-08-25T23:58:00Z",
+  "modules": {
+    "story": {
+      "title": "قِصَّةُ اَلْفَلَّاحِ وَاَلْبَقَرَةِ",
+      "scenes": [
+        {
+          "scene_index": 1,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_1.png",
+          "audio_file": "audio/stories/baa_story_1.mp3",
+          "transcript": "اَلْفَلَّاحُ رَجُلٌ نَشِيطٌ يَذْهَبُ إِلَى اَلْحَقْلِ مُبَكِّرًا",
+          "is_interactive": false,
+          "is_nasheed": false
+        },
+        {
+          "scene_index": 2,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_2.png",
+          "audio_file": "audio/stories/baa_story_2.mp3",
+          "transcript": "وَيَأْخُذُ مَعَهُ بَقَرَةً وَكَلْبَ حِرَاسَةٍ",
+          "is_interactive": false,
+          "is_nasheed": false
+        },
+        {
+          "scene_index": 3,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_3.png",
+          "audio_file": "audio/stories/baa_story_3.mp3",
+          "transcript": "فِي اَلْحَقْلِ يَعْمَلُ اَلْفَلَّاحُ بِنَشَاطٍ، وَتَأْكُلُ اَلْبَقَرَةُ اَلْبِرْسِيمَ، وَاَلْبَطُّ يَسْبَحُ فِي اَلْمَاءِ",
+          "is_interactive": false,
+          "is_nasheed": false
+        },
+        {
+          "scene_index": 4,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_4.png",
+          "audio_file": "audio/stories/baa_story_4.mp3",
+          "transcript": "مَاذَا نَأْخُذُ مِنَ اَلْبَقَرَةِ؟",
+          "is_interactive": true,
+          "is_nasheed": false
+        },
+        {
+          "scene_index": 5,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_5.png",
+          "audio_file": "audio/stories/baa_story_5.mp3",
+          "transcript": "وَفِي اَلْمَسَاءِ يَعُودُ اَلْفَلَّاحُ إِلَى بَيْتِهِ مَسْرُورًا",
+          "is_interactive": false,
+          "is_nasheed": false
+        },
+        {
+          "scene_index": 6,
+          "background_image": "assets/images/lessons/baa/baa_cd_story_6.png",
+          "audio_file": "audio/stories/baa_story_6.mp3",
+          "transcript": "بَاءٌ بَطَّةٌ وَضَعَتْ بَيْضَةً خَلْفَ اَلْبَقَرَةِ جَنْبَ اَلشَّجَرَةِ",
+          "is_interactive": false,
+          "is_nasheed": true
+        }
+      ]
+    },
+    "short_vowels": {
+      "harakaat": [
+        {
+          "haraka": "fatha",
+          "symbol": "بَ",
+          "rule_audio": "audio/baa_fatha_rule.mp3",
+          "rule_transcript": "ضَعْ شَفَتَيْكَ مَعًا ثُمَّ اِفْتَحْ وَقُلْ: بَ",
+          "examples": [
+            {
+              "word": "بَقَرَة",
+              "position": "start",
+              "audio": "audio/letters/words/baa_word_baqara.mp3",
+              "image": "assets/images/lessons/baa/baa_words.jpg"
+            },
+            {
+              "word": "ثُعْبَان",
+              "position": "middle",
+              "audio": "audio/letters/words/baa_word_thuban.mp3",
+              "image": "assets/images/lessons/baa/baa_fishing.jpg"
+            },
+            {
+              "word": "كَتَبَ",
+              "position": "end",
+              "audio": "audio/letters/words/baa_word_kataba.mp3",
+              "image": "assets/images/lessons/baa/baa_writing.jpg"
+            }
+          ]
+        },
+        {
+          "haraka": "damma",
+          "symbol": "بُ",
+          "rule_audio": "audio/baa_damma_rule.mp3",
+          "rule_transcript": "ضَعْ شَفَتَيْكَ مَعًا ثُمَّ اِفْتَحْ وَضُمَّ وَقُلْ: بُ",
+          "examples": [
+            {
+              "word": "بُرْتُقَالَة",
+              "position": "start",
+              "audio": "audio/letters/words/baa_damma_example_1.mp3",
+              "image": "assets/images/lessons/baa/baa_wheel.jpg"
+            },
+            {
+              "word": "حُبُوب",
+              "position": "middle",
+              "audio": "audio/letters/words/baa_word_huboob.mp3",
+              "image": "assets/images/lessons/baa/baa_circus.jpg"
+            }
+          ]
+        },
+        {
+          "haraka": "kasra",
+          "symbol": "بِ",
+          "rule_audio": "audio/baa_kasra_rule.mp3",
+          "rule_transcript": "ضَعْ شَفَتَيْكَ مَعًا ثُمَّ اِفْتَحْ وَانْخَفِضْ وَقُلْ: بِ",
+          "examples": [
+            {
+              "word": "بِنْت",
+              "position": "start",
+              "audio": "audio/letters/words/baa_word_bint.mp3",
+              "image": "assets/images/lessons/baa/baa_bee.jpg"
+            },
+            {
+              "word": "طَبِيب",
+              "position": "middle",
+              "audio": "audio/letters/words/baa_word_tabeeb.mp3",
+              "image": "assets/images/lessons/baa/baa_story.jpg"
+            }
+          ]
+        },
+        {
+          "haraka": "sukoon",
+          "symbol": "بْ",
+          "rule_audio": "audio/letters/short_vowels/baa_sukoon.mp3",
+          "rule_transcript": "حَرْفُ اَلْبَاءِ سَاكِنٌ: بْ",
+          "examples": [
+            {
+              "word": "كَلْب",
+              "position": "end",
+              "audio": "audio/letters/words/baa_word_kalb.mp3",
+              "image": "assets/images/lessons/baa/baa_cd_story_2.png"
+            }
+          ]
+        }
+      ]
+    },
+    "long_vowels": {
+      "mudud": [
+        {
+          "madd_id": "madd_alif",
+          "symbol": "بَا",
+          "example_word": "بَاب",
+          "audio": "audio/letters/long_vowels/baa_madd_alif.mp3",
+          "image": "assets/images/lessons/baa/baa_madd.jpg"
+        },
+        {
+          "madd_id": "madd_waw",
+          "symbol": "بُو",
+          "example_word": "حُبُوب",
+          "audio": "audio/letters/long_vowels/baa_madd_waw.mp3",
+          "image": "assets/images/lessons/baa/baa_circus.jpg"
+        },
+        {
+          "madd_id": "madd_yaa",
+          "symbol": "بِي",
+          "example_word": "طَبِيب",
+          "audio": "audio/letters/long_vowels/baa_madd_yaa.mp3",
+          "image": "assets/images/lessons/baa/baa_sounds.jpg"
+        }
+      ]
+    },
+    "vocabulary": [
+      {
+        "word": "بَقَرَة",
+        "position": "أول",
+        "audio": "audio/letters/words/baa_word_baqara.mp3"
+      },
+      {
+        "word": "بَاب",
+        "position": "أول",
+        "audio": "audio/letters/words/baa_word_baab.mp3"
+      },
+      {
+        "word": "بِنْت",
+        "position": "أول",
+        "audio": "audio/letters/words/baa_word_bint.mp3"
+      },
+      {
+        "word": "ثُعْبَان",
+        "position": "وسط",
+        "audio": "audio/letters/words/baa_word_thuban.mp3"
+      },
+      {
+        "word": "حُبُوب",
+        "position": "وسط",
+        "audio": "audio/letters/words/baa_word_huboob.mp3"
+      },
+      {
+        "word": "طَبِيب",
+        "position": "وسط",
+        "audio": "audio/letters/words/baa_word_tabeeb.mp3"
+      },
+      {
+        "word": "كَتَبَ",
+        "position": "آخر",
+        "audio": "audio/letters/words/baa_word_kataba.mp3"
+      },
+      {
+        "word": "كَلْب",
+        "position": "آخر",
+        "audio": "audio/letters/words/baa_word_kalb.mp3"
+      }
+    ]
+  }
+}

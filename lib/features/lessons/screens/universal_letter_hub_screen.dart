@@ -9,6 +9,7 @@ import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
+import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
 
 // ═══ UPGRADED: universal_letter_hub_screen.dart ═══
 
@@ -318,44 +319,101 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                       duration: 1200.ms,
                     ),
 
-                SizedBox(height: isTablet ? 32 : 20),
+                SizedBox(height: isTablet ? 24 : 14),
 
-                // ─── 5. Big Start Lesson Button at the Bottom ───
+                // ─── 5. Action Buttons at the Bottom ───
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: isTablet ? 60 : 24, vertical: 12),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: isTablet ? 74 : 64,
-                    child: ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const LessonSequenceScreen(),
+                  padding: EdgeInsets.symmetric(horizontal: isTablet ? 60 : 20, vertical: 8),
+                  child: Column(
+                    children: [
+                      // زر بدء الدرس المتسلسل
+                      SizedBox(
+                        width: double.infinity,
+                        height: isTablet ? 66 : 56,
+                        child: ElevatedButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const LessonSequenceScreen(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.play_circle_fill_rounded, size: 30),
+                          label: Text(
+                            'ابدأ درس حرف (${letter.letter})',
+                            style: TextStyle(
+                              fontSize: isTablet ? 24 : 20,
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Cairo',
+                            ),
                           ),
-                        );
-                      },
-                      icon: const Icon(Icons.play_circle_fill_rounded, size: 34),
-                      label: Text(
-                        'ابدأ درس حرف (${letter.letter})',
-                        style: TextStyle(
-                          fontSize: isTablet ? 26 : 22,
-                          fontWeight: FontWeight.w900,
-                          fontFamily: 'Cairo',
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.primaryDay,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            elevation: 5,
+                          ),
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.primaryDay,
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(22),
+                      const SizedBox(height: 10),
+                      // زر ألعاب وأسئلة الحرف المباشر
+                      SizedBox(
+                        width: double.infinity,
+                        height: isTablet ? 60 : 50,
+                        child: ElevatedButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Scaffold(
+                                  backgroundColor: AppColors.backgroundDay,
+                                  appBar: AppBar(
+                                    title: Text(
+                                      'ألعاب وأسئلة حرف (${letter.letter})',
+                                      style: const TextStyle(
+                                        fontFamily: 'Cairo',
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.textPrimaryDay,
+                                      ),
+                                    ),
+                                    centerTitle: true,
+                                    backgroundColor: Colors.transparent,
+                                    elevation: 0,
+                                    leading: IconButton(
+                                      icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand),
+                                      onPressed: () => Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                  body: const GamesActivityScreen(),
+                                ),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.videogame_asset_rounded, size: 26),
+                          label: const Text(
+                            'ألعاب وأسئلة الحرف 🎮',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Cairo',
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.oasisGreen,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18),
+                            ),
+                            elevation: 4,
+                          ),
                         ),
-                        elevation: 6,
                       ),
-                    ).animate().shimmer(delay: 1.seconds, duration: 2.seconds),
+                    ],
                   ),
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 6),
               ],
             ),
           ),
