@@ -183,7 +183,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
       channel: AudioChannel.voice);
 
   Future<void> _playWrong() => AudioService.instance
-      .playAsset('audio/wrong.mp3', channel: AudioChannel.sfx);
+      .playAsset('audio/instructions/try_again.mp3', channel: AudioChannel.sfx);
 
   Future<void> _playWordAudio(String path) =>
       AudioService.instance.playAsset(path, channel: AudioChannel.voice);
@@ -387,7 +387,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
                       _droppedWord!,
                       style: TextStyle(
                         fontFamily: 'Cairo',
-                        fontSize: 26 * scaleX,
+                        fontSize: 42 * scaleX,
                         fontWeight: FontWeight.bold,
                         color: _showCorrectAnswer
                             ? Colors.orange.shade800
@@ -454,7 +454,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
             card.word,
             style: TextStyle(
               fontFamily: 'Cairo',
-              fontSize: 22 * scaleX,
+              fontSize: 38 * scaleX,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -503,7 +503,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
                         card.word,
                         style: TextStyle(
                           fontFamily: 'Cairo',
-                          fontSize: 24 * scaleX,
+                          fontSize: 40 * scaleX,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),

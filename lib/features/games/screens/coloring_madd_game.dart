@@ -128,7 +128,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
   Future<void> _playCorrect() =>
       AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
   Future<void> _playWrong() =>
-      AudioService.instance.playAsset('audio/instructions/alif_quiz_option_d.mp3', channel: AudioChannel.sfx);
+      AudioService.instance.playAsset('audio/instructions/try_again.mp3', channel: AudioChannel.sfx);
   Future<void> _playWordAudio(String path) =>
       AudioService.instance.playAsset(path, channel: AudioChannel.voice);
 
@@ -313,7 +313,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
               opt.word,
               style: TextStyle(
                 fontFamily: 'Cairo',
-                fontSize: 26 * scaleX,
+                fontSize: 38 * scaleX,
                 fontWeight: FontWeight.bold,
                 color: isCorrect
                     ? Colors.green.shade800
