@@ -4,6 +4,4 @@
     <include domain="sharedpref" path="." />
     <include domain="file" path="hive/" />
     <include domain="file" path="app_flutter/" />
-    <exclude domain="root" path="cache/" />
-    <exclude domain="file" path="cache/" />
 </full-backup-content>
