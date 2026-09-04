@@ -13,20 +13,100 @@ class AvatarSelectionScreen extends StatefulWidget {
   State<AvatarSelectionScreen> createState() => _AvatarSelectionScreenState();
 }
 
+class _AvatarOption {
+  final String imagePath;
+  final String fallbackEmoji;
+  final String label;
+  final String title;
+  final List<Color> gradient;
+  final Color auraColor;
+  const _AvatarOption({
+    required this.imagePath,
+    required this.fallbackEmoji,
+    required this.label,
+    required this.title,
+    required this.gradient,
+    required this.auraColor,
+  });
+}
+
 class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
   int? _selectedIndex;
 
-  // Avatars using EMOJI — large, colorful, child-friendly. No missing images.
+  // Child-friendly 3D animal and hero character avatars
   static const List<_AvatarOption> _avatars = [
-    _AvatarOption(emoji: '🦅', label: 'صقر',    gradient: [Color(0xFFFF9800), Color(0xFFFF5722)]),
-    _AvatarOption(emoji: '🦁', label: 'أسد',    gradient: [Color(0xFFFFC107), Color(0xFFFF9800)]),
-    _AvatarOption(emoji: '🐪', label: 'جمل',    gradient: [Color(0xFFD4A574), Color(0xFF8D6E63)]),
-    _AvatarOption(emoji: '🐇', label: 'أرنب',   gradient: [Color(0xFFE91E63), Color(0xFF9C27B0)]),
-    _AvatarOption(emoji: '🦊', label: 'ثعلب',   gradient: [Color(0xFFFF5722), Color(0xFFFF9800)]),
-    _AvatarOption(emoji: '🐻', label: 'دب',     gradient: [Color(0xFF795548), Color(0xFF5D4037)]),
-    _AvatarOption(emoji: '🦋', label: 'فراشة',  gradient: [Color(0xFF9C27B0), Color(0xFF3F51B5)]),
-    _AvatarOption(emoji: '⭐', label: 'نجمة',   gradient: [Color(0xFFFFEB3B), Color(0xFFFFC107)]),
-    _AvatarOption(emoji: '🌟', label: 'بطل',    gradient: [Color(0xFF00BCD4), Color(0xFF2196F3)]),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_lion.png',
+      fallbackEmoji: '🦁',
+      label: 'أَسَد',
+      title: 'الشجاع',
+      gradient: [Color(0xFFFF9966), Color(0xFFFF5E62)],
+      auraColor: Color(0xFFFF9966),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_rabbit.png',
+      fallbackEmoji: '🐇',
+      label: 'أَرْنَب',
+      title: 'السريع',
+      gradient: [Color(0xFFFF512F), Color(0xFFDD2476)],
+      auraColor: Color(0xFFDD2476),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_camel.png',
+      fallbackEmoji: '🐪',
+      label: 'جَمَل',
+      title: 'الصبور',
+      gradient: [Color(0xFFD4A574), Color(0xFF8D6E63)],
+      auraColor: Color(0xFFD4A574),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_fox.png',
+      fallbackEmoji: '🦊',
+      label: 'ثَعْلَب',
+      title: 'الذكي',
+      gradient: [Color(0xFFFF5722), Color(0xFFFF9800)],
+      auraColor: Color(0xFFFF5722),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_bear.png',
+      fallbackEmoji: '🐻',
+      label: 'دُبّ',
+      title: 'اللطيف',
+      gradient: [Color(0xFF795548), Color(0xFF5D4037)],
+      auraColor: Color(0xFF795548),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_butterfly.png',
+      fallbackEmoji: '🦋',
+      label: 'فَرَاشَة',
+      title: 'الجميلة',
+      gradient: [Color(0xFF9C27B0), Color(0xFF3F51B5)],
+      auraColor: Color(0xFF9C27B0),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_star.png',
+      fallbackEmoji: '⭐',
+      label: 'نَجْمَة',
+      title: 'المتألقة',
+      gradient: [Color(0xFF00c6ff), Color(0xFF0072ff)],
+      auraColor: Color(0xFF00c6ff),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_king.png',
+      fallbackEmoji: '👑',
+      label: 'الْمَلِك',
+      title: 'الأمير',
+      gradient: [Color(0xFF8E2DE2), Color(0xFF4A00E0)],
+      auraColor: Color(0xFF8E2DE2),
+    ),
+    _AvatarOption(
+      imagePath: 'assets/images/avatars/avatar_champion.png',
+      fallbackEmoji: '🏆',
+      label: 'الْبَطَل',
+      title: 'الفائز',
+      gradient: [Color(0xFFF7971E), Color(0xFFFFD200)],
+      auraColor: Color(0xFFFFD200),
+    ),
   ];
 
   void _proceed() {
@@ -56,7 +136,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0xFF1A237E), Color(0xFF283593), Color(0xFF1565C0)],
+              colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
             ),
           ),
           child: SafeArea(
@@ -89,42 +169,43 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                 ),
 
                 // ─── Title ───
-                const SizedBox(height: 8),
+                const SizedBox(height: 4),
                 Text(
-                  '🦅 اختر شخصيتك',
+                  '🌟 اخْتَرْ شَخْصِيَّتَكَ الْمُفَضَّلَةَ 🌟',
                   style: TextStyle(
-                    fontSize: isTablet ? 40 : 32,
+                    fontSize: isTablet ? 36 : 26,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
                     fontFamily: 'Cairo',
-                    shadows: [Shadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 4))],
+                    shadows: const [
+                      Shadow(color: Colors.black45, blurRadius: 10, offset: Offset(0, 4)),
+                    ],
                   ),
                 ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.2),
 
-                const SizedBox(height: 4),
+                const SizedBox(height: 2),
                 Text(
-                  'اختر الصورة التي تعجبك',
+                  'اختر البطل الذي سيرافقك في رحلة الحروف الممتعة',
                   style: TextStyle(
-                    fontSize: isTablet ? 20 : 16,
+                    fontSize: isTablet ? 18 : 14,
                     color: Colors.white70,
                     fontFamily: 'Cairo',
                   ),
                 ).animate().fadeIn(delay: 200.ms),
 
-                const SizedBox(height: 24),
+                const SizedBox(height: 16),
 
                 // ─── Avatar Grid ───
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 18),
                     child: GridView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
-                        crossAxisSpacing: isTablet ? 20 : 14,
-                        mainAxisSpacing: isTablet ? 20 : 14,
-                        childAspectRatio: 0.85,
+                        crossAxisSpacing: isTablet ? 18 : 12,
+                        mainAxisSpacing: isTablet ? 18 : 12,
+                        childAspectRatio: isTablet ? 0.88 : 0.82,
                       ),
                       itemCount: _avatars.length,
                       itemBuilder: (context, index) {
@@ -140,60 +221,130 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                             duration: const Duration(milliseconds: 250),
                             curve: Curves.easeOutBack,
                             transform: Matrix4.diagonal3Values(
-                              isSelected ? 1.08 : 1.0,
-                              isSelected ? 1.08 : 1.0,
+                              isSelected ? 1.06 : 1.0,
+                              isSelected ? 1.06 : 1.0,
                               1.0,
                             ),
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
-                                colors: avatar.gradient,
+                                colors: isSelected
+                                    ? avatar.gradient
+                                    : [
+                                        avatar.gradient.first.withValues(alpha: 0.65),
+                                        avatar.gradient.last.withValues(alpha: 0.65),
+                                      ],
                               ),
                               borderRadius: BorderRadius.circular(24),
-                              border: isSelected
-                                  ? Border.all(color: Colors.white, width: 4)
-                                  : Border.all(color: Colors.white24, width: 1.5),
+                              border: Border.all(
+                                color: isSelected ? Colors.amberAccent : Colors.white30,
+                                width: isSelected ? 4.0 : 1.5,
+                              ),
                               boxShadow: [
                                 BoxShadow(
-                                  color: avatar.gradient.last.withValues(alpha: isSelected ? 0.7 : 0.3),
-                                  blurRadius: isSelected ? 20 : 8,
-                                  spreadRadius: isSelected ? 2 : 0,
-                                  offset: const Offset(0, 6),
+                                  color: isSelected
+                                      ? avatar.auraColor.withValues(alpha: 0.7)
+                                      : avatar.gradient.last.withValues(alpha: 0.25),
+                                  blurRadius: isSelected ? 20 : 10,
+                                  spreadRadius: isSelected ? 3 : 0,
+                                  offset: const Offset(0, 5),
                                 ),
                               ],
                             ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Stack(
+                              alignment: Alignment.center,
                               children: [
-                                Text(
-                                  avatar.emoji,
-                                  style: TextStyle(fontSize: isTablet ? 68 : 56),
-                                ),
-                                if (isSelected)
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8),
-                                    child: Container(
-                                      width: 28,
-                                      height: 28,
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    // 3D Avatar Image
+                                    Container(
+                                      width: isTablet ? 115 : 75,
+                                      height: isTablet ? 115 : 75,
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
                                         shape: BoxShape.circle,
+                                        color: Colors.white.withValues(alpha: 0.15),
+                                        border: Border.all(
+                                          color: isSelected ? Colors.amberAccent : Colors.white54,
+                                          width: isSelected ? 3.0 : 2.0,
+                                        ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black.withValues(alpha: 0.25),
+                                            blurRadius: 10,
+                                            offset: const Offset(0, 4),
+                                          ),
+                                        ],
                                       ),
-                                      child: Icon(
-                                        Icons.check_rounded,
-                                        size: 18,
-                                        color: avatar.gradient.first,
+                                      child: ClipOval(
+                                        child: Image.asset(
+                                          avatar.imagePath,
+                                          fit: BoxFit.cover,
+                                          errorBuilder: (_, __, ___) => Center(
+                                            child: Text(
+                                              avatar.fallbackEmoji,
+                                              style: TextStyle(fontSize: isTablet ? 60 : 42),
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ),
+                                    const SizedBox(height: 8),
+                                    // Name Label
+                                    Text(
+                                      avatar.label,
+                                      style: TextStyle(
+                                        fontSize: isTablet ? 20 : 15,
+                                        fontWeight: FontWeight.w900,
+                                        color: Colors.white,
+                                        fontFamily: 'Cairo',
+                                        shadows: const [
+                                          Shadow(color: Colors.black45, blurRadius: 6, offset: Offset(0, 2)),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    // Nickname
+                                    Text(
+                                      avatar.title,
+                                      style: TextStyle(
+                                        fontSize: isTablet ? 13 : 11,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white.withValues(alpha: 0.95),
+                                        fontFamily: 'Cairo',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                // Selection Check Badge
+                                if (isSelected)
+                                  Positioned(
+                                    top: 10,
+                                    left: 10,
+                                    child: Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: const BoxDecoration(
+                                        color: Colors.amberAccent,
+                                        shape: BoxShape.circle,
+                                        boxShadow: [
+                                          BoxShadow(color: Colors.black38, blurRadius: 6),
+                                        ],
+                                      ),
+                                      child: const Icon(
+                                        Icons.check_rounded,
+                                        size: 18,
+                                        color: Colors.black87,
+                                      ),
+                                    ).animate().scale(duration: 200.ms, curve: Curves.elasticOut),
                                   ),
                               ],
                             ),
                           ),
                         )
-                        .animate(delay: Duration(milliseconds: index * 60))
+                        .animate(delay: Duration(milliseconds: index * 50))
                         .fadeIn(duration: 300.ms)
-                        .scale(begin: const Offset(0.7, 0.7));
+                        .scale(begin: const Offset(0.8, 0.8));
                       },
                     ),
                   ),
@@ -201,7 +352,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
 
                 // ─── Next Button ───
                 Padding(
-                  padding: EdgeInsets.fromLTRB(24, 16, 24, isTablet ? 32 : 24),
+                  padding: EdgeInsets.fromLTRB(24, 12, 24, isTablet ? 28 : 18),
                   child: AnimatedOpacity(
                     opacity: _selectedIndex != null ? 1.0 : 0.4,
                     duration: const Duration(milliseconds: 300),
@@ -209,12 +360,12 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                       onTap: _proceed,
                       child: Container(
                         width: double.infinity,
-                        height: isTablet ? 72 : 62,
+                        height: isTablet ? 66 : 56,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             colors: [Color(0xFFFFD54F), Color(0xFFFF8F00)],
                           ),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(22),
                           boxShadow: [
                             BoxShadow(
                               color: const Color(0xFFFF8F00).withValues(alpha: 0.5),
@@ -229,14 +380,14 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                             Text(
                               'التالي',
                               style: TextStyle(
-                                fontSize: isTablet ? 26 : 22,
+                                fontSize: isTablet ? 24 : 20,
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
                                 fontFamily: 'Cairo',
                               ),
                             ),
                             const SizedBox(width: 8),
-                            const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 20),
+                            const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 18),
                           ],
                         ),
                       ),
@@ -272,11 +423,4 @@ class _NavButton extends StatelessWidget {
       ),
     );
   }
-}
-
-class _AvatarOption {
-  final String emoji;
-  final String label;
-  final List<Color> gradient;
-  const _AvatarOption({required this.emoji, required this.label, required this.gradient});
 }

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:faseeh_kids/features/games/screens/word_fishing_game.dart';
 import 'package:faseeh_kids/features/games/screens/beehive_game.dart';
 import 'package:faseeh_kids/features/games/screens/circus_game.dart';
@@ -20,6 +21,25 @@ class GamesActivityScreen extends ConsumerStatefulWidget {
 
 class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
   _GameType? _selectedGame;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(const Duration(milliseconds: 350), _playMenuIntro);
+    });
+  }
+
+  void _playMenuIntro() async {
+    if (!mounted || _selectedGame != null) return;
+    try {
+      await AudioService.instance.stop();
+      await AudioService.instance.playAsset(
+        'audio/instructions/games_menu_intro.mp3',
+        channel: AudioChannel.voice,
+      );
+    } catch (_) {}
+  }
 
   static const List<_GameCard> _games = [
     _GameCard(
@@ -71,21 +91,37 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            '🕹️ ألعاب الحرف',
-            style: TextStyle(
-              fontSize: isTablet ? 32 : 26,
-              fontWeight: FontWeight.bold,
-              color: AppColors.desertSand,
-              fontFamily: 'Cairo',
-            ),
-          ).animate().fadeIn().slideX(begin: -0.2),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  '🕹️ ألعاب الحرف',
+                  style: TextStyle(
+                    fontSize: isTablet ? 32 : 26,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.desertSand,
+                    fontFamily: 'Cairo',
+                  ),
+                ).animate().fadeIn().slideX(begin: -0.2),
+              ),
+              IconButton(
+                onPressed: _playMenuIntro,
+                icon: const Icon(Icons.volume_up_rounded, color: AppColors.desertSand, size: 32),
+                tooltip: 'إعادة الاستماع',
+              ),
+            ],
+          ),
           const SizedBox(height: 6),
           Text(
-            'اختر لعبة وانطلق!',
-            style: TextStyle(fontSize: isTablet ? 18 : 14, color: Colors.grey, fontFamily: 'Cairo'),
+            'أَمَامَكَ مَجْمُوعَةٌ مِنَ الْأَسْئِلَةِ الشَّقِيَّةِ.. اخْتَرْ نَوْعَ السُّؤَالِ الَّذِي تُحِبُّ أَنْ تُجِيبَ عَلَيْهِ 🌟',
+            style: TextStyle(
+              fontSize: isTablet ? 17 : 14,
+              fontWeight: FontWeight.w600,
+              color: Colors.brown.shade700,
+              fontFamily: 'Cairo',
+            ),
           ),
-          SizedBox(height: isTablet ? 28 : 18),
+          SizedBox(height: isTablet ? 24 : 16),
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -199,6 +235,7 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
                 onPressed: () {
                   HapticFeedback.lightImpact();
                   setState(() => _selectedGame = null);
+                  Future.delayed(const Duration(milliseconds: 300), _playMenuIntro);
                 },
                 icon: const Icon(Icons.apps_rounded, size: 20),
                 label: const Text(

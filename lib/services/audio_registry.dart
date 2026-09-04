@@ -88,6 +88,7 @@ class AudioRegistry {
     'story_alif_words': 'assets/audio/stories/alif_words_demo.mp3',
     'story_alif_sentences': 'assets/audio/stories/alif_sentences_demo.mp3',
     'story_alif_review': 'assets/audio/stories/alif_review.mp3',
+    'story_alif_nasheed': 'assets/audio/stories/alif_nasheed.mp3',
     for (int i = 1; i <= 9; i++)
       'story_alif_explore_${i.toString().padLeft(2, "0")}':
           'assets/audio/stories/alif_explore_${i.toString().padLeft(2, "0")}.mp3',
@@ -108,6 +109,7 @@ class AudioRegistry {
     'instr_alif_paint': 'assets/audio/instructions/alif_paint_intro.mp3',
     'instr_alif_paint_explain': 'assets/audio/instructions/alif_paint_explain.mp3',
     'instr_alif_words': 'assets/audio/instructions/alif_words_intro.mp3',
+    'instr_games_menu_intro': 'assets/audio/instructions/games_menu_intro.mp3',
   };
 
   /// Get the correct subdirectory for a given variant

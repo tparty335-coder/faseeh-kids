@@ -5,7 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-const double _imgW = 1270, _imgH = 950;
+const double _imgW = 1350, _imgH = 1010;
 
 class _MaddWordOption {
   final String word;
@@ -228,13 +228,24 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
             // Background image
             Positioned.fill(child: Image.asset(rd.imagePath, fit: BoxFit.contain)),
 
-            // White cover for left options area to avoid any text distortion
+            // Bottom ground band to cleanly cover old Flash navigation bar
             Positioned(
-              left: ox + 15 * scaleX,
-              top: oy + 120 * scaleY,
-              width: 175 * scaleX,
-              height: 600 * scaleY,
-              child: Container(color: Colors.transparent),
+              left: ox,
+              top: oy + 890 * scaleY,
+              width: dW,
+              height: 120 * scaleY,
+              child: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFFA2CB32),
+                      Color(0xFF8DBB28),
+                    ],
+                  ),
+                ),
+              ),
             ),
 
             // Left Option Cards
@@ -271,14 +282,15 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
 
   Widget _buildOptionCard(_ColoringRound rd, int i, double ox, double oy, double scaleX, double scaleY) {
     final opt = rd.options[i];
-    final pyList = [200.0, 445.0, 685.0];
-    final cx = ox + 105 * scaleX;
+    final pyList = [235.0, 435.0, 650.0];
+    final cx = ox + 110.0 * scaleX;
     final cy = oy + pyList[i] * scaleY;
-    final cardW = 160.0 * scaleX;
-    final cardH = 92.0 * scaleY;
+    final cardW = 210.0 * scaleX;
+    final cardH = 125.0 * scaleY;
 
     final isSelected = _selectedOption == i;
     final isCorrect = isSelected && opt.hasMadd;
+    final isWrong = isSelected && !opt.hasMadd;
 
     return Positioned(
       left: cx - cardW / 2,
@@ -286,51 +298,45 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
       width: cardW,
       height: cardH,
       child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
         onTap: () => _onOptionTap(i),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 250),
-          decoration: BoxDecoration(
-            color: isCorrect
-                ? Colors.green.shade50
-                : (isSelected ? Colors.red.shade50 : Colors.white),
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-              color: isCorrect
-                  ? Colors.green
-                  : (isSelected ? Colors.red : Colors.green.shade600),
-              width: isCorrect || isSelected ? 4 : 2.5,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: (isCorrect ? Colors.green : Colors.black12).withValues(alpha: 0.2),
-                blurRadius: 8,
-                offset: const Offset(0, 3),
-              ),
-            ],
-          ),
-          child: Center(
-            child: Text(
-              opt.word,
-              style: TextStyle(
-                fontFamily: 'Cairo',
-                fontSize: 38 * scaleX,
-                fontWeight: FontWeight.bold,
-                color: isCorrect
-                    ? Colors.green.shade800
-                    : (isSelected ? Colors.red.shade800 : Colors.black87),
-              ),
-            ),
-          ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            // Animated Red / Green Circle Indicator (Identical to Rabbit Story Circle)
+            if (isSelected)
+              Container(
+                width: cardW * 0.94,
+                height: cardH * 0.90,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(
+                    color: isCorrect ? Colors.green.shade600 : Colors.red.shade600,
+                    width: 4.5,
+                  ),
+                  color: (isCorrect ? Colors.green : Colors.red).withValues(alpha: 0.12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: (isCorrect ? Colors.green : Colors.red).withValues(alpha: 0.4),
+                      blurRadius: 14,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+              ).animate(target: isSelected ? 1 : 0)
+               .scale(begin: const Offset(0.85, 0.85), end: const Offset(1.0, 1.0), duration: 250.ms, curve: Curves.easeOutBack)
+               .shake(duration: isWrong ? 450.ms : 0.ms, hz: 4),
+          ],
         ),
       ),
     );
   }
 
   Widget _buildColoringCanvas(_ColoringRound rd, double ox, double oy, double scaleX, double scaleY) {
-    final boardX = ox + 240 * scaleX;
-    final boardY = oy + 240 * scaleY;
-    final boardW = 630 * scaleX;
-    final boardH = 380 * scaleY;
+    final boardX = ox + 230 * scaleX;
+    final boardY = oy + 245 * scaleY;
+    final boardW = 710 * scaleX;
+    final boardH = 385 * scaleY;
 
     return Positioned(
       left: boardX,
@@ -338,16 +344,17 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
       width: boardW,
       height: boardH,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 24 * scaleX, vertical: 14 * scaleY),
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.95),
-          borderRadius: BorderRadius.circular(24),
-          border: Border.all(color: Colors.green.shade400, width: 3),
+          color: Colors.white.withValues(alpha: 0.96),
+          borderRadius: BorderRadius.circular(28),
+          border: Border.all(color: Colors.green.shade500, width: 3.5),
           boxShadow: [
             BoxShadow(
-              color: Colors.green.withValues(alpha: 0.2),
-              blurRadius: 16,
-              spreadRadius: 2,
+              color: Colors.green.withValues(alpha: 0.25),
+              blurRadius: 20,
+              spreadRadius: 3,
+              offset: const Offset(0, 6),
             ),
           ],
         ),
@@ -358,12 +365,12 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
               'لَوِّنْ حُرُوفَ الْكَلِمَةِ بِأَلْوَانِكَ الْجَمِيلَةِ 🎨',
               style: TextStyle(
                 fontFamily: 'Cairo',
-                fontSize: 16 * scaleX,
-                fontWeight: FontWeight.bold,
+                fontSize: 22 * scaleX,
+                fontWeight: FontWeight.w900,
                 color: Colors.green.shade800,
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 16 * scaleY),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               textDirection: TextDirection.rtl,
@@ -375,28 +382,35 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
                 return GestureDetector(
                   onTap: () => _colorLetter(idx),
                   child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    margin: EdgeInsets.symmetric(horizontal: 7 * scaleX),
+                    padding: EdgeInsets.symmetric(horizontal: 18 * scaleX, vertical: 8 * scaleY),
                     decoration: BoxDecoration(
-                      color: isColored ? color.withValues(alpha: 0.15) : Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(14),
+                      color: isColored ? color.withValues(alpha: 0.18) : Colors.grey.shade50,
+                      borderRadius: BorderRadius.circular(22),
                       border: Border.all(
                         color: isColored ? color : Colors.grey.shade400,
-                        width: 2.5,
+                        width: 3.5,
                       ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: isColored ? color.withValues(alpha: 0.35) : Colors.black.withValues(alpha: 0.06),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
                     ),
                     child: Text(
                       letter,
                       style: TextStyle(
                         fontFamily: 'Cairo',
-                        fontSize: 48 * scaleX,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 80 * scaleX,
+                        fontWeight: FontWeight.w900,
                         color: isColored ? color : Colors.black87,
                         shadows: isColored
-                            ? [Shadow(color: color.withValues(alpha: 0.5), blurRadius: 8)]
+                            ? [Shadow(color: color.withValues(alpha: 0.6), blurRadius: 12)]
                             : [],
                       ),
-                    ).animate(target: isColored ? 1 : 0).scale(begin: const Offset(1, 1), end: const Offset(1.15, 1.15), duration: 200.ms),
+                    ).animate(target: isColored ? 1 : 0).scale(begin: const Offset(1, 1), end: const Offset(1.12, 1.12), duration: 200.ms),
                   ),
                 );
               }),
@@ -408,10 +422,10 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
   }
 
   Widget _buildColorPalette(double ox, double oy, double scaleX, double scaleY) {
-    final palX = ox + 240 * scaleX;
-    final palY = oy + 650 * scaleY;
-    final palW = 630 * scaleX;
-    final palH = 80 * scaleY;
+    final palX = ox + 230 * scaleX;
+    final palY = oy + 645 * scaleY;
+    final palW = 710 * scaleX;
+    final palH = 105 * scaleY;
 
     return Positioned(
       left: palX,
@@ -419,16 +433,16 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
       width: palW,
       height: palH,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: 18 * scaleX, vertical: 10 * scaleY),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.amber.shade400, width: 2.5),
+          borderRadius: BorderRadius.circular(26),
+          border: Border.all(color: Colors.amber.shade500, width: 3.5),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.08),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
+              color: Colors.black.withValues(alpha: 0.12),
+              blurRadius: 14,
+              offset: const Offset(0, 5),
             ),
           ],
         ),
@@ -443,25 +457,26 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
               },
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
-                width: isSelected ? 38 * scaleX : 30 * scaleX,
-                height: isSelected ? 38 * scaleX : 30 * scaleX,
+                width: isSelected ? 62 * scaleX : 48 * scaleX,
+                height: isSelected ? 62 * scaleX : 48 * scaleX,
                 decoration: BoxDecoration(
                   color: c,
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: isSelected ? Colors.white : Colors.transparent,
-                    width: 3,
+                    color: isSelected ? Colors.white : Colors.white70,
+                    width: isSelected ? 4 : 2,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: c.withValues(alpha: isSelected ? 0.6 : 0.3),
-                      blurRadius: isSelected ? 8 : 4,
-                      spreadRadius: isSelected ? 2 : 0,
+                      color: c.withValues(alpha: isSelected ? 0.7 : 0.35),
+                      blurRadius: isSelected ? 12 : 6,
+                      spreadRadius: isSelected ? 3 : 0,
+                      offset: const Offset(0, 3),
                     ),
                   ],
                 ),
                 child: isSelected
-                    ? const Icon(Icons.brush_rounded, color: Colors.white, size: 18)
+                    ? Icon(Icons.brush_rounded, color: Colors.white, size: 28 * scaleX)
                     : null,
               ),
             );

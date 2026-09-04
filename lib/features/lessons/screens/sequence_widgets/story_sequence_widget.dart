@@ -119,10 +119,10 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
         'isInteractive': true,
       },
       {
-        'title': 'الْمَشْهَدُ السَّابِعُ (نَشِيدُ الْحَرْفِ)',
-        'caption': 'أَلِفٌ… أَرْنَبٌ يَجْرِي يَلْعَبُ… أَسَدٌ يَزْأَرُ خَلْفَ الْأَرْنَبِ',
+        'title': 'نَشِيدُ حَرْفِ الْأَلِفِ 🎵',
+        'caption': 'أَلِفٌ أَرْنَبٌ يَجْرِي يَلْعَبُ.. أَسَدٌ يَزْأَرُ خَلْفَ الْأَرْنَبِ',
         'image': 'assets/images/lessons/alif/alif_cd_story_nasheed.png',
-        'audio': 'audio/stories/alif_explore_04.mp3',
+        'audio': 'audio/stories/alif_nasheed.mp3',
         'isInteractive': false,
       },
     ];

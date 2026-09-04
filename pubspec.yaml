@@ -1,4 +1,4 @@
-﻿name: faseeh_kids
+name: faseeh_kids
 description: "ظپطµظٹط­ ط§ظ„طµط؛ط§ط± - طھط·ط¨ظٹظ‚ طھط¹ظ„ظٹظ… ط§ظ„ظ„ط؛ط© ط§ظ„ط¹ط±ط¨ظٹط© ظ„ظ„ط£ط·ظپط§ظ„ | Arabic Language Learning App for Kids"
 publish_to: 'none'
 version: 1.0.0+1
@@ -99,6 +99,7 @@ flutter:
     - assets/audio/feedback/
     # Game & activity instructions
     - assets/audio/instructions/
+    - assets/audio/words_game/
     # UI sound effects
     - assets/audio/sfx/
     # Images

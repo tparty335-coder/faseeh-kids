@@ -46,13 +46,13 @@ const List<_Round> _rounds = [
         word: 'أَسَدٌ',
         isCorrect: false,
         color: Color(0xFF5AC8FA),
-        audioPath: 'audio/stories/alif_word_asad.mp3',
+        audioPath: 'audio/words_game/alif_word_lion.mp3',
       ),
       _WordCard(
         word: 'أَرْنَبٌ',
         isCorrect: true,
         color: Color(0xFFFF9EB5),
-        audioPath: 'audio/instructions/alif_trace_step_19.mp3',
+        audioPath: 'audio/words_game/alif_word_rabbit.mp3',
       ),
       _WordCard(
         word: 'أُمٌّ',
@@ -73,19 +73,19 @@ const List<_Round> _rounds = [
         word: 'أَهْرَامٌ',
         isCorrect: true,
         color: Color(0xFF5AC8FA),
-        audioPath: 'audio/word_ahram.mp3',
+        audioPath: 'audio/words_game/alif_word_pyramids.mp3',
       ),
       _WordCard(
         word: 'أَرْنَبٌ',
         isCorrect: false,
         color: Color(0xFFFF9EB5),
-        audioPath: 'audio/instructions/alif_trace_step_19.mp3',
+        audioPath: 'audio/words_game/alif_word_rabbit.mp3',
       ),
       _WordCard(
         word: 'أَسَدٌ',
         isCorrect: false,
         color: Color(0xFFFFD17A),
-        audioPath: 'audio/stories/alif_word_asad.mp3',
+        audioPath: 'audio/words_game/alif_word_lion.mp3',
       ),
     ],
     cardPxList: [230, 230, 230],
@@ -100,19 +100,73 @@ const List<_Round> _rounds = [
         word: 'أَسَدٌ',
         isCorrect: true,
         color: Color(0xFF5AC8FA),
-        audioPath: 'audio/stories/alif_word_asad.mp3',
+        audioPath: 'audio/words_game/alif_word_lion.mp3',
       ),
       _WordCard(
         word: 'أَهْرَامٌ',
         isCorrect: false,
         color: Color(0xFFFF9EB5),
-        audioPath: 'audio/word_ahram.mp3',
+        audioPath: 'audio/words_game/alif_word_pyramids.mp3',
       ),
       _WordCard(
         word: 'أَرْنَبٌ',
         isCorrect: false,
         color: Color(0xFFFFD17A),
-        audioPath: 'audio/instructions/alif_trace_step_19.mp3',
+        audioPath: 'audio/words_game/alif_word_rabbit.mp3',
+      ),
+    ],
+    cardPxList: [230, 230, 230],
+    cardPyList: [210, 450, 690],
+    dropPx: 850, dropPy: 722,
+  ),
+  // Round 4: Picture = Apple (تُفَّاحَةٌ)
+  _Round(
+    imagePath: 'assets/images/games/words/words_round_4.png',
+    cards: [
+      _WordCard(
+        word: 'أَسَدٌ',
+        isCorrect: false,
+        color: Color(0xFF5AC8FA),
+        audioPath: 'audio/words_game/alif_word_lion.mp3',
+      ),
+      _WordCard(
+        word: 'تُفَّاحَةٌ',
+        isCorrect: true,
+        color: Color(0xFFFF9EB5),
+        audioPath: 'audio/words_game/alif_word_apple.mp3',
+      ),
+      _WordCard(
+        word: 'أُمٌّ',
+        isCorrect: false,
+        color: Color(0xFFFFD17A),
+        audioPath: 'audio/instructions/alif_trace_step_10.mp3',
+      ),
+    ],
+    cardPxList: [230, 230, 230],
+    cardPyList: [210, 450, 690],
+    dropPx: 850, dropPy: 722,
+  ),
+  // Round 5: Picture = Book (كِتَابٌ)
+  _Round(
+    imagePath: 'assets/images/games/words/words_round_5.png',
+    cards: [
+      _WordCard(
+        word: 'كِتَابٌ',
+        isCorrect: true,
+        color: Color(0xFF5AC8FA),
+        audioPath: 'audio/words_game/alif_word_book.mp3',
+      ),
+      _WordCard(
+        word: 'أَرْنَبٌ',
+        isCorrect: false,
+        color: Color(0xFFFF9EB5),
+        audioPath: 'audio/words_game/alif_word_rabbit.mp3',
+      ),
+      _WordCard(
+        word: 'بَابٌ',
+        isCorrect: false,
+        color: Color(0xFFFFD17A),
+        audioPath: 'audio/words_game/alif_word_door.mp3',
       ),
     ],
     cardPxList: [230, 230, 230],
@@ -279,14 +333,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
             height: 580 * scaleY,
             child: Container(color: Colors.white),
           ),
-          // Top bar text mask (blue to match top bar)
-          Positioned(
-            left: ox + 160 * scaleX,
-            top: oy,
-            width: 800 * scaleX,
-            height: 45 * scaleY,
-            child: Container(color: const Color(0xFFA96428)),
-          ),
+
           // Train mask (blue background)
           Positioned(
             right: ox,
