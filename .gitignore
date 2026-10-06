@@ -47,3 +47,7 @@ app.*.map.json
 android/.gradle/
 scratch/
 key.properties
+
+# Firebase config - do NOT commit
+google-services.json
+**/google-services.json
