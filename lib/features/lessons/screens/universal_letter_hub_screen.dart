@@ -10,6 +10,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
 
 // ═══ UPGRADED: universal_letter_hub_screen.dart ═══
 
@@ -334,7 +335,9 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => const LessonSequenceScreen(),
+                                builder: (context) => letter.letter == 'ب'
+                                    ? const BaaLessonScreen(initialStationIndex: 1)
+                                    : const LessonSequenceScreen(),
                               ),
                             );
                           },

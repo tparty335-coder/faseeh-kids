@@ -15,6 +15,7 @@ import 'package:faseeh_kids/features/home/screens/luxury_oasis_showcase_screen.d
 
 // ─── Lessons ───
 import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
 
 // ─── Rewards & Profile ───
 import 'package:faseeh_kids/features/rewards/screens/celebration_screen.dart';
@@ -219,6 +220,14 @@ class AppRouter {
       ),
 
       // ─── Lessons ───
+      GoRoute(
+        path: '/baa-lesson',
+        name: 'baaLesson',
+        pageBuilder: (context, state) => _slideTransition(
+          state: state,
+          child: const BaaLessonScreen(initialStationIndex: 1),
+        ),
+      ),
       GoRoute(
         path: lesson,
         name: 'lesson',

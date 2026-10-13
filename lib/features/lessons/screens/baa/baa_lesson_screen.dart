@@ -4,22 +4,35 @@ import 'package:faseeh_kids/features/lessons/screens/baa/baa_train_navbar.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_objectives_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_story_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_sounds_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_madd_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_writing_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/baa/baa_words_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_games_station.dart';
 
-// ═══ UPGRADED: baa_lesson_screen.dart ═══
-
+/// شاشة درس حرف الباء — المحطات: الأهداف، قصة الحرف، أصوات الحرف، المدود، الكتابة
 class BaaLessonScreen extends StatefulWidget {
-  const BaaLessonScreen({super.key});
+  final int initialStationIndex;
+
+  const BaaLessonScreen({
+    super.key,
+    this.initialStationIndex = 0,
+  });
 
   @override
   State<BaaLessonScreen> createState() => _BaaLessonScreenState();
 }
 
 class _BaaLessonScreenState extends State<BaaLessonScreen> {
-  final PageController _pageController = PageController();
-  int _currentStationIndex = 0;
+  late final PageController _pageController;
+  late int _currentStationIndex;
+
+  static const int _stationCount = 6; // الأهداف + قصة + أصوات + مدود + كتابة + ألعاب
+
+  @override
+  void initState() {
+    super.initState();
+    _currentStationIndex = widget.initialStationIndex.clamp(0, _stationCount - 1);
+    _pageController = PageController(initialPage: _currentStationIndex);
+  }
 
   @override
   void dispose() {
@@ -28,6 +41,7 @@ class _BaaLessonScreenState extends State<BaaLessonScreen> {
   }
 
   void _goToStation(int index) {
+    if (index < 0 || index >= _stationCount) return;
     setState(() => _currentStationIndex = index);
     _pageController.animateToPage(
       index,
@@ -37,7 +51,7 @@ class _BaaLessonScreenState extends State<BaaLessonScreen> {
   }
 
   void _nextStation() {
-    if (_currentStationIndex < 5) {
+    if (_currentStationIndex < _stationCount - 1) {
       _goToStation(_currentStationIndex + 1);
     } else {
       Navigator.of(context).pop();
@@ -58,7 +72,7 @@ class _BaaLessonScreenState extends State<BaaLessonScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Top App Bar with Maroon background from CD
+            // شريط العنوان العلوي
             Container(
               height: 48,
               padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -99,24 +113,24 @@ class _BaaLessonScreenState extends State<BaaLessonScreen> {
               ),
             ),
 
-            // Main Lesson Content (6 Authentic Stations)
+            // المحتوى الرئيسي — المحطتان فقط
             Expanded(
               child: PageView(
                 controller: _pageController,
-                physics: const NeverScrollableScrollPhysics(), // Controlled via train and next/prev buttons
+                physics: const NeverScrollableScrollPhysics(),
                 onPageChanged: (i) => setState(() => _currentStationIndex = i),
                 children: [
                   BaaObjectivesStation(onNext: _nextStation),
                   BaaStoryStation(onNext: _nextStation, onPrevious: _previousStation),
                   BaaSoundsStation(onNext: _nextStation, onPrevious: _previousStation),
+                  BaaMaddStation(onNext: _nextStation, onPrevious: _previousStation),
                   BaaWritingStation(onNext: _nextStation, onPrevious: _previousStation),
-                  BaaWordsStation(onNext: _nextStation, onPrevious: _previousStation),
-                  BaaGamesStation(onPrevious: _previousStation),
+                  BaaGamesStation(onNext: _nextStation, onPrevious: _previousStation),
                 ],
               ),
             ),
 
-            // Authentic Lesson Train Bottom Navigation Bar
+            // شريط التنقل السفلي
             BaaTrainNavBar(
               activeStationIndex: _currentStationIndex,
               onStationSelected: _goToStation,
@@ -127,5 +141,3 @@ class _BaaLessonScreenState extends State<BaaLessonScreen> {
     );
   }
 }
-
-// ═══ END OF FILE ═══

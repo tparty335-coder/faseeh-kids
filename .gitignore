@@ -51,3 +51,24 @@ key.properties
 # Firebase config - do NOT commit
 google-services.json
 **/google-services.json
+
+# Generated image processing output
+baa_indexed_output/
+
+# Portfolio zip (binary, too large)
+portfolio_showcase/*.zip
+
+# Python utility scripts
+*.py
+
+# Scratch/test files
+scratch_test.dart
+
+# docs that aren't part of app
+docs/FREE_LLM_APIS.md
+docs/MASTER_PROMPT_v3.md
+docs/REA_GUIDE.md
+
+Faseeh_Kids_Portfolio.zip
+Faseeh_Kids_Portfolio/
+GEMINI.md

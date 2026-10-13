@@ -167,6 +167,14 @@ class ArabicLetterTracingData {
 
   // ─── مقاطع حرف الباء ───
   static List<LetterStroke> _getBaaStrokes(String position) {
+    // الباء بعد حرف رافس في الوسط = نفس شكل أول الكلمة (بـ)
+    if (position == 'mid_disconnected') {
+      return _getBaaStrokes('start');
+    }
+    // الباء بعد حرف رافس في الآخر = نفس شكل المفردة (ب)
+    if (position == 'end_disconnected') {
+      return _getBaaStrokes('isolated');
+    }
     if (position == 'start') {
       // الباء في أول الكلمة (بـ)
       return [

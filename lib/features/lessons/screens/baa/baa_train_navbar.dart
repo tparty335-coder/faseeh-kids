@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 
-// ═══ UPGRADED: baa_train_navbar.dart ═══
-
+/// شريط التنقل السفلي لدرس حرف الباء — الأهداف + القصة + الأصوات + المدود
 class BaaTrainNavBar extends StatelessWidget {
   final int activeStationIndex;
   final Function(int) onStationSelected;
@@ -27,22 +26,22 @@ class BaaTrainNavBar extends StatelessWidget {
     {
       'title': 'أصوات الحرف',
       'icon': Icons.volume_up_rounded,
-      'color': Color(0xFF4CAF50),
+      'color': Color(0xFF7B1FA2),
+    },
+    {
+      'title': 'الباء الممدودة',
+      'icon': Icons.auto_awesome_rounded,
+      'color': Color(0xFF00838F),
     },
     {
       'title': 'كتابة الحرف',
       'icon': Icons.edit_rounded,
-      'color': Color(0xFFFFA000),
+      'color': Color(0xFF1976D2),
     },
     {
-      'title': 'كلمات الحرف',
-      'icon': Icons.auto_stories_rounded,
-      'color': Color(0xFFE91E63),
-    },
-    {
-      'title': 'الأنشطة',
-      'icon': Icons.stars_rounded,
-      'color': Color(0xFF9C27B0),
+      'title': 'ألعاب',
+      'icon': Icons.sports_esports_rounded,
+      'color': Color(0xFFF57C00),
     },
   ];
 
@@ -74,7 +73,7 @@ class BaaTrainNavBar extends StatelessWidget {
             onTap: () => onStationSelected(index),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 250),
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
               decoration: BoxDecoration(
                 color: isActive ? color.withValues(alpha: 0.18) : Colors.transparent,
                 borderRadius: BorderRadius.circular(14),
@@ -89,14 +88,14 @@ class BaaTrainNavBar extends StatelessWidget {
                   Icon(
                     s['icon'] as IconData,
                     color: isActive ? color : Colors.brown.shade400,
-                    size: isActive ? 24 : 20,
+                    size: isActive ? 28 : 22,
                   ),
                   const SizedBox(height: 2),
                   Text(
                     s['title'] as String,
                     style: TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: isActive ? 11 : 10,
+                      fontSize: isActive ? 13 : 11,
                       fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
                       color: isActive ? color : Colors.brown.shade700,
                     ),
@@ -110,5 +109,3 @@ class BaaTrainNavBar extends StatelessWidget {
     );
   }
 }
-
-// ═══ END OF FILE ═══

@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-// ═══ UPGRADED: baa_objectives_station.dart ═══
+// â•گâ•گâ•گ UPGRADED: baa_objectives_station.dart â•گâ•گâ•گ
 
 class BaaObjectivesStation extends StatefulWidget {
   final VoidCallback onNext;
@@ -24,14 +24,14 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
   bool _isPlaying = false;
 
   static const List<String> _objectives = [
-    'يَتَعَرَّفُ عَلَى اسْمِ حَرْفِ الْبَاءِ وَشَكْلِهِ',
-    'يُمَيِّزُ صَوْتَ حَرْفِ (ب) مَضْبُوطًا بِالْحَرَكَاتِ',
-    'يَتَعَرَّفُ عَلَى حَرْفِ الْبَاءِ فِي أَوَّلِ الْكَلِمَةِ وَوَسَطِهَا وَآخِرِهَا',
-    'يَنْطِقُ كَلِمَاتٍ بِهَا صَوْتُ حَرْفِ (ب)',
-    'يَكْتُبُ حَرْفَ الْبَاءِ بِصُورَةٍ صَحِيحَةٍ',
-    'يُكَوِّنُ كَلِمَاتٍ تَشْتَمِلُ عَلَى حَرْفِ الْبَاءِ',
-    'يَتَعَرَّفُ عَلَى حَرْفِ الْبَاءِ الْمَمْدُودِ',
-    'يَنْطِقُ صَوْتَ حَرْفِ (ب) الْمَمْدُودِ فِي كَلِمَاتٍ يَسْتَمِعُ إِلَيْهَا',
+    'ظٹظژطھظژط¹ظژط±ظژظ‘ظپظڈ ط¹ظژظ„ظژظ‰ ط§ط³ظ’ظ…ظگ ط­ظژط±ظ’ظپظگ ط§ظ„ظ’ط¨ظژط§ط،ظگ ظˆظژط´ظژظƒظ’ظ„ظگظ‡ظگ',
+    'ظٹظڈظ…ظژظٹظگظ‘ط²ظڈ طµظژظˆظ’طھظژ ط­ظژط±ظ’ظپظگ (ط¨) ظ…ظژط¶ظ’ط¨ظڈظˆط·ظ‹ط§ ط¨ظگط§ظ„ظ’ط­ظژط±ظژظƒظژط§طھظگ',
+    'ظٹظژطھظژط¹ظژط±ظژظ‘ظپظڈ ط¹ظژظ„ظژظ‰ ط­ظژط±ظ’ظپظگ ط§ظ„ظ’ط¨ظژط§ط،ظگ ظپظگظٹ ط£ظژظˆظژظ‘ظ„ظگ ط§ظ„ظ’ظƒظژظ„ظگظ…ظژط©ظگ ظˆظژظˆظژط³ظژط·ظگظ‡ظژط§ ظˆظژط¢ط®ظگط±ظگظ‡ظژط§',
+    'ظٹظژظ†ظ’ط·ظگظ‚ظڈ ظƒظژظ„ظگظ…ظژط§طھظچ ط¨ظگظ‡ظژط§ طµظژظˆظ’طھظڈ ط­ظژط±ظ’ظپظگ (ط¨)',
+    'ظٹظژظƒظ’طھظڈط¨ظڈ ط­ظژط±ظ’ظپظژ ط§ظ„ظ’ط¨ظژط§ط،ظگ ط¨ظگطµظڈظˆط±ظژط©ظچ طµظژط­ظگظٹط­ظژط©ظچ',
+    'ظٹظڈظƒظژظˆظگظ‘ظ†ظڈ ظƒظژظ„ظگظ…ظژط§طھظچ طھظژط´ظ’طھظژظ…ظگظ„ظڈ ط¹ظژظ„ظژظ‰ ط­ظژط±ظ’ظپظگ ط§ظ„ظ’ط¨ظژط§ط،ظگ',
+    'ظٹظژطھظژط¹ظژط±ظژظ‘ظپظڈ ط¹ظژظ„ظژظ‰ ط­ظژط±ظ’ظپظگ ط§ظ„ظ’ط¨ظژط§ط،ظگ ط§ظ„ظ’ظ…ظژظ…ظ’ط¯ظڈظˆط¯ظگ',
+    'ظٹظژظ†ظ’ط·ظگظ‚ظڈ طµظژظˆظ’طھظژ ط­ظژط±ظ’ظپظگ (ط¨) ط§ظ„ظ’ظ…ظژظ…ظ’ط¯ظڈظˆط¯ظگ ظپظگظٹ ظƒظژظ„ظگظ…ظژط§طھظچ ظٹظژط³ظ’طھظژظ…ظگط¹ظڈ ط¥ظگظ„ظژظٹظ’ظ‡ظژط§',
   ];
 
   @override
@@ -61,7 +61,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
     setState(() => _isPlaying = true);
     await AudioService.instance.stop();
     // baa_10.mp3 is the authentic lesson intro / objectives audio
-    await AudioService.instance.playAsset('audio/lessons/baa/long/baa_10.mp3');
+    await AudioService.instance.playAsset('audio/lessons/baa/baa_objectives.mp3');
     if (mounted) setState(() => _isPlaying = false);
   }
 
@@ -69,7 +69,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // ── 1. Authentic Nature Background with fallback ───────────
+        // â”€â”€ 1. Authentic Nature Background with fallback â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Positioned.fill(
           child: Image.asset(
             'assets/images/lessons/baa/baa_story.jpg',
@@ -93,7 +93,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
           ),
         ),
 
-        // ── 2. Top Header / White Cloud ───────────────────────────
+        // â”€â”€ 2. Top Header / White Cloud â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Positioned(
           top: 12,
           left: 0,
@@ -115,7 +115,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                   Icon(Icons.wb_sunny_rounded, color: Colors.orange, size: 24),
                   SizedBox(width: 8),
                   Text(
-                    'هَيَّا نَقْرَأُ اللُّغَةَ الْعَرَبِيَّةَ — حَرْفُ الْبَاءِ (ب)',
+                    'ظ‡ظژظٹظژظ‘ط§ ظ†ظژظ‚ظ’ط±ظژط£ظڈ ط§ظ„ظ„ظڈظ‘ط؛ظژط©ظژ ط§ظ„ظ’ط¹ظژط±ظژط¨ظگظٹظژظ‘ط©ظژ â€” ط­ظژط±ظ’ظپظڈ ط§ظ„ظ’ط¨ظژط§ط،ظگ (ط¨)',
                     style: TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 16,
@@ -129,7 +129,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
           ),
         ),
 
-        // ── 3. Main Center Area (Duck on Left + Yellow Objectives Oval on Right) ──
+        // â”€â”€ 3. Main Center Area (Duck on Left + Yellow Objectives Oval on Right) â”€â”€
         Positioned(
           top: 65,
           left: 16,
@@ -167,7 +167,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                           ),
                           child: const Center(
                             child: Text(
-                              '🦆',
+                              'ًں¦†',
                               style: TextStyle(fontSize: 62),
                             ),
                           ),
@@ -181,7 +181,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                             border: Border.all(color: Colors.white, width: 1.5),
                           ),
                           child: const Text(
-                            'بَطَّةُ الْبَاءِ',
+                            'ط¨ظژط·ظژظ‘ط©ظڈ ط§ظ„ظ’ط¨ظژط§ط،ظگ',
                             style: TextStyle(
                               fontFamily: 'Cairo',
                               fontSize: 13,
@@ -199,7 +199,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                             size: 20,
                           ),
                           label: Text(
-                            _isPlaying ? 'جارٍ الاستماع' : 'استمع للأهداف',
+                            _isPlaying ? 'ط¬ط§ط±ظچ ط§ظ„ط§ط³طھظ…ط§ط¹' : 'ط§ط³طھظ…ط¹ ظ„ظ„ط£ظ‡ط¯ط§ظپ',
                             style: const TextStyle(fontFamily: 'Cairo', fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -240,7 +240,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                           const Icon(Icons.star_rounded, color: AppColors.baaObjectivesTitle, size: 24),
                           const SizedBox(width: 6),
                           Text(
-                            'أَهْدَافُ دَرْسِ حَرْفِ الْبَاءِ :',
+                            'ط£ظژظ‡ظ’ط¯ظژط§ظپظڈ ط¯ظژط±ظ’ط³ظگ ط­ظژط±ظ’ظپظگ ط§ظ„ظ’ط¨ظژط§ط،ظگ :',
                             style: TextStyle(
                               fontFamily: 'Cairo',
                               fontSize: 17,
@@ -304,14 +304,14 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
           ),
         ),
 
-        // ── 4. Bottom Start Lesson Button ─────────────────────────
+        // â”€â”€ 4. Bottom Start Lesson Button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Positioned(
           bottom: 12,
           right: 24,
           child: ElevatedButton.icon(
             onPressed: widget.onNext,
             icon: const Text(
-              'ابدأ الدرس (قصة الحرف)',
+              'ط§ط¨ط¯ط£ ط§ظ„ط¯ط±ط³ (ظ‚طµط© ط§ظ„ط­ط±ظپ)',
               style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
             ),
             label: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
@@ -329,4 +329,5 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
   }
 }
 
-// ═══ END OF FILE ═══
+// â•گâ•گâ•گ END OF FILE â•گâ•گâ•گ
+

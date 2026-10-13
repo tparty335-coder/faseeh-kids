@@ -118,4 +118,7 @@ flutter:
     - assets/audio/lessons/baa/long/
     - assets/audio/lessons/baa/medium/
     - assets/audio/lessons/baa/short/
+    - assets/audio/lessons/baa/sounds/
+    - assets/audio/lessons/baa/writing/
+    - assets/images/lessons/baa/sounds/
     - assets/animations/

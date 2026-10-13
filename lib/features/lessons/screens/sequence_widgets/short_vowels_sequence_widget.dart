@@ -30,6 +30,18 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   // الضمة، الكسرة، السكون: مثالان لكل حركة
   List<Map<String, dynamic>> get _harakat => _getHarakatForLetter(widget.letterChar);
 
+  // الصوت التمهيدي — يُشغَّل مرة واحدة عند فتح المحطة قبل أي شرح
+  static String? _getIntroAudioForLetter(String letter) {
+    switch (letter) {
+      case 'ب': return 'audio/lessons/baa/sounds/baa_fatha.mp3';
+      default: return null;
+    }
+  }
+
+  bool _introPlayed = false;
+
+
+
   static List<Map<String, dynamic>> _getHarakatForLetter(String letter) {
     if (letter == 'ب') {
       return [
@@ -38,26 +50,20 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْفَتْحَةُ (بَ)',
           'vowelMark': 'بَ',
           'color': const Color(0xFFE53935),
-          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَقُلْ (بَ)',
-          'ruleAudio': 'audio/letters/phrases/baa_fatha_demo.mp3',
+          'explanation': 'الْفَتْحَةُ شَرْطَةٌ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْبَاءِ إِلَى (بَ)',
+          'ruleAudio': 'audio/lessons/baa/sounds/baa_fatha_rule.mp3',
           'examples': [
             {
               'word': 'بَقَرَة',
-              'position': 'بَاءٌ فِي أَوَّلِ الْكَلِمَةِ مَفْتُوحَة',
-              'audio': 'audio/letters/words/baa_word.mp3',
-              'image': 'assets/images/lessons/baa/baa_words.jpg',
+              'position': 'بَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_baqara.mp3',
+              'image': 'assets/images/lessons/baa/sounds/baqara.png',
             },
             {
-              'word': 'ثُعْبَان',
-              'position': 'بَاءٌ مَفْتُوحَة فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/letters/words/baa_word2.mp3',
-              'image': 'assets/images/lessons/baa/baa_fishing.jpg',
-            },
-            {
-              'word': 'كَتَبَ',
-              'position': 'بَاءٌ مَفْتُوحَة فِي آخِرِ الْكَلِمَةِ',
-              'audio': 'audio/letters/words/baa_word3.mp3',
-              'image': 'assets/images/lessons/baa/baa_writing.jpg',
+              'word': 'بَاب',
+              'position': 'بَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_bab.mp3',
+              'image': 'assets/images/lessons/baa/sounds/bab.png',
             },
           ],
         },
@@ -66,20 +72,20 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الضَّمَّةُ (بُ)',
           'vowelMark': 'بُ',
           'color': const Color(0xFFFF6F00),
-          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَضُمَّ وَقُلْ (بُ)',
-          'ruleAudio': 'audio/letters/phrases/baa_damma_demo.mp3',
+          'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْبَاءِ إِلَى (بُ)',
+          'ruleAudio': 'audio/lessons/baa/sounds/baa_damma_rule.mp3',
           'examples': [
             {
-              'word': 'بُرْتُقَال',
-              'position': 'بَاءٌ مَضْمُومَة',
-              'audio': 'audio/letters/words/baa_word.mp3',
-              'image': 'assets/images/lessons/baa/baa_wheel.jpg',
+              'word': 'بُرْج',
+              'position': 'بَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_borg.mp3',
+              'image': 'assets/images/lessons/baa/sounds/borg.png',
             },
             {
-              'word': 'حُبُوب',
-              'position': 'بَاءٌ مَضْمُومَة فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/letters/short_vowels/baa_damma.mp3',
-              'image': 'assets/images/lessons/baa/baa_bee.jpg',
+              'word': 'يَكْتُبُ',
+              'position': 'بَاءٌ مَضْمُومَةٌ فِي آخِرِ الْكَلِمَةِ (مَرْفُوع)',
+              'audio': 'audio/lessons/baa/sounds/word_yaktb.mp3',
+              'image': 'assets/images/lessons/baa/sounds/yaktb.png',
             },
           ],
         },
@@ -88,20 +94,20 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْكَسْرَةُ (بِ)',
           'vowelMark': 'بِ',
           'color': const Color(0xFF1E88E5),
-          'explanation': 'ضَعْ شَفَتَيْكَ مَعًا ثُمَّ افْتَحْ وَانْخَفِضْ وَقُلْ (بِ)',
-          'ruleAudio': 'audio/letters/phrases/baa_kasra_demo.mp3',
+          'explanation': 'الْكَسْرَةُ شَرْطَةٌ أَسْفَلَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْبَاءِ إِلَى (بِ)',
+          'ruleAudio': 'audio/lessons/baa/sounds/baa_kasra_rule.mp3',
           'examples': [
             {
-              'word': 'بِنْت',
-              'position': 'بَاءٌ مَكْسُورَة',
-              'audio': 'audio/letters/short_vowels/baa_kasra.mp3',
-              'image': 'assets/images/lessons/baa/baa_drag_words.jpg',
+              'word': 'بِطِّيخ',
+              'position': 'بَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_betteekh.mp3',
+              'image': 'assets/images/lessons/baa/sounds/betteekh.png',
             },
             {
-              'word': 'بِطِّيخ',
-              'position': 'بَاءٌ مَكْسُورَة',
-              'audio': 'audio/letters/words/baa_word4.mp3',
-              'image': 'assets/images/lessons/baa/baa_sounds.jpg',
+              'word': 'بِنْت',
+              'position': 'بَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_bint.mp3',
+              'image': 'assets/images/lessons/baa/sounds/bint.png',
             },
           ],
         },
@@ -110,18 +116,19 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'عَلَامَةُ السُّكُونِ (بْ)',
           'vowelMark': 'بْ',
           'color': const Color(0xFF5D4037),
-          'explanation': 'حَرْفُ الْبَاءِ حَرْفٌ سَاكِنٌ تَضَعُ فِيهِ شَفَتَيْكَ مَعًا ثُمَّ تَفْتَحُهُمَا',
-          'ruleAudio': 'audio/letters/short_vowels/baa_sukoon.mp3',
+          'explanation': 'السُّكُونُ فَوْقَ الْبَاءِ يَجْعَلُهَا بِدُونِ حَرَكَةٍ فَتَسْكُنُ (بْ)',
+          'ruleAudio': 'audio/lessons/baa/sounds/baa_sukoon_rule.mp3',
           'examples': [
             {
-              'word': 'حَبْل',
-              'position': 'بَاءٌ سَاكِنَة',
-              'audio': 'audio/letters/words/baa_word3.mp3',
-              'image': 'assets/images/lessons/baa/baa_circus.jpg',
+              'word': 'إِبْرَة',
+              'position': 'بَاءٌ سَاكِنَةٌ فِي وَسَطِ الْكَلِمَةِ',
+              'audio': 'audio/lessons/baa/sounds/word_ibra.mp3',
+              'image': 'assets/images/lessons/baa/sounds/ibra.png',
             },
           ],
         },
       ];
+
     }
 
     // افتراضي لحرف الألف (مطابقة للأسطوانة الأصلية ahdaf_a2)
@@ -243,10 +250,26 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   }
 
   void _triggerAutoPlay() {
-    Future.delayed(const Duration(milliseconds: 300), () {
+    Future.delayed(const Duration(milliseconds: 400), () async {
+      if (!mounted) return;
+      final intro = _getIntroAudioForLetter(widget.letterChar);
+      if (intro != null && !_introPlayed) {
+        // يُشغِّل صوت المقدمة ("أصوات حرف الباء: بَـ") مرة واحدة فقط
+        _introPlayed = true;
+        await AudioService.instance.stop();
+        try {
+          await AudioService.instance.playAsset(intro);
+          // ينتظر انتهاء المقدمة ثم يُشغِّل شرح أول حركة تلقائياً
+          await AudioService.instance
+              .onPlayerComplete(AudioChannel.voice)
+              ?.first
+              .timeout(const Duration(seconds: 10), onTimeout: () {});
+        } catch (_) {}
+      }
       if (mounted) _playRuleAudio(_harakat[_currentPage]);
     });
   }
+
 
   @override
   void dispose() {

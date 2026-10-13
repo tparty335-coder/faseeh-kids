@@ -28,57 +28,105 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
   static List<Map<String, dynamic>> _getStepsForLetter(String letter) {
     if (letter == 'ب') {
       return [
+        // ── 1. الباء الكاملة المفردة ──────────────────────────────
         {
-          'title': 'كَيْفِيَّةُ كِتَابَةِ حَرْفِ الْبَاءِ',
-          'subtitle': 'نَبْدَأُ مِنَ السِّنَّةِ الْيُمْنَى ثُمَّ جِسْمِ الْبَاءِ ثُمَّ النُّقْطَةِ',
+          'title': 'الْبَاءُ الْكَامِلَةُ (مُفْرَدَة)',
+          'subtitle': 'سِنَّتَانِ يَمِينًا وَيَسَارًا، وَنُقْطَةٌ أَسْفَلَهَا',
           'positionCode': 'isolated',
           'letterShape': 'ب',
-          'position': 'رَسْمُ الْحَرْفِ',
+          'allForms': ['ب'],
+          'formsNote': 'شَكْلٌ وَاحِدٌ فَقَطْ لِلْحَرْفِ الْمُفْرَدِ',
+          'position': 'مُفْرَدَة',
           'exampleWord': 'بَقَرَة',
           'exampleEmoji': '🐄',
-          'imageFile': 'assets/images/lessons/baa/baa_words.jpg',
-          'audio': 'audio/letters/core/baa_sound.mp3',
-          'wordAudio': 'audio/letters/words/baa_word.mp3',
+          'imageFile': 'assets/images/lessons/baa/sounds/baqara.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w8.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_baqara.mp3',
           'color': const Color(0xFF673AB7),
         },
+        // ── 2. الباء في أول الكلمة ───────────────────────────────
         {
           'title': 'الْبَاءُ فِي أَوَّلِ الْكَلِمَةِ',
-          'subtitle': 'يَتَّصِلُ بِمَا بَعْدَهُ — مِثَالٌ: بَاب',
+          'subtitle': 'شَكْلٌ وَاحِدٌ فَقَطْ — تَتَّصِلُ بِمَا بَعْدَهَا مِنَ الْيَسَارِ',
           'positionCode': 'start',
           'letterShape': 'بـ',
-          'position': 'أَوَّلُ الْكَلِمَةِ',
+          'allForms': ['بـ'],
+          'formsNote': 'لَيْسَ لِلْبَاءِ فِي الْبِدَايَةِ إِلَّا هَذَا الشَّكْلُ',
+          'position': 'أَوَّلُ الْكَلِمَة',
           'exampleWord': 'بَاب',
           'exampleEmoji': '🚪',
-          'imageFile': 'assets/images/lessons/baa/baa_madd.jpg',
-          'audio': 'audio/letters/core/baa_pos_start.mp3',
-          'wordAudio': 'audio/letters/words/baa_word.mp3',
+          'imageFile': 'assets/images/lessons/baa/sounds/bab.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w9.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_bab.mp3',
           'color': const Color(0xFFE53935),
         },
+        // ── 3. الباء في وسط الكلمة (شكل ①: بعد حرف متصل) ───────
         {
           'title': 'الْبَاءُ فِي وَسَطِ الْكَلِمَةِ',
-          'subtitle': 'يَتَّصِلُ بِمَا قَبْلَهُ وَبِمَا بَعْدَهُ — مِثَالٌ: ثُعْبَان',
+          'subtitle': 'الشَّكْلُ الأَوَّلُ: بَعْدَ حَرْفٍ يَتَّصِلُ بِمَا بَعْدَهُ مِثْلَ (ث، ع، ن...)',
           'positionCode': 'middle',
           'letterShape': 'ـبـ',
-          'position': 'وَسَطُ الْكَلِمَةِ',
-          'exampleWord': 'ثُعْبَان',
-          'exampleEmoji': '🐍',
-          'imageFile': 'assets/images/lessons/baa/baa_fishing.jpg',
-          'audio': 'audio/letters/core/baa_pos_middle.mp3',
-          'wordAudio': 'audio/letters/words/baa_word2.mp3',
+          'allForms': ['ـبـ', 'بـ'],
+          'formsNote': 'شَكْلَانِ حَسَبَ الْحَرْفِ الَّذِي قَبْلَهَا',
+          'formsLabels': ['بعد متصل', 'بعد رافسة'],
+          'position': 'وَسَطُ الْكَلِمَة (١)',
+          'exampleWord': 'حُبُوب',
+          'exampleEmoji': '🌾',
+          'imageFile': 'assets/images/lessons/baa/sounds/hobob.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w10.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_hobob.mp3',
           'color': const Color(0xFFFF8F00),
         },
+        // ── 4. الباء في وسط الكلمة (شكل ②: بعد حرف رافسة) ──────
+        {
+          'title': 'الْبَاءُ فِي وَسَطِ الْكَلِمَةِ',
+          'subtitle': 'الشَّكْلُ الثَّانِي: بَعْدَ حَرْفٍ رَافِسٍ (ا، و، ر، ز، د، ذ، ...) تَبْدُو كَأَوَّلِ الْكَلِمَةِ',
+          'positionCode': 'mid_disconnected',
+          'letterShape': 'بـ',
+          'allForms': ['ـبـ', 'بـ'],
+          'formsNote': 'الْحُرُوفُ الرَّافِسَةُ: ا و ر ز د ذ',
+          'formsLabels': ['بعد متصل', 'بعد رافسة'],
+          'position': 'وَسَطُ الْكَلِمَة (٢)',
+          'exampleWord': 'إِبْرَة',
+          'exampleEmoji': '🪡',
+          'imageFile': 'assets/images/lessons/baa/sounds/ibra.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w10.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_ibra.mp3',
+          'color': const Color(0xFF1976D2),
+        },
+        // ── 5. الباء في آخر الكلمة (شكل ①: بعد حرف متصل) ───────
         {
           'title': 'الْبَاءُ فِي آخِرِ الْكَلِمَةِ',
-          'subtitle': 'يَأْتِي مُتَّصِلاً بِمَا قَبْلَهُ — مِثَالٌ: حَبّ',
+          'subtitle': 'الشَّكْلُ الأَوَّلُ: بَعْدَ حَرْفٍ يَتَّصِلُ بِمَا بَعْدَهُ',
           'positionCode': 'end',
           'letterShape': 'ـب',
-          'position': 'آخِرُ الْكَلِمَةِ',
-          'exampleWord': 'حَبّ',
-          'exampleEmoji': '🌾',
-          'imageFile': 'assets/images/lessons/baa/baa_bee.jpg',
-          'audio': 'audio/letters/core/baa_pos_end.mp3',
-          'wordAudio': 'audio/letters/words/baa_word4.mp3',
+          'allForms': ['ـب', 'ب'],
+          'formsNote': 'شَكْلَانِ حَسَبَ الْحَرْفِ الَّذِي قَبْلَهَا',
+          'formsLabels': ['بعد متصل', 'بعد رافسة'],
+          'position': 'آخِرُ الْكَلِمَة (١)',
+          'exampleWord': 'يَكْتُب',
+          'exampleEmoji': '✍️',
+          'imageFile': 'assets/images/lessons/baa/sounds/yaktb.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w11.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_yaktb.mp3',
           'color': const Color(0xFF43A047),
+        },
+        // ── 6. الباء في آخر الكلمة (شكل ②: بعد حرف رافسة) ──────
+        {
+          'title': 'الْبَاءُ فِي آخِرِ الْكَلِمَةِ',
+          'subtitle': 'الشَّكْلُ الثَّانِي: بَعْدَ حَرْفٍ رَافِسٍ — تُشْبِهُ شَكْلَهَا الْمُفْرَدَ',
+          'positionCode': 'end_disconnected',
+          'letterShape': 'ب',
+          'allForms': ['ـب', 'ب'],
+          'formsNote': 'مِثَالٌ: باب، ذَهَب',
+          'formsLabels': ['بعد متصل', 'بعد رافسة'],
+          'position': 'آخِرُ الْكَلِمَة (٢)',
+          'exampleWord': 'بَاب',
+          'exampleEmoji': '🚪',
+          'imageFile': 'assets/images/lessons/baa/sounds/bab.png',
+          'audio': 'audio/lessons/baa/writing/baa_write_w11.mp3',
+          'wordAudio': 'audio/lessons/baa/sounds/word_bab.mp3',
+          'color': const Color(0xFF00838F),
         },
       ];
     }
@@ -212,7 +260,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                     'كِتَابَةُ وَمَوَاضِعُ الْحَرْفِ (${_currentStep + 1}/${_steps.length}) — ${_steps[_currentStep]['position']}',
                     style: const TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: 13,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -251,97 +299,189 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                       constraints: BoxConstraints(maxWidth: isTablet ? 700 : double.infinity),
                       child: Column(
                         children: [
-                          // 1. بطاقة الصورة الأصلية للدرس ومثال الموضع
-                          GestureDetector(
-                            onTap: () => _playAudio(s['wordAudio'] as String),
-                            child: Container(
-                              width: double.infinity,
-                              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                              decoration: BoxDecoration(
-                                color: color.withValues(alpha: 0.08),
-                                borderRadius: BorderRadius.circular(22),
-                                border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
-                              ),
-                              child: Row(
-                                children: [
-                                  // صورة الدرس الأصلية — تتناسب مع حجم الشاشة
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(14),
-                                    child: SizedBox(
-                                      width: isTablet ? 120.0 : 80.0,
-                                      height: isTablet ? 90.0 : 60.0,
-                                      child: Image.asset(
-                                        imageFile,
-                                        fit: BoxFit.cover,
-                                        errorBuilder: (_, __, ___) => Container(
-                                          color: Colors.grey.shade200,
-                                          child: const Icon(Icons.image, color: Colors.grey),
+                          // 1. بطاقة العنوان + الصورة + المثال
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                            decoration: BoxDecoration(
+                              color: color.withValues(alpha: 0.08),
+                              borderRadius: BorderRadius.circular(22),
+                              border: Border.all(color: color.withValues(alpha: 0.3), width: 2),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // ── عنوان كبير واضح ──
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        s['title'] as String,
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: isTablet ? 22 : 18,
+                                          fontWeight: FontWeight.w900,
+                                          color: color,
                                         ),
                                       ),
                                     ),
+                                    // زر استماع للشرح الصوتي الأصلي
+                                    GestureDetector(
+                                      onTap: () => _playAudio(s['audio'] as String),
+                                      child: Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                          color: color,
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                        child: const Icon(Icons.volume_up_rounded,
+                                            color: Colors.white, size: 22),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  s['subtitle'] as String,
+                                  style: TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey.shade700,
                                   ),
-                                  const SizedBox(width: 14),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Text(
-                                              s['title'] as String,
-                                              style: TextStyle(
-                                                fontFamily: 'Cairo',
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w900,
-                                                color: color,
-                                              ),
+                                ),
+                                const SizedBox(height: 10),
+                                // ── الصورة + المثال ──
+                                GestureDetector(
+                                  onTap: () => _playAudio(s['wordAudio'] as String),
+                                  child: Row(
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(14),
+                                        child: SizedBox(
+                                          width: isTablet ? 130.0 : 100.0,
+                                          height: isTablet ? 100.0 : 75.0,
+                                          child: Image.asset(
+                                            imageFile,
+                                            fit: BoxFit.cover,
+                                            errorBuilder: (_, __, ___) => Container(
+                                              color: Colors.grey.shade200,
+                                              child: const Icon(Icons.image, color: Colors.grey),
                                             ),
-                                            const SizedBox(width: 8),
-                                            Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                              decoration: BoxDecoration(
-                                                color: color,
-                                                borderRadius: BorderRadius.circular(10),
-                                              ),
-                                              child: Text(
-                                                shape,
-                                                style: const TextStyle(
-                                                  fontFamily: 'Cairo',
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'مِثَالٌ: $example ${s['exampleEmoji']}',
+                                            style: TextStyle(
+                                              fontFamily: 'Cairo',
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.grey.shade800,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Icon(Icons.volume_up_rounded, size: 18, color: color),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          const SizedBox(height: 10),
+
+                          // 2. ── شريط أشكال الحرف في هذا الموضع ──
+                          if (s.containsKey('allForms')) ...[
+                            Container(
+                              width: double.infinity,
+                              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(18),
+                                border: Border.all(color: color.withValues(alpha: 0.25), width: 1.5),
+                                boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2))],
+                              ),
+                              child: Column(
+                                children: [
+                                  // ملاحظة الشكل
+                                  Text(
+                                    s['formsNote'] as String,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: 'Cairo',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: color.withValues(alpha: 0.8),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  // الأشكال
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: () {
+                                      final forms = s['allForms'] as List<dynamic>;
+                                      final labels = s['formsLabels'] as List<dynamic>?;
+                                      return List.generate(forms.length, (fi) {
+                                        final f = forms[fi] as String;
+                                        final isActive = f == shape;
+                                        return Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6),
+                                          child: Column(
+                                            children: [
+                                              AnimatedContainer(
+                                                duration: const Duration(milliseconds: 200),
+                                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                                                decoration: BoxDecoration(
+                                                  color: isActive ? color : Colors.grey.shade100,
+                                                  borderRadius: BorderRadius.circular(14),
+                                                  border: Border.all(
+                                                    color: isActive ? color : Colors.grey.shade300,
+                                                    width: isActive ? 2.5 : 1,
+                                                  ),
+                                                  boxShadow: isActive ? [BoxShadow(color: color.withValues(alpha: 0.3), blurRadius: 8, offset: const Offset(0, 3))] : [],
+                                                ),
+                                                child: Text(
+                                                  f,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Cairo',
+                                                    fontSize: 30,
+                                                    fontWeight: FontWeight.w900,
+                                                    color: isActive ? Colors.white : Colors.grey.shade500,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(height: 2),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              'مِثَالٌ: $example',
-                                              style: TextStyle(
-                                                fontFamily: 'Cairo',
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.grey.shade800,
-                                              ),
-                                            ),
-                                            const SizedBox(width: 6),
-                                            Icon(Icons.volume_up_rounded, size: 18, color: color),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                              if (labels != null && fi < labels.length) ...[
+                                                const SizedBox(height: 4),
+                                                Text(
+                                                  labels[fi] as String,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Cairo',
+                                                    fontSize: 14,
+                                                    color: isActive ? color : Colors.grey,
+                                                    fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+                                                  ),
+                                                ),
+                                              ],
+                                            ],
+                                          ),
+                                        );
+                                      });
+                                    }(),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
+                            const SizedBox(height: 10),
+                          ],
 
-                          const SizedBox(height: 12),
-
-                          // 2. لوحة التتبع والكتابة التفاعلية بأسلوب لينغو بنانا
+                          // 3. لوحة التتبع والكتابة التفاعلية
                           ArabicLetterTracingCanvas(
                             letterChar: widget.letterChar,
                             position: positionCode,

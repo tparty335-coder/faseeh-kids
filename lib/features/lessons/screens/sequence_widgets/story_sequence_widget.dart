@@ -3,6 +3,7 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_story_station.dart';
 
 class StorySequenceWidget extends StatefulWidget {
   final VoidCallback onNext;
@@ -179,6 +180,13 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.letterChar == 'ب') {
+      return BaaStoryStation(
+        onNext: widget.onNext,
+        onPrevious: () => Navigator.of(context).maybePop(),
+      );
+    }
+
     final frame = _storyFrames[_currentFrameIndex];
     final isTablet = MediaQuery.sizeOf(context).width > 600;
     final isLast = _currentFrameIndex == _storyFrames.length - 1;
