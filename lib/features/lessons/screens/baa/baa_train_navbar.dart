@@ -39,6 +39,11 @@ class BaaTrainNavBar extends StatelessWidget {
       'color': Color(0xFF1976D2),
     },
     {
+      'title': 'كلمات الحرف',
+      'icon': Icons.abc_rounded,
+      'color': Color(0xFFC62828),
+    },
+    {
       'title': 'ألعاب',
       'icon': Icons.sports_esports_rounded,
       'color': Color(0xFFF57C00),
@@ -69,38 +74,44 @@ class BaaTrainNavBar extends StatelessWidget {
           final isActive = index == activeStationIndex;
           final color = s['color'] as Color;
 
-          return GestureDetector(
-            onTap: () => onStationSelected(index),
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-              decoration: BoxDecoration(
-                color: isActive ? color.withValues(alpha: 0.18) : Colors.transparent,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(
-                  color: isActive ? color : Colors.transparent,
-                  width: 2,
+          return Flexible(
+            child: GestureDetector(
+              onTap: () => onStationSelected(index),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 250),
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                decoration: BoxDecoration(
+                  color: isActive ? color.withValues(alpha: 0.18) : Colors.transparent,
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(
+                    color: isActive ? color : Colors.transparent,
+                    width: 2,
+                  ),
                 ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(
-                    s['icon'] as IconData,
-                    color: isActive ? color : Colors.brown.shade400,
-                    size: isActive ? 28 : 22,
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    s['title'] as String,
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: isActive ? 13 : 11,
-                      fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
-                      color: isActive ? color : Colors.brown.shade700,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      s['icon'] as IconData,
+                      color: isActive ? color : Colors.brown.shade400,
+                      size: isActive ? 26 : 20,
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 2),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        s['title'] as String,
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: isActive ? 12 : 10,
+                          fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+                          color: isActive ? color : Colors.brown.shade700,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );

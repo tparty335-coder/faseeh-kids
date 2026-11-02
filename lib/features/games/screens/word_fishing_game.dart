@@ -95,12 +95,14 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
 
   @override
   void dispose() {
+    AudioService.instance.stop();
     _confetti.dispose();
     super.dispose();
   }
 
   // ─── الصوت ────────────────────────────────────────────────────────────────
   Future<void> _playInstruction() async {
+    if (!mounted || _gameOver) return;
     await AudioService.instance.playAsset(
       'audio/instructions/alif_quiz_fish_explain.mp3',
       channel: AudioChannel.voice,

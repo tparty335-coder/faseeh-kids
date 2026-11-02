@@ -29,10 +29,34 @@ class LetterStroke {
 /// بيانات مقاطع الحروف العربية ومواضعها بدقة متناهية
 class ArabicLetterTracingData {
   static List<LetterStroke> getStrokesForLetter(String letter, {String position = 'isolated'}) {
-    if (letter == 'ب') {
-      return _getBaaStrokes(position);
+    switch (letter) {
+      case 'ب':
+        return _getBaaStrokes(position);
+      case 'ت':
+        return _getTaaStrokes(position);
+      case 'ث':
+        return _getThaaStrokes(position);
+      case 'ج':
+        return _getJeemFamilyStrokes(position, letter: 'ج', dotMode: 'inside');
+      case 'ح':
+        return _getJeemFamilyStrokes(position, letter: 'ح', dotMode: 'none');
+      case 'خ':
+        return _getJeemFamilyStrokes(position, letter: 'خ', dotMode: 'above');
+      case 'د':
+        return _getDalFamilyStrokes(position, letter: 'د', hasDot: false);
+      case 'ذ':
+        return _getDalFamilyStrokes(position, letter: 'ذ', hasDot: true);
+      case 'ر':
+        return _getRaaFamilyStrokes(position, letter: 'ر', hasDot: false);
+      case 'ز':
+        return _getRaaFamilyStrokes(position, letter: 'ز', hasDot: true);
+      case 'س':
+        return _getSeenFamilyStrokes(position, letter: 'س', hasThreeDots: false);
+      case 'ش':
+        return _getSeenFamilyStrokes(position, letter: 'ش', hasThreeDots: true);
+      default:
+        return _getAlifStrokes(position);
     }
-    return _getAlifStrokes(position);
   }
 
   // ─── مقاطع حرف الألف (أ) ───────────────────────────────────────────
@@ -364,6 +388,573 @@ class ArabicLetterTracingData {
       ),
     ];
   }
+
+  // ─── مقاطع حرف التاء (ت) ───
+  static List<LetterStroke> _getTaaStrokes(String position) {
+    if (position == 'mid_disconnected') {
+      return _getTaaStrokes('start');
+    }
+    if (position == 'end_disconnected') {
+      return _getTaaStrokes('isolated');
+    }
+    if (position == 'start') {
+      // التاء في أول الكلمة (تـ)
+      return [
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.80, 0.46),
+          end: const Offset(0.80, 0.68),
+          pathPoints: [
+            const Offset(0.80, 0.46),
+            const Offset(0.80, 0.57),
+            const Offset(0.80, 0.68),
+          ],
+          hintText: 'ابدأ من النقطة (١) وانزل بالسنّة اليمنى للتاء ⬇️',
+        ),
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.80, 0.68),
+          end: const Offset(0.20, 0.68),
+          pathPoints: [
+            const Offset(0.80, 0.68),
+            const Offset(0.60, 0.68),
+            const Offset(0.40, 0.68),
+            const Offset(0.20, 0.68),
+          ],
+          hintText: 'من النقطة (٢) اسحب خط الاتصال لليسار ⬅️',
+        ),
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: const Offset(0.58, 0.30),
+          end: const Offset(0.58, 0.30),
+          pathPoints: [const Offset(0.58, 0.30)],
+          hintText: 'اضغط على النقطة (٣) لوضع النقطة الأولى للتاء في الأعلى •',
+          isTapOnly: true,
+        ),
+        LetterStroke(
+          index: 4,
+          label: '٤',
+          start: const Offset(0.44, 0.30),
+          end: const Offset(0.44, 0.30),
+          pathPoints: [const Offset(0.44, 0.30)],
+          hintText: 'اضغط على النقطة (٤) لوضع النقطة الثانية للتاء في الأعلى ••',
+          isTapOnly: true,
+        ),
+      ];
+    } else if (position == 'middle') {
+      // التاء في وسط الكلمة (ـتـ)
+      return [
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.85, 0.68),
+          end: const Offset(0.50, 0.68),
+          pathPoints: [
+            const Offset(0.85, 0.68),
+            const Offset(0.68, 0.68),
+            const Offset(0.50, 0.68),
+          ],
+          hintText: 'ابدأ من النقطة (١) واسحب خط الاتصال الأيمن ⬅️',
+        ),
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.50, 0.68),
+          end: const Offset(0.50, 0.46),
+          pathPoints: [
+            const Offset(0.50, 0.68),
+            const Offset(0.50, 0.46),
+          ],
+          hintText: 'من النقطة (٢) ارفع سنّة التاء للأعلى ⬆️',
+        ),
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: const Offset(0.50, 0.68),
+          end: const Offset(0.15, 0.68),
+          pathPoints: [
+            const Offset(0.50, 0.68),
+            const Offset(0.32, 0.68),
+            const Offset(0.15, 0.68),
+          ],
+          hintText: 'من النقطة (٣) اسحب خط الاتصال لليسار ⬅️',
+        ),
+        LetterStroke(
+          index: 4,
+          label: '٤',
+          start: const Offset(0.57, 0.28),
+          end: const Offset(0.57, 0.28),
+          pathPoints: [const Offset(0.57, 0.28)],
+          hintText: 'اضغط على النقطة (٤) لوضع النقطة الأولى للتاء •',
+          isTapOnly: true,
+        ),
+        LetterStroke(
+          index: 5,
+          label: '٥',
+          start: const Offset(0.43, 0.28),
+          end: const Offset(0.43, 0.28),
+          pathPoints: [const Offset(0.43, 0.28)],
+          hintText: 'اضغط على النقطة (٥) لوضع النقطة الثانية للتاء ••',
+          isTapOnly: true,
+        ),
+      ];
+    } else if (position == 'end') {
+      // التاء في آخر الكلمة متصلة (ـت)
+      return [
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.85, 0.68),
+          end: const Offset(0.18, 0.68),
+          pathPoints: [
+            const Offset(0.85, 0.68),
+            const Offset(0.50, 0.68),
+            const Offset(0.18, 0.68),
+          ],
+          hintText: 'ابدأ من النقطة (١) واسحب جسم التاء المتصل لليسار ⬅️',
+        ),
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.18, 0.68),
+          end: const Offset(0.18, 0.48),
+          pathPoints: [
+            const Offset(0.18, 0.68),
+            const Offset(0.18, 0.58),
+            const Offset(0.18, 0.48),
+          ],
+          hintText: 'من النقطة (٢) ارفع السنّة اليسرى للتاء للأعلى ⬆️',
+        ),
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: const Offset(0.57, 0.32),
+          end: const Offset(0.57, 0.32),
+          pathPoints: [const Offset(0.57, 0.32)],
+          hintText: 'اضغط على النقطة (٣) لوضع النقطة الأولى للتاء •',
+          isTapOnly: true,
+        ),
+        LetterStroke(
+          index: 4,
+          label: '٤',
+          start: const Offset(0.43, 0.32),
+          end: const Offset(0.43, 0.32),
+          pathPoints: [const Offset(0.43, 0.32)],
+          hintText: 'اضغط على النقطة (٤) لوضع النقطة الثانية للتاء ••',
+          isTapOnly: true,
+        ),
+      ];
+    }
+
+    // التاء الكاملة المنفصلة (ت)
+    return [
+      LetterStroke(
+        index: 1,
+        label: '١',
+        start: const Offset(0.82, 0.48),
+        end: const Offset(0.82, 0.68),
+        pathPoints: [
+          const Offset(0.82, 0.48),
+          const Offset(0.82, 0.58),
+          const Offset(0.82, 0.68),
+        ],
+        hintText: 'ابدأ من النقطة (١) وانزل بالسنّة اليمنى لحرف التاء ⬇️',
+      ),
+      LetterStroke(
+        index: 2,
+        label: '٢',
+        start: const Offset(0.82, 0.68),
+        end: const Offset(0.18, 0.68),
+        pathPoints: [
+          const Offset(0.82, 0.68),
+          const Offset(0.60, 0.68),
+          const Offset(0.40, 0.68),
+          const Offset(0.18, 0.68),
+        ],
+        hintText: 'من النقطة (٢) اسحب صحن التاء لليسار ⬅️',
+      ),
+      LetterStroke(
+        index: 3,
+        label: '٣',
+        start: const Offset(0.18, 0.68),
+        end: const Offset(0.18, 0.48),
+        pathPoints: [
+          const Offset(0.18, 0.68),
+          const Offset(0.18, 0.58),
+          const Offset(0.18, 0.48),
+        ],
+        hintText: 'من النقطة (٣) ارفع السنّة اليسرى للتاء للأعلى ⬆️',
+      ),
+      LetterStroke(
+        index: 4,
+        label: '٤',
+        start: const Offset(0.57, 0.32),
+        end: const Offset(0.57, 0.32),
+        pathPoints: [const Offset(0.57, 0.32)],
+        hintText: 'اضغط على النقطة (٤) لوضع النقطة اليمنى للتاء في الأعلى •',
+        isTapOnly: true,
+      ),
+      LetterStroke(
+        index: 5,
+        label: '٥',
+        start: const Offset(0.43, 0.32),
+        end: const Offset(0.43, 0.32),
+        pathPoints: [const Offset(0.43, 0.32)],
+        hintText: 'اضغط على النقطة (٥) لوضع النقطة اليسرى للتاء في الأعلى ••',
+        isTapOnly: true,
+      ),
+    ];
+  }
+
+  // ─── مقاطع حرف الثاء (ث) ───
+  static List<LetterStroke> _getThaaStrokes(String position) {
+    final taaStrokes = _getTaaStrokes(position);
+    // استبدال النقطتين بثلاث نقاط في الأعلى
+    final bodyStrokes = taaStrokes.where((s) => !s.isTapOnly).map((s) {
+      return LetterStroke(
+        index: s.index,
+        label: s.label,
+        start: s.start,
+        end: s.end,
+        pathPoints: s.pathPoints,
+        hintText: s.hintText.replaceAll('التاء', 'الثاء'),
+        strokeWidth: s.strokeWidth,
+      );
+    }).toList();
+    const arabicLabels = ['١', '٢', '٣', '٤', '٥', '٦'];
+    final n1 = bodyStrokes.length + 1;
+    final n2 = bodyStrokes.length + 2;
+    final n3 = bodyStrokes.length + 3;
+    return [
+      ...bodyStrokes,
+      LetterStroke(
+        index: n1,
+        label: arabicLabels[n1 - 1],
+        start: const Offset(0.58, 0.34),
+        end: const Offset(0.58, 0.34),
+        pathPoints: [const Offset(0.58, 0.34)],
+        hintText: 'اضغط لوضع النقطة الأولى للثاء •',
+        isTapOnly: true,
+      ),
+      LetterStroke(
+        index: n2,
+        label: arabicLabels[n2 - 1],
+        start: const Offset(0.42, 0.34),
+        end: const Offset(0.42, 0.34),
+        pathPoints: [const Offset(0.42, 0.34)],
+        hintText: 'اضغط لوضع النقطة الثانية للثاء ••',
+        isTapOnly: true,
+      ),
+      LetterStroke(
+        index: n3,
+        label: arabicLabels[n3 - 1],
+        start: const Offset(0.50, 0.22),
+        end: const Offset(0.50, 0.22),
+        pathPoints: [const Offset(0.50, 0.22)],
+        hintText: 'اضغط لوضع النقطة الثالثة للثاء في القمة •••',
+        isTapOnly: true,
+      ),
+    ];
+  }
+
+  // ─── مقاطع عائلة الجيم والحاء والخاء (ج / ح / خ) ───
+  static List<LetterStroke> _getJeemFamilyStrokes(
+    String position, {
+    required String letter,
+    required String dotMode, // 'inside' | 'none' | 'above'
+  }) {
+    final name = letter == 'ج' ? 'الجيم' : (letter == 'ح' ? 'الحاء' : 'الخاء');
+    final List<LetterStroke> strokes = [];
+
+    if (position == 'start' || position == 'middle' || position == 'mid_disconnected') {
+      strokes.add(
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.28, 0.42),
+          end: const Offset(0.75, 0.58),
+          pathPoints: const [
+            Offset(0.28, 0.42),
+            Offset(0.48, 0.36),
+            Offset(0.66, 0.46),
+            Offset(0.75, 0.58),
+          ],
+          hintText: '① ابدأ من اليسار وارسم حاجب $name نحو اليمين ↷',
+        ),
+      );
+      strokes.add(
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.75, 0.58),
+          end: const Offset(0.18, 0.58),
+          pathPoints: const [
+            Offset(0.75, 0.58),
+            Offset(0.46, 0.58),
+            Offset(0.18, 0.58),
+          ],
+          hintText: '② اسحب خط الاتصال على السطر لليسار ⬅️',
+        ),
+      );
+    } else {
+      // مفرد أو آخر الكلمة
+      strokes.add(
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.28, 0.30),
+          end: const Offset(0.74, 0.36),
+          pathPoints: const [
+            Offset(0.28, 0.30),
+            Offset(0.50, 0.26),
+            Offset(0.74, 0.36),
+          ],
+          hintText: '① ارسم حاجب $name في الأعلى ↷',
+        ),
+      );
+      strokes.add(
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: const Offset(0.74, 0.36),
+          end: const Offset(0.66, 0.84),
+          pathPoints: const [
+            Offset(0.74, 0.36),
+            Offset(0.45, 0.48),
+            Offset(0.30, 0.65),
+            Offset(0.42, 0.84),
+            Offset(0.66, 0.84),
+          ],
+          hintText: '② انزل ببطن $name المقوّس للأسفل ↶',
+        ),
+      );
+    }
+
+    if (dotMode == 'inside') {
+      final dotPos = (position == 'start' || position == 'middle' || position == 'mid_disconnected')
+          ? const Offset(0.50, 0.76)
+          : const Offset(0.54, 0.65);
+      strokes.add(
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: dotPos,
+          end: dotPos,
+          pathPoints: [dotPos],
+          hintText: '③ اضغط لوضع نقطة الجيم •',
+          isTapOnly: true,
+        ),
+      );
+    } else if (dotMode == 'above') {
+      const dotPos = Offset(0.50, 0.16);
+      strokes.add(
+        LetterStroke(
+          index: 3,
+          label: '٣',
+          start: dotPos,
+          end: dotPos,
+          pathPoints: const [dotPos],
+          hintText: '③ اضغط لوضع نقطة الخاء في الأعلى •',
+          isTapOnly: true,
+        ),
+      );
+    }
+    return strokes;
+  }
+
+  // ─── مقاطع عائلة الدال والذال (د / ذ) ───
+  static List<LetterStroke> _getDalFamilyStrokes(
+    String position, {
+    required String letter,
+    required bool hasDot,
+  }) {
+    final name = hasDot ? 'الذال' : 'الدال';
+    final List<LetterStroke> strokes = [
+      LetterStroke(
+        index: 1,
+        label: '١',
+        start: const Offset(0.62, 0.34),
+        end: const Offset(0.74, 0.66),
+        pathPoints: const [
+          Offset(0.62, 0.34),
+          Offset(0.70, 0.50),
+          Offset(0.74, 0.66),
+        ],
+        hintText: '① ابدأ من أعلى وانزل بظهر $name المائل ⬇️',
+      ),
+      LetterStroke(
+        index: 2,
+        label: '٢',
+        start: const Offset(0.74, 0.66),
+        end: const Offset(0.28, 0.66),
+        pathPoints: const [
+          Offset(0.74, 0.66),
+          Offset(0.50, 0.66),
+          Offset(0.28, 0.66),
+        ],
+        hintText: '② اسحب قاعدة $name على السطر لليسار ⬅️',
+      ),
+    ];
+    if (hasDot) {
+      strokes.add(
+        const LetterStroke(
+          index: 3,
+          label: '٣',
+          start: Offset(0.56, 0.20),
+          end: Offset(0.56, 0.20),
+          pathPoints: [Offset(0.56, 0.20)],
+          hintText: '③ اضغط لوضع نقطة الذال في الأعلى •',
+          isTapOnly: true,
+        ),
+      );
+    }
+    return strokes;
+  }
+
+  // ─── مقاطع عائلة الراء والزاي (ر / ز) ───
+  static List<LetterStroke> _getRaaFamilyStrokes(
+    String position, {
+    required String letter,
+    required bool hasDot,
+  }) {
+    final name = hasDot ? 'الزاي' : 'الراء';
+    final List<LetterStroke> strokes = [
+      LetterStroke(
+        index: 1,
+        label: '١',
+        start: const Offset(0.66, 0.36),
+        end: const Offset(0.64, 0.56),
+        pathPoints: const [
+          Offset(0.66, 0.36),
+          Offset(0.66, 0.46),
+          Offset(0.64, 0.56),
+        ],
+        hintText: '① ابدأ بسنّة $name من الأعلى للأسفل ⬇️',
+      ),
+      LetterStroke(
+        index: 2,
+        label: '٢',
+        start: const Offset(0.64, 0.56),
+        end: const Offset(0.26, 0.82),
+        pathPoints: const [
+          Offset(0.64, 0.56),
+          Offset(0.52, 0.72),
+          Offset(0.38, 0.80),
+          Offset(0.26, 0.82),
+        ],
+        hintText: '② اسحب ذيل $name المقوّس تحت السطر لليسار ↙️',
+      ),
+    ];
+    if (hasDot) {
+      strokes.add(
+        const LetterStroke(
+          index: 3,
+          label: '٣',
+          start: Offset(0.64, 0.20),
+          end: Offset(0.64, 0.20),
+          pathPoints: [Offset(0.64, 0.20)],
+          hintText: '③ اضغط لوضع نقطة الزاي في الأعلى •',
+          isTapOnly: true,
+        ),
+      );
+    }
+    return strokes;
+  }
+
+  // ─── مقاطع عائلة السين والشين (س / ش) ───
+  static List<LetterStroke> _getSeenFamilyStrokes(
+    String position, {
+    required String letter,
+    required bool hasThreeDots,
+  }) {
+    final name = hasThreeDots ? 'الشين' : 'السين';
+    final List<LetterStroke> strokes = [
+      LetterStroke(
+        index: 1,
+        label: '١',
+        start: const Offset(0.84, 0.44),
+        end: const Offset(0.66, 0.58),
+        pathPoints: const [
+          Offset(0.84, 0.44),
+          Offset(0.84, 0.58),
+          Offset(0.75, 0.58),
+          Offset(0.66, 0.44),
+          Offset(0.66, 0.58),
+        ],
+        hintText: '① ارسم السنّة الأولى والثانية لحرف $name ⬅️',
+      ),
+      LetterStroke(
+        index: 2,
+        label: '٢',
+        start: const Offset(0.66, 0.58),
+        end: const Offset(0.48, 0.58),
+        pathPoints: const [
+          Offset(0.66, 0.58),
+          Offset(0.57, 0.58),
+          Offset(0.48, 0.44),
+          Offset(0.48, 0.58),
+        ],
+        hintText: '② ارسم السنّة الثالثة لحرف $name ⬅️',
+      ),
+      LetterStroke(
+        index: 3,
+        label: '٣',
+        start: const Offset(0.48, 0.58),
+        end: const Offset(0.18, 0.56),
+        pathPoints: (position == 'start' || position == 'middle' || position == 'mid_disconnected')
+            ? const [
+                Offset(0.48, 0.58),
+                Offset(0.32, 0.58),
+                Offset(0.18, 0.58),
+              ]
+            : const [
+                Offset(0.48, 0.58),
+                Offset(0.44, 0.78),
+                Offset(0.30, 0.82),
+                Offset(0.18, 0.74),
+                Offset(0.18, 0.56),
+              ],
+        hintText: (position == 'start' || position == 'middle' || position == 'mid_disconnected')
+            ? '③ اسحب خط الاتصال على السطر لليسار ⬅️'
+            : '③ ارسم كأس $name العميق وصعوداً لليسار ↶',
+      ),
+    ];
+    if (hasThreeDots) {
+      strokes.addAll(const [
+        LetterStroke(
+          index: 4,
+          label: '٤',
+          start: Offset(0.72, 0.28),
+          end: Offset(0.72, 0.28),
+          pathPoints: [Offset(0.72, 0.28)],
+          hintText: '④ اضغط لوضع النقطة الأولى للشين •',
+          isTapOnly: true,
+        ),
+        LetterStroke(
+          index: 5,
+          label: '٥',
+          start: Offset(0.58, 0.28),
+          end: Offset(0.58, 0.28),
+          pathPoints: [Offset(0.58, 0.28)],
+          hintText: '⑤ اضغط لوضع النقطة الثانية للشين ••',
+          isTapOnly: true,
+        ),
+        LetterStroke(
+          index: 6,
+          label: '٦',
+          start: Offset(0.65, 0.18),
+          end: Offset(0.65, 0.18),
+          pathPoints: [Offset(0.65, 0.18)],
+          hintText: '⑥ اضغط لوضع النقطة الثالثة للشين •••',
+          isTapOnly: true,
+        ),
+      ]);
+    }
+    return strokes;
+  }
 }
 
 /// لوحة تتبع وكتابة الحرف العربي بأسلوب لينغو بنانا التفاعلي
@@ -573,6 +1164,18 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
     });
   }
 
+  static String _letterBadge(String letter) {
+    const letters = [
+      'أ', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص',
+      'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'هـ', 'و', 'ي'
+    ];
+    const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    final idx = letters.indexOf(letter);
+    final num = idx >= 0 ? idx + 1 : 1;
+    final arabicNum = num.toString().split('').map((d) => arabicDigits[int.parse(d)]).join();
+    return '$arabicNum / ٢٨';
+  }
+
   @override
   Widget build(BuildContext context) {
     final stroke = _currentStrokeIndex < _strokes.length
@@ -605,9 +1208,9 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                     color: AppColors.oasisGreen,
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: const Text(
-                    '١ / ٢٨',
-                    style: TextStyle(
+                  child: Text(
+                    _letterBadge(widget.letterChar),
+                    style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 13,
                       fontWeight: FontWeight.bold,

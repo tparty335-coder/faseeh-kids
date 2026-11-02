@@ -1,15 +1,17 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/long_vowels_sequence_widget.dart';
 
 /// محطة الباء الممدودة — حرف الباء (ب)
 class BaaMaddStation extends StatelessWidget {
   final VoidCallback onNext;
   final VoidCallback onPrevious;
+  final bool isActive;
 
   const BaaMaddStation({
     super.key,
     required this.onNext,
     required this.onPrevious,
+    this.isActive = true,
   });
 
   @override
@@ -18,7 +20,7 @@ class BaaMaddStation extends StatelessWidget {
       onNext: onNext,
       onPrevious: onPrevious,
       letterChar: 'ب',
-      isActive: true,
+      isActive: isActive,
     );
   }
 }

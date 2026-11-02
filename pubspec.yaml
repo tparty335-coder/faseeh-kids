@@ -1,5 +1,5 @@
 name: faseeh_kids
-description: "ظپطµظٹط­ ط§ظ„طµط؛ط§ط± - طھط·ط¨ظٹظ‚ طھط¹ظ„ظٹظ… ط§ظ„ظ„ط؛ط© ط§ظ„ط¹ط±ط¨ظٹط© ظ„ظ„ط£ط·ظپط§ظ„ | Arabic Language Learning App for Kids"
+description: "فصيح الصغار - تطبيق تعليم اللغة العربية للأطفال | Arabic Language Learning App for Kids"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -12,58 +12,58 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # â”€â”€â”€ Core State Management (P0-T005) â”€â”€â”€
+  # ─── Core State Management (P0-T005) ───
   flutter_riverpod: ^2.4.9
 
-  # â”€â”€â”€ Local Database (P0-T006) â”€â”€â”€
+  # ─── Local Database (P0-T006) ───
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # â”€â”€â”€ Navigation (P0-T007) â”€â”€â”€
+  # ─── Navigation (P0-T007) ───
   go_router: ^13.1.0
 
-  # â”€â”€â”€ Audio (P0-T008) â”€â”€â”€
+  # ─── Audio (P0-T008) ───
   audioplayers: ^5.2.1
 
-  # â”€â”€â”€ Typography (P0-T009) â”€â”€â”€
+  # ─── Typography (P0-T009) ───
   google_fonts: ^6.2.1
 
-  # â”€â”€â”€ Animations (P0-T010) â”€â”€â”€
+  # ─── Animations (P0-T010) ───
   flutter_animate: ^4.2.0
 
-  # â”€â”€â”€ Text-to-Speech (P0-T011) â”€â”€â”€
+  # ─── Text-to-Speech (P0-T011) ───
   flutter_tts: ^4.2.0
 
-  # â”€â”€â”€ Celebration Effects (P0-T012) â”€â”€â”€
+  # ─── Celebration Effects (P0-T012) ───
   confetti: ^0.7.0
 
-  # â”€â”€â”€ SVG Support (P0-T013) â”€â”€â”€
+  # ─── SVG Support (P0-T013) ───
   flutter_svg: ^2.0.9
 
-  # â”€â”€â”€ Sharing (P0-T014) â”€â”€â”€
+  # ─── Sharing (P0-T014) ───
   share_plus: ^10.1.4
 
-  # â”€â”€â”€ Path Drawing (P0-T015) â”€â”€â”€
+  # ─── Path Drawing (P0-T015) ───
   path_drawing: ^1.0.1
 
-  # â”€â”€â”€ Internationalization (P0-T016) â”€â”€â”€
+  # ─── Internationalization (P0-T016) ───
   intl: ^0.20.2
 
-  # â”€â”€â”€ Code Generation Annotations (P0-T017) â”€â”€â”€
+  # ─── Code Generation Annotations (P0-T017) ───
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
 
-  # â”€â”€â”€ Firebase Suite (P0-T018 to P0-T022) â”€â”€â”€
+  # ─── Firebase Suite (P0-T018 to P0-T022) ───
   firebase_core: ^4.13.0
   firebase_auth: ^6.5.7
   cloud_firestore: ^6.8.0
   firebase_analytics: ^12.4.6
   firebase_crashlytics: ^5.2.7
 
-  # â”€â”€â”€ Loading Shimmer (P0-T023) â”€â”€â”€
+  # ─── Loading Shimmer (P0-T023) ───
   shimmer: ^3.0.0
 
-  # â”€â”€â”€ Existing Dependencies (kept) â”€â”€â”€
+  # ─── Existing Dependencies (kept) ───
   cupertino_icons: ^1.0.8
   purchases_flutter: ^10.8.0
 
@@ -72,7 +72,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
-  # â”€â”€â”€ Code Generation (P0-T017) â”€â”€â”€
+  # ─── Code Generation (P0-T017) ───
   freezed: ^2.4.7
   json_serializable: ^6.7.1
   build_runner: ^2.4.8
@@ -80,17 +80,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # â”€â”€â”€ Assets (P0-T050) â”€â”€â”€
+  # ─── Assets (P0-T050) ───
   assets:
-    # Letters â€” core identity (name, sound, positions)
+    # Letters — core identity (name, sound, positions)
     - assets/audio/letters/core/
-    # Letters â€” short vowels (fatha, kasra, damma, sukoon) = phoneme layer
+    # Letters — short vowels (fatha, kasra, damma, sukoon) = phoneme layer
     - assets/audio/letters/short_vowels/
-    # Letters â€” long vowels / mudud (maad) = blending layer
+    # Letters — long vowels / mudud (maad) = blending layer
     - assets/audio/letters/long_vowels/
-    # Letters â€” vocabulary words per letter
+    # Letters — vocabulary words per letter
     - assets/audio/letters/words/
-    # Letters â€” demo sentences and harakat demonstrations
+    # Letters — demo sentences and harakat demonstrations
     - assets/audio/letters/phrases/
     # Narrated stories and exploration audio
     - assets/audio/
@@ -109,16 +109,199 @@ flutter:
     - assets/images/stories/
     - assets/images/ui/
     - assets/images/lessons/alif/
+    - assets/images/lessons/alif/words/
     - assets/images/lessons/baa/
+    - assets/images/lessons/baa/words/
     - assets/images/games/fishing/
     - assets/images/games/beehive/
     - assets/images/games/circus/
     - assets/images/games/words/
     - assets/images/games/coloring/
-    - assets/audio/lessons/baa/long/
-    - assets/audio/lessons/baa/medium/
-    - assets/audio/lessons/baa/short/
-    - assets/audio/lessons/baa/sounds/
-    - assets/audio/lessons/baa/writing/
+    - assets/audio/games/fishing/
+    - assets/audio/games/beehive/
+    - assets/audio/games/circus/
+    - assets/audio/games/words/
+    - assets/audio/games/coloring/
+    - assets/audio/lessons/alif/words/
+    - assets/audio/lessons/baa/
+    - assets/audio/lessons/taa/
+    - assets/audio/lessons/taa/final/
+    - assets/audio/lessons/taa/sounds/
+    - assets/audio/lessons/taa/madd/
+    - assets/audio/lessons/taa/writing/
+    - assets/audio/games/fishing/taa/
+    - assets/audio/games/beehive/taa/
+    - assets/audio/games/circus/taa/
+    - assets/audio/games/match/taa/
+    - assets/audio/games/coloring/taa/
+    - assets/audio/lessons/thaa/
+    - assets/audio/lessons/thaa/final/
+    - assets/audio/lessons/thaa/sounds/
+    - assets/audio/lessons/thaa/madd/
+    - assets/audio/lessons/thaa/writing/
+    - assets/audio/games/fishing/thaa/
+    - assets/audio/games/beehive/thaa/
+    - assets/audio/games/circus/thaa/
+    - assets/audio/games/match/thaa/
+    - assets/audio/games/coloring/thaa/
+    - assets/audio/lessons/jeem/
+    - assets/audio/lessons/jeem/final/
+    - assets/audio/lessons/jeem/sounds/
+    - assets/audio/lessons/jeem/madd/
+    - assets/audio/lessons/jeem/writing/
+    - assets/audio/games/fishing/jeem/
+    - assets/audio/games/beehive/jeem/
+    - assets/audio/games/circus/jeem/
+    - assets/audio/games/match/jeem/
+    - assets/audio/games/coloring/jeem/
+    - assets/images/lessons/jeem/
+    - assets/images/lessons/jeem/words/
+    - assets/images/lessons/jeem/sounds/
+    - assets/images/games/fishing/jeem/
+    - assets/images/games/beehive/jeem/
+    - assets/images/games/circus/jeem/
+    - assets/images/games/words/jeem/
+    - assets/images/games/match/jeem/
+    - assets/images/games/coloring/jeem/
+    - assets/audio/lessons/ha/
+    - assets/audio/lessons/ha/final/
+    - assets/audio/lessons/ha/sounds/
+    - assets/audio/lessons/ha/madd/
+    - assets/audio/lessons/ha/writing/
+    - assets/audio/games/fishing/ha/
+    - assets/audio/games/beehive/ha/
+    - assets/audio/games/circus/ha/
+    - assets/audio/games/match/ha/
+    - assets/audio/games/coloring/ha/
+    - assets/audio/lessons/kha/
+    - assets/audio/lessons/kha/final/
+    - assets/audio/games/fishing/kha/
+    - assets/audio/games/beehive/kha/
+    - assets/audio/games/circus/kha/
+    - assets/audio/games/match/kha/
+    - assets/audio/games/coloring/kha/
+    - assets/images/lessons/ha/
+    - assets/images/lessons/ha/words/
+    - assets/images/lessons/ha/sounds/
+    - assets/images/games/fishing/ha/
+    - assets/images/games/beehive/ha/
+    - assets/images/games/circus/ha/
+    - assets/images/games/words/ha/
+    - assets/images/games/match/ha/
+    - assets/images/games/coloring/ha/
+    - assets/images/lessons/kha/
+    - assets/images/lessons/kha/words/
+    - assets/images/games/fishing/kha/
+    - assets/images/games/beehive/kha/
+    - assets/images/games/circus/kha/
+    - assets/images/games/words/kha/
+    - assets/images/games/match/kha/
+    - assets/images/games/coloring/kha/
+    - assets/audio/lessons/dal/
+    - assets/audio/lessons/dal/final/
+    - assets/audio/lessons/dal/sounds/
+    - assets/audio/lessons/dal/madd/
+    - assets/audio/games/fishing/dal/
+    - assets/audio/games/beehive/dal/
+    - assets/audio/games/circus/dal/
+    - assets/audio/games/match/dal/
+    - assets/audio/games/coloring/dal/
+    - assets/images/lessons/dal/
+    - assets/images/lessons/dal/words/
+    - assets/images/games/fishing/dal/
+    - assets/images/games/beehive/dal/
+    - assets/images/games/circus/dal/
+    - assets/images/games/words/dal/
+    - assets/images/games/match/dal/
+    - assets/images/games/coloring/dal/
+    - assets/audio/lessons/dhaal/
+    - assets/audio/lessons/dhaal/final/
+    - assets/audio/lessons/dhaal/sounds/
+    - assets/audio/lessons/dhaal/madd/
+    - assets/audio/games/fishing/dhaal/
+    - assets/audio/games/beehive/dhaal/
+    - assets/audio/games/circus/dhaal/
+    - assets/audio/games/match/dhaal/
+    - assets/audio/games/coloring/dhaal/
+    - assets/images/lessons/dhaal/
+    - assets/images/lessons/dhaal/words/
+    - assets/images/games/fishing/dhaal/
+    - assets/images/games/beehive/dhaal/
+    - assets/images/games/circus/dhaal/
+    - assets/images/games/words/dhaal/
+    - assets/images/games/match/dhaal/
+    - assets/images/games/coloring/dhaal/
+    - assets/audio/lessons/raa/
+    - assets/audio/lessons/raa/final/
+    - assets/audio/lessons/raa/sounds/
+    - assets/audio/lessons/raa/madd/
+    - assets/audio/games/fishing/raa/
+    - assets/audio/games/beehive/raa/
+    - assets/audio/games/circus/raa/
+    - assets/audio/games/match/raa/
+    - assets/audio/games/coloring/raa/
+    - assets/images/lessons/raa/
+    - assets/images/lessons/raa/words/
+    - assets/images/games/fishing/raa/
+    - assets/images/games/beehive/raa/
+    - assets/images/games/circus/raa/
+    - assets/images/games/words/raa/
+    - assets/images/games/match/raa/
+    - assets/images/games/coloring/raa/
+    - assets/audio/lessons/zaay/
+    - assets/audio/lessons/zaay/final/
+    - assets/audio/lessons/zaay/sounds/
+    - assets/audio/lessons/zaay/madd/
+    - assets/audio/games/fishing/zaay/
+    - assets/audio/games/beehive/zaay/
+    - assets/audio/games/circus/zaay/
+    - assets/audio/games/match/zaay/
+    - assets/audio/games/coloring/zaay/
+    - assets/images/lessons/zaay/
+    - assets/images/lessons/zaay/words/
+    - assets/images/games/fishing/zaay/
+    - assets/images/games/beehive/zaay/
+    - assets/images/games/circus/zaay/
+    - assets/images/games/words/zaay/
+    - assets/images/games/match/zaay/
+    - assets/images/games/coloring/zaay/
+    - assets/audio/lessons/seen/
+    - assets/audio/lessons/seen/final/
+    - assets/audio/lessons/seen/sounds/
+    - assets/audio/lessons/seen/madd/
+    - assets/audio/games/fishing/seen/
+    - assets/audio/games/beehive/seen/
+    - assets/audio/games/circus/seen/
+    - assets/audio/games/match/seen/
+    - assets/audio/games/coloring/seen/
+    - assets/images/lessons/seen/
+    - assets/images/lessons/seen/words/
+    - assets/images/games/fishing/seen/
+    - assets/images/games/beehive/seen/
+    - assets/images/games/circus/seen/
+    - assets/images/games/words/seen/
+    - assets/images/games/match/seen/
+    - assets/images/games/coloring/seen/
     - assets/images/lessons/baa/sounds/
+    - assets/images/lessons/taa/
+    - assets/images/lessons/taa/words/
+    - assets/images/lessons/taa/sounds/
+    - assets/images/lessons/taa/madd/
+    - assets/images/games/fishing/taa/
+    - assets/images/games/beehive/taa/
+    - assets/images/games/circus/taa/
+    - assets/images/games/words/taa/
+    - assets/images/games/match/taa/
+    - assets/images/games/coloring/taa/
+    - assets/images/lessons/thaa/
+    - assets/images/lessons/thaa/words/
+    - assets/images/lessons/thaa/sounds/
+    - assets/images/games/fishing/thaa/
+    - assets/images/games/beehive/thaa/
+    - assets/images/games/circus/thaa/
+    - assets/images/games/words/thaa/
+    - assets/images/games/match/thaa/
+    - assets/images/games/coloring/thaa/
     - assets/animations/
+
+

@@ -42,14 +42,32 @@ void main() async {
   // ──── RevenueCat Initialization ────
   await RevenueCatService.instance.init();
 
-  // ──── Crashlytics: Catch all Flutter errors ────
+  // ──── Crashlytics Configuration ────
+  // Disable Crashlytics collection in debug mode so local development layout warnings
+  // do not pollute production crash metrics.
+  await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(!kDebugMode);
+
+  // ──── Crashlytics: Catch Flutter framework errors ────
   FlutterError.onError = (errorDetails) {
-    FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+    FlutterError.presentError(errorDetails);
+    if (kDebugMode) return;
+
+    final isLayoutOrImageError = errorDetails.library == 'rendering library' ||
+        errorDetails.library == 'image resource service' ||
+        errorDetails.silent;
+
+    if (isLayoutOrImageError) {
+      FirebaseCrashlytics.instance.recordFlutterError(errorDetails, fatal: false);
+    } else {
+      FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+    }
   };
 
   // ──── Crashlytics: Catch async errors outside Flutter framework ────
   PlatformDispatcher.instance.onError = (error, stack) {
-    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    if (!kDebugMode) {
+      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    }
     return true;
   };
 

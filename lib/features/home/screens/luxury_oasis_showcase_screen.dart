@@ -277,8 +277,8 @@ class _LuxuryOasisShowcaseScreenState
                         const SizedBox(width: 20),
                         // Glowing Center Gold Badge
                         Container(
-                          width: 50,
-                          height: 50,
+                          width: 64,
+                          height: 64,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             gradient: const RadialGradient(
@@ -293,7 +293,7 @@ class _LuxuryOasisShowcaseScreenState
                             ],
                           ),
                           child: const Center(
-                            child: Text('🦅', style: TextStyle(fontSize: 24)),
+                            child: Text('🦅', style: TextStyle(fontSize: 38)),
                           ),
                         ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(
                               begin: const Offset(0.95, 0.95),

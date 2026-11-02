@@ -5,42 +5,93 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-// لعبة الخلية: اضغط على الشكل الصحيح لحرف الباء حسب موضعه في الكلمة
-// التعليمات من الأسطوانة: خلية الحروف
+// ─── لعبة خلية الحرف لحرف الباء ──────────────────────────────────────────────
+// مطابقة تماماً للميكانيكية الأصلية وتصميم لعبة خلية حرف الألف
+// أبعاد الشاشة الأصلية: 1024 × 481
 
-class _BeehiveRound {
-  final String word;         // الكلمة المعروضة
-  final String correctForm;  // الشكل الصحيح: 'start'/'middle'/'end'/'alone'
-  final String wordAudio;
-  const _BeehiveRound({
-    required this.word,
-    required this.correctForm,
-    required this.wordAudio,
+const double _imgW = 1024;
+
+class _CellZone {
+  final String label;
+  final bool isCorrect;
+  final double px, py;
+  const _CellZone({
+    required this.label,
+    required this.isCorrect,
+    required this.px,
+    required this.py,
   });
 }
 
-const List<_BeehiveRound> _rounds = [
-  _BeehiveRound(word: 'بَقَرَة',  correctForm: 'start',  wordAudio: 'audio/lessons/baa/sounds/word_baqara.mp3'),
-  _BeehiveRound(word: 'طَبِيب',  correctForm: 'middle', wordAudio: 'audio/lessons/baa/sounds/word_tabeeb.mp3'),
-  _BeehiveRound(word: 'بَاب',    correctForm: 'start',  wordAudio: 'audio/lessons/baa/sounds/word_bab.mp3'),
-  _BeehiveRound(word: 'حُبُوب',  correctForm: 'middle', wordAudio: 'audio/lessons/baa/sounds/word_hobob.mp3'),
-  _BeehiveRound(word: 'يَكْتُب', correctForm: 'end',    wordAudio: 'audio/lessons/baa/sounds/word_yaktb.mp3'),
+class _Round {
+  final String imagePath;
+  final double imgH;
+  final String wordAudio;
+  final String praiseAudio;
+  final List<_CellZone> cells;
+  const _Round({
+    required this.imagePath,
+    required this.imgH,
+    required this.wordAudio,
+    required this.praiseAudio,
+    required this.cells,
+  });
+}
+
+const List<_Round> _rounds = [
+  // الجولة 1: بَقَرَة (...قرة) ← بَ (يسار)
+  _Round(
+    imagePath: 'assets/images/games/beehive/baa_beehive_round_1.png',
+    imgH: 481,
+    wordAudio: 'audio/lessons/baa/sounds/word_baqara.mp3',
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    cells: [
+      _CellZone(label: 'بُ', isCorrect: false, px: 880, py: 170), // أعلى
+      _CellZone(label: 'بَ', isCorrect: true,  px: 694, py: 272), // يسار (صحيح بَقَرَة)
+      _CellZone(label: 'بِ', isCorrect: false, px: 946, py: 253), // يمين
+      _CellZone(label: 'بْ', isCorrect: false, px: 754, py: 339), // أسفل
+    ],
+  ),
+  // الجولة 2: بِطِّيخ (...طيخ) ← بِ (يمين)
+  _Round(
+    imagePath: 'assets/images/games/beehive/baa_beehive_round_2.png',
+    imgH: 483,
+    wordAudio: 'audio/lessons/baa/sounds/word_betteekh.mp3',
+    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    cells: [
+      _CellZone(label: 'بُ', isCorrect: false, px: 880, py: 160), // أعلى
+      _CellZone(label: 'بَ', isCorrect: false, px: 694, py: 274), // يسار
+      _CellZone(label: 'بِ', isCorrect: true,  px: 946, py: 254), // يمين (صحيح بِطِّيخ)
+      _CellZone(label: 'بْ', isCorrect: false, px: 754, py: 340), // أسفل
+    ],
+  ),
+  // الجولة 3: بُرْج (...رج) ← بُ (أعلى)
+  _Round(
+    imagePath: 'assets/images/games/beehive/baa_beehive_round_3.png',
+    imgH: 473,
+    wordAudio: 'audio/lessons/baa/sounds/word_borg.mp3',
+    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    cells: [
+      _CellZone(label: 'بُ', isCorrect: true,  px: 886, py: 184), // أعلى (صحيح بُرْج)
+      _CellZone(label: 'بَ', isCorrect: false, px: 696, py: 271), // يسار
+      _CellZone(label: 'بِ', isCorrect: false, px: 946, py: 250), // يمين
+      _CellZone(label: 'بْ', isCorrect: false, px: 756, py: 335), // أسفل
+    ],
+  ),
+  // الجولة 4: إِبْرَةُ (إِ...رة) ← بْ (أسفل)
+  _Round(
+    imagePath: 'assets/images/games/beehive/baa_beehive_round_4.png',
+    imgH: 478,
+    wordAudio: 'audio/lessons/baa/sounds/word_ibra.mp3',
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    cells: [
+      _CellZone(label: 'بُ', isCorrect: false, px: 880, py: 172), // أعلى
+      _CellZone(label: 'بَ', isCorrect: false, px: 695, py: 274), // يسار
+      _CellZone(label: 'بِ', isCorrect: false, px: 946, py: 254), // يمين
+      _CellZone(label: 'بْ', isCorrect: true,  px: 755, py: 340), // أسفل (صحيح إِبْرَةُ)
+    ],
+  ),
 ];
-
-// أشكال الحرف حسب الموضع
-const Map<String, String> _formLabels = {
-  'alone':  'بْ\nمفردة',
-  'start':  'بـ\nأول',
-  'middle': 'ـبـ\nوسط',
-  'end':    'ـب\nآخر',
-};
-
-const Map<String, Color> _formColors = {
-  'alone':  Color(0xFF6A1B9A),
-  'start':  Color(0xFF1565C0),
-  'middle': Color(0xFF2E7D32),
-  'end':    Color(0xFFC62828),
-};
 
 class BaaBeeHiveGame extends ConsumerStatefulWidget {
   const BaaBeeHiveGame({super.key});
@@ -50,241 +101,507 @@ class BaaBeeHiveGame extends ConsumerStatefulWidget {
 
 class _BaaBeeHiveGameState extends ConsumerState<BaaBeeHiveGame> {
   late ConfettiController _confetti;
-  int _round = 0, _score = 0;
-  String? _selected;
-  bool _roundDone = false, _gameOver = false;
+  int _round = 0, _score = 0, _wrongAttempts = 0, _token = 0;
+  int? _tapped;
+  bool _roundDone = false, _gameOver = false, _showCorrectAnswer = false;
 
   @override
   void initState() {
     super.initState();
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
+    final t = _token;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(milliseconds: 600), _playWordAudio);
+      Future.delayed(const Duration(milliseconds: 450), () {
+        if (mounted && t == _token) _playInstruction();
+      });
     });
   }
 
   @override
-  void dispose() { _confetti.dispose(); super.dispose(); }
+  void dispose() {
+    _token++;
+    AudioService.instance.stop();
+    _confetti.dispose();
+    super.dispose();
+  }
 
-  Future<void> _playWordAudio() async {
+  Future<void> _say(String path, {int maxMs = 4000}) async {
     try {
       await AudioService.instance.stop();
-      await AudioService.instance.playAsset(
-        _rounds[_round].wordAudio,
-        channel: AudioChannel.voice,
-      );
+      await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
+      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+      if (done != null) {
+        await done.first.timeout(
+          Duration(milliseconds: maxMs),
+          onTimeout: () {},
+        );
+      } else {
+        await Future.delayed(Duration(milliseconds: maxMs));
+      }
     } catch (_) {}
   }
 
-  Future<void> _playCorrect() => AudioService.instance.playAsset(
-    'audio/lessons/baa/short/baa_13.mp3', channel: AudioChannel.sfx);
-  Future<void> _playWrong() => AudioService.instance.playAsset(
-    'audio/lessons/baa/medium/baa_51.mp3', channel: AudioChannel.sfx);
-  Future<void> _playPraise() => AudioService.instance.playAsset(
-    'audio/lessons/baa/short/baa_69.mp3', channel: AudioChannel.voice);
-
-  Future<void> _onSelect(String form) async {
-    if (_roundDone) return;
-    HapticFeedback.lightImpact();
-    setState(() { _selected = form; _roundDone = true; });
-    final isCorrect = form == _rounds[_round].correctForm;
-    if (isCorrect) {
-      _score++;
-      _confetti.play();
-      await _playCorrect();
-    } else {
-      await _playWrong();
-    }
-    await Future.delayed(const Duration(milliseconds: 1600));
-    _nextRound();
+  Future<void> _playInstruction() async {
+    if (!mounted || _gameOver) return;
+    final t = ++_token;
+    // 1. صوت التعليمات الأصلي من الأسطوانة (1.74s)
+    await _say('audio/games/beehive/5_khalea2.mp3', maxMs: 3000);
+    if (!mounted || _gameOver || t != _token) return;
+    // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
+    await _say(_rounds[_round].wordAudio, maxMs: 2500);
   }
 
-  void _nextRound() {
-    if (_round < _rounds.length - 1) {
+  Future<void> _playWordAudio() async {
+    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+  }
+
+  Future<void> _playCurrentWordStandalone() async {
+    if (!mounted || _gameOver) return;
+    ++_token;
+    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+  }
+
+  Future<void> _playWrong() => _say('audio/games/beehive/6_haw.mp3', maxMs: 2500);
+
+  Future<void> _playThisIsCorrect() =>
+      _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+
+  Future<void> _onCellTap(int idx) async {
+    if (_roundDone || _showCorrectAnswer) return;
+    HapticFeedback.lightImpact();
+    final t = ++_token;
+    final round = _rounds[_round];
+    final cell = round.cells[idx];
+    if (cell.isCorrect) {
       setState(() {
-        _round++; _selected = null; _roundDone = false;
+        _tapped = idx;
+        _roundDone = true;
+        _score++;
       });
-      Future.delayed(const Duration(milliseconds: 400), _playWordAudio);
-    } else {
-      setState(() => _gameOver = true);
       _confetti.play();
-      Future.delayed(const Duration(milliseconds: 500), _playPraise);
+      // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
+      await _say(round.praiseAudio, maxMs: 2500);
+      if (!mounted || t != _token) return;
+
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (بَقَرَة / بِطِّيخ / بُرْج / إِبْرَة)
+      await _playWordAudio();
+      if (!mounted || t != _token) return;
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
+
+      _advance();
+    } else {
+      setState(() {
+        _tapped = idx;
+        _wrongAttempts++;
+      });
+      await _playWrong();
+      if (!mounted || t != _token) return;
+
+      if (_wrongAttempts >= 2) {
+        setState(() {
+          _showCorrectAnswer = true;
+        });
+        await _playThisIsCorrect();
+        if (!mounted || t != _token) return;
+        // سماع الكلمة كاملة عند إظهار الإجابة الصحيحة
+        await _playWordAudio();
+        if (!mounted || t != _token) return;
+        await Future.delayed(const Duration(milliseconds: 500));
+        if (!mounted || t != _token) return;
+        _advance();
+      } else {
+        setState(() {
+          _tapped = null;
+        });
+      }
+    }
+  }
+
+  void _advance() {
+    final t = ++_token;
+    AudioService.instance.stop();
+    if (_round + 1 >= _rounds.length) {
+      setState(() => _gameOver = true);
+      if (_score >= _rounds.length / 2) _confetti.play();
+      try {
+        AudioService.instance.playAsset(
+          'audio/games/fishing/ahsnt.mp3',
+          channel: AudioChannel.voice,
+        );
+      } catch (_) {}
+    } else {
+      setState(() {
+        _round++;
+        _tapped = null;
+        _roundDone = false;
+        _wrongAttempts = 0;
+        _showCorrectAnswer = false;
+      });
+      Future.delayed(const Duration(milliseconds: 300), () {
+        if (mounted && t == _token) _playCurrentWordStandalone();
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_gameOver) return _buildGameOver(context);
-    return _buildGame(context);
+    if (_gameOver) return _gameOverScreen();
+    return Column(
+      children: [
+        Expanded(child: _buildGameScene()),
+        _buildBottomNavBar(context),
+      ],
+    );
   }
 
-  Widget _buildGame(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
-    final isTablet = size.width > 600;
-    final round = _rounds[_round];
-
+  Widget _buildGameScene() {
+    final rd = _rounds[_round];
     return Stack(
       children: [
-        // ── الخلفية (صورة من الأسطوانة) ─────────────────────────────────────
-        Positioned.fill(
-          child: Image.asset(
-            'assets/images/lessons/baa/baa_wheel.jpg',
-            fit: BoxFit.cover,
-          ),
-        ),
-        // ── المحتوى الرئيسي ──────────────────────────────────────────────────
-        SafeArea(
-          child: Column(
-            children: [
-              const SizedBox(height: 20),
-              // ── الكلمة المعروضة ──────────────────────────────────────────
-              GestureDetector(
-                onTap: _playWordAudio,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.92),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [BoxShadow(blurRadius: 10, color: Colors.black.withValues(alpha: 0.2))],
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        round.word,
-                        style: TextStyle(
-                          fontSize: isTablet ? 56 : 44,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Cairo',
-                          color: const Color(0xFF1A237E),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      const Icon(Icons.volume_up_rounded, color: Color(0xFF1565C0), size: 32),
-                    ],
-                  ),
-                ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.3),
-              ),
-              const SizedBox(height: 12),
-              Text(
-                'أين حرف الباء في هذه الكلمة؟',
-                style: TextStyle(
-                  fontSize: isTablet ? 22 : 18,
-                  fontFamily: 'Cairo',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  shadows: const [Shadow(blurRadius: 4, color: Colors.black87)],
+        LayoutBuilder(
+          builder: (ctx, c) {
+            final sw = c.maxWidth, sh = c.maxHeight;
+            final ia = _imgW / rd.imgH, sa = sw / sh;
+            double dW, dH, ox, oy;
+            if (sa < ia) {
+              dW = sw;
+              dH = sw / ia;
+              ox = 0;
+              oy = (sh - dH) / 2;
+            } else {
+              dH = sh;
+              dW = sh * ia;
+              ox = (sw - dW) / 2;
+              oy = 0;
+            }
+
+            return Stack(
+              children: [
+                Positioned.fill(
+                  child: Image.asset(rd.imagePath, fit: BoxFit.contain),
                 ),
-              ),
-              // ── مؤشر التقدم ───────────────────────────────────────────────
-              const SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(_rounds.length, (i) => Container(
-                  width: 16, height: 16,
-                  margin: const EdgeInsets.symmetric(horizontal: 4),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: i < _round ? Colors.green : i == _round ? Colors.amber : Colors.white54,
+                // زر إعادة الاستماع (موضع السماعة في الصورة)
+                Positioned(
+                  left: ox + (618 / _imgW) * dW - 25,
+                  top: oy + (148 / rd.imgH) * dH - 25,
+                  width: 50,
+                  height: 50,
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: _playCurrentWordStandalone,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                      ),
+                    ),
                   ),
-                )),
-              ),
-              const Spacer(),
-              // ── أزرار الاختيار ────────────────────────────────────────────
-              Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 16,
-                runSpacing: 16,
-                children: _formLabels.keys.map((form) {
-                  final isSelected = _selected == form;
-                  final isCorrect = form == round.correctForm;
-                  Color btnColor = _formColors[form]!;
-                  if (_roundDone && isSelected) {
-                    btnColor = isCorrect ? Colors.green.shade700 : Colors.red.shade700;
-                  } else if (_roundDone && isCorrect) {
-                    btnColor = Colors.green.shade700;
+                ),
+                // خلايا الحروف الأربعة على الخلية
+                ...List.generate(rd.cells.length, (i) {
+                  final cell = rd.cells[i];
+                  final cx = ox + (cell.px / _imgW) * dW;
+                  final cy = oy + (cell.py / rd.imgH) * dH;
+                  const r = 42.0;
+                  Color fill = Colors.transparent;
+                  Color ring = Colors.transparent;
+                  Widget child = const SizedBox.shrink();
+
+                  if (_showCorrectAnswer) {
+                    if (cell.isCorrect) {
+                      fill = Colors.green.withValues(alpha: 0.45);
+                      ring = Colors.greenAccent;
+                      child = const Text('✅', style: TextStyle(fontSize: 28));
+                    }
+                  } else if (_tapped == i) {
+                    if (cell.isCorrect) {
+                      fill = Colors.green.withValues(alpha: 0.45);
+                      ring = Colors.greenAccent;
+                      child = const Text('✅', style: TextStyle(fontSize: 28));
+                    } else {
+                      fill = Colors.red.withValues(alpha: 0.45);
+                      ring = Colors.redAccent;
+                      child = const Text('❌', style: TextStyle(fontSize: 28));
+                    }
+                  } else if (_roundDone && cell.isCorrect) {
+                    fill = Colors.green.withValues(alpha: 0.20);
+                    ring = Colors.greenAccent.withValues(alpha: 0.70);
                   }
 
-                  return GestureDetector(
-                    onTap: () => _onSelect(form),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 250),
-                      width: isTablet ? 150 : 130,
-                      height: isTablet ? 130 : 110,
-                      decoration: BoxDecoration(
-                        color: btnColor,
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: isSelected ? Colors.white : Colors.white54,
-                          width: isSelected ? 4 : 2,
+                  return Positioned(
+                    left: cx - r,
+                    top: cy - r,
+                    width: r * 2,
+                    height: r * 2,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () => _onCellTap(i),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: fill,
+                          border: Border.all(color: ring, width: 3),
                         ),
-                        boxShadow: [BoxShadow(blurRadius: 8, color: btnColor.withValues(alpha: 0.5), offset: const Offset(0, 4))],
+                        child: Center(child: child),
                       ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        _formLabels[form]!,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: isTablet ? 28 : 24,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Cairo',
-                          color: Colors.white,
-                          height: 1.3,
-                        ),
-                      ),
-                    ).animate(delay: Duration(milliseconds: _formLabels.keys.toList().indexOf(form) * 80))
-                        .fadeIn(duration: 300.ms)
-                        .scale(begin: const Offset(0.85, 0.85), curve: Curves.easeOutBack),
+                    ),
                   );
-                }).toList(),
-              ),
-              const SizedBox(height: 32),
-            ],
-          ),
+                }),
+                if (_showCorrectAnswer)
+                  Positioned(
+                    top: oy + dH * 0.35,
+                    left: 0,
+                    right: 0,
+                    child: Center(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withValues(alpha: 0.75),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: Colors.greenAccent, width: 2),
+                        ),
+                        child: const Text(
+                          'هَذِهِ هِيَ الْإِجَابَةُ الصَّحِيحَةُ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Cairo',
+                          ),
+                        ),
+                      ),
+                    ).animate().fadeIn().scale(),
+                  ),
+                Positioned(top: 10, left: 0, right: 0, child: _topBar()),
+              ],
+            );
+          },
         ),
-        // ── كونفيتي ─────────────────────────────────────────────────────────
         Align(
           alignment: Alignment.topCenter,
           child: ConfettiWidget(
             confettiController: _confetti,
             blastDirectionality: BlastDirectionality.explosive,
             numberOfParticles: 25,
-            colors: const [Colors.red, Colors.amber, Colors.green, Colors.blue, Colors.purple],
+            gravity: 0.4,
+            colors: const [Colors.yellow, Colors.green, Colors.red, Colors.purple, Colors.orange],
           ),
         ),
       ],
     );
   }
 
-  Widget _buildGameOver(BuildContext context) {
-    return Center(
-      child: Column(
+  Widget _buildBottomNavBar(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 8,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _navBtn(
+            'التالي',
+            Icons.arrow_back_rounded,
+            _roundDone || _showCorrectAnswer,
+            () {
+              if (_roundDone || _showCorrectAnswer) {
+                HapticFeedback.lightImpact();
+                _advance();
+              }
+            },
+          ),
+          GestureDetector(
+            onTap: () {
+              HapticFeedback.lightImpact();
+              _token++;
+              AudioService.instance.stop();
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: const BoxDecoration(
+                color: Color(0xFF4CAF50),
+                shape: BoxShape.circle,
+                boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))],
+              ),
+              child: const Icon(Icons.home_rounded, color: Colors.white, size: 26),
+            ),
+          ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
+          _navBtn(
+            'السابق',
+            Icons.arrow_forward_rounded,
+            _round > 0 && !_roundDone && !_showCorrectAnswer,
+            () {
+              if (_round > 0 && !_roundDone && !_showCorrectAnswer) {
+                HapticFeedback.lightImpact();
+                final t = ++_token;
+                AudioService.instance.stop();
+                setState(() {
+                  _round--;
+                  _tapped = null;
+                  _roundDone = false;
+                  _wrongAttempts = 0;
+                  _showCorrectAnswer = false;
+                });
+                Future.delayed(const Duration(milliseconds: 300), () {
+                  if (mounted && t == _token) _playCurrentWordStandalone();
+                });
+              }
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _navBtn(String label, IconData icon, bool enabled, VoidCallback onTap) {
+    final isNext = label == 'التالي';
+    return GestureDetector(
+      onTap: enabled ? onTap : null,
+      child: AnimatedOpacity(
+        duration: const Duration(milliseconds: 200),
+        opacity: enabled ? 1.0 : 0.4,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          decoration: BoxDecoration(
+            color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: enabled
+                ? [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))]
+                : [],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (isNext) Icon(icon, color: Colors.white, size: 18),
+              if (isNext) const SizedBox(width: 6),
+              Text(
+                label,
+                style: const TextStyle(
+                  fontFamily: 'Cairo',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              if (!isNext) const SizedBox(width: 6),
+              if (!isNext) Icon(icon, color: Colors.white, size: 18),
+            ],
+          ),
+        ),
+      ),
+    ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms);
+  }
+
+  Widget _topBar() => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('🏆', style: TextStyle(fontSize: 80)),
-          const SizedBox(height: 16),
-          Text(
-            'رائع! نتيجتك $_score/${_rounds.length}',
-            style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold,
-                fontFamily: 'Cairo', color: Color(0xFFF9A825)),
+          _chip('⭐ $_score'),
+          const SizedBox(width: 10),
+          GestureDetector(
+            onTap: _playInstruction,
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
+              child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 24),
+            ),
           ),
-          const SizedBox(height: 32),
-          ElevatedButton.icon(
-            onPressed: () => setState(() {
-              _round = 0; _score = 0; _gameOver = false;
-              _selected = null; _roundDone = false;
-            }),
-            icon: const Icon(Icons.replay_rounded),
-            label: const Text('العب مرة أخرى', style: TextStyle(fontFamily: 'Cairo', fontSize: 20)),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFF9A825),
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          const SizedBox(width: 10),
+          _chip('${_round + 1} / ${_rounds.length}'),
+        ],
+      );
+
+  Widget _chip(String t) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          t,
+          style: const TextStyle(
+            fontFamily: 'Cairo',
+            fontSize: 15,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      );
+
+  Widget _gameOverScreen() => Stack(
+        children: [
+          Positioned.fill(child: Image.asset(_rounds.last.imagePath, fit: BoxFit.contain)),
+          Positioned.fill(child: Container(color: Colors.black.withValues(alpha: 0.65))),
+          Align(
+            alignment: Alignment.topCenter,
+            child: ConfettiWidget(
+              confettiController: _confetti,
+              blastDirectionality: BlastDirectionality.explosive,
+              numberOfParticles: 50,
+              gravity: 0.3,
+              colors: const [Colors.yellow, Colors.green, Colors.red, Colors.purple, Colors.orange],
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(_score == _rounds.length ? '🏆' : '🎯', style: const TextStyle(fontSize: 90))
+                    .animate()
+                    .scale(begin: const Offset(0, 0), curve: Curves.elasticOut, duration: 800.ms),
+                const SizedBox(height: 20),
+                Text(
+                  _score == _rounds.length
+                      ? 'مُمْتَازٌ! أَجَبْتَ عَلَى كُلِّ الأَسْئِلَةِ!'
+                      : 'أَحْسَنْتَ! إِجَابَتُكَ: $_score / ${_rounds.length}',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'Cairo',
+                  ),
+                ).animate(delay: 400.ms).fadeIn(),
+                const SizedBox(height: 30),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    final t = ++_token;
+                    AudioService.instance.stop();
+                    setState(() {
+                      _round = 0;
+                      _score = 0;
+                      _gameOver = false;
+                      _tapped = null;
+                      _roundDone = false;
+                      _wrongAttempts = 0;
+                      _showCorrectAnswer = false;
+                    });
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      if (mounted && t == _token) _playInstruction();
+                    });
+                  },
+                  icon: const Icon(Icons.replay_rounded),
+                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    foregroundColor: Colors.black87,
+                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  ),
+                ).animate(delay: 700.ms).fadeIn().scale(begin: const Offset(0.8, 0.8)),
+              ],
             ),
           ),
         ],
-      ).animate().fadeIn(duration: 600.ms).scale(begin: const Offset(0.8, 0.8)),
-    );
-  }
+      );
 }

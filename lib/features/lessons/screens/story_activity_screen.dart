@@ -40,7 +40,7 @@ class StoryActivityScreen extends ConsumerWidget {
               ],
             ),
             child: Image.asset(
-              'assets/images/characters/falcon/falcon_mascot_happy.png',
+              'assets/images/lessons/seen/seen_cd_story_1.png',
               width: 150,
               height: 150,
               errorBuilder: (context, error, stackTrace) => const Icon(Icons.menu_book_rounded, size: 100, color: AppColors.skyBlue),

@@ -21,19 +21,34 @@ class GamesActivityScreen extends ConsumerStatefulWidget {
 
 class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
   _GameType? _selectedGame;
+  int _menuToken = 0;
 
   @override
   void initState() {
     super.initState();
+    final tk = ++_menuToken;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(milliseconds: 350), _playMenuIntro);
+      Future.delayed(const Duration(milliseconds: 350), () {
+        if (mounted && tk == _menuToken && _selectedGame == null) {
+          _playMenuIntro();
+        }
+      });
     });
+  }
+
+  @override
+  void dispose() {
+    _menuToken++;
+    AudioService.instance.stop();
+    super.dispose();
   }
 
   void _playMenuIntro() async {
     if (!mounted || _selectedGame != null) return;
+    final tk = ++_menuToken;
     try {
       await AudioService.instance.stop();
+      if (!mounted || tk != _menuToken || _selectedGame != null) return;
       await AudioService.instance.playAsset(
         'audio/instructions/games_menu_intro.mp3',
         channel: AudioChannel.voice,
@@ -142,6 +157,8 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
     return GestureDetector(
       onTap: () {
         HapticFeedback.lightImpact();
+        _menuToken++;
+        AudioService.instance.stop();
         setState(() => _selectedGame = game.type);
       },
       child: Container(
@@ -216,26 +233,40 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  const Text('🕹️', style: TextStyle(fontSize: 24)),
-                  const SizedBox(width: 8),
-                  Text(
-                    _getGameTitle(type).replaceAll(RegExp(r'^[^\s]+\s'), ''), // Remove emoji
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.desertSand,
-                      fontFamily: 'Cairo',
+              Flexible(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('🕹️', style: TextStyle(fontSize: 22)),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        _getGameTitle(type).replaceAll(RegExp(r'^[^\s]+\s'), ''), // Remove emoji
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.desertSand,
+                          fontFamily: 'Cairo',
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
+              const SizedBox(width: 8),
               ElevatedButton.icon(
                 onPressed: () {
                   HapticFeedback.lightImpact();
+                  final tk = ++_menuToken;
+                  AudioService.instance.stop();
                   setState(() => _selectedGame = null);
-                  Future.delayed(const Duration(milliseconds: 300), _playMenuIntro);
+                  Future.delayed(const Duration(milliseconds: 350), () {
+                    if (mounted && tk == _menuToken && _selectedGame == null) {
+                      _playMenuIntro();
+                    }
+                  });
                 },
                 icon: const Icon(Icons.apps_rounded, size: 20),
                 label: const Text(

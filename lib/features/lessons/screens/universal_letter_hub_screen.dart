@@ -10,12 +10,25 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/alif/alif_lesson_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/taa/taa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/ha/ha_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/kha/kha_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/dal/dal_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/raa/raa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/seen/seen_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 
 // ═══ UPGRADED: universal_letter_hub_screen.dart ═══
 
 class UniversalLetterHubScreen extends ConsumerStatefulWidget {
-  const UniversalLetterHubScreen({super.key});
+  final String? letterChar;
+  const UniversalLetterHubScreen({super.key, this.letterChar});
 
   @override
   ConsumerState<UniversalLetterHubScreen> createState() => _UniversalLetterHubScreenState();
@@ -35,8 +48,15 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
       duration: const Duration(milliseconds: 4000),
     )..repeat();
 
-    // Auto-play letter sound on entrance after brief delay
+    // Set letter in provider safely after build completes, and auto-play letter sound
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      if (widget.letterChar != null) {
+        final matches = arabicLetters.where((l) => l.letter == widget.letterChar);
+        if (matches.isNotEmpty) {
+          ref.read(currentLessonProvider.notifier).setLetter(matches.first);
+        }
+      }
       _playLetterSound();
     });
   }
@@ -302,13 +322,17 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                           size: 30,
                         ),
                         const SizedBox(width: 10),
-                        Text(
-                          'استمع لصوت حرف ${letter.name}',
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
-                            fontSize: isTablet ? 20 : 16,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.secondaryDay,
+                        Flexible(
+                          child: Text(
+                            'استمع لصوت حرف ${letter.name}',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: isTablet ? 20 : 16,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.secondaryDay,
+                            ),
                           ),
                         ),
                       ],
@@ -335,9 +359,34 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => letter.letter == 'ب'
-                                    ? const BaaLessonScreen(initialStationIndex: 1)
-                                    : const LessonSequenceScreen(),
+                                builder: (context) {
+                                  if (letter.letter == 'أ') {
+                                    return const AlifLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ب') {
+                                    return const BaaLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ت') {
+                                    return const TaaLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ث') {
+                                    return const ThaaLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ج') {
+                                    return const JeemLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ح') {
+                                    return const HaLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'خ') {
+                                    return const KhaLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'د') {
+                                    return const DalLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ذ') {
+                                    return const DhaalLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'س') {
+                                    return const SeenLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ز') {
+                                    return const ZaayLessonScreen(initialStationIndex: 1);
+                                  } else if (letter.letter == 'ر') {
+                                    return const RaaLessonScreen(initialStationIndex: 1);
+                                  }
+                                  return const LessonSequenceScreen();
+                                },
                               ),
                             );
                           },
@@ -369,27 +418,54 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => Scaffold(
-                                  backgroundColor: AppColors.backgroundDay,
-                                  appBar: AppBar(
-                                    title: Text(
-                                      'ألعاب وأسئلة حرف (${letter.letter})',
-                                      style: const TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColors.textPrimaryDay,
+                                builder: (context) {
+                                  if (letter.letter == 'أ') {
+                                    return const AlifLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ب') {
+                                    return const BaaLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ت') {
+                                    return const TaaLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ث') {
+                                    return const ThaaLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ج') {
+                                    return const JeemLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ح') {
+                                    return const HaLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'خ') {
+                                    return const KhaLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'د') {
+                                    return const DalLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ذ') {
+                                    return const DhaalLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'س') {
+                                    return const SeenLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ز') {
+                                    return const ZaayLessonScreen(initialStationIndex: 6);
+                                  } else if (letter.letter == 'ر') {
+                                    return const RaaLessonScreen(initialStationIndex: 6);
+                                  }
+                                  return Scaffold(
+                                    backgroundColor: AppColors.backgroundDay,
+                                    appBar: AppBar(
+                                      title: Text(
+                                        'ألعاب وأسئلة حرف (${letter.letter})',
+                                        style: const TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColors.textPrimaryDay,
+                                        ),
+                                      ),
+                                      centerTitle: true,
+                                      backgroundColor: Colors.transparent,
+                                      elevation: 0,
+                                      leading: IconButton(
+                                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand),
+                                        onPressed: () => Navigator.of(context).pop(),
                                       ),
                                     ),
-                                    centerTitle: true,
-                                    backgroundColor: Colors.transparent,
-                                    elevation: 0,
-                                    leading: IconButton(
-                                      icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand),
-                                      onPressed: () => Navigator.of(context).pop(),
-                                    ),
-                                  ),
-                                  body: const GamesActivityScreen(),
-                                ),
+                                    body: const GamesActivityScreen(),
+                                  );
+                                },
                               ),
                             );
                           },

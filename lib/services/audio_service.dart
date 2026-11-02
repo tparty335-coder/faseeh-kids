@@ -9,7 +9,7 @@ enum AudioChannel {
 }
 
 /// Audio Service — handles multi-channel audio playback
-/// Uses audioplayers package with isolated AudioPlayer instances per channel
+/// Enforces strict foreground serialization across voice + sfx so clips never overlap.
 class AudioService {
   AudioService._() {
     _initPlayers();
@@ -20,15 +20,34 @@ class AudioService {
 
   final Map<AudioChannel, AudioPlayer> _players = {};
   bool _isDisposed = false;
+  int _fgOpId = 0;
+  int _bgmOpId = 0;
 
   void _initPlayers() {
     for (final channel in AudioChannel.values) {
       final player = AudioPlayer();
-      // Configure audio context per channel if needed
       if (channel == AudioChannel.bgm) {
         player.setReleaseMode(ReleaseMode.loop);
       }
       _players[channel] = player;
+    }
+  }
+
+  bool _isOpActive(AudioChannel channel, int op) {
+    if (_isDisposed) return false;
+    return channel == AudioChannel.bgm ? op == _bgmOpId : op == _fgOpId;
+  }
+
+  Future<void> _stopConflictingPlayers(AudioChannel channel) async {
+    if (channel == AudioChannel.bgm) {
+      await _players[AudioChannel.bgm]?.stop();
+    } else {
+      await Future.wait([
+        if (_players[AudioChannel.voice] != null)
+          _players[AudioChannel.voice]!.stop(),
+        if (_players[AudioChannel.sfx] != null)
+          _players[AudioChannel.sfx]!.stop(),
+      ]);
     }
   }
 
@@ -40,13 +59,20 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
+    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
     try {
       final player = _players[channel];
       if (player == null) return;
 
-      await player.stop();
+      await _stopConflictingPlayers(channel);
+      if (!_isOpActive(channel, op)) return;
+
       await player.setVolume(volume.clamp(0.0, 1.0));
+      if (!_isOpActive(channel, op)) return;
+
       await player.setSource(AssetSource(assetPath));
+      if (!_isOpActive(channel, op)) return;
+
       await player.resume();
     } catch (e) {
       debugPrint('AudioService [$channel]: Error playing asset $assetPath: $e');
@@ -60,13 +86,20 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
+    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
     try {
       final player = _players[channel];
       if (player == null) return;
 
-      await player.stop();
+      await _stopConflictingPlayers(channel);
+      if (!_isOpActive(channel, op)) return;
+
       await player.setVolume(volume.clamp(0.0, 1.0));
+      if (!_isOpActive(channel, op)) return;
+
       await player.setSource(DeviceFileSource(filePath));
+      if (!_isOpActive(channel, op)) return;
+
       await player.resume();
     } catch (e) {
       debugPrint('AudioService [$channel]: Error playing file $filePath: $e');
@@ -80,13 +113,20 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
+    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
     try {
       final player = _players[channel];
       if (player == null) return;
 
-      await player.stop();
+      await _stopConflictingPlayers(channel);
+      if (!_isOpActive(channel, op)) return;
+
       await player.setVolume(volume.clamp(0.0, 1.0));
+      if (!_isOpActive(channel, op)) return;
+
       await player.setSource(UrlSource(url));
+      if (!_isOpActive(channel, op)) return;
+
       await player.resume();
     } catch (e) {
       debugPrint('AudioService [$channel]: Error playing URL $url: $e');
@@ -97,12 +137,16 @@ class AudioService {
   Future<void> stop({AudioChannel? channel}) async {
     if (_isDisposed) return;
     try {
-      if (channel != null) {
+      if (channel == null) {
+        ++_fgOpId;
+        ++_bgmOpId;
+        await Future.wait(_players.values.map((p) => p.stop()));
+      } else if (channel == AudioChannel.bgm) {
+        ++_bgmOpId;
         await _players[channel]?.stop();
       } else {
-        for (final p in _players.values) {
-          await p.stop();
-        }
+        ++_fgOpId;
+        await _players[channel]?.stop();
       }
     } catch (e) {
       debugPrint('AudioService: Error stopping: $e');
@@ -146,10 +190,11 @@ class AudioService {
   /// Dispose all players
   void dispose() {
     _isDisposed = true;
+    ++_fgOpId;
+    ++_bgmOpId;
     for (final player in _players.values) {
       player.dispose();
     }
     _players.clear();
   }
 }
-

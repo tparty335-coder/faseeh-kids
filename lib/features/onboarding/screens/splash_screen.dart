@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
@@ -29,6 +30,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // Check if any child profiles exist (returning user)
     final profileBox = Hive.box(AppConstants.childProfileBox);
+    // Auto-create default profile in debug mode for rapid testing
+    if (kDebugMode && profileBox.isEmpty) {
+      await profileBox.put('activeChild', 'طفل_1');
+      if (!mounted) return;
+    }
     if (profileBox.isNotEmpty) {
       // Returning user — go to home
       context.go(AppRouter.homeMap);

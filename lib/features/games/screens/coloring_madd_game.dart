@@ -5,64 +5,141 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-const double _imgW = 1350, _imgH = 1010;
+// ─── لعبة التلوين لحرف الألف ─────────────────────────────────────────────────
+// نسخة مرآة مطابقة 100% لـ BaaColoringGame ومستخرجة من ملف الأسطوانة الأصلي
+// (ahdaf_a5_paint.swf) وبخطوتيها:
+// الخطوة 1: «اضغط على الكلمة التي بها مد» — الخطأ يُسمِع «حاول مرة أخرى»،
+//           وبعد الضغط على البطاقتين الخاطئتين تُنطق الإجابة الصحيحة وتُكشف.
+// الخطوة 2: تُسمَع عبارة التشجيع + الكلمة، ثم يُطلب تلوين الكلمة بألوانه المفضلة
+//           مقطعاً بمقطع عبر المسح أو النقر على الكلمة المفرغة.
+//
+// ترتيب الجولات في الأسطوانة: أُولَى ← إِينَاس ← آمَال.
 
-class _MaddWordOption {
+const double _imgW = 1024;
+const double _imgH = 490;
+
+// موضع وأبعاد الكلمة المفرغة داخل اللوحة البيضاء (بكسل الصورة الأصلية)
+const double _wordX = 210;
+const double _wordY = 175;
+const double _wordW = 490;
+const double _wordH = 185;
+
+class _MaddOption {
   final String word;
   final bool hasMadd;
-  const _MaddWordOption({required this.word, required this.hasMadd});
+  const _MaddOption({required this.word, required this.hasMadd});
 }
 
 class _ColoringRound {
-  final String imagePath;
-  final List<_MaddWordOption> options;
+  final String bgImagePath;
+  final String wordMaskPath;
   final String correctWord;
-  final List<String> letterSegments; // The individual letters to color
-  final String wordAudioPath;
+  // «أحسنت + الكلمة» بصوت الأسطوانة الأصلي
+  final String correctAudio;
+  // الجملة التي تُسمَع عند كشف الإجابة بعد الخطأين
+  final String revealAudio;
+  final String wordAudio;
+  final List<_MaddOption> options;
+  // حدود حروف الكلمة على محور x داخل صورة الكلمة (عرضها 490)
+  final List<double> cuts;
 
   const _ColoringRound({
-    required this.imagePath,
-    required this.options,
+    required this.bgImagePath,
+    required this.wordMaskPath,
     required this.correctWord,
-    required this.letterSegments,
-    required this.wordAudioPath,
+    required this.correctAudio,
+    required this.revealAudio,
+    required this.wordAudio,
+    required this.options,
+    required this.cuts,
   });
+
+  /// مقاطع الكلمة (من اليسار إلى اليمين) كأزواج [بداية، نهاية].
+  List<List<double>> get slices {
+    final edges = [0.0, ...cuts, _wordW];
+    return List.generate(edges.length - 1, (i) => [edges[i], edges[i + 1]]);
+  }
 }
 
-const List<_ColoringRound> _coloringRounds = [
+const List<_ColoringRound> _rounds = [
+  // الجولة 1: إبرة ❌، أسد ❌، أولى ✅  → أ و ل ى
   _ColoringRound(
-    imagePath: 'assets/images/games/coloring/coloring_round_1.png',
-    options: [
-      _MaddWordOption(word: 'إِبْرَةٌ', hasMadd: false),
-      _MaddWordOption(word: 'أَسَدٌ',  hasMadd: false),
-      _MaddWordOption(word: 'أُولَى',  hasMadd: true),
-    ],
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_1.png',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_1.png',
     correctWord: 'أُولَى',
-    letterSegments: ['أُ', 'و', 'لَ', 'ـى'],
-    wordAudioPath: 'audio/instructions/alif_trace_step_06.mp3', // الأولى
-  ),
-  _ColoringRound(
-    imagePath: 'assets/images/games/coloring/coloring_round_2.png',
+    correctAudio: 'audio/games/coloring/alif_good_olaa.mp3',
+    revealAudio: 'audio/games/coloring/alif_reveal_olaa.mp3',
+    wordAudio: 'audio/lessons/alif/words/p4_oula.mp3',
     options: [
-      _MaddWordOption(word: 'أَرْنَبٌ', hasMadd: false),
-      _MaddWordOption(word: 'إِينَاسٌ', hasMadd: true),
-      _MaddWordOption(word: 'فَأْسٌ',   hasMadd: false),
+      _MaddOption(word: 'إِبْرَة', hasMadd: false),
+      _MaddOption(word: 'أَسَد', hasMadd: false),
+      _MaddOption(word: 'أُولَى', hasMadd: true),
     ],
-    correctWord: 'إِينَاسٌ',
-    letterSegments: ['إِ', 'يـ', 'نَـ', 'ـا', 'س'],
-    wordAudioPath: 'audio/instructions/alif_trace_step_13.mp3', // إيناس
+    cuts: [255, 318, 406],
   ),
+  // الجولة 2: أرنب ❌، إيناس ✅، فأس ❌  → إ ي ن ا س
   _ColoringRound(
-    imagePath: 'assets/images/games/coloring/coloring_round_3.png',
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_2.png',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_2.png',
+    correctWord: 'إِينَاس',
+    correctAudio: 'audio/games/coloring/alif_good_inas.mp3',
+    revealAudio: 'audio/games/coloring/alif_reveal_inas.mp3',
+    wordAudio: 'audio/lessons/alif/words/p2_inas.mp3',
     options: [
-      _MaddWordOption(word: 'آمَالٌ',  hasMadd: true),
-      _MaddWordOption(word: 'رَأْسٌ',  hasMadd: false),
-      _MaddWordOption(word: 'أُذُنٌ',  hasMadd: false),
+      _MaddOption(word: 'أَرْنَب', hasMadd: false),
+      _MaddOption(word: 'إِينَاس', hasMadd: true),
+      _MaddOption(word: 'فَأْس', hasMadd: false),
     ],
-    correctWord: 'آمَالٌ',
-    letterSegments: ['آ', 'مَـ', 'ـا', 'ل'],
-    wordAudioPath: 'audio/instructions/alif_trace_step_08.mp3', // آمال
+    cuts: [214, 285, 340, 402],
   ),
+  // الجولة 3: آمال ✅، رأس ❌، أذن ❌  → آ م ا ل
+  _ColoringRound(
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_3.png',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_3.png',
+    correctWord: 'آمَال',
+    correctAudio: 'audio/games/coloring/alif_good_amal.mp3',
+    revealAudio: 'audio/games/coloring/alif_reveal_amal.mp3',
+    wordAudio: 'audio/lessons/alif/words/p4_amal.mp3',
+    options: [
+      _MaddOption(word: 'آمَال', hasMadd: true),
+      _MaddOption(word: 'رَأْس', hasMadd: false),
+      _MaddOption(word: 'أُذُن', hasMadd: false),
+    ],
+    cuts: [176, 295, 375],
+  ),
+];
+
+// مراكز بطاقات الكلمات الثلاث على اليسار (بكسل الصورة الأصلية)
+const double _cardCx = 84;
+const List<double> _cardCy = [108, 223, 343];
+const double _cardW = 148;
+const double _cardH = 98;
+
+// البقع اللونية على باليت الزرافة (ألوانها وإحداثياتها مأخوذة من الصورة الأصلية)
+class _GiraffeBlob {
+  final double px;
+  final double py;
+  final Color color;
+  const _GiraffeBlob({required this.px, required this.py, required this.color});
+}
+
+const List<_GiraffeBlob> _giraffeBlobs = [
+  _GiraffeBlob(px: 832, py: 268, color: Color(0xFFDC15C3)),
+  _GiraffeBlob(px: 895, py: 255, color: Color(0xFF03A0E3)),
+  _GiraffeBlob(px: 804, py: 296, color: Color(0xFFE30613)),
+  _GiraffeBlob(px: 834, py: 316, color: Color(0xFF048200)),
+  _GiraffeBlob(px: 952, py: 272, color: Color(0xFFFDD835)),
+];
+
+const List<Color> _palette = [
+  Color(0xFFE30613),
+  Color(0xFF048200),
+  Color(0xFF03A0E3),
+  Color(0xFFDC15C3),
+  Color(0xFFFDD835),
+  Color(0xFFFB8C00),
+  Color(0xFF8E24AA),
+  Color(0xFF00ACC1),
 ];
 
 class ColoringMaddGame extends ConsumerStatefulWidget {
@@ -72,135 +149,244 @@ class ColoringMaddGame extends ConsumerStatefulWidget {
   ConsumerState<ColoringMaddGame> createState() => _ColoringMaddGameState();
 }
 
-class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with TickerProviderStateMixin {
+class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
   late ConfettiController _confetti;
 
   int _round = 0;
   int _score = 0;
   bool _gameOver = false;
 
-  // Round state
+  // يُزاد عند أي انتقال/إعادة فتتوقف التسلسلات الصوتية القديمة تلقائياً
+  int _token = 0;
+
+  // الخطوة 1
   int? _selectedOption;
-  bool _isWordSelected = false; // true when correct word selected
+  bool _isWordSelected = false;
+  bool _isProcessing = false;
+  final Set<int> _wrongPressed = {};
+
+  // الخطوة 2
   bool _roundDone = false;
-  int _wrongAttempts = 0;
-
-  // Coloring state
-  Color _selectedPaletteColor = const Color(0xFFE53935); // Default red
-  late List<Color> _letterColors;
-
-  static const List<Color> _palette = [
-    Color(0xFFE53935), // Red
-    Color(0xFF43A047), // Green
-    Color(0xFF1E88E5), // Blue
-    Color(0xFF8E24AA), // Purple
-    Color(0xFFFDD835), // Yellow
-    Color(0xFFFB8C00), // Orange
-    Color(0xFFE91E63), // Pink
-    Color(0xFF00ACC1), // Cyan
-  ];
+  Color _selectedPaletteColor = _palette.first;
+  late List<Color?> _sliceColors;
 
   @override
   void initState() {
     super.initState();
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
-    _initLetterColors();
-    WidgetsBinding.instance.addPostFrameCallback((_) => Future.delayed(const Duration(milliseconds: 700), _playInstruction));
-  }
-
-  void _initLetterColors() {
-    final round = _coloringRounds[_round];
-    _letterColors = List.generate(round.letterSegments.length, (_) => Colors.white);
+    _initSliceColors();
+    final tk = _token;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_alive(tk)) {
+        _playRoundIntro(isFirstRound: true);
+      }
+    });
   }
 
   @override
   void dispose() {
+    _token++;
+    _stopAudio();
     _confetti.dispose();
     super.dispose();
   }
 
-  Future<void> _playInstruction() =>
-      AudioService.instance.playAsset(
-        !_isWordSelected 
-          ? 'audio/instructions/coloring_madd_instruction.mp3'
-          : 'audio/instructions/coloring_paint_instruction.mp3', 
-        channel: AudioChannel.voice);
-  Future<void> _playCorrect() =>
-      AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
-  Future<void> _playWrong() =>
-      AudioService.instance.playAsset('audio/instructions/try_again.mp3', channel: AudioChannel.sfx);
-  Future<void> _playWordAudio(String path) =>
-      AudioService.instance.playAsset(path, channel: AudioChannel.voice);
+  void _initSliceColors() {
+    _sliceColors = List.generate(_rounds[_round].slices.length, (_) => null);
+  }
 
+  bool _alive(int token) => mounted && !_gameOver && token == _token;
+
+  /// يشغّل ملفاً صوتياً وينتظر انتهاءه فعلاً (لا توقيتات تقديرية تقطع الصوت).
+  Future<void> _say(
+    String path, {
+    required int maxMs,
+    AudioChannel channel = AudioChannel.voice,
+  }) async {
+    try {
+      await AudioService.instance.stop();
+      await AudioService.instance.playAsset(path, channel: channel);
+      final done = AudioService.instance.onPlayerComplete(channel);
+      if (done != null) {
+        await done.first.timeout(
+          Duration(milliseconds: maxMs),
+          onTimeout: () {},
+        );
+      } else {
+        await Future.delayed(Duration(milliseconds: maxMs));
+      }
+    } catch (_) {}
+  }
+
+  void _stopAudio() {
+    try {
+      AudioService.instance.stop();
+    } catch (_) {}
+  }
+
+  // ─── افتتاح الجولة ───────────────────────────────────────────────────────────
+  Future<void> _playRoundIntro({bool isFirstRound = false}) async {
+    if (!mounted || _gameOver) return;
+    final tk = ++_token;
+    _stopAudio();
+    if (!_isWordSelected) {
+      if (isFirstRound) {
+        await _say('audio/games/coloring/6_al15.mp3', maxMs: 2200); // «التلوين»
+        if (!_alive(tk) || _isWordSelected) return;
+      }
+      // «اضغط على الكلمة التي بها مد»
+      await _say('audio/games/coloring/3_qu2.mp3', maxMs: 4500);
+    } else {
+      // «لوّن الكلمة بألوانك المفضلة»
+      await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+    }
+  }
+
+  // ─── الخطوة 1: اختيار الكلمة التي بها مد ─────────────────────────────────────
   Future<void> _onOptionTap(int idx) async {
-    if (_isWordSelected || _roundDone) return;
+    if (_isWordSelected || _roundDone || _isProcessing) return;
     HapticFeedback.lightImpact();
 
-    final rd = _coloringRounds[_round];
+    final tk = ++_token;
+    final rd = _rounds[_round];
     final opt = rd.options[idx];
+
+    setState(() {
+      _selectedOption = idx;
+      _isProcessing = true;
+    });
+    _stopAudio();
 
     if (opt.hasMadd) {
       setState(() {
-        _selectedOption = idx;
-        _isWordSelected = true;
         _score++;
+        _isWordSelected = true;
+        _isProcessing = false;
       });
       _confetti.play();
-      await _playWordAudio(rd.wordAudioPath);
+
+      // «أحسنت + الكلمة» ثم طلب التلوين
+      await _say(rd.correctAudio, maxMs: 3500);
+      if (!_alive(tk)) return;
+      await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+      return;
+    }
+
+    // خاطئة
+    _wrongPressed.add(idx);
+    final wrongIndexes = [
+      for (int i = 0; i < rd.options.length; i++)
+        if (!rd.options[i].hasMadd) i,
+    ];
+    final bothWrongPressed = wrongIndexes.every(_wrongPressed.contains);
+
+    if (bothWrongPressed) {
+      // كما في الأصل: بعد الضغط على البطاقتين الخاطئتين تُنطق الإجابة وتُكشف
+      await _say(rd.revealAudio, maxMs: 7000);
+      if (!_alive(tk)) return;
+      setState(() {
+        _selectedOption = rd.options.indexWhere((o) => o.hasMadd);
+        _isWordSelected = true;
+        _isProcessing = false;
+      });
+      await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
     } else {
-      setState(() { _selectedOption = idx; });
-      await _playWrong();
-      _wrongAttempts++;
-      if (_wrongAttempts >= 2) {
-        // Reveal correct answer
-        final correctIdx = rd.options.indexWhere((o) => o.hasMadd);
-        setState(() {
-          _selectedOption = correctIdx;
-          _isWordSelected = true;
-        });
-        await _playWordAudio(rd.wordAudioPath);
-      } else {
-        await Future.delayed(const Duration(milliseconds: 700));
-        if (!mounted) return;
-        setState(() { _selectedOption = null; });
-      }
+      // «حاول مرة أخرى»
+      await _say('audio/games/coloring/5_al23.mp3', maxMs: 3200);
+      if (!_alive(tk)) return;
+      setState(() {
+        _selectedOption = null;
+        _isProcessing = false;
+      });
     }
   }
 
-  void _colorLetter(int letterIdx) {
-    HapticFeedback.selectionClick();
-    setState(() {
-      _letterColors[letterIdx] = _selectedPaletteColor;
-    });
+  // ─── الخطوة 2: تلوين مقاطع الكلمة ───────────────────────────────────────────
+  Future<void> _colorSlice(int sliceIdx) async {
+    if (!_isWordSelected || _roundDone) return;
+    if (_sliceColors[sliceIdx] == _selectedPaletteColor) return;
 
-    // Check if all letters are colored
-    final allColored = _letterColors.every((c) => c != Colors.white);
-    if (allColored && !_roundDone) {
-      setState(() { _roundDone = true; });
-      _confetti.play();
-      _playCorrect();
+    HapticFeedback.selectionClick();
+    setState(() => _sliceColors[sliceIdx] = _selectedPaletteColor);
+
+    final allColored = _sliceColors.every((c) => c != null);
+    if (!allColored) {
+      try {
+        AudioService.instance.playAsset(
+          'audio/games/coloring/6_b2.mp3',
+          channel: AudioChannel.sfx,
+        );
+      } catch (_) {}
+      return;
     }
+
+    final tk = ++_token;
+    setState(() => _roundDone = true);
+    _confetti.play();
+    final rd = _rounds[_round];
+
+    await _say(
+      'audio/games/coloring/6_b2.mp3',
+      maxMs: 450,
+      channel: AudioChannel.sfx,
+    );
+    if (!_alive(tk)) return;
+    await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
+    if (!_alive(tk)) return;
+    await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
+    if (!_alive(tk)) return;
+    await Future.delayed(const Duration(milliseconds: 500));
+    if (!_alive(tk)) return;
+    _advance();
+  }
+
+  void _resetRoundState() {
+    _selectedOption = null;
+    _isWordSelected = false;
+    _roundDone = false;
+    _isProcessing = false;
+    _wrongPressed.clear();
+    _initSliceColors();
   }
 
   void _advance() {
-    if (_round + 1 >= _coloringRounds.length) {
+    final tk = ++_token;
+    _stopAudio();
+    if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
-      if (_score >= _coloringRounds.length / 2) _confetti.play();
+      _confetti.play();
+      try {
+        AudioService.instance.playAsset(
+          'audio/games/fishing/ahsnt.mp3',
+          channel: AudioChannel.voice,
+        );
+      } catch (_) {}
     } else {
       setState(() {
         _round++;
-        _selectedOption = null;
-        _isWordSelected = false;
-        _roundDone = false;
-        _wrongAttempts = 0;
-        _initLetterColors();
+        _resetRoundState();
+      });
+      Future.delayed(const Duration(milliseconds: 300), () {
+        if (_alive(tk)) _playRoundIntro();
       });
     }
+  }
+
+  void _previous() {
+    final tk = ++_token;
+    _stopAudio();
+    setState(() {
+      _round--;
+      _resetRoundState();
+    });
+    Future.delayed(const Duration(milliseconds: 300), () {
+      if (_alive(tk)) _playRoundIntro();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_gameOver) return _gameOverScreen();
+    if (_gameOver) return _buildGameOver();
     return Column(
       children: [
         Expanded(child: _buildGameScene()),
@@ -210,317 +396,315 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
   }
 
   Widget _buildGameScene() {
-    final rd = _coloringRounds[_round];
+    final rd = _rounds[_round];
     return Stack(
       children: [
-        LayoutBuilder(builder: (ctx, c) {
-          final sw = c.maxWidth, sh = c.maxHeight;
-          final ia = _imgW / _imgH, sa = sw / sh;
-          double dW, dH, ox, oy;
-          if (sa < ia) {
-            dW = sw; dH = sw / ia; ox = 0; oy = (sh - dH) / 2;
-          } else {
-            dH = sh; dW = sh * ia; ox = (sw - dW) / 2; oy = 0;
-          }
-          final scaleX = dW / _imgW, scaleY = dH / _imgH;
+        LayoutBuilder(
+          builder: (ctx, c) {
+            final sw = c.maxWidth, sh = c.maxHeight;
+            final ia = _imgW / _imgH, sa = sw / sh;
+            double dW, dH, ox, oy;
+            if (sa < ia) {
+              dW = sw;
+              dH = sw / ia;
+              ox = 0;
+              oy = (sh - dH) / 2;
+            } else {
+              dH = sh;
+              dW = sh * ia;
+              ox = (sw - dW) / 2;
+              oy = 0;
+            }
+            final scaleX = dW / _imgW;
+            final scaleY = dH / _imgH;
 
-          return Stack(children: [
-            // Background image
-            Positioned.fill(child: Image.asset(rd.imagePath, fit: BoxFit.contain)),
-
-            // Bottom ground band to cleanly cover old Flash navigation bar
-            Positioned(
-              left: ox,
-              top: oy + 890 * scaleY,
-              width: dW,
-              height: 120 * scaleY,
-              child: Container(
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFFA2CB32),
-                      Color(0xFF8DBB28),
-                    ],
-                  ),
+            return Stack(
+              children: [
+                // 1. صورة الشاشة الأصلية من الأسطوانة
+                Positioned.fill(
+                  child: Image.asset(rd.bgImagePath, fit: BoxFit.contain),
                 ),
-              ),
-            ),
 
-            // Left Option Cards
-            ...List.generate(rd.options.length, (i) =>
-              _buildOptionCard(rd, i, ox, oy, scaleX, scaleY)),
+                // 2. بطاقات الكلمات الثلاث (الخطوة 1)
+                ...List.generate(
+                  rd.options.length,
+                  (i) => _buildOptionCard(rd, i, ox, oy, scaleX, scaleY),
+                ),
 
-            // Main Central Board (Word Display & Coloring Canvas)
-            if (_isWordSelected)
-              _buildColoringCanvas(rd, ox, oy, scaleX, scaleY),
+                // 3. الكلمة المفرغة للتلوين (الخطوة 2)
+                if (_isWordSelected)
+                  _buildHollowWord(rd, ox, oy, scaleX, scaleY),
 
-            // Color Palette Bar
-            if (_isWordSelected)
-              _buildColorPalette(ox, oy, scaleX, scaleY),
+                // 4. بقع الألوان على باليت الزرافة (نقر لاختيار اللون)
+                ..._giraffeBlobs.map((blob) {
+                  final isSel = _selectedPaletteColor == blob.color;
+                  final bw = 54 * scaleX;
+                  final bh = 40 * scaleY;
+                  return Positioned(
+                    left: ox + blob.px * scaleX - bw / 2,
+                    top: oy + blob.py * scaleY - bh / 2,
+                    width: bw,
+                    height: bh,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        HapticFeedback.selectionClick();
+                        setState(() => _selectedPaletteColor = blob.color);
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 180),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: isSel
+                              ? Border.all(color: Colors.white, width: 3)
+                              : null,
+                        ),
+                      ),
+                    ),
+                  );
+                }),
 
-            // Top HUD
-            Positioned(top: 10, left: 0, right: 0, child: _topBar()),
-          ]);
-        }),
+                // 5. شريط الألوان أسفل اللوحة (الخطوة 2)
+                if (_isWordSelected)
+                  _buildColorPaletteBar(ox, oy, scaleX, scaleY),
 
-        // Confetti
+                // 6. شريط الحالة
+                Positioned(top: 8, left: 0, right: 0, child: _topBar()),
+              ],
+            );
+          },
+        ),
         Align(
           alignment: Alignment.topCenter,
           child: ConfettiWidget(
             confettiController: _confetti,
             blastDirectionality: BlastDirectionality.explosive,
-            numberOfParticles: 35,
+            numberOfParticles: 30,
             gravity: 0.4,
-            colors: const [Colors.yellow, Colors.green, Colors.red, Colors.purple, Colors.orange, Colors.cyan],
+            colors: const [
+              Colors.yellow,
+              Colors.green,
+              Colors.red,
+              Colors.purple,
+              Colors.orange,
+              Colors.cyan,
+            ],
           ),
         ),
       ],
     );
   }
 
-  Widget _buildOptionCard(_ColoringRound rd, int i, double ox, double oy, double scaleX, double scaleY) {
+  Widget _buildOptionCard(
+    _ColoringRound rd,
+    int i,
+    double ox,
+    double oy,
+    double scaleX,
+    double scaleY,
+  ) {
     final opt = rd.options[i];
-    final pyList = [235.0, 435.0, 650.0];
-    final cx = ox + 110.0 * scaleX;
-    final cy = oy + pyList[i] * scaleY;
-    final cardW = 210.0 * scaleX;
-    final cardH = 125.0 * scaleY;
-
+    final cw = _cardW * scaleX;
+    final ch = _cardH * scaleY;
     final isSelected = _selectedOption == i;
     final isCorrect = isSelected && opt.hasMadd;
     final isWrong = isSelected && !opt.hasMadd;
 
     return Positioned(
-      left: cx - cardW / 2,
-      top: cy - cardH / 2,
-      width: cardW,
-      height: cardH,
+      left: ox + _cardCx * scaleX - cw / 2,
+      top: oy + _cardCy[i] * scaleY - ch / 2,
+      width: cw,
+      height: ch,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () => _onOptionTap(i),
         child: Stack(
           alignment: Alignment.center,
           children: [
-            // Animated Red / Green Circle Indicator (Identical to Rabbit Story Circle)
             if (isSelected)
               Container(
-                width: cardW * 0.94,
-                height: cardH * 0.90,
+                width: cw * 0.96,
+                height: ch * 0.92,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(14),
                   border: Border.all(
                     color: isCorrect ? Colors.green.shade600 : Colors.red.shade600,
-                    width: 4.5,
+                    width: 4,
                   ),
-                  color: (isCorrect ? Colors.green : Colors.red).withValues(alpha: 0.12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: (isCorrect ? Colors.green : Colors.red).withValues(alpha: 0.4),
-                      blurRadius: 14,
-                      spreadRadius: 2,
-                    ),
-                  ],
+                  color: (isCorrect ? Colors.green : Colors.red).withValues(alpha: 0.15),
                 ),
-              ).animate(target: isSelected ? 1 : 0)
-               .scale(begin: const Offset(0.85, 0.85), end: const Offset(1.0, 1.0), duration: 250.ms, curve: Curves.easeOutBack)
-               .shake(duration: isWrong ? 450.ms : 0.ms, hz: 4),
+              )
+                  .animate()
+                  .scale(
+                    begin: const Offset(0.9, 0.9),
+                    end: const Offset(1.0, 1.0),
+                    duration: 220.ms,
+                    curve: Curves.easeOutBack,
+                  )
+                  .shake(duration: isWrong ? 400.ms : 0.ms, hz: 4),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildColoringCanvas(_ColoringRound rd, double ox, double oy, double scaleX, double scaleY) {
-    final boardX = ox + 245 * scaleX;
-    final boardY = oy + 230 * scaleY;
-    final boardW = 700 * scaleX;
-    final boardH = 435 * scaleY;
+  Widget _buildHollowWord(
+    _ColoringRound rd,
+    double ox,
+    double oy,
+    double scaleX,
+    double scaleY,
+  ) {
+    final wW = _wordW * scaleX;
+    final wH = _wordH * scaleY;
+    final slices = rd.slices;
 
     return Positioned(
-      left: boardX,
-      top: boardY,
-      width: boardW,
-      height: boardH,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20 * scaleX, vertical: 16 * scaleY),
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.98),
-          borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: Colors.green.shade500, width: 4),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.green.withValues(alpha: 0.28),
-              blurRadius: 24,
-              spreadRadius: 4,
-              offset: const Offset(0, 8),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              '🎨 لَوِّنْ حُرُوفَ الْكَلِمَةِ بِأَلْوَانِكَ الْجَمِيلَةِ 🎨',
-              style: TextStyle(
-                fontFamily: 'Cairo',
-                fontSize: 26 * scaleX,
-                fontWeight: FontWeight.w900,
-                color: Colors.green.shade800,
-              ),
-            ),
-            SizedBox(height: 18 * scaleY),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              textDirection: TextDirection.rtl,
-              children: List.generate(rd.letterSegments.length, (idx) {
-                final letter = rd.letterSegments[idx];
-                final color = _letterColors[idx];
-                final isColored = color != Colors.white;
-
-                return GestureDetector(
-                  onTap: () => _colorLetter(idx),
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8 * scaleX),
-                    padding: EdgeInsets.symmetric(horizontal: 20 * scaleX, vertical: 10 * scaleY),
-                    decoration: BoxDecoration(
-                      color: isColored ? color.withValues(alpha: 0.22) : Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(
-                        color: isColored ? color : Colors.grey.shade400,
-                        width: 4.5,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: isColored ? color.withValues(alpha: 0.45) : Colors.black.withValues(alpha: 0.08),
-                          blurRadius: 14,
-                          spreadRadius: isColored ? 2 : 0,
-                          offset: const Offset(0, 6),
-                        ),
-                      ],
-                    ),
-                    child: Text(
-                      letter,
-                      style: TextStyle(
-                        fontFamily: 'Cairo',
-                        fontSize: 105 * scaleX,
-                        fontWeight: FontWeight.w900,
-                        color: isColored ? color : Colors.black87,
-                        shadows: isColored
-                            ? [Shadow(color: color.withValues(alpha: 0.7), blurRadius: 16)]
-                            : [],
-                      ),
-                    ).animate(target: isColored ? 1 : 0).scale(begin: const Offset(1, 1), end: const Offset(1.15, 1.15), duration: 220.ms),
+      left: ox + _wordX * scaleX,
+      top: oy + _wordY * scaleY,
+      width: wW,
+      height: wH,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTapDown: (d) => _paintAt(d.localPosition.dx / scaleX, slices),
+        onPanUpdate: (d) => _paintAt(d.localPosition.dx / scaleX, slices),
+        child: Stack(
+          children: List.generate(slices.length, (i) {
+            final x0 = slices[i][0] * scaleX;
+            final x1 = slices[i][1] * scaleX;
+            final color = _sliceColors[i];
+            return Positioned(
+              left: x0,
+              top: 0,
+              width: x1 - x0,
+              height: wH,
+              child: ClipRect(
+                child: OverflowBox(
+                  alignment: Alignment.topLeft,
+                  minWidth: wW,
+                  maxWidth: wW,
+                  minHeight: wH,
+                  maxHeight: wH,
+                  child: Transform.translate(
+                    offset: Offset(-x0, 0),
+                    child: color == null
+                        ? Image.asset(rd.wordMaskPath, width: wW, height: wH, fit: BoxFit.fill)
+                        : ColorFiltered(
+                            colorFilter: ColorFilter.mode(color, BlendMode.modulate),
+                            child: Image.asset(rd.wordMaskPath, width: wW, height: wH, fit: BoxFit.fill),
+                          ),
                   ),
-                );
-              }),
-            ),
-          ],
+                ),
+              ),
+            );
+          }),
         ),
-      ).animate().scale(begin: const Offset(0.7, 0.7), curve: Curves.elasticOut, duration: 600.ms),
+      ).animate().fadeIn(duration: 300.ms),
     );
   }
 
-  Widget _buildColorPalette(double ox, double oy, double scaleX, double scaleY) {
-    final palX = ox + 245 * scaleX;
-    final palY = oy + 680 * scaleY;
-    final palW = 700 * scaleX;
-    final palH = 135 * scaleY;
+  void _paintAt(double localX, List<List<double>> slices) {
+    for (int i = 0; i < slices.length; i++) {
+      if (localX >= slices[i][0] && localX < slices[i][1]) {
+        _colorSlice(i);
+        return;
+      }
+    }
+  }
 
+  Widget _buildColorPaletteBar(
+    double ox,
+    double oy,
+    double scaleX,
+    double scaleY,
+  ) {
     return Positioned(
-      left: palX,
-      top: palY,
-      width: palW,
-      height: palH,
+      left: ox + 205 * scaleX,
+      top: oy + 385 * scaleY,
+      width: 495 * scaleX,
+      height: 70 * scaleY,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16 * scaleX, vertical: 12 * scaleY),
+        padding: EdgeInsets.symmetric(horizontal: 10 * scaleX, vertical: 5 * scaleY),
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: Colors.amber.shade500, width: 4),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.15),
-              blurRadius: 18,
-              offset: const Offset(0, 6),
-            ),
-          ],
+          color: Colors.white.withValues(alpha: 0.95),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: const Color(0xFF2E7D32), width: 2.5),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: _palette.map((c) {
             final isSelected = _selectedPaletteColor == c;
+            final sz = (isSelected ? 44.0 : 34.0) * scaleX;
             return GestureDetector(
               onTap: () {
                 HapticFeedback.selectionClick();
                 setState(() => _selectedPaletteColor = c);
               },
               child: AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                width: isSelected ? 80 * scaleX : 60 * scaleX,
-                height: isSelected ? 80 * scaleX : 60 * scaleX,
+                duration: const Duration(milliseconds: 180),
+                width: sz,
+                height: sz,
                 decoration: BoxDecoration(
                   color: c,
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: isSelected ? Colors.white : Colors.white70,
-                    width: isSelected ? 5 : 2.5,
+                    color: isSelected ? Colors.black87 : Colors.white,
+                    width: isSelected ? 3.0 : 2.0,
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: c.withValues(alpha: isSelected ? 0.8 : 0.4),
-                      blurRadius: isSelected ? 16 : 8,
-                      spreadRadius: isSelected ? 4 : 0,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
                 ),
                 child: isSelected
-                    ? Icon(Icons.brush_rounded, color: Colors.white, size: 38 * scaleX)
+                    ? Icon(Icons.brush_rounded, color: Colors.white, size: 20 * scaleX)
                     : null,
               ),
             );
           }).toList(),
         ),
-      ).animate().fadeIn(duration: 400.ms).slideY(begin: 0.3, end: 0),
+      ).animate().fadeIn(duration: 300.ms),
     );
   }
 
   Widget _buildBottomNavBar(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, -3))],
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 8,
+            offset: const Offset(0, -2),
+          ),
+        ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _navBtn('التالي', Icons.arrow_back_rounded, _isWordSelected, () {
-            if (_isWordSelected) { HapticFeedback.lightImpact(); _advance(); }
+            HapticFeedback.lightImpact();
+            _advance();
           }),
           GestureDetector(
-            onTap: () { HapticFeedback.lightImpact(); Navigator.of(context).popUntil((r) => r.isFirst); },
-            child: Container(
-              padding: const EdgeInsets.all(12),
-              decoration: const BoxDecoration(color: Color(0xFF4CAF50), shape: BoxShape.circle,
-                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))]),
-              child: const Icon(Icons.home_rounded, color: Colors.white, size: 28),
-            ),
-          ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
-          _navBtn('السابق', Icons.arrow_forward_rounded, _round > 0 && !_isWordSelected, () {
-            if (_round > 0 && !_isWordSelected) {
+            onTap: () {
               HapticFeedback.lightImpact();
-              setState(() {
-                _round--;
-                _selectedOption = null;
-                _isWordSelected = false;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _initLetterColors();
-              });
-            }
+              _token++;
+              _stopAudio();
+              Navigator.of(context).popUntil((r) => r.isFirst);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: const BoxDecoration(
+                color: Color(0xFF4CAF50),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
+                ],
+              ),
+              child: const Icon(Icons.home_rounded, color: Colors.white, size: 26),
+            ),
+          ),
+          _navBtn('السابق', Icons.arrow_forward_rounded, _round > 0, () {
+            HapticFeedback.lightImpact();
+            _previous();
           }),
         ],
       ),
@@ -532,89 +716,148 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> with Ticker
     return GestureDetector(
       onTap: enabled ? onTap : null,
       child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 200), opacity: enabled ? 1.0 : 0.4,
+        duration: const Duration(milliseconds: 200),
+        opacity: enabled ? 1.0 : 0.4,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
           decoration: BoxDecoration(
             color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
             borderRadius: BorderRadius.circular(24),
-            boxShadow: enabled ? [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))] : [],
           ),
-          child: Row(mainAxisSize: MainAxisSize.min, children: [
-            if (isNext) Icon(icon, color: Colors.white, size: 20),
-            if (isNext) const SizedBox(width: 6),
-            Text(label, style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-            if (!isNext) const SizedBox(width: 6),
-            if (!isNext) Icon(icon, color: Colors.white, size: 20),
-          ]),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (isNext) Icon(icon, color: Colors.white, size: 18),
+              if (isNext) const SizedBox(width: 6),
+              Text(
+                label,
+                style: const TextStyle(
+                  fontFamily: 'Cairo',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              if (!isNext) const SizedBox(width: 6),
+              if (!isNext) Icon(icon, color: Colors.white, size: 18),
+            ],
+          ),
         ),
       ),
-    ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms);
+    );
   }
 
-  Widget _topBar() => Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-    _chip('⭐ $_score'), const SizedBox(width: 10),
-    GestureDetector(
-      onTap: _playInstruction,
-      child: Container(
-        padding: const EdgeInsets.all(9),
-        decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
-        child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 26),
-      ),
-    ),
-    const SizedBox(width: 10), _chip('${_round + 1} / ${_coloringRounds.length}'),
-  ]);
+  Widget _topBar() => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _chip('⭐ $_score'),
+          const SizedBox(width: 10),
+          GestureDetector(
+            onTap: () => _playRoundIntro(),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
+              child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 24),
+            ),
+          ),
+          const SizedBox(width: 10),
+          _chip('${_round + 1} / ${_rounds.length}'),
+        ],
+      );
 
   Widget _chip(String t) => Container(
-    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-    decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(20)),
-    child: Text(t, style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold)),
-  );
-
-  Widget _gameOverScreen() => Stack(children: [
-    Positioned.fill(child: Image.asset(_coloringRounds.last.imagePath, fit: BoxFit.contain)),
-    Positioned.fill(child: Container(color: Colors.black.withValues(alpha: 0.65))),
-    Align(
-      alignment: Alignment.topCenter,
-      child: ConfettiWidget(
-        confettiController: _confetti,
-        blastDirectionality: BlastDirectionality.explosive,
-        numberOfParticles: 50, gravity: 0.3,
-        colors: const [Colors.yellow, Colors.green, Colors.red, Colors.purple, Colors.orange, Colors.cyan],
-      ),
-    ),
-    Center(
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
-        const Text('🎨', style: TextStyle(fontSize: 90))
-            .animate().scale(begin: const Offset(0, 0), curve: Curves.elasticOut, duration: 800.ms),
-        const SizedBox(height: 20),
-        Text(
-          _score == _coloringRounds.length
-              ? 'مُمْتَازٌ! أَكْمَلْتَ تَلْوِينَ كُلِّ الْكَلِمَاتِ!'
-              : 'أَحْسَنْتَ! إِجَابَتُكَ: $_score / ${_coloringRounds.length}',
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Cairo'),
-        ).animate(delay: 400.ms).fadeIn(),
-        const SizedBox(height: 30),
-        ElevatedButton.icon(
-          onPressed: () {
-            setState(() {
-              _round = 0; _score = 0; _gameOver = false;
-              _selectedOption = null; _isWordSelected = false;
-              _roundDone = false; _wrongAttempts = 0;
-              _initLetterColors();
-            });
-            Future.delayed(const Duration(milliseconds: 500), _playInstruction);
-          },
-          icon: const Icon(Icons.replay_rounded),
-          label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.amber, foregroundColor: Colors.black87,
-            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          t,
+          style: const TextStyle(
+            fontFamily: 'Cairo',
+            fontSize: 15,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
           ),
-        ).animate(delay: 700.ms).fadeIn().scale(begin: const Offset(0.8, 0.8)),
-      ]),
-    ),
-  ]);
+        ),
+      );
+
+  Widget _buildGameOver() => Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(_rounds.last.bgImagePath, fit: BoxFit.contain),
+          ),
+          Positioned.fill(
+            child: Container(color: Colors.black.withValues(alpha: 0.65)),
+          ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: ConfettiWidget(
+              confettiController: _confetti,
+              blastDirectionality: BlastDirectionality.explosive,
+              numberOfParticles: 45,
+              gravity: 0.3,
+              colors: const [
+                Colors.yellow,
+                Colors.green,
+                Colors.red,
+                Colors.purple,
+                Colors.orange,
+                Colors.cyan,
+              ],
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text('🎨', style: TextStyle(fontSize: 85)),
+                const SizedBox(height: 18),
+                Text(
+                  _score == _rounds.length
+                      ? 'مُمْتَازٌ! أَكْمَلْتَ تَلْوِينَ كُلِّ الْكَلِمَاتِ! 🌟'
+                      : 'أَحْسَنْتَ! نَتِيجَتُكَ: $_score / ${_rounds.length}',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amber,
+                    fontFamily: 'Cairo',
+                  ),
+                ),
+                const SizedBox(height: 28),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    final tk = ++_token;
+                    _stopAudio();
+                    setState(() {
+                      _round = 0;
+                      _score = 0;
+                      _gameOver = false;
+                      _resetRoundState();
+                    });
+                    Future.delayed(
+                      const Duration(milliseconds: 400),
+                      () {
+                        if (_alive(tk)) _playRoundIntro(isFirstRound: true);
+                      },
+                    );
+                  },
+                  icon: const Icon(Icons.replay_rounded),
+                  label: const Text(
+                    'الْعَبْ مَرَّةً أُخْرَى',
+                    style: TextStyle(fontFamily: 'Cairo', fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber.shade700,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 16),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
 }

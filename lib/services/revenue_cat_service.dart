@@ -131,6 +131,7 @@ class RevenueCatService {
   /// Letters 0-4 (first 5) are always free.
   /// Letters 5-27 require premium.
   bool isLetterAccessible(int letterIndex) {
+    if (kDebugMode) return true;
     if (letterIndex < freeLetterCount) return true;
     return _isPremium;
   }

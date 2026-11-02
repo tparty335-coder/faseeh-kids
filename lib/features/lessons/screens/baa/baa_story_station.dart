@@ -221,31 +221,37 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // شارة رقم وعنوان المشهد
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF6D4C41),
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.white, width: 2),
-                          boxShadow: const [
-                            BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
-                          ],
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.auto_stories_rounded, color: Colors.amber, size: 22),
-                            const SizedBox(width: 8),
-                            Text(
-                              currentScene['title'] as String,
-                              style: TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: isTablet ? 18 : 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                      Flexible(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF6D4C41),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.white, width: 2),
+                            boxShadow: const [
+                              BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
+                            ],
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.auto_stories_rounded, color: Colors.amber, size: 20),
+                              const SizedBox(width: 6),
+                              Flexible(
+                                child: Text(
+                                  currentScene['title'] as String,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: isTablet ? 18 : 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
 
@@ -566,52 +572,62 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // زر السابق
-                      OutlinedButton.icon(
-                        onPressed: _previousScene,
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 18),
-                        label: Text(
-                          _currentSceneIndex == 0 ? 'المحطة السابقة' : 'المشهد السابق',
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
-                            fontSize: isTablet ? 18 : 15,
-                            fontWeight: FontWeight.bold,
+                      Flexible(
+                        child: OutlinedButton.icon(
+                          onPressed: _previousScene,
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 18),
+                          label: Text(
+                            _currentSceneIndex == 0 ? 'المحطة السابقة' : 'المشهد السابق',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: isTablet ? 18 : 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: const Color(0xFF5D4037),
-                          side: const BorderSide(color: Color(0xFF8D6E63), width: 2),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: isTablet ? 24 : 18,
-                            vertical: isTablet ? 14 : 10,
+                          style: OutlinedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: const Color(0xFF5D4037),
+                            side: const BorderSide(color: Color(0xFF8D6E63), width: 2),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isTablet ? 24 : 14,
+                              vertical: isTablet ? 14 : 10,
+                            ),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                           ),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                         ),
                       ),
+                      const SizedBox(width: 8),
 
                       // زر التالي
-                      ElevatedButton.icon(
-                        onPressed: _nextScene,
-                        icon: Text(
-                          _currentSceneIndex == _scenes.length - 1 ? 'المحطة التالية' : 'المشهد التالي',
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
-                            fontSize: isTablet ? 18 : 15,
-                            fontWeight: FontWeight.bold,
+                      Flexible(
+                        child: ElevatedButton.icon(
+                          onPressed: _nextScene,
+                          iconAlignment: IconAlignment.end,
+                          icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
+                          label: Text(
+                            _currentSceneIndex == _scenes.length - 1 ? 'المحطة التالية' : 'المشهد التالي',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: isTablet ? 18 : 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        label: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: _currentSceneIndex == 3 && !_scene4Answered
-                              ? Colors.grey
-                              : const Color(0xFFFF9800),
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(
-                            horizontal: isTablet ? 28 : 20,
-                            vertical: isTablet ? 14 : 10,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: _currentSceneIndex == 3 && !_scene4Answered
+                                ? Colors.grey
+                                : const Color(0xFFFF9800),
+                            foregroundColor: Colors.white,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isTablet ? 28 : 14,
+                              vertical: isTablet ? 14 : 10,
+                            ),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                            elevation: 4,
                           ),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                          elevation: 4,
                         ),
                       ),
                     ],

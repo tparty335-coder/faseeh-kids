@@ -59,9 +59,16 @@ class _CircusGameState extends ConsumerState<CircusGame> {
   }
 
   @override
-  void dispose() { _confetti.dispose(); super.dispose(); }
+  void dispose() {
+    AudioService.instance.stop();
+    _confetti.dispose();
+    super.dispose();
+  }
 
-  Future<void> _playInstruction() => AudioService.instance.playAsset('audio/instructions/alif_quiz_fish_explain.mp3', channel: AudioChannel.voice);
+  Future<void> _playInstruction() async {
+    if (!mounted || _gameOver) return;
+    await AudioService.instance.playAsset('audio/instructions/alif_quiz_fish_explain.mp3', channel: AudioChannel.voice);
+  }
   Future<void> _playCorrect() => AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
   Future<void> _playWrong() => AudioService.instance.playAsset('audio/instructions/alif_quiz_option_d.mp3', channel: AudioChannel.sfx);
   Future<void> _playThisIsCorrect() => AudioService.instance.playAsset('audio/feedback/wow.mp3', channel: AudioChannel.voice);

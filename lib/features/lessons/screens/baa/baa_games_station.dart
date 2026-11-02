@@ -45,6 +45,7 @@ class BaaGamesStation extends ConsumerStatefulWidget {
 
 class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
   _GameType? _selectedGame;
+  int _menuToken = 0;
 
   // الألعاب الخمسة مطابقة للأسطوانة الأصلية
   static const List<_GameCard> _games = [
@@ -88,15 +89,29 @@ class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
   @override
   void initState() {
     super.initState();
+    final tk = ++_menuToken;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(milliseconds: 350), _playMenuIntro);
+      Future.delayed(const Duration(milliseconds: 350), () {
+        if (mounted && tk == _menuToken && _selectedGame == null) {
+          _playMenuIntro();
+        }
+      });
     });
+  }
+
+  @override
+  void dispose() {
+    _menuToken++;
+    AudioService.instance.stop();
+    super.dispose();
   }
 
   Future<void> _playMenuIntro() async {
     if (!mounted || _selectedGame != null) return;
+    final tk = ++_menuToken;
     try {
       await AudioService.instance.stop();
+      if (!mounted || tk != _menuToken || _selectedGame != null) return;
       // "أمامك مجموعة من" — صوت قائمة الألعاب
       await AudioService.instance.playAsset(
         'audio/lessons/baa/medium/baa_56.mp3',
@@ -171,6 +186,8 @@ class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
     return GestureDetector(
       onTap: () {
         HapticFeedback.lightImpact();
+        _menuToken++;
+        AudioService.instance.stop();
         setState(() => _selectedGame = game.type);
       },
       child: Container(
@@ -267,9 +284,14 @@ class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
               ElevatedButton.icon(
                 onPressed: () {
                   HapticFeedback.lightImpact();
+                  final tk = ++_menuToken;
+                  AudioService.instance.stop();
                   setState(() => _selectedGame = null);
-                  Future.delayed(
-                      const Duration(milliseconds: 300), _playMenuIntro);
+                  Future.delayed(const Duration(milliseconds: 350), () {
+                    if (mounted && tk == _menuToken && _selectedGame == null) {
+                      _playMenuIntro();
+                    }
+                  });
                 },
                 icon: const Icon(Icons.apps_rounded, size: 20),
                 label: const Text(

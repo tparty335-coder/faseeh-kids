@@ -217,6 +217,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
 
   @override
   void dispose() {
+    AudioService.instance.stop();
     _confetti.dispose();
     _shakeController.dispose();
     super.dispose();
@@ -224,7 +225,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
 
   // Original CD instruction: "اسحب اسم الصورة وضعها مكان النقط فيما يأتي"
   Future<void> _playInstructionOnce() async {
-    if (_instructionPlayed) return;
+    if (!mounted || _gameOver || _instructionPlayed) return;
     _instructionPlayed = true;
     await AudioService.instance.playAsset(
         'audio/instructions/words_drag_instruction.mp3',

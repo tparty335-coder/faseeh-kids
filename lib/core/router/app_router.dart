@@ -15,6 +15,7 @@ import 'package:faseeh_kids/features/home/screens/luxury_oasis_showcase_screen.d
 
 // ─── Lessons ───
 import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/alif/alif_lesson_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
 
 // ─── Rewards & Profile ───
@@ -221,6 +222,14 @@ class AppRouter {
 
       // ─── Lessons ───
       GoRoute(
+        path: '/alif-lesson',
+        name: 'alifLesson',
+        pageBuilder: (context, state) => _slideTransition(
+          state: state,
+          child: const AlifLessonScreen(initialStationIndex: 1),
+        ),
+      ),
+      GoRoute(
         path: '/baa-lesson',
         name: 'baaLesson',
         pageBuilder: (context, state) => _slideTransition(
@@ -234,7 +243,7 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: const UniversalLetterHubScreen(),
+            child: UniversalLetterHubScreen(letterChar: state.pathParameters['lessonId']),
           );
         },
       ),
@@ -320,7 +329,7 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: const UniversalLetterHubScreen(),
+            child: UniversalLetterHubScreen(letterChar: state.pathParameters['lessonId']),
           );
         },
       ),

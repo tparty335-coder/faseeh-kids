@@ -453,7 +453,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
 
   Widget _buildNavRow() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -462,40 +462,48 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
             icon: const Icon(Icons.arrow_back_ios_new, size: 16),
             label: Text(
               _currentPage == 0 ? 'السابق: المدود' : 'السابق',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 15),
+              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14),
             ),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppColors.textPrimaryDay,
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 11),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
 
+          const SizedBox(width: 6),
           // نقاط التقدم
-          Row(
-            children: List.generate(_words.length, (i) => AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              margin: const EdgeInsets.symmetric(horizontal: 3),
-              width: _currentPage == i ? 20 : 8,
-              height: 8,
-              decoration: BoxDecoration(
-                color: _currentPage == i ? AppColors.primaryDay : Colors.grey.shade300,
-                borderRadius: BorderRadius.circular(4),
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: List.generate(_words.length, (i) => AnimatedContainer(
+                  duration: const Duration(milliseconds: 250),
+                  margin: const EdgeInsets.symmetric(horizontal: 3),
+                  width: _currentPage == i ? 20 : 8,
+                  height: 8,
+                  decoration: BoxDecoration(
+                    color: _currentPage == i ? AppColors.primaryDay : Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                )),
               ),
-            )),
+            ),
           ),
+          const SizedBox(width: 6),
 
           ElevatedButton.icon(
             onPressed: _goNext,
             icon: Text(
               _currentPage == _words.length - 1 ? 'التالي: الكتابة' : 'التالي',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, fontWeight: FontWeight.bold),
             ),
             label: const Icon(Icons.arrow_forward_ios, size: 16),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primaryDay,
               foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 11),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
