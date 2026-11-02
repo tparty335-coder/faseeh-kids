@@ -35,6 +35,8 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
   int _currentSceneIndex = 0;
   bool _isPlayingAudio = false;
   bool _interactionCompleted = false;
+  final Set<String> _foundTargets = {};
+  String? _wrongFeedbackLabel;
   late final ConfettiController _confettiController;
 
   List<StoryScene> get _scenes => widget.spec.scenes;
@@ -89,6 +91,8 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
     setState(() {
       _currentSceneIndex = index;
       _interactionCompleted = false;
+      _foundTargets.clear();
+      _wrongFeedbackLabel = null;
     });
     _pageController.animateToPage(
       index,
@@ -96,6 +100,143 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
       curve: Curves.easeInOut,
     );
     _playSceneAudio(index);
+  }
+
+  Future<void> _onTargetTapped(
+      StoryTargetItem target, WordFindStoryInteraction wf) async {
+    if (target.isCorrect) {
+      if (_foundTargets.contains(target.label)) return;
+      setState(() {
+        _foundTargets.add(target.label);
+        _wrongFeedbackLabel = null;
+      });
+      try {
+        await AudioService.instance.stop();
+        if (target.wordAudioPath != null) {
+          await AudioService.instance.playAsset(target.wordAudioPath!);
+        } else {
+          await AudioService.instance.playAsset(wf.correctAudioPath);
+        }
+      } catch (_) {}
+
+      final correctCount = wf.targets.where((t) => t.isCorrect).length;
+      if (_foundTargets.length >= correctCount) {
+        setState(() => _interactionCompleted = true);
+        _confettiController.play();
+        try {
+          await AudioService.instance.playAsset(wf.correctAudioPath);
+        } catch (_) {}
+      }
+    } else {
+      setState(() => _wrongFeedbackLabel = target.label);
+      try {
+        await AudioService.instance.stop();
+        await AudioService.instance.playAsset(wf.wrongAudioPath);
+      } catch (_) {}
+      Future.delayed(const Duration(milliseconds: 1500), () {
+        if (mounted && _wrongFeedbackLabel == target.label) {
+          setState(() => _wrongFeedbackLabel = null);
+        }
+      });
+    }
+  }
+
+  Widget _buildWordFindOverlay(WordFindStoryInteraction wf) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final boxW = constraints.maxWidth;
+        final boxH = constraints.maxHeight;
+        const imgAspect = 4.0 / 3.0;
+        double dW, dH, ox, oy;
+        if (boxW / boxH < imgAspect) {
+          dW = boxW;
+          dH = boxW / imgAspect;
+          ox = 0;
+          oy = (boxH - dH) / 2;
+        } else {
+          dH = boxH;
+          dW = boxH * imgAspect;
+          ox = (boxW - dW) / 2;
+          oy = 0;
+        }
+
+        return Stack(
+          children: [
+            for (final target in wf.targets)
+              Positioned(
+                left: ox + target.left * dW,
+                top: oy + target.top * dH,
+                width: (target.right - target.left) * dW,
+                height: (target.bottom - target.top) * dH,
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () => _onTargetTapped(target, wf),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: _foundTargets.contains(target.label)
+                            ? Colors.green
+                            : (_wrongFeedbackLabel == target.label
+                                ? Colors.red
+                                : Colors.transparent),
+                        width: 3,
+                      ),
+                      borderRadius: BorderRadius.circular(16),
+                      color: _foundTargets.contains(target.label)
+                          ? Colors.green.withValues(alpha: 0.25)
+                          : (_wrongFeedbackLabel == target.label
+                              ? Colors.red.withValues(alpha: 0.25)
+                              : Colors.transparent),
+                    ),
+                    child: _foundTargets.contains(target.label)
+                        ? const Center(
+                            child: Icon(Icons.check_circle_rounded,
+                                color: Colors.green, size: 36),
+                          )
+                        : null,
+                  ),
+                ),
+              ),
+            if (wf.instructionText != null && !_interactionCompleted)
+              Positioned(
+                top: oy + 8,
+                left: ox + 12,
+                right: ox + 12,
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withValues(alpha: 0.7),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.touch_app_rounded,
+                          color: Colors.amber, size: 20),
+                      const SizedBox(width: 8),
+                      Flexible(
+                        child: Text(
+                          wf.instructionText!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
+    );
   }
 
   void _nextScene() {
@@ -410,17 +551,25 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: _scenes.length,
                         itemBuilder: (_, i) {
-                          return Image.asset(
-                            _scenes[i].imagePath,
-                            fit: BoxFit.contain,
-                            width: double.infinity,
-                            height: double.infinity,
-                            errorBuilder: (_, __, ___) => Center(
-                              child: Text(
-                                widget.mascotEmoji,
-                                style: const TextStyle(fontSize: 72),
+                          final sc = _scenes[i];
+                          return Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              Image.asset(
+                                sc.imagePath,
+                                fit: BoxFit.contain,
+                                width: double.infinity,
+                                height: double.infinity,
+                                errorBuilder: (_, __, ___) => Center(
+                                  child: Text(
+                                    widget.mascotEmoji,
+                                    style: const TextStyle(fontSize: 72),
+                                  ),
+                                ),
                               ),
-                            ),
+                              if (sc.interaction is WordFindStoryInteraction)
+                                _buildWordFindOverlay(sc.interaction as WordFindStoryInteraction),
+                            ],
                           );
                         },
                       ),

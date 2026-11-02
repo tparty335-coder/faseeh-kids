@@ -107,7 +107,7 @@ const List<_Round> _rounds = [
     dropPx: 643.0,
     dropPy: 394.0,
     correctWord: 'كِتَاب',
-    wordAudio: 'audio/lessons/taa/final/taa_word_p3_2.mp3',
+    wordAudio: 'audio/lessons/taa/final/taa_word_p5_4.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cards: [
       _WordCard(word: 'كِتَاب', isCorrect: true,  color: Color(0xFF5AC8FA)),

@@ -70,7 +70,10 @@ class AudioService {
       await player.setVolume(volume.clamp(0.0, 1.0));
       if (!_isOpActive(channel, op)) return;
 
-      await player.setSource(AssetSource(assetPath));
+      final cleanPath = assetPath.startsWith('assets/')
+          ? assetPath.substring(7)
+          : assetPath;
+      await player.setSource(AssetSource(cleanPath));
       if (!_isOpActive(channel, op)) return;
 
       await player.resume();

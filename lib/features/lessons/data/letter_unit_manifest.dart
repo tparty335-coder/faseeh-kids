@@ -56,6 +56,44 @@ class MultipleChoiceInteraction extends StoryInteraction {
   });
 }
 
+/// عنصر لمس تفاعلي داخل تمرين المشهد المصور
+class StoryTargetItem {
+  final String label; // مثلاً: 'بَيْت'
+  final double left; // نسبة مئوية (0.0–1.0) من عرض الصورة
+  final double top; // نسبة مئوية (0.0–1.0) من ارتفاع الصورة
+  final double right;
+  final double bottom;
+  final bool isCorrect; // هل الإجابة صحيحة (تحتوي على الحرف المطلوب)
+  final String? wordAudioPath; // صوت الكلمة عند الضغط عليها
+
+  const StoryTargetItem({
+    required this.label,
+    required this.left,
+    required this.top,
+    required this.right,
+    required this.bottom,
+    required this.isCorrect,
+    this.wordAudioPath,
+  });
+}
+
+/// تمرين البحث عن الكلمات التي تحتوي على الحرف والضغط عليها في المشهد المصور
+class WordFindStoryInteraction extends StoryInteraction {
+  final String? instructionText; // "تامر حوله عناصر كثيرة بها حرف التاء، ابحث عنها واضغط عليها"
+  final String? instructionAudioPath;
+  final String correctAudioPath; // صوت التشجيع عند الإجابة الصحيحة
+  final String wrongAudioPath; // صوت المحاولة مرة أخرى عند الخطأ
+  final List<StoryTargetItem> targets;
+
+  const WordFindStoryInteraction({
+    this.instructionText,
+    this.instructionAudioPath,
+    required this.correctAudioPath,
+    required this.wrongAudioPath,
+    required this.targets,
+  });
+}
+
 /// مشهد واحد في قصة الحرف
 class StoryScene {
   final String imagePath;

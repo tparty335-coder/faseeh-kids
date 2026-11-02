@@ -49,7 +49,7 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
     )..repeat();
 
     // Set letter in provider safely after build completes, and auto-play letter sound
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (!mounted) return;
       if (widget.letterChar != null) {
         final matches = arabicLetters.where((l) => l.letter == widget.letterChar);
@@ -57,7 +57,10 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
           ref.read(currentLessonProvider.notifier).setLetter(matches.first);
         }
       }
-      _playLetterSound();
+      await Future.delayed(const Duration(milliseconds: 350));
+      if (mounted) {
+        _playLetterSound();
+      }
     });
   }
 
@@ -68,11 +71,16 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
   }
 
   void _playLetterSound() async {
-    final letter = ref.read(currentLessonProvider).letter;
-    if (letter != null && mounted) {
-      setState(() => _isPlayingSound = true);
-      final key = AudioRegistry.letterKeyFromChar(letter.letter);
+    final lessonLetter = ref.read(currentLessonProvider).letter;
+    final char = widget.letterChar ?? lessonLetter?.letter ?? 'ت';
+    if (!mounted) return;
+    setState(() => _isPlayingSound = true);
+    final key = AudioRegistry.letterKeyFromChar(char);
+    try {
       await AudioManager.instance.playLetterAudio(key, 'name');
+    } catch (e) {
+      debugPrint('Error playing letter sound: $e');
+    } finally {
       if (mounted) {
         setState(() => _isPlayingSound = false);
       }
