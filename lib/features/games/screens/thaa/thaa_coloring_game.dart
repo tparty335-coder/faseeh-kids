@@ -78,7 +78,7 @@ const List<_ColoringRound> _rounds = [
   // الجولة 2 (paint2): ثمين ✅، أرنب ❌، يكتب ❌
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.png',
+    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_2.png',
     correctWord: 'ثَمِين',
     correctAudio: 'audio/games/coloring/5_goodtabeb.mp3',
     revealAudio: 'audio/games/coloring/2_rongtabeb.mp3',
@@ -93,7 +93,7 @@ const List<_ColoringRound> _rounds = [
   // الجولة 3 (paint3): لبن ❌، برج ❌، ثور ✅
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.png',
+    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_3.png',
     correctWord: 'ثَوْر',
     correctAudio: 'audio/games/coloring/4_goodhobob.mp3',
     revealAudio: 'audio/games/coloring/2_ronghobob.mp3',

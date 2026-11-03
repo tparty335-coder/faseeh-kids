@@ -47,56 +47,56 @@ class _RoundData {
 }
 
 const List<_RoundData> _rounds = [
-  // الجولة 1: ثَعْلَب ✅ | أَسَد ❌ | فَأْس ❌
+  // الجولة 1: ثُعْبَان ✅ (يسار) | فَأْر ❌ (وسط) | أَسَد ❌ (يمين)
   _RoundData(
     imagePath: 'assets/images/games/fishing/thaa_fishing_round_1.png',
-    correctWord: 'ثَعْلَب',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
+    correctWord: 'ثُعْبَان',
+    wordAudio: 'audio/games/fishing/thaa_thoban.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
-    roundEndPraise: 'audio/games/fishing/ba62.mp3',
+    roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
     zones: [
-      _FishZone(word: 'ثَعْلَب', hasThaa: true,  px: 160, py: 390),
-      _FishZone(word: 'أَسَد',   hasThaa: false, px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'فَأْس',   hasThaa: false, px: 810, py: 390),
+      _FishZone(word: 'ثُعْبَان', hasThaa: true,  px: 160, py: 390),
+      _FishZone(word: 'فَأْر',   hasThaa: false, px: 500, py: 345, w: 290, h: 105),
+      _FishZone(word: 'أَسَد',   hasThaa: false, px: 810, py: 390),
     ],
   ),
-  // الجولة 2: وَلَد ❌ | قَلَم ❌ | ثَلْج ✅
+  // الجولة 2: بَطَّة ❌ (يسار) | أَرْنَب ❌ (وسط) | ثَلَّاجَة ✅ (يمين)
   _RoundData(
     imagePath: 'assets/images/games/fishing/thaa_fishing_round_2.png',
-    correctWord: 'ثَلْج',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalj.mp3',
+    correctWord: 'ثَلَّاجَة',
+    wordAudio: 'audio/games/fishing/thaa_thallaja.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
-    roundEndPraise: 'audio/games/fishing/ba58.mp3',
+    roundEndPraise: 'audio/games/fishing/momtt.mp3',
+    zones: [
+      _FishZone(word: 'بَطَّة',   hasThaa: false, px: 160, py: 390),
+      _FishZone(word: 'أَرْنَب',  hasThaa: false, px: 500, py: 345, w: 290, h: 105),
+      _FishZone(word: 'ثَلَّاجَة', hasThaa: true,  px: 810, py: 390),
+    ],
+  ),
+  // الجولة 3: أَرْنَب ❌ (يسار) | ثَعْلَب ✅ (وسط) | كَلْب ❌ (يمين)
+  _RoundData(
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_3.png',
+    correctWord: 'ثَعْلَب',
+    wordAudio: 'audio/games/fishing/thaa_thalab.mp3',
+    correctPraise: 'audio/games/fishing/ahsnt.mp3',
+    roundEndPraise: 'audio/games/fishing/momt.mp3',
+    zones: [
+      _FishZone(word: 'أَرْنَب', hasThaa: false, px: 160, py: 390),
+      _FishZone(word: 'ثَعْلَب', hasThaa: true,  px: 500, py: 345, w: 290, h: 105),
+      _FishZone(word: 'كَلْب',   hasThaa: false, px: 810, py: 390),
+    ],
+  ),
+  // الجولة 4: وَلَد ❌ (يسار) | قَلَم ❌ (وسط) | ثَلْج ✅ (يمين)
+  _RoundData(
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_4.png',
+    correctWord: 'ثَلْج',
+    wordAudio: 'audio/games/fishing/thaa_thalj.mp3',
+    correctPraise: 'audio/games/fishing/sah.mp3',
+    roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
     zones: [
       _FishZone(word: 'وَلَد',  hasThaa: false, px: 160, py: 390),
       _FishZone(word: 'قَلَم',  hasThaa: false, px: 500, py: 345, w: 290, h: 105),
       _FishZone(word: 'ثَلْج',  hasThaa: true,  px: 810, py: 390),
-    ],
-  ),
-  // الجولة 3: رَأْس ❌ | ثَوْر ✅ | أُذُن ❌
-  _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_3.png',
-    correctWord: 'ثَوْر',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thawr.mp3',
-    correctPraise: 'audio/games/fishing/ahsnt.mp3',
-    roundEndPraise: 'audio/games/fishing/ba56.mp3',
-    zones: [
-      _FishZone(word: 'رَأْس',  hasThaa: false, px: 160, py: 390),
-      _FishZone(word: 'ثَوْر',  hasThaa: true,  px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'أُذُن',  hasThaa: false, px: 810, py: 390),
-    ],
-  ),
-  // الجولة 4: أُمِّي ❌ | أَسَد ❌ | ثُعْبَان ✅
-  _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_4.png',
-    correctWord: 'ثُعْبَان',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
-    correctPraise: 'audio/games/fishing/momtt.mp3',
-    roundEndPraise: 'audio/games/fishing/ba52.mp3',
-    zones: [
-      _FishZone(word: 'أُمِّي',  hasThaa: false, px: 160, py: 390),
-      _FishZone(word: 'أَسَد',   hasThaa: false, px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'ثُعْبَان', hasThaa: true,  px: 810, py: 390),
     ],
   ),
 ];
@@ -168,8 +168,8 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
       await _say('audio/games/fishing/sayd.mp3', maxMs: 2500);
       if (!mounted || _gameOver || t != _token) return;
     }
-    // صوت السؤال "اضغط على الكلمة التي بها حرف ب" (3.33s)
-    await _say('audio/games/fishing/qu1.mp3', maxMs: 4000);
+    // صوت السؤال الأصلي للأسطوانة "اضغط على الكلمة التي بها حرف الثاء" (3.9s)
+    await _say('audio/games/fishing/thaa_fishing_question.mp3', maxMs: 4500);
   }
 
   Future<void> _playWrong() =>
@@ -196,8 +196,16 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
       await _say(rd.correctPraise, maxMs: 2500);
       if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (أَرْنَب / إِبْرَة / بُرْج / بَقَرَة)
+      // مهلة مريحة لسماع الثناء قبل نطق الكلمة
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
+
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثَلْج / ثَوْر / ثُعْبَان)
       await _say(rd.wordAudio, maxMs: 2500);
+      if (!mounted || t != _token) return;
+
+      // مهلة مريحة بعد نطق الكلمة
+      await Future.delayed(const Duration(milliseconds: 400));
       if (!mounted || t != _token) return;
 
       // 3. صوت صيد السمكة
@@ -208,10 +216,16 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
       );
       if (!mounted || t != _token) return;
 
+      // مهلة مريحة قبل تشجيع نهاية الجولة
+      await Future.delayed(const Duration(milliseconds: 300));
+      if (!mounted || t != _token) return;
+
       // 4. تشجيع نهاية الجولة
       await _say(rd.roundEndPraise, maxMs: 2500);
       if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 300));
+
+      // مهلة مريحة بعد نهاية الجولة قبل الانتقال للجولة التالية
+      await Future.delayed(const Duration(milliseconds: 800));
       if (!mounted || t != _token) return;
 
       _advanceRound();
@@ -228,10 +242,13 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
           _showCorrectAnswer = true;
         });
 
+        await Future.delayed(const Duration(milliseconds: 400));
+        if (!mounted || t != _token) return;
+
         // سماع اسم الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
         await _say(rd.wordAudio, maxMs: 2500);
         if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 500));
+        await Future.delayed(const Duration(milliseconds: 800));
         if (!mounted || t != _token) return;
 
         _advanceRound();

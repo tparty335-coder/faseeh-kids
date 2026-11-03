@@ -451,11 +451,11 @@ void main() {
         if (s == 5) {
           // Step through all 5 pages of UniversalWordsStation up to 'الْمَحَطَّةُ التَّالِيَةُ'
           for (int p = 0; p < 4; p++) {
-            await tester.tap(find.text('التَّالِي'));
+            await tester.tap(find.text('الصفحة التالية'));
             await tester.pump(const Duration(milliseconds: 300));
             expect(tester.takeException(), isNull);
           }
-          expect(find.text('الْمَحَطَّةُ التَّالِيَةُ'), findsOneWidget);
+          expect(find.widgetWithText(ElevatedButton, 'الألعاب'), findsOneWidget);
         }
 
         await tester.pumpWidget(const SizedBox.shrink());

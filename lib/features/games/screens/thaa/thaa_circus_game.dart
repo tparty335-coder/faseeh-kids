@@ -39,11 +39,11 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، أَرْنَب (أسفل) ← أَرْنَب ✅
+  // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، ثَعْلَب (أسفل) ← ثَعْلَب ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_1.png',
-    imgH: 390,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    imgH: 499,
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
     zones: [
       _ImageZone(label: 'تِمْسَاح', hasThaa: false, px: 138, py: 114),
       _ImageZone(label: 'أَسَد',    hasThaa: false, px: 326, py: 255),
@@ -51,28 +51,28 @@ const List<_Round> _rounds = [
           wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3'),
     ],
   ),
-  // الجولة 2: حِمَار (أعلى) ، ثُعْبَان (وسط) ، فِيل (أسفل) ← ثُعْبَان ✅
+  // الجولة 2: تَاج (أعلى) ، ثَوْب (وسط) ، حِمَار (أسفل) ← ثَوْب ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_2.png',
-    imgH: 390,
-    praiseAudio: 'audio/games/circus/6_ba59.mp3',
+    imgH: 499,
+    praiseAudio: 'audio/games/beehive/3_raa.mp3',
     zones: [
-      _ImageZone(label: 'حِمَار',  hasThaa: false, px: 138, py: 114),
-      _ImageZone(label: 'ثُعْبَان', hasThaa: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3'),
-      _ImageZone(label: 'فِيل',    hasThaa: false, px: 138, py: 398),
+      _ImageZone(label: 'تَاج',   hasThaa: false, px: 138, py: 114),
+      _ImageZone(label: 'ثَوْب',  hasThaa: true,  px: 326, py: 258,
+          wordAudio: 'audio/lessons/thaa/sounds/word_thiab.mp3'),
+      _ImageZone(label: 'حِمَار', hasThaa: false, px: 138, py: 398),
     ],
   ),
-  // الجولة 3: حِصَان (أعلى) ، مِطْرَقَة (وسط) ، ثَوْر (أسفل) ← ثَوْر ✅
+  // الجولة 3: ثِمَار (أعلى) ، مِطْرَقَة (وسط) ، حِصَان (أسفل) ← ثِمَار ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_3.png',
-    imgH: 390,
-    praiseAudio: 'audio/games/circus/6_ba53.mp3',
+    imgH: 499,
+    praiseAudio: 'audio/games/beehive/2_sah.mp3',
     zones: [
-      _ImageZone(label: 'حِصَان',  hasThaa: false, px: 138, py: 116),
+      _ImageZone(label: 'ثِمَار',   hasThaa: true,  px: 138, py: 116,
+          wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3'),
       _ImageZone(label: 'مِطْرَقَة', hasThaa: false, px: 326, py: 262),
-      _ImageZone(label: 'ثَوْر',    hasThaa: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/thaa/sounds/word_thawr.mp3'),
+      _ImageZone(label: 'حِصَان',  hasThaa: false, px: 138, py: 404),
     ],
   ),
 ];
@@ -129,8 +129,8 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     ++_token;
-    // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي بها حرف ب" (1.24s)
-    await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
+    // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء: "اضغط على الصورة التي اسمها به حرف الثاء"
+    await _say('assets/audio/games/circus/thaa_circus_question.mp3', maxMs: 3500);
   }
 
   Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
@@ -150,15 +150,17 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
       });
       _confetti.play();
 
-      // 1. صوت التشجيع الكامل دون بتر
+      // 1. صوت التشجيع الكامل دون بتر مع مهلة تنفس
       await _say(rd.praiseAudio, maxMs: 2500);
       if (!mounted || t != _token) return;
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (أَرْنَب / ثُعْبَان / بَاب)
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثَوْب / ثِمَار)
       if (zone.wordAudio != null) {
         await _say(zone.wordAudio!, maxMs: 2500);
         if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 400));
+        await Future.delayed(const Duration(milliseconds: 600));
         if (!mounted || t != _token) return;
       }
 
@@ -214,7 +216,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
         _wrongAttempts = 0;
         _showCorrectAnswer = false;
       });
-      Future.delayed(const Duration(milliseconds: 400), () {
+      Future.delayed(const Duration(milliseconds: 800), () {
         if (mounted && t == _token) _playInstruction();
       });
     }

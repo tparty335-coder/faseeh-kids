@@ -99,7 +99,7 @@ void main() {
     test('getPath returns valid path for known key', () {
       final path = AudioRegistry.getPath('alif_name');
       expect(path, isNotNull);
-      expect(path, 'assets/audio/letters/alif_name.mp3');
+      expect(path, 'assets/audio/letters/core/alif_name.mp3');
     });
   });
 }

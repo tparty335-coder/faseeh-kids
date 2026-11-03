@@ -5,8 +5,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-// ─── لعبة الكلمات لحرف الباء ─────────────────────────────────────────────────
-// مطابقة تماماً لشاشات الأسطوانة الأصلية ومحرك لعبة الكلمات لحرف الألف
+// ─── لعبة الكلمات لحرف الثاء ─────────────────────────────────────────────────
+// مطابقة تماماً لشاشات الأسطوانة الأصلية ومحرك لعبة الكلمات
 
 const double _imgW = 1024;
 
@@ -47,7 +47,7 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: بَقَرَة (1024 × 486)
+  // الجولة 1: ثُعْبَان (1024 × 486)
   _Round(
     imagePath: 'assets/images/games/words/thaa_words_round_1.png',
     imgH: 486,
@@ -55,64 +55,64 @@ const List<_Round> _rounds = [
     cardPyList: [125.0, 236.0, 350.0],
     dropPx: 643.0,
     dropPy: 394.0,
-    correctWord: 'بَقَرَة',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
-    cards: [
-      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بَقَرَة', isCorrect: true,  color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'أَرْنَب', isCorrect: false, color: Color(0xFFFFD17A)),
-    ],
-  ),
-  // الجولة 2: بَاب (1024 × 524)
-  _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_2.png',
-    imgH: 524,
-    cardPx: 121.0,
-    cardPyList: [140.0, 258.0, 385.0],
-    dropPx: 598.0,
-    dropPy: 442.0,
-    correctWord: 'بَاب',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalj.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
-    cards: [
-      _WordCard(word: 'بَاب', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFFD17A)),
-    ],
-  ),
-  // الجولة 3: بِطِّيخ (1024 × 574)
-  _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_3.png',
-    imgH: 574,
-    cardPx: 136.0,
-    cardPyList: [151.0, 280.0, 418.0],
-    dropPx: 658.0,
-    dropPy: 468.0,
-    correctWord: 'بِطِّيخ',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thawr.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
-    cards: [
-      _WordCard(word: 'بِطِّيخ', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'عِنَب', isCorrect: false, color: Color(0xFFFFD17A)),
-    ],
-  ),
-  // الجولة 4: إِبْرَة (1024 × 538)
-  _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_4.png',
-    imgH: 538,
-    cardPx: 132.0,
-    cardPyList: [123.0, 254.0, 396.0],
-    dropPx: 666.0,
-    dropPy: 423.0,
-    correctWord: 'إِبْرَة',
+    correctWord: 'ثُعْبَان',
     wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cards: [
-      _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'إِبْرَة', isCorrect: true,  color: Color(0xFFFFD17A)),
+      _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'ثُعْبَان', isCorrect: true,  color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFFFFD17A)),
+    ],
+  ),
+  // الجولة 2: ثَعْلَب (1024 × 486)
+  _Round(
+    imagePath: 'assets/images/games/words/thaa_words_round_2.png',
+    imgH: 486,
+    cardPx: 195.0,
+    cardPyList: [125.0, 236.0, 350.0],
+    dropPx: 643.0,
+    dropPy: 394.0,
+    correctWord: 'ثَعْلَب',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
+    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    cards: [
+      _WordCard(word: 'ثَعْلَب', isCorrect: true,  color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'جَمَل', isCorrect: false, color: Color(0xFFFFD17A)),
+    ],
+  ),
+  // الجولة 3: ثُوم (1024 × 486)
+  _Round(
+    imagePath: 'assets/images/games/words/thaa_words_round_3.png',
+    imgH: 486,
+    cardPx: 195.0,
+    cardPyList: [125.0, 236.0, 350.0],
+    dropPx: 643.0,
+    dropPy: 394.0,
+    correctWord: 'ثُوم',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thum.mp3',
+    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    cards: [
+      _WordCard(word: 'تُفَّاح', isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'بَصَل', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'ثُوم', isCorrect: true,  color: Color(0xFFFFD17A)),
+    ],
+  ),
+  // الجولة 4: ثَلْج (1024 × 486)
+  _Round(
+    imagePath: 'assets/images/games/words/thaa_words_round_4.png',
+    imgH: 486,
+    cardPx: 195.0,
+    cardPyList: [125.0, 236.0, 350.0],
+    dropPx: 643.0,
+    dropPy: 394.0,
+    correctWord: 'ثَلْج',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thalj.mp3',
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    cards: [
+      _WordCard(word: 'ثَلْج', isCorrect: true,  color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'بَقَرَة', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'أَرْنَب', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
 ];
@@ -188,8 +188,8 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     ++_token;
-    // صوت التعليمات: "اسحب اسم الصورة وضعها مكان النقط فيما يأتي" (5.08s)
-    await _say('audio/instructions/words_drag_instruction.mp3', maxMs: 5600);
+    // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اسحب اسم الصورة وضعها مكان النقط فيما يأتي")
+    await _say('assets/audio/games/words/thaa_words_instruction.mp3', maxMs: 6000);
   }
 
   Future<void> _playWordAudio() async {
@@ -216,11 +216,13 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
       // 1. صوت التشجيع الكامل دون بتر
       await _say(rd.praiseAudio, maxMs: 2500);
       if (!mounted || t != _token) return;
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (بَقَرَة / بَاب / بِطِّيخ / إِبْرَة)
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع
       await _playWordAudio();
       if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 400));
+      await Future.delayed(const Duration(milliseconds: 600));
       if (!mounted || t != _token) return;
 
       _advance();
@@ -428,12 +430,32 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     final isShaking = _shakingCard == i;
     final isDone = _roundDone || _showCorrectAnswer;
 
+    // بطاقة مصممة بشكل موحد وكامل لجميع الخيارات (لا وجود لكلمات باهتة)
     Widget cardFace = Container(
       width: cardW,
       height: cardH,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.transparent, // شفاف ليظهر كرت الأسطوانة المرسوم تحتها تماماً
-        borderRadius: BorderRadius.circular(14),
+        color: card.color,
+        borderRadius: BorderRadius.circular(16 * scaleX),
+        border: Border.all(color: Colors.white, width: 3 * scaleX),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.15),
+            blurRadius: 6 * scaleX,
+            offset: Offset(0, 3 * scaleY),
+          ),
+        ],
+      ),
+      child: Text(
+        card.word,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontFamily: 'Cairo',
+          fontSize: 22 * scaleX,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
       ),
     );
 

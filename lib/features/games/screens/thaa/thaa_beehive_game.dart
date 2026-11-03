@@ -144,8 +144,10 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     final t = ++_token;
-    // 1. صوت التعليمات الأصلي من الأسطوانة (1.74s)
-    await _say('audio/games/beehive/5_khalea2.mp3', maxMs: 3000);
+    // 1. صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اضغط على حرف الثاء بحركته المناسبة...")
+    await _say('assets/audio/games/beehive/thaa_beehive_instruction.mp3', maxMs: 4000);
+    if (!mounted || _gameOver || t != _token) return;
+    await Future.delayed(const Duration(milliseconds: 400));
     if (!mounted || _gameOver || t != _token) return;
     // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
@@ -182,11 +184,13 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
       // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
       await _say(round.praiseAudio, maxMs: 2500);
       if (!mounted || t != _token) return;
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (بَقَرَة / بِطِّيخ / بُرْج / إِبْرَة)
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع
       await _playWordAudio();
       if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 400));
+      await Future.delayed(const Duration(milliseconds: 600));
       if (!mounted || t != _token) return;
 
       _advance();
@@ -238,7 +242,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
         _wrongAttempts = 0;
         _showCorrectAnswer = false;
       });
-      Future.delayed(const Duration(milliseconds: 300), () {
+      Future.delayed(const Duration(milliseconds: 800), () {
         if (mounted && t == _token) _playCurrentWordStandalone();
       });
     }

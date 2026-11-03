@@ -57,6 +57,68 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_5.png',
         audioPath: '${_audio}thaa_story_5.mp3',
+        interaction: WordFindStoryInteraction(
+          instructionText: 'اضْغَطْ عَلَى الْكَلِمَاتِ الَّتِي بِهَا حَرْفُ الثَّاءِ الْمَمْدُود :',
+          instructionAudioPath: '${_audio}thaa_story_5.mp3',
+          correctAudioPath: 'assets/audio/feedback/correct.mp3',
+          wrongAudioPath: 'assets/audio/feedback/try_again.mp3',
+          targets: [
+            StoryTargetItem(
+              label: 'ثِيرَان',
+              left: 0.34,
+              top: 0.28,
+              right: 0.50,
+              bottom: 0.40,
+              isCorrect: true,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_theeran.mp3',
+            ),
+            StoryTargetItem(
+              label: 'ثِمَار',
+              left: 0.20,
+              top: 0.36,
+              right: 0.33,
+              bottom: 0.47,
+              isCorrect: false,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_thimar.mp3',
+            ),
+            StoryTargetItem(
+              label: 'ثُعْبَان',
+              left: 0.34,
+              top: 0.43,
+              right: 0.50,
+              bottom: 0.55,
+              isCorrect: false,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_thoban.mp3',
+            ),
+            StoryTargetItem(
+              label: 'ثَابِت',
+              left: 0.20,
+              top: 0.54,
+              right: 0.33,
+              bottom: 0.65,
+              isCorrect: true,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_thabit.mp3',
+            ),
+            StoryTargetItem(
+              label: 'ثُوم',
+              left: 0.35,
+              top: 0.62,
+              right: 0.50,
+              bottom: 0.74,
+              isCorrect: true,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_thum.mp3',
+            ),
+            StoryTargetItem(
+              label: 'ثَلْج',
+              left: 0.20,
+              top: 0.68,
+              right: 0.33,
+              bottom: 0.79,
+              isCorrect: false,
+              wordAudioPath: 'assets/audio/lessons/thaa/sounds/word_thalj.mp3',
+            ),
+          ],
+        ),
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_6.png',
@@ -337,10 +399,10 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
   // ── الألعاب ───────────────────────────────────────────────────────────────
   games: GamesSpec(
     fishing: [
-      FishingRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}fishing/thaa/thaa_fishing_1.png', audioPath: '${_gamesAudio}fishing/thaa/thaa_fishing_1.mp3', isCorrect: true),
-      FishingRound(word: 'بَاب', imagePath: '${_gamesDir}fishing/thaa/thaa_fishing_2.png', audioPath: '${_gamesAudio}fishing/thaa/thaa_fishing_2.mp3', isCorrect: false),
-      FishingRound(word: 'ثَوْر', imagePath: '${_gamesDir}fishing/thaa/thaa_fishing_3.png', audioPath: '${_gamesAudio}fishing/thaa/thaa_fishing_3.mp3', isCorrect: true),
-      FishingRound(word: 'أَسَد', imagePath: '${_gamesDir}fishing/thaa/thaa_fishing_4.png', audioPath: '${_gamesAudio}fishing/thaa/thaa_fishing_4.mp3', isCorrect: false),
+      FishingRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}fishing/thaa_fishing_round_1.png', audioPath: '${_gamesAudio}fishing/thaa_thalab.mp3', isCorrect: true),
+      FishingRound(word: 'ثَلْج', imagePath: '${_gamesDir}fishing/thaa_fishing_round_2.png', audioPath: '${_gamesAudio}fishing/thaa_thalj.mp3', isCorrect: true),
+      FishingRound(word: 'ثَوْر', imagePath: '${_gamesDir}fishing/thaa_fishing_round_3.png', audioPath: '${_gamesAudio}fishing/thaa_thawr.mp3', isCorrect: true),
+      FishingRound(word: 'ثُعْبَان', imagePath: '${_gamesDir}fishing/thaa_fishing_round_4.png', audioPath: '${_gamesAudio}fishing/thaa_thoban.mp3', isCorrect: true),
     ],
     beehive: [
       BeehiveRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_1.png', audioPath: '${_gamesAudio}beehive/thaa/thaa_beehive_1.mp3'),

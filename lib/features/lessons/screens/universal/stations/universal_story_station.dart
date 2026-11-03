@@ -589,59 +589,69 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 6, 16, 10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    OutlinedButton.icon(
-                      onPressed: _previousScene,
-                      icon: const Icon(Icons.arrow_forward_rounded, size: 18),
-                      label: Text(
-                        _currentSceneIndex == 0 ? 'الأهداف' : 'المشهد السابق',
-                        style: const TextStyle(
-                          fontFamily: 'Cairo',
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: _previousScene,
+                        icon: const Icon(Icons.arrow_forward_rounded, size: 18),
+                        label: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            _currentSceneIndex == 0 ? 'الأهداف' : 'المشهد السابق',
+                            style: const TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: const Color(0xFF5D4037),
-                        backgroundColor: Colors.white,
-                        side: const BorderSide(color: Color(0xFF8D6E63), width: 2),
-                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: const Color(0xFF5D4037),
+                          backgroundColor: Colors.white,
+                          side: const BorderSide(color: Color(0xFF8D6E63), width: 2),
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
                         ),
                       ),
                     ),
-                    ElevatedButton.icon(
-                      onPressed: (scene.interaction != null && !_interactionCompleted)
-                          ? null
-                          : _nextScene,
-                      icon: Icon(
-                        isLastScene
-                            ? Icons.check_circle_rounded
-                            : Icons.arrow_back_rounded,
-                        size: 20,
-                      ),
-                      label: Text(
-                        isLastScene
-                            ? 'إِنْهَاءُ الْقِصَّةِ 🎉'
-                            : 'الْمَشْهَدُ التَّالِي',
-                        style: const TextStyle(
-                          fontFamily: 'Cairo',
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton.icon(
+                        onPressed: (scene.interaction != null && !_interactionCompleted)
+                            ? null
+                            : _nextScene,
+                        icon: Icon(
+                          isLastScene
+                              ? Icons.check_circle_rounded
+                              : Icons.arrow_back_rounded,
+                          size: 20,
                         ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: isLastScene
-                            ? AppColors.oasisGreen
-                            : widget.accentColor,
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
+                        label: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            isLastScene
+                                ? 'إِنْهَاءُ الْقِصَّةِ 🎉'
+                                : 'الْمَشْهَدُ التَّالِي',
+                            style: const TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
-                        elevation: 5,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: isLastScene
+                              ? AppColors.oasisGreen
+                              : widget.accentColor,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                          elevation: 5,
+                        ),
                       ),
                     ),
                   ],

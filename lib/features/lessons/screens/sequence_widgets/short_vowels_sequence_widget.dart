@@ -103,7 +103,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'ثُوم',
               'position': 'ثَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thurayya.mp3',
+              'audio': 'audio/lessons/thaa/sounds/word_thum.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thum.png',
             },
           ],
@@ -119,7 +119,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'ثِمَار',
               'position': 'ثَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_theeran.mp3',
+              'audio': 'audio/lessons/thaa/sounds/word_thimar.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thimar.png',
             },
             {
@@ -141,13 +141,13 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'مِثْقَاب',
               'position': 'ثَاءٌ سَاكِنَةٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thalj.mp3',
+              'audio': 'audio/lessons/thaa/sounds/word_mithqab.mp3',
               'image': 'assets/images/lessons/thaa/sounds/mithqab.png',
             },
             {
               'word': 'لَيْث',
               'position': 'ثَاءٌ سَاكِنَةٌ فِي آخِرِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thalatha.mp3',
+              'audio': 'audio/lessons/thaa/sounds/word_layth.mp3',
               'image': 'assets/images/lessons/thaa/sounds/layth.png',
             },
           ],
