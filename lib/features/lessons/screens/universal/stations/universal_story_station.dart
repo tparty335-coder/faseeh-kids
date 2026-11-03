@@ -114,6 +114,12 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
         await AudioService.instance.stop();
         if (target.wordAudioPath != null) {
           await AudioService.instance.playAsset(target.wordAudioPath!);
+          final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+          if (done != null) {
+            await done.first.timeout(const Duration(milliseconds: 2000), onTimeout: () {});
+          } else {
+            await Future.delayed(const Duration(milliseconds: 1000));
+          }
         } else {
           await AudioService.instance.playAsset(wf.correctAudioPath);
         }
@@ -124,6 +130,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
         setState(() => _interactionCompleted = true);
         _confettiController.play();
         try {
+          await Future.delayed(const Duration(milliseconds: 400));
           await AudioService.instance.playAsset(wf.correctAudioPath);
         } catch (_) {}
       }

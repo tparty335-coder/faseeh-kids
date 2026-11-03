@@ -51,7 +51,7 @@ const List<_RoundData> _rounds = [
   _RoundData(
     imagePath: 'assets/images/games/fishing/taa_fishing_round_1.png',
     correctWord: 'تَمْر',
-    wordAudio: 'audio/games/fishing/ta45.mp3',
+    wordAudio: 'audio/games/fishing/taa_tamr.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
     roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
     zones: [
@@ -64,9 +64,9 @@ const List<_RoundData> _rounds = [
   _RoundData(
     imagePath: 'assets/images/games/fishing/taa_fishing_round_2.png',
     correctWord: 'حُوت',
-    wordAudio: 'audio/games/fishing/ta56.mp3',
+    wordAudio: 'audio/games/fishing/taa_hoot.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
-    roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
+    roundEndPraise: 'audio/games/fishing/momtt.mp3',
     zones: [
       _FishZone(word: 'أَسَد',   hasBaa: false, px: 160, py: 390),
       _FishZone(word: 'ثُعْبَان', hasBaa: false, px: 500, py: 345, w: 290, h: 105),
@@ -77,7 +77,7 @@ const List<_RoundData> _rounds = [
   _RoundData(
     imagePath: 'assets/images/games/fishing/taa_fishing_round_3.png',
     correctWord: 'كَتْكُوت',
-    wordAudio: 'audio/games/fishing/katkoot.mp3',
+    wordAudio: 'audio/games/fishing/taa_katkoot.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
     roundEndPraise: 'audio/games/fishing/momt.mp3',
     zones: [
@@ -90,8 +90,8 @@ const List<_RoundData> _rounds = [
   _RoundData(
     imagePath: 'assets/images/games/fishing/taa_fishing_round_4.png',
     correctWord: 'تُوت',
-    wordAudio: 'audio/lessons/taa/sounds/word_toot.mp3',
-    correctPraise: 'audio/games/fishing/momtt.mp3',
+    wordAudio: 'audio/games/fishing/taa_toot.mp3',
+    correctPraise: 'audio/games/fishing/sah.mp3',
     roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
     zones: [
       _FishZone(word: 'جَمَل', hasBaa: false, px: 160, py: 390),
@@ -196,8 +196,16 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
       await _say(rd.correctPraise, maxMs: 2500);
       if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (أَرْنَب / إِبْرَة / بُرْج / بَقَرَة)
+      // مهلة مريحة لسماع الثناء قبل نطق الكلمة
+      await Future.delayed(const Duration(milliseconds: 400));
+      if (!mounted || t != _token) return;
+
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (تَمْر / حُوت / كَتْكُوت / تُوت)
       await _say(rd.wordAudio, maxMs: 2500);
+      if (!mounted || t != _token) return;
+
+      // مهلة مريحة بعد نطق الكلمة
+      await Future.delayed(const Duration(milliseconds: 400));
       if (!mounted || t != _token) return;
 
       // 3. صوت صيد السمكة
@@ -208,10 +216,16 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
       );
       if (!mounted || t != _token) return;
 
+      // مهلة مريحة قبل تشجيع نهاية الجولة
+      await Future.delayed(const Duration(milliseconds: 300));
+      if (!mounted || t != _token) return;
+
       // 4. تشجيع نهاية الجولة
       await _say(rd.roundEndPraise, maxMs: 2500);
       if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 300));
+
+      // مهلة مريحة بعد نهاية الجولة قبل الانتقال للجولة التالية
+      await Future.delayed(const Duration(milliseconds: 800));
       if (!mounted || t != _token) return;
 
       _advanceRound();
@@ -228,10 +242,13 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
           _showCorrectAnswer = true;
         });
 
+        await Future.delayed(const Duration(milliseconds: 400));
+        if (!mounted || t != _token) return;
+
         // سماع اسم الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
         await _say(rd.wordAudio, maxMs: 2500);
         if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 500));
+        await Future.delayed(const Duration(milliseconds: 800));
         if (!mounted || t != _token) return;
 
         _advanceRound();

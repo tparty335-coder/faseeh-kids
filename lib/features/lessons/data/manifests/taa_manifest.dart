@@ -81,7 +81,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.42,
               bottom: 0.65,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/final/taa_kw_tamer.mp3',
+              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_tamir.mp3',
             ),
             StoryTargetItem(
               label: 'تُفَّاح',
@@ -90,7 +90,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.30,
               bottom: 0.85,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/final/taa_word_tufah.mp3',
+              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_tufah.mp3',
             ),
             StoryTargetItem(
               label: 'دَجَاجَة',
@@ -98,7 +98,8 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               top: 0.57,
               right: 0.82,
               bottom: 0.80,
-              isCorrect: false,
+              isCorrect: true,
+              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_dajaja.mp3',
             ),
           ],
         ),
@@ -389,10 +390,10 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
   games: GamesSpec(
     // لعبة صيد الكلمات
     fishing: [
-      FishingRound(word: 'تُفَّاحَة', imagePath: '${_gamesDir}fishing/taa/taa_fishing_round_1.png', audioPath: '${_gamesAudio}fishing/taa/taa_fishing_1.mp3', isCorrect: true),
-      FishingRound(word: 'بَاب', imagePath: '${_gamesDir}fishing/taa/taa_fishing_round_2.png', audioPath: '${_gamesAudio}fishing/taa/taa_fishing_2.mp3', isCorrect: false),
-      FishingRound(word: 'تِمْسَاح', imagePath: '${_gamesDir}fishing/taa/taa_fishing_round_3.png', audioPath: '${_gamesAudio}fishing/taa/taa_fishing_3.mp3', isCorrect: true),
-      FishingRound(word: 'أَسَد', imagePath: '${_gamesDir}fishing/taa/taa_fishing_round_4.png', audioPath: '${_gamesAudio}fishing/taa/taa_fishing_4.mp3', isCorrect: false),
+      FishingRound(word: 'تَمْر', imagePath: '${_gamesDir}fishing/taa_fishing_round_1.png', audioPath: '${_gamesAudio}fishing/taa_tamr.mp3', isCorrect: true),
+      FishingRound(word: 'حُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_2.png', audioPath: '${_gamesAudio}fishing/taa_hoot.mp3', isCorrect: true),
+      FishingRound(word: 'كَتْكُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_3.png', audioPath: '${_gamesAudio}fishing/taa_katkoot.mp3', isCorrect: true),
+      FishingRound(word: 'تُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_4.png', audioPath: '${_gamesAudio}fishing/taa_toot.mp3', isCorrect: true),
     ],
     // لعبة خلية النحل
     beehive: [
