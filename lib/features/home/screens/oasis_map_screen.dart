@@ -140,8 +140,6 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                                         orElse: () => arabicLetters.first,
                                       );
                                       ref.read(currentLessonProvider.notifier).setLetter(letterData);
-                                      final regKey = AudioRegistry.letterKeyFromChar(letterChar);
-                                      AudioManager.instance.playLetterAudio(regKey, 'name');
                                       context.push('/lesson/${letterData.letter}');
                                     } else {
                                       AudioManager.instance.playFeedback('try_again');

@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
@@ -9,6 +10,7 @@ import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
+import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/alif/alif_lesson_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
@@ -39,6 +41,14 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
   late final AnimationController _orbitController;
   bool _isPlayingSound = false;
 
+  static String _safeDecode(String input) {
+    try {
+      return Uri.decodeComponent(input);
+    } catch (_) {
+      return input;
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -52,7 +62,9 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (!mounted) return;
       if (widget.letterChar != null) {
-        final matches = arabicLetters.where((l) => l.letter == widget.letterChar);
+        final raw = widget.letterChar!;
+        final decoded = _safeDecode(raw);
+        final matches = arabicLetters.where((l) => l.letter == decoded || l.letter == raw);
         if (matches.isNotEmpty) {
           ref.read(currentLessonProvider.notifier).setLetter(matches.first);
         }
@@ -72,18 +84,44 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
 
   void _playLetterSound() async {
     final lessonLetter = ref.read(currentLessonProvider).letter;
-    final char = widget.letterChar ?? lessonLetter?.letter ?? 'ت';
+    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ث';
+    final char = _safeDecode(rawChar);
     if (!mounted) return;
     setState(() => _isPlayingSound = true);
     final key = AudioRegistry.letterKeyFromChar(char);
     try {
-      await AudioManager.instance.playLetterAudio(key, 'name');
+      HapticFeedback.selectionClick();
+      // Play the authentic phonemic letter sound
+      await AudioManager.instance.playLetterAudio(key, 'sound');
+      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+      if (done != null) {
+        await done.first.timeout(
+          const Duration(milliseconds: 2500),
+          onTimeout: () {},
+        );
+      } else {
+        await Future.delayed(const Duration(milliseconds: 1500));
+      }
     } catch (e) {
       debugPrint('Error playing letter sound: $e');
     } finally {
       if (mounted) {
         setState(() => _isPlayingSound = false);
       }
+    }
+  }
+
+  void _playLetterName() async {
+    final lessonLetter = ref.read(currentLessonProvider).letter;
+    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ث';
+    final char = _safeDecode(rawChar);
+    if (!mounted) return;
+    final key = AudioRegistry.letterKeyFromChar(char);
+    try {
+      HapticFeedback.selectionClick();
+      await AudioManager.instance.playLetterAudio(key, 'name');
+    } catch (e) {
+      debugPrint('Error playing letter name: $e');
     }
   }
 
@@ -179,22 +217,32 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
 
                 // ─── 2. Letter Title Header ───
                 const SizedBox(height: 8),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 3)),
-                    ],
-                  ),
-                  child: Text(
-                    'حَرْفُ ${letter.name}',
-                    style: TextStyle(
-                      fontSize: isTablet ? 34 : 26,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.baaTopBar,
-                      fontFamily: 'Cairo',
+                GestureDetector(
+                  onTap: _playLetterName,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.9),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 3)),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'حَرْفُ ${letter.name}',
+                          style: TextStyle(
+                            fontSize: isTablet ? 34 : 26,
+                            fontWeight: FontWeight.w900,
+                            color: AppColors.baaTopBar,
+                            fontFamily: 'Cairo',
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        const Icon(Icons.volume_up_rounded, color: AppColors.baaTopBar, size: 24),
+                      ],
                     ),
                   ),
                 ).animate().fadeIn().slideY(begin: -0.2),
@@ -222,43 +270,50 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                                 duration: 1500.ms,
                               ),
 
-                          // Central Letter Badge
-                          Container(
-                            width: cardSize,
-                            height: cardSize,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              gradient: const LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [Colors.white, Color(0xFFFFFDE7)],
-                              ),
-                              border: Border.all(color: AppColors.primaryDay, width: 4.5),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: AppColors.primaryDay.withValues(alpha: 0.4),
-                                  blurRadius: 20,
-                                  spreadRadius: 4,
-                                  offset: const Offset(0, 6),
+                          // Central Letter Badge (Clickable for Letter Sound)
+                          GestureDetector(
+                            onTap: _playLetterSound,
+                            child: Container(
+                              width: cardSize,
+                              height: cardSize,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Colors.white, Color(0xFFFFFDE7)],
                                 ),
-                              ],
-                            ),
-                            child: Center(
-                              child: Text(
-                                letter.letter,
-                                style: TextStyle(
-                                  fontSize: letterFontSize,
-                                  fontWeight: FontWeight.w900,
-                                  color: AppColors.baaLetterPurple,
-                                  fontFamily: 'Cairo',
-                                  height: 1.0,
-                                  shadows: [
-                                    Shadow(
-                                      color: AppColors.baaLetterPurple.withValues(alpha: 0.3),
-                                      blurRadius: 8,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ],
+                                border: Border.all(
+                                  color: _isPlayingSound ? AppColors.secondaryDay : AppColors.primaryDay,
+                                  width: _isPlayingSound ? 6.0 : 4.5,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: (_isPlayingSound ? AppColors.secondaryDay : AppColors.primaryDay)
+                                        .withValues(alpha: 0.4),
+                                    blurRadius: _isPlayingSound ? 28 : 20,
+                                    spreadRadius: _isPlayingSound ? 8 : 4,
+                                    offset: const Offset(0, 6),
+                                  ),
+                                ],
+                              ),
+                              child: Center(
+                                child: Text(
+                                  letter.letter,
+                                  style: TextStyle(
+                                    fontSize: letterFontSize,
+                                    fontWeight: FontWeight.w900,
+                                    color: _isPlayingSound ? AppColors.secondaryDay : AppColors.baaLetterPurple,
+                                    fontFamily: 'Cairo',
+                                    height: 1.0,
+                                    shadows: [
+                                      Shadow(
+                                        color: AppColors.baaLetterPurple.withValues(alpha: 0.3),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 4),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
