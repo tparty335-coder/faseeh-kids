@@ -169,19 +169,19 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     super.dispose();
   }
 
-  Future<void> _say(String path, {int maxMs = 4000}) async {
+  Future<void> _say(
+    String path, {
+    AudioChannel channel = AudioChannel.voice,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 300),
+  }) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
-      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
-      if (done != null) {
-        await done.first.timeout(
-          Duration(milliseconds: maxMs),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await AudioService.instance.playAssetAndWait(
+        path,
+        channel: channel,
+        explicitDuration: explicitDuration,
+        pauseAfter: pauseAfter,
+      );
     } catch (_) {}
   }
 
@@ -189,14 +189,14 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     if (!mounted || _gameOver) return;
     ++_token;
     // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اسحب اسم الصورة وضعها مكان النقط فيما يأتي")
-    await _say('assets/audio/games/words/thaa_words_instruction.mp3', maxMs: 6000);
+    await _say('assets/audio/games/words/thaa_words_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
-  Future<void> _playWordAudio() async {
-    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+  Future<void> _playWordAudio({Duration pauseAfter = const Duration(milliseconds: 300)}) async {
+    await _say(_rounds[_round].wordAudio, pauseAfter: pauseAfter);
   }
 
-  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onCardSelected(int cardIdx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -214,15 +214,11 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
       _confetti.play();
 
       // 1. صوت التشجيع الكامل دون بتر
-      await _say(rd.praiseAudio, maxMs: 2500);
-      if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 400));
+      await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
       if (!mounted || t != _token) return;
 
       // 2. سماع اسم الكلمة كاملاً بعد التشجيع
-      await _playWordAudio();
-      if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 600));
+      await _playWordAudio(pauseAfter: const Duration(milliseconds: 700));
       if (!mounted || t != _token) return;
 
       _advance();
@@ -242,11 +238,9 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
         });
 
         // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-        await _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+        await _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 400));
         if (!mounted || t != _token) return;
-        await _playWordAudio();
-        if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 500));
+        await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
         if (!mounted || t != _token) return;
 
         _advance();

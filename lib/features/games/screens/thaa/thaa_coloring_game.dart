@@ -194,24 +194,21 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
 
   bool _alive(int token) => mounted && !_gameOver && token == _token;
 
-  /// يشغّل ملفاً صوتياً وينتظر انتهاءه فعلاً (لا توقيتات تقديرية تقطع الصوت).
+  /// يشغّل ملفاً صوتياً وينتظر انتهاءه كاملاً مع مهلة هادئة تمنع التداخل أو بتر الصوت.
   Future<void> _say(
     String path, {
-    required int maxMs,
+    int? maxMs,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 350),
     AudioChannel channel = AudioChannel.voice,
   }) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: channel);
-      final done = AudioService.instance.onPlayerComplete(channel);
-      if (done != null) {
-        await done.first.timeout(
-          Duration(milliseconds: maxMs),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await AudioService.instance.playAssetAndWait(
+        path,
+        channel: channel,
+        explicitDuration: explicitDuration ?? (maxMs != null ? Duration(milliseconds: maxMs) : null),
+        pauseAfter: pauseAfter,
+      );
     } catch (_) {}
   }
 
@@ -328,11 +325,9 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       channel: AudioChannel.sfx,
     );
     if (!_alive(tk)) return;
-    await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
+    await _say('audio/games/fishing/ahsnt.mp3', pauseAfter: const Duration(milliseconds: 400)); // «أحسنت»
     if (!_alive(tk)) return;
-    await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
-    if (!_alive(tk)) return;
-    await Future.delayed(const Duration(milliseconds: 500));
+    await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 700)); // نطق الكلمة
     if (!_alive(tk)) return;
     _advance();
   }

@@ -58,7 +58,7 @@ const List<_Round> _rounds = [
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
     zones: [
       _ImageZone(label: 'تَاج',   hasThaa: false, px: 138, py: 114),
-      _ImageZone(label: 'ثَوْب',  hasThaa: true,  px: 326, py: 258,
+      _ImageZone(label: 'ثِيَاب',  hasThaa: true,  px: 326, py: 258,
           wordAudio: 'audio/lessons/thaa/sounds/word_thiab.mp3'),
       _ImageZone(label: 'حِمَار', hasThaa: false, px: 138, py: 398),
     ],
@@ -110,19 +110,19 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
     super.dispose();
   }
 
-  Future<void> _say(String path, {int maxMs = 4000}) async {
+  Future<void> _say(
+    String path, {
+    AudioChannel channel = AudioChannel.voice,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 300),
+  }) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
-      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
-      if (done != null) {
-        await done.first.timeout(
-          Duration(milliseconds: maxMs),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await AudioService.instance.playAssetAndWait(
+        path,
+        channel: channel,
+        explicitDuration: explicitDuration,
+        pauseAfter: pauseAfter,
+      );
     } catch (_) {}
   }
 
@@ -130,10 +130,10 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
     if (!mounted || _gameOver) return;
     ++_token;
     // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء: "اضغط على الصورة التي اسمها به حرف الثاء"
-    await _say('assets/audio/games/circus/thaa_circus_question.mp3', maxMs: 3500);
+    await _say('assets/audio/games/circus/thaa_circus_question.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -151,16 +151,12 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
       _confetti.play();
 
       // 1. صوت التشجيع الكامل دون بتر مع مهلة تنفس
-      await _say(rd.praiseAudio, maxMs: 2500);
-      if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 400));
+      await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
       if (!mounted || t != _token) return;
 
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثَوْب / ثِمَار)
+      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثِيَاب / ثِمَار)
       if (zone.wordAudio != null) {
-        await _say(zone.wordAudio!, maxMs: 2500);
-        if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 600));
+        await _say(zone.wordAudio!, pauseAfter: const Duration(milliseconds: 700));
         if (!mounted || t != _token) return;
       }
 
@@ -181,9 +177,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
         // تشغيل صوت الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
         final correctZone = rd.zones.firstWhere((z) => z.hasThaa);
         if (correctZone.wordAudio != null) {
-          await _say(correctZone.wordAudio!, maxMs: 2500);
-          if (!mounted || t != _token) return;
-          await Future.delayed(const Duration(milliseconds: 500));
+          await _say(correctZone.wordAudio!, pauseAfter: const Duration(milliseconds: 800));
           if (!mounted || t != _token) return;
         }
 

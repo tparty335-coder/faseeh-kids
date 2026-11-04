@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
+import 'package:faseeh_kids/core/audio_clip_durations.dart';
 
 /// Audio Channels for isolated playback pools
 enum AudioChannel {
@@ -80,6 +81,35 @@ class AudioService {
     } catch (e) {
       debugPrint('AudioService [$channel]: Error playing asset $assetPath: $e');
     }
+  }
+
+  /// Returns the duration of an audio asset if known in catalog, or default fallback.
+  Duration getAssetDuration(String assetPath) {
+    final clean = assetPath.startsWith('assets/')
+        ? assetPath.substring(7)
+        : assetPath;
+    final ms = kAudioClipDurationsMs[clean];
+    if (ms != null) {
+      return Duration(milliseconds: ms);
+    }
+    return const Duration(milliseconds: 2000);
+  }
+
+  /// Play an audio asset and wait until it finishes playing completely.
+  /// Enforces generous time so audio files never clash or cut each other off.
+  Future<void> playAssetAndWait(
+    String assetPath, {
+    AudioChannel channel = AudioChannel.voice,
+    double volume = 1.0,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 300),
+  }) async {
+    if (_isDisposed) return;
+    await playAsset(assetPath, channel: channel, volume: volume);
+    final op = channel == AudioChannel.bgm ? _bgmOpId : _fgOpId;
+    final dur = explicitDuration ?? getAssetDuration(assetPath);
+    await Future.delayed(dur + pauseAfter);
+    if (!_isOpActive(channel, op)) return;
   }
 
   /// Play an audio file from a full file path
