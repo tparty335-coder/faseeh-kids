@@ -400,12 +400,10 @@ class _ZaayWordFishingGameState extends ConsumerState<ZaayWordFishingGame> {
           _navBtn(
             'التالي',
             Icons.arrow_back_rounded,
-            _roundDone || _showCorrectAnswer,
+            true,
             () {
-              if (_roundDone || _showCorrectAnswer) {
-                HapticFeedback.lightImpact();
-                _advanceRound();
-              }
+              HapticFeedback.lightImpact();
+              _advanceRound();
             },
           ),
           GestureDetector(
@@ -428,23 +426,21 @@ class _ZaayWordFishingGameState extends ConsumerState<ZaayWordFishingGame> {
           _navBtn(
             'السابق',
             Icons.arrow_forward_rounded,
-            _round > 0 && !_roundDone && !_showCorrectAnswer,
+            true,
             () {
-              if (_round > 0 && !_roundDone && !_showCorrectAnswer) {
-                HapticFeedback.lightImpact();
-                final t = ++_token;
-                AudioService.instance.stop();
-                setState(() {
-                  _round--;
-                  _tappedZoneIndex = null;
-                  _roundDone = false;
-                  _wrongAttempts = 0;
-                  _showCorrectAnswer = false;
-                });
-                Future.delayed(const Duration(milliseconds: 300), () {
-                  if (mounted && t == _token) _startRound();
-                });
-              }
+              HapticFeedback.lightImpact();
+              final t = ++_token;
+              AudioService.instance.stop();
+              setState(() {
+                if (_round > 0) _round--;
+                _tappedZoneIndex = null;
+                _roundDone = false;
+                _wrongAttempts = 0;
+                _showCorrectAnswer = false;
+              });
+              Future.delayed(const Duration(milliseconds: 300), () {
+                if (mounted && t == _token) _startRound();
+              });
             },
           ),
         ],
@@ -455,18 +451,18 @@ class _ZaayWordFishingGameState extends ConsumerState<ZaayWordFishingGame> {
   Widget _navBtn(String label, IconData icon, bool enabled, VoidCallback onTap) {
     final isNext = label == 'التالي';
     return GestureDetector(
-      onTap: enabled ? onTap : null,
+      onTap: onTap,
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 200),
-        opacity: enabled ? 1.0 : 0.4,
+        opacity: 1.0,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
           decoration: BoxDecoration(
-            color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
+            color: const Color(0xFFE53935),
             borderRadius: BorderRadius.circular(24),
-            boxShadow: enabled
-                ? [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))]
-                : [],
+            boxShadow: [
+              BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3)),
+            ],
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,

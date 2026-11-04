@@ -457,15 +457,17 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          OutlinedButton.icon(
+          ElevatedButton.icon(
             onPressed: _goPrev,
             icon: const Icon(Icons.arrow_back_ios_new, size: 16),
             label: Text(
               _currentPage == 0 ? 'السابق: المدود' : 'السابق',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14),
+              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, fontWeight: FontWeight.bold),
             ),
-            style: OutlinedButton.styleFrom(
-              foregroundColor: AppColors.textPrimaryDay,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.primaryDay,
+              foregroundColor: Colors.white,
+              elevation: 4,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),

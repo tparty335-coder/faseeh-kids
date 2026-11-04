@@ -7,11 +7,13 @@ import 'package:faseeh_kids/features/lessons/screens/baa/baa_story_station.dart'
 
 class StorySequenceWidget extends StatefulWidget {
   final VoidCallback onNext;
+  final VoidCallback? onPrevious;
   final String letterChar;
 
   const StorySequenceWidget({
     super.key,
     required this.onNext,
+    this.onPrevious,
     required this.letterChar,
   });
 
@@ -450,17 +452,28 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    OutlinedButton.icon(
-                      onPressed: isFirst ? null : () => _goToFrame(_currentFrameIndex - 1),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        if (isFirst) {
+                          if (widget.onPrevious != null) {
+                            widget.onPrevious!();
+                          } else {
+                            AudioService.instance.stop();
+                            Navigator.of(context).maybePop();
+                          }
+                        } else {
+                          _goToFrame(_currentFrameIndex - 1);
+                        }
+                      },
                       icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                       label: const Text('السابق',
                           style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: AppColors.primaryDay,
-                        side: const BorderSide(color: AppColors.primaryDay, width: 2),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primaryDay,
+                        foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                        elevation: 4,
                       ),
                     ),
 

@@ -555,9 +555,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: _currentSceneIndex == 5 && !_foundRabbit
-                                ? Colors.grey
-                                : const Color(0xFFFF9800),
+                            backgroundColor: const Color(0xFFFF9800),
                             foregroundColor: Colors.white,
                             padding: EdgeInsets.symmetric(
                               horizontal: isTablet ? 28 : 14,

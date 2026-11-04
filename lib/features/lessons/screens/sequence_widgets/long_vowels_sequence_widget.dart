@@ -791,16 +791,17 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                OutlinedButton.icon(
+                ElevatedButton.icon(
                   onPressed: _previousPage,
                   icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                   label: const Text('السابق',
                       style: TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold)),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.primaryDay,
-                    side: const BorderSide(color: AppColors.primaryDay, width: 2),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primaryDay,
+                    foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    elevation: 4,
                   ),
                 ),
 

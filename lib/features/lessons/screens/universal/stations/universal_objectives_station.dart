@@ -14,6 +14,7 @@ class UniversalObjectivesStation extends StatefulWidget {
   final String mascotEmoji;
   final Color accentColor;
   final VoidCallback onNext;
+  final VoidCallback? onPrevious;
 
   const UniversalObjectivesStation({
     super.key,
@@ -22,6 +23,7 @@ class UniversalObjectivesStation extends StatefulWidget {
     required this.mascotEmoji,
     required this.accentColor,
     required this.onNext,
+    this.onPrevious,
   });
 
   @override
@@ -180,7 +182,35 @@ class _UniversalObjectivesStationState
                   ),
           ),
 
-          // ── 4. زر التالي ──────────────────────────────────────────────
+          // ── 4. زر الرجوع وزر التالي ──────────────────────────────────────────
+          Positioned(
+            bottom: 10,
+            right: 20,
+            child: ElevatedButton.icon(
+              onPressed: widget.onPrevious ?? () {
+                AudioService.instance.stop();
+                Navigator.of(context).maybePop();
+              },
+              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
+              label: const Text(
+                'الرُّجُوعُ لِلْخَرِيطَةِ',
+                style: TextStyle(
+                  fontFamily: 'Cairo',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.primaryDay,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18),
+                ),
+                elevation: 6,
+              ),
+            ),
+          ),
           Positioned(
             bottom: 10,
             left: 20,
@@ -198,7 +228,7 @@ class _UniversalObjectivesStationState
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.oasisGreen,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 11),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
                 ),

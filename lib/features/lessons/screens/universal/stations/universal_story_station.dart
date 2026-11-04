@@ -591,7 +591,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: OutlinedButton.icon(
+                      child: ElevatedButton.icon(
                         onPressed: _previousScene,
                         icon: const Icon(Icons.arrow_forward_rounded, size: 18),
                         label: FittedBox(
@@ -605,23 +605,21 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                             ),
                           ),
                         ),
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: const Color(0xFF5D4037),
-                          backgroundColor: Colors.white,
-                          side: const BorderSide(color: Color(0xFF8D6E63), width: 2),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: widget.accentColor,
+                          foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(18),
                           ),
+                          elevation: 5,
                         ),
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: ElevatedButton.icon(
-                        onPressed: (scene.interaction != null && !_interactionCompleted)
-                            ? null
-                            : _nextScene,
+                        onPressed: _nextScene,
                         icon: Icon(
                           isLastScene
                               ? Icons.check_circle_rounded

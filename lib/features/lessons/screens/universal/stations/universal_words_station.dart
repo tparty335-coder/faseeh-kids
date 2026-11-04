@@ -254,9 +254,9 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey.shade200,
-                foregroundColor: Colors.grey.shade800,
-                elevation: 0,
+                backgroundColor: const Color(0xFF43A047),
+                foregroundColor: Colors.white,
+                elevation: 2,
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(14),

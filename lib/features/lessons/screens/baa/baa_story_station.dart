@@ -617,9 +617,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: _currentSceneIndex == 3 && !_scene4Answered
-                                ? Colors.grey
-                                : const Color(0xFFFF9800),
+                            backgroundColor: const Color(0xFFFF9800),
                             foregroundColor: Colors.white,
                             padding: EdgeInsets.symmetric(
                               horizontal: isTablet ? 28 : 14,

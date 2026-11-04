@@ -392,12 +392,10 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
           _navButton(
             label: 'التالي',
             icon: Icons.arrow_back_rounded,
-            enabled: _roundDone || _showCorrectAnswer,
+            enabled: true,
             onTap: () {
-              if (_roundDone || _showCorrectAnswer) {
-                HapticFeedback.lightImpact();
-                _advanceRound();
-              }
+              HapticFeedback.lightImpact();
+              _advanceRound();
             },
           ),
           
@@ -408,19 +406,17 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
           _navButton(
             label: 'السابق',
             icon: Icons.arrow_forward_rounded,
-            enabled: _round > 0 && !_roundDone && !_showCorrectAnswer,
+            enabled: true,
             onTap: () {
-              if (_round > 0 && !_roundDone && !_showCorrectAnswer) {
-                HapticFeedback.lightImpact();
-                setState(() {
-                  _round--;
-                  _tappedZoneIndex = null;
-                  _roundDone = false;
-                  _wrongAttempts = 0;
-                  _showCorrectAnswer = false;
-                });
-                Future.delayed(const Duration(milliseconds: 400), _playInstruction);
-              }
+              HapticFeedback.lightImpact();
+              setState(() {
+                if (_round > 0) _round--;
+                _tappedZoneIndex = null;
+                _roundDone = false;
+                _wrongAttempts = 0;
+                _showCorrectAnswer = false;
+              });
+              Future.delayed(const Duration(milliseconds: 400), _playInstruction);
             },
           ),
         ],
@@ -456,18 +452,18 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
   }) {
     final isNext = label == 'التالي';
     return GestureDetector(
-      onTap: enabled ? onTap : null,
+      onTap: onTap,
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 200),
-        opacity: enabled ? 1.0 : 0.4,
+        opacity: 1.0,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-            color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
+            color: const Color(0xFFE53935),
             borderRadius: BorderRadius.circular(24),
-            boxShadow: enabled
-                ? [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))]
-                : [],
+            boxShadow: [
+              BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3)),
+            ],
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,

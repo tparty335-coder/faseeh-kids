@@ -177,13 +177,21 @@ class _BeehiveGameState extends ConsumerState<BeehiveGame> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _navBtn('التالي', Icons.arrow_back_rounded, _roundDone || _showCorrectAnswer, () { if (_roundDone || _showCorrectAnswer) { HapticFeedback.lightImpact(); _advance(); } }),
+          _navBtn('التالي', Icons.arrow_back_rounded, true, () { HapticFeedback.lightImpact(); _advance(); }),
           GestureDetector(
             onTap: () { HapticFeedback.lightImpact(); Navigator.of(context).popUntil((route) => route.isFirst); },
             child: Container(padding: const EdgeInsets.all(12), decoration: const BoxDecoration(color: Color(0xFF4CAF50), shape: BoxShape.circle, boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))]), child: const Icon(Icons.home_rounded, color: Colors.white, size: 28)),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
-          _navBtn('السابق', Icons.arrow_forward_rounded, _round > 0 && !_roundDone && !_showCorrectAnswer, () {
-            if (_round > 0 && !_roundDone && !_showCorrectAnswer) { HapticFeedback.lightImpact(); setState(() { _round--; _tapped = null; _roundDone = false; _wrongAttempts = 0; _showCorrectAnswer = false; }); Future.delayed(const Duration(milliseconds: 400), _playInstruction); }
+          _navBtn('السابق', Icons.arrow_forward_rounded, true, () {
+            HapticFeedback.lightImpact();
+            setState(() {
+              if (_round > 0) _round--;
+              _tapped = null;
+              _roundDone = false;
+              _wrongAttempts = 0;
+              _showCorrectAnswer = false;
+            });
+            Future.delayed(const Duration(milliseconds: 400), _playInstruction);
           }),
         ],
       ),
@@ -193,9 +201,9 @@ class _BeehiveGameState extends ConsumerState<BeehiveGame> {
   Widget _navBtn(String label, IconData icon, bool enabled, VoidCallback onTap) {
     final isNext = label == 'التالي';
     return GestureDetector(
-      onTap: enabled ? onTap : null,
-      child: AnimatedOpacity(duration: const Duration(milliseconds: 200), opacity: enabled ? 1.0 : 0.4,
-        child: Container(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10), decoration: BoxDecoration(color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400, borderRadius: BorderRadius.circular(24), boxShadow: enabled ? [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))] : []),
+      onTap: onTap,
+      child: AnimatedOpacity(duration: const Duration(milliseconds: 200), opacity: 1.0,
+        child: Container(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10), decoration: BoxDecoration(color: const Color(0xFFE53935), borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))]),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             if (isNext) Icon(icon, color: Colors.white, size: 20), if (isNext) const SizedBox(width: 6),
             Text(label, style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),

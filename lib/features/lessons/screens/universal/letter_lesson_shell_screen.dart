@@ -293,6 +293,7 @@ class _LetterLessonShellScreenState
           mascotEmoji: m.mascotEmoji,
           accentColor: m.topBarColor,
           onNext: _nextStation,
+          onPrevious: _previousStation,
         );
       case 1: // القصة
         return UniversalStoryStation(
@@ -406,7 +407,7 @@ class _LetterLessonShellScreenState
           letter: m.letter,
           isLast: i == _stationCount - 1,
           onNext: _nextStation,
-          onPrevious: i > 0 ? _previousStation : null,
+          onPrevious: _previousStation,
         );
     }
   }
@@ -578,8 +579,10 @@ class _StationPlaceholder extends StatelessWidget {
                   label: const Text('السَّابِقُ',
                       style: TextStyle(fontFamily: 'Cairo')),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade300,
-                      foregroundColor: Colors.black87),
+                    backgroundColor: AppColors.primaryDay,
+                    foregroundColor: Colors.white,
+                    elevation: 4,
+                  ),
                 ),
                 const SizedBox(width: 16),
               ],

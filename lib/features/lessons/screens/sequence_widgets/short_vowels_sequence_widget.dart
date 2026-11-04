@@ -1543,12 +1543,11 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                               children: [
                                 Flexible(
                                   child: ElevatedButton.icon(
-                                    onPressed: currentEx > 0
-                                        ? () {
-                                            setState(() => _exampleIndex[pageIdx] = currentEx - 1);
-                                            _playExampleAudio(examples[currentEx - 1]['audio'] as String);
-                                          }
-                                        : null,
+                                    onPressed: () {
+                                      final newIdx = currentEx > 0 ? currentEx - 1 : examples.length - 1;
+                                      setState(() => _exampleIndex[pageIdx] = newIdx);
+                                      _playExampleAudio(examples[newIdx]['audio'] as String);
+                                    },
                                     icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                                     label: const Text(
                                       'المثال السابق',
@@ -1557,9 +1556,9 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                       style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 14),
                                     ),
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: color.withValues(alpha: 0.12),
-                                      foregroundColor: color,
-                                      elevation: 0,
+                                      backgroundColor: color,
+                                      foregroundColor: Colors.white,
+                                      elevation: 2,
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                                     ),
@@ -1590,12 +1589,11 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                 const SizedBox(width: 4),
                                 Flexible(
                                   child: ElevatedButton.icon(
-                                    onPressed: currentEx < examples.length - 1
-                                        ? () {
-                                            setState(() => _exampleIndex[pageIdx] = currentEx + 1);
-                                            _playExampleAudio(examples[currentEx + 1]['audio'] as String);
-                                          }
-                                        : null,
+                                    onPressed: () {
+                                      final newIdx = currentEx < examples.length - 1 ? currentEx + 1 : 0;
+                                      setState(() => _exampleIndex[pageIdx] = newIdx);
+                                      _playExampleAudio(examples[newIdx]['audio'] as String);
+                                    },
                                     label: const Text(
                                       'المثال التالي',
                                       maxLines: 1,
@@ -1629,16 +1627,17 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                OutlinedButton.icon(
+                ElevatedButton.icon(
                   onPressed: _previousPage,
                   icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                   label: const Text('السابق',
                       style: TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold)),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.primaryDay,
-                    side: const BorderSide(color: AppColors.primaryDay, width: 2),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primaryDay,
+                    foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    elevation: 4,
                   ),
                 ),
                 const SizedBox(width: 6),

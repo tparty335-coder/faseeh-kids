@@ -10,7 +10,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
-import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/core/providers/purchase_provider.dart';

@@ -583,12 +583,9 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
         ],
       ),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        _navBtn('التالي', Icons.arrow_back_rounded,
-            _roundDone || _showCorrectAnswer, () {
-          if (_roundDone || _showCorrectAnswer) {
-            HapticFeedback.lightImpact();
-            _advance();
-          }
+        _navBtn('التالي', Icons.arrow_back_rounded, true, () {
+          HapticFeedback.lightImpact();
+          _advance();
         }),
         GestureDetector(
           onTap: () {
@@ -617,19 +614,17 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
         _navBtn(
             'السابق',
             Icons.arrow_forward_rounded,
-            _round > 0 && !_roundDone && !_showCorrectAnswer, () {
-          if (_round > 0 && !_roundDone && !_showCorrectAnswer) {
-            HapticFeedback.lightImpact();
-            setState(() {
-              _round--;
-              _roundDone = false;
-              _wrongAttempts = 0;
-              _showCorrectAnswer = false;
-              _droppedWord = null;
-              _shakingCard = null;
-              _isDraggingOver = false;
-            });
-          }
+            true, () {
+          HapticFeedback.lightImpact();
+          setState(() {
+            if (_round > 0) _round--;
+            _roundDone = false;
+            _wrongAttempts = 0;
+            _showCorrectAnswer = false;
+            _droppedWord = null;
+            _shakingCard = null;
+            _isDraggingOver = false;
+          });
         }),
       ]),
     );
@@ -639,24 +634,22 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
       String label, IconData icon, bool enabled, VoidCallback onTap) {
     final isNext = label == 'التالي';
     return GestureDetector(
-      onTap: enabled ? onTap : null,
+      onTap: onTap,
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 200),
-        opacity: enabled ? 1.0 : 0.4,
+        opacity: 1.0,
         child: Container(
           padding:
               const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-            color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
+            color: const Color(0xFFE53935),
             borderRadius: BorderRadius.circular(24),
-            boxShadow: enabled
-                ? [
-                    BoxShadow(
-                        color: Colors.red.withValues(alpha: 0.3),
-                        blurRadius: 6,
-                        offset: const Offset(0, 3))
-                  ]
-                : [],
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.red.withValues(alpha: 0.3),
+                  blurRadius: 6,
+                  offset: const Offset(0, 3)),
+            ],
           ),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             if (isNext) Icon(icon, color: Colors.white, size: 20),

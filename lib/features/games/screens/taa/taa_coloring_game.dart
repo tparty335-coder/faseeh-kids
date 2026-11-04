@@ -373,7 +373,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
     final tk = ++_token;
     _stopAudio();
     setState(() {
-      _round--;
+      if (_round > 0) _round--;
       _resetRoundState();
     });
     Future.delayed(const Duration(milliseconds: 300), () {
@@ -676,7 +676,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _navBtn('التالي', Icons.arrow_back_rounded, _isWordSelected, () {
+          _navBtn('التالي', Icons.arrow_back_rounded, true, () {
             HapticFeedback.lightImpact();
             _advance();
           }),
@@ -699,7 +699,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
               child: const Icon(Icons.home_rounded, color: Colors.white, size: 26),
             ),
           ),
-          _navBtn('السابق', Icons.arrow_forward_rounded, _round > 0, () {
+          _navBtn('السابق', Icons.arrow_forward_rounded, true, () {
             HapticFeedback.lightImpact();
             _previous();
           }),
@@ -711,14 +711,14 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
   Widget _navBtn(String label, IconData icon, bool enabled, VoidCallback onTap) {
     final isNext = label == 'التالي';
     return GestureDetector(
-      onTap: enabled ? onTap : null,
+      onTap: onTap,
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 200),
-        opacity: enabled ? 1.0 : 0.4,
+        opacity: 1.0,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
           decoration: BoxDecoration(
-            color: enabled ? const Color(0xFFE53935) : Colors.grey.shade400,
+            color: const Color(0xFFE53935),
             borderRadius: BorderRadius.circular(24),
           ),
           child: Row(
