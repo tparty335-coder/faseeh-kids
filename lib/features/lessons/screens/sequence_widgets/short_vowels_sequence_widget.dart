@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
@@ -69,6 +70,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْفَتْحَةُ (ثَ)',
           'vowelMark': 'ثَ',
           'color': const Color(0xFFE53935),
+          'vowelAudio': 'audio/lessons/thaa/sounds/thaa_fatha.mp3',
           'explanation': 'الْفَتْحَةُ شَرْطَةٌ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثَ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_fatha_rule.mp3',
           'examples': [
@@ -91,6 +93,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الضَّمَّةُ (ثُ)',
           'vowelMark': 'ثُ',
           'color': const Color(0xFFFF6F00),
+          'vowelAudio': 'audio/lessons/thaa/sounds/thaa_damma.mp3',
           'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثُ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_damma_rule.mp3',
           'examples': [
@@ -113,6 +116,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْكَسْرَةُ (ثِ)',
           'vowelMark': 'ثِ',
           'color': const Color(0xFF1E88E5),
+          'vowelAudio': 'audio/lessons/thaa/sounds/thaa_kasra.mp3',
           'explanation': 'الْكَسْرَةُ أَسْفَلَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثِ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_kasra_rule.mp3',
           'examples': [
@@ -135,6 +139,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'عَلَامَةُ السُّكُونِ (ثْ)',
           'vowelMark': 'ثْ',
           'color': const Color(0xFF5D4037),
+          'vowelAudio': 'audio/lessons/thaa/sounds/thaa_sukoon.mp3',
           'explanation': 'السُّكُونُ فَوْقَ الثَّاءِ يَجْعَلُهَا بِدُونِ حَرَكَةٍ فَتَسْكُنُ (ثْ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_sukoon_rule.mp3',
           'examples': [
@@ -1163,6 +1168,9 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   // Sub-example index per haraka page
   final Map<int, int> _exampleIndex = {0: 0, 1: 0, 2: 0, 3: 0};
 
+  /// رمز إلغاء التشغيل التلقائي — يُزاد عند كل تفاعل يدوي لوقف أي تسلسل صوتي تلقائي معلّق
+  int _autoPlayToken = 0;
+
   @override
   void initState() {
     super.initState();
@@ -1180,34 +1188,39 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   }
 
   void _triggerAutoPlay() {
+    final myToken = ++_autoPlayToken;
     Future.delayed(const Duration(milliseconds: 400), () async {
-      if (!mounted) return;
+      if (!mounted || myToken != _autoPlayToken) return;
       final intro = _getIntroAudioForLetter(widget.letterChar);
       if (intro != null && !_introPlayed) {
-        // يُشغِّل صوت المقدمة ("أصوات حرف الباء: بَـ") مرة واحدة فقط
+        // يُشغِّل صوت المقدمة ("أصوات حرف الثاء: ثَـ") مرة واحدة فقط
         _introPlayed = true;
         await AudioService.instance.stop();
+        if (!mounted || myToken != _autoPlayToken) return;
         try {
+          // ينتظر انتهاء المقدمة بناءً على المدة الفعلية بدلاً من onPlayerComplete
+          // حتى لا يُفعَّل الشرح التلقائي بسبب صوت آخر ينتهي لاحقاً
+          final dur = AudioService.instance.getAssetDuration(intro);
           await AudioService.instance.playAsset(intro);
-          // ينتظر انتهاء المقدمة ثم يُشغِّل شرح أول حركة تلقائياً
-          await AudioService.instance
-              .onPlayerComplete(AudioChannel.voice)
-              ?.first
-              .timeout(const Duration(seconds: 10), onTimeout: () {});
+          await Future.delayed(dur + const Duration(milliseconds: 200));
         } catch (_) {}
       }
-      if (mounted) _playRuleAudio(_harakat[_currentPage]);
+      if (mounted && myToken == _autoPlayToken) {
+        _playRuleAudio(_harakat[_currentPage]);
+      }
     });
   }
 
   @override
   void dispose() {
+    _autoPlayToken++; // إلغاء أي تشغيل تلقائي معلّق
     _pageController.dispose();
     AudioService.instance.stop();
     super.dispose();
   }
 
   void _playRuleAudio(Map<String, dynamic> haraka) async {
+    _autoPlayToken++; // إلغاء التشغيل التلقائي المعلّق عند الضغط اليدوي
     await AudioService.instance.stop();
     try {
       await AudioService.instance.playAsset(haraka['ruleAudio'] as String);
@@ -1217,6 +1230,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
   }
 
   void _playExampleAudio(String audioPath) async {
+    _autoPlayToken++; // إلغاء التشغيل التلقائي المعلّق عند الضغط اليدوي
     await AudioService.instance.stop();
     try {
       await AudioService.instance.playAsset(audioPath);
@@ -1328,32 +1342,49 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                             ),
                             child: Row(
                               children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: color.withValues(alpha: 0.15),
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: Text(
-                                    h['vowelMark'] as String,
-                                    style: TextStyle(
-                                      fontFamily: 'Cairo',
-                                      fontSize: 42,
-                                      fontWeight: FontWeight.w900,
-                                      color: color,
+                                GestureDetector(
+                                  onTap: () {
+                                    HapticFeedback.lightImpact();
+                                    final va = h['vowelAudio'] as String?;
+                                    if (va != null) {
+                                      _playExampleAudio(va);
+                                    } else {
+                                      _playRuleAudio(h);
+                                    }
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                    decoration: BoxDecoration(
+                                      color: color.withValues(alpha: 0.15),
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    child: Text(
+                                      h['vowelMark'] as String,
+                                      style: TextStyle(
+                                        fontFamily: 'Cairo',
+                                        fontSize: 42,
+                                        fontWeight: FontWeight.w900,
+                                        color: color,
+                                      ),
                                     ),
                                   ),
                                 ),
                                 const SizedBox(width: 12),
                                 Expanded(
-                                  child: Text(
-                                    h['explanation'] as String,
-                                    style: const TextStyle(
-                                      fontFamily: 'Cairo',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      color: AppColors.textPrimaryDay,
-                                      height: 1.3,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      HapticFeedback.lightImpact();
+                                      _playRuleAudio(h);
+                                    },
+                                    child: Text(
+                                      h['explanation'] as String,
+                                      style: const TextStyle(
+                                        fontFamily: 'Cairo',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.textPrimaryDay,
+                                        height: 1.3,
+                                      ),
                                     ),
                                   ),
                                 ),

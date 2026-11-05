@@ -340,12 +340,29 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _navBtn(
-            'التالي',
-            Icons.arrow_back_rounded,
+            'السابق',
+            Icons.arrow_forward_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              _advance();
+              if (_round == 0) {
+                _token++;
+                AudioService.instance.stop();
+                Navigator.of(context).pop();
+                return;
+              }
+              final t = ++_token;
+              AudioService.instance.stop();
+              setState(() {
+                _round--;
+                _tapped = null;
+                _roundDone = false;
+                _wrongAttempts = 0;
+                _showCorrectAnswer = false;
+              });
+              Future.delayed(const Duration(milliseconds: 300), () {
+                if (mounted && t == _token) _playInstruction();
+              });
             },
           ),
           GestureDetector(
@@ -353,7 +370,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.of(context).pop();
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -366,23 +383,12 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
             ),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
           _navBtn(
-            'السابق',
-            Icons.arrow_forward_rounded,
+            'التالي',
+            Icons.arrow_back_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              final t = ++_token;
-              AudioService.instance.stop();
-              setState(() {
-                if (_round > 0) _round--;
-                _tapped = null;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-              });
-              Future.delayed(const Duration(milliseconds: 300), () {
-                if (mounted && t == _token) _playInstruction();
-              });
+              _advance();
             },
           ),
         ],

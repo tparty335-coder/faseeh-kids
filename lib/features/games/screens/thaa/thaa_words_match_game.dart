@@ -539,12 +539,27 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _navBtn(
-            'التالي',
-            Icons.arrow_back_rounded,
+            'السابق',
+            Icons.arrow_forward_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              _advance();
+              if (_round == 0) {
+                _token++;
+                AudioService.instance.stop();
+                Navigator.of(context).pop();
+                return;
+              }
+              _token++;
+              AudioService.instance.stop();
+              setState(() {
+                _round--;
+                _roundDone = false;
+                _wrongAttempts = 0;
+                _showCorrectAnswer = false;
+                _droppedWord = null;
+                _shakingCard = null;
+              });
             },
           ),
           GestureDetector(
@@ -552,7 +567,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.of(context).pop();
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -565,21 +580,12 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
             ),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
           _navBtn(
-            'السابق',
-            Icons.arrow_forward_rounded,
+            'التالي',
+            Icons.arrow_back_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              _token++;
-              AudioService.instance.stop();
-              setState(() {
-                if (_round > 0) _round--;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-                _droppedWord = null;
-                _shakingCard = null;
-              });
+              _advance();
             },
           ),
         ],

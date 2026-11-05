@@ -42,7 +42,7 @@ const List<_Round> _rounds = [
   // الجولة 1: ثَعْلَب ← ثَ (يسار)
   _Round(
     imagePath: 'assets/images/games/beehive/thaa_beehive_round_1.png',
-    imgH: 375,
+    imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cells: [
@@ -55,7 +55,7 @@ const List<_Round> _rounds = [
   // الجولة 2: ثِمَار ← ثِ (يمين)
   _Round(
     imagePath: 'assets/images/games/beehive/thaa_beehive_round_2.png',
-    imgH: 483,
+    imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
     cells: [
@@ -68,7 +68,7 @@ const List<_Round> _rounds = [
   // الجولة 3: ثُعْبَان ← ثُ (أعلى)
   _Round(
     imagePath: 'assets/images/games/beehive/thaa_beehive_round_3.png',
-    imgH: 473,
+    imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cells: [
@@ -81,7 +81,7 @@ const List<_Round> _rounds = [
   // الجولة 4: مِثْقَاب ← ثْ (أسفل)
   _Round(
     imagePath: 'assets/images/games/beehive/thaa_beehive_round_4.png',
-    imgH: 478,
+    imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_mithqab.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cells: [
@@ -406,12 +406,27 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _navBtn(
-            'التالي',
-            Icons.arrow_back_rounded,
+            'السابق',
+            Icons.arrow_forward_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              _advance();
+              final t = ++_token;
+              AudioService.instance.stop();
+              if (_round > 0) {
+                setState(() {
+                  _round--;
+                  _tapped = null;
+                  _roundDone = false;
+                  _wrongAttempts = 0;
+                  _showCorrectAnswer = false;
+                });
+                Future.delayed(const Duration(milliseconds: 300), () {
+                  if (mounted && t == _token) _playCurrentWordStandalone();
+                });
+              } else {
+                Navigator.of(context).pop();
+              }
             },
           ),
           GestureDetector(
@@ -419,7 +434,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.of(context).pop();
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -432,23 +447,12 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
             ),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
           _navBtn(
-            'السابق',
-            Icons.arrow_forward_rounded,
+            'التالي',
+            Icons.arrow_back_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              final t = ++_token;
-              AudioService.instance.stop();
-              setState(() {
-                if (_round > 0) _round--;
-                _tapped = null;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-              });
-              Future.delayed(const Duration(milliseconds: 300), () {
-                if (mounted && t == _token) _playCurrentWordStandalone();
-              });
+              _advance();
             },
           ),
         ],

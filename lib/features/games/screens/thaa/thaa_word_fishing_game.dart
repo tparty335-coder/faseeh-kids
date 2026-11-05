@@ -119,6 +119,7 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
   bool _gameOver = false;
   int _wrongAttempts = 0;
   bool _showCorrectAnswer = false;
+  bool _isBusy = false;
 
   @override
   void initState() {
@@ -159,81 +160,95 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
   Future<void> _startRound({bool isFirstRound = false}) async {
     if (!mounted || _gameOver) return;
     final t = ++_token;
-    if (isFirstRound) {
-      // صوت المقدمة "صيد الكلمات" (1.64s) كاملاً دون بتر
-      await _say('audio/games/fishing/sayd.mp3', pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || _gameOver || t != _token) return;
+    _isBusy = true;
+    try {
+      if (isFirstRound) {
+        // صوت المقدمة "صيد الكلمات" (1.64s) كاملاً دون بتر
+        await _say('audio/games/fishing/sayd.mp3', pauseAfter: const Duration(milliseconds: 400));
+        if (!mounted || _gameOver || t != _token) return;
+      }
+      // صوت السؤال الأصلي للأسطوانة "اضغط على الكلمة التي بها حرف الثاء" (3.9s)
+      await _say('audio/games/fishing/thaa_fishing_question.mp3', pauseAfter: const Duration(milliseconds: 400));
+    } finally {
+      if (mounted && t == _token) {
+        setState(() => _isBusy = false);
+      }
     }
-    // صوت السؤال الأصلي للأسطوانة "اضغط على الكلمة التي بها حرف الثاء" (3.9s)
-    await _say('audio/games/fishing/thaa_fishing_question.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
   Future<void> _playWrong() =>
       _say('audio/games/fishing/hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onZoneTap(int zoneIndex) async {
-    if (_roundDone || _showCorrectAnswer) return;
+    if (_roundDone || _showCorrectAnswer || _isBusy) return;
     HapticFeedback.lightImpact();
 
     final t = ++_token;
+    _isBusy = true;
     final rd = _rounds[_round];
     final zone = rd.zones[zoneIndex];
     final isCorrect = zone.hasThaa;
 
-    if (isCorrect) {
-      setState(() {
-        _tappedZoneIndex = zoneIndex;
-        _roundDone = true;
-        _score++;
-      });
-      _confetti.play();
-
-      // 1. صوت التشجيع الكامل دون بتر
-      await _say(rd.correctPraise, pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثُعْبَان / ثَلَّاجَة / ثَعْلَب / ثَلْج)
-      await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      // 3. صوت صيد السمكة
-      await _say(
-        'audio/games/fishing/fish.mp3',
-        channel: AudioChannel.sfx,
-        pauseAfter: const Duration(milliseconds: 300),
-      );
-      if (!mounted || t != _token) return;
-
-      // 4. تشجيع نهاية الجولة
-      await _say(rd.roundEndPraise, pauseAfter: const Duration(milliseconds: 700));
-      if (!mounted || t != _token) return;
-
-      _advanceRound();
-    } else {
-      setState(() {
-        _tappedZoneIndex = zoneIndex;
-        _wrongAttempts++;
-      });
-      await _playWrong();
-      if (!mounted || t != _token) return;
-
-      if (_wrongAttempts >= 2) {
+    try {
+      if (isCorrect) {
         setState(() {
-          _showCorrectAnswer = true;
+          _tappedZoneIndex = zoneIndex;
+          _roundDone = true;
+          _score++;
         });
+        _confetti.play();
 
-        await Future.delayed(const Duration(milliseconds: 300));
+        // 1. صوت التشجيع الكامل دون بتر
+        await _say(rd.correctPraise, pauseAfter: const Duration(milliseconds: 400));
         if (!mounted || t != _token) return;
 
-        // سماع اسم الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
-        await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 800));
+        // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثُعْبَان / ثَلَّاجَة / ثَعْلَب / ثَلْج)
+        await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 400));
+        if (!mounted || t != _token) return;
+
+        // 3. صوت صيد السمكة
+        await _say(
+          'audio/games/fishing/fish.mp3',
+          channel: AudioChannel.sfx,
+          pauseAfter: const Duration(milliseconds: 300),
+        );
+        if (!mounted || t != _token) return;
+
+        // 4. تشجيع نهاية الجولة
+        await _say(rd.roundEndPraise, pauseAfter: const Duration(milliseconds: 700));
         if (!mounted || t != _token) return;
 
         _advanceRound();
       } else {
         setState(() {
-          _tappedZoneIndex = null;
+          _tappedZoneIndex = zoneIndex;
+          _wrongAttempts++;
         });
+        await _playWrong();
+        if (!mounted || t != _token) return;
+
+        if (_wrongAttempts >= 2) {
+          setState(() {
+            _showCorrectAnswer = true;
+          });
+
+          await Future.delayed(const Duration(milliseconds: 300));
+          if (!mounted || t != _token) return;
+
+          // سماع اسم الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
+          await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 800));
+          if (!mounted || t != _token) return;
+
+          _advanceRound();
+        } else {
+          setState(() {
+            _tappedZoneIndex = null;
+          });
+        }
+      }
+    } finally {
+      if (mounted && t == _token && !_roundDone) {
+        setState(() => _isBusy = false);
       }
     }
   }
@@ -242,7 +257,10 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
     final t = ++_token;
     AudioService.instance.stop();
     if (_round + 1 >= _rounds.length) {
-      setState(() => _gameOver = true);
+      setState(() {
+        _gameOver = true;
+        _isBusy = false;
+      });
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
@@ -257,6 +275,7 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
         _roundDone = false;
         _wrongAttempts = 0;
         _showCorrectAnswer = false;
+        _isBusy = false;
       });
       Future.delayed(const Duration(milliseconds: 300), () {
         if (mounted && t == _token) _startRound();
@@ -393,12 +412,28 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _navBtn(
-            'التالي',
-            Icons.arrow_back_rounded,
+            'السابق',
+            Icons.arrow_forward_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              _advanceRound();
+              final t = ++_token;
+              AudioService.instance.stop();
+              if (_round > 0) {
+                setState(() {
+                  _round--;
+                  _tappedZoneIndex = null;
+                  _roundDone = false;
+                  _wrongAttempts = 0;
+                  _showCorrectAnswer = false;
+                  _isBusy = false;
+                });
+                Future.delayed(const Duration(milliseconds: 300), () {
+                  if (mounted && t == _token) _startRound();
+                });
+              } else {
+                Navigator.of(context).pop();
+              }
             },
           ),
           GestureDetector(
@@ -406,7 +441,7 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.of(context).pop();
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -419,23 +454,12 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
             ),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
           _navBtn(
-            'السابق',
-            Icons.arrow_forward_rounded,
+            'التالي',
+            Icons.arrow_back_rounded,
             true,
             () {
               HapticFeedback.lightImpact();
-              final t = ++_token;
-              AudioService.instance.stop();
-              setState(() {
-                if (_round > 0) _round--;
-                _tappedZoneIndex = null;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-              });
-              Future.delayed(const Duration(milliseconds: 300), () {
-                if (mounted && t == _token) _startRound();
-              });
+              _advanceRound();
             },
           ),
         ],

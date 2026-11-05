@@ -60,50 +60,53 @@ class _ColoringRound {
 }
 
 const List<_ColoringRound> _rounds = [
-  // الجولة 1 (paint1): بقرة ❌، بطة ❌، ثعبان ✅  → ث ع ب ا ن
+  // الجولة 1 (paint1): مثلث ❌، ثعلب ❌، ثابت ✅  → ث ا ب ت
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_1.png',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.png',
-    correctWord: 'ثُعْبَان',
-    correctAudio: 'audio/games/coloring/4_goodthoo.mp3',
-    revealAudio: 'audio/games/coloring/1_tazezpaint.mp3',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
+    correctWord: 'ثَابِت',
+    correctAudio: 'audio/games/coloring/thaa/thaa_good_1.mp3',
+    revealAudio: 'audio/games/coloring/thaa/thaa_reveal_1.mp3',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thabit.mp3',
     options: [
-      _MaddOption(word: 'بَقَرَة', hasMadd: false),
-      _MaddOption(word: 'بَطَّة', hasMadd: false),
-      _MaddOption(word: 'ثُعْبَان', hasMadd: true),
+      _MaddOption(word: 'مُثَلَّث', hasMadd: false),
+      _MaddOption(word: 'ثَعْلَب', hasMadd: false),
+      _MaddOption(word: 'ثَابِت', hasMadd: true),
     ],
-    cuts: [142, 188, 247, 340],
+    // ثَابِت = 4 حروف (ت،ب،ا،ث) على عرض 490px — مقاطع متساوية تقريباً
+    cuts: [122, 245, 368],
   ),
-  // الجولة 2 (paint2): ثمين ✅، أرنب ❌، يكتب ❌
+  // الجولة 2 (paint2): ثوم ✅، تبحث ❌، ثلج ❌
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_2.png',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_2.png',
-    correctWord: 'ثَمِين',
-    correctAudio: 'audio/games/coloring/5_goodtabeb.mp3',
-    revealAudio: 'audio/games/coloring/2_rongtabeb.mp3',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thameen.mp3',
+    correctWord: 'ثُوم',
+    correctAudio: 'audio/games/coloring/thaa/thaa_good_2.mp3',
+    revealAudio: 'audio/games/coloring/thaa/thaa_reveal_2.mp3',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thum.mp3',
     options: [
-      _MaddOption(word: 'ثَمِين', hasMadd: true),
-      _MaddOption(word: 'أَرْنَب', hasMadd: false),
-      _MaddOption(word: 'يَكْتُب', hasMadd: false),
+      _MaddOption(word: 'ثُوم', hasMadd: true),
+      _MaddOption(word: 'تَبْحَث', hasMadd: false),
+      _MaddOption(word: 'ثَلْج', hasMadd: false),
     ],
-    cuts: [150, 250, 318],
+    // ثُوم = 3 حروف (م،و،ث) على عرض 490px — مقاطع متساوية تقريباً
+    cuts: [163, 327],
   ),
-  // الجولة 3 (paint3): لبن ❌، برج ❌، ثور ✅
+  // الجولة 3 (paint3): كمثرى ❌، ثمرة ❌، ثيران ✅
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_3.png',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_3.png',
-    correctWord: 'ثَوْر',
-    correctAudio: 'audio/games/coloring/4_goodhobob.mp3',
-    revealAudio: 'audio/games/coloring/2_ronghobob.mp3',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thawr.mp3',
+    correctWord: 'ثِيرَان',
+    correctAudio: 'audio/games/coloring/thaa/thaa_good_3.mp3',
+    revealAudio: 'audio/games/coloring/thaa/thaa_reveal_3.mp3',
+    wordAudio: 'audio/lessons/thaa/sounds/word_theeran.mp3',
     options: [
-      _MaddOption(word: 'لَبَن', hasMadd: false),
-      _MaddOption(word: 'بُرْج', hasMadd: false),
-      _MaddOption(word: 'ثَوْر', hasMadd: true),
+      _MaddOption(word: 'كُمَّثْرَى', hasMadd: false),
+      _MaddOption(word: 'ثَمَرَة', hasMadd: false),
+      _MaddOption(word: 'ثِيرَان', hasMadd: true),
     ],
-    cuts: [152, 250, 338],
+    // ثِيرَان = 5 حروف (ن،ا،ر،ي،ث) على عرض 490px — مقاطع متساوية تقريباً
+    cuts: [98, 196, 294, 392],
   ),
 ];
 
@@ -671,16 +674,22 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _navBtn('التالي', Icons.arrow_back_rounded, true, () {
+          _navBtn('السابق', Icons.arrow_forward_rounded, true, () {
             HapticFeedback.lightImpact();
-            _advance();
+            if (_round == 0) {
+              _token++;
+              _stopAudio();
+              Navigator.of(context).pop();
+              return;
+            }
+            _previous();
           }),
           GestureDetector(
             onTap: () {
               HapticFeedback.lightImpact();
               _token++;
               _stopAudio();
-              Navigator.of(context).popUntil((r) => r.isFirst);
+              Navigator.of(context).pop();
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -694,9 +703,9 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
               child: const Icon(Icons.home_rounded, color: Colors.white, size: 26),
             ),
           ),
-          _navBtn('السابق', Icons.arrow_forward_rounded, true, () {
+          _navBtn('التالي', Icons.arrow_back_rounded, true, () {
             HapticFeedback.lightImpact();
-            _previous();
+            _advance();
           }),
         ],
       ),
