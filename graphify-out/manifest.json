@@ -606,33 +606,33 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/dal_manifest.dart": {
-    "mtime": 1793296254.29049,
-    "seen": 1794121861.6603048,
-    "ast_hash": "ae7b1c3a5954d30e68d6f3d4652ea800",
+    "mtime": 1794247735.490947,
+    "seen": 1794248226.1242642,
+    "ast_hash": "4338e4317017368c9e57b1c03979cbf6",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/dhaal_manifest.dart": {
-    "mtime": 1793314722.2029285,
-    "seen": 1794121861.6603062,
-    "ast_hash": "48c5cecb0cc72a52100cc578762304fb",
+    "mtime": 1794255252.9973278,
+    "seen": 1794255428.961635,
+    "ast_hash": "c9cbd54e580b07c421538ebfc942a385",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/ha_manifest.dart": {
-    "mtime": 1793261164.904433,
-    "seen": 1794121861.6603146,
-    "ast_hash": "1bbb326fc3871c9d0ef63f99d708fcc4",
+    "mtime": 1794207152.297184,
+    "seen": 1794248226.1246452,
+    "ast_hash": "49461368b4ba6abd54e3a8c5aee411f7",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/jeem_manifest.dart": {
-    "mtime": 1794169542.1165955,
-    "seen": 1794170354.6730316,
-    "ast_hash": "768c5e63556f6a913d18880f1fc5c96d",
+    "mtime": 1794172595.3625672,
+    "seen": 1794248226.1246495,
+    "ast_hash": "b143f926b4e41b7d2763dc23e8f57329",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/kha_manifest.dart": {
-    "mtime": 1793294108.9962404,
-    "seen": 1794121861.6603174,
-    "ast_hash": "c6fff301a22582e1edb838f6941fb5f7",
+    "mtime": 1794214558.483614,
+    "seen": 1794248226.1246529,
+    "ast_hash": "111853f3504c85358752619758d4997e",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/raa_manifest.dart": {
@@ -5886,33 +5886,33 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_1.png": {
-    "mtime": 1793295959.8997583,
-    "seen": 1794121861.6614652,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794246975.4095132,
+    "seen": 1794248226.4097488,
+    "ast_hash": "0601ce18aaa467785a2c189cfbbed686",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_2.png": {
-    "mtime": 1793295959.9217854,
-    "seen": 1794121861.6614666,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794246959.2401967,
+    "seen": 1794248226.4097552,
+    "ast_hash": "63bf19919b1159ce889b982295b44fc4",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_3.png": {
-    "mtime": 1793295959.9344065,
-    "seen": 1794121861.6614676,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794246563.9569683,
+    "seen": 1794248226.4097595,
+    "ast_hash": "ef35c6eb937334e1815273c415b67645",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_4.png": {
-    "mtime": 1793295959.951047,
-    "seen": 1794121861.661469,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794246573.4474425,
+    "seen": 1794248226.409763,
+    "ast_hash": "c42d114d987cc2c844565727c42d5d80",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_5.png": {
-    "mtime": 1793295959.9645782,
-    "seen": 1794121861.66147,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794247205.797966,
+    "seen": 1794248226.409767,
+    "ast_hash": "036f7c7fecd2dd1db9c696f50c3063b9",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_6.png": {
@@ -5922,9 +5922,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_cd_story_nasheed.png": {
-    "mtime": 1793295959.9933088,
-    "seen": 1794121861.6614726,
-    "ast_hash": "de407c7688717caf41ed7c504864dd5b",
+    "mtime": 1794246630.663451,
+    "seen": 1794248226.4103184,
+    "ast_hash": "74df51fe6e58404cd275f0917df9f050",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_damma_dukan.png": {
@@ -6018,153 +6018,123 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p1_card_1.png": {
-    "mtime": 1793295960.0935242,
-    "seen": 1794121861.661492,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245736.8509145,
+    "seen": 1794248226.4154866,
+    "ast_hash": "fc10e2f5d439a9274259e553c4fb8234",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p1_card_2.png": {
-    "mtime": 1793295960.0986664,
-    "seen": 1794121861.6614935,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245743.572452,
+    "seen": 1794248226.4154918,
+    "ast_hash": "a0497e2028eb72a9fc4f1c89fa4c9d21",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p1_card_3.png": {
-    "mtime": 1793295960.10277,
-    "seen": 1794121861.6614945,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245751.2369273,
+    "seen": 1794248226.4154956,
+    "ast_hash": "e5f846dfada124d290c08e3931ea4661",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p1_card_4.png": {
-    "mtime": 1793295960.107231,
-    "seen": 1794121861.661496,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245759.081212,
+    "seen": 1794248226.4154992,
+    "ast_hash": "5a6efc837347e91fd17c5cb8e305336e",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p1_list.png": {
-    "mtime": 1793295960.0900204,
-    "seen": 1794121861.661497,
-    "ast_hash": "2ff66d4f49c29ff462d72c0dd23b11d8",
+    "mtime": 1794245728.35818,
+    "seen": 1794248226.4155025,
+    "ast_hash": "dd3ad7ee52425f253062f7972b798332",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p2_card_1.png": {
-    "mtime": 1793295960.1194046,
-    "seen": 1794121861.661498,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245776.8237064,
+    "seen": 1794248226.415506,
+    "ast_hash": "2dfbc8ffabcffa25e66dcc9c9f858861",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p2_card_2.png": {
-    "mtime": 1793295960.1229136,
-    "seen": 1794121861.6614995,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245784.5241344,
+    "seen": 1794248226.4155092,
+    "ast_hash": "7af2e3afaf487d293200b0468d5d39cb",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p2_card_3.png": {
-    "mtime": 1793295960.1269307,
-    "seen": 1794121861.6615005,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245792.0128515,
+    "seen": 1794248226.4155123,
+    "ast_hash": "a44340882b42baa25a22de31aa25dfa7",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p2_card_4.png": {
-    "mtime": 1793295960.131926,
-    "seen": 1794121861.6615016,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245799.5777254,
+    "seen": 1794248226.4155154,
+    "ast_hash": "fbfbe9f7efca0673d876a153984c194f",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p2_list.png": {
-    "mtime": 1793295960.1143992,
-    "seen": 1794121861.661503,
-    "ast_hash": "2ff66d4f49c29ff462d72c0dd23b11d8",
+    "mtime": 1794245770.3085346,
+    "seen": 1794248226.415519,
+    "ast_hash": "e01aa49d0cb3fba88e9c9eb5c1698e4d",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p3_card_1.png": {
-    "mtime": 1793295960.1427836,
-    "seen": 1794121861.6615045,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245817.4046896,
+    "seen": 1794248226.4155219,
+    "ast_hash": "131cc7dae425fc46e708d45208ba230a",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p3_card_2.png": {
-    "mtime": 1793295960.1477902,
-    "seen": 1794121861.6615055,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245823.988428,
+    "seen": 1794248226.4155252,
+    "ast_hash": "26c30d06e9b135f89c20752fdafcf037",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p3_card_3.png": {
-    "mtime": 1793295960.1527896,
-    "seen": 1794121861.661507,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245833.2716525,
+    "seen": 1794248226.4155283,
+    "ast_hash": "8342b4a08a40084015bf149ea3a70db0",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p3_card_4.png": {
-    "mtime": 1793295960.1570292,
-    "seen": 1794121861.661508,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245840.5657926,
+    "seen": 1794248226.415532,
+    "ast_hash": "954017f1229e6ac28b74e9cdf1bdea2b",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p3_list.png": {
-    "mtime": 1793295960.138296,
-    "seen": 1794121861.661509,
-    "ast_hash": "2ff66d4f49c29ff462d72c0dd23b11d8",
+    "mtime": 1794245810.7656333,
+    "seen": 1794248226.4155357,
+    "ast_hash": "be91b142bf454ba94dbb83ea2a20ac0d",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p4_card_1.png": {
-    "mtime": 1793295960.168042,
-    "seen": 1794121861.6615105,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245858.4911485,
+    "seen": 1794248226.4155393,
+    "ast_hash": "7cba34226a56c6900d3e5dae2b3fab93",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p4_card_2.png": {
-    "mtime": 1793295960.1727507,
-    "seen": 1794121861.6615117,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245865.435301,
+    "seen": 1794248226.4155426,
+    "ast_hash": "cb31da3d43956cc3af7e840ce50d4b3b",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p4_card_3.png": {
-    "mtime": 1793295960.1777701,
-    "seen": 1794121861.6615126,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245872.8914282,
+    "seen": 1794248226.415546,
+    "ast_hash": "c8d4bb71df07931f6cbec9338ddefe4b",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p4_card_4.png": {
-    "mtime": 1793295960.1817653,
-    "seen": 1794121861.661514,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
+    "mtime": 1794245881.5632472,
+    "seen": 1794248226.4155486,
+    "ast_hash": "f71d9929d913165ae5e947b4e9f3d4b4",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_words_p4_list.png": {
-    "mtime": 1793295960.1635315,
-    "seen": 1794121861.6615155,
-    "ast_hash": "2ff66d4f49c29ff462d72c0dd23b11d8",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dal/dal_words_p5_card_1.png": {
-    "mtime": 1793295960.1934175,
-    "seen": 1794121861.6615164,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dal/dal_words_p5_card_2.png": {
-    "mtime": 1793295960.1994283,
-    "seen": 1794121861.6615179,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dal/dal_words_p5_card_3.png": {
-    "mtime": 1793295960.2029324,
-    "seen": 1794121861.661519,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dal/dal_words_p5_card_4.png": {
-    "mtime": 1793295960.2069373,
-    "seen": 1794121861.6615207,
-    "ast_hash": "ed6133b8ab1d85321689f190b782d38a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dal/dal_words_p5_list.png": {
-    "mtime": 1793295960.188922,
-    "seen": 1794121861.661522,
-    "ast_hash": "2ff66d4f49c29ff462d72c0dd23b11d8",
+    "mtime": 1794245851.9223123,
+    "seen": 1794248226.415552,
+    "ast_hash": "3bdcbbfb05ce29904af87f25c5f795e3",
     "semantic_hash": ""
   },
   "assets/images/lessons/dal/dal_write_step_1.png": {
@@ -6192,45 +6162,39 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_1.png": {
-    "mtime": 1793313181.7580853,
-    "seen": 1794121861.6615283,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253561.9203978,
+    "seen": 1794255429.1484365,
+    "ast_hash": "2c646b08b90d9c2488ceb1c8ad6f1f6e",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_2.png": {
-    "mtime": 1793313181.7777762,
-    "seen": 1794121861.6615295,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253599.659806,
+    "seen": 1794255429.148439,
+    "ast_hash": "3aff4f3063d8db7f70ecf059047f9af2",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_3.png": {
-    "mtime": 1793313181.7892945,
-    "seen": 1794121861.6615307,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253636.256801,
+    "seen": 1794255429.1484416,
+    "ast_hash": "55ab8dcf84590782c9e24f7685fe972b",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_4.png": {
-    "mtime": 1793313181.8008072,
-    "seen": 1794121861.661532,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253660.4956243,
+    "seen": 1794255429.1484437,
+    "ast_hash": "c5cddb35c8f1c421d913000dcb6c5839",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_5.png": {
-    "mtime": 1793313181.8141458,
-    "seen": 1794121861.6615334,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_cd_story_6.png": {
-    "mtime": 1793313181.8270328,
-    "seen": 1794121861.6615348,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253688.4426193,
+    "seen": 1794255429.1484454,
+    "ast_hash": "1e2356e7181c0437f2218238634d2c74",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_cd_story_nasheed.png": {
-    "mtime": 1793313181.840291,
-    "seen": 1794121861.661536,
-    "ast_hash": "f541fa4f598d1043fc6a274b387fea5e",
+    "mtime": 1794253837.2055125,
+    "seen": 1794255429.1484478,
+    "ast_hash": "714ae1891f0a68c9caa804e440b081c9",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_damma_thubab.png": {
@@ -6324,153 +6288,123 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p1_card_1.png": {
-    "mtime": 1793313181.928246,
-    "seen": 1794121861.6615558,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250472.5880752,
+    "seen": 1794255429.1535814,
+    "ast_hash": "2f250d56380a238be95ac7c54e9fad7c",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p1_card_2.png": {
-    "mtime": 1793313181.933246,
-    "seen": 1794121861.661557,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250485.3189478,
+    "seen": 1794255429.1535861,
+    "ast_hash": "16a1ba4fbb5f0660f8d8a11f3180fae9",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p1_card_3.png": {
-    "mtime": 1793313181.93675,
-    "seen": 1794121861.661558,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250500.04172,
+    "seen": 1794255429.1535895,
+    "ast_hash": "87a045162af301169cc426d93c042d56",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p1_card_4.png": {
-    "mtime": 1793313181.940753,
-    "seen": 1794121861.6615593,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250514.6001222,
+    "seen": 1794255429.153593,
+    "ast_hash": "4cb9030b2c65d61dd1b17892ef7a7113",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p1_list.png": {
-    "mtime": 1793313181.9247391,
-    "seen": 1794121861.6615603,
-    "ast_hash": "350cf3db0a5cea294ccf0392dd05058c",
+    "mtime": 1794250457.6334853,
+    "seen": 1794255429.1535964,
+    "ast_hash": "4ac556643e30dcd22370ec8386226153",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p2_card_1.png": {
-    "mtime": 1793313181.9512627,
-    "seen": 1794121861.6615615,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250544.705501,
+    "seen": 1794255429.1535997,
+    "ast_hash": "5a526d0facaf6b5dcf2cd1f8c2d45ea3",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p2_card_2.png": {
-    "mtime": 1793313181.9552684,
-    "seen": 1794121861.661563,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250557.242937,
+    "seen": 1794255429.1536026,
+    "ast_hash": "3f7714f943b2695a07fb17f91e21945d",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p2_card_3.png": {
-    "mtime": 1793313181.9594896,
-    "seen": 1794121861.661564,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250596.9566326,
+    "seen": 1794255429.1536067,
+    "ast_hash": "d1e102fed70025eab48bf4968e1bea12",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p2_card_4.png": {
-    "mtime": 1793313181.963483,
-    "seen": 1794121861.661565,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250611.4313388,
+    "seen": 1794255429.15361,
+    "ast_hash": "e0facadb2e5ff91f9d2416c051e7a644",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p2_list.png": {
-    "mtime": 1793313181.9472613,
-    "seen": 1794121861.6615665,
-    "ast_hash": "350cf3db0a5cea294ccf0392dd05058c",
+    "mtime": 1794250531.7212343,
+    "seen": 1794255429.153613,
+    "ast_hash": "278ef1171c7e83a13d5d25c48eaec82d",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p3_card_1.png": {
-    "mtime": 1793313181.9729943,
-    "seen": 1794121861.6615677,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250641.4118886,
+    "seen": 1794255429.153616,
+    "ast_hash": "e5ff92043cfc48a4a6c3e0686d32bcb7",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p3_card_2.png": {
-    "mtime": 1793313181.977087,
-    "seen": 1794121861.661569,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250654.4297633,
+    "seen": 1794255429.153619,
+    "ast_hash": "9e82508220025148cb074698da7c918e",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p3_card_3.png": {
-    "mtime": 1793313181.981088,
-    "seen": 1794121861.6615703,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250669.7086587,
+    "seen": 1794255429.1536229,
+    "ast_hash": "3b10c58b49db162857c60ebcf0fdd32e",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p3_card_4.png": {
-    "mtime": 1793313181.9850938,
-    "seen": 1794121861.6615713,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250686.8241963,
+    "seen": 1794255429.1536262,
+    "ast_hash": "2ef2d2a7bb8a065ea4893c4e3d4bda58",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p3_list.png": {
-    "mtime": 1793313181.9689941,
-    "seen": 1794121861.6615727,
-    "ast_hash": "350cf3db0a5cea294ccf0392dd05058c",
+    "mtime": 1794250628.0948987,
+    "seen": 1794255429.1536293,
+    "ast_hash": "2fc85c5ab6a679dcb0cf184ed53a6630",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p4_card_1.png": {
-    "mtime": 1793313181.9950924,
-    "seen": 1794121861.661574,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250717.1365905,
+    "seen": 1794255429.1536324,
+    "ast_hash": "fc272d43543938cd5fb60cadb3688741",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p4_card_2.png": {
-    "mtime": 1793313181.998557,
-    "seen": 1794121861.661575,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250729.9524918,
+    "seen": 1794255429.153637,
+    "ast_hash": "fada486181f75b58d606413ea833ad62",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p4_card_3.png": {
-    "mtime": 1793313182.0025501,
-    "seen": 1794121861.6615765,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250744.778199,
+    "seen": 1794255429.1536398,
+    "ast_hash": "a790aa8fa37af1c90e047896a665787e",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p4_card_4.png": {
-    "mtime": 1793313182.0074058,
-    "seen": 1794121861.6615777,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
+    "mtime": 1794250759.1517644,
+    "seen": 1794255429.1536434,
+    "ast_hash": "f283651bad36ef3725fc7d776484ae87",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_words_p4_list.png": {
-    "mtime": 1793313181.9912238,
-    "seen": 1794121861.661579,
-    "ast_hash": "350cf3db0a5cea294ccf0392dd05058c",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_words_p5_card_1.png": {
-    "mtime": 1793313182.0175498,
-    "seen": 1794121861.6615803,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_words_p5_card_2.png": {
-    "mtime": 1793313182.0225604,
-    "seen": 1794121861.6615815,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_words_p5_card_3.png": {
-    "mtime": 1793313182.026056,
-    "seen": 1794121861.661583,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_words_p5_card_4.png": {
-    "mtime": 1793313182.0300682,
-    "seen": 1794121861.6615841,
-    "ast_hash": "2295e47e8472796500a71387a427407c",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/dhaal/dhaal_words_p5_list.png": {
-    "mtime": 1793313182.0130475,
-    "seen": 1794121861.6615853,
-    "ast_hash": "350cf3db0a5cea294ccf0392dd05058c",
+    "mtime": 1794250703.8056428,
+    "seen": 1794255429.1536462,
+    "ast_hash": "78831ef3c242294b1071472f7b55c44c",
     "semantic_hash": ""
   },
   "assets/images/lessons/dhaal/dhaal_write_step_1.png": {
@@ -6498,33 +6432,33 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_1.png": {
-    "mtime": 1793261021.4307187,
-    "seen": 1794121861.6615937,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206923.1532707,
+    "seen": 1794248226.4329677,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_2.png": {
-    "mtime": 1793261021.4477694,
-    "seen": 1794121861.6615949,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206925.73289,
+    "seen": 1794248226.432973,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_3.png": {
-    "mtime": 1793261021.4562879,
-    "seen": 1794121861.661596,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206928.3731613,
+    "seen": 1794248226.4329767,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_4.png": {
-    "mtime": 1793261021.465878,
-    "seen": 1794121861.661598,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206930.9951224,
+    "seen": 1794248226.4329808,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_5.png": {
-    "mtime": 1793261021.4756842,
-    "seen": 1794121861.6615992,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206933.5988576,
+    "seen": 1794248226.4329846,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_6.png": {
@@ -6534,9 +6468,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_cd_story_nasheed.png": {
-    "mtime": 1793261021.496737,
-    "seen": 1794121861.6616015,
-    "ast_hash": "8dab65569e0b7a5b5c6004976949948a",
+    "mtime": 1794206934.9208665,
+    "seen": 1794248226.433287,
+    "ast_hash": "266e94cb585e808672fc28d7ab4e4bb5",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_damma_hoot.png": {
@@ -6738,9 +6672,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p1_list.png": {
-    "mtime": 1793261294.8785012,
-    "seen": 1794121861.6616445,
-    "ast_hash": "4caafb7559063a74998d5246357602a1",
+    "mtime": 1794206905.3483672,
+    "seen": 1794248226.4454381,
+    "ast_hash": "4e51eafb76f3f322dd62522910d72508",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p2_card_1.png": {
@@ -6768,9 +6702,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p2_list.png": {
-    "mtime": 1793261294.891801,
-    "seen": 1794121861.661651,
-    "ast_hash": "4caafb7559063a74998d5246357602a1",
+    "mtime": 1794206906.6428168,
+    "seen": 1794248226.4466817,
+    "ast_hash": "4e51eafb76f3f322dd62522910d72508",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p3_card_1.png": {
@@ -6798,9 +6732,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p3_list.png": {
-    "mtime": 1793261294.9008508,
-    "seen": 1794121861.661657,
-    "ast_hash": "4caafb7559063a74998d5246357602a1",
+    "mtime": 1794206907.9057093,
+    "seen": 1794248226.4483745,
+    "ast_hash": "4e51eafb76f3f322dd62522910d72508",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p4_card_1.png": {
@@ -6828,9 +6762,9 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p4_list.png": {
-    "mtime": 1793261294.9108536,
-    "seen": 1794121861.6616635,
-    "ast_hash": "4caafb7559063a74998d5246357602a1",
+    "mtime": 1794206909.2279217,
+    "seen": 1794248226.4504466,
+    "ast_hash": "4e51eafb76f3f322dd62522910d72508",
     "semantic_hash": ""
   },
   "assets/images/lessons/ha/ha_words_p5_card_1.png": {
@@ -7278,45 +7212,45 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_1.png": {
-    "mtime": 1793294865.2911115,
-    "seen": 1794121861.6617606,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213209.7101376,
+    "seen": 1794248226.4776495,
+    "ast_hash": "15b53966e3e6f7a54c35976cb3b006f8",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_2.png": {
-    "mtime": 1793294865.2961204,
-    "seen": 1794121861.6617618,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213549.6102953,
+    "seen": 1794248226.4776545,
+    "ast_hash": "22ab2a6ec7a61a4a530e8ab325bf7c53",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_3.png": {
-    "mtime": 1793294865.3001204,
-    "seen": 1794121861.6617634,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213595.286133,
+    "seen": 1794248226.477659,
+    "ast_hash": "3adea927c6d2c1b92178ec7e43d1cfbb",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_4.png": {
-    "mtime": 1793294865.3094218,
-    "seen": 1794121861.6617649,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213624.6994772,
+    "seen": 1794248226.477663,
+    "ast_hash": "0da90dedbb557b777de900f512bc7afb",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_5.png": {
-    "mtime": 1793294865.31388,
-    "seen": 1794121861.6617658,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213683.2841318,
+    "seen": 1794248226.477667,
+    "ast_hash": "a8edab4ef8233fa97c540ff6ca3d286d",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_6.png": {
-    "mtime": 1793294865.316867,
-    "seen": 1794121861.6617672,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213727.0855267,
+    "seen": 1794248226.4776704,
+    "ast_hash": "f4184a9b4ba57c01b116a4a8ad8c2b23",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_cd_story_nasheed.png": {
-    "mtime": 1793294865.320867,
-    "seen": 1794121861.6617684,
-    "ast_hash": "b09c3b745faef429f78ca915f9288993",
+    "mtime": 1794213406.9177485,
+    "seen": 1794248226.4776738,
+    "ast_hash": "04377623f1c3f8a6d82575e211f2079b",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_damma_khubz.png": {
@@ -7410,153 +7344,123 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p1_card_1.png": {
-    "mtime": 1793294865.4021482,
-    "seen": 1794121861.6617882,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794211916.7481463,
+    "seen": 1794248226.4836376,
+    "ast_hash": "9e7f59ec04f849e3ab6f18a4df706d85",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p1_card_2.png": {
-    "mtime": 1793294865.404148,
-    "seen": 1794121861.6617894,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794211927.9052908,
+    "seen": 1794248226.4836426,
+    "ast_hash": "153747f860a6b7783b3a8f05e2d34432",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p1_card_3.png": {
-    "mtime": 1793294865.4061482,
-    "seen": 1794121861.6617906,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794211940.9518425,
+    "seen": 1794248226.4836466,
+    "ast_hash": "68bdb1d4170b3beeeabe99453b63f902",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p1_card_4.png": {
-    "mtime": 1793294865.4081478,
-    "seen": 1794121861.661792,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794211953.0120409,
+    "seen": 1794248226.4836502,
+    "ast_hash": "f5d456768d1e870cebac51c512e67032",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p1_list.png": {
-    "mtime": 1793294865.4001446,
-    "seen": 1794121861.6617932,
-    "ast_hash": "336f446466cb535df3b4abc6f22fda46",
+    "mtime": 1794211909.3550653,
+    "seen": 1794248226.4836588,
+    "ast_hash": "d66f2c834a479f66f009862a04e53e69",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p2_card_1.png": {
-    "mtime": 1793294865.4121487,
-    "seen": 1794121861.6617942,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212019.709622,
+    "seen": 1794248226.4836626,
+    "ast_hash": "35399c7531f2b18e789598a8dc0fc03f",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p2_card_2.png": {
-    "mtime": 1793294865.4141486,
-    "seen": 1794121861.6617956,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212027.1654873,
+    "seen": 1794248226.4836667,
+    "ast_hash": "9135c738f0654f8f577eaa003bd2b8da",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p2_card_3.png": {
-    "mtime": 1793294865.4161487,
-    "seen": 1794121861.6617968,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212042.3002162,
+    "seen": 1794248226.48367,
+    "ast_hash": "25cca177f9c0a511ef0fd41bea5aa856",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p2_card_4.png": {
-    "mtime": 1793294865.4181483,
-    "seen": 1794121861.6617982,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212054.049584,
+    "seen": 1794248226.483673,
+    "ast_hash": "3f55711deb1cff1cdf69e8a31083a926",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p2_list.png": {
-    "mtime": 1793294865.410148,
-    "seen": 1794121861.6617997,
-    "ast_hash": "336f446466cb535df3b4abc6f22fda46",
+    "mtime": 1794212022.6499,
+    "seen": 1794248226.483676,
+    "ast_hash": "102f85fc296eb6f071a1d3adf964f711",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p3_card_1.png": {
-    "mtime": 1793294865.42315,
-    "seen": 1794121861.6618009,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212080.9651668,
+    "seen": 1794248226.4836793,
+    "ast_hash": "ad69891210e3be83059ce49ecfb20450",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p3_card_2.png": {
-    "mtime": 1793294865.4251475,
-    "seen": 1794121861.6618023,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212092.3471496,
+    "seen": 1794248226.4836817,
+    "ast_hash": "fe6560d2f0cf27e3a15c52849dedc3da",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p3_card_3.png": {
-    "mtime": 1793294865.4271476,
-    "seen": 1794121861.6618035,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212105.0471492,
+    "seen": 1794248226.4836855,
+    "ast_hash": "284d5ea537d8ab0e61799148576674e8",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p3_card_4.png": {
-    "mtime": 1793294865.4291482,
-    "seen": 1794121861.661805,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212117.300357,
+    "seen": 1794248226.483689,
+    "ast_hash": "695a80512502cb8c18849a2516cfc5a0",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p3_list.png": {
-    "mtime": 1793294865.4201484,
-    "seen": 1794121861.6618063,
-    "ast_hash": "336f446466cb535df3b4abc6f22fda46",
+    "mtime": 1794212084.1736174,
+    "seen": 1794248226.4836926,
+    "ast_hash": "0e3550e5cf59775d11fa112b9f54877e",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p4_card_1.png": {
-    "mtime": 1793294865.4341478,
-    "seen": 1794121861.6618073,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212143.0102713,
+    "seen": 1794248226.4836953,
+    "ast_hash": "ed4e5f8391a3eb77a1c737fb9a07876c",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p4_card_2.png": {
-    "mtime": 1793294865.4361508,
-    "seen": 1794121861.6618087,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212154.2079155,
+    "seen": 1794248226.4836984,
+    "ast_hash": "95de0072e4f5e06a0283e696da4e838e",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p4_card_3.png": {
-    "mtime": 1793294865.4371517,
-    "seen": 1794121861.6618097,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212166.7585194,
+    "seen": 1794248226.483701,
+    "ast_hash": "58384aa6fd161bb745727c0d8caa2aeb",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p4_card_4.png": {
-    "mtime": 1793294865.4401705,
-    "seen": 1794121861.6618109,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
+    "mtime": 1794212175.597166,
+    "seen": 1794248226.4837039,
+    "ast_hash": "468114dc44e624f3cf3025271c46998d",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_words_p4_list.png": {
-    "mtime": 1793294865.4321482,
-    "seen": 1794121861.6618123,
-    "ast_hash": "336f446466cb535df3b4abc6f22fda46",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/kha/kha_words_p5_card_1.png": {
-    "mtime": 1793294865.4451525,
-    "seen": 1794121861.6618133,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/kha/kha_words_p5_card_2.png": {
-    "mtime": 1793294865.4471526,
-    "seen": 1794121861.6618142,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/kha/kha_words_p5_card_3.png": {
-    "mtime": 1793294865.449669,
-    "seen": 1794121861.6618156,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/kha/kha_words_p5_card_4.png": {
-    "mtime": 1793294865.4516857,
-    "seen": 1794121861.6618183,
-    "ast_hash": "ae5cbe2599fe1a7e6eed743d13edbe0a",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/kha/kha_words_p5_list.png": {
-    "mtime": 1793294865.4421592,
-    "seen": 1794121861.66182,
-    "ast_hash": "336f446466cb535df3b4abc6f22fda46",
+    "mtime": 1794212146.2397664,
+    "seen": 1794248226.4837067,
+    "ast_hash": "d759a300e5e8de1bad0ae7be8e248a84",
     "semantic_hash": ""
   },
   "assets/images/lessons/kha/kha_write_step_1.png": {
@@ -14220,9 +14124,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_nasheed.mp3": {
-    "mtime": 1786147253.9968965,
-    "seen": 1794121861.66343,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794246428.3498936,
+    "seen": 1794248226.9125843,
+    "ast_hash": "6fb504355c9a4b4370f6aefbac54dd42",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_paint_word1.mp3": {
@@ -14244,39 +14148,33 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_story_1.mp3": {
-    "mtime": 1786147253.9092264,
-    "seen": 1794121861.663435,
-    "ast_hash": "13608d5963c00bbdb3733ad98408c094",
+    "mtime": 1794246419.283477,
+    "seen": 1794248226.913414,
+    "ast_hash": "9ed49b7cbb13bc4fd879d1af70522206",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_story_2.mp3": {
-    "mtime": 1786147253.9588568,
-    "seen": 1794121861.6634362,
-    "ast_hash": "4be1dce9b70d794c2c511a5eb985e4a6",
+    "mtime": 1794246419.28287,
+    "seen": 1794248226.913418,
+    "ast_hash": "b45edfe2d4ea1d378d0d11065ca0b8ca",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_story_3.mp3": {
-    "mtime": 1786147253.9816668,
-    "seen": 1794121861.6634374,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794246421.61236,
+    "seen": 1794248226.9134214,
+    "ast_hash": "b427add55aa424539ec6ec1ff1d203b9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_story_4.mp3": {
-    "mtime": 1786147253.9847095,
-    "seen": 1794121861.6634388,
-    "ast_hash": "7cc1f0779f959d512ddd40680fbe855f",
+    "mtime": 1794246423.8739362,
+    "seen": 1794248226.9134247,
+    "ast_hash": "1d35635faacd5307ccc2f0a504ef38c2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_story_5.mp3": {
-    "mtime": 1786147253.9897137,
-    "seen": 1794121861.6634402,
-    "ast_hash": "e835828dcbc866ce640f89cf7df13098",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dal/final/dal_story_6.mp3": {
-    "mtime": 1786147253.992218,
-    "seen": 1794121861.6634414,
-    "ast_hash": "7cc1f0779f959d512ddd40680fbe855f",
+    "mtime": 1794246423.8734105,
+    "seen": 1794248226.9134274,
+    "ast_hash": "8406e6d4d15b7bce6a4e5c7100952e7d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_trace_end.mp3": {
@@ -14304,122 +14202,98 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p1_1.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634474,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245713.6965284,
+    "seen": 1794248226.9144979,
+    "ast_hash": "915940667187e83edd491fb73df323bc",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p1_2.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634483,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245713.6959908,
+    "seen": 1794248226.914502,
+    "ast_hash": "69aabccc1ea5013b58cb2b27ee4fb067",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p1_3.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634495,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245713.6959908,
+    "seen": 1794248226.9145052,
+    "ast_hash": "22e08ef8669c8a97a042c1528e0ddd91",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p1_4.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.663451,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245713.6946368,
+    "seen": 1794248226.9145083,
+    "ast_hash": "f83e93eabbe8c2c62556596bf0d62748",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p2_1.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634521,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245761.5370872,
+    "seen": 1794248226.9145112,
+    "ast_hash": "dc6af09c3e42fc65f9e46ec9e4fb66b0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p2_2.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.663453,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245761.5365562,
+    "seen": 1794248226.914515,
+    "ast_hash": "c6fceb60fe318d2adb3ec370bc97c2a9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p2_3.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634548,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245761.5360117,
+    "seen": 1794248226.914518,
+    "ast_hash": "e20430acfa317d3bec99b4683eea809d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p2_4.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.663456,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245761.534343,
+    "seen": 1794248226.9145207,
+    "ast_hash": "039319bbe8ef722fffe87563604746db",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p3_1.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634574,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245802.0288026,
+    "seen": 1794248226.9145234,
+    "ast_hash": "6048ef107c04079c781cb8c4c202397a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p3_2.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634586,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245802.0310974,
+    "seen": 1794248226.9145267,
+    "ast_hash": "30b4f40951fe2e768dd0064dfbd31482",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p3_3.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634598,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245802.0305727,
+    "seen": 1794248226.9145293,
+    "ast_hash": "f685e7e8fbc32e42fe0b6ac33c500bc6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p3_4.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634612,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245802.0298107,
+    "seen": 1794248226.914532,
+    "ast_hash": "db95b551df8ead50de1409f7d317ecb7",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p4_1.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634622,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245843.1657104,
+    "seen": 1794248226.9145346,
+    "ast_hash": "ffcc1f96b704cfd5437f695dbfa92d46",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p4_2.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634634,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245843.1657104,
+    "seen": 1794248226.914538,
+    "ast_hash": "4cf670ba6b2d1f83d9044fe4a9825a3e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p4_3.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634648,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
+    "mtime": 1794245843.165206,
+    "seen": 1794248226.9145553,
+    "ast_hash": "eebfc40224376e0573dc945bae5be671",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p4_4.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634657,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dal/final/dal_word_p5_1.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.663467,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dal/final/dal_word_p5_2.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634684,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dal/final/dal_word_p5_3.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634696,
-    "ast_hash": "caeaa3024f9e6e097676f607425a5734",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dal/final/dal_word_p5_4.mp3": {
-    "mtime": 1786147253.8666487,
-    "seen": 1794121861.6634707,
+    "mtime": 1794245843.164526,
+    "seen": 1794248226.9145603,
     "ast_hash": "caeaa3024f9e6e097676f607425a5734",
     "semantic_hash": ""
   },
@@ -14478,9 +14352,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_nasheed.mp3": {
-    "mtime": 1786147255.1198738,
-    "seen": 1794121861.6634853,
-    "ast_hash": "fe78a0fcd97383afe09fcc9e3db305f1",
+    "mtime": 1794254735.7154324,
+    "seen": 1794255429.5840342,
+    "ast_hash": "cdaef3b0e23160ea14d46c9047f4845c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_paint_word1.mp3": {
@@ -14502,39 +14376,33 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_story_1.mp3": {
-    "mtime": 1786147255.0408907,
-    "seen": 1794121861.6634908,
-    "ast_hash": "26533d965a02ea66115b079ba0e9a9cd",
+    "mtime": 1794253491.4775934,
+    "seen": 1794255429.5843463,
+    "ast_hash": "8c0c4799a17b439dba983a54fcd913f3",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_story_2.mp3": {
-    "mtime": 1786147255.0830407,
-    "seen": 1794121861.6634922,
-    "ast_hash": "06fe564296d6d4363b7f8b90142b14eb",
+    "mtime": 1794253568.2405987,
+    "seen": 1794255429.5843482,
+    "ast_hash": "1e98402af5cb0336e8b938c5a84b9629",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_story_3.mp3": {
-    "mtime": 1786147255.1077583,
-    "seen": 1794121861.6634932,
-    "ast_hash": "645a014228b0cebc03f64e3d112eefd9",
+    "mtime": 1794253608.544412,
+    "seen": 1794255429.5843496,
+    "ast_hash": "219e9fee8e06fa6d5809dd6172bc804a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_story_4.mp3": {
-    "mtime": 1786147255.1107583,
-    "seen": 1794121861.6634943,
-    "ast_hash": "4229440cdb0d928e673f7c4be867b0f6",
+    "mtime": 1794253642.320087,
+    "seen": 1794255429.5843513,
+    "ast_hash": "b202fb39e5b10bd9d750b41f8a221c9e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_story_5.mp3": {
-    "mtime": 1786147255.1138697,
-    "seen": 1794121861.6634958,
-    "ast_hash": "4229440cdb0d928e673f7c4be867b0f6",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dhaal/final/dhaal_story_6.mp3": {
-    "mtime": 1786147255.115871,
-    "seen": 1794121861.663497,
-    "ast_hash": "0c35db0dd5c53be8dc20e81ca6685610",
+    "mtime": 1794253642.3190813,
+    "seen": 1794255429.5843527,
+    "ast_hash": "dc7eb1c6ca8a91126251ba40b736dc51",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_trace_end.mp3": {
@@ -14562,123 +14430,99 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p1_1.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635036,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250428.2206812,
+    "seen": 1794255429.584828,
+    "ast_hash": "36d116a3bb02562892fdaf4b25ac8d1f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p1_2.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635048,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250428.220155,
+    "seen": 1794255429.58483,
+    "ast_hash": "6238e76e689f7646bdbb769fa127e3ee",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p1_3.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635063,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250428.219609,
+    "seen": 1794255429.5848315,
+    "ast_hash": "a3025a2f96df415e50c5a2c8f67ab658",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p1_4.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635075,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250428.219609,
+    "seen": 1794255429.584833,
+    "ast_hash": "0a1a42a8c0551c776cd6ec14c7c85970",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p2_1.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635087,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250517.5838525,
+    "seen": 1794255429.584835,
+    "ast_hash": "ee68c1353b48c9d79387a53fb616bd77",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p2_2.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.66351,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250517.5843928,
+    "seen": 1794255429.584837,
+    "ast_hash": "d75234f2820623fb6ea44f6c04b0cd56",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p2_3.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635115,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250517.5843928,
+    "seen": 1794255429.5848384,
+    "ast_hash": "89c29a69b90e84d5b47ad048fc8beec4",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p2_4.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.663513,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250517.5849962,
+    "seen": 1794255429.5848398,
+    "ast_hash": "0de519adddda64f86303fb111650289d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p3_1.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635141,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250614.152375,
+    "seen": 1794255429.5848415,
+    "ast_hash": "6e7fe6a2bc1ccb5ab9ca7a1265f6a281",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p3_2.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635153,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250614.151783,
+    "seen": 1794255429.5848427,
+    "ast_hash": "7248138ad3e39efcb023cf88bc20383b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p3_3.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635168,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250614.151783,
+    "seen": 1794255429.584844,
+    "ast_hash": "5acf59cdba8f149eb8a9bb0f42eaf5e9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p3_4.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.663518,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250614.153013,
+    "seen": 1794255429.5848455,
+    "ast_hash": "2627605708eb3a1a691f0d7e59ec6171",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p4_1.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635191,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250689.9560795,
+    "seen": 1794255429.5848472,
+    "ast_hash": "856223534e16c3c85a26f21c40332508",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p4_2.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635206,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250689.955546,
+    "seen": 1794255429.5848484,
+    "ast_hash": "af12ebf8149e962dbbcffcebcee91df7",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p4_3.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635218,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250689.95504,
+    "seen": 1794255429.5848498,
+    "ast_hash": "b443ec7f05d39a775e3371b213b0ec7f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p4_4.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.663523,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dhaal/final/dhaal_word_p5_1.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635244,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dhaal/final/dhaal_word_p5_2.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635256,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dhaal/final/dhaal_word_p5_3.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.663527,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/dhaal/final/dhaal_word_p5_4.mp3": {
-    "mtime": 1786147254.930577,
-    "seen": 1794121861.6635282,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794250689.9543023,
+    "seen": 1794255429.5848513,
+    "ast_hash": "d20884cd1df9b1f2cba7d02efd458722",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_write_intro.mp3": {
@@ -14730,63 +14574,63 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_goal.mp3": {
-    "mtime": 1786147251.490532,
-    "seen": 1794121861.6635396,
-    "ast_hash": "06873cbdbdb7d59428ec2149df197864",
+    "mtime": 1794206884.38412,
+    "seen": 1794248226.9290261,
+    "ast_hash": "710cb44102b131f93d9c23f7ee2c123b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_nasheed.mp3": {
-    "mtime": 1786147251.7232356,
-    "seen": 1794121861.663541,
-    "ast_hash": "5a9f18f970736d6ece37365d7532229d",
+    "mtime": 1794206935.1006048,
+    "seen": 1794248226.9290304,
+    "ast_hash": "a550cfc1ce4572ab4018e2ffe6bf31e9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_paint_word1.mp3": {
-    "mtime": 1786147251.7107265,
-    "seen": 1794121861.6635423,
-    "ast_hash": "bb0e11744d117a5f387ee00e5b5001d8",
+    "mtime": 1794206916.711119,
+    "seen": 1794248226.929034,
+    "ast_hash": "3d2eb8e877b5dee75a3fb5c0251c9bfb",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_paint_word2.mp3": {
-    "mtime": 1786147251.7137365,
-    "seen": 1794121861.6635435,
-    "ast_hash": "361e45c760bedbbbde1da4ce56deb417",
+    "mtime": 1794206917.9302182,
+    "seen": 1794248226.9290373,
+    "ast_hash": "580f5d6c9ff029783601c2547f5517dc",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_paint_word3.mp3": {
-    "mtime": 1786147251.7187304,
-    "seen": 1794121861.663545,
-    "ast_hash": "79bc6c1246a4693a8b339d00f9169bd2",
+    "mtime": 1794206919.175743,
+    "seen": 1794248226.9290404,
+    "ast_hash": "b07a7fac2775d8a0a80c5ee8748c91d4",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.663546,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206923.2724264,
+    "seen": 1794248226.9290435,
+    "ast_hash": "eed124ddfd0275376d6849be1126cc63",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_2.mp3": {
-    "mtime": 1786147251.660732,
-    "seen": 1794121861.6635473,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794206925.8405604,
+    "seen": 1794248226.9290469,
+    "ast_hash": "2da3014783d5a5f27b377a4acbf8450c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_3.mp3": {
-    "mtime": 1786147251.7092237,
-    "seen": 1794121861.6635485,
-    "ast_hash": "74f2d52bbf7a524cc065e2ee47a3f7ca",
+    "mtime": 1794206928.5282693,
+    "seen": 1794248226.929049,
+    "ast_hash": "dcbe81731c4e3a61ad547b4f9fc87b47",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_4.mp3": {
-    "mtime": 1786147251.7107265,
-    "seen": 1794121861.66355,
-    "ast_hash": "bb0e11744d117a5f387ee00e5b5001d8",
+    "mtime": 1794206931.1209583,
+    "seen": 1794248226.9290519,
+    "ast_hash": "6d8104ddbc5d5d7ef8d2e90081deccb7",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_5.mp3": {
-    "mtime": 1786147251.7137365,
-    "seen": 1794121861.6635513,
-    "ast_hash": "361e45c760bedbbbde1da4ce56deb417",
+    "mtime": 1794206933.725866,
+    "seen": 1794248226.9290555,
+    "ast_hash": "3b5743059e98dbf84349031929ba4b4f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_6.mp3": {
@@ -14796,123 +14640,123 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_trace_end.mp3": {
-    "mtime": 1786147251.5105352,
-    "seen": 1794121861.6635537,
-    "ast_hash": "88d3043883d20a7886b11d0075c681be",
+    "mtime": 1794206943.292852,
+    "seen": 1794248226.9293556,
+    "ast_hash": "4b31cfd7a8c259b622ef3cb128a46c14",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_trace_isolated.mp3": {
-    "mtime": 1786147251.619695,
-    "seen": 1794121861.6635551,
-    "ast_hash": "9a4c1eb3dff8e8e345ae97bf7805ac75",
+    "mtime": 1794206943.2942939,
+    "seen": 1794248226.92936,
+    "ast_hash": "e9474225139a4fa7d6dfed0716c2cc84",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_trace_middle.mp3": {
-    "mtime": 1786147251.629202,
-    "seen": 1794121861.6635563,
-    "ast_hash": "837438dff7100e15d7b5862a6cb4d7de",
+    "mtime": 1794206943.292852,
+    "seen": 1794248226.9293637,
+    "ast_hash": "ce53462263ae1ff5d6437d9abd9f5448",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_trace_start.mp3": {
-    "mtime": 1786147251.6242018,
-    "seen": 1794121861.6635573,
-    "ast_hash": "56a20f1b14fd01652f6953a8c1f8fbc6",
+    "mtime": 1794206943.2942939,
+    "seen": 1794248226.9293668,
+    "ast_hash": "91993c4eaa7b97c1a71f872ceb9dc82d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p1_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635604,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206905.4701457,
+    "seen": 1794248226.9293697,
+    "ast_hash": "8f4b8857fce0e54bc594a2be1763bc70",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p1_2.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635618,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206905.4691508,
+    "seen": 1794248226.9293723,
+    "ast_hash": "5569958daac3e11d850e5061580808d0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p1_3.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.663563,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206905.4691508,
+    "seen": 1794248226.9293747,
+    "ast_hash": "1e25a7f0dc6eb145bb45da41bbf37ab9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p1_4.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635642,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206905.4691508,
+    "seen": 1794248226.9293778,
+    "ast_hash": "6d159bd21a6d0e6999f534e2fa426c95",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p2_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635654,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206906.7674167,
+    "seen": 1794248226.9293807,
+    "ast_hash": "1e25a7f0dc6eb145bb45da41bbf37ab9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p2_2.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635666,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206906.7674167,
+    "seen": 1794248226.9293842,
+    "ast_hash": "1f7a1cadcc8834b5e54410d1aea3b6cb",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p2_3.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635678,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206906.7684186,
+    "seen": 1794248226.9293876,
+    "ast_hash": "95cb820328e064f924768b775543394f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p2_4.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635692,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206906.7674167,
+    "seen": 1794248226.9294653,
+    "ast_hash": "596026d3f827ab69566d85d18c55122b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p3_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.663572,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206908.0320244,
+    "seen": 1794248226.92947,
+    "ast_hash": "6d9f798893ef54cc819cca219f0bc0c5",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p3_2.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635735,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206908.03103,
+    "seen": 1794248226.9294732,
+    "ast_hash": "0a73088ddf312982861d7da38724b9e3",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p3_3.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635747,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206908.03103,
+    "seen": 1794248226.929476,
+    "ast_hash": "ec2f0246f22def7fc6949913378301ef",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p3_4.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635761,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206908.03103,
+    "seen": 1794248226.929479,
+    "ast_hash": "6c25bf344ce36d787be1825710e0e7f6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p4_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.663577,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206909.3645425,
+    "seen": 1794248226.9294813,
+    "ast_hash": "a566e0d2f00762ac06318cdbc6f35d78",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p4_2.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635785,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206909.3635392,
+    "seen": 1794248226.9294841,
+    "ast_hash": "198cb07e8d6609b12e7af99e760510ad",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p4_3.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.66358,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206909.3635392,
+    "seen": 1794248226.9294875,
+    "ast_hash": "8395cc023e64f58905d561cdbec4d984",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p4_4.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635811,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794206909.344542,
+    "seen": 1794248226.9294903,
+    "ast_hash": "ba70a3de00a06f9036c419a18e9c59ec",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p5_1.mp3": {
@@ -14940,9 +14784,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_write_intro.mp3": {
-    "mtime": 1786147251.5155423,
-    "seen": 1794121861.6635876,
-    "ast_hash": "eca05cdaee4ffc38aebae3090049be0c",
+    "mtime": 1794206943.2953036,
+    "seen": 1794248226.9306262,
+    "ast_hash": "e3531aeb9b6edddfb501ca1355260164",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/madd/ha_madd_alif.mp3": {
@@ -15552,15 +15396,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_goal.mp3": {
-    "mtime": 1786147252.621719,
-    "seen": 1794121861.663717,
+    "mtime": 1794210322.9787724,
+    "seen": 1794248226.9668279,
     "ast_hash": "dba64f3e83d093ad7ea27df10218203d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_nasheed.mp3": {
-    "mtime": 1786147252.8576465,
-    "seen": 1794121861.6637185,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794213364.0234587,
+    "seen": 1794248226.9668326,
+    "ast_hash": "f1693a89c41a6d7d2c4138bd07453397",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_paint_word1.mp3": {
@@ -15582,188 +15426,164 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663723,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212679.1688213,
+    "seen": 1794248226.967687,
+    "ast_hash": "b45edfe2d4ea1d378d0d11065ca0b8ca",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_2.mp3": {
-    "mtime": 1786147252.799843,
-    "seen": 1794121861.6637242,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212685.4440122,
+    "seen": 1794248226.9676914,
+    "ast_hash": "71babc114931b0d4800f5fffec34f2f9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_3.mp3": {
-    "mtime": 1786147252.8421354,
-    "seen": 1794121861.6637254,
-    "ast_hash": "7cc1f0779f959d512ddd40680fbe855f",
+    "mtime": 1794212736.813465,
+    "seen": 1794248226.9676948,
+    "ast_hash": "b4d3f285e41ae6264baee625c80a2d48",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_4.mp3": {
-    "mtime": 1786147252.8451402,
-    "seen": 1794121861.6637266,
-    "ast_hash": "e835828dcbc866ce640f89cf7df13098",
+    "mtime": 1794212742.5083117,
+    "seen": 1794248226.9676995,
+    "ast_hash": "668b27617dccd7c7c1ee99d702d42bc5",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_5.mp3": {
-    "mtime": 1786147252.8481395,
-    "seen": 1794121861.6637282,
-    "ast_hash": "7cc1f0779f959d512ddd40680fbe855f",
+    "mtime": 1794212742.5073116,
+    "seen": 1794248226.9677029,
+    "ast_hash": "ef82468a1821ff87fab4c6fe6279296a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_6.mp3": {
-    "mtime": 1786147252.8516476,
-    "seen": 1794121861.6637292,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794212742.5073116,
+    "seen": 1794248226.9677062,
+    "ast_hash": "6e6a7b20f1e7db36707a0297c44af640",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_end.mp3": {
-    "mtime": 1786147252.7259412,
-    "seen": 1794121861.6637304,
+    "mtime": 1794210322.9856398,
+    "seen": 1794248226.9677095,
     "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_isolated.mp3": {
-    "mtime": 1786147252.7144265,
-    "seen": 1794121861.6637318,
+    "mtime": 1794210322.9856398,
+    "seen": 1794248226.9677138,
     "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_middle.mp3": {
-    "mtime": 1786147252.7219343,
-    "seen": 1794121861.663733,
+    "mtime": 1794210322.989736,
+    "seen": 1794248226.9677172,
     "ast_hash": "5f635cf0dfd650959cd2bc6243584d8b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_start.mp3": {
-    "mtime": 1786147252.717427,
-    "seen": 1794121861.6637342,
+    "mtime": 1794210322.990752,
+    "seen": 1794248226.9677205,
     "ast_hash": "ca6f991a6b00b173a05ba1f7f7cf2467",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p1_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637356,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212047.6868448,
+    "seen": 1794248226.9677238,
+    "ast_hash": "9e1102405651f4f09eea042705c293a0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p1_2.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637368,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212047.6863196,
+    "seen": 1794248226.9677272,
+    "ast_hash": "361c0ab17fec66397b7a9adb4c7c82a4",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p1_3.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663738,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212047.6863196,
+    "seen": 1794248226.9677312,
+    "ast_hash": "5d1e088158ef3c6c9ce9353a942b9a5b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p1_4.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637397,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212047.6857276,
+    "seen": 1794248226.9677346,
+    "ast_hash": "bde323cbc6eef4e2d2be2f3b004ab850",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p2_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637409,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212077.898849,
+    "seen": 1794248226.9677384,
+    "ast_hash": "0826c3459773c7ece1874a364cd8851c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p2_2.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637423,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212077.898849,
+    "seen": 1794248226.9677424,
+    "ast_hash": "12dce84ceed31f3695ccd3262c240d8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p2_3.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637435,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212077.897849,
+    "seen": 1794248226.9677463,
+    "ast_hash": "b92069e4e2b0575136abbe178b9013ef",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p2_4.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637447,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212077.897849,
+    "seen": 1794248226.9677503,
+    "ast_hash": "6f0f3b6691dcbcd982b85046192ecb0c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p3_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663746,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212079.984819,
+    "seen": 1794248226.9677532,
+    "ast_hash": "ac4efab5f622d886aaf8805abbc82f72",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p3_2.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663747,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212080.0050943,
+    "seen": 1794248226.9677567,
+    "ast_hash": "f3d8c51e6492299a7b17c899593e4cd5",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p3_3.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637485,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212080.0050943,
+    "seen": 1794248226.96776,
+    "ast_hash": "41ff7f826445c883aad3ae8da993db58",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p3_4.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.66375,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212080.0041027,
+    "seen": 1794248226.9677634,
+    "ast_hash": "c9963c7d3e0b2a32e051204552d034b6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p4_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663751,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212082.0445032,
+    "seen": 1794248226.9677663,
+    "ast_hash": "975142b806254e8e1bc59e1dfd06e285",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p4_2.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663752,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212082.0465052,
+    "seen": 1794248226.96777,
+    "ast_hash": "bec91785fc0cca2e7b4f33a018352f4e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p4_3.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637535,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212082.0465052,
+    "seen": 1794248226.9677732,
+    "ast_hash": "e02e580a762e05afb4070ca2d66f3ebe",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p4_4.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637545,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/kha/final/kha_word_p5_1.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.663756,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/kha/final/kha_word_p5_2.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637573,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/kha/final/kha_word_p5_3.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637583,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/kha/final/kha_word_p5_4.mp3": {
-    "mtime": 1786147252.7364504,
-    "seen": 1794121861.6637597,
-    "ast_hash": "15bc575e2a3ade826f92621a8df96f37",
+    "mtime": 1794212082.0455048,
+    "seen": 1794248226.9677768,
+    "ast_hash": "fdcea009cbe5e234bd5ef26d04668481",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_write_intro.mp3": {
-    "mtime": 1786147252.6421194,
-    "seen": 1794121861.6637611,
+    "mtime": 1794210323.0040278,
+    "seen": 1794248226.9677806,
     "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
     "semantic_hash": ""
   },
@@ -24012,9 +23832,9 @@
     "semantic_hash": ""
   },
   "HANDOFF_JEEM.md": {
-    "mtime": 1794170258.293724,
-    "seen": 1794170354.7247705,
-    "ast_hash": "43a28add64677c0d6b64c0751524beb5",
+    "mtime": 1794172688.4081771,
+    "seen": 1794248226.211078,
+    "ast_hash": "c8234f6ed21bafbbe6a67e8111f16a1a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/jeem/final/jeem_choice_malek.mp3": {
@@ -24045,6 +23865,12 @@
     "mtime": 1794129689.964223,
     "seen": 1794170355.564621,
     "ast_hash": "43b3a3d0be2648d3c617c8147d73418c",
+    "semantic_hash": ""
+  },
+  "MASTER_PROJECT_STATUS.md": {
+    "mtime": 1794174860.944382,
+    "seen": 1794248226.2118037,
+    "ast_hash": "2b99a856acfee60a2cba63894eeb79d9",
     "semantic_hash": ""
   }
 }
