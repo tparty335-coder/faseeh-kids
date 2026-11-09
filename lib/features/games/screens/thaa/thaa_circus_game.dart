@@ -5,9 +5,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-// ─── لعبة السيرك لحرف الباء ──────────────────────────────────────────────────
-// مطابقة تماماً لشاشات الأسطوانة الأصلية وتصميم لعبة سيرك حرف الألف
-// أبعاد الشاشة الأصلية: 1024 × 499
+// ─── لعبة السيرك لحرف الثاء ──────────────────────────────────────────────────
+// مطابقة تماماً لشاشات الأسطوانة الأصلية قبل وبعد الإجابة
 
 const double _imgW = 1024;
 
@@ -28,57 +27,73 @@ class _ImageZone {
 class _Round {
   final String imagePath;
   final double imgH;
+  final String afterImagePath;
+  final double afterImgH;
   final String praiseAudio;
+  final String correctWord;
   final List<_ImageZone> zones;
   const _Round({
     required this.imagePath,
     required this.imgH,
+    required this.afterImagePath,
+    required this.afterImgH,
     required this.praiseAudio,
+    required this.correctWord,
     required this.zones,
   });
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، ثَعْلَب (أسفل) ← ثَعْلَب ✅
+  // الجولة 1: حِمَار (أعلى) ، دَجَاجَة (وسط) ، ثَعْلَب (أسفل) ← ثَعْلَب ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_1.png',
-    imgH: 499,
+    imgH: 517,
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_1_after.png',
+    afterImgH: 500,
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    correctWord: 'ثَعْلَبُ',
     zones: [
-      _ImageZone(label: 'تِمْسَاح', hasThaa: false, px: 138, py: 114),
-      _ImageZone(label: 'أَسَد',    hasThaa: false, px: 326, py: 255),
-      _ImageZone(label: 'ثَعْلَب',  hasThaa: true,  px: 138, py: 392,
+      _ImageZone(label: 'حِمَار',  hasThaa: false, px: 144.5, py: 109.5),
+      _ImageZone(label: 'دَجَاجَة', hasThaa: false, px: 339.5, py: 249.5),
+      _ImageZone(label: 'ثَعْلَب',  hasThaa: true,  px: 142.0, py: 395.5,
           wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3'),
     ],
   ),
-  // الجولة 2: تَاج (أعلى) ، ثَوْب (وسط) ، حِمَار (أسفل) ← ثَوْب ✅
+  // الجولة 2: أَسَد (أعلى) ، ثِيَاب (وسط) ، بُرْج (أسفل) ← ثِيَاب ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_2.png',
-    imgH: 499,
+    imgH: 523,
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_2_after.png',
+    afterImgH: 516,
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    correctWord: 'ثِيَابُ',
     zones: [
-      _ImageZone(label: 'تَاج',   hasThaa: false, px: 138, py: 114),
-      _ImageZone(label: 'ثِيَاب',  hasThaa: true,  px: 326, py: 258,
+      _ImageZone(label: 'أَسَد',   hasThaa: false, px: 142.0, py: 109.5),
+      _ImageZone(label: 'ثِيَاب',  hasThaa: true,  px: 337.0, py: 249.5,
           wordAudio: 'audio/lessons/thaa/sounds/word_thiab.mp3'),
-      _ImageZone(label: 'حِمَار', hasThaa: false, px: 138, py: 398),
+      _ImageZone(label: 'بُرْج',   hasThaa: false, px: 142.0, py: 398.5),
     ],
   ),
-  // الجولة 3: ثِمَار (أعلى) ، مِطْرَقَة (وسط) ، حِصَان (أسفل) ← ثِمَار ✅
+  // الجولة 3: ثِمَار (أعلى) ، زَهْرَة (وسط) ، قَلَم (أسفل) ← ثِمَار ✅
   _Round(
     imagePath: 'assets/images/games/circus/thaa_circus_round_3.png',
-    imgH: 499,
+    imgH: 532,
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_3_after.png',
+    afterImgH: 516,
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    correctWord: 'ثِمَارٌ',
     zones: [
-      _ImageZone(label: 'ثِمَار',   hasThaa: true,  px: 138, py: 116,
+      _ImageZone(label: 'ثِمَار',   hasThaa: true,  px: 142.0, py: 110.5,
           wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3'),
-      _ImageZone(label: 'مِطْرَقَة', hasThaa: false, px: 326, py: 262),
-      _ImageZone(label: 'حِصَان',  hasThaa: false, px: 138, py: 404),
+      _ImageZone(label: 'زَهْرَة',  hasThaa: false, px: 338.5, py: 249.5),
+      _ImageZone(label: 'قَلَم',   hasThaa: false, px: 142.0, py: 401.5),
     ],
   ),
 ];
 
 class ThaaCircusGame extends ConsumerStatefulWidget {
-  const ThaaCircusGame({super.key});
+  final VoidCallback? onBack;
+  const ThaaCircusGame({super.key, this.onBack});
 
   @override
   ConsumerState<ThaaCircusGame> createState() => _ThaaCircusGameState();
@@ -89,10 +104,15 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
   int _round = 0, _score = 0, _wrongAttempts = 0, _token = 0;
   int? _tapped;
   bool _roundDone = false, _gameOver = false, _showCorrectAnswer = false;
+  bool _isBusy = false;
 
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
     final t = _token;
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -136,62 +156,76 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
   Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onTap(int idx) async {
-    if (_roundDone || _showCorrectAnswer) return;
+    if (_roundDone || _showCorrectAnswer || _isBusy) return;
     HapticFeedback.lightImpact();
     final t = ++_token;
-    final rd = _rounds[_round];
-    final zone = rd.zones[idx];
+    _isBusy = true;
+    try {
+      final rd = _rounds[_round];
+      final zone = rd.zones[idx];
 
-    if (zone.hasThaa) {
-      setState(() {
-        _tapped = idx;
-        _roundDone = true;
-        _score++;
-      });
-      _confetti.play();
-
-      // 1. صوت التشجيع الكامل دون بتر مع مهلة تنفس
-      await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثِيَاب / ثِمَار)
-      if (zone.wordAudio != null) {
-        await _say(zone.wordAudio!, pauseAfter: const Duration(milliseconds: 700));
-        if (!mounted || t != _token) return;
-      }
-
-      _advance();
-    } else {
-      setState(() {
-        _tapped = idx;
-        _wrongAttempts++;
-      });
-      await _playWrong();
-      if (!mounted || t != _token) return;
-
-      if (_wrongAttempts >= 2) {
+      if (zone.hasThaa) {
         setState(() {
-          _showCorrectAnswer = true;
+          _tapped = idx;
+          _roundDone = true;
+          _score++;
         });
+        _confetti.play();
 
-        // تشغيل صوت الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
-        final correctZone = rd.zones.firstWhere((z) => z.hasThaa);
-        if (correctZone.wordAudio != null) {
-          await _say(correctZone.wordAudio!, pauseAfter: const Duration(milliseconds: 800));
+        // 1. صوت التشجيع الكامل دون بتر مع مهلة تنفس
+        await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
+        if (!mounted || t != _token) return;
+
+        // 2. سماع اسم الكلمة كاملاً بعد التشجيع (ثَعْلَب / ثِيَاب / ثِمَار)
+        if (zone.wordAudio != null) {
+          await _say(zone.wordAudio!, pauseAfter: const Duration(milliseconds: 700));
           if (!mounted || t != _token) return;
         }
+
+        await Future.delayed(const Duration(milliseconds: 1500));
+        if (!mounted || t != _token) return;
 
         _advance();
       } else {
         setState(() {
-          _tapped = null;
+          _tapped = idx;
+          _wrongAttempts++;
         });
+        await _playWrong();
+        if (!mounted || t != _token) return;
+
+        if (_wrongAttempts >= 2) {
+          setState(() {
+            _showCorrectAnswer = true;
+          });
+
+          // تشغيل صوت الكلمة الصحيحة كاملاً عند إظهار الحل دون تداخل
+          final correctZone = rd.zones.firstWhere((z) => z.hasThaa);
+          if (correctZone.wordAudio != null) {
+            await _say(correctZone.wordAudio!, pauseAfter: const Duration(milliseconds: 800));
+            if (!mounted || t != _token) return;
+          }
+
+          await Future.delayed(const Duration(milliseconds: 1500));
+          if (!mounted || t != _token) return;
+
+          _advance();
+        } else {
+          setState(() {
+            _tapped = null;
+          });
+        }
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isBusy = false);
       }
     }
   }
 
   void _advance() {
     final t = ++_token;
+    _isBusy = false;
     AudioService.instance.stop();
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
@@ -229,12 +263,16 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
 
   Widget _buildGameScene() {
     final rd = _rounds[_round];
+    final isAnswered = _roundDone || _showCorrectAnswer;
+    final activeImgPath = isAnswered ? rd.afterImagePath : rd.imagePath;
+    final activeImgH = isAnswered ? rd.afterImgH : rd.imgH;
+
     return Stack(
       children: [
         LayoutBuilder(
           builder: (ctx, c) {
             final sw = c.maxWidth, sh = c.maxHeight;
-            final ia = _imgW / rd.imgH, sa = sw / sh;
+            final ia = _imgW / activeImgH, sa = sw / sh;
             double dW, dH, ox, oy;
             if (sa < ia) {
               dW = sw;
@@ -251,35 +289,24 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
             return Stack(
               children: [
                 Positioned.fill(
-                  child: Image.asset(rd.imagePath, fit: BoxFit.contain),
+                  child: Image.asset(activeImgPath, fit: BoxFit.contain),
                 ),
                 // مناطق النقر على الفقاعات الثلاث
                 ...List.generate(rd.zones.length, (i) {
                   final z = rd.zones[i];
                   final cx = ox + (z.px / _imgW) * dW;
-                  final cy = oy + (z.py / rd.imgH) * dH;
-                  const r = 70.0;
+                  final cy = oy + (z.py / activeImgH) * dH;
+                  const r = 105.0;
                   final rScaled = r * (dW / _imgW);
 
                   Color fill = Colors.transparent;
                   Color ring = Colors.transparent;
                   Widget child = const SizedBox.shrink();
 
-                  if (_showCorrectAnswer) {
-                    if (z.hasThaa) {
-                      fill = Colors.green.withValues(alpha: 0.35);
-                      ring = Colors.greenAccent;
-                      child = const Text('✅', style: TextStyle(fontSize: 34));
-                    }
-                  } else if (_tapped == i) {
-                    fill = z.hasThaa
-                        ? Colors.green.withValues(alpha: 0.35)
-                        : Colors.red.withValues(alpha: 0.35);
-                    ring = z.hasThaa ? Colors.greenAccent : Colors.redAccent;
-                    child = Text(z.hasThaa ? '✅' : '❌', style: const TextStyle(fontSize: 34));
-                  } else if (_roundDone && z.hasThaa) {
-                    fill = Colors.green.withValues(alpha: 0.20);
-                    ring = Colors.greenAccent.withValues(alpha: 0.70);
+                  if (!isAnswered && _tapped == i && !z.hasThaa) {
+                    fill = Colors.red.withValues(alpha: 0.30);
+                    ring = Colors.redAccent;
+                    child = const Text('❌', style: TextStyle(fontSize: 32));
                   }
 
                   return Positioned(
@@ -348,7 +375,11 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
               if (_round == 0) {
                 _token++;
                 AudioService.instance.stop();
-                Navigator.of(context).pop();
+                if (widget.onBack != null) {
+                  widget.onBack!();
+                } else {
+                  Navigator.of(context).pop();
+                }
                 return;
               }
               final t = ++_token;
@@ -359,6 +390,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
                 _roundDone = false;
                 _wrongAttempts = 0;
                 _showCorrectAnswer = false;
+                _isBusy = false;
               });
               Future.delayed(const Duration(milliseconds: 300), () {
                 if (mounted && t == _token) _playInstruction();
@@ -370,7 +402,11 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

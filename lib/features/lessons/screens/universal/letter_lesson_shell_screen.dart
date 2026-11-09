@@ -650,6 +650,7 @@ class _UniversalTrainNavBar extends StatelessWidget {
           final isActive = i == activeStationIndex;
           return Expanded(
             child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
               onTap: () => onStationSelected(i),
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 200),

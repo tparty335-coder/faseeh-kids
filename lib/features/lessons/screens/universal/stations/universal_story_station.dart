@@ -205,41 +205,6 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                   ),
                 ),
               ),
-            if (wf.instructionText != null && !_interactionCompleted)
-              Positioned(
-                top: oy + 8,
-                left: ox + 12,
-                right: ox + 12,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withValues(alpha: 0.7),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.touch_app_rounded,
-                          color: Colors.amber, size: 20),
-                      const SizedBox(width: 8),
-                      Flexible(
-                        child: Text(
-                          wf.instructionText!,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            fontFamily: 'Cairo',
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
           ],
         );
       },
@@ -534,56 +499,98 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                 ),
               ),
 
-              // ── 2. إطار المشهد المصور ────────────────────────────────────
+              // ── 2. إطار المشهد المصور الأصلي (بدون نصوص مكررة أو مساحات بيضاء فارغة) ──────
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: const Color(0xFF795548), width: 4),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 12,
-                          offset: Offset(0, 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  child: Center(
+                    child: AspectRatio(
+                      aspectRatio: 1024 / 768, // 4:3 النسبة الأصلية لإطارات أسطوانة الوزارة
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(22),
+                          border: Border.all(color: const Color(0xFF795548), width: 4),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 16,
+                              offset: Offset(0, 6),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: PageView.builder(
-                        controller: _pageController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: _scenes.length,
-                        itemBuilder: (_, i) {
-                          final sc = _scenes[i];
-                          return Stack(
-                            fit: StackFit.expand,
-                            children: [
-                              Image.asset(
-                                sc.imagePath,
-                                fit: BoxFit.contain,
-                                width: double.infinity,
-                                height: double.infinity,
-                                errorBuilder: (_, __, ___) => Center(
-                                  child: Text(
-                                    widget.mascotEmoji,
-                                    style: const TextStyle(fontSize: 72),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(18),
+                          child: PageView.builder(
+                            controller: _pageController,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: _scenes.length,
+                            itemBuilder: (_, i) {
+                              final sc = _scenes[i];
+                              return Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  Image.asset(
+                                    sc.imagePath,
+                                    fit: BoxFit.fill,
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    errorBuilder: (_, __, ___) => Center(
+                                      child: Text(
+                                        widget.mascotEmoji,
+                                        style: const TextStyle(fontSize: 72),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                              if (sc.interaction is WordFindStoryInteraction)
-                                _buildWordFindOverlay(sc.interaction as WordFindStoryInteraction),
-                            ],
-                          );
-                        },
+                                  if (sc.interaction is WordFindStoryInteraction)
+                                    _buildWordFindOverlay(sc.interaction as WordFindStoryInteraction),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
+
+              // ── 2.5 بطاقة النص المشكول للقصة بخط Cairo واضح ───────────────
+              if (scene.captionText != null && scene.captionText!.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                  child: Container(
+                    width: double.infinity,
+                    constraints: const BoxConstraints(maxWidth: 880),
+                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: widget.accentColor.withValues(alpha: 0.6),
+                        width: 2,
+                      ),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Text(
+                      scene.captionText!,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Cairo',
+                        fontSize: screenSize.width > 600 ? 17 : 13,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF3E2723),
+                        height: 1.4,
+                      ),
+                    ),
+                  ),
+                ),
 
               // ── 3. شريط أزرار التنقل السفلي ──────────────────────────────
               Padding(

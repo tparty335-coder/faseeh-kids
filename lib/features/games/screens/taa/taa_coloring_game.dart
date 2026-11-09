@@ -140,7 +140,8 @@ const List<Color> _palette = [
 ];
 
 class TaaColoringGame extends ConsumerStatefulWidget {
-  const TaaColoringGame({super.key});
+  final VoidCallback? onBack;
+  const TaaColoringGame({super.key, this.onBack});
 
   @override
   ConsumerState<TaaColoringGame> createState() => _TaaColoringGameState();
@@ -197,21 +198,18 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
   /// يشغّل ملفاً صوتياً وينتظر انتهاءه فعلاً (لا توقيتات تقديرية تقطع الصوت).
   Future<void> _say(
     String path, {
-    required int maxMs,
+    int? maxMs,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 350),
     AudioChannel channel = AudioChannel.voice,
   }) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: channel);
-      final done = AudioService.instance.onPlayerComplete(channel);
-      if (done != null) {
-        await done.first.timeout(
-          Duration(milliseconds: maxMs),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await AudioService.instance.playAssetAndWait(
+        path,
+        channel: channel,
+        explicitDuration: explicitDuration ?? (maxMs != null ? Duration(milliseconds: maxMs) : null),
+        pauseAfter: pauseAfter,
+      );
     } catch (_) {}
   }
 
@@ -254,53 +252,56 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
     });
     _stopAudio();
 
-    if (opt.hasMadd) {
-      setState(() {
-        _score++;
-        _isWordSelected = true;
-        _isProcessing = false;
-      });
-      _confetti.play();
+    try {
+      if (opt.hasMadd) {
+        setState(() {
+          _score++;
+          _isWordSelected = true;
+        });
+        _confetti.play();
 
-      // «أحسنت + الكلمة» ثم طلب التلوين
-      await _say(rd.correctAudio, maxMs: 3500);
-      if (!_alive(tk)) return;
-      await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
-      return;
-    }
+        // «أحسنت + الكلمة» ثم طلب التلوين
+        await _say(rd.correctAudio, maxMs: 3500);
+        if (!_alive(tk)) return;
+        await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+        return;
+      }
 
-    // خاطئة
-    _wrongPressed.add(idx);
-    final wrongIndexes = [
-      for (int i = 0; i < rd.options.length; i++)
-        if (!rd.options[i].hasMadd) i,
-    ];
-    final bothWrongPressed = wrongIndexes.every(_wrongPressed.contains);
+      // خاطئة
+      _wrongPressed.add(idx);
+      final wrongIndexes = [
+        for (int i = 0; i < rd.options.length; i++)
+          if (!rd.options[i].hasMadd) i,
+      ];
+      final bothWrongPressed = wrongIndexes.every(_wrongPressed.contains);
 
-    if (bothWrongPressed) {
-      // كما في الأصل: بعد الضغط على البطاقتين الخاطئتين تُنطق الإجابة وتُكشف
-      await _say(rd.revealAudio, maxMs: 7000);
-      if (!_alive(tk)) return;
-      setState(() {
-        _selectedOption = rd.options.indexWhere((o) => o.hasMadd);
-        _isWordSelected = true;
-        _isProcessing = false;
-      });
-      await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
-    } else {
-      // «حاول مرة أخرى»
-      await _say('audio/games/coloring/5_al23.mp3', maxMs: 3200);
-      if (!_alive(tk)) return;
-      setState(() {
-        _selectedOption = null;
-        _isProcessing = false;
-      });
+      if (bothWrongPressed) {
+        // كما في الأصل: بعد الضغط على البطاقتين الخاطئتين تُنطق الإجابة وتُكشف
+        await _say(rd.revealAudio, maxMs: 7000);
+        if (!_alive(tk)) return;
+        setState(() {
+          _selectedOption = rd.options.indexWhere((o) => o.hasMadd);
+          _isWordSelected = true;
+        });
+        await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+      } else {
+        // «حاول مرة أخرى»
+        await _say('audio/games/coloring/5_al23.mp3', maxMs: 3200);
+        if (!_alive(tk)) return;
+        setState(() {
+          _selectedOption = null;
+        });
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isProcessing = false);
+      }
     }
   }
 
   // ─── الخطوة 2: تلوين مقاطع الكلمة ───────────────────────────────────────────
   Future<void> _colorSlice(int sliceIdx) async {
-    if (!_isWordSelected || _roundDone) return;
+    if (!_isWordSelected || _roundDone || _isProcessing) return;
     if (_sliceColors[sliceIdx] == _selectedPaletteColor) return;
 
     HapticFeedback.selectionClick();
@@ -317,24 +318,28 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
       return;
     }
 
-    final tk = ++_token;
-    setState(() => _roundDone = true);
+    ++_token;
+    setState(() {
+      _roundDone = true;
+      _isProcessing = true;
+    });
     _confetti.play();
     final rd = _rounds[_round];
 
-    await _say(
-      'audio/games/coloring/6_b2.mp3',
-      maxMs: 450,
-      channel: AudioChannel.sfx,
-    );
-    if (!_alive(tk)) return;
-    await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
-    if (!_alive(tk)) return;
-    await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
-    if (!_alive(tk)) return;
-    await Future.delayed(const Duration(milliseconds: 500));
-    if (!_alive(tk)) return;
-    _advance();
+    try {
+      await _say(
+        'audio/games/coloring/6_b2.mp3',
+        maxMs: 450,
+        channel: AudioChannel.sfx,
+      );
+      await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
+      await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
+      if (mounted) _advance();
+    } finally {
+      if (mounted) {
+        setState(() => _isProcessing = false);
+      }
+    }
   }
 
   void _resetRoundState() {
@@ -370,6 +375,16 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
   }
 
   void _previous() {
+    if (_round == 0) {
+      _token++;
+      _stopAudio();
+      if (widget.onBack != null) {
+        widget.onBack!();
+      } else {
+        Navigator.of(context).maybePop();
+      }
+      return;
+    }
     final tk = ++_token;
     _stopAudio();
     setState(() {
@@ -685,7 +700,11 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
               HapticFeedback.lightImpact();
               _token++;
               _stopAudio();
-              Navigator.of(context).popUntil((r) => r.isFirst);
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).maybePop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

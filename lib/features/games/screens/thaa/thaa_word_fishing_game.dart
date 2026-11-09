@@ -102,7 +102,8 @@ const List<_RoundData> _rounds = [
 ];
 
 class ThaaWordFishingGame extends ConsumerStatefulWidget {
-  const ThaaWordFishingGame({super.key});
+  final VoidCallback? onBack;
+  const ThaaWordFishingGame({super.key, this.onBack});
 
   @override
   ConsumerState<ThaaWordFishingGame> createState() => _ThaaWordFishingGameState();
@@ -124,6 +125,10 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
     final t = _token;
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -247,7 +252,7 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
         }
       }
     } finally {
-      if (mounted && t == _token && !_roundDone) {
+      if (mounted) {
         setState(() => _isBusy = false);
       }
     }
@@ -432,7 +437,11 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
                   if (mounted && t == _token) _startRound();
                 });
               } else {
-                Navigator.of(context).pop();
+                if (widget.onBack != null) {
+                  widget.onBack!();
+                } else {
+                  Navigator.of(context).pop();
+                }
               }
             },
           ),
@@ -441,7 +450,11 @@ class _ThaaWordFishingGameState extends ConsumerState<ThaaWordFishingGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

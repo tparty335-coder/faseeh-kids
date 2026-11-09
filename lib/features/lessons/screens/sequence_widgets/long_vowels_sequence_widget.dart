@@ -42,6 +42,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
           'audioFile': 'audio/lessons/thaa/sounds/thaa_madd_def.mp3',
           'secondAudioFile': 'audio/lessons/thaa/sounds/thaa_madd_types.mp3',
+          'imageFile': 'assets/images/lessons/thaa/sounds/madd_intro.png',
         },
         {
           'type': 'example',
@@ -49,7 +50,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْأَلِفِ (ثَا)',
           'maddChar': 'ثَا',
           'color': const Color(0xFFD32F2F),
-          'explanation': 'فَتْحَةٌ يَلِيهَا أَلِفٌ، مِثْلُ: ثَابِت',
+          'explanation': 'توضع فتحة فوق الثاء ويليها ألف، مثل كلمة: ثَابِت',
           'exampleWord': 'ثَابِت',
           'audioFile': 'audio/lessons/thaa/sounds/thaa_madd_alif.mp3',
           'wordAudio': 'audio/lessons/thaa/sounds/word_thabit.mp3',
@@ -61,7 +62,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْوَاوِ (ثُو)',
           'maddChar': 'ثُو',
           'color': const Color(0xFFF57C00),
-          'explanation': 'ضَمَّةٌ يَلِيهَا وَاوٌ، مِثْلُ: ثُوم',
+          'explanation': 'توضع فوقه ضمة يليها واو، مثل كلمة: ثُوم',
           'exampleWord': 'ثُوم',
           'audioFile': 'audio/lessons/thaa/sounds/thaa_madd_waw.mp3',
           'wordAudio': 'audio/lessons/thaa/sounds/word_thum.mp3',
@@ -73,7 +74,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْيَاءِ (ثِي)',
           'maddChar': 'ثِي',
           'color': const Color(0xFF1976D2),
-          'explanation': 'كَسْرَةٌ يَلِيهَا يَاءٌ، مِثْلُ: ثِيرَان',
+          'explanation': 'توضع تحته كسرة يليها ياء، مثل كلمة: ثِيرَان',
           'exampleWord': 'ثِيرَان',
           'audioFile': 'audio/lessons/thaa/sounds/thaa_madd_yaa.mp3',
           'wordAudio': 'audio/lessons/thaa/sounds/word_theeran.mp3',
@@ -87,48 +88,49 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
         {
           'type': 'intro',
           'id': 'madd_intro',
-          'label': 'مُقَدِّمَةُ الْمَدِّ الطَّوِيلِ',
-          'color': const Color(0xFF00695C),
-          'title': 'الْمُدُودُ الطَّوِيلَةُ مَعَ حَرْفِ الْجِيمِ (ج)',
-          'explanation': 'حَرْفُ الْجِيمِ (ج) يَمْتَدُّ مَعَ حُرُوفِ الْمَدِّ الثَّلَاثَةِ فَيَطُولُ الصَّوْتُ.',
+          'label': 'تَعْرِيفُ الْمَدِّ وَأَنْوَاعُهُ',
+          'color': const Color(0xFF6A1B9A),
+          'title': 'الْحَرَكَاتُ الطَّوِيلَةُ مَعَ حَرْفِ الْجِيمِ',
+          'explanation': 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
           'audioFile': 'audio/lessons/jeem/sounds/jeem_madd_def.mp3',
           'secondAudioFile': 'audio/lessons/jeem/sounds/jeem_madd_types.mp3',
+          'imageFile': 'assets/images/lessons/jeem/sounds/madd_intro.png',
         },
         {
           'type': 'example',
           'id': 'madd_alif',
-          'label': 'مَدُّ الْأَلِفِ الطَّوِيلُ (جَا)',
+          'label': 'الْمَدُّ بِالْأَلِفِ (جَا)',
           'maddChar': 'جَا',
           'color': const Color(0xFFD32F2F),
-          'explanation': 'مَدُّ الْأَلِفِ يَمُدُّ الْجِيمَ إِلَى ضِعْفَيْنِ مِثَالٌ: جَمَال',
-          'exampleWord': 'جَمَال',
-          'audioFile': 'audio/letters/long_vowels/jeem_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/jeem/sounds/word_jamal.mp3',
-          'imageFile': 'assets/images/lessons/jeem/sounds/madd_jamal.png',
+          'explanation': 'توضع فتحة فوق الجيم ويليها ألف، مثل كلمة: جَابِر',
+          'exampleWord': 'جَابِر',
+          'audioFile': 'audio/lessons/jeem/sounds/jeem_madd_alif.mp3',
+          'wordAudio': 'audio/lessons/jeem/sounds/word_gaber.mp3',
+          'imageFile': 'assets/images/lessons/jeem/sounds/madd_gaber.png',
         },
         {
           'type': 'example',
           'id': 'madd_waw',
-          'label': 'مَدُّ الْوَاوِ الطَّوِيلُ (جُو)',
+          'label': 'الْمَدُّ بِالْوَاوِ (جُو)',
           'maddChar': 'جُو',
           'color': const Color(0xFFF57C00),
-          'explanation': 'مَدُّ الْوَاوِ يَمُدُّ الْجِيمَ إِلَى ضِعْفَيْنِ مِثَالٌ: جَوَاد',
-          'exampleWord': 'جَوَاد',
-          'audioFile': 'audio/letters/long_vowels/jeem_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/jeem/sounds/word_jawad.mp3',
-          'imageFile': 'assets/images/lessons/jeem/sounds/madd_jawad.png',
+          'explanation': 'توضع فوقه ضمة يليها واو، مثل كلمة: وُجُوه',
+          'exampleWord': 'وُجُوه',
+          'audioFile': 'audio/lessons/jeem/sounds/jeem_madd_waw.mp3',
+          'wordAudio': 'audio/lessons/jeem/sounds/word_wojooh.mp3',
+          'imageFile': 'assets/images/lessons/jeem/sounds/madd_wojooh.png',
         },
         {
           'type': 'example',
           'id': 'madd_yaa',
-          'label': 'مَدُّ الْيَاءِ الطَّوِيلُ (جِي)',
+          'label': 'الْمَدُّ بِالْيَاءِ (جِي)',
           'maddChar': 'جِي',
           'color': const Color(0xFF1976D2),
-          'explanation': 'مَدُّ الْيَاءِ يَمُدُّ الْجِيمَ إِلَى ضِعْفَيْنِ مِثَالٌ: جِيل',
-          'exampleWord': 'جِيل',
-          'audioFile': 'audio/letters/long_vowels/jeem_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/jeem/sounds/word_jidar.mp3',
-          'imageFile': 'assets/images/lessons/jeem/sounds/madd_jeel.png',
+          'explanation': 'توضع تحته كسرة يليها ياء، مثل كلمة: نَجِيب',
+          'exampleWord': 'نَجِيب',
+          'audioFile': 'audio/lessons/jeem/sounds/jeem_madd_yaa.mp3',
+          'wordAudio': 'audio/lessons/jeem/sounds/word_najeeb.mp3',
+          'imageFile': 'assets/images/lessons/jeem/sounds/madd_najeeb.png',
         },
       ];
     }
@@ -677,12 +679,10 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
       final followUpPath =
           (page['secondAudioFile'] as String?) ?? (page['wordAudio'] as String?);
       if (followUpPath != null) {
-        await AudioService.instance
-            .onPlayerComplete(AudioChannel.voice)
-            ?.first
-            .timeout(const Duration(seconds: 9), onTimeout: () {});
-        if (!mounted || playId != _audioPlayId) return;
-        await Future.delayed(const Duration(milliseconds: 250));
+        // انتظر انتهاء الملف الأول بناءً على مدته الفعلية بدلاً من onPlayerComplete
+        // حتى لا يُفعَّل تشغيل الملف الثاني بسبب انتهاء ملف آخر لاحقاً
+        final firstDur = AudioService.instance.getAssetDuration(path);
+        await Future.delayed(firstDur + const Duration(milliseconds: 250));
         if (!mounted || playId != _audioPlayId) return;
         await AudioService.instance.playAsset(followUpPath);
       }

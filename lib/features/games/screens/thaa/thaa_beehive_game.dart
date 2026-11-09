@@ -28,12 +28,14 @@ class _Round {
   final double imgH;
   final String wordAudio;
   final String praiseAudio;
+  final String correctWord;   // الكلمة الكاملة تظهر بعد الاختيار الصحيح
   final List<_CellZone> cells;
   const _Round({
     required this.imagePath,
     required this.imgH,
     required this.wordAudio,
     required this.praiseAudio,
+    required this.correctWord,
     required this.cells,
   });
 }
@@ -45,11 +47,12 @@ const List<_Round> _rounds = [
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    correctWord: 'ثَعْلَبُ',
     cells: [
-      _CellZone(label: 'ثُ', isCorrect: false, px: 880, py: 170), // أعلى
-      _CellZone(label: 'ثَ', isCorrect: true,  px: 694, py: 272), // يسار (ثَعْلَب - فتحة)
-      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 253), // يمين
-      _CellZone(label: 'ثْ', isCorrect: false, px: 754, py: 339), // أسفل
+      _CellZone(label: 'ثُ', isCorrect: false, px: 884, py: 172), // أعلى
+      _CellZone(label: 'ثَ', isCorrect: true,  px: 696, py: 270), // يسار (ثَعْلَب - فتحة)
+      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 265), // يمين
+      _CellZone(label: 'ثْ', isCorrect: false, px: 761, py: 351), // أسفل
     ],
   ),
   // الجولة 2: ثِمَار ← ثِ (يمين)
@@ -58,11 +61,12 @@ const List<_Round> _rounds = [
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    correctWord: 'ثِمَارٌ',
     cells: [
-      _CellZone(label: 'ثُ', isCorrect: false, px: 880, py: 160), // أعلى
-      _CellZone(label: 'ثَ', isCorrect: false, px: 694, py: 274), // يسار
-      _CellZone(label: 'ثِ', isCorrect: true,  px: 946, py: 254), // يمين (ثِمَار - كسرة)
-      _CellZone(label: 'ثْ', isCorrect: false, px: 754, py: 340), // أسفل
+      _CellZone(label: 'ثُ', isCorrect: false, px: 884, py: 172), // أعلى
+      _CellZone(label: 'ثَ', isCorrect: false, px: 696, py: 270), // يسار
+      _CellZone(label: 'ثِ', isCorrect: true,  px: 946, py: 265), // يمين (ثِمَار - كسرة)
+      _CellZone(label: 'ثْ', isCorrect: false, px: 761, py: 351), // أسفل
     ],
   ),
   // الجولة 3: ثُعْبَان ← ثُ (أعلى)
@@ -71,11 +75,12 @@ const List<_Round> _rounds = [
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    correctWord: 'ثُعْبَانٌ',
     cells: [
-      _CellZone(label: 'ثُ', isCorrect: true,  px: 886, py: 184), // أعلى (ثُعْبَان - ضمة)
-      _CellZone(label: 'ثَ', isCorrect: false, px: 696, py: 271), // يسار
-      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 250), // يمين
-      _CellZone(label: 'ثْ', isCorrect: false, px: 756, py: 335), // أسفل
+      _CellZone(label: 'ثُ', isCorrect: true,  px: 884, py: 172), // أعلى (ثُعْبَان - ضمة)
+      _CellZone(label: 'ثَ', isCorrect: false, px: 696, py: 270), // يسار
+      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 265), // يمين
+      _CellZone(label: 'ثْ', isCorrect: false, px: 761, py: 351), // أسفل
     ],
   ),
   // الجولة 4: مِثْقَاب ← ثْ (أسفل)
@@ -84,17 +89,19 @@ const List<_Round> _rounds = [
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_mithqab.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    correctWord: 'مِثْقَابٌ',
     cells: [
-      _CellZone(label: 'ثُ', isCorrect: false, px: 880, py: 172), // أعلى
-      _CellZone(label: 'ثَ', isCorrect: false, px: 695, py: 274), // يسار
-      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 254), // يمين
-      _CellZone(label: 'ثْ', isCorrect: true,  px: 755, py: 340), // أسفل (مِثْقَاب - سكون)
+      _CellZone(label: 'ثُ', isCorrect: false, px: 884, py: 172), // أعلى
+      _CellZone(label: 'ثَ', isCorrect: false, px: 696, py: 270), // يسار
+      _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 265), // يمين
+      _CellZone(label: 'ثْ', isCorrect: true,  px: 761, py: 351), // أسفل (مِثْقَاب - سكون)
     ],
   ),
 ];
 
 class ThaaBeeHiveGame extends ConsumerStatefulWidget {
-  const ThaaBeeHiveGame({super.key});
+  final VoidCallback? onBack;
+  const ThaaBeeHiveGame({super.key, this.onBack});
   @override
   ConsumerState<ThaaBeeHiveGame> createState() => _ThaaBeeHiveGameState();
 }
@@ -104,10 +111,15 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
   int _round = 0, _score = 0, _wrongAttempts = 0, _token = 0;
   int? _tapped;
   bool _roundDone = false, _gameOver = false, _showCorrectAnswer = false;
+  bool _isBusy = false;
 
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
     final t = _token;
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -167,55 +179,63 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
       _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 400));
 
   Future<void> _onCellTap(int idx) async {
-    if (_roundDone || _showCorrectAnswer) return;
+    if (_roundDone || _showCorrectAnswer || _isBusy) return;
     HapticFeedback.lightImpact();
     final t = ++_token;
-    final round = _rounds[_round];
-    final cell = round.cells[idx];
-    if (cell.isCorrect) {
-      setState(() {
-        _tapped = idx;
-        _roundDone = true;
-        _score++;
-      });
-      _confetti.play();
-      // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
-      await _say(round.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع
-      await _playWordAudio(pauseAfter: const Duration(milliseconds: 700));
-      if (!mounted || t != _token) return;
-
-      _advance();
-    } else {
-      setState(() {
-        _tapped = idx;
-        _wrongAttempts++;
-      });
-      await _playWrong();
-      if (!mounted || t != _token) return;
-
-      if (_wrongAttempts >= 2) {
+    _isBusy = true;
+    try {
+      final round = _rounds[_round];
+      final cell = round.cells[idx];
+      if (cell.isCorrect) {
         setState(() {
-          _showCorrectAnswer = true;
+          _tapped = idx;
+          _roundDone = true;
+          _score++;
         });
-        await _playThisIsCorrect();
+        _confetti.play();
+        // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
+        await _say(round.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
         if (!mounted || t != _token) return;
-        // سماع الكلمة كاملة عند إظهار الإجابة الصحيحة
-        await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
+
+        // 2. سماع اسم الكلمة كاملاً بعد التشجيع
+        await _playWordAudio(pauseAfter: const Duration(milliseconds: 700));
         if (!mounted || t != _token) return;
+
         _advance();
       } else {
         setState(() {
-          _tapped = null;
+          _tapped = idx;
+          _wrongAttempts++;
         });
+        await _playWrong();
+        if (!mounted || t != _token) return;
+
+        if (_wrongAttempts >= 2) {
+          setState(() {
+            _showCorrectAnswer = true;
+          });
+          await _playThisIsCorrect();
+          if (!mounted || t != _token) return;
+          // سماع الكلمة كاملة عند إظهار الإجابة الصحيحة
+          await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
+          if (!mounted || t != _token) return;
+          _advance();
+        } else {
+          setState(() {
+            _tapped = null;
+          });
+        }
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isBusy = false);
       }
     }
   }
 
   void _advance() {
     final t = ++_token;
+    _isBusy = false;
     AudioService.instance.stop();
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
@@ -370,6 +390,33 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                       ),
                     ).animate().fadeIn().scale(),
                   ),
+                // ── الكلمة كاملة تظهر في قلب الزهرة مكان الكلمة الناقصة بعد الإجابة الصحيحة ──
+                if (_roundDone || _showCorrectAnswer)
+                  Positioned(
+                    left: ox + ((453.5 - 95.0) / _imgW) * dW,
+                    top: oy + ((266.5 - 40.0) / rd.imgH) * dH,
+                    width: (190.0 / _imgW) * dW,
+                    height: (80.0 / rd.imgH) * dH,
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFFFEA),
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          rd.correctWord,
+                          style: TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: (34 * dW / _imgW).clamp(20.0, 44.0),
+                            fontWeight: FontWeight.w900,
+                            color: const Color(0xFF1B5E20),
+                          ),
+                        ),
+                      ),
+                    ).animate().fadeIn(duration: 250.ms).scale(begin: const Offset(0.85, 0.85)),
+                  ),
                 Positioned(top: 10, left: 0, right: 0, child: _topBar()),
               ],
             );
@@ -425,7 +472,11 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                   if (mounted && t == _token) _playCurrentWordStandalone();
                 });
               } else {
-                Navigator.of(context).pop();
+                if (widget.onBack != null) {
+                  widget.onBack!();
+                } else {
+                  Navigator.of(context).pop();
+                }
               }
             },
           ),
@@ -434,7 +485,11 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

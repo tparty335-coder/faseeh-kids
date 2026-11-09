@@ -42,23 +42,28 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
     scenes: [
       StoryScene(
         imagePath: '${_dir}taa_cd_story_1.png',
-        audioPath: '${_audio}taa_story_1.mp3', // تامر يحب الحقل ويذهب إليه كل أسبوع مع أبيه
+        audioPath: '${_audio}taa_story_1.mp3',
+        captionText: 'تَامِرٌ يُحِبُّ الْحَقْلَ وَيَذْهَبُ إِلَيْهِ كُلَّ أُسْبُوعٍ مَعَ أَبِيهِ.',
       ),
       StoryScene(
         imagePath: '${_dir}taa_cd_story_2.png',
-        audioPath: '${_audio}taa_story_2.mp3', // الحقل فيه أشجار تفاح وأشجار تين
+        audioPath: '${_audio}taa_story_2.mp3',
+        captionText: 'الْحَقْلُ فِيهِ أَشْجَارُ تُفَّاحٍ وَأَشْجَارُ تِينٍ.',
       ),
       StoryScene(
         imagePath: '${_dir}taa_cd_story_3.png',
-        audioPath: '${_audio}taa_story_3.mp3', // يساعد تامر والده في جمع التين والتفاح
+        audioPath: '${_audio}taa_story_3.mp3',
+        captionText: 'يُسَاعِدُ تَامِرٌ وَالِدَهُ فِي جَمْعِ التِّينِ وَالتُّفَّاحِ.',
       ),
       StoryScene(
         imagePath: '${_dir}taa_cd_story_4.png',
-        audioPath: '${_audio}taa_story_4.mp3', // ويعود إلى البيت مسروراً
+        audioPath: '${_audio}taa_story_4.mp3',
+        captionText: 'وَيَعُودُ إِلَى الْبَيْتِ مَسْرُورًا.',
       ),
       StoryScene(
         imagePath: '${_dir}taa_cd_story_5.png',
-        audioPath: '${_audio}taa_story_5.mp3', // تامر حوله عناصر كثيرة بها حرف التاء ابحث عنها واضغط عليها
+        audioPath: '${_audio}taa_story_5.mp3',
+        captionText: 'تَامِرُ حَوْلَهُ عَنَاصِرُ كَثِيرَةٌ بِهَا حَرْفُ التَّاءِ.. ابْحَثْ عَنْهَا وَاضْغَطْ عَلَيْهَا',
         interaction: WordFindStoryInteraction(
           instructionText: 'تَامِرُ حَوْلَهُ عَنَاصِرُ كَثِيرَةٌ بِهَا حَرْفُ التَّاءِ.. ابْحَثْ عَنْهَا وَاضْغَطْ عَلَيْهَا',
           instructionAudioPath: '${_audio}taa_story_5.mp3',
@@ -107,10 +112,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       StoryScene(
         imagePath: '${_dir}taa_cd_story_6.png',
         audioPath: '${_audio}taa_story_6.mp3',
+        captionText: 'تَاءٌ تَاجٌ فَوْقَ الرَّأْسِ .. فِيهِ الذَّهَبُ وَفِيهِ الْمَاسُ',
       ),
       StoryScene(
         imagePath: '${_dir}taa_cd_story_nasheed.png',
-        audioPath: '${_audio}taa_nasheed.mp3', // نشيد الحرف (تاء تاج فوق الرأس يزين ملكاً قوي البأس)
+        audioPath: '${_audio}taa_nasheed.mp3',
+        captionText: 'تَاءٌ تَاجٌ فَوْقَ الرَّأْسِ .. يَزِينُ مَلِكًا قَوِيَّ الْبَأْسِ 🎵',
         isNasheed: true,
       ),
     ],

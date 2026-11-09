@@ -124,7 +124,8 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
     return LayoutBuilder(
       builder: (context, c) {
         final sw = c.maxWidth, sh = c.maxHeight;
-        final ia = _imgW / (imgH > 0 ? imgH : 600);
+        final effImgW = (imgH == 474 || imgH == 503) ? 800.0 : _imgW;
+        final ia = effImgW / (imgH > 0 ? imgH : 600);
         double dW, dH, ox, oy;
         if (sw / sh < ia) {
           dW = sw;
@@ -137,7 +138,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
           ox = (sw - dW) / 2;
           oy = 0;
         }
-        final s = dW / _imgW;
+        final s = dW / effImgW;
 
         Widget spot(Offset center, double r, VoidCallback onTap) {
           final isNorm = center.dx <= 1.0 && center.dy <= 1.0;
@@ -201,7 +202,9 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
             ],
             // مصاصة الانتقال للصفحة التالية
             spot(
-              const Offset(876, 365),
+              effImgW == 800.0
+                  ? const Offset(0.903, 0.807)
+                  : const Offset(876, 365),
               52,
               () => _setPage((_page + 1) % _pages.length),
             ),
@@ -270,6 +273,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
             children: List.generate(_pages.length, (i) {
               final active = i == _page;
               return GestureDetector(
+                behavior: HitTestBehavior.opaque,
                 onTap: () => _setPage(i),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 220),

@@ -44,7 +44,6 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
       StoryScene(imagePath: '${_dir}ha_cd_story_3.png', audioPath: '${_audio}ha_story_3.mp3'),
       StoryScene(imagePath: '${_dir}ha_cd_story_4.png', audioPath: '${_audio}ha_story_4.mp3'),
       StoryScene(imagePath: '${_dir}ha_cd_story_5.png', audioPath: '${_audio}ha_story_5.mp3'),
-      StoryScene(imagePath: '${_dir}ha_cd_story_6.png', audioPath: '${_audio}ha_story_6.mp3'),
       StoryScene(imagePath: '${_dir}ha_cd_story_nasheed.png', audioPath: '${_audio}ha_nasheed.mp3', isNasheed: true),
     ],
   ),
@@ -55,9 +54,9 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
     items: [
       VowelItem(
         displayChar: 'حَ',
-        fathaAudio: '${_vowelsAudio}ha_fatha.mp3',
-        dammaAudio: '${_vowelsAudio}ha_damma_rule.mp3',
-        kasraAudio: '${_vowelsAudio}ha_kasra_rule.mp3',
+        fathaAudio: '${_vowelsAudio}haa_h_fatha.mp3',
+        dammaAudio: '${_vowelsAudio}haa_h_damma.mp3',
+        kasraAudio: '${_vowelsAudio}haa_h_kasra.mp3',
       ),
     ],
   ),
@@ -66,9 +65,9 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
   madd: MaddSpec(
     letterChar: 'ح',
     items: [
-      MaddItem(displayChar: 'حَا', audioPath: '${_maddAudio}ha_madd_demo.mp3', imagePath: '${_dir}ha_madd_aa.png'),
-      MaddItem(displayChar: 'حِي', audioPath: '${_maddAudio}ha_madd_demo.mp3', imagePath: '${_dir}ha_madd_ii.png'),
-      MaddItem(displayChar: 'حُو', audioPath: '${_maddAudio}ha_madd_demo.mp3', imagePath: '${_dir}ha_madd_uu.png'),
+      MaddItem(displayChar: 'حَا', audioPath: '${_maddAudio}haa_h_madd_demo.mp3', imagePath: '${_dir}ha_madd_aa.png'),
+      MaddItem(displayChar: 'حِي', audioPath: '${_maddAudio}haa_h_madd_demo.mp3', imagePath: '${_dir}ha_madd_ii.png'),
+      MaddItem(displayChar: 'حُو', audioPath: '${_maddAudio}haa_h_madd_demo.mp3', imagePath: '${_dir}ha_madd_uu.png'),
     ],
   ),
 
@@ -131,17 +130,7 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
           WordItem(word: 'صَحْن',  cardImagePath: '${_dir}ha_words_p4_card_4.png', cardHeight: 380, audioPath: '${_audio}ha_word_p4_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
         ],
       ),
-      // صفحة 5: حَال، حُوت، حِيلَة (مد)
-      WordsPage(
-        listImagePath: '${_dir}ha_words_p5_list.png',
-        listImageHeight: 503,
-        words: [
-          WordItem(word: 'حَال',   cardImagePath: '${_dir}ha_words_p5_card_1.png', cardHeight: 380, audioPath: '${_audio}ha_word_p5_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حُوت',   cardImagePath: '${_dir}ha_words_p5_card_2.png', cardHeight: 380, audioPath: '${_audio}ha_word_p5_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حِيلَة', cardImagePath: '${_dir}ha_words_p5_card_3.png', cardHeight: 380, audioPath: '${_audio}ha_word_p5_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حَصَان', cardImagePath: '${_dir}ha_words_p5_card_4.png', cardHeight: 380, audioPath: '${_audio}ha_word_p5_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-        ],
-      ),
+      
     ],
   ),
 

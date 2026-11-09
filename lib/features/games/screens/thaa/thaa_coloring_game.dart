@@ -73,8 +73,8 @@ const List<_ColoringRound> _rounds = [
       _MaddOption(word: 'ثَعْلَب', hasMadd: false),
       _MaddOption(word: 'ثَابِت', hasMadd: true),
     ],
-    // ثَابِت = 4 حروف (ت،ب،ا،ث) على عرض 490px — مقاطع متساوية تقريباً
-    cuts: [122, 245, 368],
+    // ثَابِت = 4 حروف (ت، ب، ا، ث) من اليسار لليمين
+    cuts: [195, 275, 320],
   ),
   // الجولة 2 (paint2): ثوم ✅، تبحث ❌، ثلج ❌
   _ColoringRound(
@@ -89,8 +89,8 @@ const List<_ColoringRound> _rounds = [
       _MaddOption(word: 'تَبْحَث', hasMadd: false),
       _MaddOption(word: 'ثَلْج', hasMadd: false),
     ],
-    // ثُوم = 3 حروف (م،و،ث) على عرض 490px — مقاطع متساوية تقريباً
-    cuts: [163, 327],
+    // ثُوم = 3 حروف (م، و، ث) من اليسار لليمين
+    cuts: [215, 280],
   ),
   // الجولة 3 (paint3): كمثرى ❌، ثمرة ❌، ثيران ✅
   _ColoringRound(
@@ -105,8 +105,8 @@ const List<_ColoringRound> _rounds = [
       _MaddOption(word: 'ثَمَرَة', hasMadd: false),
       _MaddOption(word: 'ثِيرَان', hasMadd: true),
     ],
-    // ثِيرَان = 5 حروف (ن،ا،ر،ي،ث) على عرض 490px — مقاطع متساوية تقريباً
-    cuts: [98, 196, 294, 392],
+    // ثِيرَان = 5 حروف (ن، ا، ر، ي، ث) من اليسار لليمين
+    cuts: [165, 215, 270, 330],
   ),
 ];
 
@@ -143,7 +143,8 @@ const List<Color> _palette = [
 ];
 
 class ThaaColoringGame extends ConsumerStatefulWidget {
-  const ThaaColoringGame({super.key});
+  final VoidCallback? onBack;
+  const ThaaColoringGame({super.key, this.onBack});
 
   @override
   ConsumerState<ThaaColoringGame> createState() => _ThaaColoringGameState();
@@ -173,6 +174,10 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
     _initSliceColors();
     final tk = _token;
@@ -258,7 +263,6 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       setState(() {
         _score++;
         _isWordSelected = true;
-        _isProcessing = false;
       });
       _confetti.play();
 
@@ -266,6 +270,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       await _say(rd.correctAudio, maxMs: 3500);
       if (!_alive(tk)) return;
       await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+      if (mounted) setState(() => _isProcessing = false);
       return;
     }
 
@@ -284,9 +289,9 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       setState(() {
         _selectedOption = rd.options.indexWhere((o) => o.hasMadd);
         _isWordSelected = true;
-        _isProcessing = false;
       });
       await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
+      if (mounted) setState(() => _isProcessing = false);
     } else {
       // «حاول مرة أخرى»
       await _say('audio/games/coloring/5_al23.mp3', maxMs: 3200);
@@ -317,7 +322,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       return;
     }
 
-    final tk = ++_token;
+    ++_token;
     setState(() => _roundDone = true);
     _confetti.play();
     final rd = _rounds[_round];
@@ -327,12 +332,9 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       maxMs: 450,
       channel: AudioChannel.sfx,
     );
-    if (!_alive(tk)) return;
     await _say('audio/games/fishing/ahsnt.mp3', pauseAfter: const Duration(milliseconds: 400)); // «أحسنت»
-    if (!_alive(tk)) return;
     await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 700)); // نطق الكلمة
-    if (!_alive(tk)) return;
-    _advance();
+    if (mounted) _advance();
   }
 
   void _resetRoundState() {
@@ -679,7 +681,11 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
             if (_round == 0) {
               _token++;
               _stopAudio();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
               return;
             }
             _previous();
@@ -689,7 +695,11 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
               HapticFeedback.lightImpact();
               _token++;
               _stopAudio();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

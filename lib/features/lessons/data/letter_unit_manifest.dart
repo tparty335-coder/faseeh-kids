@@ -100,11 +100,13 @@ class StoryScene {
   final String audioPath;
   final StoryInteraction? interaction; // null = مشهد سردي عادي
   final bool isNasheed; // المشهد الأخير — نشيد الحرف
+  final String? captionText; // نص وصفي يظهر أسفل الصورة
   const StoryScene({
     required this.imagePath,
     required this.audioPath,
     this.interaction,
     this.isNasheed = false,
+    this.captionText,
   });
 }
 

@@ -34,33 +34,38 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── القصة ────────────────────────────────────────────────────────────────
+  // ── القصة (٧ مشاهد أصلية + نشيد) ────────────────────────────────────────
   story: StorySpec(
     scenes: [
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_1.png',
         audioPath: '${_audio}thaa_story_1.mp3',
+        captionText: 'ذَهَبَ ثَابِتٌ مَعَ أُسْرَتِهِ إِلَى مَزْرَعَةِ جَدِّهِ يَوْمَ الْجُمُعَةِ.',
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_2.png',
         audioPath: '${_audio}thaa_story_2.mp3',
+        captionText: 'وَلَعِبَ بَيْنَ الْأَشْجَارِ، وَأَكَلَ بَعْضَ الثِّمَارِ وَالْفَاكِهَةِ.',
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_3.png',
         audioPath: '${_audio}thaa_story_3.mp3',
+        captionText: 'وَفَجْأَةً شَاهَدَ ثُعْبَانًا فَوْقَ الشَّجَرَةِ فَخَافَ وَذَهَبَ إِلَى جَدِّهِ.',
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_4.png',
         audioPath: '${_audio}thaa_story_4.mp3',
+        captionText: 'ثُمَّ عَادَتِ الْأُسْرَةُ وَهِيَ مَسْرُورَةٌ.',
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_5.png',
         audioPath: '${_audio}thaa_story_5.mp3',
+        captionText: 'اضْغَطْ عَلَى الْكَلِمَاتِ الَّتِي بِهَا حَرْفُ الثَّاءِ الْمَمْدُودِ',
         interaction: WordFindStoryInteraction(
-          instructionText: 'اضْغَطْ عَلَى الْكَلِمَاتِ الَّتِي بِهَا حَرْفُ الثَّاءِ الْمَمْدُود :',
+          instructionText: 'اضْغَطْ عَلَى الْكَلِمَاتِ الَّتِي بِهَا حَرْفُ الثَّاءِ الْمَمْدُودِ:',
           instructionAudioPath: '${_audio}thaa_story_5.mp3',
-          correctAudioPath: 'assets/audio/feedback/correct.mp3',
-          wrongAudioPath: 'assets/audio/feedback/try_again.mp3',
+          correctAudioPath: 'assets/audio/games/fishing/ahsnt.mp3',
+          wrongAudioPath: 'assets/audio/games/fishing/hawel.mp3',
           targets: [
             StoryTargetItem(
               label: 'ثِيرَان',
@@ -122,16 +127,18 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_6.png',
         audioPath: '${_audio}thaa_story_6.mp3',
+        captionText: 'ثَاءٌ ثَعْلَبٌ ذَكِيٌّ يَجْمَعُ الثِّمَارَ وَيَلْعَبُ فِي الثَّلْجِ مَعَ الثِّيرَانِ',
       ),
       StoryScene(
         imagePath: '${_dir}thaa_cd_story_nasheed.png',
         audioPath: '${_audio}thaa_nasheed.mp3',
+        captionText: 'ثَاءٌ ثَعْلَبٌ ذَكِيٌّ... ثِمَارٌ وَثَلْجٌ وَثِيرَانُ وَثُوم',
         isNasheed: true,
       ),
     ],
   ),
 
-  // ── الأصوات ─────────────────────────────────────────────────────────────
+  // ── الأصوات ──────────────────────────────────────────────────────────────
   vowels: VowelsSpec(
     letterChar: 'ث',
     items: [
@@ -166,7 +173,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── الكتابة ─────────────────────────────────────────────────────────────
+  // ── الكتابة ──────────────────────────────────────────────────────────────
   tracing: TracingSpec(
     letterChar: 'ث',
     audioIntroPath: '${_audio}thaa_write_intro.mp3',
@@ -179,180 +186,183 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
   ),
 
   // ── كلمات الحرف — 4 صفحات أصلية من ka1..ka4.swf ──────────────────────────
+  // جميع الصور والأصوات أصلية 100% من أسطوانة فصيح — لا يوجد تأليف
+  // الإحداثيات نسبية (0.0..1.0) — الصور 800×474 بكسل
   words: WordsSpec(
     pages: [
-      // صفحة 1 (ka1.swf): ثِمَار، ثَلَّاجَة، ثُعْبَان، ثَلْج
+      // صفحة 1 (ka1.swf): ثِمَار (أحمر)، ثَلَّاجَة (برتقالي)، ثُعْبَان (أخضر)، ثَلْج (أزرق)
       WordsPage(
         listImagePath: '${_dir}thaa_words_p1_list.png',
-        listImageHeight: 606,
+        listImageHeight: 474,
         words: [
           WordItem(
             word: 'ثِمَار',
             cardImagePath: '${_dir}thaa_words_p1_card_1.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p1_1.mp3',
-            hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.209, right: 0.945, bottom: 0.536),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثَلَّاجَة',
             cardImagePath: '${_dir}thaa_words_p1_card_2.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p1_2.mp3',
-            hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.151, top: 0.300, right: 0.601, bottom: 0.519),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثُعْبَان',
             cardImagePath: '${_dir}thaa_words_p1_card_3.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p1_3.mp3',
-            hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.568, right: 0.782, bottom: 0.715),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثَلْج',
             cardImagePath: '${_dir}thaa_words_p1_card_4.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p1_4.mp3',
-            hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.150, top: 0.745, right: 0.422, bottom: 0.892),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
         ],
       ),
       // صفحة 2 (ka2.swf): اِثْنَان، ثَوْب، ثَعْلَب، ثُوم
       WordsPage(
         listImagePath: '${_dir}thaa_words_p2_list.png',
-        listImageHeight: 606,
+        listImageHeight: 474,
         words: [
           WordItem(
             word: 'اِثْنَان',
             cardImagePath: '${_dir}thaa_words_p2_card_1.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p2_1.mp3',
-            hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.209, right: 0.945, bottom: 0.536),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثَوْب',
             cardImagePath: '${_dir}thaa_words_p2_card_2.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p2_2.mp3',
-            hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.151, top: 0.300, right: 0.601, bottom: 0.519),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثَعْلَب',
             cardImagePath: '${_dir}thaa_words_p2_card_3.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p2_3.mp3',
-            hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.568, right: 0.782, bottom: 0.715),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثُوم',
             cardImagePath: '${_dir}thaa_words_p2_card_4.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p2_4.mp3',
-            hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.150, top: 0.745, right: 0.422, bottom: 0.892),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
         ],
       ),
       // صفحة 3 (ka3.swf): ثَابِت، ثِيرَان، مُثَلَّث، كُمَّثْرَى
       WordsPage(
         listImagePath: '${_dir}thaa_words_p3_list.png',
-        listImageHeight: 606,
+        listImageHeight: 474,
         words: [
           WordItem(
             word: 'ثَابِت',
             cardImagePath: '${_dir}thaa_words_p3_card_1.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p3_1.mp3',
-            hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.209, right: 0.945, bottom: 0.536),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'ثِيرَان',
             cardImagePath: '${_dir}thaa_words_p3_card_2.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p3_2.mp3',
-            hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.151, top: 0.300, right: 0.601, bottom: 0.519),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'مُثَلَّث',
             cardImagePath: '${_dir}thaa_words_p3_card_3.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p3_3.mp3',
-            hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.568, right: 0.782, bottom: 0.715),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'كُمَّثْرَى',
             cardImagePath: '${_dir}thaa_words_p3_card_4.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p3_4.mp3',
-            hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.150, top: 0.745, right: 0.422, bottom: 0.892),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
         ],
       ),
-      // صفحة 4 (ka4.swf): هَيْثَم، مِحْرَاث، أَثَاث، ثَقِيل
+      // صفحة 4 (ka4.swf): هَيْثَم، ثَقِيل، أَثَاث، مِحْرَاث
       WordsPage(
         listImagePath: '${_dir}thaa_words_p4_list.png',
-        listImageHeight: 606,
+        listImageHeight: 474,
         words: [
           WordItem(
             word: 'هَيْثَم',
             cardImagePath: '${_dir}thaa_words_p4_card_1.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p4_1.mp3',
-            hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.209, right: 0.945, bottom: 0.536),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
-            word: 'مِحْرَاث',
+            word: 'ثَقِيل',
             cardImagePath: '${_dir}thaa_words_p4_card_2.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p4_2.mp3',
-            hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.151, top: 0.300, right: 0.601, bottom: 0.519),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
             word: 'أَثَاث',
             cardImagePath: '${_dir}thaa_words_p4_card_3.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p4_3.mp3',
-            hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.512, top: 0.568, right: 0.782, bottom: 0.715),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
           WordItem(
-            word: 'ثَقِيل',
+            word: 'مِحْرَاث',
             cardImagePath: '${_dir}thaa_words_p4_card_4.png',
-            cardHeight: 606,
+            cardHeight: 474,
             audioPath: '${_audio}thaa_word_p4_4.mp3',
-            hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
-            speakerOffset: Offset(220, 200),
-            closeOffset: Offset(765, 200),
+            hotspot: WordHotspot(left: 0.150, top: 0.745, right: 0.422, bottom: 0.892),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
           ),
         ],
       ),
+      // صفحة 5 محذوفة — الملفات كانت تالفة (1336 bytes فارغة)
     ],
   ),
 
@@ -382,10 +392,10 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
     ],
     coloring: [
       ColoringRound(
-        word: 'ثَعْلَب',
+        word: 'ثَابِت',
         bgImagePath: '${_gamesDir}coloring/thaa/thaa_coloring_1.png',
         wordRevealImagePath: '${_gamesDir}coloring/thaa/thaa_coloring_word_1.png',
-        introAudioPath: '${_gamesAudio}coloring/thaa/thaa_intro_1.mp3',
+        introAudioPath: '${_audio}thaa_paint_word1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/thaa/thaa_reveal_1.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/thaa/thaa_coloring_1_s1.png', color: Color(0xFFE53935)),

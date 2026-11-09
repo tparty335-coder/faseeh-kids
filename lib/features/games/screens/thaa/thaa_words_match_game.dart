@@ -47,14 +47,14 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: ثُعْبَان (1024 × 486)
+  // الجولة 1: ثُعْبَان (1024 × 544)
   _Round(
     imagePath: 'assets/images/games/words/thaa_words_round_1.png',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
+    imgH: 544,
+    cardPx: 139.0,
+    cardPyList: [154.5, 281.5, 418.5],
+    dropPx: 671.5,
+    dropPy: 495.0,
     correctWord: 'ثُعْبَان',
     wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -64,14 +64,14 @@ const List<_Round> _rounds = [
       _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 2: ثَعْلَب (1024 × 486)
+  // الجولة 2: ثَعْلَب (1024 × 504)
   _Round(
     imagePath: 'assets/images/games/words/thaa_words_round_2.png',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
+    imgH: 504,
+    cardPx: 134.0,
+    cardPyList: [106.5, 234.5, 371.5],
+    dropPx: 667.5,
+    dropPy: 452.0,
     correctWord: 'ثَعْلَب',
     wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -81,44 +81,45 @@ const List<_Round> _rounds = [
       _WordCard(word: 'جَمَل', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 3: ثُوم (1024 × 486)
+  // الجولة 3: ثَلْج (1024 × 508)
   _Round(
     imagePath: 'assets/images/games/words/thaa_words_round_3.png',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
-    correctWord: 'ثُوم',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thum.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
-    cards: [
-      _WordCard(word: 'تُفَّاح', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بَصَل', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'ثُوم', isCorrect: true,  color: Color(0xFFFFD17A)),
-    ],
-  ),
-  // الجولة 4: ثَلْج (1024 × 486)
-  _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_4.png',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
+    imgH: 508,
+    cardPx: 134.0,
+    cardPyList: [104.5, 231.5, 369.0],
+    dropPx: 666.0,
+    dropPy: 459.0,
     correctWord: 'ثَلْج',
     wordAudio: 'audio/lessons/thaa/sounds/word_thalj.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cards: [
       _WordCard(word: 'ثَلْج', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَقَرَة', isCorrect: false, color: Color(0xFFFF9EB5)),
       _WordCard(word: 'أَرْنَب', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
+  // الجولة 4: ثُوم (1024 × 521)
+  _Round(
+    imagePath: 'assets/images/games/words/thaa_words_round_4.png',
+    imgH: 521,
+    cardPx: 133.0,
+    cardPyList: [115.0, 243.0, 382.0],
+    dropPx: 669.0,
+    dropPy: 462.0,
+    correctWord: 'ثُوم',
+    wordAudio: 'audio/lessons/thaa/sounds/word_thum.mp3',
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    cards: [
+      _WordCard(word: 'تُفَّاح', isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'بَصَل', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'ثُوم', isCorrect: true,  color: Color(0xFFFFD17A)),
+    ],
+  ),
 ];
 
 class ThaaWordsMatchGame extends ConsumerStatefulWidget {
-  const ThaaWordsMatchGame({super.key});
+  final VoidCallback? onBack;
+  const ThaaWordsMatchGame({super.key, this.onBack});
 
   @override
   ConsumerState<ThaaWordsMatchGame> createState() => _ThaaWordsMatchGameState();
@@ -129,6 +130,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
   late ConfettiController _confetti;
   int _round = 0, _score = 0, _token = 0;
   bool _gameOver = false, _roundDone = false, _showCorrectAnswer = false;
+  bool _isBusy = false;
   int _wrongAttempts = 0;
   String? _droppedWord;
   int? _shakingCard;
@@ -139,6 +141,10 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     _confetti = ConfettiController(duration: const Duration(seconds: 3));
     _shakeController = AnimationController(
       vsync: this,
@@ -199,61 +205,69 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
   Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onCardSelected(int cardIdx) async {
-    if (_roundDone || _showCorrectAnswer) return;
+    if (_roundDone || _showCorrectAnswer || _isBusy) return;
     HapticFeedback.mediumImpact();
     final t = ++_token;
-    final rd = _rounds[_round];
-    final card = rd.cards[cardIdx];
+    _isBusy = true;
+    try {
+      final rd = _rounds[_round];
+      final card = rd.cards[cardIdx];
 
-    if (card.isCorrect) {
-      setState(() {
-        _roundDone = true;
-        _score++;
-        _droppedWord = card.word;
-      });
-      _confetti.play();
-
-      // 1. صوت التشجيع الكامل دون بتر
-      await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع
-      await _playWordAudio(pauseAfter: const Duration(milliseconds: 700));
-      if (!mounted || t != _token) return;
-
-      _advance();
-    } else {
-      setState(() {
-        _shakingCard = cardIdx;
-        _wrongAttempts++;
-      });
-      _shakeController.forward(from: 0);
-      await _playWrong();
-      if (!mounted || t != _token) return;
-
-      if (_wrongAttempts >= 2) {
+      if (card.isCorrect) {
         setState(() {
-          _showCorrectAnswer = true;
-          _droppedWord = rd.correctWord;
+          _roundDone = true;
+          _score++;
+          _droppedWord = card.word;
         });
+        _confetti.play();
 
-        // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-        await _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 400));
+        // 1. صوت التشجيع الكامل دون بتر
+        await _say(rd.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
         if (!mounted || t != _token) return;
-        await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
+
+        // 2. سماع اسم الكلمة كاملاً بعد التشجيع
+        await _playWordAudio(pauseAfter: const Duration(milliseconds: 700));
         if (!mounted || t != _token) return;
 
         _advance();
       } else {
         setState(() {
-          _shakingCard = null;
+          _shakingCard = cardIdx;
+          _wrongAttempts++;
         });
+        _shakeController.forward(from: 0);
+        await _playWrong();
+        if (!mounted || t != _token) return;
+
+        if (_wrongAttempts >= 2) {
+          setState(() {
+            _showCorrectAnswer = true;
+            _droppedWord = rd.correctWord;
+          });
+
+          // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
+          await _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 400));
+          if (!mounted || t != _token) return;
+          await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
+          if (!mounted || t != _token) return;
+
+          _advance();
+        } else {
+          setState(() {
+            _shakingCard = null;
+          });
+        }
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isBusy = false);
       }
     }
   }
 
   void _advance() {
     _token++;
+    _isBusy = false;
     AudioService.instance.stop();
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
@@ -294,27 +308,32 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
       children: [
         LayoutBuilder(
           builder: (ctx, c) {
-            final sw = c.maxWidth, sh = c.maxHeight;
-            final ia = _imgW / rd.imgH, sa = sw / sh;
-            double dW, dH, ox, oy;
-            if (sa < ia) {
-              dW = sw;
-              dH = sw / ia;
-              ox = 0;
-              oy = (sh - dH) / 2;
-            } else {
-              dH = sh;
-              dW = sh * ia;
-              ox = (sw - dW) / 2;
-              oy = 0;
-            }
-            final scaleX = dW / _imgW, scaleY = dH / rd.imgH;
+            final sw = c.maxWidth;
+            // نحسب الارتفاع بناءً على نسبة الصورة الأصلية (1024×486)
+            final imgAspect = _imgW / rd.imgH; // ~2.1
+            final dW = sw;
+            final dH = sw / imgAspect;
+            final sh = c.maxHeight;
+            // نجعل الصورة تملأ العرض كاملاً، ونضع البطاقات بناءً على ذلك
+            // إذا ارتفاع الشاشة أكبر من ارتفاع الصورة المحسوب، نضع الصورة في المنتصف عمودياً
+            final ox = 0.0;
+            final oy = (sh - dH).clamp(0.0, double.infinity) / 2;
+            final scaleX = dW / _imgW;
+            final scaleY = dH / rd.imgH;
 
             return Stack(
               children: [
-                // صورة الشاشة الأصلية للأسطوانة
+                // خلفية بلون الصورة
                 Positioned.fill(
-                  child: Image.asset(rd.imagePath, fit: BoxFit.contain),
+                  child: Container(color: const Color(0xFFD6EAF8)),
+                ),
+                // صورة اللعبة تملأ العرض كاملاً
+                Positioned(
+                  left: ox,
+                  top: oy,
+                  width: dW,
+                  height: dH,
+                  child: Image.asset(rd.imagePath, fit: BoxFit.fill),
                 ),
                 // منطقة إسقاط الكلمة (مكان النقط)
                 _buildDropTarget(rd, ox, oy, scaleX, scaleY),
@@ -352,7 +371,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
   ) {
     final cx = ox + rd.dropPx * scaleX;
     final cy = oy + rd.dropPy * scaleY;
-    const zW = 180.0, zH = 56.0;
+    const zW = 165.0, zH = 46.0;
     final tw = zW * scaleX, th = zH * scaleY;
     final hasWord = _droppedWord != null;
 
@@ -419,75 +438,56 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     final card = rd.cards[i];
     final cx = ox + rd.cardPx * scaleX;
     final cy = oy + rd.cardPyList[i] * scaleY;
-    const cW = 112.0, cH = 74.0;
+    const cW = 118.0, cH = 74.0;
     final cardW = cW * scaleX, cardH = cH * scaleY;
     final isShaking = _shakingCard == i;
     final isDone = _roundDone || _showCorrectAnswer;
 
-    // بطاقة مصممة بشكل موحد وكامل لجميع الخيارات (لا وجود لكلمات باهتة)
+    // شفاف ليظهر كرت الأسطوانة الأصلي المرسوم تحتها تماماً دون أي تداخل
     Widget cardFace = Container(
       width: cardW,
       height: cardH,
-      alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: card.color,
-        borderRadius: BorderRadius.circular(16 * scaleX),
-        border: Border.all(color: Colors.white, width: 3 * scaleX),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.15),
-            blurRadius: 6 * scaleX,
-            offset: Offset(0, 3 * scaleY),
-          ),
-        ],
-      ),
-      child: Text(
-        card.word,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontFamily: 'Cairo',
-          fontSize: 22 * scaleX,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(14 * scaleX),
       ),
     );
 
     // بطاقة قابلة للسحب والنقر معاً
-    Widget interactiveCard = GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: () => _onCardSelected(i),
-      child: Draggable<int>(
-        data: i,
-        maxSimultaneousDrags: isDone ? 0 : 1,
-        feedback: Material(
-          color: Colors.transparent,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            decoration: BoxDecoration(
-              color: card.color,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.white, width: 2),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.25),
-                  blurRadius: 10,
-                  offset: const Offset(0, 5),
-                ),
-              ],
-            ),
-            child: Text(
-              card.word,
-              style: TextStyle(
-                fontFamily: 'Cairo',
-                fontSize: 24 * scaleX,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+    Widget interactiveCard = Draggable<int>(
+      data: i,
+      maxSimultaneousDrags: isDone ? 0 : 1,
+      feedback: Material(
+        color: Colors.transparent,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          decoration: BoxDecoration(
+            color: card.color,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: Colors.white, width: 2),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.25),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
               ),
+            ],
+          ),
+          child: Text(
+            card.word,
+            style: TextStyle(
+              fontFamily: 'Cairo',
+              fontSize: 24 * scaleX,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
         ),
-        childWhenDragging: Opacity(opacity: 0.3, child: cardFace),
+      ),
+      childWhenDragging: Opacity(opacity: 0.3, child: cardFace),
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => _onCardSelected(i),
         child: cardFace,
       ),
     );
@@ -547,7 +547,11 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
               if (_round == 0) {
                 _token++;
                 AudioService.instance.stop();
-                Navigator.of(context).pop();
+                if (widget.onBack != null) {
+                  widget.onBack!();
+                } else {
+                  Navigator.of(context).pop();
+                }
                 return;
               }
               _token++;
@@ -559,6 +563,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
                 _showCorrectAnswer = false;
                 _droppedWord = null;
                 _shakingCard = null;
+                _isBusy = false;
               });
             },
           ),
@@ -567,7 +572,11 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).pop();
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).pop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),

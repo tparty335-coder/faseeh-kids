@@ -71,20 +71,14 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'ثَ',
           'color': const Color(0xFFE53935),
           'vowelAudio': 'audio/lessons/thaa/sounds/thaa_fatha.mp3',
-          'explanation': 'الْفَتْحَةُ شَرْطَةٌ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثَ)',
+          'explanation': 'الْفَتْحَةُ عِبَارَةٌ عَنْ شَرْطَةٍ تُوضَعُ فَوْقَ الْحَرْفِ فَتُحَوِّلُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (ثَ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_fatha_rule.mp3',
           'examples': [
             {
-              'word': 'ثَعْلَب',
+              'word': 'ثَلْج',
               'position': 'ثَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thalab.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/thalab.png',
-            },
-            {
-              'word': 'ثَوْر',
-              'position': 'ثَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thawr.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/thawr.png',
+              'audio': 'audio/lessons/thaa/sounds/word_thalj.mp3',
+              'image': 'assets/images/lessons/thaa/sounds/thalj.png',
             },
           ],
         },
@@ -94,7 +88,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'ثُ',
           'color': const Color(0xFFFF6F00),
           'vowelAudio': 'audio/lessons/thaa/sounds/thaa_damma.mp3',
-          'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثُ)',
+          'explanation': 'الضَّمَّةُ تُوضَعُ فَوْقَ الْحَرْفِ وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (ثُ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_damma_rule.mp3',
           'examples': [
             {
@@ -102,12 +96,6 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
               'position': 'ثَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
               'audio': 'audio/lessons/thaa/sounds/word_thoban.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thoban.png',
-            },
-            {
-              'word': 'ثُوم',
-              'position': 'ثَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thum.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/thum.png',
             },
           ],
         },
@@ -117,7 +105,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'ثِ',
           'color': const Color(0xFF1E88E5),
           'vowelAudio': 'audio/lessons/thaa/sounds/thaa_kasra.mp3',
-          'explanation': 'الْكَسْرَةُ أَسْفَلَ الْحَرْفِ تُحَوِّلُ صَوْتَ الثَّاءِ إِلَى (ثِ)',
+          'explanation': 'الشَّرْطَةُ الَّتِي تُوضَعُ أَسْفَلَ الْحَرْفِ تُسَمَّى كَسْرَةً وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (ثِ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_kasra_rule.mp3',
           'examples': [
             {
@@ -125,12 +113,6 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
               'position': 'ثَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
               'audio': 'audio/lessons/thaa/sounds/word_thimar.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thimar.png',
-            },
-            {
-              'word': 'ثِيَاب',
-              'position': 'ثَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thiab.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/thiab.png',
             },
           ],
         },
@@ -140,20 +122,14 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'ثْ',
           'color': const Color(0xFF5D4037),
           'vowelAudio': 'audio/lessons/thaa/sounds/thaa_sukoon.mp3',
-          'explanation': 'السُّكُونُ فَوْقَ الثَّاءِ يَجْعَلُهَا بِدُونِ حَرَكَةٍ فَتَسْكُنُ (ثْ)',
+          'explanation': 'يُوضَعُ السُّكُونُ فَوْقَ الْحَرْفِ فَيَكُونُ بِدُونِ حَرَكَةٍ (ثْ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_sukoon_rule.mp3',
           'examples': [
             {
-              'word': 'مِثْقَاب',
+              'word': 'اِثْنَان',
               'position': 'ثَاءٌ سَاكِنَةٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_mithqab.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/mithqab.png',
-            },
-            {
-              'word': 'لَيْث',
-              'position': 'ثَاءٌ سَاكِنَةٌ فِي آخِرِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_layth.mp3',
-              'image': 'assets/images/lessons/thaa/sounds/layth.png',
+              'audio': 'audio/lessons/thaa/sounds/word_athnan.mp3',
+              'image': 'assets/images/lessons/thaa/sounds/athnan.png',
             },
           ],
         },
@@ -161,99 +137,79 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
     }
 
     if (letter == 'ج') {
-      return [
-        {
-          'id': 'fatha',
-          'label': 'الْفَتْحَةُ (جَ)',
-          'vowelMark': 'جَ',
-          'color': const Color(0xFFE53935),
-          'explanation': 'الْفَتْحَةُ حَرَكَةٌ تُوضَعُ فَوْقَ حَرْفِ الْجِيمِ فَيُنْطَقُ بِفَتْحِ الْفَمِ (جَ)',
-          'ruleAudio': 'audio/lessons/jeem/sounds/jeem_fatha_rule.mp3',
-          'examples': [
-            {
-              'word': 'جَمَل',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الْفَتْحَةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_jamal.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/jamal.png',
-            },
-            {
-              'word': 'جَبَل',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الْفَتْحَةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_jabal.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/jabal.png',
-            },
-          ],
-        },
-        {
-          'id': 'damma',
-          'label': 'الضَّمَّةُ (جُ)',
-          'vowelMark': 'جُ',
-          'color': const Color(0xFFFF6F00),
-          'explanation': 'الضَّمَّةُ حَرَكَةٌ تُوضَعُ فَوْقَ الْجِيمِ فَيُنْطَقُ بِضَمِّ الشَّفَتَيْنِ (جُ)',
-          'ruleAudio': 'audio/lessons/jeem/sounds/jeem_damma_rule.mp3',
-          'examples': [
-            {
-              'word': 'جُحْر',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الضَّمَّةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_juhr.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/juhr.png',
-            },
-            {
-              'word': 'جُمْلَة',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الضَّمَّةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_jumla.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/jumla.png',
-            },
-          ],
-        },
-        {
-          'id': 'kasra',
-          'label': 'الْكَسْرَةُ (جِ)',
-          'vowelMark': 'جِ',
-          'color': const Color(0xFF1E88E5),
-          'explanation': 'الْكَسْرَةُ حَرَكَةٌ تُوضَعُ تَحْتَ الْجِيمِ فَيُنْطَقُ بِكَسْرِ الْفَكِّ (جِ)',
-          'ruleAudio': 'audio/lessons/jeem/sounds/jeem_kasra_rule.mp3',
-          'examples': [
-            {
-              'word': 'جِبَال',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الْكَسْرَةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_jabal.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/jibal.png',
-            },
-            {
-              'word': 'جِسْر',
-              'position': 'الْجِيمُ فِي الْبِدَايَةِ مَعَ الْكَسْرَةِ فِي الْأَوَّلِ',
-              'audio': 'audio/lessons/jeem/sounds/word_jisr.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/jisr.png',
-            },
-          ],
-        },
-        {
-          'id': 'sukoon',
-          'label': 'السُّكُونُ الْجَازِمُ (جْ)',
-          'vowelMark': 'جْ',
-          'color': const Color(0xFF5D4037),
-          'explanation': 'السُّكُونُ يُوقِفُ الْجِيمَ وَيَجْعَلُهَا سَاكِنَةً لَا حَرَكَةَ لَهَا (جْ)',
-          'ruleAudio': 'audio/lessons/jeem/sounds/jeem_sukoon_rule.mp3',
-          'examples': [
-            {
-              'word': 'نَجْم',
-              'position': 'الْجِيمُ فِي الْوَسَطِ مَعَ السُّكُونِ',
-              'audio': 'audio/lessons/jeem/sounds/word_najm.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/najm.png',
-            },
-            {
-              'word': 'فَجْر',
-              'position': 'الْجِيمُ فِي الْوَسَطِ مَعَ السُّكُونِ',
-              'audio': 'audio/lessons/jeem/sounds/word_fajr.mp3',
-              'image': 'assets/images/lessons/jeem/sounds/fajr.png',
-            },
-          ],
-        },
-      ];
-    }
+        return [
+          {
+            'id': 'fatha',
+            'label': 'الْفَتْحَةُ (جَ)',
+            'vowelMark': 'جَ',
+            'color': const Color(0xFFE53935),
+            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_fatha.mp3',
+            'explanation': 'الْفَتْحَةُ عِبَارَةٌ عَنْ شَرْطَةٍ تُوضَعُ فَوْقَ الْحَرْفِ فَتُحَوِّلُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (جَ)',
+            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_fatha_rule.mp3',
+            'examples': [
+              {
+                'word': 'جَزَر',
+                'position': 'جِيمٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+                'audio': 'audio/lessons/jeem/sounds/word_jazar.mp3',
+                'image': 'assets/images/lessons/jeem/sounds/jazar.png',
+              },
+            ],
+          },
+          {
+            'id': 'damma',
+            'label': 'الضَّمَّةُ (جُ)',
+            'vowelMark': 'جُ',
+            'color': const Color(0xFFFF6F00),
+            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_damma.mp3',
+            'explanation': 'الضَّمَّةُ تُوضَعُ فَوْقَ الْحَرْفِ وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (جُ)',
+            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_kasra_rule.mp3',
+            'examples': [
+              {
+                'word': 'رَجُل',
+                'position': 'جِيمٌ مَضْمُومَةٌ فِي وَسَطِ الْكَلِمَةِ',
+                'audio': 'audio/lessons/jeem/sounds/word_rejal.mp3',
+                'image': 'assets/images/lessons/jeem/sounds/rejal.png',
+              },
+            ],
+          },
+          {
+            'id': 'kasra',
+            'label': 'الْكَسْرَةُ (جِ)',
+            'vowelMark': 'جِ',
+            'color': const Color(0xFF1E88E5),
+            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_kasra.mp3',
+            'explanation': 'الشَّرْطَةُ الَّتِي تُوضَعُ أَسْفَلَ الْحَرْفِ تُسَمَّى كَسْرَةً وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (جِ)',
+            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_damma_rule.mp3',
+            'examples': [
+              {
+                'word': 'جِذْر',
+                'position': 'جِيمٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
+                'audio': 'audio/lessons/jeem/sounds/word_juthoor.mp3',
+                'image': 'assets/images/lessons/jeem/sounds/juthoor.png',
+              },
+            ],
+          },
+          {
+            'id': 'sukoon',
+            'label': 'عَلَامَةُ السُّكُونِ (جْ)',
+            'vowelMark': 'جْ',
+            'color': const Color(0xFF5D4037),
+            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_sukoon.mp3',
+            'explanation': 'يُوضَعُ السُّكُونُ فَوْقَ الْحَرْفِ جِيم فَيَكُونُ بِدُونِ حَرَكَةٍ (جْ)',
+            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_sukoon_rule.mp3',
+            'examples': [
+              {
+                'word': 'رِجْل',
+                'position': 'جِيمٌ سَاكِنَةٌ فِي وَسَطِ الْكَلِمَةِ',
+                'audio': 'audio/lessons/jeem/sounds/word_rejl.mp3',
+                'image': 'assets/images/lessons/jeem/sounds/rejl.png',
+              },
+            ],
+          },
+        ];
+      }
 
-    if (letter == 'ت') {
+      if (letter == 'ت') {
       return [
         {
           'id': 'fatha',

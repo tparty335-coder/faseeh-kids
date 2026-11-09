@@ -363,12 +363,29 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
   }
 
   Widget _buildGame(_GameType type) {
+    void backToMenu() {
+      HapticFeedback.lightImpact();
+      final tk = ++_menuToken;
+      AudioService.instance.stop();
+      setState(() => _selectedGame = null);
+      Future.delayed(const Duration(milliseconds: 350), () {
+        if (mounted && tk == _menuToken && _selectedGame == null) {
+          _playMenuIntro();
+        }
+      });
+    }
+
     switch (type) {
-      case _GameType.fishing: return const ThaaWordFishingGame();
-      case _GameType.beehive: return const ThaaBeeHiveGame();
-      case _GameType.circus: return const ThaaCircusGame();
-      case _GameType.words: return const ThaaWordsMatchGame();
-      case _GameType.coloring: return const ThaaColoringGame();
+      case _GameType.fishing:
+        return ThaaWordFishingGame(onBack: backToMenu);
+      case _GameType.beehive:
+        return ThaaBeeHiveGame(onBack: backToMenu);
+      case _GameType.circus:
+        return ThaaCircusGame(onBack: backToMenu);
+      case _GameType.words:
+        return ThaaWordsMatchGame(onBack: backToMenu);
+      case _GameType.coloring:
+        return ThaaColoringGame(onBack: backToMenu);
     }
   }
 }

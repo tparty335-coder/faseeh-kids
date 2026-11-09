@@ -21,7 +21,8 @@ class AudioService {
 
   final Map<AudioChannel, AudioPlayer> _players = {};
   bool _isDisposed = false;
-  int _fgOpId = 0;
+  int _voiceOpId = 0;
+  int _sfxOpId = 0;
   int _bgmOpId = 0;
 
   void _initPlayers() {
@@ -34,22 +35,44 @@ class AudioService {
     }
   }
 
+  int _nextOpId(AudioChannel channel) {
+    switch (channel) {
+      case AudioChannel.voice:
+        return ++_voiceOpId;
+      case AudioChannel.sfx:
+        return ++_sfxOpId;
+      case AudioChannel.bgm:
+        return ++_bgmOpId;
+    }
+  }
+
+  int _getOpId(AudioChannel channel) {
+    switch (channel) {
+      case AudioChannel.voice:
+        return _voiceOpId;
+      case AudioChannel.sfx:
+        return _sfxOpId;
+      case AudioChannel.bgm:
+        return _bgmOpId;
+    }
+  }
+
   bool _isOpActive(AudioChannel channel, int op) {
     if (_isDisposed) return false;
-    return channel == AudioChannel.bgm ? op == _bgmOpId : op == _fgOpId;
+    switch (channel) {
+      case AudioChannel.voice:
+        return op == _voiceOpId;
+      case AudioChannel.sfx:
+        return op == _sfxOpId;
+      case AudioChannel.bgm:
+        return op == _bgmOpId;
+    }
   }
 
   Future<void> _stopConflictingPlayers(AudioChannel channel) async {
-    if (channel == AudioChannel.bgm) {
-      await _players[AudioChannel.bgm]?.stop();
-    } else {
-      await Future.wait([
-        if (_players[AudioChannel.voice] != null)
-          _players[AudioChannel.voice]!.stop(),
-        if (_players[AudioChannel.sfx] != null)
-          _players[AudioChannel.sfx]!.stop(),
-      ]);
-    }
+    // Only stop playback on the SAME channel.
+    // A sound effect (sfx) must NEVER stop or cut off voice narration.
+    await _players[channel]?.stop();
   }
 
   /// Play an audio asset from the assets folder on a specific channel
@@ -60,7 +83,7 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
-    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
+    final op = _nextOpId(channel);
     try {
       final player = _players[channel];
       if (player == null) return;
@@ -106,7 +129,7 @@ class AudioService {
   }) async {
     if (_isDisposed) return;
     await playAsset(assetPath, channel: channel, volume: volume);
-    final op = channel == AudioChannel.bgm ? _bgmOpId : _fgOpId;
+    final op = _getOpId(channel);
     final dur = explicitDuration ?? getAssetDuration(assetPath);
     await Future.delayed(dur + pauseAfter);
     if (!_isOpActive(channel, op)) return;
@@ -119,7 +142,7 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
-    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
+    final op = _nextOpId(channel);
     try {
       final player = _players[channel];
       if (player == null) return;
@@ -146,7 +169,7 @@ class AudioService {
     double volume = 1.0,
   }) async {
     if (_isDisposed) return;
-    final op = channel == AudioChannel.bgm ? ++_bgmOpId : ++_fgOpId;
+    final op = _nextOpId(channel);
     try {
       final player = _players[channel];
       if (player == null) return;
@@ -171,14 +194,22 @@ class AudioService {
     if (_isDisposed) return;
     try {
       if (channel == null) {
-        ++_fgOpId;
+        ++_voiceOpId;
+        ++_sfxOpId;
         ++_bgmOpId;
         await Future.wait(_players.values.map((p) => p.stop()));
-      } else if (channel == AudioChannel.bgm) {
-        ++_bgmOpId;
-        await _players[channel]?.stop();
       } else {
-        ++_fgOpId;
+        switch (channel) {
+          case AudioChannel.voice:
+            ++_voiceOpId;
+            break;
+          case AudioChannel.sfx:
+            ++_sfxOpId;
+            break;
+          case AudioChannel.bgm:
+            ++_bgmOpId;
+            break;
+        }
         await _players[channel]?.stop();
       }
     } catch (e) {
@@ -223,7 +254,8 @@ class AudioService {
   /// Dispose all players
   void dispose() {
     _isDisposed = true;
-    ++_fgOpId;
+    ++_voiceOpId;
+    ++_sfxOpId;
     ++_bgmOpId;
     for (final player in _players.values) {
       player.dispose();

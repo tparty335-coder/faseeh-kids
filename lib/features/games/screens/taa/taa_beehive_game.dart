@@ -94,7 +94,8 @@ const List<_Round> _rounds = [
 ];
 
 class TaaBeeHiveGame extends ConsumerStatefulWidget {
-  const TaaBeeHiveGame({super.key});
+  final VoidCallback? onBack;
+  const TaaBeeHiveGame({super.key, this.onBack});
   @override
   ConsumerState<TaaBeeHiveGame> createState() => _TaaBeeHiveGameState();
 }
@@ -104,6 +105,7 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
   int _round = 0, _score = 0, _wrongAttempts = 0, _token = 0;
   int? _tapped;
   bool _roundDone = false, _gameOver = false, _showCorrectAnswer = false;
+  bool _isBusy = false;
 
   @override
   void initState() {
@@ -125,96 +127,107 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
     super.dispose();
   }
 
-  Future<void> _say(String path, {int maxMs = 4000}) async {
+  Future<void> _say(
+    String path, {
+    AudioChannel channel = AudioChannel.voice,
+    Duration? explicitDuration,
+    Duration pauseAfter = const Duration(milliseconds: 300),
+  }) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
-      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
-      if (done != null) {
-        await done.first.timeout(
-          Duration(milliseconds: maxMs),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await AudioService.instance.playAssetAndWait(
+        path,
+        channel: channel,
+        explicitDuration: explicitDuration,
+        pauseAfter: pauseAfter,
+      );
     } catch (_) {}
   }
 
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     final t = ++_token;
-    // 1. صوت التعليمات الأصلي لحرف التاء من الأسطوانة
-    await _say('audio/games/beehive/taa_khalea2.mp3', maxMs: 4000);
-    if (!mounted || _gameOver || t != _token) return;
-    // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
-    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+    _isBusy = true;
+    try {
+      // 1. صوت التعليمات الأصلي لحرف التاء من الأسطوانة
+      await _say('audio/games/beehive/taa_khalea2.mp3', pauseAfter: const Duration(milliseconds: 300));
+      if (!mounted || _gameOver || t != _token) return;
+      // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
+      await _say(_rounds[_round].wordAudio, pauseAfter: const Duration(milliseconds: 300));
+    } finally {
+      if (mounted) setState(() => _isBusy = false);
+    }
   }
 
   Future<void> _playWordAudio() async {
-    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+    await _say(_rounds[_round].wordAudio, pauseAfter: const Duration(milliseconds: 300));
   }
 
   Future<void> _playCurrentWordStandalone() async {
     if (!mounted || _gameOver) return;
     ++_token;
-    await _say(_rounds[_round].wordAudio, maxMs: 2500);
+    _isBusy = true;
+    try {
+      await _say(_rounds[_round].wordAudio, pauseAfter: const Duration(milliseconds: 300));
+    } finally {
+      if (mounted) setState(() => _isBusy = false);
+    }
   }
 
-  Future<void> _playWrong() => _say('audio/games/beehive/6_haw.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/games/beehive/6_haw.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _playThisIsCorrect() =>
-      _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+      _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onCellTap(int idx) async {
-    if (_roundDone || _showCorrectAnswer) return;
+    if (_roundDone || _showCorrectAnswer || _isBusy) return;
     HapticFeedback.lightImpact();
     final t = ++_token;
+    _isBusy = true;
     final round = _rounds[_round];
     final cell = round.cells[idx];
-    if (cell.isCorrect) {
-      setState(() {
-        _tapped = idx;
-        _roundDone = true;
-        _score++;
-      });
-      _confetti.play();
-      // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
-      await _say(round.praiseAudio, maxMs: 2500);
-      if (!mounted || t != _token) return;
-
-      // 2. سماع اسم الكلمة كاملاً بعد التشجيع (بَقَرَة / بِطِّيخ / بُرْج / إِبْرَة)
-      await _playWordAudio();
-      if (!mounted || t != _token) return;
-      await Future.delayed(const Duration(milliseconds: 400));
-      if (!mounted || t != _token) return;
-
-      _advance();
-    } else {
-      setState(() {
-        _tapped = idx;
-        _wrongAttempts++;
-      });
-      await _playWrong();
-      if (!mounted || t != _token) return;
-
-      if (_wrongAttempts >= 2) {
+    try {
+      if (cell.isCorrect) {
         setState(() {
-          _showCorrectAnswer = true;
+          _tapped = idx;
+          _roundDone = true;
+          _score++;
         });
-        await _playThisIsCorrect();
+        _confetti.play();
+        // 1. صوت التشجيع الكامل دون بتر (ممتاز / رائع / صح)
+        await _say(round.praiseAudio, pauseAfter: const Duration(milliseconds: 400));
         if (!mounted || t != _token) return;
-        // سماع الكلمة كاملة عند إظهار الإجابة الصحيحة
+
+        // 2. سماع اسم الكلمة كاملاً بعد التشجيع (بَقَرَة / بِطِّيخ / بُرْج / إِبْرَة)
         await _playWordAudio();
         if (!mounted || t != _token) return;
-        await Future.delayed(const Duration(milliseconds: 500));
-        if (!mounted || t != _token) return;
+
         _advance();
       } else {
         setState(() {
-          _tapped = null;
+          _tapped = idx;
+          _wrongAttempts++;
         });
+        await _playWrong();
+        if (!mounted || t != _token) return;
+
+        if (_wrongAttempts >= 2) {
+          setState(() {
+            _showCorrectAnswer = true;
+          });
+          await _playThisIsCorrect();
+          if (!mounted || t != _token) return;
+          // سماع الكلمة كاملة عند إظهار الإجابة الصحيحة
+          await _playWordAudio();
+          if (!mounted || t != _token) return;
+          _advance();
+        } else {
+          setState(() {
+            _tapped = null;
+          });
+        }
       }
+    } finally {
+      if (mounted) setState(() => _isBusy = false);
     }
   }
 
@@ -423,7 +436,11 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
               HapticFeedback.lightImpact();
               _token++;
               AudioService.instance.stop();
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              if (widget.onBack != null) {
+                widget.onBack!();
+              } else {
+                Navigator.of(context).maybePop();
+              }
             },
             child: Container(
               padding: const EdgeInsets.all(10),
@@ -441,6 +458,16 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
             true,
             () {
               HapticFeedback.lightImpact();
+              if (_round == 0) {
+                _token++;
+                AudioService.instance.stop();
+                if (widget.onBack != null) {
+                  widget.onBack!();
+                } else {
+                  Navigator.of(context).maybePop();
+                }
+                return;
+              }
               final t = ++_token;
               AudioService.instance.stop();
               setState(() {
