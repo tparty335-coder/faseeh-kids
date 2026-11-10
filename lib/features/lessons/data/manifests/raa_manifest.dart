@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
 
 // ─── مانيفست حرف الراء (ر) — المحرك الموحّد ──────────────────────────────────
-// المصدر: d:\Projects\faseeh\scratch\extracted_all\raa\audio\module_*.swf
+// المصدر: arabic_1prim_t1U2_ر.exe (أسطوانة الوزارة الأصلية)
+// تفريغ نصي وصوتي 100%: ahdaf_a.swf, write.swf, ka1..ka4.swf, sto1..sto2.swf, stosong.swf
 // ──────────────────────────────────────────────────────────────────────────────
 
 const String _dir = 'assets/images/lessons/raa/';
@@ -12,7 +13,7 @@ const String _maddAudio = 'audio/letters/long_vowels/';
 const String _gamesDir = 'assets/images/games/';
 const String _gamesAudio = 'audio/games/';
 
-/// مانيفست حرف الراء — أصوات أصيلة من module_*.swf، صور placeholder
+/// مانيفست حرف الراء — أصول وأصوات أصلية 100% من أسطوانة الوزارة
 const LetterUnitManifest raaManifest = LetterUnitManifest(
   letter: 'ر',
   unitTitle: 'الْوَحْدَةُ الْعَاشِرَةُ | حَرْفُ الرَّاءِ (ر)',
@@ -36,16 +37,38 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── القصة (6 مشاهد + النشيد) ──────────────────────────────────────────────
+  // ── القصة (6 مشاهد + النشيد = 7 مشاهد أصلية) ───────────────────────────────
   story: StorySpec(
     scenes: [
-      StoryScene(imagePath: '${_dir}raa_cd_story_1.png', audioPath: '${_audio}raa_story_1.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_2.png', audioPath: '${_audio}raa_story_2.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_3.png', audioPath: '${_audio}raa_story_3.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_4.png', audioPath: '${_audio}raa_story_4.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_5.png', audioPath: '${_audio}raa_story_5.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_6.png', audioPath: '${_audio}raa_story_6.mp3'),
-      StoryScene(imagePath: '${_dir}raa_cd_story_nasheed.png', audioPath: '${_audio}raa_nasheed.mp3', isNasheed: true),
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_1.png',
+        audioPath: '${_audio}raa_story_1.mp3',
+      ), // ذات يوم كانت الرمانة تجلس مع أخواتها من ثمار الفواكة فقالت:
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_2.png',
+        audioPath: '${_audio}raa_story_2.mp3',
+      ), // أنا الأجمل لوناً ، والأحلى طعماً.
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_3.png',
+        audioPath: '${_audio}raa_story_3.mp3',
+      ), // فردت البطيخة قائلة : أنا حمراء مثلك وطعمى أحلى من طعمك .
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_4.png',
+        audioPath: '${_audio}raa_story_4.mp3',
+      ), // وأثناء ذلك مرت ريم وقالت للرمانة : لونك جميل طعمك حلو .
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_5.png',
+        audioPath: '${_audio}raa_story_5.mp3',
+      ), // وقالت للبطيخة : طعمك حلو ، لونك جميل .
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_6.png',
+        audioPath: '${_audio}raa_story_6.mp3',
+      ), // يا رفاق لونكم جميل ويستفيد منكم الجسم . ثم أخذت الرمانة وضحكت الفواكة .
+      StoryScene(
+        imagePath: '${_dir}raa_cd_story_nasheed.png',
+        audioPath: '${_audio}raa_nasheed.mp3',
+        isNasheed: true,
+      ), // راء رجل يدفع ثمنا ... يرفع علما يحمي وطنا
     ],
   ),
 
@@ -66,9 +89,21 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
   madd: MaddSpec(
     letterChar: 'ر',
     items: [
-      MaddItem(displayChar: 'رَا', audioPath: '${_maddAudio}raa_madd_demo.mp3', imagePath: '${_dir}raa_madd_aa.png'),
-      MaddItem(displayChar: 'رِي', audioPath: '${_maddAudio}raa_madd_demo.mp3', imagePath: '${_dir}raa_madd_ii.png'),
-      MaddItem(displayChar: 'رُو', audioPath: '${_maddAudio}raa_madd_demo.mp3', imagePath: '${_dir}raa_madd_uu.png'),
+      MaddItem(
+        displayChar: 'رَا',
+        audioPath: '${_maddAudio}raa_madd_demo.mp3',
+        imagePath: '${_dir}raa_madd_aa.png',
+      ),
+      MaddItem(
+        displayChar: 'رُو',
+        audioPath: '${_maddAudio}raa_madd_demo.mp3',
+        imagePath: '${_dir}raa_madd_uu.png',
+      ),
+      MaddItem(
+        displayChar: 'رِي',
+        audioPath: '${_maddAudio}raa_madd_demo.mp3',
+        imagePath: '${_dir}raa_madd_ii.png',
+      ),
     ],
   ),
 
@@ -84,62 +119,262 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── كلمات الحرف (5 صفحات × 4 كلمات) ─────────────────────────────────────
+  // ── كلمات الحرف (4 صفحات × 4 كلمات = 16 كلمة أصلية) ────────────────────────
   words: WordsSpec(
     pages: [
-      // صفحة 1: رَجُل، رُمَّان، رِيشَة، رَمْل
+      // ── صفحة 1 (ka1.swf): رَجُل، رُمَان، رِجْل، ثِيرَان ──
       WordsPage(
         listImagePath: '${_dir}raa_words_p1_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'رَجُل',   cardImagePath: '${_dir}raa_words_p1_card_1.png', cardHeight: 380, audioPath: '${_audio}raa_word_p1_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رُمَّان',  cardImagePath: '${_dir}raa_words_p1_card_2.png', cardHeight: 380, audioPath: '${_audio}raa_word_p1_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رِيشَة',  cardImagePath: '${_dir}raa_words_p1_card_3.png', cardHeight: 380, audioPath: '${_audio}raa_word_p1_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رَمْل',   cardImagePath: '${_dir}raa_words_p1_card_4.png', cardHeight: 380, audioPath: '${_audio}raa_word_p1_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'رَجُل',
+            cardImagePath: '${_dir}raa_words_p1_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p1_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'رُمَان',
+            cardImagePath: '${_dir}raa_words_p1_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p1_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'رِجْل',
+            cardImagePath: '${_dir}raa_words_p1_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p1_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'ثِيرَان',
+            cardImagePath: '${_dir}raa_words_p1_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p1_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 2: رَبِيع، رَسَّام، رَكْض، رِيم
+
+      // ── صفحة 2 (ka2.swf): ذِرَاع، بُرْج، رِيشَة، دَرَاجَة ──
       WordsPage(
         listImagePath: '${_dir}raa_words_p2_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'رَبِيع',  cardImagePath: '${_dir}raa_words_p2_card_1.png', cardHeight: 380, audioPath: '${_audio}raa_word_p2_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رَسَّام', cardImagePath: '${_dir}raa_words_p2_card_2.png', cardHeight: 380, audioPath: '${_audio}raa_word_p2_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رَكْض',   cardImagePath: '${_dir}raa_words_p2_card_3.png', cardHeight: 380, audioPath: '${_audio}raa_word_p2_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رِيم',    cardImagePath: '${_dir}raa_words_p2_card_4.png', cardHeight: 380, audioPath: '${_audio}raa_word_p2_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'ذِرَاع',
+            cardImagePath: '${_dir}raa_words_p2_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p2_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'بُرْج',
+            cardImagePath: '${_dir}raa_words_p2_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p2_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'رِيشَة',
+            cardImagePath: '${_dir}raa_words_p2_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p2_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'دَرَاجَة',
+            cardImagePath: '${_dir}raa_words_p2_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p2_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 3: رَفِيق، رَحْلَة، رُكُوب، رِعَايَة
+
+      // ── صفحة 3 (ka3.swf): عُصْفُور، ذُرَة، فَرَاشَة، قَارِب ──
       WordsPage(
         listImagePath: '${_dir}raa_words_p3_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'رَفِيق',  cardImagePath: '${_dir}raa_words_p3_card_1.png', cardHeight: 380, audioPath: '${_audio}raa_word_p3_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رَحْلَة', cardImagePath: '${_dir}raa_words_p3_card_2.png', cardHeight: 380, audioPath: '${_audio}raa_word_p3_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رُكُوب',  cardImagePath: '${_dir}raa_words_p3_card_3.png', cardHeight: 380, audioPath: '${_audio}raa_word_p3_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رِعَايَة', cardImagePath: '${_dir}raa_words_p3_card_4.png', cardHeight: 380, audioPath: '${_audio}raa_word_p3_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'عُصْفُور',
+            cardImagePath: '${_dir}raa_words_p3_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p3_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'ذُرَة',
+            cardImagePath: '${_dir}raa_words_p3_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p3_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'فَرَاشَة',
+            cardImagePath: '${_dir}raa_words_p3_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p3_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'قَارِب',
+            cardImagePath: '${_dir}raa_words_p3_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p3_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 4: بَحْر، صَقْر، قَمَر، زَهْرَة
+
+      // ── صفحة 4 (ka4.swf): نَمِر، بِرْسِيم، جَرَار، فَأْر ──
       WordsPage(
         listImagePath: '${_dir}raa_words_p4_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'بَحْر',   cardImagePath: '${_dir}raa_words_p4_card_1.png', cardHeight: 380, audioPath: '${_audio}raa_word_p4_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'صَقْر',   cardImagePath: '${_dir}raa_words_p4_card_2.png', cardHeight: 380, audioPath: '${_audio}raa_word_p4_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'قَمَر',   cardImagePath: '${_dir}raa_words_p4_card_3.png', cardHeight: 380, audioPath: '${_audio}raa_word_p4_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَهْرَة', cardImagePath: '${_dir}raa_words_p4_card_4.png', cardHeight: 380, audioPath: '${_audio}raa_word_p4_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-        ],
-      ),
-      // صفحة 5: رَاح، رُوح، رِيح (مد) + رَبِيع
-      WordsPage(
-        listImagePath: '${_dir}raa_words_p5_list.png',
-        listImageHeight: 503,
-        words: [
-          WordItem(word: 'رَاح',   cardImagePath: '${_dir}raa_words_p5_card_1.png', cardHeight: 380, audioPath: '${_audio}raa_word_p5_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رُوح',   cardImagePath: '${_dir}raa_words_p5_card_2.png', cardHeight: 380, audioPath: '${_audio}raa_word_p5_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رِيح',   cardImagePath: '${_dir}raa_words_p5_card_3.png', cardHeight: 380, audioPath: '${_audio}raa_word_p5_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'رَبِيع', cardImagePath: '${_dir}raa_words_p5_card_4.png', cardHeight: 380, audioPath: '${_audio}raa_word_p5_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'نَمِر',
+            cardImagePath: '${_dir}raa_words_p4_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p4_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'بِرْسِيم',
+            cardImagePath: '${_dir}raa_words_p4_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p4_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'جَرَار',
+            cardImagePath: '${_dir}raa_words_p4_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p4_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'فَأْر',
+            cardImagePath: '${_dir}raa_words_p4_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}raa_word_p4_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
     ],
