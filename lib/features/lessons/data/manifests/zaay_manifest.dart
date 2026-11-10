@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
 
-// ─── مانيفست وحدة حرف الزاي (ز) ───
-// المصدر الصوتي: d:\Projects\faseeh\scratch\extracted_all\zaay\audio\module_*.swf
+// ─── مانيفست حرف الزاي (ز) — المحرك الموحّد ──────────────────────────────────
+// المصدر: arabic_1prim_t1U2_ز.exe (أسطوانة الوزارة الأصلية)
+// تفريغ نصي وصوتي 100%: start.swf, write.swf, ka1..ka4.swf, sto1..sto2.swf, stosong.swf
+// ──────────────────────────────────────────────────────────────────────────────
 
 const String _dir = 'assets/images/lessons/zaay/';
 const String _audio = 'audio/lessons/zaay/final/';
@@ -11,49 +13,55 @@ const String _maddAudio = 'audio/letters/long_vowels/';
 const String _gamesDir = 'assets/images/games/';
 const String _gamesAudio = 'audio/games/';
 
-/// مانيفست حرف الزاي كامل
+/// مانيفست حرف الزاي — أصول وأصوات أصلية 100% من أسطوانة الوزارة
 const LetterUnitManifest zaayManifest = LetterUnitManifest(
   letter: 'ز',
-  unitTitle: 'الوحدة الحادية عشرة | حرف الزاي (ز)',
+  unitTitle: 'الْوَحْدَةُ الْحَادِيَةُ عَشْرَةَ | حَرْفُ الزَّايِ (ز)',
   topBarColor: Color(0xFF00838F), // تيل سيان داكن
   highlightColor: Color(0xFF80DEEA), // سيان فاتح
   mascotEmoji: '🌸', // زهرة
   unitIndex: 11,
   nextLetter: 'س',
 
-  // ── الأهداف ──
+  // ── الأهداف ────────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
     audioPath: '${_audio}zaay_goal.mp3',
     objectives: [
-      'التعرف على شكل وصوت حرف الزاي (ز)',
-      'التمييز بين الحركات القصيرة والطويلة',
-      'كتابة حرف الزاي في مواضعه المختلفة',
-      'قراءة كلمات تبدأ أو تحتوي على حرف الزاي',
-      'التفاعل مع قصة ونشيد حرف الزاي',
-      'تطبيق المهارات المكتسبة عبر ألعاب تفاعلية',
-      'إتقان نطق حرف الزاي بمخارجه الصحيحة',
+      'أَتَعَرَّفُ عَلَى حَرْفِ الزَّايِ (ز)',
+      'أَنْطِقُ حَرْفَ الزَّايِ بِالْحَرَكَاتِ الثَّلَاثِ',
+      'أُمَيِّزُ حَرْفَ الزَّايِ فِي الْكَلِمَاتِ',
+      'أَسْتَمِعُ إِلَى قِصَّةِ حَرْفِ الزَّايِ',
+      'أَتَتَبَّعُ حَرْفَ الزَّايِ بِالْقَلَمِ',
+      'أَقْرَأُ كَلِمَاتٍ تَبْدَأُ بِحَرْفِ الزَّايِ',
+      'أَلْعَبُ أَلْعَابَ حَرْفِ الزَّايِ',
     ],
   ),
 
-  // ── القصة (6 مشاهد + نشيد) ──
+  // ── القصة (مشهدان + النشيد = 3 مشاهد أصلية) ────────────────────────────────
   story: StorySpec(
     scenes: [
-      StoryScene(imagePath: '${_dir}zaay_cd_story_1.png', audioPath: '${_audio}zaay_story_1.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_2.png', audioPath: '${_audio}zaay_story_2.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_3.png', audioPath: '${_audio}zaay_story_3.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_4.png', audioPath: '${_audio}zaay_story_4.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_5.png', audioPath: '${_audio}zaay_story_5.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_6.png', audioPath: '${_audio}zaay_story_6.mp3'),
-      StoryScene(imagePath: '${_dir}zaay_cd_story_nasheed.png', audioPath: '${_audio}zaay_nasheed.mp3', isNasheed: true),
+      StoryScene(
+        imagePath: '${_dir}zaay_cd_story_1.png',
+        audioPath: '${_audio}zaay_story_1.mp3',
+      ), // أراد زاهر أن يروح عن نفسه ، فطلب من أبيه أن يذهب إلى القرية ليزور أولاد عمه مرزوق
+      StoryScene(
+        imagePath: '${_dir}zaay_cd_story_2.png',
+        audioPath: '${_audio}zaay_story_2.mp3',
+      ), // فقد زارهم عدة مرات ، فهناك يلعب مع أولاد عمه ويستمع بزينة الحقول ، ويعود سعيدًا.
+      StoryScene(
+        imagePath: '${_dir}zaay_cd_story_nasheed.png',
+        audioPath: '${_audio}zaay_nasheed.mp3',
+        isNasheed: true,
+      ), // زاي زهرة في البستان ... تنشر عطراً في الأوطان
     ],
   ),
 
-  // ── الحركات ──
+  // ── الأصوات (حركات قصيرة) ──────────────────────────────────────────────────
   vowels: VowelsSpec(
     letterChar: 'ز',
     items: [
       VowelItem(
-        displayChar: 'ز',
+        displayChar: 'زَ',
         fathaAudio: '${_vowelsAudio}zaay_fatha.mp3',
         dammaAudio: '${_vowelsAudio}zaay_damma.mp3',
         kasraAudio: '${_vowelsAudio}zaay_kasra.mp3',
@@ -61,17 +69,29 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── المدود ──
+  // ── المدود (حركات طويلة) ────────────────────────────────────────────────────
   madd: MaddSpec(
     letterChar: 'ز',
     items: [
-      MaddItem(displayChar: 'زَا', audioPath: '${_maddAudio}zaay_madd_demo.mp3', imagePath: '${_dir}zaay_madd_aa.png'),
-      MaddItem(displayChar: 'زِي', audioPath: '${_maddAudio}zaay_madd_demo.mp3', imagePath: '${_dir}zaay_madd_ii.png'),
-      MaddItem(displayChar: 'زُو', audioPath: '${_maddAudio}zaay_madd_demo.mp3', imagePath: '${_dir}zaay_madd_uu.png'),
+      MaddItem(
+        displayChar: 'زَا',
+        audioPath: '${_maddAudio}zaay_madd_demo.mp3',
+        imagePath: '${_dir}zaay_madd_aa.png',
+      ),
+      MaddItem(
+        displayChar: 'زُو',
+        audioPath: '${_maddAudio}zaay_madd_demo.mp3',
+        imagePath: '${_dir}zaay_madd_uu.png',
+      ),
+      MaddItem(
+        displayChar: 'زِي',
+        audioPath: '${_maddAudio}zaay_madd_demo.mp3',
+        imagePath: '${_dir}zaay_madd_ii.png',
+      ),
     ],
   ),
 
-  // ── التخطيط والكتابة ──
+  // ── الكتابة ────────────────────────────────────────────────────────────────
   tracing: TracingSpec(
     letterChar: 'ز',
     audioIntroPath: '${_audio}zaay_write_intro.mp3',
@@ -83,62 +103,262 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── بنك الكلمات (5 صفحات × 4 كلمات) ──
+  // ── كلمات الحرف (4 صفحات × 4 كلمات = 16 كلمة أصلية) ────────────────────────
   words: WordsSpec(
     pages: [
-      // صفحة 1: كلمات بالفتحة
+      // ── صفحة 1 (ka1.swf): زَاهِر، جَزَر، زِينَة، يَزُور ──
       WordsPage(
         listImagePath: '${_dir}zaay_words_p1_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'زَهْرَة', cardImagePath: '${_dir}zaay_words_p1_card_1.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p1_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَيْتُون', cardImagePath: '${_dir}zaay_words_p1_card_2.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p1_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَرَافَة', cardImagePath: '${_dir}zaay_words_p1_card_3.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p1_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زِنْبَق', cardImagePath: '${_dir}zaay_words_p1_card_4.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p1_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'زَاهِر',
+            cardImagePath: '${_dir}zaay_words_p1_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p1_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'جَزَر',
+            cardImagePath: '${_dir}zaay_words_p1_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p1_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'زِينَة',
+            cardImagePath: '${_dir}zaay_words_p1_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p1_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'يَزُور',
+            cardImagePath: '${_dir}zaay_words_p1_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p1_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 2: كلمات بالضمة
+
+      // ── صفحة 2 (ka2.swf): مَرْزُوق، زُجَاجَة، مَزْرَعَة، غَزَال ──
       WordsPage(
         listImagePath: '${_dir}zaay_words_p2_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'زَبِيب', cardImagePath: '${_dir}zaay_words_p2_card_1.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p2_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زُمُرُّد', cardImagePath: '${_dir}zaay_words_p2_card_2.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p2_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَرَع', cardImagePath: '${_dir}zaay_words_p2_card_3.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p2_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زِيَارَة', cardImagePath: '${_dir}zaay_words_p2_card_4.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p2_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'مَرْزُوق',
+            cardImagePath: '${_dir}zaay_words_p2_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p2_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'زُجَاجَة',
+            cardImagePath: '${_dir}zaay_words_p2_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p2_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'مَزْرَعَة',
+            cardImagePath: '${_dir}zaay_words_p2_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p2_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'غَزَال',
+            cardImagePath: '${_dir}zaay_words_p2_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p2_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 3: كلمات بالكسرة
+
+      // ── صفحة 3 (ka3.swf): زَيْتُون، زَرَافَة، زَرْع، زَيْت ──
       WordsPage(
         listImagePath: '${_dir}zaay_words_p3_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'زَلْزَال', cardImagePath: '${_dir}zaay_words_p3_card_1.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p3_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زُقَاق', cardImagePath: '${_dir}zaay_words_p3_card_2.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p3_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَيْت', cardImagePath: '${_dir}zaay_words_p3_card_3.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p3_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَوْرَق', cardImagePath: '${_dir}zaay_words_p3_card_4.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p3_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'زَيْتُون',
+            cardImagePath: '${_dir}zaay_words_p3_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p3_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'زَرَافَة',
+            cardImagePath: '${_dir}zaay_words_p3_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p3_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'زَرْع',
+            cardImagePath: '${_dir}zaay_words_p3_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p3_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'زَيْت',
+            cardImagePath: '${_dir}zaay_words_p3_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p3_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
-      // صفحة 4: الزاي في مواضع مختلفة
+
+      // ── صفحة 4 (ka4.swf): زَهْرَة، مَوْز، خُبْز، حَازِم ──
       WordsPage(
         listImagePath: '${_dir}zaay_words_p4_list.png',
-        listImageHeight: 503,
+        listImageHeight: 474,
         words: [
-          WordItem(word: 'خِزَانَة', cardImagePath: '${_dir}zaay_words_p4_card_1.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p4_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'مِيزَان', cardImagePath: '${_dir}zaay_words_p4_card_2.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p4_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'عِزَّة', cardImagePath: '${_dir}zaay_words_p4_card_3.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p4_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'لَوْز', cardImagePath: '${_dir}zaay_words_p4_card_4.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p4_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-        ],
-      ),
-      // صفحة 5: كلمات المد + مراجعة
-      WordsPage(
-        listImagePath: '${_dir}zaay_words_p5_list.png',
-        listImageHeight: 503,
-        words: [
-          WordItem(word: 'زَاد', cardImagePath: '${_dir}zaay_words_p5_card_1.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p5_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زُور', cardImagePath: '${_dir}zaay_words_p5_card_2.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p5_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زِين', cardImagePath: '${_dir}zaay_words_p5_card_3.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p5_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'زَهْرَة', cardImagePath: '${_dir}zaay_words_p5_card_4.png', cardHeight: 380, audioPath: '${_audio}zaay_word_p5_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(
+            word: 'زَهْرَة',
+            cardImagePath: '${_dir}zaay_words_p4_card_1.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p4_1.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.200,
+              right: 0.930,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'مَوْز',
+            cardImagePath: '${_dir}zaay_words_p4_card_2.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p4_2.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.250,
+              right: 0.480,
+              bottom: 0.530,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'خُبْز',
+            cardImagePath: '${_dir}zaay_words_p4_card_3.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p4_3.mp3',
+            hotspot: WordHotspot(
+              left: 0.500,
+              top: 0.550,
+              right: 0.850,
+              bottom: 0.720,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
+          WordItem(
+            word: 'حَازِم',
+            cardImagePath: '${_dir}zaay_words_p4_card_4.png',
+            cardHeight: 474,
+            audioPath: '${_audio}zaay_word_p4_4.mp3',
+            hotspot: WordHotspot(
+              left: 0.140,
+              top: 0.720,
+              right: 0.450,
+              bottom: 0.900,
+            ),
+            speakerOffset: Offset(0.163, 0.338),
+            closeOffset: Offset(0.763, 0.338),
+          ),
         ],
       ),
     ],

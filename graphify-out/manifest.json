@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/zaay_manifest.dart": {
-    "mtime": 1793365399.6753314,
-    "seen": 1794121861.6603234,
-    "ast_hash": "b79248a4b499e189cd1ba317f350bd49",
+    "mtime": 1794297176.4221234,
+    "seen": 1794297391.381843,
+    "ast_hash": "dea6b0561608d84a4a181f449c462e79",
     "semantic_hash": ""
   },
   "lib/features/lessons/logic/lesson_provider.dart": {
@@ -9030,45 +9030,21 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_cd_story_1.png": {
-    "mtime": 1793365291.128166,
-    "seen": 1794121861.6622343,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
+    "mtime": 1794296901.8904474,
+    "seen": 1794297392.0815117,
+    "ast_hash": "bd1f65c7c21b9b63eb6f41c7cea98905",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_cd_story_2.png": {
-    "mtime": 1793365291.1496243,
-    "seen": 1794121861.6622357,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_cd_story_3.png": {
-    "mtime": 1793365291.161628,
-    "seen": 1794121861.6622367,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_cd_story_4.png": {
-    "mtime": 1793365291.1762407,
-    "seen": 1794121861.6622381,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_cd_story_5.png": {
-    "mtime": 1793365291.1915193,
-    "seen": 1794121861.6622396,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_cd_story_6.png": {
-    "mtime": 1793365291.2065194,
-    "seen": 1794121861.6622407,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
+    "mtime": 1794296901.9645667,
+    "seen": 1794297392.081522,
+    "ast_hash": "30b114e30dc0596e1bbcd629fe0d326d",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_cd_story_nasheed.png": {
-    "mtime": 1793365291.2210417,
-    "seen": 1794121861.662242,
-    "ast_hash": "9f4b9673f74ea458affd27cfbbe18260",
+    "mtime": 1794295867.1634524,
+    "seen": 1794297392.0815272,
+    "ast_hash": "b7779848a74f5a82796c13b06623d9b4",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_damma_example.png": {
@@ -9204,153 +9180,123 @@
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p1_card_1.png": {
-    "mtime": 1793365291.3181002,
-    "seen": 1794121861.662273,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295376.0097473,
+    "seen": 1794297392.0903623,
+    "ast_hash": "ac2e4ad2a6af81a3737501542374b34e",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p1_card_2.png": {
-    "mtime": 1793365291.3216085,
-    "seen": 1794121861.6622744,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295382.4739566,
+    "seen": 1794297392.0903673,
+    "ast_hash": "4629d116d753080d595c733b06a93b67",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p1_card_3.png": {
-    "mtime": 1793365291.3273976,
-    "seen": 1794121861.6622756,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295389.9941885,
+    "seen": 1794297392.0903728,
+    "ast_hash": "53b0bab4982fbc8f5a50d87bdd0e050c",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p1_card_4.png": {
-    "mtime": 1793365291.3313978,
-    "seen": 1794121861.6622767,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295402.363779,
+    "seen": 1794297392.0903766,
+    "ast_hash": "b9686d60dd05d079a4832693cb2aa6c0",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p1_list.png": {
-    "mtime": 1793365291.3131003,
-    "seen": 1794121861.6622784,
-    "ast_hash": "10111e4684105b77a002a2cc69b8fd58",
+    "mtime": 1794295367.4144602,
+    "seen": 1794297392.0903802,
+    "ast_hash": "dc50b121474e118af8398d0a94d90111",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p2_card_1.png": {
-    "mtime": 1793365291.3433821,
-    "seen": 1794121861.6622794,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295421.5120122,
+    "seen": 1794297392.0903838,
+    "ast_hash": "f26a3258e99717a64679977ad28541bd",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p2_card_2.png": {
-    "mtime": 1793365291.3493805,
-    "seen": 1794121861.662281,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295428.2755153,
+    "seen": 1794297392.0903873,
+    "ast_hash": "67d959f665a69e4a3f99ad15381d6c26",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p2_card_3.png": {
-    "mtime": 1793365291.3533802,
-    "seen": 1794121861.662282,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295437.6919086,
+    "seen": 1794297392.0903912,
+    "ast_hash": "371666f143a30e14099ba0989adeea1b",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p2_card_4.png": {
-    "mtime": 1793365291.3583806,
-    "seen": 1794121861.6622834,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295445.3895397,
+    "seen": 1794297392.0903943,
+    "ast_hash": "5e5444d08c4ab07a61292a7ecc25bd2a",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p2_list.png": {
-    "mtime": 1793365291.3373966,
-    "seen": 1794121861.6622849,
-    "ast_hash": "10111e4684105b77a002a2cc69b8fd58",
+    "mtime": 1794295414.3382566,
+    "seen": 1794297392.0903983,
+    "ast_hash": "32f02cb58e7c835c6ba45cc27e9406f3",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p3_card_1.png": {
-    "mtime": 1793365291.36938,
-    "seen": 1794121861.662286,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295464.1522884,
+    "seen": 1794297392.0904012,
+    "ast_hash": "65de45ac5db4d01148549ab58e8c2990",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p3_card_2.png": {
-    "mtime": 1793365291.3733804,
-    "seen": 1794121861.6622877,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295470.5956175,
+    "seen": 1794297392.090406,
+    "ast_hash": "f3d87f89f18807c64ae0ea54e21a23c2",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p3_card_3.png": {
-    "mtime": 1793365291.3783803,
-    "seen": 1794121861.662289,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295504.3607988,
+    "seen": 1794297392.0904093,
+    "ast_hash": "a1dd7a08ca08fc3fec89f0126661fa94",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p3_card_4.png": {
-    "mtime": 1793365291.3823802,
-    "seen": 1794121861.6622899,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295511.7758324,
+    "seen": 1794297392.0904124,
+    "ast_hash": "61f8d93ab464275ef4d4be18d8ea7621",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p3_list.png": {
-    "mtime": 1793365291.365379,
-    "seen": 1794121861.6622915,
-    "ast_hash": "10111e4684105b77a002a2cc69b8fd58",
+    "mtime": 1794295457.6326895,
+    "seen": 1794297392.090416,
+    "ast_hash": "6f93568ca184936f42d7e388152bc936",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p4_card_1.png": {
-    "mtime": 1793365291.3943822,
-    "seen": 1794121861.6622927,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794296134.917889,
+    "seen": 1794297392.0904207,
+    "ast_hash": "d21197d18acc04d09524efecf341661e",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p4_card_2.png": {
-    "mtime": 1793365291.3993824,
-    "seen": 1794121861.662294,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295537.406064,
+    "seen": 1794297392.0904243,
+    "ast_hash": "c7135b7351d6c6b04a560f95ee60df71",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p4_card_3.png": {
-    "mtime": 1793365291.4033833,
-    "seen": 1794121861.6622953,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295544.9589622,
+    "seen": 1794297392.0904274,
+    "ast_hash": "e9f807ff87e0429cdc85a1a9f74e9289",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p4_card_4.png": {
-    "mtime": 1793365291.408382,
-    "seen": 1794121861.6622968,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
+    "mtime": 1794295552.8071609,
+    "seen": 1794297392.090431,
+    "ast_hash": "318404734b1ce0b0ca536ec6f43afa4e",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_words_p4_list.png": {
-    "mtime": 1793365291.3893988,
-    "seen": 1794121861.6622982,
-    "ast_hash": "10111e4684105b77a002a2cc69b8fd58",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_words_p5_card_1.png": {
-    "mtime": 1793365291.4193797,
-    "seen": 1794121861.6622994,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_words_p5_card_2.png": {
-    "mtime": 1793365291.4233806,
-    "seen": 1794121861.6623006,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_words_p5_card_3.png": {
-    "mtime": 1793365291.4283803,
-    "seen": 1794121861.662302,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_words_p5_card_4.png": {
-    "mtime": 1793365291.4323804,
-    "seen": 1794121861.6623032,
-    "ast_hash": "0a0aab7bb95db561b3c7be7e4caf19f1",
-    "semantic_hash": ""
-  },
-  "assets/images/lessons/zaay/zaay_words_p5_list.png": {
-    "mtime": 1793365291.4153802,
-    "seen": 1794121861.6623044,
-    "ast_hash": "10111e4684105b77a002a2cc69b8fd58",
+    "mtime": 1794295523.5656426,
+    "seen": 1794297392.0904336,
+    "ast_hash": "39204149714c7893bd9a81cac04212ce",
     "semantic_hash": ""
   },
   "assets/images/lessons/zaay/zaay_write_step_1.png": {
@@ -17442,9 +17388,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_goal.mp3": {
-    "mtime": 1786147257.0785122,
-    "seen": 1794121861.6642408,
-    "ast_hash": "6c60c8ae20cc60ddbc5c8063805cf08b",
+    "mtime": 1794295982.71401,
+    "seen": 1794297392.9668858,
+    "ast_hash": "710cb44102b131f93d9c23f7ee2c123b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_intro.mp3": {
@@ -17478,9 +17424,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_nasheed.mp3": {
-    "mtime": 1786147257.383578,
-    "seen": 1794121861.6642482,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295593.9751968,
+    "seen": 1794297392.9698935,
+    "ast_hash": "dcaf8305c04f812b218ff8dc2f86d816",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_paint_word1.mp3": {
@@ -17520,39 +17466,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_story_1.mp3": {
-    "mtime": 1786147257.245053,
-    "seen": 1794121861.6642573,
-    "ast_hash": "4be1dce9b70d794c2c511a5eb985e4a6",
+    "mtime": 1794295556.6815622,
+    "seen": 1794297392.971974,
+    "ast_hash": "36e166d2ae3bb664effcb09f8733faf8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_story_2.mp3": {
-    "mtime": 1786147257.2910116,
-    "seen": 1794121861.6642585,
-    "ast_hash": "19587f4c77944426252cb13d235e7255",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_story_3.mp3": {
-    "mtime": 1786147257.3715649,
-    "seen": 1794121861.66426,
-    "ast_hash": "b8f20e8afd41a32d6371f19b19bf3b6b",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_story_4.mp3": {
-    "mtime": 1786147257.3750696,
-    "seen": 1794121861.664261,
-    "ast_hash": "63e19965c74c7ac4ed69fb638f4e0c35",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_story_5.mp3": {
-    "mtime": 1786147257.3780696,
-    "seen": 1794121861.664262,
-    "ast_hash": "0c35db0dd5c53be8dc20e81ca6685610",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_story_6.mp3": {
-    "mtime": 1786147257.3805723,
-    "seen": 1794121861.6642637,
-    "ast_hash": "fe78a0fcd97383afe09fcc9e3db305f1",
+    "mtime": 1794295566.4227214,
+    "seen": 1794297392.9719815,
+    "ast_hash": "4928f04bae9086ab397f67ad9052da7e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_trace_end.mp3": {
@@ -17580,129 +17502,105 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p1_1.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.66427,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295403.8274815,
+    "seen": 1794297392.973261,
+    "ast_hash": "6409fdd5ae23c69c458814706bd4f4d0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p1_2.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.664271,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295403.8244815,
+    "seen": 1794297392.973266,
+    "ast_hash": "616d3482767427a613c7facf66bdc5fe",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p1_3.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642723,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295403.8254793,
+    "seen": 1794297392.97327,
+    "ast_hash": "b2f93e794ba61c8997951d6e4e5fe3da",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p1_4.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642737,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295403.8264804,
+    "seen": 1794297392.9732752,
+    "ast_hash": "db9cbdaf1cb8d8902b2b00fcb4b1636e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p2_1.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.664275,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295446.786287,
+    "seen": 1794297392.9732795,
+    "ast_hash": "6b51e91881e8fcbe450b0054677fd42c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p2_2.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642761,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295446.786287,
+    "seen": 1794297392.9732833,
+    "ast_hash": "1b4f48644c78f930247e10ebb2118c26",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p2_3.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642773,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295446.787289,
+    "seen": 1794297392.9732869,
+    "ast_hash": "3cd9eebe66c305bd4edd6de0724ba663",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p2_4.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642785,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295446.787289,
+    "seen": 1794297392.9732926,
+    "ast_hash": "efd15bff98827237e57d2fea91a3aaf9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p3_1.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642797,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295513.3118625,
+    "seen": 1794297392.9732974,
+    "ast_hash": "b4ca876fb43e2137b61760a36ab779b5",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p3_2.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642811,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295513.312369,
+    "seen": 1794297392.973301,
+    "ast_hash": "0bbc9dbc79a55a069b3cd688188854a3",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p3_3.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642823,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295513.3133764,
+    "seen": 1794297392.9733045,
+    "ast_hash": "10a9cda185db3609e408e257f0a166ff",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p3_4.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642838,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295513.312369,
+    "seen": 1794297392.9733083,
+    "ast_hash": "6b7bccd304c92d29e384ec4189320351",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p4_1.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.664285,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295554.1764934,
+    "seen": 1794297392.9733117,
+    "ast_hash": "2f684ffa4a78e5f9d258f94e2d0e0581",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p4_2.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642861,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295554.1754916,
+    "seen": 1794297392.973317,
+    "ast_hash": "a9027b073c6dcdc406eae309d7b33a59",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p4_3.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642876,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295554.1754916,
+    "seen": 1794297392.9733224,
+    "ast_hash": "225baafdd106082fcd4c3d4d130109d7",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p4_4.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.664289,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_word_p5_1.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642902,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_word_p5_2.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642916,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_word_p5_3.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642928,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
-    "semantic_hash": ""
-  },
-  "assets/audio/lessons/zaay/final/zaay_word_p5_4.mp3": {
-    "mtime": 1786147257.0951643,
-    "seen": 1794121861.6642966,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295554.1754916,
+    "seen": 1794297392.9733272,
+    "ast_hash": "3dac1c2aa96963522fb8c293356d6854",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_write_intro.mp3": {
-    "mtime": 1786147257.100667,
-    "seen": 1794121861.664298,
-    "ast_hash": "19616ef86b67f7897eafbaac6f27914f",
+    "mtime": 1794295983.8540535,
+    "seen": 1794297392.973332,
+    "ast_hash": "d4d2a489688f301d0e3d615631bec3a4",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_zaad.mp3": {
