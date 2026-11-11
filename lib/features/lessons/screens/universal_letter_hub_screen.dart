@@ -141,7 +141,7 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
 
     final progress = ref.watch(lessonProgressProvider);
     final size = MediaQuery.sizeOf(context);
-    final isTablet = size.width > 600;
+    final isTablet = size.shortestSide > 600;
 
     final double letterFontSize = isTablet ? 140.0 : 105.0;
     final double cardSize = isTablet ? 240.0 : 180.0;
@@ -166,7 +166,13 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
             ),
           ),
           child: SafeArea(
-            child: Column(
+            child: LayoutBuilder(
+              builder: (context, viewportConstraints) {
+                return SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(minHeight: viewportConstraints.maxHeight),
+                    child: IntrinsicHeight(
+                      child: Column(
               children: [
                 // ─── 1. Top App Bar ───
                 Padding(
@@ -567,6 +573,11 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
 
                 const SizedBox(height: 6),
               ],
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ),

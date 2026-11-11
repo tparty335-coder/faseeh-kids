@@ -189,6 +189,13 @@ void main() {
               verifyDiskFile(c.fullRuleAudio);
               verifyOptDiskFile(c.wordAudio);
               verifyOptDiskFile(c.slideImagePath);
+              if (c.vowelName.contains('السُّكُون')) {
+                expect(c.vowelAudio, contains('sukoon'));
+                expect(c.fullRuleAudio, contains('sukoon'));
+                if (c.slideImagePath != null) {
+                  expect(c.slideImagePath!, contains('sukoon'));
+                }
+              }
             }
           }
 
@@ -198,16 +205,40 @@ void main() {
             verifyDiskFile(item.imagePath);
             verifyOptDiskFile(item.wordAudioPath);
           }
+          if (m.madd.useManifestMadd && m.madd.items.length == 3) {
+            expect(m.madd.items[0].imagePath, contains('_madd_aa.'));
+            expect(m.madd.items[0].audioPath, contains('_alif.'));
+            expect(m.madd.items[1].imagePath, contains('_madd_uu.'));
+            expect(m.madd.items[1].audioPath, contains('_waw.'));
+            expect(m.madd.items[2].imagePath, contains('_madd_ii.'));
+            expect(m.madd.items[2].audioPath, contains('_yaa.'));
+          }
 
           // Tracing
           verifyDiskFile(m.tracing.audioIntroPath);
           for (final st in m.tracing.stepImagePaths) {
             verifyDiskFile(st);
+            if (m.unitIndex >= 13) {
+              final full = '$root\\${st.replaceAll('/', '\\')}';
+              expect(
+                File(full).lengthSync(),
+                greaterThanOrEqualTo(50000),
+                reason: 'Tracing step image appears blank/incomplete: $st',
+              );
+            }
           }
           if (m.tracing.positions != null) {
             for (final pos in m.tracing.positions!) {
               verifyDiskFile(pos.audioPath);
               verifyOptDiskFile(pos.imagePath);
+              if (m.unitIndex >= 13 && pos.imagePath != null) {
+                final full = '$root\\${pos.imagePath!.replaceAll('/', '\\')}';
+                expect(
+                  File(full).lengthSync(),
+                  greaterThanOrEqualTo(50000),
+                  reason: 'Tracing position image appears blank/incomplete: ${pos.imagePath}',
+                );
+              }
             }
           }
 

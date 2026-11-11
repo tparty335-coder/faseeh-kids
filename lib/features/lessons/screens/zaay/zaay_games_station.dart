@@ -295,44 +295,60 @@ class _ZaayGamesStationState extends ConsumerState<ZaayGamesStation> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Text(_gameEmoji(type), style: const TextStyle(fontSize: 24)),
-                  const SizedBox(width: 8),
-                  Text(
-                    _gameTitle(type),
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF00838F),
-                      fontFamily: 'Cairo',
+              Expanded(
+                child: Row(
+                  children: [
+                    Text(_gameEmoji(type), style: const TextStyle(fontSize: 24)),
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: AlignmentDirectional.centerStart,
+                        child: Text(
+                          _gameTitle(type),
+                          maxLines: 1,
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF00838F),
+                            fontFamily: 'Cairo',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Flexible(
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    final tk = ++_menuToken;
+                    AudioService.instance.stop();
+                    setState(() => _selectedGame = null);
+                    Future.delayed(const Duration(milliseconds: 350), () {
+                      if (mounted && tk == _menuToken && _selectedGame == null) {
+                        _playMenuIntro();
+                      }
+                    });
+                  },
+                  icon: const Icon(Icons.apps_rounded, size: 20),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      'القائمة',
+                      maxLines: 1,
+                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
-                ],
-              ),
-              ElevatedButton.icon(
-                onPressed: () {
-                  HapticFeedback.lightImpact();
-                  final tk = ++_menuToken;
-                  AudioService.instance.stop();
-                  setState(() => _selectedGame = null);
-                  Future.delayed(const Duration(milliseconds: 350), () {
-                    if (mounted && tk == _menuToken && _selectedGame == null) {
-                      _playMenuIntro();
-                    }
-                  });
-                },
-                icon: const Icon(Icons.apps_rounded, size: 20),
-                label: const Text(
-                  'القائمة',
-                  style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF00838F),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                  elevation: 2,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF00838F),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                    elevation: 2,
+                  ),
                 ),
               ),
             ],

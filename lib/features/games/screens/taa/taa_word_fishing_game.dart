@@ -405,14 +405,19 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _navBtn(
-            'التالي',
-            Icons.arrow_back_rounded,
-            true,
-            () {
-              HapticFeedback.lightImpact();
-              _advanceRound();
-            },
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: _navBtn(
+                'التالي',
+                Icons.arrow_back_rounded,
+                true,
+                () {
+                  HapticFeedback.lightImpact();
+                  _advanceRound();
+                },
+              ),
+            ),
           ),
           GestureDetector(
             onTap: () {
@@ -435,35 +440,40 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
               child: const Icon(Icons.home_rounded, color: Colors.white, size: 26),
             ),
           ).animate().scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOutBack, duration: 300.ms),
-          _navBtn(
-            'السابق',
-            Icons.arrow_forward_rounded,
-            true,
-            () {
-              HapticFeedback.lightImpact();
-              if (_round == 0) {
-                _token++;
-                AudioService.instance.stop();
-                if (widget.onBack != null) {
-                  widget.onBack!();
-                } else {
-                  Navigator.of(context).maybePop();
-                }
-                return;
-              }
-              final t = ++_token;
-              AudioService.instance.stop();
-              setState(() {
-                if (_round > 0) _round--;
-                _tappedZoneIndex = null;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-              });
-              Future.delayed(const Duration(milliseconds: 300), () {
-                if (mounted && t == _token) _startRound();
-              });
-            },
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: _navBtn(
+                'السابق',
+                Icons.arrow_forward_rounded,
+                true,
+                () {
+                  HapticFeedback.lightImpact();
+                  if (_round == 0) {
+                    _token++;
+                    AudioService.instance.stop();
+                    if (widget.onBack != null) {
+                      widget.onBack!();
+                    } else {
+                      Navigator.of(context).maybePop();
+                    }
+                    return;
+                  }
+                  final t = ++_token;
+                  AudioService.instance.stop();
+                  setState(() {
+                    if (_round > 0) _round--;
+                    _tappedZoneIndex = null;
+                    _roundDone = false;
+                    _wrongAttempts = 0;
+                    _showCorrectAnswer = false;
+                  });
+                  Future.delayed(const Duration(milliseconds: 300), () {
+                    if (mounted && t == _token) _startRound();
+                  });
+                },
+              ),
+            ),
           ),
         ],
       ),

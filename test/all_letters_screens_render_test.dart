@@ -1,10 +1,29 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-// Data & Providers
+// Core & Data
+import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
+import 'package:faseeh_kids/features/lessons/data/manifests/waaw_manifest.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_words_station.dart';
+
+// Legacy Games Stations (أ → س)
+import 'package:faseeh_kids/features/lessons/screens/alif/alif_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/taa/taa_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/ha/ha_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/kha/kha_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/dal/dal_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/raa/raa_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/seen/seen_games_station.dart';
 
 // Hub & Lesson Shell Screens
 import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
@@ -579,6 +598,204 @@ void main() {
 
       await tester.pumpWidget(const SizedBox.shrink());
       await tester.pump(const Duration(milliseconds: 500));
+    });
+  });
+
+  group('6. Narrow & Landscape Edge Cases (360x800, 320x568, 800x360, textScaler 1.3)', () {
+    late Directory hiveDir;
+
+    setUpAll(() async {
+      hiveDir = await Directory.systemTemp.createTemp('faseeh_hive_render_');
+      Hive.init(hiveDir.path);
+      await Hive.openBox(AppConstants.lessonProgressBox);
+      await Hive.openBox(AppConstants.childProfileBox);
+    });
+
+    tearDownAll(() async {
+      try {
+        await Hive.close().timeout(const Duration(milliseconds: 500));
+      } catch (_) {}
+      try {
+        if (hiveDir.existsSync()) hiveDir.deleteSync(recursive: true);
+      } catch (_) {}
+    });
+
+    Widget buildScaledApp(Widget child, {double textScale = 1.0}) {
+      return ProviderScope(
+        child: MaterialApp(
+          builder: (context, c) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(textScale)),
+            child: c!,
+          ),
+          home: Material(child: child),
+        ),
+      );
+    }
+
+    void setViewport(WidgetTester tester, double w, double h) {
+      tester.view.physicalSize = Size(w * 2, h * 2);
+      tester.view.devicePixelRatio = 2.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+    }
+
+    testWidgets('All 12 legacy game stations enter game cleanly on 360x800 and 320x568', (tester) async {
+      final stations = <String, Widget>{
+        'alif': AlifGamesStation(onNext: () {}, onPrevious: () {}),
+        'baa': BaaGamesStation(onNext: () {}, onPrevious: () {}),
+        'taa': TaaGamesStation(onNext: () {}, onPrevious: () {}),
+        'thaa': ThaaGamesStation(onNext: () {}, onPrevious: () {}),
+        'jeem': JeemGamesStation(onNext: () {}, onPrevious: () {}),
+        'ha': HaGamesStation(onNext: () {}, onPrevious: () {}),
+        'kha': KhaGamesStation(onNext: () {}, onPrevious: () {}),
+        'dal': DalGamesStation(onNext: () {}, onPrevious: () {}),
+        'dhaal': DhaalGamesStation(onNext: () {}, onPrevious: () {}),
+        'raa': RaaGamesStation(onNext: () {}, onPrevious: () {}),
+        'zaay': ZaayGamesStation(onNext: () {}, onPrevious: () {}),
+        'seen': SeenGamesStation(onNext: () {}, onPrevious: () {}),
+      };
+      for (final vp in [const Size(360, 800), const Size(320, 568)]) {
+        setViewport(tester, vp.width, vp.height);
+        for (final e in stations.entries) {
+          await tester.pumpWidget(buildTestApp(e.value));
+          await tester.pump(const Duration(milliseconds: 500));
+          expect(tester.takeException(), isNull, reason: '${e.key} menu at $vp');
+
+          final fishTitle = find.textContaining('صيد');
+          final taaTitle = find.textContaining('صَيْد');
+          if (fishTitle.evaluate().isNotEmpty) {
+            await tester.tap(fishTitle.first);
+          } else if (taaTitle.evaluate().isNotEmpty) {
+            await tester.tap(taaTitle.first);
+          } else {
+            await tester.tap(find.byType(GestureDetector).first);
+          }
+          await tester.pump(const Duration(milliseconds: 500));
+          expect(tester.takeException(), isNull, reason: '${e.key} game at $vp');
+
+          await tester.pumpWidget(const SizedBox.shrink());
+          await tester.pump(const Duration(milliseconds: 500));
+        }
+      }
+    });
+
+    testWidgets('UniversalWordsStation open card and GenericColoringGame selected+colored states fit 360x800 & 320x568', (tester) async {
+      for (final vp in [const Size(360, 800), const Size(320, 568)]) {
+        setViewport(tester, vp.width, vp.height);
+
+        await tester.pumpWidget(buildTestApp(
+          UniversalWordsStation(
+            spec: yaaManifest.words,
+            letter: 'ي',
+            onNext: () {},
+            onPrevious: () {},
+          ),
+        ));
+        await tester.pump(const Duration(milliseconds: 600));
+        expect(tester.takeException(), isNull);
+        final hotspots = find.descendant(
+          of: find.descendant(
+            of: find.byType(UniversalWordsStation),
+            matching: find.byType(LayoutBuilder),
+          ),
+          matching: find.byType(GestureDetector),
+        );
+        await tester.tap(hotspots.first);
+        await tester.pump(const Duration(milliseconds: 400));
+        expect(tester.takeException(), isNull, reason: 'Words open state at $vp');
+        expect(find.text('رجوع للكلمات'), findsOneWidget);
+
+        await tester.pumpWidget(buildTestApp(Scaffold(body: GenericColoringGame(manifest: yaaManifest))));
+        await tester.pump(const Duration(milliseconds: 500));
+        expect(tester.takeException(), isNull);
+        final scene = find.byType(LayoutBuilder).first;
+        final rect = tester.getRect(scene);
+        final dW = rect.width;
+        final dH = dW / (800.0 / 450.0);
+        final oy = rect.top + (rect.height - dH) / 2;
+        final sx = dW / 800.0;
+        final sy = dH / 450.0;
+        await tester.tapAt(Offset(rect.left + 68 * sx, oy + 347 * sy));
+        await tester.pump(const Duration(milliseconds: 600));
+        expect(tester.takeException(), isNull, reason: 'Coloring selected state at $vp');
+        await tester.tapAt(Offset(rect.left + 200 * sx, oy + 230 * sy));
+        await tester.pump(const Duration(milliseconds: 300));
+        expect(tester.takeException(), isNull, reason: 'Coloring slice colored at $vp');
+        expect(find.byType(ColorFiltered), findsWidgets);
+
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(milliseconds: 500));
+      }
+    });
+
+    testWidgets('All 5 Generic*Game game-over screens fit 360x800, 320x568, 800x360, and 800x240', (tester) async {
+      final games = <String, (Widget, int)>{
+        'fishing': (Scaffold(body: GenericWordFishingGame(manifest: yaaManifest)), yaaManifest.games.fishing.length),
+        'beehive': (Scaffold(body: GenericBeehiveGame(manifest: yaaManifest)), yaaManifest.games.beehive.length),
+        'circus': (Scaffold(body: GenericCircusGame(manifest: yaaManifest)), yaaManifest.games.circus.length),
+        'wordsMatch': (Scaffold(body: GenericWordsMatchGame(manifest: yaaManifest)), yaaManifest.games.wordsMatch.length),
+        'coloring': (Scaffold(body: GenericColoringGame(manifest: yaaManifest)), yaaManifest.games.coloring.length),
+      };
+      for (final vp in [const Size(360, 800), const Size(320, 568), const Size(800, 360), const Size(800, 240)]) {
+        setViewport(tester, vp.width, vp.height);
+        for (final e in games.entries) {
+          await tester.pumpWidget(buildTestApp(e.value.$1));
+          await tester.pump(const Duration(milliseconds: 400));
+          expect(tester.takeException(), isNull, reason: '${e.key} start at $vp');
+          for (int r = 0; r < e.value.$2; r++) {
+            await tester.tap(find.text('التالي'));
+            await tester.pump(const Duration(milliseconds: 400));
+            expect(tester.takeException(), isNull, reason: '${e.key} round $r at $vp');
+          }
+          await tester.pumpWidget(const SizedBox.shrink());
+          await tester.pump(const Duration(milliseconds: 400));
+        }
+      }
+    });
+
+    testWidgets('Completion dialog (waaw/yaa) and Hub/Shell under landscape & 1.3x textScaler fit without overflow', (tester) async {
+      for (final vp in [const Size(360, 800), const Size(320, 568), const Size(800, 360)]) {
+        setViewport(tester, vp.width, vp.height);
+        for (final m in [waawManifest, yaaManifest]) {
+          await tester.pumpWidget(buildTestApp(LetterLessonShellScreen(manifest: m, initialStationIndex: 6)));
+          await tester.pump(const Duration(milliseconds: 500));
+          expect(tester.takeException(), isNull);
+          await tester.tap(find.text('إنهاء الدرس 🎉'));
+          await tester.pump(const Duration(milliseconds: 600));
+          expect(tester.takeException(), isNull, reason: 'Completion dialog ${m.letter} at $vp');
+          await tester.pumpWidget(const SizedBox.shrink());
+          await tester.pump(const Duration(milliseconds: 500));
+        }
+      }
+
+      setViewport(tester, 800, 360);
+      for (int s = 0; s < 7; s++) {
+        await tester.pumpWidget(buildTestApp(LetterLessonShellScreen(manifest: yaaManifest, initialStationIndex: s)));
+        await tester.pump(const Duration(milliseconds: 500));
+        expect(tester.takeException(), isNull, reason: 'Yaa station $s at 800x360 landscape');
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(milliseconds: 500));
+      }
+
+      setViewport(tester, 360, 800);
+      for (int s = 0; s < 7; s++) {
+        await tester.pumpWidget(buildScaledApp(LetterLessonShellScreen(manifest: yaaManifest, initialStationIndex: s), textScale: 1.3));
+        await tester.pump(const Duration(milliseconds: 500));
+        expect(tester.takeException(), isNull, reason: 'Yaa station $s at 360x800 textScale=1.3');
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(milliseconds: 500));
+      }
+
+      for (final vp in [const Size(320, 568), const Size(800, 360)]) {
+        setViewport(tester, vp.width, vp.height);
+        await tester.pumpWidget(buildTestApp(const UniversalLetterHubScreen(letterChar: 'ي')));
+        await tester.pump(const Duration(milliseconds: 500));
+        expect(tester.takeException(), isNull, reason: 'Hub at $vp');
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(milliseconds: 500));
+      }
     });
   });
 }

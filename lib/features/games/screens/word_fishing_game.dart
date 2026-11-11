@@ -330,27 +330,30 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
               // ── زر صوت السؤال والأهداف (أعلى الشاشة) ─────────────────────────────
               Positioned(
                 top: 10,
-                left: 0,
-                right: 0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _scoreChip(),
-                    const SizedBox(width: 12),
-                    GestureDetector(
-                      onTap: _playInstruction,
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.50),
-                          shape: BoxShape.circle,
+                left: 8,
+                right: 8,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _scoreChip(),
+                      const SizedBox(width: 12),
+                      GestureDetector(
+                        onTap: _playInstruction,
+                        child: Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withValues(alpha: 0.50),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 28),
                         ),
-                        child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 28),
                       ),
-                    ),
-                    const SizedBox(width: 12),
-                    _roundChip(),
-                  ],
+                      const SizedBox(width: 12),
+                      _roundChip(),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -389,35 +392,45 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           // زر التالي (يسار)
-          _navButton(
-            label: 'التالي',
-            icon: Icons.arrow_back_rounded,
-            enabled: true,
-            onTap: () {
-              HapticFeedback.lightImpact();
-              _advanceRound();
-            },
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: _navButton(
+                label: 'التالي',
+                icon: Icons.arrow_back_rounded,
+                enabled: true,
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  _advanceRound();
+                },
+              ),
+            ),
           ),
-          
+
           // زر الرئيسية (وسط)
           _homeButton(context),
-          
+
           // زر السابق (يمين)
-          _navButton(
-            label: 'السابق',
-            icon: Icons.arrow_forward_rounded,
-            enabled: true,
-            onTap: () {
-              HapticFeedback.lightImpact();
-              setState(() {
-                if (_round > 0) _round--;
-                _tappedZoneIndex = null;
-                _roundDone = false;
-                _wrongAttempts = 0;
-                _showCorrectAnswer = false;
-              });
-              Future.delayed(const Duration(milliseconds: 400), _playInstruction);
-            },
+          Flexible(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: _navButton(
+                label: 'السابق',
+                icon: Icons.arrow_forward_rounded,
+                enabled: true,
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  setState(() {
+                    if (_round > 0) _round--;
+                    _tappedZoneIndex = null;
+                    _roundDone = false;
+                    _wrongAttempts = 0;
+                    _showCorrectAnswer = false;
+                  });
+                  Future.delayed(const Duration(milliseconds: 400), _playInstruction);
+                },
+              ),
+            ),
           ),
         ],
       ),
