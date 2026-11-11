@@ -6,9 +6,9 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── لعبة الكلمات لحرف السين ─────────────────────────────────────────────────
-// مطابقة تماماً لشاشات الأسطوانة الأصلية ومحرك لعبة الكلمات لحرف الألف
+// مطابقة تماماً لشاشات الأسطوانة الأصلية لحرف السين (words1..4.swf)
 
-const double _imgW = 1024;
+const double _imgW = 800;
 
 class _WordCard {
   final String word;
@@ -47,72 +47,72 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: سَمَكَة (1024 × 486)
+  // الجولة 1 (words1): فُسْتَان ✅ (800 × 446)
   _Round(
     imagePath: 'assets/images/games/words/seen/seen_words_round_1.png',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
-    correctWord: 'سَمَكَة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_1.mp3',
+    imgH: 446,
+    cardPx: 166.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 540.0,
+    dropPy: 416.0,
+    correctWord: 'فُسْتَان',
+    wordAudio: 'audio/games/match/seen/seen_match_1.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cards: [
-      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'سَمَكَة', isCorrect: true,  color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'أَرْنَب', isCorrect: false, color: Color(0xFFFFD17A)),
+      _WordCard(word: 'قَمِيص',   isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'قُبَّعَة',  isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'فُسْتَان', isCorrect: true,  color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 2: سَفِينَة (1024 × 524)
+  // الجولة 2 (words2): يَرْسُم ✅ (800 × 446)
   _Round(
     imagePath: 'assets/images/games/words/seen/seen_words_round_2.png',
-    imgH: 524,
-    cardPx: 121.0,
-    cardPyList: [140.0, 258.0, 385.0],
-    dropPx: 598.0,
-    dropPy: 442.0,
-    correctWord: 'سَفِينَة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_2.mp3',
+    imgH: 446,
+    cardPx: 166.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 540.0,
+    dropPy: 416.0,
+    correctWord: 'يَرْسُم',
+    wordAudio: 'audio/games/match/seen/seen_match_2.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
     cards: [
-      _WordCard(word: 'سَفِينَة', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFFD17A)),
+      _WordCard(word: 'يَرْسُم', isCorrect: true,  color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'يَأْكُل', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'يَلْعَب', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 3: سُلَحْفَاة (1024 × 574)
+  // الجولة 3 (words3): سَبُّورَة ✅ (800 × 446)
   _Round(
     imagePath: 'assets/images/games/words/seen/seen_words_round_3.png',
-    imgH: 574,
-    cardPx: 136.0,
-    cardPyList: [151.0, 280.0, 418.0],
-    dropPx: 658.0,
-    dropPy: 468.0,
-    correctWord: 'سُلَحْفَاة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p2_2.mp3',
+    imgH: 446,
+    cardPx: 166.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 540.0,
+    dropPy: 416.0,
+    correctWord: 'سَبُّورَة',
+    wordAudio: 'audio/games/match/seen/seen_match_3.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cards: [
-      _WordCard(word: 'سُلَحْفَاة', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'عِنَب', isCorrect: false, color: Color(0xFFFFD17A)),
+      _WordCard(word: 'مُعَلِّم',  isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'سَبُّورَة', isCorrect: true,  color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'تِلْمِيذ', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 4: شَمْس (1024 × 538)
+  // الجولة 4 (words4): تِمْسَاح ✅ (800 × 446)
   _Round(
     imagePath: 'assets/images/games/words/seen/seen_words_round_4.png',
-    imgH: 538,
-    cardPx: 132.0,
-    cardPyList: [123.0, 254.0, 396.0],
-    dropPx: 666.0,
-    dropPy: 423.0,
-    correctWord: 'شَمْس',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p4_3.mp3',
+    imgH: 446,
+    cardPx: 166.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 540.0,
+    dropPy: 416.0,
+    correctWord: 'تِمْسَاح',
+    wordAudio: 'audio/games/match/seen/seen_match_4.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cards: [
-      _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'شَمْس', isCorrect: true,  color: Color(0xFFFFD17A)),
+      _WordCard(word: 'تِمْسَاح', isCorrect: true,  color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'حُوت',    isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'نَهْر',   isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
 ];
@@ -356,7 +356,7 @@ class _SeenWordsMatchGameState extends ConsumerState<SeenWordsMatchGame>
   ) {
     final cx = ox + rd.dropPx * scaleX;
     final cy = oy + rd.dropPy * scaleY;
-    const zW = 180.0, zH = 56.0;
+    const zW = 140.0, zH = 44.0;
     final tw = zW * scaleX, th = zH * scaleY;
     final hasWord = _droppedWord != null;
 
@@ -423,7 +423,7 @@ class _SeenWordsMatchGameState extends ConsumerState<SeenWordsMatchGame>
     final card = rd.cards[i];
     final cx = ox + rd.cardPx * scaleX;
     final cy = oy + rd.cardPyList[i] * scaleY;
-    const cW = 112.0, cH = 74.0;
+    const cW = 88.0, cH = 58.0;
     final cardW = cW * scaleX, cardH = cH * scaleY;
     final isShaking = _shakingCard == i;
     final isDone = _roundDone || _showCorrectAnswer;

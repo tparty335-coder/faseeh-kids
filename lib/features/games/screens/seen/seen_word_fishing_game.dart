@@ -6,11 +6,11 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── لعبة صيد الكلمات لحرف السين ─────────────────────────────────────────────
-// مطابقة تماماً لشاشات الأسطوانة الأصلية ومحرك لعبة صيد حرف الألف
-// أبعاد الشاشة الأصلية: 1024 × 465
+// مطابقة تماماً لشاشات الأسطوانة الأصلية لحرف السين (fish1..4.swf)
+// أبعاد الصورة المقصوصة: 800 × 490
 
-const double _imgW = 1024;
-const double _imgH = 465;
+const double _imgW = 800;
+const double _imgH = 490;
 
 class _FishZone {
   final String word;
@@ -24,8 +24,8 @@ class _FishZone {
     required this.hasHa,
     required this.px,
     required this.py,
-    this.w = 260,
-    this.h = 95,
+    this.w = 210,
+    this.h = 85,
   });
 }
 
@@ -47,56 +47,56 @@ class _RoundData {
 }
 
 const List<_RoundData> _rounds = [
-  // الجولة 1: سَمَكَة ✅ | أَسَد ❌ | فَأْس ❌
+  // الجولة 1 (fish1): سَمَكَة ✅ | جَمَل ❌ | أَرْنَب ❌
   _RoundData(
     imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_1.png',
     correctWord: 'سَمَكَة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_1.mp3',
+    wordAudio: 'audio/games/fishing/seen/seen_fishing_1.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
     roundEndPraise: 'audio/games/fishing/ba62.mp3',
     zones: [
-      _FishZone(word: 'سَمَكَة', hasHa: true,  px: 160, py: 390),
-      _FishZone(word: 'أَسَد',   hasHa: false, px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'فَأْس',   hasHa: false, px: 810, py: 390),
+      _FishZone(word: 'سَمَكَة', hasHa: true,  px: 120, py: 425),
+      _FishZone(word: 'جَمَل',   hasHa: false, px: 382, py: 382, w: 220, h: 90),
+      _FishZone(word: 'أَرْنَب', hasHa: false, px: 625, py: 425),
     ],
   ),
-  // الجولة 2: وَلَد ❌ | قَلَم ❌ | سَفِينَة ✅
+  // الجولة 2 (fish2): قُطْن ❌ | فُول ❌ | بِرْسِيم ✅
   _RoundData(
     imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_2.png',
-    correctWord: 'سَفِينَة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_2.mp3',
+    correctWord: 'بِرْسِيم',
+    wordAudio: 'audio/games/fishing/seen/seen_fishing_2.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
     roundEndPraise: 'audio/games/fishing/ba58.mp3',
     zones: [
-      _FishZone(word: 'وَلَد',  hasHa: false, px: 160, py: 390),
-      _FishZone(word: 'قَلَم',  hasHa: false, px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'سَفِينَة',  hasHa: true,  px: 810, py: 390),
+      _FishZone(word: 'قُطْن',    hasHa: false, px: 120, py: 425),
+      _FishZone(word: 'فُول',    hasHa: false, px: 382, py: 382, w: 220, h: 90),
+      _FishZone(word: 'بِرْسِيم', hasHa: true,  px: 625, py: 425),
     ],
   ),
-  // الجولة 3: بَاب ❌ | سُلَحْفَاة ✅ | أُذُن ❌
+  // الجولة 3 (fish3): طَائِرَة ❌ | سَيَّارَة ✅ | قِطَار ❌
   _RoundData(
     imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_3.png',
-    correctWord: 'سُلَحْفَاة',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p2_2.mp3',
+    correctWord: 'سَيَّارَة',
+    wordAudio: 'audio/games/fishing/seen/seen_fishing_3.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
     roundEndPraise: 'audio/games/fishing/ba56.mp3',
     zones: [
-      _FishZone(word: 'بَاب',  hasHa: false, px: 160, py: 390),
-      _FishZone(word: 'سُلَحْفَاة', hasHa: true,  px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'أُذُن',  hasHa: false, px: 810, py: 390),
+      _FishZone(word: 'طَائِرَة', hasHa: false, px: 120, py: 425),
+      _FishZone(word: 'سَيَّارَة', hasHa: true,  px: 382, py: 382, w: 220, h: 90),
+      _FishZone(word: 'قِطَار',   hasHa: false, px: 625, py: 425),
     ],
   ),
-  // الجولة 4: أُمِّي ❌ | أَسَد ❌ | شَمْس ✅
+  // الجولة 4 (fish4): قَمَر ❌ | نَجْم ❌ | شَمْس ✅
   _RoundData(
     imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_4.png',
     correctWord: 'شَمْس',
-    wordAudio: 'audio/lessons/seen/final/seen_word_p4_3.mp3',
+    wordAudio: 'audio/games/fishing/seen/seen_fishing_4.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',
     roundEndPraise: 'audio/games/fishing/ba52.mp3',
     zones: [
-      _FishZone(word: 'أُمِّي',  hasHa: false, px: 160, py: 390),
-      _FishZone(word: 'أَسَد',   hasHa: false, px: 500, py: 345, w: 290, h: 105),
-      _FishZone(word: 'شَمْس',  hasHa: true,  px: 810, py: 390),
+      _FishZone(word: 'قَمَر',  hasHa: false, px: 120, py: 425),
+      _FishZone(word: 'نَجْم',  hasHa: false, px: 382, py: 382, w: 220, h: 90),
+      _FishZone(word: 'شَمْس', hasHa: true,  px: 625, py: 425),
     ],
   ),
 ];
@@ -168,8 +168,8 @@ class _SeenWordFishingGameState extends ConsumerState<SeenWordFishingGame> {
       await _say('audio/games/fishing/sayd.mp3', maxMs: 2500);
       if (!mounted || _gameOver || t != _token) return;
     }
-    // صوت السؤال "اضغط على الكلمة التي بها حرف ب" (3.33s)
-    await _say('audio/games/fishing/qu1.mp3', maxMs: 4000);
+    // صوت السؤال "اضغط على الكلمة التي بها حرف س"
+    await _say('audio/games/fishing/seen/seen_fishing_prompt.mp3', maxMs: 4600);
   }
 
   Future<void> _playWrong() =>

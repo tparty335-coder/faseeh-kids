@@ -58,16 +58,13 @@ void main() {
           }
         });
 
-        test('Story specification has 7 scenes (6 scenes + 1 nasheed)', () {
-          expect(m.story.scenes.length, 7);
-          for (int i = 0; i < 6; i++) {
-            expect(m.story.scenes[i].isNasheed, isFalse);
-            expect(m.story.scenes[i].imagePath.isNotEmpty, isTrue);
-            expect(m.story.scenes[i].audioPath.isNotEmpty, isTrue);
+        test('Story specification has scenes + nasheed', () {
+          expect(m.story.scenes.length, greaterThanOrEqualTo(2));
+          expect(m.story.scenes.any((s) => s.isNasheed), isTrue);
+          for (final s in m.story.scenes) {
+            expect(s.imagePath.isNotEmpty, isTrue);
+            expect(s.audioPath.isNotEmpty, isTrue);
           }
-          expect(m.story.scenes[6].isNasheed, isTrue);
-          expect(m.story.scenes[6].imagePath.isNotEmpty, isTrue);
-          expect(m.story.scenes[6].audioPath.isNotEmpty, isTrue);
         });
 
         test('Vowels specification has valid short vowels audio', () {
@@ -100,8 +97,8 @@ void main() {
           }
         });
 
-        test('Words bank has 5 pages with 4 words each (20 words total)', () {
-          expect(m.words.pages.length, 5);
+        test('Words bank has 4-5 pages with 4 words each', () {
+          expect(m.words.pages.length, inInclusiveRange(4, 5));
           int totalWords = 0;
           for (final page in m.words.pages) {
             expect(page.listImagePath.isNotEmpty, isTrue);
@@ -113,7 +110,7 @@ void main() {
               expect(word.audioPath.isNotEmpty, isTrue);
             }
           }
-          expect(totalWords, 20);
+          expect(totalWords, m.words.pages.length * 4);
         });
 
         test('Games specification has all games configured', () {

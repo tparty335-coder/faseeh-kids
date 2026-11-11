@@ -6,10 +6,10 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── لعبة السيرك لحرف السين ──────────────────────────────────────────────────
-// مطابقة تماماً لشاشات الأسطوانة الأصلية وتصميم لعبة سيرك حرف الألف
-// أبعاد الشاشة الأصلية: 1024 × 499
+// مطابقة تماماً لشاشات الأسطوانة الأصلية لحرف السين (cir1..3.swf)
+// أبعاد الصورة المقصوصة: 800 × 456
 
-const double _imgW = 1024;
+const double _imgW = 800;
 
 class _ImageZone {
   final String label;
@@ -39,40 +39,40 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: سَمَكَة ✅
+  // الجولة 1 (cir1): شَمْس ✅
   _Round(
     imagePath: 'assets/images/games/circus/seen/seen_circus_round_1.png',
-    imgH: 390,
+    imgH: 456,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
-      _ImageZone(label: 'تِمْسَاح', hasRaa: false, px: 138, py: 114),
-      _ImageZone(label: 'أَسَد',    hasRaa: false, px: 326, py: 255),
-      _ImageZone(label: 'سَمَكَة',  hasRaa: true,  px: 138, py: 392,
-          wordAudio: 'audio/lessons/seen/final/seen_word_p1_1.mp3'),
+      _ImageZone(label: 'شَمْعَة', hasRaa: false, px: 137, py: 95),
+      _ImageZone(label: 'قَمَر',   hasRaa: false, px: 269, py: 232),
+      _ImageZone(label: 'شَمْس',  hasRaa: true,  px: 135, py: 373,
+          wordAudio: 'audio/games/circus/seen/seen_circus_1.mp3'),
     ],
   ),
-  // الجولة 2: سَفِينَة ✅
+  // الجولة 2 (cir2): سُلَحْفَاة ✅
   _Round(
     imagePath: 'assets/images/games/circus/seen/seen_circus_round_2.png',
-    imgH: 390,
+    imgH: 456,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
-      _ImageZone(label: 'فِيل',    hasRaa: false, px: 138, py: 114),
-      _ImageZone(label: 'سَفِينَة',    hasRaa: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/seen/final/seen_word_p1_2.mp3'),
-      _ImageZone(label: 'ثَعْلَب', hasRaa: false, px: 138, py: 398),
+      _ImageZone(label: 'قِطَّة',     hasRaa: false, px: 137, py: 95),
+      _ImageZone(label: 'سُلَحْفَاة', hasRaa: true,  px: 269, py: 232,
+          wordAudio: 'audio/games/circus/seen/seen_circus_2.mp3'),
+      _ImageZone(label: 'حِصَان',    hasRaa: false, px: 135, py: 373),
     ],
   ),
-  // الجولة 3: سَاعَة ✅
+  // الجولة 3 (cir3): سَاعَة ✅
   _Round(
     imagePath: 'assets/images/games/circus/seen/seen_circus_round_3.png',
-    imgH: 390,
+    imgH: 456,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [
-      _ImageZone(label: 'بَطَّة',  hasRaa: false, px: 138, py: 116),
-      _ImageZone(label: 'دُبّ',    hasRaa: false, px: 326, py: 262),
-      _ImageZone(label: 'سَاعَة',   hasRaa: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/seen/final/seen_word_p2_1.mp3'),
+      _ImageZone(label: 'سَاعَة',   hasRaa: true,  px: 137, py: 95,
+          wordAudio: 'audio/games/circus/seen/seen_circus_3.mp3'),
+      _ImageZone(label: 'مُشْط',    hasRaa: false, px: 269, py: 232),
+      _ImageZone(label: 'تِلِيفُون', hasRaa: false, px: 135, py: 373),
     ],
   ),
 ];
@@ -129,8 +129,8 @@ class _SeenCircusGameState extends ConsumerState<SeenCircusGame> {
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     ++_token;
-    // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي بها حرف ب" (1.24s)
-    await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
+    // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي اسمها به حرف (س)"
+    await _say('audio/games/circus/seen/seen_circus_prompt.mp3', maxMs: 6500);
   }
 
   Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);

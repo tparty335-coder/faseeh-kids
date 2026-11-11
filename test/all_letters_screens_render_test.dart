@@ -449,8 +449,8 @@ void main() {
         expect(tester.takeException(), isNull);
 
         if (s == 5) {
-          // Step through all 5 pages of UniversalWordsStation up to 'الْمَحَطَّةُ التَّالِيَةُ'
-          for (int p = 0; p < 4; p++) {
+          // Step through all pages of UniversalWordsStation up to 'الألعاب' button
+          for (int p = 0; p < seenManifest.words.pages.length - 1; p++) {
             await tester.tap(find.text('الصفحة التالية'));
             await tester.pump(const Duration(milliseconds: 300));
             expect(tester.takeException(), isNull);

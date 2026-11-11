@@ -6,21 +6,17 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── لعبة التلوين لحرف السين ──────────────────────────────────────────────────
-// مطابقة لشاشات الأسطوانة الأصلية (paint1.swf → paint2.swf → paint3.swf) وبخطوتيها:
-// الخطوة 1: «اضغط على الكلمة التي بها مد» — الخطأ يُسمِع «حاول مرة أخرى»،
-//           وبعد الضغط على البطاقتين الخاطئتين تُنطق الإجابة الصحيحة وتُكشف.
-// الخطوة 2: تُسمَع عبارة التشجيع + الكلمة، ثم يُطلب تلوين الكلمة بألوانه المفضلة.
-//
-// ترتيب الجولات في الأسطوانة: ثعبان ← طبيب ← حبوب (مأخوذ من تسلسل loadMovieNum).
+// مطابقة لشاشات الأسطوانة الأصلية (paint1.swf → paint2.swf → paint3.swf)
+// أبعاد الصورة المقصوصة: 800 × 450
 
-const double _imgW = 1024;
-const double _imgH = 490;
+const double _imgW = 800;
+const double _imgH = 450;
 
-// موضع وأبعاد الكلمة المفرغة داخل اللوحة البيضاء (بكسل الصورة الأصلية)
-const double _wordX = 210;
-const double _wordY = 190;
-const double _wordW = 490;
-const double _wordH = 160;
+// موضع وأبعاد الكلمة المفرغة داخل اللوحة البيضاء
+const double _wordX = 162;
+const double _wordY = 175;
+const double _wordW = 384;
+const double _wordH = 125;
 
 class _MaddOption {
   final String word;
@@ -32,13 +28,13 @@ class _ColoringRound {
   final String bgImagePath;
   final String wordMaskPath;
   final String correctWord;
-  // «أحسنت + الكلمة» بصوت الأسطوانة (مدتها ≈ 2 ثانية)
+  // «أحسنت + الكلمة» بصوت الأسطوانة
   final String correctAudio;
-  // الجملة التي تُسمَع عند كشف الإجابة بعد الخطأين (≈ 5 ثوانٍ)
+  // الجملة التي تُسمَع عند كشف الإجابة بعد الخطأين
   final String revealAudio;
   final String wordAudio;
   final List<_MaddOption> options;
-  // حدود حروف الكلمة على محور x داخل صورة الكلمة (عرضها 490)
+  // حدود مقاطع الكلمة على محور x بالنسبة لصورة 490 (تُقيَّس آلياً على _wordW)
   final List<double> cuts;
 
   const _ColoringRound({
@@ -54,66 +50,67 @@ class _ColoringRound {
 
   /// مقاطع الكلمة (من اليسار إلى اليمين) كأزواج [بداية، نهاية].
   List<List<double>> get slices {
-    final edges = [0.0, ...cuts, _wordW];
+    final scaled = cuts.map((c) => c * (_wordW / 490.0)).toList();
+    final edges = [0.0, ...scaled, _wordW];
     return List.generate(edges.length - 1, (i) => [edges[i], edges[i + 1]]);
   }
 }
 
 const List<_ColoringRound> _rounds = [
-  // الجولة 1 (paint1): بقرة ❌، بطة ❌، ثعبان ✅  → ث ع ب ا ن
+  // الجولة 1 (paint1): سَمَك ❌، أَسَد ❌، تِمْسَاح ✅
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/seen/seen_coloring_round_1.png',
     wordMaskPath: 'assets/images/games/coloring/seen/seen_coloring_word_1.png',
-    correctWord: 'جَمَال',
-    correctAudio: 'audio/games/coloring/4_goodthoo.mp3',
-    revealAudio: 'audio/games/coloring/1_tazezpaint.mp3',
-    wordAudio: 'audio/lessons/ha/sounds/word_haal.mp3',
+    correctWord: 'تِمْسَاح',
+    correctAudio: 'audio/games/coloring/seen/seen_coloring_reveal_1.mp3',
+    revealAudio: 'audio/games/coloring/seen/seen_wrong_reveal_1.mp3',
+    wordAudio: 'audio/lessons/seen/final/seen_word_p1_3.mp3',
     options: [
-      _MaddOption(word: 'بَقَرَة', hasMadd: false),
-      _MaddOption(word: 'بَطَّة', hasMadd: false),
-      _MaddOption(word: 'جَمَال', hasMadd: true),
+      _MaddOption(word: 'سَمَك',    hasMadd: false),
+      _MaddOption(word: 'أَسَد',    hasMadd: false),
+      _MaddOption(word: 'تِمْسَاح', hasMadd: true),
     ],
-    cuts: [142, 188, 247, 340],
+    cuts: [170, 286],
   ),
-  // الجولة 2 (paint2): طبيب ✅، أرنب ❌، يكتب ❌  → ط ب ي ب
+  // الجولة 2 (paint2): سُلَّم ❌، نُسُور ✅، سَمَك ❌
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/seen/seen_coloring_round_2.png',
     wordMaskPath: 'assets/images/games/coloring/seen/seen_coloring_word_2.png',
-    correctWord: 'جِبَال',
-    correctAudio: 'audio/games/coloring/5_goodtabeb.mp3',
-    revealAudio: 'audio/games/coloring/2_rongtabeb.mp3',
-    wordAudio: 'audio/lessons/ha/sounds/word_hoot.mp3',
+    correctWord: 'نُسُور',
+    correctAudio: 'audio/games/coloring/seen/seen_coloring_reveal_2.mp3',
+    revealAudio: 'audio/games/coloring/seen/seen_wrong_reveal_2.mp3',
+    wordAudio: 'audio/lessons/seen/final/seen_word_p2_4.mp3',
     options: [
-      _MaddOption(word: 'جِبَال', hasMadd: true),
-      _MaddOption(word: 'أَرْنَب', hasMadd: false),
-      _MaddOption(word: 'يَكْتُب', hasMadd: false),
+      _MaddOption(word: 'سُلَّم', hasMadd: false),
+      _MaddOption(word: 'نُسُور', hasMadd: true),
+      _MaddOption(word: 'سَمَك',  hasMadd: false),
     ],
-    cuts: [150, 250, 318],
+    cuts: [178, 287],
   ),
-  // الجولة 3 (paint3): لبن ❌، برج ❌، حبوب ✅  → ح ب و ب
+  // الجولة 3 (paint3): بِرْسِيم ✅، عَدَس ❌، خَسّ ❌
   _ColoringRound(
     bgImagePath: 'assets/images/games/coloring/seen/seen_coloring_round_3.png',
     wordMaskPath: 'assets/images/games/coloring/seen/seen_coloring_word_3.png',
-    correctWord: 'جَوَاد',
-    correctAudio: 'audio/games/coloring/4_goodhobob.mp3',
-    revealAudio: 'audio/games/coloring/2_ronghobob.mp3',
-    wordAudio: 'audio/lessons/ha/sounds/word_heela.mp3',
+    correctWord: 'بِرْسِيم',
+    correctAudio: 'audio/games/coloring/seen/seen_coloring_reveal_3.mp3',
+    revealAudio: 'audio/games/coloring/seen/seen_wrong_reveal_3.mp3',
+    wordAudio: 'audio/lessons/seen/final/seen_word_p3_1.mp3',
     options: [
-      _MaddOption(word: 'لَبَن', hasMadd: false),
-      _MaddOption(word: 'بُرْج', hasMadd: false),
-      _MaddOption(word: 'جَوَاد', hasMadd: true),
+      _MaddOption(word: 'بِرْسِيم', hasMadd: true),
+      _MaddOption(word: 'عَدَس',    hasMadd: false),
+      _MaddOption(word: 'خَسّ',     hasMadd: false),
     ],
-    cuts: [152, 250, 338],
+    cuts: [194, 287],
   ),
 ];
 
-// مراكز بطاقات الكلمات الثلاث على اليسار (بكسل الصورة الأصلية)
-const double _cardCx = 76;
-const List<double> _cardCy = [103, 222, 347];
-const double _cardW = 144;
-const double _cardH = 96;
+// مراكز بطاقات الكلمات الثلاث على اليسار (مقاسة على 800×450)
+const double _cardCx = 64.5;
+const List<double> _cardCy = [90, 211, 340];
+const double _cardW = 108;
+const double _cardH = 62;
 
-// البقع اللونية الأربع على باليت الزرافة (ألوانها مأخوذة من الصورة الأصلية)
+// البقع اللونية الأربع على باليت الزرافة
 class _GiraffeBlob {
   final double px;
   final double py;
@@ -122,10 +119,10 @@ class _GiraffeBlob {
 }
 
 const List<_GiraffeBlob> _giraffeBlobs = [
-  _GiraffeBlob(px: 860, py: 264, color: Color(0xFFDC15C3)),
-  _GiraffeBlob(px: 922, py: 254, color: Color(0xFF03A0E3)),
-  _GiraffeBlob(px: 830, py: 292, color: Color(0xFFE30613)),
-  _GiraffeBlob(px: 861, py: 311, color: Color(0xFF048200)),
+  _GiraffeBlob(px: 672, py: 243, color: Color(0xFFDC15C3)),
+  _GiraffeBlob(px: 720, py: 234, color: Color(0xFF03A0E3)),
+  _GiraffeBlob(px: 648, py: 268, color: Color(0xFFE30613)),
+  _GiraffeBlob(px: 673, py: 285, color: Color(0xFF048200)),
 ];
 
 const List<Color> _palette = [
@@ -616,10 +613,10 @@ class _SeenColoringGameState extends ConsumerState<SeenColoringGame> {
     double scaleY,
   ) {
     return Positioned(
-      left: ox + 205 * scaleX,
-      top: oy + 385 * scaleY,
-      width: 495 * scaleX,
-      height: 70 * scaleY,
+      left: ox + 162 * scaleX,
+      top: oy + 345 * scaleY,
+      width: 384 * scaleX,
+      height: 60 * scaleY,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 10 * scaleX, vertical: 5 * scaleY),
         decoration: BoxDecoration(

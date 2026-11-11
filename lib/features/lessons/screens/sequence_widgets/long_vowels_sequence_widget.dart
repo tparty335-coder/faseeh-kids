@@ -370,7 +370,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: دُود',
           'exampleWord': 'دُود',
           'audioFile': 'audio/letters/long_vowels/daal_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/dal/final/dal_word_p5_3.mp3',
+          'wordAudio': 'audio/letters/long_vowels/daal_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/dal/dal_madd_uu.png',
         },
         {
@@ -409,7 +409,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'فَتْحَةٌ، يَلِيهَا أَلِفٌ، مِثْلُ: ذَاب',
           'exampleWord': 'ذَاب',
           'audioFile': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/dhaal/final/dhaal_word_p5_1.mp3',
+          'wordAudio': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/dhaal/dhaal_madd_aa.png',
         },
         {
@@ -421,7 +421,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: ذُوق',
           'exampleWord': 'ذُوق',
           'audioFile': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/dhaal/final/dhaal_word_p5_2.mp3',
+          'wordAudio': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/dhaal/dhaal_madd_uu.png',
         },
         {
@@ -433,7 +433,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'كَسْرَةٌ، يَلِيهَا يَاءٌ، مِثْلُ: مَذِيع',
           'exampleWord': 'مَذِيع',
           'audioFile': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/dhaal/final/dhaal_word_p5_3.mp3',
+          'wordAudio': 'audio/letters/long_vowels/dhaal_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/dhaal/dhaal_madd_ii.png',
         },
       ];
@@ -457,10 +457,10 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْأَلِفِ (سَا)',
           'maddChar': 'سَا',
           'color': const Color(0xFFD32F2F),
-          'explanation': 'فَتْحَةٌ، يَلِيهَا أَلِفٌ، مِثْلُ: سَارَ',
-          'exampleWord': 'سَارَ',
+          'explanation': 'فَتْحَةٌ، يَلِيهَا أَلِفٌ، مِثْلُ: تِمْسَاح',
+          'exampleWord': 'تِمْسَاح',
           'audioFile': 'audio/letters/long_vowels/seen_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/seen/final/seen_word_p5_1.mp3',
+          'wordAudio': 'audio/lessons/seen/final/seen_word_p1_3.mp3',
           'imageFile': 'assets/images/lessons/seen/seen_madd_aa.png',
         },
         {
@@ -469,10 +469,10 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْوَاوِ (سُو)',
           'maddChar': 'سُو',
           'color': const Color(0xFFF57C00),
-          'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: سُوق',
-          'exampleWord': 'سُوق',
+          'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: نُسُور',
+          'exampleWord': 'نُسُور',
           'audioFile': 'audio/letters/long_vowels/seen_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/seen/final/seen_word_p5_2.mp3',
+          'wordAudio': 'audio/lessons/seen/final/seen_word_p2_4.mp3',
           'imageFile': 'assets/images/lessons/seen/seen_madd_uu.png',
         },
         {
@@ -481,10 +481,10 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'label': 'الْمَدُّ بِالْيَاءِ (سِي)',
           'maddChar': 'سِي',
           'color': const Color(0xFF1976D2),
-          'explanation': 'كَسْرَةٌ، يَلِيهَا يَاءٌ، مِثْلُ: سِير',
-          'exampleWord': 'سِير',
+          'explanation': 'كَسْرَةٌ، يَلِيهَا يَاءٌ، مِثْلُ: بِرْسِيم',
+          'exampleWord': 'بِرْسِيم',
           'audioFile': 'audio/letters/long_vowels/seen_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/seen/final/seen_word_p5_3.mp3',
+          'wordAudio': 'audio/lessons/seen/final/seen_word_p3_1.mp3',
           'imageFile': 'assets/images/lessons/seen/seen_madd_ii.png',
         },
       ];
@@ -511,7 +511,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'فَتْحَةٌ، يَلِيهَا أَلِفٌ، مِثْلُ: زَاد',
           'exampleWord': 'زَاد',
           'audioFile': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/zaay/final/zaay_word_p5_1.mp3',
+          'wordAudio': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/zaay/zaay_madd_aa.png',
         },
         {
@@ -523,7 +523,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: زُور',
           'exampleWord': 'زُور',
           'audioFile': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/zaay/final/zaay_word_p5_2.mp3',
+          'wordAudio': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/zaay/zaay_madd_uu.png',
         },
         {
@@ -535,7 +535,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'كَسْرَةٌ، يَلِيهَا يَاءٌ، مِثْلُ: زِين',
           'exampleWord': 'زِين',
           'audioFile': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/zaay/final/zaay_word_p5_3.mp3',
+          'wordAudio': 'audio/letters/long_vowels/zaay_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/zaay/zaay_madd_ii.png',
         },
       ];
@@ -562,7 +562,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'فَتْحَةٌ، يَلِيهَا أَلِفٌ، مِثْلُ: رَاح',
           'exampleWord': 'رَاح',
           'audioFile': 'audio/letters/long_vowels/raa_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/raa/final/raa_word_p5_1.mp3',
+          'wordAudio': 'audio/letters/long_vowels/raa_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/raa/raa_madd_aa.png',
         },
         {
@@ -574,7 +574,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'ضَمَّةٌ، يَلِيهَا وَاوٌ، مِثْلُ: رُوح',
           'exampleWord': 'رُوح',
           'audioFile': 'audio/letters/long_vowels/raa_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/raa/final/raa_word_p5_2.mp3',
+          'wordAudio': 'audio/letters/long_vowels/raa_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/raa/raa_madd_uu.png',
         },
         {
@@ -586,7 +586,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
           'explanation': 'كَسْرَةٌ، يَلِيهَا يَاءٌ، مِثْلُ: رِيح',
           'exampleWord': 'رِيح',
           'audioFile': 'audio/letters/long_vowels/raa_madd_demo.mp3',
-          'wordAudio': 'audio/lessons/raa/final/raa_word_p5_3.mp3',
+          'wordAudio': 'audio/letters/long_vowels/raa_madd_demo.mp3',
           'imageFile': 'assets/images/lessons/raa/raa_madd_ii.png',
         },
       ];

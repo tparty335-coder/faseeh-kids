@@ -1,17 +1,17 @@
-# Graph Report - faseeh_kids  (2026-11-10)
+# Graph Report - faseeh_kids  (2026-11-11)
 
 ## Corpus Check
-- 347 files · ~668,192 words
+- 347 files · ~668,087 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 61 file(s) not represented in the graph (top: (none) 14, .swf 11, .xml 9)
 
 ## Summary
-- 6510 nodes · 8728 edges · 276 communities (239 shown, 37 thin omitted)
+- 6510 nodes · 8730 edges · 276 communities (239 shown, 37 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9fa7ee02`
+- Built from commit: `178ac757`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1268,7 +1268,7 @@ Cohesion: 0.33
 Nodes (3): ConnectivityService, hasInternetConnection, _instance
 
 ## Knowledge Gaps
-- **4552 isolated node(s):** `_dir`, `_audio`, `_vowelsAudio`, `_maddAudio`, `_gamesDir` (+4547 more)
+- **4552 isolated node(s):** `_CellZone`, `_Round`, `_imgW`, `label`, `isCorrect` (+4547 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 5329 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1276,13 +1276,13 @@ Nodes (3): ConnectivityService, hasInternetConnection, _instance
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `freezed` connect `hive_adapters.dart` to `dependencies`, `activity_result.dart`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **What connects `_dir`, `_audio`, `_vowelsAudio` to the rest of the system?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **What connects `_CellZone`, `_Round`, `_imgW` to the rest of the system?**
   _4552 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `letter_unit_manifest.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.025 - nodes in this community are weakly interconnected._
 - **Why does `dev_dependencies` connect `dependencies` to `hive_adapters.dart`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Should `app_colors.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.02702702702702703 - nodes in this community are weakly interconnected._
 - **Should `StatelessWidget` be split into smaller, more focused modules?**

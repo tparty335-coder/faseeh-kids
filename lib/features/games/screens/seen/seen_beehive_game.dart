@@ -6,10 +6,10 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── لعبة خلية الحرف لحرف السين ──────────────────────────────────────────────
-// مطابقة تماماً للميكانيكية الأصلية وتصميم لعبة خلية حرف الألف
-// أبعاد الشاشة الأصلية: 1024 × 481
+// مطابقة تماماً للميكانيكية الأصلية لحرف السين (bee1..4.swf)
+// أبعاد الصورة المقصوصة: 800 × 440
 
-const double _imgW = 1024;
+const double _imgW = 800;
 
 class _CellZone {
   final String label;
@@ -39,56 +39,56 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: سَمَكَة (سَ) ← يسار
+  // الجولة 1 (bee1): أَسَد (سَ) ← يسار
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_1.png',
-    imgH: 375,
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_1.mp3',
+    imgH: 440,
+    wordAudio: 'audio/games/beehive/seen/seen_beehive_1.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cells: [
-      _CellZone(label: 'سُ', isCorrect: false, px: 880, py: 170), // أعلى
-      _CellZone(label: 'سَ', isCorrect: true,  px: 694, py: 272), // يسار (صحيح سَمَكَة)
-      _CellZone(label: 'سِ', isCorrect: false, px: 946, py: 253), // يمين
-      _CellZone(label: 'سْ', isCorrect: false, px: 754, py: 339), // أسفل
+      _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
+      _CellZone(label: 'سَ', isCorrect: true,  px: 546, py: 269),
+      _CellZone(label: 'سِ', isCorrect: false, px: 739, py: 255),
+      _CellZone(label: 'سْ', isCorrect: false, px: 595, py: 350),
     ],
   ),
-  // الجولة 2: سِتَارَة (سِ) ← يمين
+  // الجولة 2 (bee2): تَغْسِل (سِ) ← يمين
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_2.png',
-    imgH: 375,
-    wordAudio: 'audio/lessons/seen/final/seen_word_p1_3.mp3',
+    imgH: 440,
+    wordAudio: 'audio/games/beehive/seen/seen_beehive_2.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
     cells: [
-      _CellZone(label: 'سُ', isCorrect: false, px: 880, py: 160), // أعلى
-      _CellZone(label: 'سَ', isCorrect: false, px: 694, py: 274), // يسار
-      _CellZone(label: 'سِ', isCorrect: true,  px: 946, py: 254), // يمين (صحيح سِتَارَة)
-      _CellZone(label: 'سْ', isCorrect: false, px: 754, py: 340), // أسفل
+      _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
+      _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
+      _CellZone(label: 'سِ', isCorrect: true,  px: 739, py: 255),
+      _CellZone(label: 'سْ', isCorrect: false, px: 595, py: 350),
     ],
   ),
-  // الجولة 3: سُلَحْفَاة (سُ) ← أعلى
+  // الجولة 3 (bee3): يَرْسُم (سُ) ← أعلى
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_3.png',
-    imgH: 375,
-    wordAudio: 'audio/lessons/seen/final/seen_word_p2_2.mp3',
+    imgH: 440,
+    wordAudio: 'audio/games/beehive/seen/seen_beehive_3.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cells: [
-      _CellZone(label: 'سُ', isCorrect: true,  px: 886, py: 184), // أعلى (صحيح سُلَحْفَاة)
-      _CellZone(label: 'سَ', isCorrect: false, px: 696, py: 271), // يسار
-      _CellZone(label: 'سِ', isCorrect: false, px: 946, py: 250), // يمين
-      _CellZone(label: 'سْ', isCorrect: false, px: 756, py: 335), // أسفل
+      _CellZone(label: 'سُ', isCorrect: true,  px: 692, py: 181),
+      _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
+      _CellZone(label: 'سِ', isCorrect: false, px: 739, py: 255),
+      _CellZone(label: 'سْ', isCorrect: false, px: 595, py: 350),
     ],
   ),
-  // الجولة 4: مَسْجِد (سْ) ← أسفل
+  // الجولة 4 (bee4): فُسْتَان (سْ) ← أسفل
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_4.png',
-    imgH: 375,
-    wordAudio: 'audio/lessons/seen/final/seen_word_p4_1.mp3',
+    imgH: 440,
+    wordAudio: 'audio/games/beehive/seen/seen_beehive_4.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cells: [
-      _CellZone(label: 'سُ', isCorrect: false, px: 880, py: 172), // أعلى
-      _CellZone(label: 'سَ', isCorrect: false, px: 695, py: 274), // يسار
-      _CellZone(label: 'سِ', isCorrect: false, px: 946, py: 254), // يمين
-      _CellZone(label: 'سْ', isCorrect: true,  px: 755, py: 340), // أسفل (صحيح مَسْجِد)
+      _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
+      _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
+      _CellZone(label: 'سِ', isCorrect: false, px: 739, py: 255),
+      _CellZone(label: 'سْ', isCorrect: true,  px: 595, py: 350),
     ],
   ),
 ];
@@ -144,8 +144,8 @@ class _SeenBeeHiveGameState extends ConsumerState<SeenBeeHiveGame> {
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     final t = ++_token;
-    // 1. صوت التعليمات الأصلي من الأسطوانة (1.74s)
-    await _say('audio/games/beehive/5_khalea2.mp3', maxMs: 3000);
+    // 1. صوت التعليمات الأصلي من الأسطوانة لحرف السين
+    await _say('audio/games/beehive/seen/seen_beehive_prompt.mp3', maxMs: 8500);
     if (!mounted || _gameOver || t != _token) return;
     // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
@@ -283,8 +283,8 @@ class _SeenBeeHiveGameState extends ConsumerState<SeenBeeHiveGame> {
                 ),
                 // زر إعادة الاستماع (موضع السماعة في الصورة)
                 Positioned(
-                  left: ox + (618 / _imgW) * dW - 25,
-                  top: oy + (148 / rd.imgH) * dH - 25,
+                  left: ox + (502 / _imgW) * dW - 25,
+                  top: oy + (138 / rd.imgH) * dH - 25,
                   width: 50,
                   height: 50,
                   child: GestureDetector(
