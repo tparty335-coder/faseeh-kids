@@ -185,56 +185,71 @@ class _UniversalObjectivesStationState
           // ── 4. زر الرجوع وزر التالي ──────────────────────────────────────────
           Positioned(
             bottom: 10,
-            right: 20,
-            child: ElevatedButton.icon(
-              onPressed: widget.onPrevious ?? () {
-                AudioService.instance.stop();
-                Navigator.of(context).maybePop();
-              },
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
-              label: const Text(
-                'الرُّجُوعُ لِلْخَرِيطَةِ',
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
+            left: 16,
+            right: 16,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(
+                  child: ElevatedButton.icon(
+                    onPressed: widget.onPrevious ?? () {
+                      AudioService.instance.stop();
+                      Navigator.of(context).maybePop();
+                    },
+                    icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
+                    label: const FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        'الرُّجُوعُ لِلْخَرِيطَةِ',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primaryDay,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      elevation: 6,
+                    ),
+                  ),
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryDay,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
+                const SizedBox(width: 8),
+                Flexible(
+                  child: ElevatedButton.icon(
+                    onPressed: widget.onNext,
+                    icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
+                    label: const FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        'ابْدَأِ الدَّرْسَ (قِصَّةُ الْحَرْفِ)',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.oasisGreen,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      elevation: 6,
+                    ),
+                  ).animate(delay: 400.ms).shimmer(duration: 2.seconds),
                 ),
-                elevation: 6,
-              ),
+              ],
             ),
-          ),
-          Positioned(
-            bottom: 10,
-            left: 20,
-            child: ElevatedButton.icon(
-              onPressed: widget.onNext,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
-              label: const Text(
-                'ابْدَأِ الدَّرْسَ (قِصَّةُ الْحَرْفِ)',
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.oasisGreen,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                elevation: 6,
-              ),
-            ).animate(delay: 400.ms).shimmer(duration: 2.seconds),
           ),
         ],
       ),

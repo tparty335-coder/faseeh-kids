@@ -24,6 +24,8 @@ import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_lesson_screen.d
 import 'package:faseeh_kids/features/lessons/screens/raa/raa_lesson_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_lesson_screen.dart';
 import 'package:faseeh_kids/features/lessons/screens/seen/seen_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/letter_lesson_shell_screen.dart';
+import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 
 // ═══ UPGRADED: universal_letter_hub_screen.dart ═══
@@ -448,6 +450,10 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                                   } else if (letter.letter == 'ر') {
                                     return const RaaLessonScreen(initialStationIndex: 1);
                                   }
+                                  final m = findManifestForLetter(letter.letter);
+                                  if (m != null) {
+                                    return LetterLessonShellScreen(manifest: m, initialStationIndex: 1);
+                                  }
                                   return const LessonSequenceScreen();
                                 },
                               ),
@@ -506,6 +512,10 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                                     return const ZaayLessonScreen(initialStationIndex: 6);
                                   } else if (letter.letter == 'ر') {
                                     return const RaaLessonScreen(initialStationIndex: 6);
+                                  }
+                                  final m = findManifestForLetter(letter.letter);
+                                  if (m != null) {
+                                    return LetterLessonShellScreen(manifest: m, initialStationIndex: 6);
                                   }
                                   return Scaffold(
                                     backgroundColor: AppColors.backgroundDay,

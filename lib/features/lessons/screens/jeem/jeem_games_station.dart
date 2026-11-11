@@ -145,39 +145,59 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton.icon(
-                    onPressed: widget.onPrevious,
-                    icon: const Icon(Icons.arrow_forward_rounded, size: 20),
-                    label: const Text(
-                      'السَّابِقُ',
-                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade100,
-                      foregroundColor: Colors.grey.shade800,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                  ),
-                  const Text(
-                    '🎮 أَلْعَابُ حَرْفِ الْجِيمِ',
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: 22,
-                      fontWeight: FontWeight.w900,
-                      color: Color(0xFF00695C),
+                  Flexible(
+                    child: ElevatedButton.icon(
+                      onPressed: widget.onPrevious,
+                      icon: const Icon(Icons.arrow_forward_rounded, size: 20),
+                      label: const FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'السَّابِقُ',
+                          maxLines: 1,
+                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey.shade100,
+                        foregroundColor: Colors.grey.shade800,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      ),
                     ),
                   ),
-                  ElevatedButton.icon(
-                    onPressed: widget.onNext,
-                    icon: const Icon(Icons.arrow_back_rounded, size: 20),
-                    label: const Text(
-                      'إِنْهَاءُ الدَّرْسِ',
-                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                  const SizedBox(width: 8),
+                  const Expanded(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        '🎮 أَلْعَابُ حَرْفِ الْجِيمِ',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          color: Color(0xFF00695C),
+                        ),
+                      ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00695C),
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: ElevatedButton.icon(
+                      onPressed: widget.onNext,
+                      icon: const Icon(Icons.arrow_back_rounded, size: 20),
+                      label: const FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'إِنْهَاءُ الدَّرْسِ',
+                          maxLines: 1,
+                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF00695C),
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      ),
                     ),
                   ),
                 ],
@@ -294,44 +314,60 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Text(_gameEmoji(type), style: const TextStyle(fontSize: 24)),
-                  const SizedBox(width: 8),
-                  Text(
-                    _gameTitle(type),
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF00695C),
-                      fontFamily: 'Cairo',
+              Expanded(
+                child: Row(
+                  children: [
+                    Text(_gameEmoji(type), style: const TextStyle(fontSize: 24)),
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: AlignmentDirectional.centerStart,
+                        child: Text(
+                          _gameTitle(type),
+                          maxLines: 1,
+                          style: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF00695C),
+                            fontFamily: 'Cairo',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Flexible(
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    final tk = ++_menuToken;
+                    AudioService.instance.stop();
+                    setState(() => _selectedGame = null);
+                    Future.delayed(const Duration(milliseconds: 350), () {
+                      if (mounted && tk == _menuToken && _selectedGame == null) {
+                        _playMenuIntro();
+                      }
+                    });
+                  },
+                  icon: const Icon(Icons.apps_rounded, size: 20),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      'الْأَلْعَابُ',
+                      maxLines: 1,
+                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
-                ],
-              ),
-              ElevatedButton.icon(
-                onPressed: () {
-                  HapticFeedback.lightImpact();
-                  final tk = ++_menuToken;
-                  AudioService.instance.stop();
-                  setState(() => _selectedGame = null);
-                  Future.delayed(const Duration(milliseconds: 350), () {
-                    if (mounted && tk == _menuToken && _selectedGame == null) {
-                      _playMenuIntro();
-                    }
-                  });
-                },
-                icon: const Icon(Icons.apps_rounded, size: 20),
-                label: const Text(
-                  'الْأَلْعَابُ',
-                  style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF00695C),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                  elevation: 2,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF00695C),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                    elevation: 2,
+                  ),
                 ),
               ),
             ],

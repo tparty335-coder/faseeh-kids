@@ -2,40 +2,29 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 // Manifests
-import 'package:faseeh_kids/features/lessons/data/manifests/taa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/thaa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/jeem_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/ha_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/kha_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/dal_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/dhaal_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/raa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/zaay_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/seen_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  final manifests = <LetterUnitManifest>[
-    taaManifest,
-    thaaManifest,
-    jeemManifest,
-    haManifest,
-    khaManifest,
-    dalManifest,
-    dhaalManifest,
-    raaManifest,
-    zaayManifest,
-    seenManifest,
-  ];
+  final manifests = allCurriculumManifests;
 
   group('All Letters Manifests & Data Integrity Tests', () {
     test('Arabic letters catalogue contains 28 letters', () {
       expect(arabicLetters.length, 28);
       expect(arabicLetters.first.letter, 'أ');
       expect(arabicLetters.last.letter, 'ي');
+    });
+
+    test('All 26 curriculum manifests (ت through ي) are registered and lookup works', () {
+      expect(manifests.length, 26);
+      expect(manifests.first.letter, 'ت');
+      expect(manifests.last.letter, 'ي');
+      for (final m in manifests) {
+        expect(findManifestForLetter(m.letter), same(m));
+      }
+      expect(findManifestForLetter('هـ'), same(findManifestForLetter('ه')));
     });
 
     for (final m in manifests) {
@@ -46,8 +35,12 @@ void main() {
           expect(m.topBarColor.a, greaterThan(0));
           expect(m.highlightColor.a, greaterThan(0));
           expect(m.mascotEmoji.isNotEmpty, isTrue);
-          expect(m.unitIndex, greaterThan(2));
-          expect(m.nextLetter?.isNotEmpty, isTrue);
+          expect(m.unitIndex, inInclusiveRange(3, 28));
+          if (m.letter == 'ي') {
+            expect(m.nextLetter, isNull);
+          } else {
+            expect(m.nextLetter?.isNotEmpty, isTrue);
+          }
         });
 
         test('Objectives specification is complete', () {
@@ -170,6 +163,10 @@ void main() {
             );
           }
 
+          void verifyOptDiskFile(String? path) {
+            if (path != null) verifyDiskFile(path);
+          }
+
           // Objectives
           verifyDiskFile(m.objectives.audioPath);
 
@@ -185,17 +182,33 @@ void main() {
             verifyDiskFile(v.dammaAudio);
             verifyDiskFile(v.kasraAudio);
           }
+          if (m.vowels.cards != null) {
+            expect(m.vowels.cards!.length, greaterThanOrEqualTo(3));
+            for (final c in m.vowels.cards!) {
+              verifyDiskFile(c.vowelAudio);
+              verifyDiskFile(c.fullRuleAudio);
+              verifyOptDiskFile(c.wordAudio);
+              verifyOptDiskFile(c.slideImagePath);
+            }
+          }
 
           // Madd
           for (final item in m.madd.items) {
             verifyDiskFile(item.audioPath);
             verifyDiskFile(item.imagePath);
+            verifyOptDiskFile(item.wordAudioPath);
           }
 
           // Tracing
           verifyDiskFile(m.tracing.audioIntroPath);
           for (final st in m.tracing.stepImagePaths) {
             verifyDiskFile(st);
+          }
+          if (m.tracing.positions != null) {
+            for (final pos in m.tracing.positions!) {
+              verifyDiskFile(pos.audioPath);
+              verifyOptDiskFile(pos.imagePath);
+            }
           }
 
           // Words
@@ -208,27 +221,53 @@ void main() {
           }
 
           // Games
+          verifyOptDiskFile(m.games.fishingIntroAudio);
+          verifyOptDiskFile(m.games.fishingPromptAudio);
+          verifyOptDiskFile(m.games.fishingWrongAudio);
+          verifyOptDiskFile(m.games.beehivePromptAudio);
+          verifyOptDiskFile(m.games.beehiveWrongAudio);
+          verifyOptDiskFile(m.games.circusPromptAudio);
+          verifyOptDiskFile(m.games.circusWrongAudio);
+          verifyOptDiskFile(m.games.wordsMatchPromptAudio);
+          verifyOptDiskFile(m.games.wordsMatchWrongAudio);
+          verifyOptDiskFile(m.games.coloringIntroAudio);
+          verifyOptDiskFile(m.games.coloringStep1Audio);
+          verifyOptDiskFile(m.games.coloringStep2Audio);
+          verifyOptDiskFile(m.games.coloringWrongAudio);
+          verifyOptDiskFile(m.games.praiseFinishAudio);
           for (final f in m.games.fishing) {
             verifyDiskFile(f.imagePath);
             verifyDiskFile(f.audioPath);
+            verifyOptDiskFile(f.correctPraiseAudio);
+            verifyOptDiskFile(f.roundEndPraiseAudio);
           }
           for (final b in m.games.beehive) {
             verifyDiskFile(b.imagePath);
             verifyDiskFile(b.audioPath);
+            verifyOptDiskFile(b.praiseAudio);
           }
           for (final c in m.games.circus) {
             verifyDiskFile(c.imagePath);
             verifyDiskFile(c.audioPath);
+            verifyOptDiskFile(c.praiseAudio);
+            if (c.zones != null) {
+              for (final z in c.zones!) {
+                verifyOptDiskFile(z.wordAudio);
+              }
+            }
           }
           for (final wm in m.games.wordsMatch) {
             verifyDiskFile(wm.imagePath);
             verifyDiskFile(wm.audioPath);
+            verifyOptDiskFile(wm.praiseAudio);
           }
           for (final col in m.games.coloring) {
             verifyDiskFile(col.bgImagePath);
             verifyDiskFile(col.wordRevealImagePath);
             verifyDiskFile(col.introAudioPath);
             verifyDiskFile(col.revealAudioPath);
+            verifyOptDiskFile(col.wrongRevealAudioPath);
+            verifyOptDiskFile(col.wordAudioPath);
             for (final sl in col.slices) {
               verifyDiskFile(sl.maskImagePath);
             }

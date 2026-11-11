@@ -22,17 +22,16 @@ import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/words_sequ
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/story_sequence_widget.dart';
 
 // Manifests
-import 'package:faseeh_kids/features/lessons/data/manifests/taa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/thaa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/jeem_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/ha_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/kha_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/dal_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/dhaal_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/raa_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/manifests/zaay_manifest.dart';
+import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/manifests/seen_manifest.dart';
-import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/lessons/data/manifests/yaa_manifest.dart';
+
+// Universal Games (ش → ي)
+import 'package:faseeh_kids/features/games/screens/universal/generic_word_fishing_game.dart';
+import 'package:faseeh_kids/features/games/screens/universal/generic_beehive_game.dart';
+import 'package:faseeh_kids/features/games/screens/universal/generic_circus_game.dart';
+import 'package:faseeh_kids/features/games/screens/universal/generic_words_match_game.dart';
+import 'package:faseeh_kids/features/games/screens/universal/generic_coloring_game.dart';
 
 // Game Screens — Alif (5)
 import 'package:faseeh_kids/features/games/screens/word_fishing_game.dart';
@@ -161,19 +160,8 @@ void main() {
     }
   });
 
-  group('3. LetterLessonShellScreen Render Tests for All 10 Manifests Across All 7 Stations', () {
-    final manifests = <LetterUnitManifest>[
-      taaManifest,
-      thaaManifest,
-      jeemManifest,
-      haManifest,
-      khaManifest,
-      dalManifest,
-      dhaalManifest,
-      raaManifest,
-      zaayManifest,
-      seenManifest,
-    ];
+  group('3. LetterLessonShellScreen Render Tests for All 26 Manifests Across All 7 Stations', () {
+    final manifests = allCurriculumManifests;
 
     for (final m in manifests) {
       for (int station = 0; station < 7; station++) {
@@ -281,7 +269,7 @@ void main() {
     }
   });
 
-  group('5. Fallback Sequence Screens for Remaining Letters (ش through ي)', () {
+  group('5. Sequence Screens & All 80 Universal Games Render Tests (ش through ي)', () {
     testWidgets('LessonSequenceScreen renders safely', (tester) async {
       await pumpAndVerifyScreen(tester, const LessonSequenceScreen());
     });
@@ -291,7 +279,7 @@ void main() {
     });
 
     for (final char in ['ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'هـ', 'و', 'ي']) {
-      testWidgets('Sequence widgets render safely for fallback letter $char', (tester) async {
+      testWidgets('Sequence widgets render safely for letter $char', (tester) async {
         await pumpAndVerifyScreen(
           tester,
           ShortVowelsSequenceWidget(letterChar: char, onNext: () {}, onPrevious: () {}),
@@ -312,6 +300,17 @@ void main() {
           tester,
           StorySequenceWidget(letterChar: char, onNext: () {}),
         );
+      });
+    }
+
+    final batch16Manifests = allCurriculumManifests.where((m) => m.unitIndex >= 13).toList();
+    for (final m in batch16Manifests) {
+      testWidgets('Universal games (5 games) render safely for ${m.letter}', (tester) async {
+        await pumpAndVerifyScreen(tester, Scaffold(body: GenericWordFishingGame(manifest: m)));
+        await pumpAndVerifyScreen(tester, Scaffold(body: GenericBeehiveGame(manifest: m)));
+        await pumpAndVerifyScreen(tester, Scaffold(body: GenericCircusGame(manifest: m)));
+        await pumpAndVerifyScreen(tester, Scaffold(body: GenericWordsMatchGame(manifest: m)));
+        await pumpAndVerifyScreen(tester, Scaffold(body: GenericColoringGame(manifest: m)));
       });
     }
   });
@@ -461,6 +460,125 @@ void main() {
         await tester.pumpWidget(const SizedBox.shrink());
         await tester.pump(const Duration(seconds: 1));
       }
+    });
+
+    testWidgets('Yaa (ي) final unit renders all 7 stations & 4 Words pages on 360x800 phone', (tester) async {
+      tester.view.physicalSize = const Size(720, 1600);
+      tester.view.devicePixelRatio = 2.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
+      for (int s = 0; s < 7; s++) {
+        await tester.pumpWidget(
+          buildTestApp(
+            LetterLessonShellScreen(
+              manifest: yaaManifest,
+              initialStationIndex: s,
+            ),
+          ),
+        );
+        await tester.pump(const Duration(seconds: 1));
+        expect(tester.takeException(), isNull);
+
+        if (s == 5) {
+          for (int p = 0; p < yaaManifest.words.pages.length - 1; p++) {
+            await tester.tap(find.text('الصفحة التالية'));
+            await tester.pump(const Duration(milliseconds: 300));
+            expect(tester.takeException(), isNull);
+          }
+          expect(find.widgetWithText(ElevatedButton, 'الألعاب'), findsOneWidget);
+        }
+
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(seconds: 1));
+      }
+    });
+
+    testWidgets('All 26 curriculum manifests render all 7 stations without overflow on 360x800 phone', (tester) async {
+      for (final m in allCurriculumManifests) {
+        for (int s = 0; s < 7; s++) {
+          await pumpPhoneScreen(
+            tester,
+            LetterLessonShellScreen(
+              manifest: m,
+              initialStationIndex: s,
+            ),
+          );
+        }
+      }
+    });
+
+    testWidgets('Universal interactive stations & GenericColoringGame palette fit on 360x800 and 320x568', (tester) async {
+      // 320x568 extra-narrow phone viewport for GenericColoringGame palette
+      tester.view.physicalSize = const Size(640, 1136);
+      tester.view.devicePixelRatio = 2.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
+      await tester.pumpWidget(
+        buildTestApp(
+          Scaffold(body: GenericColoringGame(manifest: yaaManifest)),
+        ),
+      );
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(tester.takeException(), isNull);
+      await tester.pumpWidget(const SizedBox.shrink());
+      await tester.pump(const Duration(milliseconds: 500));
+
+      // 360x800 interactive ChoiceChips across Sounds, Madd, Writing & opening a Universal game
+      tester.view.physicalSize = const Size(720, 1600);
+      tester.view.devicePixelRatio = 2.0;
+
+      for (final s in [2, 3, 4]) {
+        await tester.pumpWidget(
+          buildTestApp(
+            LetterLessonShellScreen(
+              manifest: yaaManifest,
+              initialStationIndex: s,
+            ),
+          ),
+        );
+        await tester.pump(const Duration(milliseconds: 500));
+        expect(tester.takeException(), isNull);
+
+        final chips = find.byType(ChoiceChip);
+        final count = tester.widgetList(chips).length;
+        for (int i = 0; i < count; i++) {
+          await tester.tap(chips.at(i));
+          await tester.pump(const Duration(milliseconds: 250));
+          expect(tester.takeException(), isNull);
+        }
+
+        await tester.pumpWidget(const SizedBox.shrink());
+        await tester.pump(const Duration(milliseconds: 500));
+      }
+
+      // Station 6: open a game card and return to menu
+      await tester.pumpWidget(
+        buildTestApp(
+          LetterLessonShellScreen(
+            manifest: yaaManifest,
+            initialStationIndex: 6,
+          ),
+        ),
+      );
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(tester.takeException(), isNull);
+
+      await tester.tap(find.text('التلوين'));
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(tester.takeException(), isNull);
+
+      await tester.tap(find.byTooltip('العودة للألعاب'));
+      await tester.pump(const Duration(milliseconds: 500));
+      expect(tester.takeException(), isNull);
+
+      await tester.pumpWidget(const SizedBox.shrink());
+      await tester.pump(const Duration(milliseconds: 500));
     });
   });
 }

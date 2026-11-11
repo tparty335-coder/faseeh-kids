@@ -16,6 +16,7 @@ import 'package:faseeh_kids/features/lessons/screens/universal/stations/universa
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_madd_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_writing_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_words_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_games_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/taa/taa_games_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_games_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_games_station.dart';
@@ -179,8 +180,11 @@ class _LetterLessonShellScreenState
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'أَكْمَلْتَ دَرْسَ حَرْفِ (${m.letter}) بِنَجَاحٍ!\n'
-                  'وَتَمَّ فَتْحُ حَرْفِ (${m.nextLetter ?? '🎓'}) وَتَوْثِيقُ التَّقَدُّمِ ⭐',
+                  m.nextLetter != null
+                      ? 'أَكْمَلْتَ دَرْسَ حَرْفِ (${m.letter}) بِنَجَاحٍ!\n'
+                        'وَتَمَّ فَتْحُ حَرْفِ (${m.nextLetter}) وَتَوْثِيقُ التَّقَدُّمِ ⭐'
+                      : 'أَكْمَلْتَ دَرْسَ حَرْفِ (${m.letter}) بِنَجَاحٍ!\n'
+                        'أَتْمَمْتَ جَمِيعَ الْحُرُوفِ الْعَرَبِيَّةِ وَتَوْثِيقُ التَّقَدُّمِ 🎓⭐',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Cairo',
@@ -390,12 +394,8 @@ class _LetterLessonShellScreenState
             onPrevious: _previousStation,
           );
         }
-        return _StationPlaceholder(
-          stationIndex: i,
-          stationName: _stationNames[i],
-          emoji: _stationEmojis[i],
-          letter: m.letter,
-          isLast: true,
+        return UniversalGamesStation(
+          manifest: m,
           onNext: _nextStation,
           onPrevious: _previousStation,
         );

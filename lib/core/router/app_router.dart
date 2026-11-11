@@ -243,7 +243,10 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: UniversalLetterHubScreen(letterChar: state.pathParameters['lessonId']),
+            child: UniversalLetterHubScreen(
+              letterChar: state.pathParameters['letterId'] ??
+                  state.pathParameters['lessonId'],
+            ),
           );
         },
       ),
@@ -329,7 +332,10 @@ class AppRouter {
         pageBuilder: (context, state) {
           return _slideTransition(
             state: state,
-            child: UniversalLetterHubScreen(letterChar: state.pathParameters['lessonId']),
+            child: UniversalLetterHubScreen(
+              letterChar: state.pathParameters['letterId'] ??
+                  state.pathParameters['lessonId'],
+            ),
           );
         },
       ),

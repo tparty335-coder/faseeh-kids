@@ -132,11 +132,38 @@ class VowelItem {
   });
 }
 
+/// بطاقة صوت قصير غنية بالبيانات (للمحرك الموحّد بدءاً من الشين)
+class VowelCardSpec {
+  final String vowelName; // فَتْحَة / ضَمَّة / كَسْرَة / سُكُون
+  final String displayForm; // شَ / شُ / شِ / شْ
+  final String exampleWord; // شَمْس
+  final String exampleEmoji;
+  final String vowelAudio; // audio/letters/short_vowels/...
+  final String fullRuleAudio; // نطق القاعدة من الأسطوانة (mov1..4)
+  final String? wordAudio;
+  final String? slideImagePath;
+  const VowelCardSpec({
+    required this.vowelName,
+    required this.displayForm,
+    required this.exampleWord,
+    required this.exampleEmoji,
+    required this.vowelAudio,
+    required this.fullRuleAudio,
+    this.wordAudio,
+    this.slideImagePath,
+  });
+}
+
 /// مواصفات محطة أصوات الحرف
 class VowelsSpec {
   final String letterChar; // 'أ' / 'ب' / 'ت' ...
   final List<VowelItem> items;
-  const VowelsSpec({required this.letterChar, required this.items});
+  final List<VowelCardSpec>? cards;
+  const VowelsSpec({
+    required this.letterChar,
+    required this.items,
+    this.cards,
+  });
 }
 
 // ─── المدود (حركات طويلة) ────────────────────────────────────────────────────
@@ -146,10 +173,18 @@ class MaddItem {
   final String displayChar; // 'بَا' / 'بِي' / 'بُو'
   final String audioPath;
   final String imagePath;
+  final String? exampleWord;
+  final String? explanation;
+  final String? wordAudioPath;
+  final Color? accentColor;
   const MaddItem({
     required this.displayChar,
     required this.audioPath,
     required this.imagePath,
+    this.exampleWord,
+    this.explanation,
+    this.wordAudioPath,
+    this.accentColor,
   });
 }
 
@@ -157,20 +192,47 @@ class MaddItem {
 class MaddSpec {
   final String letterChar;
   final List<MaddItem> items;
-  const MaddSpec({required this.letterChar, required this.items});
+  final bool useManifestMadd;
+  const MaddSpec({
+    required this.letterChar,
+    required this.items,
+    this.useManifestMadd = false,
+  });
 }
 
 // ─── كتابة الحرف ─────────────────────────────────────────────────────────────
+
+/// موضع كتابة واحد مع مثاله وصورته وصوته
+class TracingPositionSpec {
+  final String position; // 'isolated', 'start', 'middle', 'end'
+  final String title; // 'مُنْفَصِل' / 'فِي أَوَّلِ الْكَلِمَة' ...
+  final String displayForm; // 'ش' / 'شـ' / 'ـشـ' / 'ـش'
+  final String exampleWord;
+  final String exampleEmoji;
+  final String audioPath;
+  final String? imagePath;
+  const TracingPositionSpec({
+    required this.position,
+    required this.title,
+    required this.displayForm,
+    required this.exampleWord,
+    required this.exampleEmoji,
+    required this.audioPath,
+    this.imagePath,
+  });
+}
 
 /// مواصفات محطة الكتابة والتتبع
 class TracingSpec {
   final String letterChar;
   final List<String> stepImagePaths; // صور مراحل رسم الحرف
   final String audioIntroPath;
+  final List<TracingPositionSpec>? positions;
   const TracingSpec({
     required this.letterChar,
     required this.stepImagePaths,
     required this.audioIntroPath,
+    this.positions,
   });
 }
 
@@ -230,17 +292,49 @@ class WordsSpec {
 
 // ─── الألعاب ─────────────────────────────────────────────────────────────────
 
+/// عنصر خيار/منطقة تفاعلية داخل الألعاب الموحدة
+class GameZoneChoice {
+  final String label;
+  final bool isCorrect;
+  final double px;
+  final double py;
+  final double w;
+  final double h;
+  final String? wordAudio;
+  final int? colorValue;
+  const GameZoneChoice({
+    required this.label,
+    required this.isCorrect,
+    this.px = 0,
+    this.py = 0,
+    this.w = 220,
+    this.h = 90,
+    this.wordAudio,
+    this.colorValue,
+  });
+}
+
 /// جولة لعبة صيد الكلمات
 class FishingRound {
   final String word;
   final String imagePath;
   final String audioPath;
   final bool isCorrect; // هذه الكلمة تبدأ بحرف الدرس؟
+  final String? correctPraiseAudio;
+  final String? roundEndPraiseAudio;
+  final List<GameZoneChoice>? zones;
+  final double imgW;
+  final double imgH;
   const FishingRound({
     required this.word,
     required this.imagePath,
     required this.audioPath,
     required this.isCorrect,
+    this.correctPraiseAudio,
+    this.roundEndPraiseAudio,
+    this.zones,
+    this.imgW = 800,
+    this.imgH = 490,
   });
 }
 
@@ -249,10 +343,22 @@ class BeehiveRound {
   final String word;
   final String imagePath;
   final String audioPath;
+  final String? praiseAudio;
+  final List<GameZoneChoice>? cells;
+  final double imgW;
+  final double imgH;
+  final double speakerPx;
+  final double speakerPy;
   const BeehiveRound({
     required this.word,
     required this.imagePath,
     required this.audioPath,
+    this.praiseAudio,
+    this.cells,
+    this.imgW = 800,
+    this.imgH = 440,
+    this.speakerPx = 502,
+    this.speakerPy = 138,
   });
 }
 
@@ -261,10 +367,18 @@ class CircusRound {
   final String word;
   final String imagePath;
   final String audioPath;
+  final String? praiseAudio;
+  final List<GameZoneChoice>? zones;
+  final double imgW;
+  final double imgH;
   const CircusRound({
     required this.word,
     required this.imagePath,
     required this.audioPath,
+    this.praiseAudio,
+    this.zones,
+    this.imgW = 800,
+    this.imgH = 456,
   });
 }
 
@@ -273,10 +387,26 @@ class WordsMatchPair {
   final String word;
   final String imagePath;
   final String audioPath;
+  final String? praiseAudio;
+  final List<GameZoneChoice>? cards;
+  final double imgW;
+  final double imgH;
+  final double cardPx;
+  final List<double> cardPyList;
+  final double dropPx;
+  final double dropPy;
   const WordsMatchPair({
     required this.word,
     required this.imagePath,
     required this.audioPath,
+    this.praiseAudio,
+    this.cards,
+    this.imgW = 800,
+    this.imgH = 446,
+    this.cardPx = 170,
+    this.cardPyList = const [128, 236, 353],
+    this.dropPx = 550,
+    this.dropPy = 420,
   });
 }
 
@@ -298,6 +428,17 @@ class ColoringRound {
   final String introAudioPath; // صوت الكلمة عند بدء الجولة
   final String revealAudioPath; // صوت الكلمة عند اكتمال التلوين
   final List<ColoringSlice> slices;
+  final String? wrongRevealAudioPath;
+  final String? wordAudioPath;
+  final List<GameZoneChoice>? options;
+  final double imgW;
+  final double imgH;
+  final double wordX;
+  final double wordY;
+  final double wordW;
+  final double wordH;
+  final double cardCx;
+  final List<double> cardCyList;
   const ColoringRound({
     required this.word,
     required this.bgImagePath,
@@ -305,6 +446,17 @@ class ColoringRound {
     required this.introAudioPath,
     required this.revealAudioPath,
     required this.slices,
+    this.wrongRevealAudioPath,
+    this.wordAudioPath,
+    this.options,
+    this.imgW = 800,
+    this.imgH = 450,
+    this.wordX = 162,
+    this.wordY = 175,
+    this.wordW = 384,
+    this.wordH = 125,
+    this.cardCx = 68,
+    this.cardCyList = const [94, 219, 347],
   });
 }
 
@@ -315,12 +467,40 @@ class GamesSpec {
   final List<CircusRound> circus;
   final List<WordsMatchPair> wordsMatch;
   final List<ColoringRound> coloring;
+  final String? fishingIntroAudio;
+  final String? fishingPromptAudio;
+  final String? fishingWrongAudio;
+  final String? beehivePromptAudio;
+  final String? beehiveWrongAudio;
+  final String? circusPromptAudio;
+  final String? circusWrongAudio;
+  final String? wordsMatchPromptAudio;
+  final String? wordsMatchWrongAudio;
+  final String? coloringIntroAudio;
+  final String? coloringStep1Audio;
+  final String? coloringStep2Audio;
+  final String? coloringWrongAudio;
+  final String? praiseFinishAudio;
   const GamesSpec({
     required this.fishing,
     required this.beehive,
     required this.circus,
     required this.wordsMatch,
     required this.coloring,
+    this.fishingIntroAudio,
+    this.fishingPromptAudio,
+    this.fishingWrongAudio,
+    this.beehivePromptAudio,
+    this.beehiveWrongAudio,
+    this.circusPromptAudio,
+    this.circusWrongAudio,
+    this.wordsMatchPromptAudio,
+    this.wordsMatchWrongAudio,
+    this.coloringIntroAudio,
+    this.coloringStep1Audio,
+    this.coloringStep2Audio,
+    this.coloringWrongAudio,
+    this.praiseFinishAudio,
   });
 }
 
