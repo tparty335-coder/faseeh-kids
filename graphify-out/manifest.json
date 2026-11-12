@@ -1,8 +1,8 @@
 {
   ".github/workflows/flutter_ci.yml": {
-    "mtime": 1791922016.294743,
-    "seen": 1794121861.660141,
-    "ast_hash": "9b6448cf3cf66f669e2ddd83cc7e9a99",
+    "mtime": 1794432256.8983445,
+    "seen": 1794468876.8216314,
+    "ast_hash": "f9b9819b7a259d9f4bdaffb364a67363",
     "semantic_hash": ""
   },
   "analysis_options.yaml": {
@@ -1212,9 +1212,9 @@
     "semantic_hash": ""
   },
   "lib/main.dart": {
-    "mtime": 1792784447.418707,
-    "seen": 1794121861.6604455,
-    "ast_hash": "9310c872e08ea06d5d87fecff6d61844",
+    "mtime": 1794466036.2826498,
+    "seen": 1794468876.8950055,
+    "ast_hash": "513f36fe1e7b10041767bead11536e7a",
     "semantic_hash": ""
   },
   "lib/services/audio_manager.dart": {
@@ -1230,9 +1230,9 @@
     "semantic_hash": ""
   },
   "lib/services/audio_service.dart": {
-    "mtime": 1793825355.863418,
-    "seen": 1794121861.660449,
-    "ast_hash": "ed57aff84067602711021cc10706333f",
+    "mtime": 1794466042.1249251,
+    "seen": 1794468876.8956625,
+    "ast_hash": "a3bcaf8d91994dcbcaa63737afa7811a",
     "semantic_hash": ""
   },
   "lib/services/revenue_cat_service.dart": {
@@ -1434,9 +1434,9 @@
     "semantic_hash": ""
   },
   "pubspec.yaml": {
-    "mtime": 1794392825.7066958,
-    "seen": 1794413779.2338412,
-    "ast_hash": "95afe26e4e67cff3e644cf3923215d9e",
+    "mtime": 1794466034.819564,
+    "seen": 1794468876.906227,
+    "ast_hash": "8147401cd8e456f8ba2b757a18fbb3c2",
     "semantic_hash": ""
   },
   "scripts/generate_audio.py": {
@@ -1452,9 +1452,9 @@
     "semantic_hash": ""
   },
   "test/all_letters_integrity_test.dart": {
-    "mtime": 1794429546.1478436,
-    "seen": 1794430029.514044,
-    "ast_hash": "62a21d4dedd3eb3afd0244842aa97929",
+    "mtime": 1794459801.5610552,
+    "seen": 1794468876.9068778,
+    "ast_hash": "6c7bad5af0dd36864969cc7aaf9a249c",
     "semantic_hash": ""
   },
   "test/all_letters_screens_render_test.dart": {
@@ -10356,9 +10356,9 @@
     "semantic_hash": ""
   },
   "assets/audio/baa_damma_example_1.mp3": {
-    "mtime": 1786147243.5812273,
-    "seen": 1794121861.6625845,
-    "ast_hash": "228053b87285eac42b54db049ef546e6",
+    "mtime": 1794466693.6877053,
+    "seen": 1794468877.7605283,
+    "ast_hash": "6ea07ed06957f648a6c9b53adf0857d9",
     "semantic_hash": ""
   },
   "assets/audio/baa_damma_example_2.mp3": {
@@ -10422,9 +10422,9 @@
     "semantic_hash": ""
   },
   "assets/audio/baa_kasra_example_2.mp3": {
-    "mtime": 1786147243.2707627,
-    "seen": 1794121861.6625981,
-    "ast_hash": "070824b2fca5dc70fae4e743d98f797d",
+    "mtime": 1794466695.1687603,
+    "seen": 1794468877.7633035,
+    "ast_hash": "6403eeb37438f37d72509fb0a10b8bf2",
     "semantic_hash": ""
   },
   "assets/audio/baa_kasra_rule.mp3": {
@@ -10440,21 +10440,21 @@
     "semantic_hash": ""
   },
   "assets/audio/baa_sukoon_example_1.mp3": {
-    "mtime": 1786369464.5391576,
-    "seen": 1794121861.6626017,
-    "ast_hash": "1517b01fad2260154f567efa5a74e6ea",
+    "mtime": 1794434904.8118522,
+    "seen": 1794468877.7638893,
+    "ast_hash": "c68ab3add32a11c2a9b2ece908b778b1",
     "semantic_hash": ""
   },
   "assets/audio/baa_sukoon_example_2.mp3": {
-    "mtime": 1786369464.535864,
-    "seen": 1794121861.662603,
-    "ast_hash": "9c8bc100da518b811ef3341d1de871a8",
+    "mtime": 1794434905.0685506,
+    "seen": 1794468877.7638943,
+    "ast_hash": "c68ab3add32a11c2a9b2ece908b778b1",
     "semantic_hash": ""
   },
   "assets/audio/baa_sukoon_rule.mp3": {
-    "mtime": 1786369464.14361,
-    "seen": 1794121861.662604,
-    "ast_hash": "a03589fe6ec580d672e9a5b85c5ac16f",
+    "mtime": 1794434905.2561867,
+    "seen": 1794468877.7638984,
+    "ast_hash": "82e0e59b9644ad5e63f3d03386e8212c",
     "semantic_hash": ""
   },
   "assets/audio/correct.mp3": {
@@ -10656,51 +10656,51 @@
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dal/dal_beehive_1.mp3": {
-    "mtime": 1786147253.939005,
-    "seen": 1794121861.6626463,
-    "ast_hash": "7c53c77d9737e76da142abca696dd591",
+    "mtime": 1794466738.832525,
+    "seen": 1794468877.7883167,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dal/dal_beehive_2.mp3": {
-    "mtime": 1786147253.9455218,
-    "seen": 1794121861.6626477,
-    "ast_hash": "57cf0500a4a57a076d366f7f2a9f9afb",
+    "mtime": 1794466743.3677166,
+    "seen": 1794468877.7883215,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dal/dal_beehive_3.mp3": {
-    "mtime": 1786147253.9505217,
-    "seen": 1794121861.6626492,
-    "ast_hash": "1d8386840af40cfa4064d71d83e4cd23",
+    "mtime": 1794466741.9063,
+    "seen": 1794468877.7883253,
+    "ast_hash": "2d3d1ceec8a62f8020ff1300e26fbad6",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dal/dal_beehive_4.mp3": {
-    "mtime": 1786147253.9548547,
-    "seen": 1794121861.66265,
-    "ast_hash": "7b32393cef7cf550862074d221f2484b",
+    "mtime": 1794466740.3496134,
+    "seen": 1794468877.7883291,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dhaal/dhaal_beehive_1.mp3": {
-    "mtime": 1786147255.0639071,
-    "seen": 1794121861.6626513,
-    "ast_hash": "2b4b7a0dc96340961b229e418f2bb4ff",
+    "mtime": 1794466785.4068203,
+    "seen": 1794468877.7897687,
+    "ast_hash": "085afe572a8306415a6d78e56eaa9d6e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dhaal/dhaal_beehive_2.mp3": {
-    "mtime": 1786147255.0704145,
-    "seen": 1794121861.662653,
-    "ast_hash": "7c53c77d9737e76da142abca696dd591",
+    "mtime": 1794466783.9373274,
+    "seen": 1794468877.7897735,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dhaal/dhaal_beehive_3.mp3": {
-    "mtime": 1786147255.0739295,
-    "seen": 1794121861.6626542,
-    "ast_hash": "63e19965c74c7ac4ed69fb638f4e0c35",
+    "mtime": 1794466782.5012388,
+    "seen": 1794468877.7897778,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/dhaal/dhaal_beehive_4.mp3": {
-    "mtime": 1786147255.0789304,
-    "seen": 1794121861.6626558,
-    "ast_hash": "184afed13744b6820f0e0852fa505bdc",
+    "mtime": 1794466781.1585257,
+    "seen": 1794468877.7897816,
+    "ast_hash": "2d3d1ceec8a62f8020ff1300e26fbad6",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/ha/ha_beehive_1.mp3": {
@@ -10758,27 +10758,27 @@
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/kha/kha_beehive_1.mp3": {
-    "mtime": 1786147252.7825181,
-    "seen": 1794121861.6626685,
-    "ast_hash": "7c53c77d9737e76da142abca696dd591",
+    "mtime": 1794466827.227582,
+    "seen": 1794468877.798427,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/kha/kha_beehive_2.mp3": {
-    "mtime": 1786147252.7892756,
-    "seen": 1794121861.66267,
-    "ast_hash": "13608d5963c00bbdb3733ad98408c094",
+    "mtime": 1794466825.7599635,
+    "seen": 1794468877.7984316,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/kha/kha_beehive_3.mp3": {
-    "mtime": 1786147252.7958443,
-    "seen": 1794121861.662671,
-    "ast_hash": "1d8386840af40cfa4064d71d83e4cd23",
+    "mtime": 1794466824.3428068,
+    "seen": 1794468877.7984362,
+    "ast_hash": "2d3d1ceec8a62f8020ff1300e26fbad6",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/kha/kha_beehive_4.mp3": {
-    "mtime": 1786147252.7825181,
-    "seen": 1794121861.6626723,
-    "ast_hash": "7c53c77d9737e76da142abca696dd591",
+    "mtime": 1794466828.5865927,
+    "seen": 1794468877.7984397,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/raa/raa_beehive_1.mp3": {
@@ -10860,27 +10860,27 @@
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/thaa/thaa_beehive_1.mp3": {
-    "mtime": 1786147247.7268114,
-    "seen": 1794121861.6626902,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466870.45572,
+    "seen": 1794468877.8127697,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/thaa/thaa_beehive_2.mp3": {
-    "mtime": 1786147247.7323196,
-    "seen": 1794121861.6626914,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466869.055995,
+    "seen": 1794468877.812775,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/thaa/thaa_beehive_3.mp3": {
-    "mtime": 1786147247.7363236,
-    "seen": 1794121861.6626925,
-    "ast_hash": "8f6442cc92620fd918b72d892d161f43",
+    "mtime": 1794466873.343192,
+    "seen": 1794468877.8127792,
+    "ast_hash": "a071d83ec98c6434f413c48ebbb5d776",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/thaa/thaa_beehive_4.mp3": {
-    "mtime": 1786147247.7593467,
-    "seen": 1794121861.662694,
-    "ast_hash": "d130c2a26d2fdaa82a84cbc1c562e1d5",
+    "mtime": 1794466871.9281247,
+    "seen": 1794468877.8127837,
+    "ast_hash": "d0a51c1713a17bbbb3f93eb4d8c92dad",
     "semantic_hash": ""
   },
   "assets/audio/games/beehive/thaa_beehive_instruction.mp3": {
@@ -11016,9 +11016,9 @@
     "semantic_hash": ""
   },
   "assets/audio/games/circus/dhaal/dhaal_circus_1.mp3": {
-    "mtime": 1786147255.0880387,
-    "seen": 1794121861.6627235,
-    "ast_hash": "7b32393cef7cf550862074d221f2484b",
+    "mtime": 1794466874.7720954,
+    "seen": 1794468877.8335764,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/circus/dhaal/dhaal_circus_2.mp3": {
@@ -11178,27 +11178,27 @@
     "semantic_hash": ""
   },
   "assets/audio/games/circus/thaa/thaa_circus_1.mp3": {
-    "mtime": 1786147247.7268114,
-    "seen": 1794121861.6627572,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466880.6787703,
+    "seen": 1794468877.8543954,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/circus/thaa/thaa_circus_2.mp3": {
-    "mtime": 1786147247.7323196,
-    "seen": 1794121861.6627584,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466879.1738567,
+    "seen": 1794468877.8544004,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/circus/thaa/thaa_circus_3.mp3": {
-    "mtime": 1786147247.7363236,
-    "seen": 1794121861.6627595,
-    "ast_hash": "8f6442cc92620fd918b72d892d161f43",
+    "mtime": 1794466877.7118394,
+    "seen": 1794468877.8544042,
+    "ast_hash": "a071d83ec98c6434f413c48ebbb5d776",
     "semantic_hash": ""
   },
   "assets/audio/games/circus/thaa/thaa_circus_4.mp3": {
-    "mtime": 1786147247.7593467,
-    "seen": 1794121861.6627607,
-    "ast_hash": "d130c2a26d2fdaa82a84cbc1c562e1d5",
+    "mtime": 1794466876.2854807,
+    "seen": 1794468877.8544087,
+    "ast_hash": "d0a51c1713a17bbbb3f93eb4d8c92dad",
     "semantic_hash": ""
   },
   "assets/audio/games/circus/thaa_circus_question.mp3": {
@@ -11484,21 +11484,21 @@
     "semantic_hash": ""
   },
   "assets/audio/games/coloring/kha/kha_reveal_khaal.mp3": {
-    "mtime": 1786147252.775962,
-    "seen": 1794121861.6628232,
-    "ast_hash": "ce38c4ae8960d74180e343f39804d673",
+    "mtime": 1794466882.0954418,
+    "seen": 1794468877.8840902,
+    "ast_hash": "d61d680dec36c2c3289f21e6903c4b51",
     "semantic_hash": ""
   },
   "assets/audio/games/coloring/kha/kha_reveal_kheema.mp3": {
-    "mtime": 1786147252.8033547,
-    "seen": 1794121861.6628244,
-    "ast_hash": "7b32393cef7cf550862074d221f2484b",
+    "mtime": 1794466884.8970587,
+    "seen": 1794468877.884095,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/games/coloring/kha/kha_reveal_khubz.mp3": {
-    "mtime": 1786147252.8073573,
-    "seen": 1794121861.662826,
-    "ast_hash": "b958a256e79736c0bd513ae178d9130b",
+    "mtime": 1794466883.512033,
+    "seen": 1794468877.884099,
+    "ast_hash": "28ea7f994dcfd9c043db82adfdf2e851",
     "semantic_hash": ""
   },
   "assets/audio/games/coloring/raa/raa_reveal_raah.mp3": {
@@ -12000,27 +12000,27 @@
     "semantic_hash": ""
   },
   "assets/audio/games/fishing/thaa/thaa_fishing_1.mp3": {
-    "mtime": 1786147247.7268114,
-    "seen": 1794121861.662936,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466889.0873497,
+    "seen": 1794468877.9721096,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/fishing/thaa/thaa_fishing_2.mp3": {
-    "mtime": 1786147247.7323196,
-    "seen": 1794121861.6629372,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466887.7230232,
+    "seen": 1794468877.972114,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/fishing/thaa/thaa_fishing_3.mp3": {
-    "mtime": 1786147247.7363236,
-    "seen": 1794121861.6629384,
-    "ast_hash": "8f6442cc92620fd918b72d892d161f43",
+    "mtime": 1794466886.3956752,
+    "seen": 1794468877.9721186,
+    "ast_hash": "a071d83ec98c6434f413c48ebbb5d776",
     "semantic_hash": ""
   },
   "assets/audio/games/fishing/thaa/thaa_fishing_4.mp3": {
-    "mtime": 1786147247.7593467,
-    "seen": 1794121861.6629395,
-    "ast_hash": "d130c2a26d2fdaa82a84cbc1c562e1d5",
+    "mtime": 1794466890.6324413,
+    "seen": 1794468877.9721227,
+    "ast_hash": "d0a51c1713a17bbbb3f93eb4d8c92dad",
     "semantic_hash": ""
   },
   "assets/audio/games/fishing/thaa_fishing_question.mp3": {
@@ -12096,21 +12096,21 @@
     "semantic_hash": ""
   },
   "assets/audio/games/match/dal/dal_match_2.mp3": {
-    "mtime": 1786147253.9731576,
-    "seen": 1794121861.6630652,
-    "ast_hash": "546e9d2e34732af9abb5323690e1fdd5",
+    "mtime": 1794466893.6948762,
+    "seen": 1794468877.9807327,
+    "ast_hash": "fce6476636e380a18beab271f7271ac3",
     "semantic_hash": ""
   },
   "assets/audio/games/match/dal/dal_match_3.mp3": {
-    "mtime": 1786147253.9751606,
-    "seen": 1794121861.6630664,
-    "ast_hash": "386d76eaa2ecfa9ce35ecda544e2b044",
+    "mtime": 1794466892.1787298,
+    "seen": 1794468877.9807377,
+    "ast_hash": "f9ab0cd786085775ae715d1a1fab750c",
     "semantic_hash": ""
   },
   "assets/audio/games/match/dal/dal_match_4.mp3": {
-    "mtime": 1786147253.9781575,
-    "seen": 1794121861.6630676,
-    "ast_hash": "b7515aef27a021795874ee2d0a4720be",
+    "mtime": 1794466895.1767886,
+    "seen": 1794468877.9807422,
+    "ast_hash": "d99a25a75a547deab0dd0aa77cf70e7e",
     "semantic_hash": ""
   },
   "assets/audio/games/match/dhaal/dhaal_match_1.mp3": {
@@ -12120,21 +12120,21 @@
     "semantic_hash": ""
   },
   "assets/audio/games/match/dhaal/dhaal_match_2.mp3": {
-    "mtime": 1786147255.098553,
-    "seen": 1794121861.6630702,
-    "ast_hash": "546e9d2e34732af9abb5323690e1fdd5",
+    "mtime": 1794466897.8104303,
+    "seen": 1794468877.9824708,
+    "ast_hash": "fce6476636e380a18beab271f7271ac3",
     "semantic_hash": ""
   },
   "assets/audio/games/match/dhaal/dhaal_match_3.mp3": {
-    "mtime": 1786147255.1005504,
-    "seen": 1794121861.6630716,
-    "ast_hash": "386d76eaa2ecfa9ce35ecda544e2b044",
+    "mtime": 1794466896.5136132,
+    "seen": 1794468877.9824767,
+    "ast_hash": "f9ab0cd786085775ae715d1a1fab750c",
     "semantic_hash": ""
   },
   "assets/audio/games/match/dhaal/dhaal_match_4.mp3": {
-    "mtime": 1786147255.104761,
-    "seen": 1794121861.663073,
-    "ast_hash": "b7515aef27a021795874ee2d0a4720be",
+    "mtime": 1794466899.077479,
+    "seen": 1794468877.982481,
+    "ast_hash": "d99a25a75a547deab0dd0aa77cf70e7e",
     "semantic_hash": ""
   },
   "assets/audio/games/match/ha/ha_match_1.mp3": {
@@ -12282,27 +12282,27 @@
     "semantic_hash": ""
   },
   "assets/audio/games/match/thaa/thaa_match_1.mp3": {
-    "mtime": 1786147247.7268114,
-    "seen": 1794121861.663107,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466903.4896407,
+    "seen": 1794468878.0049841,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/match/thaa/thaa_match_2.mp3": {
-    "mtime": 1786147247.7323196,
-    "seen": 1794121861.663108,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794466902.109524,
+    "seen": 1794468878.004989,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/games/match/thaa/thaa_match_3.mp3": {
-    "mtime": 1786147247.7363236,
-    "seen": 1794121861.6631095,
-    "ast_hash": "8f6442cc92620fd918b72d892d161f43",
+    "mtime": 1794466900.713647,
+    "seen": 1794468878.0049927,
+    "ast_hash": "a071d83ec98c6434f413c48ebbb5d776",
     "semantic_hash": ""
   },
   "assets/audio/games/match/thaa/thaa_match_4.mp3": {
-    "mtime": 1786147247.7593467,
-    "seen": 1794121861.663111,
-    "ast_hash": "d130c2a26d2fdaa82a84cbc1c562e1d5",
+    "mtime": 1794466904.9905624,
+    "seen": 1794468878.0049963,
+    "ast_hash": "d0a51c1713a17bbbb3f93eb4d8c92dad",
     "semantic_hash": ""
   },
   "assets/audio/games/match/zaay/zaay_match_1.mp3": {
@@ -12888,15 +12888,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/long/baa_1.mp3": {
-    "mtime": 1786147242.6208138,
-    "seen": 1794121861.663233,
-    "ast_hash": "a4b5439b3f5d5ca4043657cf1cef2d33",
+    "mtime": 1794466906.621371,
+    "seen": 1794468878.0527713,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/long/baa_10.mp3": {
-    "mtime": 1786147242.6607306,
-    "seen": 1794121861.6632342,
-    "ast_hash": "6a039df7f15811608dd2392fe54ead35",
+    "mtime": 1794466908.0780451,
+    "seen": 1794468878.0527759,
+    "ast_hash": "c68ab3add32a11c2a9b2ece908b778b1",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/long/baa_88.wav": {
@@ -12906,183 +12906,183 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_28.mp3": {
-    "mtime": 1786147242.8483515,
-    "seen": 1794121861.6632366,
-    "ast_hash": "76009d585eed434a85dc5b40f0c096c7",
+    "mtime": 1794466909.6243715,
+    "seen": 1794468878.0530694,
+    "ast_hash": "52d74caa204e77c4b7306771674b97c2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_42.mp3": {
-    "mtime": 1786147243.1291108,
-    "seen": 1794121861.6632378,
-    "ast_hash": "02adbd11230af68fd778a9e7c60670e9",
+    "mtime": 1794466911.068822,
+    "seen": 1794468878.053074,
+    "ast_hash": "8363e3386abafcb00f94bfa7035dafb2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_44.mp3": {
-    "mtime": 1786147243.2464626,
-    "seen": 1794121861.6632392,
-    "ast_hash": "d4fe95529f013e73d581706b9506a9ef",
+    "mtime": 1794466913.8288321,
+    "seen": 1794468878.0530775,
+    "ast_hash": "aee2b9686989c847eab01a44385da4ad",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_46.mp3": {
-    "mtime": 1786147243.2707627,
-    "seen": 1794121861.6632402,
-    "ast_hash": "070824b2fca5dc70fae4e743d98f797d",
+    "mtime": 1794466912.4279432,
+    "seen": 1794468878.0530815,
+    "ast_hash": "6403eeb37438f37d72509fb0a10b8bf2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_51.mp3": {
-    "mtime": 1786147243.304926,
-    "seen": 1794121861.6632414,
-    "ast_hash": "455f99a5184eeae8bdb70187035bcf35",
+    "mtime": 1794466919.4457595,
+    "seen": 1794468878.053086,
+    "ast_hash": "d6531e3376cc46ff8810af024052b8b8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_52.mp3": {
-    "mtime": 1786147243.3650982,
-    "seen": 1794121861.6632428,
-    "ast_hash": "8199cd90ee79b5cb2c3806cbcdfbd218",
+    "mtime": 1794466918.0628715,
+    "seen": 1794468878.0530894,
+    "ast_hash": "d6531e3376cc46ff8810af024052b8b8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_53.mp3": {
-    "mtime": 1786147243.367094,
-    "seen": 1794121861.663244,
-    "ast_hash": "8199cd90ee79b5cb2c3806cbcdfbd218",
+    "mtime": 1794466916.6641686,
+    "seen": 1794468878.0530927,
+    "ast_hash": "d6531e3376cc46ff8810af024052b8b8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_54.mp3": {
-    "mtime": 1786147243.3726003,
-    "seen": 1794121861.6632452,
-    "ast_hash": "271f85d635110deed98e928d05c7c9b4",
+    "mtime": 1794466915.2314265,
+    "seen": 1794468878.0530958,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_56.mp3": {
-    "mtime": 1786147243.4120095,
-    "seen": 1794121861.6632464,
-    "ast_hash": "0419efe128128a717966cb532ca553ad",
+    "mtime": 1794466925.210514,
+    "seen": 1794468878.0530992,
+    "ast_hash": "d9d855beb23f8d08847c147e61bef16a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_57.mp3": {
-    "mtime": 1786147243.4140139,
-    "seen": 1794121861.6632476,
-    "ast_hash": "4d02762231f773cc538e6d406959c37d",
+    "mtime": 1794466923.8319235,
+    "seen": 1794468878.0531025,
+    "ast_hash": "b087c0634441ba048ae96b50dcc33ff6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_58.mp3": {
-    "mtime": 1786147243.4160142,
-    "seen": 1794121861.6632485,
-    "ast_hash": "d2cbf52d6fa5668fbc4d92c2600b69fa",
+    "mtime": 1794466922.329836,
+    "seen": 1794468878.0531056,
+    "ast_hash": "025662474ab16f9027e58ec2caca6a63",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_6.mp3": {
-    "mtime": 1786147242.647225,
-    "seen": 1794121861.66325,
-    "ast_hash": "26ceb0c9f7fb04f46ce42ebef86cc9dc",
+    "mtime": 1794466920.8753004,
+    "seen": 1794468878.0531085,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_62.mp3": {
-    "mtime": 1786147243.440771,
-    "seen": 1794121861.663251,
-    "ast_hash": "df5514888e31322a2fdac91aaf8e7575",
+    "mtime": 1794466930.824239,
+    "seen": 1794468878.0531116,
+    "ast_hash": "4f9efcaea485e6fa011ba8f40f2b897b",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_64.mp3": {
-    "mtime": 1786147243.4587376,
-    "seen": 1794121861.663252,
-    "ast_hash": "ec8d8859f7cbd9e239f2eb203f7c6284",
+    "mtime": 1794466929.4325254,
+    "seen": 1794468878.053115,
+    "ast_hash": "3655c704ed1b9c15aeb9e63ac998be15",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_67.mp3": {
-    "mtime": 1786147243.463746,
-    "seen": 1794121861.6632533,
-    "ast_hash": "813a5b15ee505532d446a77a80fb7735",
+    "mtime": 1794466928.0354896,
+    "seen": 1794468878.0531178,
+    "ast_hash": "72033cfbd563c5ae643609d416e02085",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_7.mp3": {
-    "mtime": 1786147242.650726,
-    "seen": 1794121861.6632545,
-    "ast_hash": "4229440cdb0d928e673f7c4be867b0f6",
+    "mtime": 1794466926.6294668,
+    "seen": 1794468878.0531209,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_71.mp3": {
-    "mtime": 1786147243.4892912,
-    "seen": 1794121861.6632557,
-    "ast_hash": "158e17ae62e5403eae7e19d0f634bcc7",
+    "mtime": 1794466936.5924559,
+    "seen": 1794468878.0531235,
+    "ast_hash": "a0de563eb83d06f75ca389e228fcf01f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_72.mp3": {
-    "mtime": 1786147243.493803,
-    "seen": 1794121861.663257,
-    "ast_hash": "b3a2d09633aadf7d6671a26c7b787db4",
+    "mtime": 1794466935.1597037,
+    "seen": 1794468878.0531263,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_73.mp3": {
-    "mtime": 1786147243.4978032,
-    "seen": 1794121861.6632578,
-    "ast_hash": "7bee72afb1815b9c092a544504c0d827",
+    "mtime": 1794466933.7415981,
+    "seen": 1794468878.0531292,
+    "ast_hash": "a0de563eb83d06f75ca389e228fcf01f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_74.mp3": {
-    "mtime": 1786147243.4998024,
-    "seen": 1794121861.663259,
-    "ast_hash": "4f2c0b886935aa2e08b8ee415f9a5724",
+    "mtime": 1794466932.267725,
+    "seen": 1794468878.0531323,
+    "ast_hash": "a0de563eb83d06f75ca389e228fcf01f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_75.mp3": {
-    "mtime": 1786147243.503311,
-    "seen": 1794121861.6632605,
-    "ast_hash": "258b37c79df9a4a5d0afcc5aa8bf2cdb",
+    "mtime": 1794466942.4709475,
+    "seen": 1794468878.0531359,
+    "ast_hash": "bbd6ddb048f3faec616f0d1534c790a6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_79.mp3": {
-    "mtime": 1786147243.5118225,
-    "seen": 1794121861.6632614,
-    "ast_hash": "9ea064dfd7daebed0ab8f373aa716e5b",
+    "mtime": 1794466941.0337842,
+    "seen": 1794468878.053139,
+    "ast_hash": "9b111b0d0a17d60e2e4fee60a88cbbed",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_8.mp3": {
-    "mtime": 1786147242.6567307,
-    "seen": 1794121861.6632626,
-    "ast_hash": "4229440cdb0d928e673f7c4be867b0f6",
+    "mtime": 1794466939.555518,
+    "seen": 1794468878.0531418,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_80.mp3": {
-    "mtime": 1786147243.518821,
-    "seen": 1794121861.663264,
-    "ast_hash": "5edb59083dd1cfcc867ed8d2a737c17a",
+    "mtime": 1794466938.0804949,
+    "seen": 1794468878.0531442,
+    "ast_hash": "a7f34e3d2345f03c28260ba6a3b4b237",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_81.mp3": {
-    "mtime": 1786147243.5223284,
-    "seen": 1794121861.6632652,
-    "ast_hash": "0bf969bacea15a61fa06690b9f56af78",
+    "mtime": 1794466948.2674632,
+    "seen": 1794468878.0531476,
+    "ast_hash": "3fb914c8a019dad2fb64e6ecd8c03d0f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_82.mp3": {
-    "mtime": 1786147243.5531914,
-    "seen": 1794121861.6632667,
-    "ast_hash": "2aea1a96a5462b60d75e355fd533959a",
+    "mtime": 1794466946.8251643,
+    "seen": 1794468878.053151,
+    "ast_hash": "3fb914c8a019dad2fb64e6ecd8c03d0f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_86.mp3": {
-    "mtime": 1786147243.565215,
-    "seen": 1794121861.663268,
-    "ast_hash": "13608d5963c00bbdb3733ad98408c094",
+    "mtime": 1794466945.3856487,
+    "seen": 1794468878.0531533,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_87.mp3": {
-    "mtime": 1786147243.5717235,
-    "seen": 1794121861.663269,
-    "ast_hash": "4be1dce9b70d794c2c511a5eb985e4a6",
+    "mtime": 1794466943.9123485,
+    "seen": 1794468878.0531561,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_93.mp3": {
-    "mtime": 1786147243.5787275,
-    "seen": 1794121861.6632705,
-    "ast_hash": "aacd85bcf9e7f66e497eb80211bcefd7",
+    "mtime": 1794466952.552104,
+    "seen": 1794468878.0531595,
+    "ast_hash": "14422a0338e78891627e0f59f0ae2e82",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/medium/baa_95.mp3": {
-    "mtime": 1786147243.5812273,
-    "seen": 1794121861.6632714,
-    "ast_hash": "228053b87285eac42b54db049ef546e6",
+    "mtime": 1794466951.1065066,
+    "seen": 1794468878.0531623,
+    "ast_hash": "6ea07ed06957f648a6c9b53adf0857d9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_11.mp3": {
@@ -13092,9 +13092,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_12.mp3": {
-    "mtime": 1786147242.679711,
-    "seen": 1794121861.6632738,
-    "ast_hash": "4268f07b3676510aafa64da31f59ce5a",
+    "mtime": 1794466949.665297,
+    "seen": 1794468878.0534554,
+    "ast_hash": "5fe54f4270490a2e9a9a8013fd7549ee",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_13.mp3": {
@@ -13110,9 +13110,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_15.mp3": {
-    "mtime": 1786147242.709235,
-    "seen": 1794121861.6632779,
-    "ast_hash": "58ca6eb8f96b0891228635c17817e74e",
+    "mtime": 1794466953.9914198,
+    "seen": 1794468878.0540314,
+    "ast_hash": "3f44eb4c56e06f17256c99cf0a35c5d6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_16.mp3": {
@@ -13128,9 +13128,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_18.mp3": {
-    "mtime": 1786147242.7278092,
-    "seen": 1794121861.6632814,
-    "ast_hash": "0b4d65758c9a9a3e6befc4abf08ec392",
+    "mtime": 1794467301.1456332,
+    "seen": 1794468878.054625,
+    "ast_hash": "4f35520daba2d7785845149dce117df5",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_19.mp3": {
@@ -13152,9 +13152,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_21.mp3": {
-    "mtime": 1786147242.732817,
-    "seen": 1794121861.6632862,
-    "ast_hash": "39523c5de544905174cbf74927b4302b",
+    "mtime": 1794466957.0984197,
+    "seen": 1794468878.0554802,
+    "ast_hash": "3f44eb4c56e06f17256c99cf0a35c5d6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_22.mp3": {
@@ -13164,9 +13164,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_23.mp3": {
-    "mtime": 1786147242.8318417,
-    "seen": 1794121861.6632886,
-    "ast_hash": "f2896cb42c914b1449161e0c7ff63d43",
+    "mtime": 1794466955.671293,
+    "seen": 1794468878.0557642,
+    "ast_hash": "8cd1ae276a381d0922913e98abbaee20",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_24.mp3": {
@@ -13182,9 +13182,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_26.mp3": {
-    "mtime": 1786147242.8368454,
-    "seen": 1794121861.6632924,
-    "ast_hash": "caba263ed5ba7e72f4e1b12ce4dbb262",
+    "mtime": 1794466958.5186782,
+    "seen": 1794468878.0563543,
+    "ast_hash": "599fd57b27ba5d15a4df2f3d42767ba9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_27.mp3": {
@@ -13218,9 +13218,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_32.mp3": {
-    "mtime": 1786147242.9112048,
-    "seen": 1794121861.6633,
-    "ast_hash": "0f0c9a71d51fe7f13b1d00371f47a48e",
+    "mtime": 1794466959.3902268,
+    "seen": 1794468878.057792,
+    "ast_hash": "5f544b13733063de52e20208f0b9a68e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_33.mp3": {
@@ -13272,9 +13272,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_40.mp3": {
-    "mtime": 1786147242.972395,
-    "seen": 1794121861.6633117,
-    "ast_hash": "955b2612ea2962591ba0eb7461a699b6",
+    "mtime": 1794466960.7639585,
+    "seen": 1794468878.0600886,
+    "ast_hash": "b4f1bae53340fb9044a6a8dfb90af93f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_41.mp3": {
@@ -13314,15 +13314,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_5.mp3": {
-    "mtime": 1786147242.6397185,
-    "seen": 1794121861.663321,
-    "ast_hash": "c4f83f9db94f21bbbeb156aa91a2dc94",
+    "mtime": 1794466961.8525455,
+    "seen": 1794468878.061801,
+    "ast_hash": "d01fc21fd41da20bbfc51b937fe02b34",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_50.mp3": {
-    "mtime": 1786147243.3009179,
-    "seen": 1794121861.6633227,
-    "ast_hash": "a829a8c02a58648a87cbc78f9634f5f8",
+    "mtime": 1794467301.2353816,
+    "seen": 1794468878.0618052,
+    "ast_hash": "ae7465cea5f8fdcecbecb27ad8b6514a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_55.mp3": {
@@ -13380,9 +13380,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_70.mp3": {
-    "mtime": 1786147243.4687502,
-    "seen": 1794121861.663335,
-    "ast_hash": "7e30e1bf8dc0fd87441ec675a86b70dd",
+    "mtime": 1794466963.571323,
+    "seen": 1794468878.0643735,
+    "ast_hash": "266f5ba64fa2ba5270397318a40bfbd8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_76.wav": {
@@ -13416,9 +13416,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_85.mp3": {
-    "mtime": 1786147243.559197,
-    "seen": 1794121861.663343,
-    "ast_hash": "e72fbc49ade09120785a00d5c72b7ee5",
+    "mtime": 1794466964.9765904,
+    "seen": 1794468878.0658145,
+    "ast_hash": "2864ee9dedfcacbf237d802a62e8be8d",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_89.mp3": {
@@ -13440,9 +13440,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_91.mp3": {
-    "mtime": 1786147243.5747252,
-    "seen": 1794121861.663348,
-    "ast_hash": "2fdc920d7789fc2282e7effc2ada33dd",
+    "mtime": 1794466966.3687787,
+    "seen": 1794468878.0666816,
+    "ast_hash": "8d0a6eab38afa094ed4d8065a11f31bd",
     "semantic_hash": ""
   },
   "assets/audio/lessons/baa/short/baa_92.mp3": {
@@ -13812,9 +13812,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_goal.mp3": {
-    "mtime": 1786147253.7533386,
-    "seen": 1794121861.6634288,
-    "ast_hash": "a4b5439b3f5d5ca4043657cf1cef2d33",
+    "mtime": 1794466968.1416152,
+    "seen": 1794468878.0936494,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_nasheed.mp3": {
@@ -13878,21 +13878,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_trace_isolated.mp3": {
-    "mtime": 1786147253.9012177,
-    "seen": 1794121861.6634438,
-    "ast_hash": "2438f14eb6a6e40c08c1edc3fe7b562e",
+    "mtime": 1794466969.6290042,
+    "seen": 1794468878.0971065,
+    "ast_hash": "0fa7b65cbaa8c77ed235e88fecbf0abc",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_trace_middle.mp3": {
-    "mtime": 1786147253.9072273,
-    "seen": 1794121861.6634448,
-    "ast_hash": "966ec8b1b63b6e7bc6a9207a98670d3a",
+    "mtime": 1794466972.59287,
+    "seen": 1794468878.097111,
+    "ast_hash": "b9018df820d7065b92f8d0db274013fb",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_trace_start.mp3": {
-    "mtime": 1786147253.9042292,
-    "seen": 1794121861.663446,
-    "ast_hash": "4ff6e0be2b08b596a7ac74f954f06624",
+    "mtime": 1794466971.120056,
+    "seen": 1794468878.0971143,
+    "ast_hash": "a433f4a9a5c6ebe74fc8c697ad9e230e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_word_p1_1.mp3": {
@@ -13992,9 +13992,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/final/dal_write_intro.mp3": {
-    "mtime": 1786147253.779067,
-    "seen": 1794121861.6634724,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794466974.0637846,
+    "seen": 1794468878.1017263,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/madd/dal_madd_alif.mp3": {
@@ -14016,21 +14016,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/sounds/dal_damma_rule.mp3": {
-    "mtime": 1786147253.7877579,
-    "seen": 1794121861.663477,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467246.5473292,
+    "seen": 1794468878.1025882,
+    "ast_hash": "98290c918018536898ae96cd7dad4a67",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/sounds/dal_fatha_rule.mp3": {
-    "mtime": 1786147253.7831047,
-    "seen": 1794121861.6634784,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467246.3617673,
+    "seen": 1794468878.1025922,
+    "ast_hash": "98290c918018536898ae96cd7dad4a67",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/sounds/dal_kasra_rule.mp3": {
-    "mtime": 1786147253.7912612,
-    "seen": 1794121861.6634793,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467246.1685145,
+    "seen": 1794468878.1025956,
+    "ast_hash": "98290c918018536898ae96cd7dad4a67",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dal/sounds/dal_sukoon_rule.mp3": {
@@ -14040,9 +14040,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_goal.mp3": {
-    "mtime": 1786147254.907847,
-    "seen": 1794121861.6634839,
-    "ast_hash": "a4b5439b3f5d5ca4043657cf1cef2d33",
+    "mtime": 1794466979.363231,
+    "seen": 1794468878.1124504,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_nasheed.mp3": {
@@ -14106,21 +14106,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_trace_isolated.mp3": {
-    "mtime": 1786147255.0307999,
-    "seen": 1794121861.6634996,
-    "ast_hash": "0c6782275be910dc37a39cb3c0742590",
+    "mtime": 1794466982.030828,
+    "seen": 1794468878.1153624,
+    "ast_hash": "07745945fdbcb5486871e341f0733b6e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_trace_middle.mp3": {
-    "mtime": 1786147255.0373883,
-    "seen": 1794121861.663501,
-    "ast_hash": "455f99a5184eeae8bdb70187035bcf35",
+    "mtime": 1794466980.7491236,
+    "seen": 1794468878.1153681,
+    "ast_hash": "5c22a915828200d4d7cd36362c1e9a0c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_trace_start.mp3": {
-    "mtime": 1786147255.033386,
-    "seen": 1794121861.663502,
-    "ast_hash": "0c6782275be910dc37a39cb3c0742590",
+    "mtime": 1794466983.295064,
+    "seen": 1794468878.1153717,
+    "ast_hash": "07745945fdbcb5486871e341f0733b6e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/dhaal/final/dhaal_word_p1_1.mp3": {
@@ -14328,9 +14328,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_story_6.mp3": {
-    "mtime": 1786147251.7187304,
-    "seen": 1794121861.6635525,
-    "ast_hash": "79bc6c1246a4693a8b339d00f9169bd2",
+    "mtime": 1794467025.3464034,
+    "seen": 1794468878.1435874,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_trace_end.mp3": {
@@ -14454,27 +14454,27 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p5_1.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635823,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794467027.0663114,
+    "seen": 1794468878.1495128,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p5_2.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635838,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794467032.367813,
+    "seen": 1794468878.1495175,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p5_3.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.663585,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794467030.5621772,
+    "seen": 1794468878.1495214,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_word_p5_4.mp3": {
-    "mtime": 1786147251.6282017,
-    "seen": 1794121861.6635864,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794467028.8428073,
+    "seen": 1794468878.1495261,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/final/ha_write_intro.mp3": {
@@ -14652,15 +14652,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/sounds/word_sahn.mp3": {
-    "mtime": 1786147251.6893537,
-    "seen": 1794121861.663624,
-    "ast_hash": "6e9438c254a151d945c17c1f75d7d9c6",
+    "mtime": 1794467035.300438,
+    "seen": 1794468878.1582842,
+    "ast_hash": "d2b9ec5702cdc95f71322911ac559605",
     "semantic_hash": ""
   },
   "assets/audio/lessons/ha/writing/ha_write_intro.mp3": {
-    "mtime": 1786147251.5155423,
-    "seen": 1794121861.6636252,
-    "ast_hash": "eca05cdaee4ffc38aebae3090049be0c",
+    "mtime": 1794467033.8026352,
+    "seen": 1794468878.1582892,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/jeem/final/jeem_bee_wrong.mp3": {
@@ -14886,9 +14886,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/jeem/madd/jeem_madd_demo.mp3": {
-    "mtime": 1786369463.6876714,
-    "seen": 1794121861.6636736,
-    "ast_hash": "84875d23be68b18082399fc8d79909c9",
+    "mtime": 1794467249.8820648,
+    "seen": 1794468878.180006,
+    "ast_hash": "5f10a43f21e46fb51e1903a43bddcda9",
     "semantic_hash": ""
   },
   "assets/audio/lessons/jeem/madd/jeem_madd_types.mp3": {
@@ -15090,9 +15090,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_goal.mp3": {
-    "mtime": 1794210322.9787724,
-    "seen": 1794248226.9668279,
-    "ast_hash": "dba64f3e83d093ad7ea27df10218203d",
+    "mtime": 1794467036.9796455,
+    "seen": 1794468878.2026217,
+    "ast_hash": "b6a4c81407701764026229e16603c264",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_nasheed.mp3": {
@@ -15102,21 +15102,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_paint_word1.mp3": {
-    "mtime": 1786147252.775962,
-    "seen": 1794121861.6637194,
-    "ast_hash": "ce38c4ae8960d74180e343f39804d673",
+    "mtime": 1794467041.3971958,
+    "seen": 1794468878.202912,
+    "ast_hash": "d61d680dec36c2c3289f21e6903c4b51",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_paint_word2.mp3": {
-    "mtime": 1786147252.8033547,
-    "seen": 1794121861.6637206,
-    "ast_hash": "7b32393cef7cf550862074d221f2484b",
+    "mtime": 1794467039.98033,
+    "seen": 1794468878.2029164,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_paint_word3.mp3": {
-    "mtime": 1786147252.8073573,
-    "seen": 1794121861.6637218,
-    "ast_hash": "b958a256e79736c0bd513ae178d9130b",
+    "mtime": 1794467038.5090866,
+    "seen": 1794468878.2029204,
+    "ast_hash": "28ea7f994dcfd9c043db82adfdf2e851",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_story_1.mp3": {
@@ -15168,15 +15168,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_middle.mp3": {
-    "mtime": 1794210322.989736,
-    "seen": 1794248226.9677172,
-    "ast_hash": "5f635cf0dfd650959cd2bc6243584d8b",
+    "mtime": 1794467044.2968915,
+    "seen": 1794468878.205639,
+    "ast_hash": "2f3013905a693e71e0ca9608bbb852a0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_trace_start.mp3": {
-    "mtime": 1794210322.990752,
-    "seen": 1794248226.9677205,
-    "ast_hash": "ca6f991a6b00b173a05ba1f7f7cf2467",
+    "mtime": 1794467042.7552361,
+    "seen": 1794468878.2056434,
+    "ast_hash": "d8e2a8538c8bddc7c21ae0d6ba3f76e0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_word_p1_1.mp3": {
@@ -15276,9 +15276,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/kha/final/kha_write_intro.mp3": {
-    "mtime": 1794210323.0040278,
-    "seen": 1794248226.9677806,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467045.802125,
+    "seen": 1794468878.2102504,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/raa/final/raa_goal.mp3": {
@@ -15498,9 +15498,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/raa/sounds/raa_fatha_rule.mp3": {
-    "mtime": 1786147256.017685,
-    "seen": 1794121861.6638114,
-    "ast_hash": "98d3ee0624c9d29b5d7b6f2c52b1b473",
+    "mtime": 1794467247.1455793,
+    "seen": 1794468878.263438,
+    "ast_hash": "03cad01a716387395f906429e5e2bb2f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/raa/sounds/raa_kasra_rule.mp3": {
@@ -15516,9 +15516,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_faras.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638153,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467128.541527,
+    "seen": 1794468878.2726815,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_goal.mp3": {
@@ -15528,15 +15528,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_jisr.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638174,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467131.9692407,
+    "seen": 1794468878.2729766,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_masjid.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638188,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467130.2329133,
+    "seen": 1794468878.272981,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_nasheed.mp3": {
@@ -15546,9 +15546,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_nasr.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.663821,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467133.6888113,
+    "seen": 1794468878.2732694,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_paint_word1.mp3": {
@@ -15570,87 +15570,87 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_saaah.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.663829,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467139.037902,
+    "seen": 1794468878.274118,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_saara.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638303,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467137.2744973,
+    "seen": 1794468878.2741232,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_safeenah.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638312,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467135.4958541,
+    "seen": 1794468878.274127,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_samakah.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638327,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467140.781333,
+    "seen": 1794468878.27413,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sayyarah.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638339,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467145.699286,
+    "seen": 1794468878.2741332,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_seer.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.663835,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467144.0323708,
+    "seen": 1794468878.2741363,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_shams.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638365,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467142.4434154,
+    "seen": 1794468878.2741401,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sibaq.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638374,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467152.6827202,
+    "seen": 1794468878.2741432,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sikkeen.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638386,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467150.8268657,
+    "seen": 1794468878.274146,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sirwal.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.66384,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467149.0394764,
+    "seen": 1794468878.2741506,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sitar.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638415,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467147.355076,
+    "seen": 1794468878.2741535,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sooq.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638432,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467157.976665,
+    "seen": 1794468878.2741566,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sooq_alt.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638443,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467156.2277007,
+    "seen": 1794468878.27416,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_soor.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638455,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467154.498072,
+    "seen": 1794468878.2741644,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_story_1.mp3": {
@@ -15678,21 +15678,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sukkar.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.6638546,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467163.082754,
+    "seen": 1794468878.2753122,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_sulahfah.mp3": {
-    "mtime": 1786147258.3577995,
-    "seen": 1794121861.663856,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467161.3997154,
+    "seen": 1794468878.2753165,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_trace_end.mp3": {
-    "mtime": 1786147258.5249856,
-    "seen": 1794121861.6638572,
-    "ast_hash": "05e044357f93a44440a10611278abd4c",
+    "mtime": 1794467159.7197652,
+    "seen": 1794468878.2753203,
+    "ast_hash": "f4dd5e6a938732f098a067b961040db6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_trace_isolated.mp3": {
@@ -15702,15 +15702,15 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_trace_middle.mp3": {
-    "mtime": 1786147258.521976,
-    "seen": 1794121861.6638596,
-    "ast_hash": "b0a2294f81801e3156d1ddf3e5a4c3a6",
+    "mtime": 1794467164.81443,
+    "seen": 1794468878.2756088,
+    "ast_hash": "62a17374037fcfecae87d0bfc39146a0",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_trace_start.mp3": {
-    "mtime": 1786147258.515448,
-    "seen": 1794121861.663861,
-    "ast_hash": "95b0c2424add24b4f0bc2827bb32589b",
+    "mtime": 1794467166.5326276,
+    "seen": 1794468878.275613,
+    "ast_hash": "ee7f29c2e7a2ec74ea45ef1f0cf3c59c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/final/seen_word_p1_1.mp3": {
@@ -15816,21 +15816,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/madd/seen_madd_alif.mp3": {
-    "mtime": 1786147258.4934165,
-    "seen": 1794121861.6638885,
-    "ast_hash": "f56660e82f77240085ef59e30fee0760",
+    "mtime": 1794467167.3790896,
+    "seen": 1794468878.2805722,
+    "ast_hash": "41558b148b9fd3846c7009d34ca6bdc2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/madd/seen_madd_def.mp3": {
-    "mtime": 1786147258.4763236,
-    "seen": 1794121861.6638894,
-    "ast_hash": "242a1ab7c95e5f5320050ee95eba1fbb",
+    "mtime": 1794467169.0707953,
+    "seen": 1794468878.2805765,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/madd/seen_madd_types.mp3": {
-    "mtime": 1786147258.487334,
-    "seen": 1794121861.6638906,
-    "ast_hash": "5512b2e4c950d9e3f97bd1458ce5082c",
+    "mtime": 1794467169.9027827,
+    "seen": 1794468878.28058,
+    "ast_hash": "7f0e490595a24978aea43b63d29ca5e1",
     "semantic_hash": ""
   },
   "assets/audio/lessons/seen/sounds/seen_damma_rule.mp3": {
@@ -16494,27 +16494,27 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_bg_a.mp3": {
-    "mtime": 1786147247.7458327,
-    "seen": 1794121861.6641076,
-    "ast_hash": "821ff66c3c0e767517ad36d0845e82a7",
+    "mtime": 1794467171.4283266,
+    "seen": 1794468878.3318365,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_bg_b.mp3": {
-    "mtime": 1786147247.933778,
-    "seen": 1794121861.6641088,
-    "ast_hash": "062e7cf3fdcf349f7d1a5b505ceb0681",
+    "mtime": 1794467175.7405405,
+    "seen": 1794468878.3318412,
+    "ast_hash": "4f2d0ed2166cc35019b205c6120d83fd",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_bg_c.mp3": {
-    "mtime": 1786147247.9488163,
-    "seen": 1794121861.6641097,
-    "ast_hash": "afe1095421c958a9bb05253406ac2ac3",
+    "mtime": 1794467174.3132217,
+    "seen": 1794468878.3318455,
+    "ast_hash": "7f55f84a690b185971f6d57363cde5d8",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_bg_d.mp3": {
-    "mtime": 1786147247.7513368,
-    "seen": 1794121861.6641111,
-    "ast_hash": "455f99a5184eeae8bdb70187035bcf35",
+    "mtime": 1794467172.9165528,
+    "seen": 1794468878.3318498,
+    "ast_hash": "5c22a915828200d4d7cd36362c1e9a0c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_circus_correct.mp3": {
@@ -16530,9 +16530,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_goal.mp3": {
-    "mtime": 1786147247.6431081,
-    "seen": 1794121861.664115,
-    "ast_hash": "00e978e6024ee71a5351a7bbc87c86ea",
+    "mtime": 1794467247.3484733,
+    "seen": 1794468878.3324594,
+    "ast_hash": "781e34bd2933753453ffb5b9400ea649",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_kw_ss1.mp3": {
@@ -16608,33 +16608,33 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_10.mp3": {
-    "mtime": 1786147247.835225,
-    "seen": 1794121861.6641312,
-    "ast_hash": "11afbf27785e5019f35f3e793d4dcfa9",
+    "mtime": 1794467178.4350607,
+    "seen": 1794468878.3362129,
+    "ast_hash": "6bfec3a7123e1ead799e67207b9a9d3f",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_11.mp3": {
-    "mtime": 1786147247.8493388,
-    "seen": 1794121861.6641324,
-    "ast_hash": "a047905d3068dff680cf6d871378a117",
+    "mtime": 1794467182.7549787,
+    "seen": 1794468878.3362184,
+    "ast_hash": "c9133f571953b8cadd67cc303cb26060",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_12.mp3": {
-    "mtime": 1786147247.8558576,
-    "seen": 1794121861.6641335,
-    "ast_hash": "7b9185638f6f530c9d31daa83930d879",
+    "mtime": 1794467181.313961,
+    "seen": 1794468878.3362226,
+    "ast_hash": "2d3d1ceec8a62f8020ff1300e26fbad6",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_13.mp3": {
-    "mtime": 1786147247.8649094,
-    "seen": 1794121861.664135,
-    "ast_hash": "7de60f6c40d14edd4df3050b2140f408",
+    "mtime": 1794467250.289984,
+    "seen": 1794468878.3362262,
+    "ast_hash": "116abbdd0fafdd31d23b12fe7ea2c59c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_14.mp3": {
-    "mtime": 1786147247.8684146,
-    "seen": 1794121861.664136,
-    "ast_hash": "0983917e6575897babe855645886507c",
+    "mtime": 1794467179.8908474,
+    "seen": 1794468878.3362298,
+    "ast_hash": "61e068445445e1490193ae0b7575e1ac",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_2.mp3": {
@@ -16668,21 +16668,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_7.mp3": {
-    "mtime": 1786147247.756346,
-    "seen": 1794121861.6641436,
-    "ast_hash": "8199cd90ee79b5cb2c3806cbcdfbd218",
+    "mtime": 1794467186.8988483,
+    "seen": 1794468878.3378148,
+    "ast_hash": "5c22a915828200d4d7cd36362c1e9a0c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_8.mp3": {
-    "mtime": 1786147247.7928998,
-    "seen": 1794121861.664145,
-    "ast_hash": "2367a3822c5a91c0ae5a644955a9c966",
+    "mtime": 1794467185.3565242,
+    "seen": 1794468878.3378193,
+    "ast_hash": "72063dbfbbc8a2b84ed2d9394060b48a",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_story_9.mp3": {
-    "mtime": 1786147247.8292196,
-    "seen": 1794121861.6641462,
-    "ast_hash": "3692356a9bf259c157fd85587f1defb1",
+    "mtime": 1794467247.5302582,
+    "seen": 1794468878.3378232,
+    "ast_hash": "a6c6a3e59b00ede1fcae562e6792bb28",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_damma.mp3": {
@@ -16692,51 +16692,51 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra1.mp3": {
-    "mtime": 1786147247.6967137,
-    "seen": 1794121861.6641488,
-    "ast_hash": "aef1c62eebacb51a8dbeab44071be14e",
+    "mtime": 1794467247.704435,
+    "seen": 1794468878.338119,
+    "ast_hash": "4b8f65959677032de006507c0ae4d635",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra2.mp3": {
-    "mtime": 1786147247.7137334,
-    "seen": 1794121861.66415,
-    "ast_hash": "9e433cc8b3526de2509c18e786f07700",
+    "mtime": 1794467189.954746,
+    "seen": 1794468878.338123,
+    "ast_hash": "7574856f80d93d6d3a9807aaa6bf63fb",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra3.mp3": {
-    "mtime": 1786147247.7268114,
-    "seen": 1794121861.6641512,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794467188.4959033,
+    "seen": 1794468878.3381264,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra4.mp3": {
-    "mtime": 1786147247.7323196,
-    "seen": 1794121861.6641524,
-    "ast_hash": "b23d2b3b9052f0454365aa3bc0bf6627",
+    "mtime": 1794467195.1441793,
+    "seen": 1794468878.338131,
+    "ast_hash": "873349faf1f740e179813535e7264927",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra5.mp3": {
-    "mtime": 1786147247.7418313,
-    "seen": 1794121861.6641536,
-    "ast_hash": "eef4fd10874e1e3757f2cde08d61dc44",
+    "mtime": 1794467193.6914873,
+    "seen": 1794468878.3381352,
+    "ast_hash": "cdf7418537ea001c390ea66f645a9421",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_extra6.mp3": {
-    "mtime": 1786147247.927267,
-    "seen": 1794121861.6641548,
-    "ast_hash": "080e2aa89ab7da589ad0d75e0d879fec",
+    "mtime": 1794467192.4374819,
+    "seen": 1794468878.3381388,
+    "ast_hash": "17b957931ee98183fa7f8e3397995089",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_fatha.mp3": {
-    "mtime": 1786147247.6752455,
-    "seen": 1794121861.664158,
-    "ast_hash": "ab177f546ea807a7167fbf63b113673e",
+    "mtime": 1794467191.6677265,
+    "seen": 1794468878.3381429,
+    "ast_hash": "3f78bb25f025d2213041e9f22a412439",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_kasra.mp3": {
-    "mtime": 1786147247.6807513,
-    "seen": 1794121861.66416,
-    "ast_hash": "4b7571638b8157a5cc3f52cbd07b67dc",
+    "mtime": 1794467197.7680311,
+    "seen": 1794468878.3381472,
+    "ast_hash": "802f422803022c70cb6b28e75df4eb65",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_syllable_madd_aa.mp3": {
@@ -16752,21 +16752,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_word_narr_1.mp3": {
-    "mtime": 1786147247.872923,
-    "seen": 1794121861.664164,
-    "ast_hash": "a46e63c4a3f74d59bccc02b94939984d",
+    "mtime": 1794467196.4027076,
+    "seen": 1794468878.338763,
+    "ast_hash": "5a9bbc078056d5e1f136dddebc3fb461",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_word_narr_2.mp3": {
-    "mtime": 1786147247.8789232,
-    "seen": 1794121861.6641653,
-    "ast_hash": "df415864bea4caed62082c5543f693c6",
+    "mtime": 1794467199.875892,
+    "seen": 1794468878.3387685,
+    "ast_hash": "5a9bbc078056d5e1f136dddebc3fb461",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_word_narr_3.mp3": {
-    "mtime": 1786147247.8892355,
-    "seen": 1794121861.6641665,
-    "ast_hash": "05b147bfd5d089cc4677c73b6de96e63",
+    "mtime": 1794467198.784346,
+    "seen": 1794468878.3387725,
+    "ast_hash": "5a9bbc078056d5e1f136dddebc3fb461",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_word_p1_1.mp3": {
@@ -16890,9 +16890,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_write_intro.mp3": {
-    "mtime": 1786147247.927267,
-    "seen": 1794121861.6641924,
-    "ast_hash": "080e2aa89ab7da589ad0d75e0d879fec",
+    "mtime": 1794467200.60497,
+    "seen": 1794468878.3448179,
+    "ast_hash": "17b957931ee98183fa7f8e3397995089",
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/final/thaa_wrong.mp3": {
@@ -17124,9 +17124,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/thaa/writing/thaa_write_intro.mp3": {
-    "mtime": 1786147247.927267,
-    "seen": 1794121861.6642396,
-    "ast_hash": "080e2aa89ab7da589ad0d75e0d879fec",
+    "mtime": 1794467201.393924,
+    "seen": 1794468878.3566737,
+    "ast_hash": "17b957931ee98183fa7f8e3397995089",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_goal.mp3": {
@@ -17226,21 +17226,21 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_trace_isolated.mp3": {
-    "mtime": 1786147257.2327843,
-    "seen": 1794121861.6642659,
-    "ast_hash": "3bd9e0b67746fdd13be00bd84479913c",
+    "mtime": 1794467233.0802655,
+    "seen": 1794468878.3841548,
+    "ast_hash": "4bafdf65e2fc4c2de90b2ad84c3272c2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_trace_middle.mp3": {
-    "mtime": 1786147257.2377877,
-    "seen": 1794121861.6642673,
-    "ast_hash": "ab3b37c697598656f89c8992a9e5fe30",
+    "mtime": 1794467235.5375886,
+    "seen": 1794468878.38416,
+    "ast_hash": "5c22a915828200d4d7cd36362c1e9a0c",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_trace_start.mp3": {
-    "mtime": 1786147257.2347872,
-    "seen": 1794121861.6642685,
-    "ast_hash": "18b0674b8963e09270cc48e5f7a3d235",
+    "mtime": 1794467234.2882125,
+    "seen": 1794468878.3841653,
+    "ast_hash": "4bafdf65e2fc4c2de90b2ad84c3272c2",
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/final/zaay_word_p1_1.mp3": {
@@ -17484,9 +17484,9 @@
     "semantic_hash": ""
   },
   "assets/audio/lessons/zaay/zaay_goal.mp3": {
-    "mtime": 1786147257.0785122,
-    "seen": 1794121861.664335,
-    "ast_hash": "6c60c8ae20cc60ddbc5c8063805cf08b",
+    "mtime": 1794467236.8010535,
+    "seen": 1794468878.4000566,
+    "ast_hash": "95ab176ac14cafba264c16b292444b8e",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/ain_name.mp3": {
@@ -17556,21 +17556,21 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/baa_pos_end.mp3": {
-    "mtime": 1786369463.2536392,
-    "seen": 1794121861.6643507,
-    "ast_hash": "fe2c11c3f867993cc0c9b1c148cf16b1",
+    "mtime": 1794467251.0548031,
+    "seen": 1794468878.4044895,
+    "ast_hash": "3fb914c8a019dad2fb64e6ecd8c03d0f",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/baa_pos_middle.mp3": {
-    "mtime": 1786369463.255731,
-    "seen": 1794121861.664352,
-    "ast_hash": "ed3155f2973ba216a87d28061ec8b575",
+    "mtime": 1794467250.647281,
+    "seen": 1794468878.4044945,
+    "ast_hash": "a7f34e3d2345f03c28260ba6a3b4b237",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/baa_pos_start.mp3": {
-    "mtime": 1786369463.2578824,
-    "seen": 1794121861.6643534,
-    "ast_hash": "92eb27f45a2c66111fb95206e4cea43a",
+    "mtime": 1794467301.0859103,
+    "seen": 1794468878.4044974,
+    "ast_hash": "9b111b0d0a17d60e2e4fee60a88cbbed",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/baa_sound.mp3": {
@@ -17610,33 +17610,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/daal_name.mp3": {
-    "mtime": 1786369463.278296,
-    "seen": 1794121861.664362,
-    "ast_hash": "98084409b77c47b48b807cf5d494f689",
+    "mtime": 1794434905.4727147,
+    "seen": 1794468878.4066193,
+    "ast_hash": "a66c1e8f4d0aa4033c1d7aa2895ff1ce",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/daal_pos_end.mp3": {
-    "mtime": 1786369463.2841654,
-    "seen": 1794121861.6643631,
-    "ast_hash": "455ac9a15088264c64d1eb1a57afab72",
+    "mtime": 1794467252.228899,
+    "seen": 1794468878.406624,
+    "ast_hash": "f9ab0cd786085775ae715d1a1fab750c",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/daal_pos_middle.mp3": {
-    "mtime": 1786369463.2871284,
-    "seen": 1794121861.6643643,
-    "ast_hash": "bd1656a673df54ad26547b1503bde52e",
+    "mtime": 1794467251.8818662,
+    "seen": 1794468878.4066277,
+    "ast_hash": "fce6476636e380a18beab271f7271ac3",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/daal_pos_start.mp3": {
-    "mtime": 1786369463.2932491,
-    "seen": 1794121861.6643655,
-    "ast_hash": "eecc2eaabc633a315b33b9eb1e5bdf9d",
+    "mtime": 1794467251.456085,
+    "seen": 1794468878.406631,
+    "ast_hash": "c63e5a685f7e5891e129c490cf27dcc5",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/daal_sound.mp3": {
-    "mtime": 1786369463.2977295,
-    "seen": 1794121861.664367,
-    "ast_hash": "f03300bcda36d9982844dd26ffeaba00",
+    "mtime": 1794434905.6731062,
+    "seen": 1794468878.4066358,
+    "ast_hash": "a66c1e8f4d0aa4033c1d7aa2895ff1ce",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaa_dh_name.mp3": {
@@ -17670,33 +17670,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaal_name.mp3": {
-    "mtime": 1786369463.3233845,
-    "seen": 1794121861.6643744,
-    "ast_hash": "fe7f79c258accabfe5be0ae4b90aeabc",
+    "mtime": 1794434905.8285735,
+    "seen": 1794468878.40919,
+    "ast_hash": "a34236911020c3d8f50ad13d6362a4d8",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaal_pos_end.mp3": {
-    "mtime": 1786369463.328163,
-    "seen": 1794121861.6643755,
-    "ast_hash": "2a7c35dc827b189625400ad7a575e1d7",
+    "mtime": 1794467252.5993228,
+    "seen": 1794468878.4091952,
+    "ast_hash": "f9ab0cd786085775ae715d1a1fab750c",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaal_pos_middle.mp3": {
-    "mtime": 1786369463.332503,
-    "seen": 1794121861.6643765,
-    "ast_hash": "84c72509eabb1961063e059a9065fc7a",
+    "mtime": 1794434906.0065856,
+    "seen": 1794468878.4091995,
+    "ast_hash": "fce6476636e380a18beab271f7271ac3",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaal_pos_start.mp3": {
-    "mtime": 1786369463.338006,
-    "seen": 1794121861.6643782,
-    "ast_hash": "412b2a9ac8689a8c796a21b9b44a9061",
+    "mtime": 1794467252.9522924,
+    "seen": 1794468878.409204,
+    "ast_hash": "fda2411d004bf76b5aa7115810a33a13",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/dhaal_sound.mp3": {
-    "mtime": 1786369463.3427737,
-    "seen": 1794121861.6643794,
-    "ast_hash": "60f8113e440b324bd8fcf31172926824",
+    "mtime": 1794434906.183529,
+    "seen": 1794468878.4092078,
+    "ast_hash": "a34236911020c3d8f50ad13d6362a4d8",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/faa_name.mp3": {
@@ -17760,33 +17760,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_h_name.mp3": {
-    "mtime": 1786369463.3916361,
-    "seen": 1794121861.6643956,
-    "ast_hash": "645c11d1f6425a9c676f3f6582fc8f92",
+    "mtime": 1794434906.340517,
+    "seen": 1794468878.4130692,
+    "ast_hash": "f27a52d348b4e60c31e665edb8521a53",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_h_pos_end.mp3": {
-    "mtime": 1786369463.397275,
-    "seen": 1794121861.6643968,
-    "ast_hash": "33024937804b7486556177208494e34c",
+    "mtime": 1794467253.3373508,
+    "seen": 1794468878.4130743,
+    "ast_hash": "8755b47b7f72e5fec53463f52f6b8c35",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_h_pos_middle.mp3": {
-    "mtime": 1786369463.401365,
-    "seen": 1794121861.6643982,
-    "ast_hash": "ba413c79e160029ee13308c0110791e7",
+    "mtime": 1794467254.173556,
+    "seen": 1794468878.413079,
+    "ast_hash": "917e2a3cf7388044e9eaf4e3f66d3dcb",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_h_pos_start.mp3": {
-    "mtime": 1786369463.407767,
-    "seen": 1794121861.6643994,
-    "ast_hash": "59999c6183c6c88ba2b30fa7ee5b3f39",
+    "mtime": 1794467253.7511733,
+    "seen": 1794468878.4130833,
+    "ast_hash": "d2b9ec5702cdc95f71322911ac559605",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_h_sound.mp3": {
-    "mtime": 1786369463.4277327,
-    "seen": 1794121861.6644003,
-    "ast_hash": "27d1f32291c9ff8c92a28dc036167bc0",
+    "mtime": 1794434906.524559,
+    "seen": 1794468878.4130876,
+    "ast_hash": "f27a52d348b4e60c31e665edb8521a53",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/haa_name.mp3": {
@@ -17826,21 +17826,21 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/jeem_pos_end.mp3": {
-    "mtime": 1786369463.4485736,
-    "seen": 1794121861.6644092,
-    "ast_hash": "0211692d3be98f2a53d9ae3860e404df",
+    "mtime": 1794467254.5875547,
+    "seen": 1794468878.414881,
+    "ast_hash": "8755b47b7f72e5fec53463f52f6b8c35",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/jeem_pos_middle.mp3": {
-    "mtime": 1786369463.452343,
-    "seen": 1794121861.6644104,
-    "ast_hash": "2e2dff1b7b475259592abb1c78eff542",
+    "mtime": 1794434906.7358375,
+    "seen": 1794468878.4148853,
+    "ast_hash": "bc69369dce701935e225d23d0127a2ba",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/jeem_pos_start.mp3": {
-    "mtime": 1786369463.4570138,
-    "seen": 1794121861.6644113,
-    "ast_hash": "be0f0df423064607d76bb2cc64156f37",
+    "mtime": 1794434906.9144497,
+    "seen": 1794468878.414889,
+    "ast_hash": "24bd38498223198e87d1ab190e7e114e",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/jeem_sound.mp3": {
@@ -17880,33 +17880,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/khaa_name.mp3": {
-    "mtime": 1786369463.484287,
-    "seen": 1794121861.66442,
-    "ast_hash": "c2a3a412f87c5d32b90a0ad2f6d58ea7",
+    "mtime": 1794434907.0989552,
+    "seen": 1794468878.4166036,
+    "ast_hash": "7346206b6798ad081a21bbd4e0aeec58",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/khaa_pos_end.mp3": {
-    "mtime": 1786369463.4876666,
-    "seen": 1794121861.664421,
-    "ast_hash": "af52e11a63f16a103b6787b14a9a752f",
+    "mtime": 1794434907.2604132,
+    "seen": 1794468878.4166093,
+    "ast_hash": "8755b47b7f72e5fec53463f52f6b8c35",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/khaa_pos_middle.mp3": {
-    "mtime": 1786369463.4939368,
-    "seen": 1794121861.664422,
-    "ast_hash": "72e959e739d1b33d57fff149fd8ff8f8",
+    "mtime": 1794467255.3110456,
+    "seen": 1794468878.416613,
+    "ast_hash": "bc69369dce701935e225d23d0127a2ba",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/khaa_pos_start.mp3": {
-    "mtime": 1786369463.4977376,
-    "seen": 1794121861.6644235,
-    "ast_hash": "bc55cef41718feb95c176ec40c17cebf",
+    "mtime": 1794467254.9429862,
+    "seen": 1794468878.4166167,
+    "ast_hash": "24bd38498223198e87d1ab190e7e114e",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/khaa_sound.mp3": {
-    "mtime": 1786369463.5011785,
-    "seen": 1794121861.6644247,
-    "ast_hash": "a6c384a34668377991fa27db4ad210c5",
+    "mtime": 1794434907.433722,
+    "seen": 1794468878.4166198,
+    "ast_hash": "1d3b880d7eeb34319bde0ab9b0b6db70",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/laam_name.mp3": {
@@ -18012,33 +18012,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/raa_name.mp3": {
-    "mtime": 1786369463.5555196,
-    "seen": 1794121861.6644475,
-    "ast_hash": "2fe9886f10ae97740a86e4b10d25191b",
+    "mtime": 1794434907.6512249,
+    "seen": 1794468878.426741,
+    "ast_hash": "7c3b212240898eac8d442868a45a607d",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/raa_pos_end.mp3": {
-    "mtime": 1786369463.561525,
-    "seen": 1794121861.664449,
-    "ast_hash": "91cde20e5ac56f70324f2a0d7abd0573",
+    "mtime": 1794467256.1350315,
+    "seen": 1794468878.426745,
+    "ast_hash": "8e91acaa749dd89cf518eafe06caa79a",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/raa_pos_middle.mp3": {
-    "mtime": 1786369463.564725,
-    "seen": 1794121861.66445,
-    "ast_hash": "c38a15bb7575187ab3aeb18615370718",
+    "mtime": 1794434907.8854692,
+    "seen": 1794468878.4267485,
+    "ast_hash": "65baf3738ab022e4cff5083f78d822f7",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/raa_pos_start.mp3": {
-    "mtime": 1786369463.5676763,
-    "seen": 1794121861.6644514,
-    "ast_hash": "5b592262bb09c2829f806e3d60e4b723",
+    "mtime": 1794467255.688091,
+    "seen": 1794468878.426752,
+    "ast_hash": "27c67104c219a4b06333769b84c3e8fa",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/raa_sound.mp3": {
-    "mtime": 1786369463.5710115,
-    "seen": 1794121861.6644523,
-    "ast_hash": "142501cc15bdce05df83a0be0a8dee69",
+    "mtime": 1794434908.1089797,
+    "seen": 1794468878.4267547,
+    "ast_hash": "68988caec8bf61973be03878e2eb86d8",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/saad_name.mp3": {
@@ -18138,21 +18138,21 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/taa_pos_end.mp3": {
-    "mtime": 1786369463.6082933,
-    "seen": 1794121861.6644733,
-    "ast_hash": "41e59766edc44dee3521e6584a1aeeba",
+    "mtime": 1794459849.664742,
+    "seen": 1794468878.4324617,
+    "ast_hash": "42d36b62b8a6fdc1c79ef3f4007eb955",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/taa_pos_middle.mp3": {
-    "mtime": 1786369463.6163213,
-    "seen": 1794121861.6644747,
-    "ast_hash": "6c0d1d52f4d101d2cad0b8be21724f88",
+    "mtime": 1794467256.5128613,
+    "seen": 1794468878.4324758,
+    "ast_hash": "42e534c81f750b81ed663fa15875c922",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/taa_pos_start.mp3": {
-    "mtime": 1786369463.6193285,
-    "seen": 1794121861.664476,
-    "ast_hash": "a49acf74953594a40058085600ad63ff",
+    "mtime": 1794467256.8535862,
+    "seen": 1794468878.43248,
+    "ast_hash": "29b6fc6b35bc14560c281436f07f32fd",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/taa_sound.mp3": {
@@ -18198,21 +18198,21 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/thaa_pos_end.mp3": {
-    "mtime": 1786369463.6407542,
-    "seen": 1794121861.6644855,
-    "ast_hash": "8d996733d48f74080c16f2622342e55e",
+    "mtime": 1794434908.4012363,
+    "seen": 1794468878.4360535,
+    "ast_hash": "4a9b4a70eadbc02288bcd4e11064cd48",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/thaa_pos_middle.mp3": {
-    "mtime": 1786369463.6434965,
-    "seen": 1794121861.6644866,
-    "ast_hash": "bd687b68d9852d34ef01891344033104",
+    "mtime": 1794434908.6464622,
+    "seen": 1794468878.4360602,
+    "ast_hash": "fa9420fc585530659ba975e2f003e6cf",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/thaa_pos_start.mp3": {
-    "mtime": 1786369463.6445262,
-    "seen": 1794121861.6644876,
-    "ast_hash": "4213984b2cd83d8095c40013a4ce1558",
+    "mtime": 1794467257.2788398,
+    "seen": 1794468878.4364245,
+    "ast_hash": "35dabb32c4ba38c16e0e597d1cd2daa2",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/thaa_sound.mp3": {
@@ -18282,33 +18282,33 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/core/zaay_name.mp3": {
-    "mtime": 1786369463.6614087,
-    "seen": 1794121861.6645029,
-    "ast_hash": "d8ebf46ce4af6d29fb4301a0c0149203",
+    "mtime": 1794434908.8501227,
+    "seen": 1794468878.4434075,
+    "ast_hash": "a1035d7adf9a4091fb6a5921b2bf6c9e",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/zaay_pos_end.mp3": {
-    "mtime": 1786369463.6632218,
-    "seen": 1794121861.6645038,
-    "ast_hash": "2355b24d7c9d92de6f2029ed494341bf",
+    "mtime": 1794467257.7200685,
+    "seen": 1794468878.4434125,
+    "ast_hash": "8e91acaa749dd89cf518eafe06caa79a",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/zaay_pos_middle.mp3": {
-    "mtime": 1786369463.6648424,
-    "seen": 1794121861.664505,
-    "ast_hash": "c10ac1f2dc50dc222ba572ff3d4c9432",
+    "mtime": 1794434909.1168487,
+    "seen": 1794468878.4434164,
+    "ast_hash": "65baf3738ab022e4cff5083f78d822f7",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/zaay_pos_start.mp3": {
-    "mtime": 1786369463.6665425,
-    "seen": 1794121861.6645062,
-    "ast_hash": "bff219628ad9111f8d1c3ae04a20a3b9",
+    "mtime": 1794467258.1115599,
+    "seen": 1794468878.4434197,
+    "ast_hash": "27c67104c219a4b06333769b84c3e8fa",
     "semantic_hash": ""
   },
   "assets/audio/letters/core/zaay_sound.mp3": {
-    "mtime": 1786369463.6681015,
-    "seen": 1794121861.6645072,
-    "ast_hash": "c35394064a046d2d88cbc29840b567ca",
+    "mtime": 1794434909.349464,
+    "seen": 1794468878.443423,
+    "ast_hash": "a1035d7adf9a4091fb6a5921b2bf6c9e",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/ain_madd_demo.mp3": {
@@ -18336,9 +18336,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/baa_madd_demo.mp3": {
-    "mtime": 1786369463.6733465,
-    "seen": 1794121861.6645136,
-    "ast_hash": "d93e3009c13a83ca8e4e1165883a9700",
+    "mtime": 1794467258.5053976,
+    "seen": 1794468878.445835,
+    "ast_hash": "72033cfbd563c5ae643609d416e02085",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/baa_madd_waw.mp3": {
@@ -18348,9 +18348,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/baa_madd_yaa.mp3": {
-    "mtime": 1786147243.2707627,
-    "seen": 1794121861.6645162,
-    "ast_hash": "070824b2fca5dc70fae4e743d98f797d",
+    "mtime": 1794467238.232491,
+    "seen": 1794468878.446131,
+    "ast_hash": "6403eeb37438f37d72509fb0a10b8bf2",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/daad_madd_demo.mp3": {
@@ -18360,9 +18360,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/daal_madd_demo.mp3": {
-    "mtime": 1786369463.6767125,
-    "seen": 1794121861.6645184,
-    "ast_hash": "1f1a059e22f6f90df4d1326cee7f8d93",
+    "mtime": 1794459850.0775797,
+    "seen": 1794468878.4473028,
+    "ast_hash": "4e7a28acb883f25edcc5314fbf2b1416",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/dhaa_dh_madd_demo.mp3": {
@@ -18372,9 +18372,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/dhaal_madd_demo.mp3": {
-    "mtime": 1786369463.6803608,
-    "seen": 1794121861.6645207,
-    "ast_hash": "ce1b5bd135f3ce2f1e074c7ced7ff50e",
+    "mtime": 1794467258.9493957,
+    "seen": 1794468878.4485638,
+    "ast_hash": "cbb60e359fe0991a1184ca843f5c4757",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/faa_madd_demo.mp3": {
@@ -18396,9 +18396,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/haa_h_madd_demo.mp3": {
-    "mtime": 1786369463.6850653,
-    "seen": 1794121861.6645255,
-    "ast_hash": "592d9a6f505da9d4c0504eec35656220",
+    "mtime": 1794467259.3053048,
+    "seen": 1794468878.452679,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/haa_madd_demo.mp3": {
@@ -18408,9 +18408,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/jeem_madd_demo.mp3": {
-    "mtime": 1786369463.6876714,
-    "seen": 1794121861.664528,
-    "ast_hash": "84875d23be68b18082399fc8d79909c9",
+    "mtime": 1794467259.6722527,
+    "seen": 1794468878.4541004,
+    "ast_hash": "6410ad752aae65920b01ba51325bce01",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/kaaf_madd_demo.mp3": {
@@ -18420,9 +18420,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/khaa_madd_demo.mp3": {
-    "mtime": 1786369463.691622,
-    "seen": 1794121861.6645303,
-    "ast_hash": "049173d46472a1a013cd2b2a4d9254d5",
+    "mtime": 1794467260.1203885,
+    "seen": 1794468878.4553218,
+    "ast_hash": "2163ae85005728f13fe5e0a9713caa24",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/laam_madd_demo.mp3": {
@@ -18444,9 +18444,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/raa_madd_demo.mp3": {
-    "mtime": 1786369463.6979022,
-    "seen": 1794121861.664535,
-    "ast_hash": "130bc01955e7bfb5f3ea3c56904a7ea2",
+    "mtime": 1794467260.5929244,
+    "seen": 1794468878.4605396,
+    "ast_hash": "806d0c5f73acd3a7e178e6a747844f23",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/saad_madd_demo.mp3": {
@@ -18480,9 +18480,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/thaa_madd_demo.mp3": {
-    "mtime": 1786369463.7069352,
-    "seen": 1794121861.664542,
-    "ast_hash": "3c6b77a35348f4a9d39c46c7118f6080",
+    "mtime": 1794467260.9899497,
+    "seen": 1794468878.4657001,
+    "ast_hash": "403226d7708a1cea8e1c8e61e8b854bb",
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/waaw_madd_demo.mp3": {
@@ -18498,9 +18498,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/long_vowels/zaay_madd_demo.mp3": {
-    "mtime": 1786369463.7127616,
-    "seen": 1794121861.6645455,
-    "ast_hash": "ff06251d3fd5f9a10a7ab04f8ecdc04e",
+    "mtime": 1794467261.3881974,
+    "seen": 1794468878.46802,
+    "ast_hash": "4369ae431bb7318be1641570c47ac256",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/ain_damma_demo.mp3": {
@@ -18552,27 +18552,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/baa_damma_demo.mp3": {
-    "mtime": 1786369463.7267375,
-    "seen": 1794121861.6645563,
-    "ast_hash": "e17228e00d3aa5777777d39ba7186bce",
+    "mtime": 1794467262.1664522,
+    "seen": 1794468878.4719837,
+    "ast_hash": "9d6e0f9f03c74ceb0d3a87e1573b4c5d",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/baa_fatha_demo.mp3": {
-    "mtime": 1786369463.7286453,
-    "seen": 1794121861.6645575,
-    "ast_hash": "fe684c4fbef81443474a9ba0b4079d37",
+    "mtime": 1794434909.6063626,
+    "seen": 1794468878.4719882,
+    "ast_hash": "65880f91d0eedf7b041af27ef397b2be",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/baa_kasra_demo.mp3": {
-    "mtime": 1786369463.7286453,
-    "seen": 1794121861.6645586,
-    "ast_hash": "dddc693f6abc88fe2100d1c89faf7022",
+    "mtime": 1794467261.7962432,
+    "seen": 1794468878.4719918,
+    "ast_hash": "75ef9a2efd6e182a552e7366086b877e",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/baa_sentence.mp3": {
-    "mtime": 1786369463.732236,
-    "seen": 1794121861.66456,
-    "ast_hash": "d6217359a1cd1ecf57b1cb12e1aef4d5",
+    "mtime": 1794467262.5091202,
+    "seen": 1794468878.4719954,
+    "ast_hash": "d613fc86a1d3bf0fdc9b2f927d00f251",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/daad_damma_demo.mp3": {
@@ -18600,27 +18600,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/daal_damma_demo.mp3": {
-    "mtime": 1786369463.7388258,
-    "seen": 1794121861.664566,
-    "ast_hash": "d881a1e52691d1afc9d858185df44cec",
+    "mtime": 1794467262.8357306,
+    "seen": 1794468878.4750726,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/daal_fatha_demo.mp3": {
-    "mtime": 1786369463.7424636,
-    "seen": 1794121861.6645672,
-    "ast_hash": "a4dcfdb2d5d08a0eb70a51724b4d185e",
+    "mtime": 1794467264.0244222,
+    "seen": 1794468878.4750786,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/daal_kasra_demo.mp3": {
-    "mtime": 1786369463.7424636,
-    "seen": 1794121861.6645687,
-    "ast_hash": "9a1c3c1b16dcc7379d5a21c9c1540d07",
+    "mtime": 1794467263.682647,
+    "seen": 1794468878.4750822,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/daal_sentence.mp3": {
-    "mtime": 1786369463.7462442,
-    "seen": 1794121861.6645699,
-    "ast_hash": "f296cdda52e81e1ce07a517c8060725e",
+    "mtime": 1794467263.297119,
+    "seen": 1794468878.4750857,
+    "ast_hash": "402c3b96705eef3f174515c6f08389c4",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/dhaa_dh_damma_demo.mp3": {
@@ -18648,27 +18648,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/dhaal_damma_demo.mp3": {
-    "mtime": 1786369463.7565005,
-    "seen": 1794121861.664576,
-    "ast_hash": "79b3fd85d24939691d8cd26d6665cd09",
+    "mtime": 1794467264.7966647,
+    "seen": 1794468878.4762957,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/dhaal_fatha_demo.mp3": {
-    "mtime": 1786369463.7595432,
-    "seen": 1794121861.6645772,
-    "ast_hash": "c59360b7c12b78f0fa8f172d79fffe1e",
+    "mtime": 1794434909.7867992,
+    "seen": 1794468878.4762995,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/dhaal_kasra_demo.mp3": {
-    "mtime": 1786369463.7622108,
-    "seen": 1794121861.6645782,
-    "ast_hash": "403c0dd6b9db52c931412c9301287c09",
+    "mtime": 1794467264.4034345,
+    "seen": 1794468878.4763036,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/dhaal_sentence.mp3": {
-    "mtime": 1786369463.766747,
-    "seen": 1794121861.6645799,
-    "ast_hash": "8b64a5f67b8be2759f8f78965969ac04",
+    "mtime": 1794467265.2714715,
+    "seen": 1794468878.4763093,
+    "ast_hash": "736be1f71086083c12d32ad1bc13e964",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/faa_damma_demo.mp3": {
@@ -18732,27 +18732,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/haa_h_damma_demo.mp3": {
-    "mtime": 1786369463.818449,
-    "seen": 1794121861.664593,
-    "ast_hash": "8632929e785c2fb01f414cdb05b83136",
+    "mtime": 1794467265.6256454,
+    "seen": 1794468878.4792655,
+    "ast_hash": "5fe54f4270490a2e9a9a8013fd7549ee",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/haa_h_fatha_demo.mp3": {
-    "mtime": 1786369463.8220956,
-    "seen": 1794121861.664594,
-    "ast_hash": "2ce1266304cfe47dd8dc4f2859b223da",
+    "mtime": 1794434909.9456313,
+    "seen": 1794468878.4792712,
+    "ast_hash": "2bf5758bf01fdc70d4af266448886962",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/haa_h_kasra_demo.mp3": {
-    "mtime": 1786369463.8252845,
-    "seen": 1794121861.6645951,
-    "ast_hash": "a7ffb9d9f8995d33eb39d127ca9f3516",
+    "mtime": 1794467265.969072,
+    "seen": 1794468878.4792755,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/haa_h_sentence.mp3": {
-    "mtime": 1786369463.8279274,
-    "seen": 1794121861.6645966,
-    "ast_hash": "8df8796b05828b4cd56d500314352fc0",
+    "mtime": 1794467266.3651373,
+    "seen": 1794468878.4792788,
+    "ast_hash": "b24c8f3169b706a88170ecbf871406dd",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/haa_kasra_demo.mp3": {
@@ -18768,27 +18768,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/jeem_damma_demo.mp3": {
-    "mtime": 1786369463.842557,
-    "seen": 1794121861.6646001,
-    "ast_hash": "4cda30682fd27cb97771d92828597ad1",
+    "mtime": 1794434910.1834283,
+    "seen": 1794468878.4798355,
+    "ast_hash": "87057d0fb235d91d81bbc75a771fbd1c",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/jeem_fatha_demo.mp3": {
-    "mtime": 1786369463.8463528,
-    "seen": 1794121861.6646013,
-    "ast_hash": "498bf472bb39f7ef117381818a7b491c",
+    "mtime": 1794434910.4030013,
+    "seen": 1794468878.4798396,
+    "ast_hash": "35a2a3d74d132bf9ed67daa9de756e1c",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/jeem_kasra_demo.mp3": {
-    "mtime": 1786369463.8507378,
-    "seen": 1794121861.6646025,
-    "ast_hash": "d66ee2d10457056072780211cd822961",
+    "mtime": 1794467266.7533383,
+    "seen": 1794468878.4798431,
+    "ast_hash": "90cbbd6ea86f9d26848d2e92a791c8da",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/jeem_sentence.mp3": {
-    "mtime": 1786369463.8535163,
-    "seen": 1794121861.6646037,
-    "ast_hash": "48fa3f0ffbe38d8d983ad3704b6de4c1",
+    "mtime": 1794434910.5860958,
+    "seen": 1794468878.4798465,
+    "ast_hash": "c45e80628baa16708660c2e30d1ff4ca",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/kaaf_damma_demo.mp3": {
@@ -18816,27 +18816,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/khaa_damma_demo.mp3": {
-    "mtime": 1786369463.879733,
-    "seen": 1794121861.66461,
-    "ast_hash": "8bdc7769e90cd25bc002c2fb8b9a9bce",
+    "mtime": 1794434910.7869403,
+    "seen": 1794468878.4826887,
+    "ast_hash": "6ef209c3ab67dddb004dffdf7a6d0504",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/khaa_fatha_demo.mp3": {
-    "mtime": 1786369463.8848004,
-    "seen": 1794121861.664611,
-    "ast_hash": "0776e73e42986b4d2185d0645d27a6d3",
+    "mtime": 1794434910.986209,
+    "seen": 1794468878.4826932,
+    "ast_hash": "6f87aa0129280832e3a116e966604443",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/khaa_kasra_demo.mp3": {
-    "mtime": 1786369463.8893943,
-    "seen": 1794121861.6646123,
-    "ast_hash": "be6ff4c83af8ab72888124da9312f018",
+    "mtime": 1794467267.6311202,
+    "seen": 1794468878.4826965,
+    "ast_hash": "99771eac9d4811f3ff434e4025192123",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/khaa_sentence.mp3": {
-    "mtime": 1786369463.8938358,
-    "seen": 1794121861.6646154,
-    "ast_hash": "961236b61ef1725468eb4619409e3daa",
+    "mtime": 1794467267.1492333,
+    "seen": 1794468878.4826996,
+    "ast_hash": "d8228a2defc64cccdff9c09f4850c5d0",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/laam_damma_demo.mp3": {
@@ -18918,27 +18918,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/raa_damma_demo.mp3": {
-    "mtime": 1786369463.9466622,
-    "seen": 1794121861.6646347,
-    "ast_hash": "6e7d0872633256cf55ca048818e7f83e",
+    "mtime": 1794467267.9960904,
+    "seen": 1794468878.4887285,
+    "ast_hash": "1266f1e6f4de62c076f08ceb92f6a3f2",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/raa_fatha_demo.mp3": {
-    "mtime": 1786369463.9497986,
-    "seen": 1794121861.6646357,
-    "ast_hash": "845a1d428436f7e6b26273b7de8a060d",
+    "mtime": 1794467268.3938768,
+    "seen": 1794468878.4887345,
+    "ast_hash": "aad3f1e6cd8f9dc83f44d26d4f0e8fed",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/raa_kasra_demo.mp3": {
-    "mtime": 1786369463.953978,
-    "seen": 1794121861.6646369,
-    "ast_hash": "87fd69d3c18c55e2a7d5d0b1cb7d8dda",
+    "mtime": 1794434911.1408327,
+    "seen": 1794468878.4887385,
+    "ast_hash": "6e4d9a0f9dc90dfeb4cd00e2ca0f2e06",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/raa_sentence.mp3": {
-    "mtime": 1786369463.9567504,
-    "seen": 1794121861.6646383,
-    "ast_hash": "6840a7e958b27db84e1945eb2c56c5f0",
+    "mtime": 1794467268.8775764,
+    "seen": 1794468878.4887433,
+    "ast_hash": "a0831b206d035d9790ad6a14627d4750",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/saad_damma_demo.mp3": {
@@ -19014,27 +19014,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/taa_damma_demo.mp3": {
-    "mtime": 1786369463.9965491,
-    "seen": 1794121861.664654,
-    "ast_hash": "864a87dd4dbbff1fc6c63f3580a4971d",
+    "mtime": 1794467269.5943644,
+    "seen": 1794468878.497167,
+    "ast_hash": "858dbc8aa3006c066f058b3d0a6e75bc",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/taa_fatha_demo.mp3": {
-    "mtime": 1786369463.9985888,
-    "seen": 1794121861.6646554,
-    "ast_hash": "6293cb72c9fc37c50fe1e8b3bea93577",
+    "mtime": 1794467269.2619684,
+    "seen": 1794468878.4971735,
+    "ast_hash": "b4bd0901925a89e2612ebef49ddef21f",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/taa_kasra_demo.mp3": {
-    "mtime": 1786369464.007213,
-    "seen": 1794121861.6646564,
-    "ast_hash": "cc7d2f5fc6bd342d1f7931cbad1c0556",
+    "mtime": 1794467269.9462361,
+    "seen": 1794468878.4971776,
+    "ast_hash": "f44b5f96f6fba81f28008c9f064dea8c",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/taa_sentence.mp3": {
-    "mtime": 1786369464.0109959,
-    "seen": 1794121861.6646576,
-    "ast_hash": "eef4e94b27c0f9256a59a70ff5a67b7e",
+    "mtime": 1794434911.3080118,
+    "seen": 1794468878.4971817,
+    "ast_hash": "1ada582481e11e82d22318394390fede",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/taa_t_damma_demo.mp3": {
@@ -19062,27 +19062,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/thaa_damma_demo.mp3": {
-    "mtime": 1786369464.03634,
-    "seen": 1794121861.664664,
-    "ast_hash": "e9749d3bebad521accd774da78118ca2",
+    "mtime": 1794467271.4150164,
+    "seen": 1794468878.49968,
+    "ast_hash": "2e475410ebbf453955fb9290b61b2c5e",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/thaa_fatha_demo.mp3": {
-    "mtime": 1786369464.0409749,
-    "seen": 1794121861.664665,
-    "ast_hash": "92075cb12e760b1597b7549a12839a47",
+    "mtime": 1794467270.99379,
+    "seen": 1794468878.4996867,
+    "ast_hash": "d44ca445ee5026019c22f9dd4f7673ba",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/thaa_kasra_demo.mp3": {
-    "mtime": 1786369464.049055,
-    "seen": 1794121861.6646667,
-    "ast_hash": "9dd387da9114d5fc461a2cba24c59b73",
+    "mtime": 1794467270.458196,
+    "seen": 1794468878.499691,
+    "ast_hash": "659f6313ea7ce07ebff119caa73fb866",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/thaa_sentence.mp3": {
-    "mtime": 1786369464.051208,
-    "seen": 1794121861.6646678,
-    "ast_hash": "2bfbf4478493b0adfbd24094ff18bbae",
+    "mtime": 1794467271.785764,
+    "seen": 1794468878.4996948,
+    "ast_hash": "72250ceb084dbf8ae3f49eb86f23d2c6",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/waaw_damma_demo.mp3": {
@@ -19134,27 +19134,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/zaay_damma_demo.mp3": {
-    "mtime": 1786369464.096534,
-    "seen": 1794121861.664679,
-    "ast_hash": "5f5a51ba128b67ba08b683c3619ab362",
+    "mtime": 1794434911.460053,
+    "seen": 1794468878.5021074,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/zaay_fatha_demo.mp3": {
-    "mtime": 1786369464.100368,
-    "seen": 1794121861.6646805,
-    "ast_hash": "80fb4dddb49df3694ece08103c12b76d",
+    "mtime": 1794434911.6325672,
+    "seen": 1794468878.5021114,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/zaay_kasra_demo.mp3": {
-    "mtime": 1786369464.105219,
-    "seen": 1794121861.6646817,
-    "ast_hash": "cfc6aa82a6ec73a7e75a6766bcc6690c",
+    "mtime": 1794434911.7841148,
+    "seen": 1794468878.502115,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/phrases/zaay_sentence.mp3": {
-    "mtime": 1786369464.1086278,
-    "seen": 1794121861.664683,
-    "ast_hash": "cad73626d77012f1ecf07c669d17cded",
+    "mtime": 1794434911.9924865,
+    "seen": 1794468878.5021195,
+    "ast_hash": "56164d79bf6395e21002fc05dac6a262",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/ain_damma.mp3": {
@@ -19206,27 +19206,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/baa_damma.mp3": {
-    "mtime": 1786369464.1364262,
-    "seen": 1794121861.6646938,
-    "ast_hash": "07392bf8086f05af09a64826e96c9c9f",
+    "mtime": 1794434912.149936,
+    "seen": 1794468878.5068977,
+    "ast_hash": "6ea07ed06957f648a6c9b53adf0857d9",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/baa_fatha.mp3": {
-    "mtime": 1786369464.1385484,
-    "seen": 1794121861.6646948,
-    "ast_hash": "16f4439178ea63f076c4e4e5b8481dd7",
+    "mtime": 1794434912.3121345,
+    "seen": 1794468878.506904,
+    "ast_hash": "52d74caa204e77c4b7306771674b97c2",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/baa_kasra.mp3": {
-    "mtime": 1786369464.1414745,
-    "seen": 1794121861.6646962,
-    "ast_hash": "40f97f5bf53d9caadcedf99dbb562f68",
+    "mtime": 1794434912.4618485,
+    "seen": 1794468878.5069082,
+    "ast_hash": "14422a0338e78891627e0f59f0ae2e82",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/baa_sukoon.mp3": {
-    "mtime": 1786369464.14361,
-    "seen": 1794121861.6646976,
-    "ast_hash": "a03589fe6ec580d672e9a5b85c5ac16f",
+    "mtime": 1794434912.654559,
+    "seen": 1794468878.506912,
+    "ast_hash": "c68ab3add32a11c2a9b2ece908b778b1",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daad_damma.mp3": {
@@ -19254,45 +19254,45 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_damma.mp3": {
-    "mtime": 1786369464.1582687,
-    "seen": 1794121861.6647038,
-    "ast_hash": "688f5182bb84c185565b33dedb8e4195",
+    "mtime": 1794434912.785776,
+    "seen": 1794468878.5099335,
+    "ast_hash": "98290c918018536898ae96cd7dad4a67",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_damma_rule.mp3": {
-    "mtime": 1786147253.7877579,
-    "seen": 1794121861.664705,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467248.4795282,
+    "seen": 1794468878.509939,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_fatha.mp3": {
-    "mtime": 1786369464.1640701,
-    "seen": 1794121861.6647062,
-    "ast_hash": "851c5c048464383636f71276d006d979",
+    "mtime": 1794434912.9297523,
+    "seen": 1794468878.509943,
+    "ast_hash": "c380f6450e297422bc13251bd042bc7c",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_fatha_rule.mp3": {
-    "mtime": 1786147253.7831047,
-    "seen": 1794121861.6647074,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467248.0959165,
+    "seen": 1794468878.509948,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_kasra.mp3": {
-    "mtime": 1786369464.1685767,
-    "seen": 1794121861.6647086,
-    "ast_hash": "7340fbb8da1ab133380ffe519ae8a6c6",
+    "mtime": 1794434913.069457,
+    "seen": 1794468878.5099516,
+    "ast_hash": "98290c918018536898ae96cd7dad4a67",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_kasra_rule.mp3": {
-    "mtime": 1786147253.7912612,
-    "seen": 1794121861.6647098,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467248.7687576,
+    "seen": 1794468878.509955,
+    "ast_hash": "72de576aaa97d33aa9b1296efafa390d",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_sukoon.mp3": {
-    "mtime": 1786369464.1725333,
-    "seen": 1794121861.6647112,
-    "ast_hash": "3eaf6e1e00e58b19e1d4331c9f0498fa",
+    "mtime": 1794434913.2042103,
+    "seen": 1794468878.509959,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/daal_sukoon_rule.mp3": {
@@ -19326,27 +19326,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/dhaal_damma.mp3": {
-    "mtime": 1786369464.1980488,
-    "seen": 1794121861.6647186,
-    "ast_hash": "f564420c5322450aa00891311dd61255",
+    "mtime": 1794434913.3560271,
+    "seen": 1794468878.5123115,
+    "ast_hash": "438cd279b6b90a69434b3b8a0665451b",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/dhaal_fatha.mp3": {
-    "mtime": 1786369464.20155,
-    "seen": 1794121861.6647198,
-    "ast_hash": "e18f88111042ab733d025e0ef091dfc2",
+    "mtime": 1794434913.510264,
+    "seen": 1794468878.5123177,
+    "ast_hash": "c54eeedbe3f2676a82f1346e8c3892c5",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/dhaal_kasra.mp3": {
-    "mtime": 1786369464.2052915,
-    "seen": 1794121861.6647213,
-    "ast_hash": "dc77d8c3c1aae9130f4545bf79ecad31",
+    "mtime": 1794434913.6678183,
+    "seen": 1794468878.5123222,
+    "ast_hash": "c9f0decf0670a7741fa617f4afc38837",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/dhaal_sukoon.mp3": {
-    "mtime": 1786369464.20798,
-    "seen": 1794121861.6647222,
-    "ast_hash": "aeb6f8db5dd774e56517e2e77382bb65",
+    "mtime": 1794434913.8222284,
+    "seen": 1794468878.512326,
+    "ast_hash": "d66c09203da1064c41b819df1ac7a813",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/faa_damma.mp3": {
@@ -19440,27 +19440,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/haa_h_damma.mp3": {
-    "mtime": 1786369464.2522154,
-    "seen": 1794121861.6647437,
-    "ast_hash": "9c1f90aa0c08c291691d71febaed9abe",
+    "mtime": 1794434913.9670923,
+    "seen": 1794468878.518684,
+    "ast_hash": "5fe54f4270490a2e9a9a8013fd7549ee",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/haa_h_fatha.mp3": {
-    "mtime": 1786369464.25597,
-    "seen": 1794121861.6647449,
-    "ast_hash": "b150f7342fe3564930954da70a151977",
+    "mtime": 1794434914.1101618,
+    "seen": 1794468878.5186884,
+    "ast_hash": "2bf5758bf01fdc70d4af266448886962",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/haa_h_kasra.mp3": {
-    "mtime": 1786369464.2589118,
-    "seen": 1794121861.664746,
-    "ast_hash": "b6b09936c3e37ec4dd5abb0601ec19a5",
+    "mtime": 1794434914.244888,
+    "seen": 1794468878.5186925,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/haa_h_sukoon.mp3": {
-    "mtime": 1786369464.262966,
-    "seen": 1794121861.6647472,
-    "ast_hash": "a27fe8878905d6c07fe8cb58a05fa018",
+    "mtime": 1794434914.3777514,
+    "seen": 1794468878.5186963,
+    "ast_hash": "0dbfc68a5d0dd734255551cd5d2caad1",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/haa_kasra.mp3": {
@@ -19548,27 +19548,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/khaa_damma.mp3": {
-    "mtime": 1786369464.3035843,
-    "seen": 1794121861.6647658,
-    "ast_hash": "24352f389518393f3edecad7ac8badd7",
+    "mtime": 1794434914.5424285,
+    "seen": 1794468878.5244114,
+    "ast_hash": "770d0e772f415d44a7b171ba49e3cc75",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/khaa_fatha.mp3": {
-    "mtime": 1786369464.306556,
-    "seen": 1794121861.664767,
-    "ast_hash": "2bd94c75832a93220f4bbfc7f63c4a57",
+    "mtime": 1794434914.699721,
+    "seen": 1794468878.5244179,
+    "ast_hash": "e04bdc4dd0483728290bab7ee79ffef8",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/khaa_kasra.mp3": {
-    "mtime": 1786369464.3096042,
-    "seen": 1794121861.6647682,
-    "ast_hash": "a699052d512c3c6e9efcbbf8f278da99",
+    "mtime": 1794434914.8546593,
+    "seen": 1794468878.5244217,
+    "ast_hash": "6d210ff9823669c9774a5ec0341770ed",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/khaa_sukoon.mp3": {
-    "mtime": 1786369464.3127818,
-    "seen": 1794121861.6647692,
-    "ast_hash": "fd6128494a4a913fafec5b7abbedd986",
+    "mtime": 1794434915.020182,
+    "seen": 1794468878.5244255,
+    "ast_hash": "bb72aa0253a4d0f8b51371ddd8e5d5c6",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/laam_damma.mp3": {
@@ -19668,27 +19668,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/raa_damma.mp3": {
-    "mtime": 1786369464.360662,
-    "seen": 1794121861.6647894,
-    "ast_hash": "8a8820fac563f298c9f2a4e8efd689e2",
+    "mtime": 1794434915.1925187,
+    "seen": 1794468878.5312085,
+    "ast_hash": "6a2ad778c9acdbce33706bf43eae2a36",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/raa_fatha.mp3": {
-    "mtime": 1786369464.3628006,
-    "seen": 1794121861.6647909,
-    "ast_hash": "0d37e21c35ef687c0f17972055d03b05",
+    "mtime": 1794434915.3425276,
+    "seen": 1794468878.5312133,
+    "ast_hash": "bc5d4b5f11531ca774145951152c3953",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/raa_kasra.mp3": {
-    "mtime": 1786369464.3666742,
-    "seen": 1794121861.664792,
-    "ast_hash": "29d15f12658141bfb38f5af7a72ab951",
+    "mtime": 1794434915.491988,
+    "seen": 1794468878.5312173,
+    "ast_hash": "5de95c61f8e6a8dafe39001d59ca133c",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/raa_sukoon.mp3": {
-    "mtime": 1786369464.3695116,
-    "seen": 1794121861.6647933,
-    "ast_hash": "63e194d3a184999cd340e0ba27da5dfc",
+    "mtime": 1794434915.6372833,
+    "seen": 1794468878.5312214,
+    "ast_hash": "bb72aa0253a4d0f8b51371ddd8e5d5c6",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/saad_damma.mp3": {
@@ -19842,9 +19842,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_damma_rule.mp3": {
-    "mtime": 1786147247.653623,
-    "seen": 1794121861.6648233,
-    "ast_hash": "5bd08d34ba26c5df7a0593abc4e592e7",
+    "mtime": 1794467249.1178753,
+    "seen": 1794468878.5430543,
+    "ast_hash": "054f289c55719de228cdf57550c163c8",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_fatha.mp3": {
@@ -19866,9 +19866,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_kasra_rule.mp3": {
-    "mtime": 1786147247.6566238,
-    "seen": 1794121861.664828,
-    "ast_hash": "36b97bee5eba16cd1b39c602ad015d72",
+    "mtime": 1794467249.443889,
+    "seen": 1794468878.5445018,
+    "ast_hash": "edf83939ed90a6804239b2708df45864",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_sukoon.mp3": {
@@ -19878,9 +19878,9 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_sukoon_rule.mp3": {
-    "mtime": 1786147247.8684146,
-    "seen": 1794121861.664831,
-    "ast_hash": "0983917e6575897babe855645886507c",
+    "mtime": 1794467245.7880244,
+    "seen": 1794468878.5451753,
+    "ast_hash": "61e068445445e1490193ae0b7575e1ac",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/thaa_sukun.mp3": {
@@ -19938,27 +19938,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/zaay_damma.mp3": {
-    "mtime": 1786369464.4830475,
-    "seen": 1794121861.664843,
-    "ast_hash": "18d86a817f83897919ba37b1af625dc3",
+    "mtime": 1794434915.787691,
+    "seen": 1794468878.549589,
+    "ast_hash": "303e3d7991e30f9c52db9b3f2d28ca58",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/zaay_fatha.mp3": {
-    "mtime": 1786369464.4862225,
-    "seen": 1794121861.664844,
-    "ast_hash": "caed5a226569be9b8288275ff2f17562",
+    "mtime": 1794434915.9309146,
+    "seen": 1794468878.549594,
+    "ast_hash": "6d18e26cb1984f891edd44b6d8f3f443",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/zaay_kasra.mp3": {
-    "mtime": 1786369464.4921787,
-    "seen": 1794121861.6648452,
-    "ast_hash": "ce72c0acda82ba247427dfbf69455ccc",
+    "mtime": 1794434916.08643,
+    "seen": 1794468878.5502837,
+    "ast_hash": "467829b364d94a34e4a308ffbeae64eb",
     "semantic_hash": ""
   },
   "assets/audio/letters/short_vowels/zaay_sukoon.mp3": {
-    "mtime": 1786369464.4956746,
-    "seen": 1794121861.6648467,
-    "ast_hash": "ff3accb23ffd4d75b6b0a550bf7f2474",
+    "mtime": 1794434916.2315824,
+    "seen": 1794468878.5502992,
+    "ast_hash": "9a51cc3eb32346053b9b7580c59221ff",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/ain_word.mp3": {
@@ -20010,27 +20010,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/baa_word.mp3": {
-    "mtime": 1786369464.529904,
-    "seen": 1794121861.6648574,
-    "ast_hash": "d5da00f9d1268533162e0703b9156f3f",
+    "mtime": 1794459850.3113592,
+    "seen": 1794468878.55533,
+    "ast_hash": "59b4d41ce1e4c20b1123dc434d64c253",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/baa_word2.mp3": {
-    "mtime": 1786369464.5327406,
-    "seen": 1794121861.6648586,
-    "ast_hash": "be2ca127615ceb0ee2a944271ba48707",
+    "mtime": 1794459850.4784396,
+    "seen": 1794468878.5553355,
+    "ast_hash": "8ec86da8890814332be2e67dd20a6f3f",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/baa_word3.mp3": {
-    "mtime": 1786369464.535864,
-    "seen": 1794121861.66486,
-    "ast_hash": "9c8bc100da518b811ef3341d1de871a8",
+    "mtime": 1794459850.6229613,
+    "seen": 1794468878.5553408,
+    "ast_hash": "37b381bb39499d0cae33b319d2ac0764",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/baa_word4.mp3": {
-    "mtime": 1786369464.5391576,
-    "seen": 1794121861.6648612,
-    "ast_hash": "1517b01fad2260154f567efa5a74e6ea",
+    "mtime": 1794459850.801143,
+    "seen": 1794468878.5553448,
+    "ast_hash": "599fd57b27ba5d15a4df2f3d42767ba9",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/daad_word.mp3": {
@@ -20058,27 +20058,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/daal_word.mp3": {
-    "mtime": 1786369464.5490878,
-    "seen": 1794121861.664867,
-    "ast_hash": "cc6f17394386bfa99d4e5e8bb54d22fa",
+    "mtime": 1794434916.3902433,
+    "seen": 1794468878.557949,
+    "ast_hash": "028bfa3b521681041bd3ca844aa73f66",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/daal_word2.mp3": {
-    "mtime": 1786369464.5501645,
-    "seen": 1794121861.664868,
-    "ast_hash": "5de05e79c6d6c063aef10af38b4f968a",
+    "mtime": 1794467272.725218,
+    "seen": 1794468878.5579555,
+    "ast_hash": "1e9373a9ff10f1ebba298a9d5813f895",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/daal_word3.mp3": {
-    "mtime": 1786369464.5522306,
-    "seen": 1794121861.6648693,
-    "ast_hash": "19bd5da9df2d7b0b8fc2e3068be030c2",
+    "mtime": 1794434916.5299764,
+    "seen": 1794468878.557961,
+    "ast_hash": "598fe5015b4cde451f007f0ae9f0a277",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/daal_word4.mp3": {
-    "mtime": 1786369464.5538836,
-    "seen": 1794121861.6648707,
-    "ast_hash": "7a578ccd058835490d523ddee7064f76",
+    "mtime": 1794467273.5724156,
+    "seen": 1794468878.5579658,
+    "ast_hash": "b45389111037ca3283ab0e92029fa38b",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/dhaa_dh_word.mp3": {
@@ -20106,27 +20106,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/dhaal_word.mp3": {
-    "mtime": 1786369464.5606537,
-    "seen": 1794121861.6648767,
-    "ast_hash": "329cecfca1f34b27c93a2c36902226b2",
+    "mtime": 1794434916.686906,
+    "seen": 1794468878.5603802,
+    "ast_hash": "ea417fdc630543260f5b13b41e284024",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/dhaal_word2.mp3": {
-    "mtime": 1786369464.562614,
-    "seen": 1794121861.664878,
-    "ast_hash": "fa2b0b48ece8158ca025a878529a94e3",
+    "mtime": 1794434916.8252654,
+    "seen": 1794468878.5603864,
+    "ast_hash": "aa1dd5580a68f333f12f6f2b4acdb27d",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/dhaal_word3.mp3": {
-    "mtime": 1786369464.562614,
-    "seen": 1794121861.664879,
-    "ast_hash": "22f9d2fa88c95cc3b259b41d1c9ae180",
+    "mtime": 1794434916.969812,
+    "seen": 1794468878.560391,
+    "ast_hash": "9b54258a0d6c469f4fbfee299f099d9d",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/dhaal_word4.mp3": {
-    "mtime": 1786369464.5646844,
-    "seen": 1794121861.66488,
-    "ast_hash": "4176471b2d5d14d28af23f6c7b405ecc",
+    "mtime": 1794467274.4499314,
+    "seen": 1794468878.5603955,
+    "ast_hash": "9f3fb191421890c44e4e28ebf1999d90",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/faa_word.mp3": {
@@ -20178,27 +20178,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/haa_h_word.mp3": {
-    "mtime": 1786369464.576337,
-    "seen": 1794121861.6648912,
-    "ast_hash": "61baa9cab4900dd7ba7e7a2b30463f35",
+    "mtime": 1794434917.1287816,
+    "seen": 1794468878.5639822,
+    "ast_hash": "cf572b01f02cac413b3202e48f6468f4",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/haa_h_word2.mp3": {
-    "mtime": 1786369464.582401,
-    "seen": 1794121861.6648924,
-    "ast_hash": "8edf2cd8fcba5614b5687842bc4ec091",
+    "mtime": 1794434917.3000362,
+    "seen": 1794468878.5639894,
+    "ast_hash": "c03131e9c62ac450150c424cfa901722",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/haa_h_word3.mp3": {
-    "mtime": 1786369464.5834107,
-    "seen": 1794121861.6648936,
-    "ast_hash": "d81bb918c228f659b3317863dd886f67",
+    "mtime": 1794434917.441435,
+    "seen": 1794468878.5639937,
+    "ast_hash": "455bd25bae884e55dc5ab4206adaa7c6",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/haa_h_word4.mp3": {
-    "mtime": 1786369464.585447,
-    "seen": 1794121861.664895,
-    "ast_hash": "ab170f09b112f47640e2d0463a9d7a53",
+    "mtime": 1794467275.3606656,
+    "seen": 1794468878.5639992,
+    "ast_hash": "a581adb86c8ea0a26713d3b1933dffdb",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/haa_word.mp3": {
@@ -20226,27 +20226,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/jeem_word.mp3": {
-    "mtime": 1786369464.5949183,
-    "seen": 1794121861.664901,
-    "ast_hash": "5ce6cfe5b62e06f380e013e7b74f24dd",
+    "mtime": 1794434917.5846443,
+    "seen": 1794468878.5656579,
+    "ast_hash": "0090474f3d863e68896bae129099dd14",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/jeem_word2.mp3": {
-    "mtime": 1786369464.5964353,
-    "seen": 1794121861.6649024,
-    "ast_hash": "63e788c2e1c8bdd4c2a4cf7927ba6b34",
+    "mtime": 1794434917.7305274,
+    "seen": 1794468878.565664,
+    "ast_hash": "698c5f003a7f0d6766eddaac11a57fbd",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/jeem_word3.mp3": {
-    "mtime": 1786369464.5985227,
-    "seen": 1794121861.6649034,
-    "ast_hash": "c7cd054f7e9b53e53f1d64247786a557",
+    "mtime": 1794434917.8732474,
+    "seen": 1794468878.5656686,
+    "ast_hash": "86962d884ce81ca19e3863f070548c08",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/jeem_word4.mp3": {
-    "mtime": 1786369464.599512,
-    "seen": 1794121861.6649046,
-    "ast_hash": "e0e4044719467a040f860d4a9e0ea30b",
+    "mtime": 1794434918.011624,
+    "seen": 1794468878.5656729,
+    "ast_hash": "3bcf9f8b10416a04fd3e9b39afda9efb",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/kaaf_word.mp3": {
@@ -20274,27 +20274,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/khaa_word.mp3": {
-    "mtime": 1786369464.6062393,
-    "seen": 1794121861.6649108,
-    "ast_hash": "92f54e011822812c63c8ddcdb432f752",
+    "mtime": 1794434918.1607926,
+    "seen": 1794468878.5671287,
+    "ast_hash": "046a9a5648b4dda455e1bc63a53459c4",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/khaa_word2.mp3": {
-    "mtime": 1786369464.6082802,
-    "seen": 1794121861.664912,
-    "ast_hash": "2bd32b25d57c05fb4535cf63232878cc",
+    "mtime": 1794434918.2994685,
+    "seen": 1794468878.5671349,
+    "ast_hash": "f12d0f2f74887e97255ccfcde123ac93",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/khaa_word3.mp3": {
-    "mtime": 1786369464.609291,
-    "seen": 1794121861.6649132,
-    "ast_hash": "dcdf9944760df3b54451fbfabc27cf32",
+    "mtime": 1794434918.4382782,
+    "seen": 1794468878.5671399,
+    "ast_hash": "4fbd78024a6ed2e6c0d5246cc6fe3c49",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/khaa_word4.mp3": {
-    "mtime": 1786369464.6113882,
-    "seen": 1794121861.6649144,
-    "ast_hash": "6a5c78005321f05f2d5441c41cc46025",
+    "mtime": 1794467276.2084057,
+    "seen": 1794468878.5671444,
+    "ast_hash": "87f03776eeadc88245c4bb78e5ae3338",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/laam_word.mp3": {
@@ -20376,27 +20376,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/raa_word.mp3": {
-    "mtime": 1786369464.6297097,
-    "seen": 1794121861.6649315,
-    "ast_hash": "1c0fedf4010853c654b023d5eee4d453",
+    "mtime": 1794434918.5949242,
+    "seen": 1794468878.5759268,
+    "ast_hash": "375f99dc40180bb8813e68ac098d0dc9",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/raa_word2.mp3": {
-    "mtime": 1786369464.6326869,
-    "seen": 1794121861.664933,
-    "ast_hash": "5b7b3dc385fbd24468a32146c78c22f3",
+    "mtime": 1794434918.730373,
+    "seen": 1794468878.575933,
+    "ast_hash": "4cef54ab5340434383bf6cac62988a86",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/raa_word3.mp3": {
-    "mtime": 1786369464.6326869,
-    "seen": 1794121861.6649342,
-    "ast_hash": "5dbf179d1af260edd97acb5870d2ebab",
+    "mtime": 1794467277.9057338,
+    "seen": 1794468878.5759375,
+    "ast_hash": "29ba60f431ced0b9f214ac6dff4848d1",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/raa_word4.mp3": {
-    "mtime": 1786369464.635812,
-    "seen": 1794121861.6649354,
-    "ast_hash": "9f30f3595f45222d963b8001e877dd7c",
+    "mtime": 1794467277.0655043,
+    "seen": 1794468878.575941,
+    "ast_hash": "cedd817df1099f67dee4250a498841fb",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/saad_word.mp3": {
@@ -20496,51 +20496,51 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/taa_word.mp3": {
-    "mtime": 1786369464.6600678,
-    "seen": 1794121861.6649618,
-    "ast_hash": "befbef68affe751d4960031b9d88ae41",
+    "mtime": 1794434918.859404,
+    "seen": 1794468878.582437,
+    "ast_hash": "7b9931b3e3a5e23bcaba57ee7f0b74bb",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/taa_word2.mp3": {
-    "mtime": 1786369464.6635609,
-    "seen": 1794121861.6649637,
-    "ast_hash": "ddac9c86aa5798e1a46a1b4874be94ad",
+    "mtime": 1794434918.9981494,
+    "seen": 1794468878.582444,
+    "ast_hash": "06d832f610d0d7ec05c714e3e91ec92b",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/taa_word3.mp3": {
-    "mtime": 1786369464.664577,
-    "seen": 1794121861.6649659,
-    "ast_hash": "ace9ab0944eed98080617953b6316689",
+    "mtime": 1794434919.1389296,
+    "seen": 1794468878.5824485,
+    "ast_hash": "7a2d06cdac474a3e2ff304eb74247ca6",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/taa_word4.mp3": {
-    "mtime": 1786369464.6665797,
-    "seen": 1794121861.6649683,
-    "ast_hash": "07ac64457f5c2adfaaaaae910cb9d7d5",
+    "mtime": 1794434919.279158,
+    "seen": 1794468878.5824518,
+    "ast_hash": "b945f1afa7da66676877b8b766ea98e1",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/thaa_word.mp3": {
-    "mtime": 1786369464.6681626,
-    "seen": 1794121861.6649704,
-    "ast_hash": "cb51ea5b154e201f2b7b212f0c74fa47",
+    "mtime": 1794434919.4263206,
+    "seen": 1794468878.5824564,
+    "ast_hash": "534f1c8de635833e7519b57b0df300e1",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/thaa_word2.mp3": {
-    "mtime": 1786369464.6704283,
-    "seen": 1794121861.6649728,
-    "ast_hash": "ae0f9f7367a91b3ded22b8ce7d3d02d2",
+    "mtime": 1794434919.5719745,
+    "seen": 1794468878.5824614,
+    "ast_hash": "75c5debb807acdf254228f359040506e",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/thaa_word3.mp3": {
-    "mtime": 1786369464.672438,
-    "seen": 1794121861.6649745,
-    "ast_hash": "839456fdd5f7d3af7431392fc497cbcd",
+    "mtime": 1794434919.7145205,
+    "seen": 1794468878.582466,
+    "ast_hash": "3f78bb25f025d2213041e9f22a412439",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/thaa_word4.mp3": {
-    "mtime": 1786369464.6729448,
-    "seen": 1794121861.664976,
-    "ast_hash": "97e59133404f85871be4085280776f10",
+    "mtime": 1794434919.8692815,
+    "seen": 1794468878.5824692,
+    "ast_hash": "56edfa3a74d0e3e34c427f023fd5889f",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/waaw_word.mp3": {
@@ -20592,27 +20592,27 @@
     "semantic_hash": ""
   },
   "assets/audio/letters/words/zaay_word.mp3": {
-    "mtime": 1786369464.6851568,
-    "seen": 1794121861.6649873,
-    "ast_hash": "0378420500cc7174ca4b1f584c75b2e9",
+    "mtime": 1794434920.009997,
+    "seen": 1794468878.5866346,
+    "ast_hash": "04cb3d1c21e777cd37f3a83a76acfd33",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/zaay_word2.mp3": {
-    "mtime": 1786369464.6871467,
-    "seen": 1794121861.6649888,
-    "ast_hash": "559f8ebaa727a03b96c1c4bc1df9c360",
+    "mtime": 1794434920.147349,
+    "seen": 1794468878.5866406,
+    "ast_hash": "a2f2954a1f29eb815add3fc0149c076f",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/zaay_word3.mp3": {
-    "mtime": 1786369464.688439,
-    "seen": 1794121861.66499,
-    "ast_hash": "4841f89a6b75e392606ba06079a92056",
+    "mtime": 1794434920.3040183,
+    "seen": 1794468878.5866454,
+    "ast_hash": "893727fa3c168a5904e79131920dd24b",
     "semantic_hash": ""
   },
   "assets/audio/letters/words/zaay_word4.mp3": {
-    "mtime": 1786369464.688439,
-    "seen": 1794121861.6649911,
-    "ast_hash": "e42f3cdb45452367a6d3a2c636f8fcb4",
+    "mtime": 1794434920.444035,
+    "seen": 1794468878.5866506,
+    "ast_hash": "8624d795437e6e2c6b2339abe2506633",
     "semantic_hash": ""
   },
   "assets/audio/stories/alif_correct.mp3": {
@@ -35901,6 +35901,12 @@
     "mtime": 1794383677.9709187,
     "seen": 1794413781.8978145,
     "ast_hash": "9660cf678a8767af9b9af6200489ba95",
+    "semantic_hash": ""
+  },
+  "integration_test/burn_in_test.dart": {
+    "mtime": 1794466052.0620806,
+    "seen": 1794468876.8250885,
+    "ast_hash": "740191ceebca2e4012c78596f996d52c",
     "semantic_hash": ""
   }
 }

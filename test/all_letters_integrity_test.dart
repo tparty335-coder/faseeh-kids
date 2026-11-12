@@ -150,12 +150,13 @@ void main() {
         });
 
         test('Disk assets exist for all manifest references', () {
-          final root = r'd:\Projects\faseeh_kids';
+          final root = Directory.current.path;
+          final sep = Platform.pathSeparator;
 
           void verifyDiskFile(String path) {
             final fullPath = path.startsWith('assets/')
-                ? '$root\\${path.replaceAll('/', '\\')}'
-                : '$root\\assets\\${path.replaceAll('/', '\\')}';
+                ? '$root$sep${path.replaceAll('/', sep)}'
+                : '$root${sep}assets$sep${path.replaceAll('/', sep)}';
             expect(
               File(fullPath).existsSync(),
               isTrue,
@@ -219,7 +220,7 @@ void main() {
           for (final st in m.tracing.stepImagePaths) {
             verifyDiskFile(st);
             if (m.unitIndex >= 13) {
-              final full = '$root\\${st.replaceAll('/', '\\')}';
+              final full = '$root$sep${st.replaceAll('/', sep)}';
               expect(
                 File(full).lengthSync(),
                 greaterThanOrEqualTo(50000),
@@ -232,7 +233,7 @@ void main() {
               verifyDiskFile(pos.audioPath);
               verifyOptDiskFile(pos.imagePath);
               if (m.unitIndex >= 13 && pos.imagePath != null) {
-                final full = '$root\\${pos.imagePath!.replaceAll('/', '\\')}';
+                final full = '$root$sep${pos.imagePath!.replaceAll('/', sep)}';
                 expect(
                   File(full).lengthSync(),
                   greaterThanOrEqualTo(50000),

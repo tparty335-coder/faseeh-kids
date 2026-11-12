@@ -76,6 +76,8 @@ dev_dependencies:
   freezed: ^2.4.7
   json_serializable: ^6.7.1
   build_runner: ^2.4.8
+  integration_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
@@ -108,6 +110,7 @@ flutter:
     - assets/images/backgrounds/
     - assets/images/stories/
     - assets/images/ui/
+    - assets/images/avatars/
     - assets/images/lessons/alif/
     - assets/images/lessons/alif/words/
     - assets/images/lessons/baa/
@@ -117,6 +120,7 @@ flutter:
     - assets/images/games/circus/
     - assets/images/games/words/
     - assets/images/games/coloring/
+    - assets/audio/games/
     - assets/audio/games/fishing/
     - assets/audio/games/beehive/
     - assets/audio/games/circus/
@@ -124,6 +128,12 @@ flutter:
     - assets/audio/games/coloring/
     - assets/audio/lessons/alif/words/
     - assets/audio/lessons/baa/
+    - assets/audio/lessons/baa/long/
+    - assets/audio/lessons/baa/medium/
+    - assets/audio/lessons/baa/short/
+    - assets/audio/lessons/baa/sounds/
+    - assets/audio/lessons/baa/words/
+    - assets/audio/lessons/baa/writing/
     - assets/audio/lessons/taa/
     - assets/audio/lessons/taa/final/
     - assets/audio/lessons/taa/sounds/
@@ -155,7 +165,6 @@ flutter:
     - assets/audio/games/match/jeem/
     - assets/audio/games/coloring/jeem/
     - assets/images/lessons/jeem/
-    - assets/images/lessons/jeem/words/
     - assets/images/lessons/jeem/sounds/
     - assets/images/games/fishing/jeem/
     - assets/images/games/beehive/jeem/
@@ -181,7 +190,6 @@ flutter:
     - assets/audio/games/match/kha/
     - assets/audio/games/coloring/kha/
     - assets/images/lessons/ha/
-    - assets/images/lessons/ha/words/
     - assets/images/lessons/ha/sounds/
     - assets/images/games/fishing/ha/
     - assets/images/games/beehive/ha/
@@ -190,7 +198,6 @@ flutter:
     - assets/images/games/match/ha/
     - assets/images/games/coloring/ha/
     - assets/images/lessons/kha/
-    - assets/images/lessons/kha/words/
     - assets/images/games/fishing/kha/
     - assets/images/games/beehive/kha/
     - assets/images/games/circus/kha/
@@ -207,7 +214,6 @@ flutter:
     - assets/audio/games/match/dal/
     - assets/audio/games/coloring/dal/
     - assets/images/lessons/dal/
-    - assets/images/lessons/dal/words/
     - assets/images/games/fishing/dal/
     - assets/images/games/beehive/dal/
     - assets/images/games/circus/dal/
@@ -224,7 +230,6 @@ flutter:
     - assets/audio/games/match/dhaal/
     - assets/audio/games/coloring/dhaal/
     - assets/images/lessons/dhaal/
-    - assets/images/lessons/dhaal/words/
     - assets/images/games/fishing/dhaal/
     - assets/images/games/beehive/dhaal/
     - assets/images/games/circus/dhaal/
@@ -241,7 +246,6 @@ flutter:
     - assets/audio/games/match/raa/
     - assets/audio/games/coloring/raa/
     - assets/images/lessons/raa/
-    - assets/images/lessons/raa/words/
     - assets/images/games/fishing/raa/
     - assets/images/games/beehive/raa/
     - assets/images/games/circus/raa/
@@ -275,7 +279,6 @@ flutter:
     - assets/audio/games/match/seen/
     - assets/audio/games/coloring/seen/
     - assets/images/lessons/seen/
-    - assets/images/lessons/seen/words/
     - assets/images/games/fishing/seen/
     - assets/images/games/beehive/seen/
     - assets/images/games/circus/seen/
@@ -294,7 +297,6 @@ flutter:
     - assets/images/games/match/taa/
     - assets/images/games/coloring/taa/
     - assets/images/lessons/thaa/
-    - assets/images/lessons/thaa/words/
     - assets/images/lessons/thaa/sounds/
     - assets/images/games/fishing/thaa/
     - assets/images/games/beehive/thaa/

@@ -17,6 +17,10 @@ void main() async {
   // Ensure Flutter binding is initialized
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Keep decoded image memory bounded on budget Android tablets (40 MB / 120 images)
+  PaintingBinding.instance.imageCache.maximumSizeBytes = 40 << 20;
+  PaintingBinding.instance.imageCache.maximumSize = 120;
+
   // Lock orientation to portrait for children's app
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

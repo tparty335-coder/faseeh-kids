@@ -20,6 +20,7 @@ class AudioService {
   static AudioService get instance => _instance;
 
   final Map<AudioChannel, AudioPlayer> _players = {};
+  final Map<AudioChannel, Future<void>> _channelQueues = {};
   bool _isDisposed = false;
   int _voiceOpId = 0;
   int _sfxOpId = 0;
@@ -33,6 +34,44 @@ class AudioService {
       }
       _players[channel] = player;
     }
+  }
+
+  /// Serialize native AudioPlayer calls per channel to prevent Android MediaPlayer state (-38) races.
+  Future<void> _enqueue(AudioChannel channel, Future<void> Function() task) {
+    final prev = _channelQueues[channel] ?? Future<void>.value();
+    final next = prev.catchError((_) {}).then((_) => task());
+    _channelQueues[channel] = next.catchError((_) {});
+    return next;
+  }
+
+  Future<void> _playSource(
+    AudioChannel channel,
+    Source source, {
+    required double volume,
+    required String label,
+  }) async {
+    if (_isDisposed) return;
+    final op = _nextOpId(channel);
+    await _enqueue(channel, () async {
+      if (!_isOpActive(channel, op)) return;
+      try {
+        final player = _players[channel];
+        if (player == null) return;
+
+        await _stopConflictingPlayers(channel);
+        if (!_isOpActive(channel, op)) return;
+
+        await player.setVolume(volume.clamp(0.0, 1.0));
+        if (!_isOpActive(channel, op)) return;
+
+        await player.setSource(source);
+        if (!_isOpActive(channel, op)) return;
+
+        await player.resume();
+      } catch (e) {
+        debugPrint('AudioService [$channel]: Error playing $label: $e');
+      }
+    });
   }
 
   int _nextOpId(AudioChannel channel) {
@@ -81,29 +120,16 @@ class AudioService {
     String assetPath, {
     AudioChannel channel = AudioChannel.voice,
     double volume = 1.0,
-  }) async {
-    if (_isDisposed) return;
-    final op = _nextOpId(channel);
-    try {
-      final player = _players[channel];
-      if (player == null) return;
-
-      await _stopConflictingPlayers(channel);
-      if (!_isOpActive(channel, op)) return;
-
-      await player.setVolume(volume.clamp(0.0, 1.0));
-      if (!_isOpActive(channel, op)) return;
-
-      final cleanPath = assetPath.startsWith('assets/')
-          ? assetPath.substring(7)
-          : assetPath;
-      await player.setSource(AssetSource(cleanPath));
-      if (!_isOpActive(channel, op)) return;
-
-      await player.resume();
-    } catch (e) {
-      debugPrint('AudioService [$channel]: Error playing asset $assetPath: $e');
-    }
+  }) {
+    final cleanPath = assetPath.startsWith('assets/')
+        ? assetPath.substring(7)
+        : assetPath;
+    return _playSource(
+      channel,
+      AssetSource(cleanPath),
+      volume: volume,
+      label: 'asset $assetPath',
+    );
   }
 
   /// Returns the duration of an audio asset if known in catalog, or default fallback.
@@ -140,54 +166,26 @@ class AudioService {
     String filePath, {
     AudioChannel channel = AudioChannel.voice,
     double volume = 1.0,
-  }) async {
-    if (_isDisposed) return;
-    final op = _nextOpId(channel);
-    try {
-      final player = _players[channel];
-      if (player == null) return;
-
-      await _stopConflictingPlayers(channel);
-      if (!_isOpActive(channel, op)) return;
-
-      await player.setVolume(volume.clamp(0.0, 1.0));
-      if (!_isOpActive(channel, op)) return;
-
-      await player.setSource(DeviceFileSource(filePath));
-      if (!_isOpActive(channel, op)) return;
-
-      await player.resume();
-    } catch (e) {
-      debugPrint('AudioService [$channel]: Error playing file $filePath: $e');
-    }
-  }
+  }) =>
+      _playSource(
+        channel,
+        DeviceFileSource(filePath),
+        volume: volume,
+        label: 'file $filePath',
+      );
 
   /// Play from a URL
   Future<void> playUrl(
     String url, {
     AudioChannel channel = AudioChannel.voice,
     double volume = 1.0,
-  }) async {
-    if (_isDisposed) return;
-    final op = _nextOpId(channel);
-    try {
-      final player = _players[channel];
-      if (player == null) return;
-
-      await _stopConflictingPlayers(channel);
-      if (!_isOpActive(channel, op)) return;
-
-      await player.setVolume(volume.clamp(0.0, 1.0));
-      if (!_isOpActive(channel, op)) return;
-
-      await player.setSource(UrlSource(url));
-      if (!_isOpActive(channel, op)) return;
-
-      await player.resume();
-    } catch (e) {
-      debugPrint('AudioService [$channel]: Error playing URL $url: $e');
-    }
-  }
+  }) =>
+      _playSource(
+        channel,
+        UrlSource(url),
+        volume: volume,
+        label: 'URL $url',
+      );
 
   /// Stop playback on a specific channel, or all channels if channel is null
   Future<void> stop({AudioChannel? channel}) async {
@@ -197,7 +195,11 @@ class AudioService {
         ++_voiceOpId;
         ++_sfxOpId;
         ++_bgmOpId;
-        await Future.wait(_players.values.map((p) => p.stop()));
+        await Future.wait(
+          AudioChannel.values.map((c) => _enqueue(c, () async {
+                await _players[c]?.stop();
+              })),
+        );
       } else {
         switch (channel) {
           case AudioChannel.voice:
@@ -210,7 +212,9 @@ class AudioService {
             ++_bgmOpId;
             break;
         }
-        await _players[channel]?.stop();
+        await _enqueue(channel, () async {
+          await _players[channel]?.stop();
+        });
       }
     } catch (e) {
       debugPrint('AudioService: Error stopping: $e');
@@ -248,7 +252,9 @@ class AudioService {
 
   /// Stream that fires when playback completes for a channel
   Stream<void>? onPlayerComplete(AudioChannel channel) {
-    return _players[channel]?.onPlayerComplete;
+    // نحوّل الـ stream إلى Stream<void> حقيقي: audioplayers يُصدر AudioEvent وقت
+    // التشغيل، وهذا يكسر onTimeout: () {} (TypeError) عند انتهاء المهلة.
+    return _players[channel]?.onPlayerComplete.map<void>((_) {});
   }
 
   /// Dispose all players
