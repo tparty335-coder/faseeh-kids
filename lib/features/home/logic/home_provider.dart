@@ -16,26 +16,20 @@ class ProgressNotifier extends Notifier<List<String>> {
 
   @override
   List<String> build() {
+    final allLetterChars = arabicLetters.map((l) => l.letter).toList();
     final box = Hive.box(AppConstants.lessonProgressBox);
     final stored = box.get(_hiveKey);
     if (stored != null && stored is List) {
       final list = List<String>.from(stored);
-      if (!list.contains('أ')) list.insert(0, 'أ');
-      if (!list.contains('ب')) list.add('ب');
-      if (!list.contains('ت')) list.add('ت');
-      if (!list.contains('ث')) list.add('ث');
-      if (!list.contains('ج')) list.add('ج');
-      if (!list.contains('ح')) list.add('ح');
-      if (!list.contains('خ')) list.add('خ');
-      if (!list.contains('د')) list.add('د');
-      if (!list.contains('ذ')) list.add('ذ');
-      if (!list.contains('ر')) list.add('ر');
-      if (!list.contains('ز')) list.add('ز');
-      if (!list.contains('س')) list.add('س');
+      for (final char in allLetterChars) {
+        if (!list.contains(char)) {
+          list.add(char);
+        }
+      }
       return list;
     }
-    // Default unlocked letters: أ، ب، ت، ث، ج، ح، خ
-    return ['أ', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س'];
+    // All 28 letters unlocked for seamless testing & navigation
+    return allLetterChars;
   }
 
   /// Unlock the next letter after completing a lesson

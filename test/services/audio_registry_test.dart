@@ -17,11 +17,11 @@ void main() {
       expect(letterEntryCount, 196);
     });
 
-    test('should have 10 feedback entries', () {
+    test('should have 11 feedback entries', () {
       final feedbackKeys = AudioRegistry.audioMap.keys
           .where((k) => k.startsWith('feedback_'))
           .length;
-      expect(feedbackKeys, 10);
+      expect(feedbackKeys, 11);
     });
 
     test('should have 8 SFX entries', () {
@@ -31,8 +31,8 @@ void main() {
       expect(sfxKeys, 8);
     });
 
-    test('should have at least 214 total entries (196+10+8)', () {
-      expect(AudioRegistry.totalEntries, greaterThanOrEqualTo(214));
+    test('should have at least 215 total entries (196+11+8)', () {
+      expect(AudioRegistry.totalEntries, greaterThanOrEqualTo(215));
     });
 
     test('all letter keys should have entries for all variants', () {
@@ -100,6 +100,12 @@ void main() {
       final path = AudioRegistry.getPath('alif_name');
       expect(path, isNotNull);
       expect(path, 'assets/audio/letters/core/alif_name.mp3');
+    });
+
+    test('feedback_congrats resolves and هـ maps to haa', () {
+      expect(AudioRegistry.getPath('feedback_congrats'), isNotNull);
+      expect(AudioRegistry.letterKeyFromChar('هـ'), 'haa');
+      expect(AudioRegistry.letterKeyFromChar('ه'), 'haa');
     });
   });
 }

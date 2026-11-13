@@ -29,15 +29,15 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
         multiDexEnabled = true
     }
 
+    def keystorePropertiesFile = rootProject.file('key.properties')
     signingConfigs {
         release {
-            // Keys loaded from local.properties or environment — never commit key files
-            def keystorePropertiesFile = rootProject.file('key.properties')
+            // Keys loaded from android/key.properties — never fall back to debug keys
             if (keystorePropertiesFile.exists()) {
                 def keystoreProperties = new Properties()
                 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
@@ -45,18 +45,14 @@ android {
                 keyPassword keystoreProperties['keyPassword']
                 storeFile file(keystoreProperties['storeFile'])
                 storePassword keystoreProperties['storePassword']
-            } else {
-                // Fallback to debug signing if key.properties missing (dev only)
-                keyAlias signingConfigs.debug.keyAlias
-                keyPassword signingConfigs.debug.keyPassword
-                storeFile signingConfigs.debug.storeFile
-                storePassword signingConfigs.debug.storePassword
             }
         }
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -70,4 +66,13 @@ android {
 
 flutter {
     source = "../.."
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    def isReleaseTask = taskGraph.allTasks.any {
+        it.project == project && it.name.toLowerCase().contains('release')
+    }
+    if (isReleaseTask && !rootProject.file('key.properties').exists()) {
+        throw new GradleException("Missing android/key.properties. Release builds must be signed with a release keystore and cannot fall back to debug signing.")
+    }
 }

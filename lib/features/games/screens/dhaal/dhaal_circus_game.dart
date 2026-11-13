@@ -39,40 +39,40 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، جَمَل (أسفل) ← جَمَل ✅
+  // الجولة 1: رِجْل (أعلى يسار) ، حِصَان (وسط يمين) ، ذَيْل (أسفل يسار) ← ذَيْل ✅
   _Round(
     imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_1.png',
-    imgH: 390,
+    imgH: 474,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
-      _ImageZone(label: 'تِمْسَاح', hasDhaal: false, px: 138, py: 114),
-      _ImageZone(label: 'أَسَد',    hasDhaal: false, px: 326, py: 255),
-      _ImageZone(label: 'حَمَل',    hasDhaal: true,  px: 138, py: 392,
-          wordAudio: 'audio/lessons/ha/sounds/word_himal.mp3'),
+      _ImageZone(label: 'رِجْل',  hasDhaal: false, px: 138, py:  95),
+      _ImageZone(label: 'حِصَان', hasDhaal: false, px: 440, py: 230),
+      _ImageZone(label: 'ذَيْل',  hasDhaal: true,  px: 138, py: 370,
+          wordAudio: 'audio/games/circus/dhaal/dhaal_circus_1.mp3'),
     ],
   ),
-  // الجولة 2: حِمَار (أعلى) ، جَبَل (وسط) ، فِيل (أسفل) ← جَبَل ✅
+  // الجولة 2: سَمَكَة (أعلى يسار) ، ذِئْب (وسط يمين) ، فِيل (أسفل يسار) ← ذِئْب ✅
   _Round(
     imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_2.png',
-    imgH: 390,
+    imgH: 474,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
-      _ImageZone(label: 'حِمَار',  hasDhaal: false, px: 138, py: 114),
-      _ImageZone(label: 'حَجَر',   hasDhaal: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/ha/sounds/word_hisaan.mp3'),
-      _ImageZone(label: 'فِيل',    hasDhaal: false, px: 138, py: 398),
+      _ImageZone(label: 'سَمَكَة', hasDhaal: false, px: 138, py:  95),
+      _ImageZone(label: 'ذِئْب',   hasDhaal: true,  px: 440, py: 230,
+          wordAudio: 'audio/games/circus/dhaal/dhaal_circus_2.mp3'),
+      _ImageZone(label: 'فِيل',    hasDhaal: false, px: 138, py: 370),
     ],
   ),
-  // الجولة 3: حِصَان (أعلى) ، مِطْرَقَة (وسط) ، جَزَرَة (أسفل) ← جَزَرَة ✅
+  // الجولة 3: فِنْجَان (أعلى يسار) ، نَخْلَة (وسط يمين) ، غِذَاء (أسفل يسار) ← غِذَاء ✅
   _Round(
     imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_3.png',
-    imgH: 390,
+    imgH: 474,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [
-      _ImageZone(label: 'حِصَان',  hasDhaal: false, px: 138, py: 116),
-      _ImageZone(label: 'مِطْرَقَة', hasDhaal: false, px: 326, py: 262),
-      _ImageZone(label: 'حِمَار', hasDhaal: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/ha/sounds/word_hijar.mp3'),
+      _ImageZone(label: 'فِنْجَان', hasDhaal: false, px: 138, py:  95),
+      _ImageZone(label: 'نَخْلَة',  hasDhaal: false, px: 440, py: 230),
+      _ImageZone(label: 'غِذَاء',   hasDhaal: true,  px: 138, py: 370,
+          wordAudio: 'audio/games/circus/dhaal/dhaal_circus_3.mp3'),
     ],
   ),
 ];

@@ -122,6 +122,7 @@ class AudioManager {
       'champion': 'بطل!',
       'wow': 'يا سلام!',
       'correct': 'صحيح!',
+      'congrats': 'أحسنت!',
       'continue': 'هيا نكمل!',
       'smart': 'أنت ذكي!',
     };

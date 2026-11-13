@@ -64,6 +64,7 @@ class AudioRegistry {
     'feedback_champion': 'assets/audio/feedback/champion.mp3',
     'feedback_wow': 'assets/audio/feedback/wow.mp3',
     'feedback_correct': 'assets/audio/feedback/correct.mp3',
+    'feedback_congrats': 'assets/audio/feedback/correct.mp3',
     'feedback_continue': 'assets/audio/feedback/continue.mp3',
     'feedback_smart': 'assets/audio/feedback/smart.mp3',
 
@@ -234,6 +235,7 @@ class AudioRegistry {
   /// Reverse lookup: Arabic character → registry key (cached)
   static final Map<String, String> _charToKey = {
     for (final entry in letterCharsArabic.entries) entry.value: entry.key,
+    'هـ': 'haa',
   };
 
   /// Convert Arabic letter character to its AudioRegistry key

@@ -1,17 +1,17 @@
-# Graph Report - faseeh_kids  (2026-11-12)
+# Graph Report - faseeh_kids  (2026-11-13)
 
 ## Corpus Check
-- 371 files · ~710,545 words
+- 371 files · ~710,570 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 61 file(s) not represented in the graph (top: (none) 14, .swf 11, .xml 9)
 
 ## Summary
-- 6990 nodes · 9393 edges · 311 communities (276 shown, 35 thin omitted)
+- 6990 nodes · 9394 edges · 310 communities (274 shown, 36 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fea95ebf`
+- Built from commit: `3525392c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,7 +86,7 @@
 - seen_beehive_game.dart
 - zaay_beehive_game.dart
 - taa_circus_game.dart
-- games_activity_screen.dart
+- AnimationController
 - extract_swf_assets.dart
 - ملخص الأقسام A-I (المُفصّلة في الملفات المصاحبة)
 - baa_circus_game.dart
@@ -117,7 +117,7 @@
 - constants.dart
 - parent_gate_screen.dart
 - audio_service.dart
-- AnimationController
+- alif_objectives_station.dart
 - audio_manager.dart
 - dart:typed_data
 - lesson_sequence_screen.dart
@@ -219,7 +219,7 @@
 - dart:convert
 - dal_manifest.dart
 - dhaal_manifest.dart
-- File
+- test_stream.dart
 - generic_circus_game.dart
 - age_selection_screen.dart
 - ConfettiController
@@ -305,12 +305,11 @@
 - kha_manifest.dart
 - raa_manifest.dart
 - seen_manifest.dart
-- story_provider.dart
-- extract_cws_from_exe.dart
-- arabic_letters_data.dart
-- stories_data.dart
+- TickerProviderStateMixin
+- test_cws_carver.dart
+- _PaywallScreenState
+- HaWordFishingGame
 - StatelessWidget
-- splash_screen.dart
 - static const List
 - test_decompress_slice.dart
 - AgeGroup
@@ -332,19 +331,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `ActivityResult` --configures--> `freezed`  [EXTRACTED]
   lib/shared/models/activity_result.dart → pubspec.yaml
-- `ChildProfile` --configures--> `freezed`  [EXTRACTED]
-  lib/shared/models/child_profile.dart → pubspec.yaml
-- `LessonProgress` --configures--> `freezed`  [EXTRACTED]
-  lib/shared/models/lesson_progress.dart → pubspec.yaml
-- `MasteryRecord` --configures--> `freezed`  [EXTRACTED]
-  lib/shared/models/mastery_record.dart → pubspec.yaml
-- `ParentSettings` --configures--> `freezed`  [EXTRACTED]
-  lib/shared/models/parent_settings.dart → pubspec.yaml
+- `wWinMain()` --calls--> `CreateAndAttachConsole()`  [INFERRED]
+  windows/runner/main.cpp → windows/runner/utils.cpp
+- `build` --references--> `currentLessonProvider`  [EXTRACTED]
+  lib/features/lessons/screens/lesson_sequence_screen.dart → lib/features/lessons/logic/lesson_provider.dart
+- `_showCompletionDialog` --references--> `currentLessonProvider`  [EXTRACTED]
+  lib/features/lessons/screens/lesson_sequence_screen.dart → lib/features/lessons/logic/lesson_provider.dart
+- `initState` --references--> `currentLessonProvider`  [EXTRACTED]
+  lib/features/lessons/screens/universal_letter_hub_screen.dart → lib/features/lessons/logic/lesson_provider.dart
 
 ## Import Cycles
 - None detected.
 
-## Communities (311 total, 35 thin omitted)
+## Communities (310 total, 36 thin omitted)
 
 ### Community 0 - "letter_unit_manifest.dart"
 Cohesion: 0.01
@@ -412,15 +411,15 @@ Nodes (65): _advance, _alive, bgImagePath, build, _buildBottomNavBar, _buildColo
 
 ### Community 16 - "currentLessonProvider"
 Cohesion: 0.10
-Nodes (29): currentUnitProvider, unlockedUnitsProvider, build, _LuxuryOasisShowcaseScreenState, currentLessonProvider, _handleLessonCompleted, _handleLessonCompleted, _handleLessonCompleted (+21 more)
+Nodes (27): unlockedUnitsProvider, currentLessonProvider, _handleLessonCompleted, _handleLessonCompleted, _handleLessonCompleted, LongVowelsActivityScreen, PhrasesActivityScreen, PositionsActivityScreen (+19 more)
 
 ### Community 17 - "Phase 0: تأسيس المشروع (Project Foundation)"
 Cohesion: 0.04
 Nodes (52): P0-T001: Create Flutter Project, P0-T002: Set minSdkVersion, P0-T003: Set targetSdkVersion, P0-T004: Set applicationId, P0-T005: Add flutter_riverpod dependency, P0-T006: Add Hive dependencies, P0-T007: Add go_router dependency, P0-T008: Add audioplayers dependency (+44 more)
 
 ### Community 18 - "alif_games_station.dart"
-Cohesion: 0.08
-Nodes (24): AlifGamesStation, _AlifGamesStationState, build, _buildGame, _buildGameScreen, _buildGameTile, createState, dispose (+16 more)
+Cohesion: 0.04
+Nodes (43): AlifGamesStation, _AlifGamesStationState, build, _buildGame, _buildGameScreen, _buildGameTile, createState, dispose (+35 more)
 
 ### Community 19 - "app_router.dart"
 Cohesion: 0.04
@@ -439,8 +438,8 @@ Cohesion: 0.04
 Nodes (47): _advance, build, _buildBottomNavBar, _buildCardWidget, _buildDropTarget, _buildGameScene, cardPx, cardPyList (+39 more)
 
 ### Community 23 - "baa_words_match_game.dart"
-Cohesion: 0.04
-Nodes (45): _advance, BaaWordsMatchGame, _BaaWordsMatchGameState, build, _buildBottomNavBar, _buildCardWidget, _buildDropTarget, _buildGameScene (+37 more)
+Cohesion: 0.05
+Nodes (43): _advance, build, _buildBottomNavBar, _buildCardWidget, _buildDropTarget, _buildGameScene, cardPx, cardPyList (+35 more)
 
 ### Community 24 - "dal_words_match_game.dart"
 Cohesion: 0.04
@@ -475,8 +474,8 @@ Cohesion: 0.04
 Nodes (45): _advanceRound, build, _buildBottomNavBar, _buildGameOver, _buildGameScene, _chip, _confetti, correctPraise (+37 more)
 
 ### Community 32 - "zaay_words_match_game.dart"
-Cohesion: 0.04
-Nodes (45): _advance, build, _buildBottomNavBar, _buildCardWidget, _buildDropTarget, _buildGameScene, cardPx, cardPyList (+37 more)
+Cohesion: 0.05
+Nodes (43): _advance, build, _buildBottomNavBar, _buildCardWidget, _buildDropTarget, _buildGameScene, cardPx, cardPyList (+35 more)
 
 ### Community 33 - "letter_lesson_shell_screen.dart"
 Cohesion: 0.05
@@ -500,7 +499,7 @@ Nodes (45): _advance, build, _buildBottomNavBar, _buildCardWidget, _buildDropTar
 
 ### Community 38 - "ha_word_fishing_game.dart"
 Cohesion: 0.05
-Nodes (43): _advanceRound, build, _buildBottomNavBar, _buildGameOver, _buildGameScene, _chip, _confetti, correctPraise (+35 more)
+Nodes (41): _advanceRound, build, _buildBottomNavBar, _buildGameOver, _buildGameScene, _chip, _confetti, correctPraise (+33 more)
 
 ### Community 39 - "jeem_word_fishing_game.dart"
 Cohesion: 0.05
@@ -528,7 +527,7 @@ Nodes (42): AlifWordsStation, _AlifWordsStationState, audio, b, _btn, build, _bu
 
 ### Community 45 - "words_match_game.dart"
 Cohesion: 0.05
-Nodes (42): _advance, audioPath, build, _buildBottomNavBar, _buildDraggableCard, _buildDropTarget, _buildGameScene, cardPxList (+34 more)
+Nodes (40): _advance, audioPath, build, _buildBottomNavBar, _buildDraggableCard, _buildDropTarget, _buildGameScene, cardPxList (+32 more)
 
 ### Community 46 - "baa_word_fishing_game.dart"
 Cohesion: 0.05
@@ -539,12 +538,12 @@ Cohesion: 0.09
 Nodes (15): AlifLessonScreen, _AlifLessonScreenState, build, _confettiController, createState, _currentStationIndex, dispose, _goToStation (+7 more)
 
 ### Community 48 - "Color"
-Cohesion: 0.06
-Nodes (32): CurriculumRepository, curriculumRepositoryProvider, getCurriculumForLetter, build, color, displayChar, isTablet, label (+24 more)
+Cohesion: 0.07
+Nodes (29): build, color, displayChar, isTablet, label, _LongVowelCard, build, _buildHighlightedText (+21 more)
 
 ### Community 49 - "luxury_oasis_showcase_screen.dart"
 Cohesion: 0.05
-Nodes (39): _buildGlassCard, _buildRailIcon, createState, dispose, _drawDune, index, initState, isCurrent (+31 more)
+Nodes (40): _buildGlassCard, _buildRailIcon, createState, dispose, _drawDune, index, initState, isCurrent (+32 more)
 
 ### Community 50 - "letter_curriculum_model.dart"
 Cohesion: 0.06
@@ -564,7 +563,7 @@ Nodes (38): _advanceRound, build, _buildBottomNavBar, _buildGameOver, _buildGame
 
 ### Community 54 - "all_letters_screens_render_test.dart"
 Cohesion: 0.07
-Nodes (16): app, binding, cycles, failures, main, rssMb, timings, visit (+8 more)
+Nodes (15): app, binding, cycles, failures, main, rssMb, timings, visit (+7 more)
 
 ### Community 55 - "taa_beehive_game.dart"
 Cohesion: 0.05
@@ -626,9 +625,9 @@ Nodes (35): _advance, build, _buildBottomNavBar, _buildGameScene, cells, _CellZo
 Cohesion: 0.06
 Nodes (34): _advance, build, _buildBottomNavBar, _buildGameScene, _chip, _confetti, createState, dispose (+26 more)
 
-### Community 70 - "games_activity_screen.dart"
-Cohesion: 0.08
-Nodes (19): build, _buildGame, _buildGameScreen, _buildGameTile, createState, dispose, _GameCard, _games (+11 more)
+### Community 70 - "AnimationController"
+Cohesion: 0.15
+Nodes (12): BaaObjectivesStation, _BaaObjectivesStationState, build, createState, dispose, _duckBobAnimation, _duckBobController, initState (+4 more)
 
 ### Community 71 - "extract_swf_assets.dart"
 Cohesion: 0.06
@@ -750,9 +749,9 @@ Nodes (26): answer, build, _checkPersistentLockout, countdown, _countdownTimer, 
 Cohesion: 0.06
 Nodes (27): AudioChannel, _bgmOpId, _channelQueues, dispose, _enqueue, getAssetDuration, getChannelState, _getOpId (+19 more)
 
-### Community 101 - "AnimationController"
-Cohesion: 0.09
-Nodes (20): build, createState, dispose, initState, _isPlaying, _lionBobAnimation, _lionBobController, _objectives (+12 more)
+### Community 101 - "alif_objectives_station.dart"
+Cohesion: 0.15
+Nodes (12): AlifObjectivesStation, _AlifObjectivesStationState, build, createState, dispose, initState, _isPlaying, _lionBobAnimation (+4 more)
 
 ### Community 102 - "audio_manager.dart"
 Cohesion: 0.07
@@ -783,7 +782,7 @@ Cohesion: 0.09
 Nodes (23): WordsSpec, build, _buildBar, _buildStage, _closeWord, createState, dispose, _imgW (+15 more)
 
 ### Community 109 - "universal_letter_hub_screen.dart"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (13): lessonProgressProvider, build, createState, dispose, initState, _isPlayingSound, letterChar, _orbitController (+5 more)
 
 ### Community 110 - "words_sequence_widget.dart"
@@ -803,7 +802,7 @@ Cohesion: 0.13
 Nodes (4): wWinMain(), CreateAndAttachConsole(), GetCommandLineArguments(), Utf8FromUtf16()
 
 ### Community 114 - "baa_lesson_screen.dart"
-Cohesion: 0.10
+Cohesion: 0.09
 Nodes (15): BaaLessonScreen, _BaaLessonScreenState, build, _confettiController, createState, _currentStationIndex, dispose, _goToStation (+7 more)
 
 ### Community 115 - "long_vowels_sequence_widget.dart"
@@ -812,7 +811,7 @@ Nodes (22): _audioPlayId, build, _buildExamplePage, _buildIntroPage, createState
 
 ### Community 116 - "universal_objectives_station.dart"
 Cohesion: 0.10
-Nodes (18): ObjectivesSpec, accentColor, _bobAnimation, _bobController, build, _buildCompactMascotHeader, _buildMascotColumn, _buildObjectivesCard (+10 more)
+Nodes (20): ObjectivesSpec, accentColor, _bobAnimation, _bobController, build, _buildCompactMascotHeader, _buildMascotColumn, _buildObjectivesCard (+12 more)
 
 ### Community 117 - "integrate_alif_audio.dart"
 Cohesion: 0.22
@@ -823,8 +822,8 @@ Cohesion: 0.09
 Nodes (21): name, runs-on, steps, jobs, analyze-and-test, name, on, pull_request (+13 more)
 
 ### Community 119 - "paywall_screen.dart"
-Cohesion: 0.10
-Nodes (20): offeringsProvider, purchaseProvider, build, _buildCtaButton, _buildFallbackPricing, _buildFeaturesList, _buildFooter, _buildHeroSection (+12 more)
+Cohesion: 0.12
+Nodes (14): _buildCtaButton, _buildFallbackPricing, _buildFeaturesList, _buildHeroSection, _buildPricingPlaceholder, _buildPricingSection, _buildStars, _buildTitle (+6 more)
 
 ### Community 120 - "baa_story_station.dart"
 Cohesion: 0.10
@@ -855,8 +854,8 @@ Cohesion: 0.10
 Nodes (20): age, avatar, box, build, ChildProfile, copyWith, dailyTimeLimit, id (+12 more)
 
 ### Community 127 - "story_reader_screen.dart"
-Cohesion: 0.11
-Nodes (16): storyProgressProvider, build, createState, _currentPage, dispose, _getStoryImagePath, initState, _isFinished (+8 more)
+Cohesion: 0.10
+Nodes (17): Story, storyProgressProvider, build, createState, _currentPage, dispose, _getStoryImagePath, initState (+9 more)
 
 ### Community 128 - "lesson_progress.dart"
 Cohesion: 0.17
@@ -872,15 +871,15 @@ Nodes (19): P6-T001: إنشاء أنواع الأنشطة (ActivityType Enum), P
 
 ### Community 131 - "oasis_map_screen.dart"
 Cohesion: 0.09
-Nodes (14): letterAccessProvider, homeNavIndexProvider, build, createState, dispose, initState, letters, OasisMapScreen (+6 more)
+Nodes (16): letterAccessProvider, currentUnitProvider, homeNavIndexProvider, build, build, createState, dispose, initState (+8 more)
 
 ### Community 132 - "universal_sounds_station.dart"
 Cohesion: 0.15
 Nodes (10): AlifSoundsStation, build, isActive, onNext, onPrevious, BaaSoundsStation, build, isActive (+2 more)
 
 ### Community 133 - "alif_story_station.dart"
-Cohesion: 0.10
-Nodes (19): AlifStoryStation, _AlifStoryStationState, build, _confettiController, createState, _currentSceneIndex, dispose, _foundRabbit (+11 more)
+Cohesion: 0.11
+Nodes (17): build, _confettiController, createState, _currentSceneIndex, dispose, _foundRabbit, _goToScene, initState (+9 more)
 
 ### Community 134 - "explore_activity_screen.dart"
 Cohesion: 0.10
@@ -891,8 +890,8 @@ Cohesion: 0.12
 Nodes (16): ageGroup, auraColor, _AvatarOption, _avatars, AvatarSelectionScreen, _AvatarSelectionScreenState, createState, fallbackEmoji (+8 more)
 
 ### Community 136 - "batch_extract_all_curriculum.dart"
-Cohesion: 0.10
-Nodes (18): baseSourceDir, bytes, _catalogAndIntegrateAudio, count, create, dstFeedbackDir, dstLettersDir, dstStoriesDir (+10 more)
+Cohesion: 0.08
+Nodes (21): storiesData, storiesProvider, updateProgress, baseSourceDir, bytes, _catalogAndIntegrateAudio, count, create (+13 more)
 
 ### Community 137 - "child_profile.dart"
 Cohesion: 0.19
@@ -912,11 +911,11 @@ Nodes (3): Point, x, y
 
 ### Community 141 - "story_sequence_widget.dart"
 Cohesion: 0.11
-Nodes (18): build, _confettiController, createState, _currentFrameIndex, dispose, _foundRabbit, _getStoryFramesForLetter, _goToFrame (+10 more)
+Nodes (16): build, _confettiController, createState, _currentFrameIndex, dispose, _foundRabbit, _getStoryFramesForLetter, _goToFrame (+8 more)
 
 ### Community 142 - "package:faseeh_kids/services/audio_service.dart"
-Cohesion: 0.12
-Nodes (14): build, createState, _currentStep, dispose, _getStepsForLetter, initState, letterChar, _nextStep (+6 more)
+Cohesion: 0.09
+Nodes (19): build, createState, _currentStep, dispose, _getStepsForLetter, initState, letterChar, _nextStep (+11 more)
 
 ### Community 143 - "sync_queue_item.dart"
 Cohesion: 0.19
@@ -963,8 +962,8 @@ Cohesion: 0.20
 Nodes (13): _, currentStreak, hashCode, lastActiveDate, longestStreak, operator, _privateConstructorUsedError, todayCompleted (+5 more)
 
 ### Community 154 - "carve_and_extract_all_26.dart"
-Cohesion: 0.12
-Nodes (13): baseSourceDir, create, dstLettersDir, letterSourceMap, main, stopwatch, totalExtractedSoundsAcrossAllLetters, create (+5 more)
+Cohesion: 0.09
+Nodes (17): baseSourceDir, create, dstLettersDir, letterSourceMap, main, stopwatch, totalExtractedSoundsAcrossAllLetters, audioDir (+9 more)
 
 ### Community 155 - "المرحلة الرابعة: تدفق التأهيل (Onboarding Flow)"
 Cohesion: 0.12
@@ -1015,8 +1014,8 @@ Cohesion: 0.14
 Nodes (13): ageGroup, _avatarEmojis, avatarIndex, _controller, createState, dispose, _focusNode, _formKey (+5 more)
 
 ### Community 167 - "lesson_provider.dart"
-Cohesion: 0.14
-Nodes (14): activityResultProvider, completeCurrentActivity, completedActivities, completeLesson, copyWith, currentActivity, LessonActivity, LessonNotifier (+6 more)
+Cohesion: 0.08
+Nodes (23): ArabicLetter, arabicLetters, exampleWords, letter, name, nameEn, sound, unitIndex (+15 more)
 
 ### Community 168 - ".application"
 Cohesion: 0.15
@@ -1047,8 +1046,8 @@ Cohesion: 0.14
 Nodes (14): القسم ٥ — مواصفات الرسوم المتحركة (13 رسماً), ٥.١ بندول بطاقة الحرف, ٥.١٠ اهتزاز الإجابة الخاطئة, ٥.١١ انتقال الصفحات, ٥.١٢ تفاعل الضغط على عربة القطار, ٥.١٣ تنفّس البطة (idle), ٥.٢ حركة طائرة (فتحة/ضمة/كسرة تطير إلى الحرف), ٥.٣ انبثاق الصورة في الشجرة المجوفة (+6 more)
 
 ### Community 175 - "faseeh_button.dart"
-Cohesion: 0.15
-Nodes (11): build, createState, _handleTapCancel, _handleTapDown, _handleTapUp, icon, isLoading, _isPressed (+3 more)
+Cohesion: 0.14
+Nodes (13): build, createState, FaseehButton, _FaseehButtonState, _handleTapCancel, _handleTapDown, _handleTapUp, icon (+5 more)
 
 ### Community 177 - "arabic_text.dart"
 Cohesion: 0.15
@@ -1099,8 +1098,8 @@ Cohesion: 0.12
 Nodes (16): MaddSpec, build, createState, dispose, initState, _maddColors, _maddNames, _ManifestMaddView (+8 more)
 
 ### Community 189 - "State"
-Cohesion: 0.14
-Nodes (20): AlifObjectivesStation, _AlifObjectivesStationState, BaaObjectivesStation, _BaaObjectivesStationState, TraceSequenceWidget, _TraceSequenceWidgetState, UniversalGamesStation, _UniversalGamesStationState (+12 more)
+Cohesion: 0.13
+Nodes (20): GenericWordsMatchGame, _GenericWordsMatchGameState, AlifStoryStation, _AlifStoryStationState, StorySequenceWidget, _StorySequenceWidgetState, TraceSequenceWidget, _TraceSequenceWidgetState (+12 more)
 
 ### Community 190 - "وثيقة المعمارية والحالة الشاملة لتطبيق فصيح كيدز (Faseeh Kids Master Status)"
 Cohesion: 0.20
@@ -1112,7 +1111,7 @@ Nodes (10): ageFile, avatarFile, content, main, nameFile, newAvatars, oldAvatars
 
 ### Community 192 - "generic_words_match_game.dart"
 Cohesion: 0.07
-Nodes (30): _advance, build, _buildBottomBar, _buildGameOver, _buildScene, _confetti, createState, dispose (+22 more)
+Nodes (28): _advance, build, _buildBottomBar, _buildGameOver, _buildScene, _confetti, createState, dispose (+20 more)
 
 ### Community 193 - "2. فهرس المقاطع الصوتية المفرغة حسب الوحدة"
 Cohesion: 0.20
@@ -1139,8 +1138,8 @@ Cohesion: 0.25
 Nodes (7): build, height, MascotState, MascotWidget, showBackground, state, width
 
 ### Community 201 - "dart:convert"
-Cohesion: 0.11
-Nodes (13): inDir, main, swfFiles, dir, main, texts, bytes, file (+5 more)
+Cohesion: 0.12
+Nodes (12): inDir, main, swfFiles, dir, main, baseDir, buffer, files (+4 more)
 
 ### Community 202 - "dal_manifest.dart"
 Cohesion: 0.25
@@ -1150,9 +1149,9 @@ Nodes (7): _audio, dalManifest, _dir, _gamesAudio, _gamesDir, _maddAudio, _vowel
 Cohesion: 0.25
 Nodes (7): _audio, dhaalManifest, _dir, _gamesAudio, _gamesDir, _maddAudio, _vowelsAudio
 
-### Community 204 - "File"
-Cohesion: 0.12
-Nodes (13): audioDir, files, groups, main, inDir, main, swfFiles, baseDir (+5 more)
+### Community 204 - "test_stream.dart"
+Cohesion: 0.25
+Nodes (7): bytes, file, main, start, targetLen, uncompressedLen, zlibData
 
 ### Community 205 - "generic_circus_game.dart"
 Cohesion: 0.07
@@ -1163,7 +1162,7 @@ Cohesion: 0.13
 Nodes (12): AgeSelectionScreen, _AgeSelectionScreenState, build, _buildAgeCard, createState, _proceed, _selectAgeGroup, _selected (+4 more)
 
 ### Community 207 - "ConfettiController"
-Cohesion: 0.15
+Cohesion: 0.14
 Nodes (11): badgeIcon, build, _buildStars, _confettiController, createState, dispose, initState, _motivationalTexts (+3 more)
 
 ### Community 208 - "3. التدقيق التفصيلي لمحطات حرف الجيم (Station by Station Status)"
@@ -1179,8 +1178,8 @@ Cohesion: 0.25
 Nodes (7): _audio, _dir, _gamesAudio, _gamesDir, _maddAudio, _vowelsAudio, zaayManifest
 
 ### Community 212 - "dart:typed_data"
-Cohesion: 0.11
-Nodes (15): bytes, file, localHeaders, main, outDir, bytes, file, main (+7 more)
+Cohesion: 0.08
+Nodes (19): bytes, file, localHeaders, main, outDir, bytes, count, exePath (+11 more)
 
 ### Community 213 - "extract_letter_exe.dart"
 Cohesion: 0.25
@@ -1319,8 +1318,8 @@ Cohesion: 0.20
 Nodes (9): _audio, _coreAudio, _dir, faaManifest, _gamesAudio, _gamesDir, _maddAudio, _soundsAudio (+1 more)
 
 ### Community 278 - "package:flutter_riverpod/flutter_riverpod.dart"
-Cohesion: 0.07
-Nodes (28): _proceed, _buildQuestionScreen, childProfilesProvider, parentSettingsProvider, build, _buildStatItem, ParentDashboardScreen, BadgeModel (+20 more)
+Cohesion: 0.05
+Nodes (34): CurriculumRepository, curriculumRepositoryProvider, getCurriculumForLetter, _proceed, _buildQuestionScreen, build, createState, initState (+26 more)
 
 ### Community 279 - "trace_activity_screen.dart"
 Cohesion: 0.10
@@ -1406,29 +1405,21 @@ Nodes (7): _audio, _dir, _gamesAudio, _gamesDir, _maddAudio, raaManifest, _vowel
 Cohesion: 0.25
 Nodes (7): _audio, _dir, _gamesAudio, _gamesDir, _maddAudio, seenManifest, _vowelsAudio
 
-### Community 300 - "story_provider.dart"
-Cohesion: 0.25
-Nodes (4): storiesData, storiesProvider, StoryProgressNotifier, updateProgress
+### Community 300 - "TickerProviderStateMixin"
+Cohesion: 0.29
+Nodes (6): BaaWordsMatchGame, _BaaWordsMatchGameState, WordsMatchGame, _WordsMatchGameState, ZaayWordsMatchGame, _ZaayWordsMatchGameState
 
-### Community 301 - "extract_cws_from_exe.dart"
-Cohesion: 0.25
-Nodes (7): bytes, count, exePath, file, main, offsets, outDir
+### Community 301 - "test_cws_carver.dart"
+Cohesion: 0.29
+Nodes (6): bytes, extractedCount, file, main, offsets, outDir
 
-### Community 302 - "arabic_letters_data.dart"
-Cohesion: 0.22
-Nodes (8): ArabicLetter, arabicLetters, exampleWords, letter, name, nameEn, sound, unitIndex
-
-### Community 303 - "stories_data.dart"
-Cohesion: 0.25
-Nodes (6): difficultyLevel, id, pages, storiesData, Story, title
+### Community 302 - "_PaywallScreenState"
+Cohesion: 0.33
+Nodes (6): offeringsProvider, purchaseProvider, build, _buildFooter, PaywallScreen, _PaywallScreenState
 
 ### Community 304 - "StatelessWidget"
 Cohesion: 0.05
 Nodes (28): _HudItem, _LuxuryOasisNode, activeStationIndex, BaaTrainNavBar, build, stations, BaaWritingStation, build (+20 more)
-
-### Community 305 - "splash_screen.dart"
-Cohesion: 0.33
-Nodes (5): build, createState, initState, SplashScreen, _SplashScreenState
 
 ### Community 306 - "static const List"
 Cohesion: 0.33
@@ -1451,21 +1442,21 @@ Cohesion: 0.50
 Nodes (3): Size, height, width
 
 ## Knowledge Gaps
-- **4963 isolated node(s):** `binding`, `cycles`, `failures`, `timings`, `rssMb` (+4958 more)
+- **4963 isolated node(s):** `_ImageZone`, `_Round`, `_imgW`, `label`, `hasDhaal` (+4958 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 5743 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Win32Window` connect `Win32Window` to `.MessageHandler`, `Point`, `utils.cpp`, `FlutterWindow`, `Size`, `win32_window.cpp`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **What connects `binding`, `cycles`, `failures` to the rest of the system?**
+- **Why does `freezed` connect `hive_adapters.dart` to `dependencies`, `activity_result.dart`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **What connects `_ImageZone`, `_Round`, `_imgW` to the rest of the system?**
   _4963 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `letter_unit_manifest.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.014492753623188406 - nodes in this community are weakly interconnected._
-- **Why does `FlutterWindow` connect `FlutterWindow` to `utils.cpp`, `Win32Window`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `dev_dependencies` connect `dependencies` to `hive_adapters.dart`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Should `settings_toggle.dart` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `app_colors.dart` be split into smaller, more focused modules?**

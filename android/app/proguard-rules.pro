@@ -23,6 +23,21 @@
 -keep class com.ryanheise.** { *; }
 -dontwarn com.ryanheise.**
 
+# audioplayers
+-keep class xyz.luan.audioplayers.** { *; }
+-dontwarn xyz.luan.audioplayers.**
+
+# RevenueCat (purchases_flutter / BillingClient)
+-keep class com.revenuecat.purchases.** { *; }
+-keep class com.revenuecat.purchases_flutter.** { *; }
+-keep class com.revenuecat.purchases_ui_flutter.** { *; }
+-dontwarn com.revenuecat.purchases.**
+-dontwarn com.amazon.**
+-keep class com.amazon.** { *; }
+-keep class com.android.billingclient.** { *; }
+-keep class androidx.lifecycle.DefaultLifecycleObserver
+-keep class org.xmlpull.v1.** { *; }
+
 # riverpod
 -keep class dev.rrousselgit.riverpod.** { *; }
 
