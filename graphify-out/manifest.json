@@ -996,9 +996,9 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/screens/universal/stations/universal_madd_station.dart": {
-    "mtime": 1794413080.976892,
-    "seen": 1794413779.1738691,
-    "ast_hash": "40fc7860557fed2de41e64d3dfe7fbae",
+    "mtime": 1794572664.6031625,
+    "seen": 1794586967.3668709,
+    "ast_hash": "2ec34890998c0c86178e707c68646391",
     "semantic_hash": ""
   },
   "lib/features/lessons/screens/universal/stations/universal_objectives_station.dart": {
@@ -35907,6 +35907,12 @@
     "mtime": 1794466052.0620806,
     "seen": 1794468876.8250885,
     "ast_hash": "740191ceebca2e4012c78596f996d52c",
+    "semantic_hash": ""
+  },
+  "test/universal_madd_station_test.dart": {
+    "mtime": 1794586580.3204443,
+    "seen": 1794586967.4087427,
+    "ast_hash": "25706e7f3d62e64b53ac2094444b8855",
     "semantic_hash": ""
   }
 }
