@@ -174,7 +174,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                                       ),
                                     ))
                                 .toList(),
-                            onChanged: (val) {},
+                            onChanged: (val) { /* multi-profile switching — coming in v1.1 */ },
                           ),
                         ),
                       ),
