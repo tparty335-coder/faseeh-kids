@@ -25,7 +25,7 @@ class RevenueCatService {
   static RevenueCatService get instance => _instance;
 
   // ─── API Keys (replace with real keys from RevenueCat Dashboard) ───
-  static const String _googleApiKey = 'goog_YOUR_REVENUECAT_KEY_HERE';
+  static const String _googleApiKey = 'goog_MTENPXXWalTwcwQEYjHjYLYwXpg';
   static const String _appleApiKey  = 'appl_YOUR_REVENUECAT_KEY_HERE';
 
   // ─── Entitlement identifier (defined in RevenueCat dashboard) ───
@@ -131,7 +131,6 @@ class RevenueCatService {
   /// Letters 0-4 (first 5) are always free.
   /// Letters 5-27 require premium.
   bool isLetterAccessible(int letterIndex) {
-    if (kDebugMode) return true;
     if (letterIndex < freeLetterCount) return true;
     return _isPremium;
   }
