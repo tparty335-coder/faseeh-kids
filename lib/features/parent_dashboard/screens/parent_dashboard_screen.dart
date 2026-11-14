@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -22,17 +22,17 @@ class ParentDashboardScreen extends ConsumerWidget {
         child: AlertDialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           title: const Text(
-            'حذف الحساب وبيانات الطفل',
+            'ط­ط°ظپ ط§ظ„ط­ط³ط§ط¨ ظˆط¨ظٹط§ظ†ط§طھ ط§ظ„ط·ظپظ„',
             style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
           ),
           content: const Text(
-            'هل أنت متأكد من حذف ملف الطفل وجميع بيانات التقدم والنجوم نهائياً من هذا الجهاز؟ لا يمكن التراجع عن هذا الإجراء.',
+            'ظ‡ظ„ ط£ظ†طھ ظ…طھط£ظƒط¯ ظ…ظ† ط­ط°ظپ ظ…ظ„ظپ ط§ظ„ط·ظپظ„ ظˆط¬ظ…ظٹط¹ ط¨ظٹط§ظ†ط§طھ ط§ظ„طھظ‚ط¯ظ… ظˆط§ظ„ظ†ط¬ظˆظ… ظ†ظ‡ط§ط¦ظٹط§ظ‹ ظ…ظ† ظ‡ط°ط§ ط§ظ„ط¬ظ‡ط§ط²طں ظ„ط§ ظٹظ…ظƒظ† ط§ظ„طھط±ط§ط¬ط¹ ط¹ظ† ظ‡ط°ط§ ط§ظ„ط¥ط¬ط±ط§ط،.',
             style: TextStyle(fontFamily: 'Cairo'),
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(ctx).pop(false),
-              child: const Text('إلغاء', style: TextStyle(fontFamily: 'Cairo')),
+              child: const Text('ط¥ظ„ط؛ط§ط،', style: TextStyle(fontFamily: 'Cairo')),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -40,7 +40,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                 foregroundColor: Colors.white,
               ),
               onPressed: () => Navigator.of(ctx).pop(true),
-              child: const Text('نعم، احذف جميع البيانات', style: TextStyle(fontFamily: 'Cairo')),
+              child: const Text('ظ†ط¹ظ…طŒ ط§ط­ط°ظپ ط¬ظ…ظٹط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ', style: TextStyle(fontFamily: 'Cairo')),
             ),
           ],
         ),
@@ -71,7 +71,7 @@ class ParentDashboardScreen extends ConsumerWidget {
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('تم حذف جميع بيانات الحساب بنجاح.', style: TextStyle(fontFamily: 'Cairo')),
+          content: Text('طھظ… ط­ط°ظپ ط¬ظ…ظٹط¹ ط¨ظٹط§ظ†ط§طھ ط§ظ„ط­ط³ط§ط¨ ط¨ظ†ط¬ط§ط­.', style: TextStyle(fontFamily: 'Cairo')),
         ),
       );
       context.go(AppRouter.onboarding);
@@ -86,30 +86,30 @@ class ParentDashboardScreen extends ConsumerWidget {
         child: AlertDialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           title: Text(
-            isPrivacy ? 'سياسة الخصوصية وحماية الطفل (COPPA)' : 'شروط وأحكام الاستخدام',
+            isPrivacy ? 'ط³ظٹط§ط³ط© ط§ظ„ط®طµظˆطµظٹط© ظˆط­ظ…ط§ظٹط© ط§ظ„ط·ظپظ„ (COPPA)' : 'ط´ط±ظˆط· ظˆط£ط­ظƒط§ظ… ط§ظ„ط§ط³طھط®ط¯ط§ظ…',
             style: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 18),
           ),
           content: SingleChildScrollView(
             child: Text(
               isPrivacy
-                  ? 'يلتزم تطبيق «فصيح الصغار» التزاماً كاملاً بقانون حماية خصوصية الأطفال على الإنترنت (COPPA) وسياسات عائلات Google Play وApple Kids Category:\n\n'
-                    '١. لا يجمع التطبيق أي بيانات تعريف شخصية حساسة عن الطفل، ويُحفظ اسم الطفل الرمزي وتقدمه التعليمي محلياً على الجهاز.\n'
-                    '٢. لا يحتوي التطبيق على أي إعلانات طرف ثالث أو روابط خارجية مفتوحة للطفل.\n'
-                    '٣. جميع عمليات الشراء وإدارة الحساب محمية خلف «بوابة الآباء» (Parent Gate).\n'
-                    '٤. يحق لولي الأمر حذف جميع البيانات المخزنة في أي وقت عبر زر «حذف الحساب» في لوحة تحكم الآباء.\n'
-                    '٥. للاطلاع على النسخة الكاملة: https://tparty335-coder.github.io/faseeh-kids-privacy/\n'\n                    '📧 lingobanana0@gmail.com'
-                  : 'شروط استخدام تطبيق «فصيح الصغار»:\n\n'
-                    '١. المحتوى التعليمي مخصص للأطفال من سن ٣ إلى ١٠ سنوات لتعلم القراءة والكتابة العربية السليمة.\n'
-                    '٢. أول ٥ وحدات تعليمية (أ، ب، ت، ث، ج) متاحة مجاناً بالكامل، ويمكن لولي الأمر الاشتراك لفتح كامل الحروف الـ ٢٨ أو تفعيل وضع المراجعة الحرة.\n'
-                    '٣. تُدار الاشتراكات واستعادة المشتريات حصرياً بواسطة ولي الأمر عبر حساب المتجر الرسمي.\n'
-                    '٤. النسخة الكاملة متوفرة في ملف web/terms_of_service.html.',
+                  ? 'ظٹظ„طھط²ظ… طھط·ط¨ظٹظ‚ آ«ظپطµظٹط­ ط§ظ„طµط؛ط§ط±آ» ط§ظ„طھط²ط§ظ…ط§ظ‹ ظƒط§ظ…ظ„ط§ظ‹ ط¨ظ‚ط§ظ†ظˆظ† ط­ظ…ط§ظٹط© ط®طµظˆطµظٹط© ط§ظ„ط£ط·ظپط§ظ„ ط¹ظ„ظ‰ ط§ظ„ط¥ظ†طھط±ظ†طھ (COPPA) ظˆط³ظٹط§ط³ط§طھ ط¹ط§ط¦ظ„ط§طھ Google Play ظˆApple Kids Category:\n\n'
+                    'ظ،. ظ„ط§ ظٹط¬ظ…ط¹ ط§ظ„طھط·ط¨ظٹظ‚ ط£ظٹ ط¨ظٹط§ظ†ط§طھ طھط¹ط±ظٹظپ ط´ط®طµظٹط© ط­ط³ط§ط³ط© ط¹ظ† ط§ظ„ط·ظپظ„طŒ ظˆظٹظڈط­ظپط¸ ط§ط³ظ… ط§ظ„ط·ظپظ„ ط§ظ„ط±ظ…ط²ظٹ ظˆطھظ‚ط¯ظ…ظ‡ ط§ظ„طھط¹ظ„ظٹظ…ظٹ ظ…ط­ظ„ظٹط§ظ‹ ط¹ظ„ظ‰ ط§ظ„ط¬ظ‡ط§ط².\n'
+                    'ظ¢. ظ„ط§ ظٹط­طھظˆظٹ ط§ظ„طھط·ط¨ظٹظ‚ ط¹ظ„ظ‰ ط£ظٹ ط¥ط¹ظ„ط§ظ†ط§طھ ط·ط±ظپ ط«ط§ظ„ط« ط£ظˆ ط±ظˆط§ط¨ط· ط®ط§ط±ط¬ظٹط© ظ…ظپطھظˆط­ط© ظ„ظ„ط·ظپظ„.\n'
+                    'ظ£. ط¬ظ…ظٹط¹ ط¹ظ…ظ„ظٹط§طھ ط§ظ„ط´ط±ط§ط، ظˆط¥ط¯ط§ط±ط© ط§ظ„ط­ط³ط§ط¨ ظ…ط­ظ…ظٹط© ط®ظ„ظپ آ«ط¨ظˆط§ط¨ط© ط§ظ„ط¢ط¨ط§ط،آ» (Parent Gate).\n'
+                    'ظ¤. ظٹط­ظ‚ ظ„ظˆظ„ظٹ ط§ظ„ط£ظ…ط± ط­ط°ظپ ط¬ظ…ظٹط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ظ…ط®ط²ظ†ط© ظپظٹ ط£ظٹ ظˆظ‚طھ ط¹ط¨ط± ط²ط± آ«ط­ط°ظپ ط§ظ„ط­ط³ط§ط¨آ» ظپظٹ ظ„ظˆط­ط© طھط­ظƒظ… ط§ظ„ط¢ط¨ط§ط،.\n'
+                    '5. للاطلاع على النسخة الكاملة: https://tparty335-coder.github.io/faseeh-kids-privacy/\n📧 lingobanana0@gmail.com'
+                  : 'ط´ط±ظˆط· ط§ط³طھط®ط¯ط§ظ… طھط·ط¨ظٹظ‚ آ«ظپطµظٹط­ ط§ظ„طµط؛ط§ط±آ»:\n\n'
+                    'ظ،. ط§ظ„ظ…ط­طھظˆظ‰ ط§ظ„طھط¹ظ„ظٹظ…ظٹ ظ…ط®طµطµ ظ„ظ„ط£ط·ظپط§ظ„ ظ…ظ† ط³ظ† ظ£ ط¥ظ„ظ‰ ظ،ظ  ط³ظ†ظˆط§طھ ظ„طھط¹ظ„ظ… ط§ظ„ظ‚ط±ط§ط،ط© ظˆط§ظ„ظƒطھط§ط¨ط© ط§ظ„ط¹ط±ط¨ظٹط© ط§ظ„ط³ظ„ظٹظ…ط©.\n'
+                    'ظ¢. ط£ظˆظ„ ظ¥ ظˆط­ط¯ط§طھ طھط¹ظ„ظٹظ…ظٹط© (ط£طŒ ط¨طŒ طھطŒ ط«طŒ ط¬) ظ…طھط§ط­ط© ظ…ط¬ط§ظ†ط§ظ‹ ط¨ط§ظ„ظƒط§ظ…ظ„طŒ ظˆظٹظ…ظƒظ† ظ„ظˆظ„ظٹ ط§ظ„ط£ظ…ط± ط§ظ„ط§ط´طھط±ط§ظƒ ظ„ظپطھط­ ظƒط§ظ…ظ„ ط§ظ„ط­ط±ظˆظپ ط§ظ„ظ€ ظ¢ظ¨ ط£ظˆ طھظپط¹ظٹظ„ ظˆط¶ط¹ ط§ظ„ظ…ط±ط§ط¬ط¹ط© ط§ظ„ط­ط±ط©.\n'
+                    'ظ£. طھظڈط¯ط§ط± ط§ظ„ط§ط´طھط±ط§ظƒط§طھ ظˆط§ط³طھط¹ط§ط¯ط© ط§ظ„ظ…ط´طھط±ظٹط§طھ ط­طµط±ظٹط§ظ‹ ط¨ظˆط§ط³ط·ط© ظˆظ„ظٹ ط§ظ„ط£ظ…ط± ط¹ط¨ط± ط­ط³ط§ط¨ ط§ظ„ظ…طھط¬ط± ط§ظ„ط±ط³ظ…ظٹ.\n'
+                    'ظ¤. ط§ظ„ظ†ط³ط®ط© ط§ظ„ظƒط§ظ…ظ„ط© ظ…طھظˆظپط±ط© ظپظٹ ظ…ظ„ظپ web/terms_of_service.html.',
               style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, height: 1.5),
             ),
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(ctx).pop(),
-              child: const Text('إغلاق', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+              child: const Text('ط¥ط؛ظ„ط§ظ‚', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
             ),
           ],
         ),
@@ -127,7 +127,7 @@ class ParentDashboardScreen extends ConsumerWidget {
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
-          title: const Text('لوحة تحكم الآباء'),
+          title: const Text('ظ„ظˆط­ط© طھط­ظƒظ… ط§ظ„ط¢ط¨ط§ط،'),
           backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
           leading: IconButton(
@@ -137,7 +137,7 @@ class ParentDashboardScreen extends ConsumerWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.show_chart),
-              tooltip: 'التقرير التفصيلي',
+              tooltip: 'ط§ظ„طھظ‚ط±ظٹط± ط§ظ„طھظپطµظٹظ„ظٹ',
               onPressed: () => context.push('/progress-report'),
             ),
           ],
@@ -199,7 +199,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'تقرير التقدم',
+                              'طھظ‚ط±ظٹط± ط§ظ„طھظ‚ط¯ظ…',
                               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                             Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey.shade600),
@@ -209,9 +209,9 @@ class ParentDashboardScreen extends ConsumerWidget {
                         ListTile(
                           contentPadding: EdgeInsets.zero,
                           leading: const Icon(Icons.star, color: Colors.orange),
-                          title: const Text('الحروف المتقنة'),
+                          title: const Text('ط§ظ„ط­ط±ظˆظپ ط§ظ„ظ…طھظ‚ظ†ط©'),
                           trailing: Text(
-                            '${ref.watch(progressStatsProvider).lettersMastered} / ٢٨',
+                            '${ref.watch(progressStatsProvider).lettersMastered} / ظ¢ظ¨',
                             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                           ),
                         ),
@@ -227,18 +227,18 @@ class ParentDashboardScreen extends ConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             _buildStatItem(
-                              'الوقت',
-                              '${ref.watch(progressStatsProvider).lettersMastered * 5} دقيقة',
+                              'ط§ظ„ظˆظ‚طھ',
+                              '${ref.watch(progressStatsProvider).lettersMastered * 5} ط¯ظ‚ظٹظ‚ط©',
                               Icons.timer,
                             ),
                             _buildStatItem(
-                              'الدقة',
+                              'ط§ظ„ط¯ظ‚ط©',
                               '${(ref.watch(progressStatsProvider).completionPercentage * 100).toInt()}%',
                               Icons.check_circle,
                             ),
                             _buildStatItem(
-                              'الاستمرارية',
-                              '${ref.watch(streakProvider)} أيام',
+                              'ط§ظ„ط§ط³طھظ…ط±ط§ط±ظٹط©',
+                              '${ref.watch(streakProvider)} ط£ظٹط§ظ…',
                               Icons.local_fire_department,
                             ),
                           ],
@@ -251,7 +251,7 @@ class ParentDashboardScreen extends ConsumerWidget {
 
               const SizedBox(height: 24),
               const Text(
-                'إعدادات التطبيق',
+                'ط¥ط¹ط¯ط§ط¯ط§طھ ط§ظ„طھط·ط¨ظٹظ‚',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),
@@ -264,7 +264,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'وقت الاستخدام اليومي: ${settings.dailyTimeLimit} دقيقة',
+                        'ظˆظ‚طھ ط§ظ„ط§ط³طھط®ط¯ط§ظ… ط§ظ„ظٹظˆظ…ظٹ: ${settings.dailyTimeLimit} ط¯ظ‚ظٹظ‚ط©',
                         style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Slider(
@@ -272,7 +272,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                         min: 10,
                         max: 60,
                         divisions: 5,
-                        label: '${settings.dailyTimeLimit} دقيقة',
+                        label: '${settings.dailyTimeLimit} ط¯ظ‚ظٹظ‚ط©',
                         onChanged: (val) {
                           ref.read(parentSettingsProvider.notifier).updateSettings(
                                 settings.copyWith(dailyTimeLimit: val.toInt()),
@@ -281,8 +281,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                       ),
                       const Divider(),
                       SettingsToggle(
-                        label: 'المؤثرات الصوتية',
-                        description: 'تشغيل أصوات التطبيق والتفاعلات',
+                        label: 'ط§ظ„ظ…ط¤ط«ط±ط§طھ ط§ظ„طµظˆطھظٹط©',
+                        description: 'طھط´ط؛ظٹظ„ ط£طµظˆط§طھ ط§ظ„طھط·ط¨ظٹظ‚ ظˆط§ظ„طھظپط§ط¹ظ„ط§طھ',
                         value: settings.soundEnabled,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
                               settings.copyWith(soundEnabled: val),
@@ -290,8 +290,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                       ),
                       const Divider(),
                       SettingsToggle(
-                        label: 'الموسيقى الخلفية',
-                        description: 'تشغيل الموسيقى الهادئة أثناء التعلم',
+                        label: 'ط§ظ„ظ…ظˆط³ظٹظ‚ظ‰ ط§ظ„ط®ظ„ظپظٹط©',
+                        description: 'طھط´ط؛ظٹظ„ ط§ظ„ظ…ظˆط³ظٹظ‚ظ‰ ط§ظ„ظ‡ط§ط¯ط¦ط© ط£ط«ظ†ط§ط، ط§ظ„طھط¹ظ„ظ…',
                         value: settings.musicEnabled,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
                               settings.copyWith(musicEnabled: val),
@@ -299,8 +299,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                       ),
                       const Divider(),
                       SettingsToggle(
-                        label: 'الوضع الليلي',
-                        description: 'تغيير ألوان التطبيق لتكون مريحة للعين',
+                        label: 'ط§ظ„ظˆط¶ط¹ ط§ظ„ظ„ظٹظ„ظٹ',
+                        description: 'طھط؛ظٹظٹط± ط£ظ„ظˆط§ظ† ط§ظ„طھط·ط¨ظٹظ‚ ظ„طھظƒظˆظ† ظ…ط±ظٹط­ط© ظ„ظ„ط¹ظٹظ†',
                         value: settings.nightMode,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
                               settings.copyWith(nightMode: val),
@@ -308,8 +308,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                       ),
                       const Divider(),
                       SettingsToggle(
-                        label: 'فتح جميع الحروف للمراجعة الحرة',
-                        description: 'السماح للطفل أو المعلم بتصفح جميع الحروف الـ ٢٨ دون تقيد بالتسلسل',
+                        label: 'ظپطھط­ ط¬ظ…ظٹط¹ ط§ظ„ط­ط±ظˆظپ ظ„ظ„ظ…ط±ط§ط¬ط¹ط© ط§ظ„ط­ط±ط©',
+                        description: 'ط§ظ„ط³ظ…ط§ط­ ظ„ظ„ط·ظپظ„ ط£ظˆ ط§ظ„ظ…ط¹ظ„ظ… ط¨طھطµظپط­ ط¬ظ…ظٹط¹ ط§ظ„ط­ط±ظˆظپ ط§ظ„ظ€ ظ¢ظ¨ ط¯ظˆظ† طھظ‚ظٹط¯ ط¨ط§ظ„طھط³ظ„ط³ظ„',
                         value: settings.unlockAllLettersForReview,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
                               settings.copyWith(unlockAllLettersForReview: val),
@@ -322,14 +322,14 @@ class ParentDashboardScreen extends ConsumerWidget {
 
               const SizedBox(height: 24),
               const Text(
-                'إدارة الحسابات والخصوصية',
+                'ط¥ط¯ط§ط±ط© ط§ظ„ط­ط³ط§ط¨ط§طھ ظˆط§ظ„ط®طµظˆطµظٹط©',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),
               OutlinedButton.icon(
                 onPressed: () => context.push(AppRouter.nameInput),
                 icon: const Icon(Icons.add),
-                label: const Text('إضافة طفل جديد'),
+                label: const Text('ط¥ط¶ط§ظپط© ط·ظپظ„ ط¬ط¯ظٹط¯'),
                 style: OutlinedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                 ),
@@ -338,7 +338,7 @@ class ParentDashboardScreen extends ConsumerWidget {
               OutlinedButton.icon(
                 onPressed: () => context.push(AppRouter.ageSelection),
                 icon: const Icon(Icons.edit),
-                label: const Text('تعديل بيانات الطفل'),
+                label: const Text('طھط¹ط¯ظٹظ„ ط¨ظٹط§ظ†ط§طھ ط§ظ„ط·ظپظ„'),
                 style: OutlinedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                 ),
@@ -347,7 +347,7 @@ class ParentDashboardScreen extends ConsumerWidget {
               OutlinedButton.icon(
                 onPressed: () => context.push(AppRouter.placementTest),
                 icon: const Icon(Icons.quiz_outlined),
-                label: const Text('إعادة اختبار تحديد المستوى'),
+                label: const Text('ط¥ط¹ط§ط¯ط© ط§ط®طھط¨ط§ط± طھط­ط¯ظٹط¯ ط§ظ„ظ…ط³طھظˆظ‰'),
                 style: OutlinedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                 ),
@@ -359,7 +359,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                     child: OutlinedButton.icon(
                       onPressed: () => _showLegalDialog(context, isPrivacy: true),
                       icon: const Icon(Icons.privacy_tip_outlined, size: 18),
-                      label: const Text('سياسة الخصوصية'),
+                      label: const Text('ط³ظٹط§ط³ط© ط§ظ„ط®طµظˆطµظٹط©'),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -367,7 +367,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                     child: OutlinedButton.icon(
                       onPressed: () => _showLegalDialog(context, isPrivacy: false),
                       icon: const Icon(Icons.description_outlined, size: 18),
-                      label: const Text('شروط الاستخدام'),
+                      label: const Text('ط´ط±ظˆط· ط§ظ„ط§ط³طھط®ط¯ط§ظ…'),
                     ),
                   ),
                 ],
@@ -376,7 +376,7 @@ class ParentDashboardScreen extends ConsumerWidget {
               TextButton.icon(
                 onPressed: () => _confirmDeleteAccount(context, ref),
                 icon: const Icon(Icons.delete, color: Colors.red),
-                label: const Text('حذف الحساب', style: TextStyle(color: Colors.red)),
+                label: const Text('ط­ط°ظپ ط§ظ„ط­ط³ط§ط¨', style: TextStyle(color: Colors.red)),
                 style: TextButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                 ),
@@ -399,3 +399,4 @@ class ParentDashboardScreen extends ConsumerWidget {
     );
   }
 }
+
