@@ -1,4 +1,4 @@
-// ====================================================
+﻿// ====================================================
 // services/revenue_cat_service.dart
 // RevenueCat Integration — Faseeh Kids Monetization
 // ====================================================
@@ -26,7 +26,7 @@ class RevenueCatService {
 
   // ─── API Keys (replace with real keys from RevenueCat Dashboard) ───
   static const String _googleApiKey = 'goog_MTENPXXWalTwcwQEYjHjYLYwXpg';
-  static const String _appleApiKey  = 'appl_YOUR_REVENUECAT_KEY_HERE';
+  static const String _appleApiKey  = 'appl_YOUR_REVENUECAT_KEY_HERE'; // iOS: add from RevenueCat when submitting to App Store
 
   // ─── Entitlement identifier (defined in RevenueCat dashboard) ───
   static const String premiumEntitlement = 'faseeh_premium';

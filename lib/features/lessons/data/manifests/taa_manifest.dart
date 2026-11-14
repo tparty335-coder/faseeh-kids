@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
 
 // ─── مانيفست حرف التاء (ت) — الـ Pilot على المحرك الموحّد ─────────────────
-// TODO: استبدل إحداثيات الـ hotspot والأصوات والصور بالقيم المستخرجة من SWF
 // المصدر المرجعي: d:\Projects\faseeh_kids\scratch\extracted_taa\
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -24,7 +23,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
 
   // ── الأهداف ──────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}taa_goal.mp3', // ✅ أصلي من الأسطوانة
+    audioPath: 'audio/lessons/taa/final/taa_letter.mp3', // ✅ أصلي من الأسطوانة
     objectives: [
       'أَتَعَرَّفُ عَلَى حَرْفِ التَّاءِ (ت)',
       'أَنْطِقُ حَرْفَ التَّاءِ بِالْحَرَكَاتِ الثَّلَاثِ',
@@ -41,27 +40,27 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_1.png',
+        imagePath: '${_dir}taa_cd_story_1.webp',
         audioPath: '${_audio}taa_story_1.mp3',
         captionText: 'تَامِرٌ يُحِبُّ الْحَقْلَ وَيَذْهَبُ إِلَيْهِ كُلَّ أُسْبُوعٍ مَعَ أَبِيهِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_2.png',
+        imagePath: '${_dir}taa_cd_story_2.webp',
         audioPath: '${_audio}taa_story_2.mp3',
         captionText: 'الْحَقْلُ فِيهِ أَشْجَارُ تُفَّاحٍ وَأَشْجَارُ تِينٍ.',
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_3.png',
+        imagePath: '${_dir}taa_cd_story_3.webp',
         audioPath: '${_audio}taa_story_3.mp3',
         captionText: 'يُسَاعِدُ تَامِرٌ وَالِدَهُ فِي جَمْعِ التِّينِ وَالتُّفَّاحِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_4.png',
+        imagePath: '${_dir}taa_cd_story_4.webp',
         audioPath: '${_audio}taa_story_4.mp3',
         captionText: 'وَيَعُودُ إِلَى الْبَيْتِ مَسْرُورًا.',
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_5.png',
+        imagePath: '${_dir}taa_cd_story_5.webp',
         audioPath: '${_audio}taa_story_5.mp3',
         captionText: 'تَامِرُ حَوْلَهُ عَنَاصِرُ كَثِيرَةٌ بِهَا حَرْفُ التَّاءِ.. ابْحَثْ عَنْهَا وَاضْغَطْ عَلَيْهَا',
         interaction: WordFindStoryInteraction(
@@ -110,12 +109,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
         ),
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_6.png',
+        imagePath: '${_dir}taa_cd_story_6.webp',
         audioPath: '${_audio}taa_story_6.mp3',
         captionText: 'تَاءٌ تَاجٌ فَوْقَ الرَّأْسِ .. فِيهِ الذَّهَبُ وَفِيهِ الْمَاسُ',
       ),
       StoryScene(
-        imagePath: '${_dir}taa_cd_story_nasheed.png',
+        imagePath: '${_dir}taa_cd_story_nasheed.webp',
         audioPath: '${_audio}taa_nasheed.mp3',
         captionText: 'تَاءٌ تَاجٌ فَوْقَ الرَّأْسِ .. يَزِينُ مَلِكًا قَوِيَّ الْبَأْسِ 🎵',
         isNasheed: true,
@@ -143,17 +142,17 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'تَا',
         audioPath: 'audio/lessons/taa/madd/taa_madd_alif.mp3',
-        imagePath: '${_dir}taa_madd_aa.png',
+        imagePath: '${_dir}taa_madd_aa.webp',
       ),
       MaddItem(
         displayChar: 'تِي',
         audioPath: 'audio/lessons/taa/madd/taa_madd_yaa.mp3',
-        imagePath: '${_dir}taa_madd_ii.png',
+        imagePath: '${_dir}taa_madd_ii.webp',
       ),
       MaddItem(
         displayChar: 'تُو',
         audioPath: 'audio/lessons/taa/madd/taa_madd_waw.mp3',
-        imagePath: '${_dir}taa_madd_uu.png',
+        imagePath: '${_dir}taa_madd_uu.webp',
       ),
     ],
   ),
@@ -163,11 +162,11 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
     letterChar: 'ت',
     audioIntroPath: '${_audio}taa_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}taa_write_step_1.png',
-      '${_dir}taa_write_step_2.png',
-      '${_dir}taa_write_step_3.png',
-      '${_dir}taa_write_step_4.png',
-      '${_dir}taa_write_step_5.png',
+      '${_dir}taa_write_step_1.webp',
+      '${_dir}taa_write_step_2.webp',
+      '${_dir}taa_write_step_3.webp',
+      '${_dir}taa_write_step_4.webp',
+      '${_dir}taa_write_step_5.webp',
     ],
   ),
 
@@ -176,12 +175,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
     pages: [
       // صفحة 1 (ka_t1.swf): تَامِر، تُوت، تِين، تَمْر
       WordsPage(
-        listImagePath: '${_dir}taa_words_p1_list.png',
+        listImagePath: '${_dir}taa_words_p1_list.webp',
         listImageHeight: 606,
         words: [
           WordItem(
             word: 'تَامِر',
-            cardImagePath: '${_dir}taa_words_p1_card_1.png',
+            cardImagePath: '${_dir}taa_words_p1_card_1.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p1_1.mp3',
             hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
@@ -190,7 +189,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تُوت',
-            cardImagePath: '${_dir}taa_words_p1_card_2.png',
+            cardImagePath: '${_dir}taa_words_p1_card_2.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p1_3.mp3',
             hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
@@ -199,7 +198,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تِين',
-            cardImagePath: '${_dir}taa_words_p1_card_3.png',
+            cardImagePath: '${_dir}taa_words_p1_card_3.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p1_2.mp3',
             hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
@@ -208,7 +207,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تَمْر',
-            cardImagePath: '${_dir}taa_words_p1_card_4.png',
+            cardImagePath: '${_dir}taa_words_p1_card_4.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p1_4.mp3',
             hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
@@ -219,12 +218,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       ),
       // صفحة 2 (ka_t2.swf): تَأْكُلُ، كَتْكُوت، بِنْتٌ، تِمْسَاح
       WordsPage(
-        listImagePath: '${_dir}taa_words_p2_list.png',
+        listImagePath: '${_dir}taa_words_p2_list.webp',
         listImageHeight: 606,
         words: [
           WordItem(
             word: 'تَأْكُلُ',
-            cardImagePath: '${_dir}taa_words_p2_card_1.png',
+            cardImagePath: '${_dir}taa_words_p2_card_1.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p2_1.mp3',
             hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
@@ -233,7 +232,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'كَتْكُوت',
-            cardImagePath: '${_dir}taa_words_p2_card_2.png',
+            cardImagePath: '${_dir}taa_words_p2_card_2.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p2_3.mp3',
             hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
@@ -242,7 +241,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'بِنْتٌ',
-            cardImagePath: '${_dir}taa_words_p2_card_3.png',
+            cardImagePath: '${_dir}taa_words_p2_card_3.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p2_2.mp3',
             hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
@@ -251,7 +250,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تِمْسَاح',
-            cardImagePath: '${_dir}taa_words_p2_card_4.png',
+            cardImagePath: '${_dir}taa_words_p2_card_4.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p2_4.mp3',
             hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
@@ -262,12 +261,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       ),
       // صفحة 3 (ka_t3.swf): يَكْتُبُ، تِلْمِيذَة، تِلْمِيذ، تَاج
       WordsPage(
-        listImagePath: '${_dir}taa_words_p3_list.png',
+        listImagePath: '${_dir}taa_words_p3_list.webp',
         listImageHeight: 606,
         words: [
           WordItem(
             word: 'يَكْتُبُ',
-            cardImagePath: '${_dir}taa_words_p3_card_1.png',
+            cardImagePath: '${_dir}taa_words_p3_card_1.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p3_1.mp3',
             hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
@@ -276,7 +275,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تِلْمِيذَة',
-            cardImagePath: '${_dir}taa_words_p3_card_2.png',
+            cardImagePath: '${_dir}taa_words_p3_card_2.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p3_2.mp3',
             hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
@@ -285,7 +284,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تِلْمِيذ',
-            cardImagePath: '${_dir}taa_words_p3_card_3.png',
+            cardImagePath: '${_dir}taa_words_p3_card_3.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p3_3.mp3',
             hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
@@ -294,7 +293,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تَاج',
-            cardImagePath: '${_dir}taa_words_p3_card_4.png',
+            cardImagePath: '${_dir}taa_words_p3_card_4.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p3_4.mp3',
             hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
@@ -305,12 +304,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       ),
       // صفحة 4 (ka_t4.swf): تُفَّاحَة، تَلْعَب، حُوت، مِفْتَاح
       WordsPage(
-        listImagePath: '${_dir}taa_words_p4_list.png',
+        listImagePath: '${_dir}taa_words_p4_list.webp',
         listImageHeight: 606,
         words: [
           WordItem(
             word: 'تُفَّاحَة',
-            cardImagePath: '${_dir}taa_words_p4_card_1.png',
+            cardImagePath: '${_dir}taa_words_p4_card_1.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p4_1.mp3',
             hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
@@ -319,7 +318,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تَلْعَب',
-            cardImagePath: '${_dir}taa_words_p4_card_2.png',
+            cardImagePath: '${_dir}taa_words_p4_card_2.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p4_2.mp3',
             hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
@@ -328,7 +327,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'حُوت',
-            cardImagePath: '${_dir}taa_words_p4_card_3.png',
+            cardImagePath: '${_dir}taa_words_p4_card_3.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p4_3.mp3',
             hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
@@ -337,7 +336,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'مِفْتَاح',
-            cardImagePath: '${_dir}taa_words_p4_card_4.png',
+            cardImagePath: '${_dir}taa_words_p4_card_4.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p4_4.mp3',
             hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
@@ -348,12 +347,12 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
       ),
       // صفحة 5 (ka_t5.swf): زَرَافَة، شَجَرَة، بَطَّة، كِتَاب
       WordsPage(
-        listImagePath: '${_dir}taa_words_p5_list.png',
+        listImagePath: '${_dir}taa_words_p5_list.webp',
         listImageHeight: 606,
         words: [
           WordItem(
             word: 'زَرَافَة',
-            cardImagePath: '${_dir}taa_words_p5_card_1.png',
+            cardImagePath: '${_dir}taa_words_p5_card_1.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p5_1.mp3',
             hotspot: WordHotspot(left: 500, top: 150, right: 805, bottom: 260),
@@ -362,7 +361,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'شَجَرَة',
-            cardImagePath: '${_dir}taa_words_p5_card_2.png',
+            cardImagePath: '${_dir}taa_words_p5_card_2.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p5_2.mp3',
             hotspot: WordHotspot(left: 140, top: 255, right: 445, bottom: 365),
@@ -371,7 +370,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'بَطَّة',
-            cardImagePath: '${_dir}taa_words_p5_card_3.png',
+            cardImagePath: '${_dir}taa_words_p5_card_3.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p5_3.mp3',
             hotspot: WordHotspot(left: 500, top: 360, right: 805, bottom: 470),
@@ -380,7 +379,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'كِتَاب',
-            cardImagePath: '${_dir}taa_words_p5_card_4.png',
+            cardImagePath: '${_dir}taa_words_p5_card_4.webp',
             cardHeight: 606,
             audioPath: '${_audio}taa_word_p5_4.mp3',
             hotspot: WordHotspot(left: 140, top: 470, right: 445, bottom: 580),
@@ -393,71 +392,70 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
   ),
 
   // ── الألعاب ───────────────────────────────────────────────────────────────
-  // TODO: استبدل جميع مسارات الصور والأصوات بالأصول المستخرجة من SWF
   games: GamesSpec(
     // لعبة صيد الكلمات
     fishing: [
-      FishingRound(word: 'تَمْر', imagePath: '${_gamesDir}fishing/taa_fishing_round_1.png', audioPath: '${_gamesAudio}fishing/taa_tamr.mp3', isCorrect: true),
-      FishingRound(word: 'حُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_2.png', audioPath: '${_gamesAudio}fishing/taa_hoot.mp3', isCorrect: true),
-      FishingRound(word: 'كَتْكُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_3.png', audioPath: '${_gamesAudio}fishing/taa_katkoot.mp3', isCorrect: true),
-      FishingRound(word: 'تُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_4.png', audioPath: '${_gamesAudio}fishing/taa_toot.mp3', isCorrect: true),
+      FishingRound(word: 'تَمْر', imagePath: '${_gamesDir}fishing/taa_fishing_round_1.webp', audioPath: '${_gamesAudio}fishing/taa_tamr.mp3', isCorrect: true),
+      FishingRound(word: 'حُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_2.webp', audioPath: '${_gamesAudio}fishing/taa_hoot.mp3', isCorrect: true),
+      FishingRound(word: 'كَتْكُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_3.webp', audioPath: '${_gamesAudio}fishing/taa_katkoot.mp3', isCorrect: true),
+      FishingRound(word: 'تُوت', imagePath: '${_gamesDir}fishing/taa_fishing_round_4.webp', audioPath: '${_gamesAudio}fishing/taa_toot.mp3', isCorrect: true),
     ],
     // لعبة خلية النحل
     beehive: [
-      BeehiveRound(word: 'تَاج', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_1.png', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_1.mp3'),
-      BeehiveRound(word: 'تِين', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_2.png', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_2.mp3'),
-      BeehiveRound(word: 'تَمْر', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_3.png', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_3.mp3'),
-      BeehiveRound(word: 'تُرْبَة', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_4.png', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_4.mp3'),
+      BeehiveRound(word: 'تَاج', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_1.mp3'),
+      BeehiveRound(word: 'تِين', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_2.mp3'),
+      BeehiveRound(word: 'تَمْر', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_3.mp3'),
+      BeehiveRound(word: 'تُرْبَة', imagePath: '${_gamesDir}beehive/taa/taa_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/taa/taa_beehive_4.mp3'),
     ],
     // لعبة السيرك
     circus: [
-      CircusRound(word: 'تُفَّاحَة', imagePath: '${_gamesDir}circus/taa/taa_circus_round_1.png', audioPath: '${_gamesAudio}circus/taa/taa_circus_1.mp3'),
-      CircusRound(word: 'تِمْسَاح', imagePath: '${_gamesDir}circus/taa/taa_circus_round_2.png', audioPath: '${_gamesAudio}circus/taa/taa_circus_2.mp3'),
-      CircusRound(word: 'تَاج', imagePath: '${_gamesDir}circus/taa/taa_circus_round_3.png', audioPath: '${_gamesAudio}circus/taa/taa_circus_3.mp3'),
+      CircusRound(word: 'تُفَّاحَة', imagePath: '${_gamesDir}circus/taa/taa_circus_round_1.webp', audioPath: '${_gamesAudio}circus/taa/taa_circus_1.mp3'),
+      CircusRound(word: 'تِمْسَاح', imagePath: '${_gamesDir}circus/taa/taa_circus_round_2.webp', audioPath: '${_gamesAudio}circus/taa/taa_circus_2.mp3'),
+      CircusRound(word: 'تَاج', imagePath: '${_gamesDir}circus/taa/taa_circus_round_3.webp', audioPath: '${_gamesAudio}circus/taa/taa_circus_3.mp3'),
     ],
     // لعبة مطابقة الكلمات
     wordsMatch: [
-      WordsMatchPair(word: 'تُفَّاحَة', imagePath: '${_gamesDir}match/taa/taa_match_1.png', audioPath: '${_gamesAudio}match/taa/taa_match_1.mp3'),
-      WordsMatchPair(word: 'تِمْسَاح', imagePath: '${_gamesDir}match/taa/taa_match_2.png', audioPath: '${_gamesAudio}match/taa/taa_match_2.mp3'),
-      WordsMatchPair(word: 'تَاج', imagePath: '${_gamesDir}match/taa/taa_match_3.png', audioPath: '${_gamesAudio}match/taa/taa_match_3.mp3'),
-      WordsMatchPair(word: 'تِين', imagePath: '${_gamesDir}match/taa/taa_match_4.png', audioPath: '${_gamesAudio}match/taa/taa_match_4.mp3'),
+      WordsMatchPair(word: 'تُفَّاحَة', imagePath: '${_gamesDir}match/taa/taa_match_1.webp', audioPath: '${_gamesAudio}match/taa/taa_match_1.mp3'),
+      WordsMatchPair(word: 'تِمْسَاح', imagePath: '${_gamesDir}match/taa/taa_match_2.webp', audioPath: '${_gamesAudio}match/taa/taa_match_2.mp3'),
+      WordsMatchPair(word: 'تَاج', imagePath: '${_gamesDir}match/taa/taa_match_3.webp', audioPath: '${_gamesAudio}match/taa/taa_match_3.mp3'),
+      WordsMatchPair(word: 'تِين', imagePath: '${_gamesDir}match/taa/taa_match_4.webp', audioPath: '${_gamesAudio}match/taa/taa_match_4.mp3'),
     ],
     // لعبة التلوين
     coloring: [
       ColoringRound(
         word: 'تُفَّاحَة',
-        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_1.webp',
         introAudioPath: '${_gamesAudio}coloring/taa/taa_intro_tuffaha.mp3',
         revealAudioPath: '${_gamesAudio}coloring/taa/taa_reveal_tuffaha.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_1.png', color: Color(0xFFE53935)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_2.png', color: Color(0xFF43A047)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_3.png', color: Color(0xFF795548)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_1.webp', color: Color(0xFFE53935)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_2.webp', color: Color(0xFF43A047)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_1_slice_3.webp', color: Color(0xFF795548)),
         ],
       ),
       ColoringRound(
         word: 'تِمْسَاح',
-        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_2.webp',
         introAudioPath: '${_gamesAudio}coloring/taa/taa_intro_timsah.mp3',
         revealAudioPath: '${_gamesAudio}coloring/taa/taa_reveal_timsah.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_1.png', color: Color(0xFF43A047)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_2.png', color: Color(0xFF8BC34A)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_3.png', color: Color(0xFFFFF176)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_1.webp', color: Color(0xFF43A047)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_2.webp', color: Color(0xFF8BC34A)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_2_slice_3.webp', color: Color(0xFFFFF176)),
         ],
       ),
       ColoringRound(
         word: 'تَاج',
-        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_3.png',
+        bgImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/taa/taa_coloring_word_3.webp',
         introAudioPath: '${_gamesAudio}coloring/taa/taa_intro_taaj.mp3',
         revealAudioPath: '${_gamesAudio}coloring/taa/taa_reveal_taaj.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_1.png', color: Color(0xFFFDD835)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_2.png', color: Color(0xFFE53935)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_3.png', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_1.webp', color: Color(0xFFFDD835)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_2.webp', color: Color(0xFFE53935)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/taa/taa_coloring_round_3_slice_3.webp', color: Color(0xFF1E88E5)),
         ],
       ),
     ],
