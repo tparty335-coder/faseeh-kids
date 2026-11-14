@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/constants.dart';
+import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 import '../logic/parent_provider.dart';
 import '../widgets/settings_toggle.dart';
 
@@ -10,6 +13,109 @@ import 'package:faseeh_kids/core/router/app_router.dart';
 
 class ParentDashboardScreen extends ConsumerWidget {
   const ParentDashboardScreen({super.key});
+
+  Future<void> _confirmDeleteAccount(BuildContext context, WidgetRef ref) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+          title: const Text(
+            'حذف الحساب وبيانات الطفل',
+            style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+          ),
+          content: const Text(
+            'هل أنت متأكد من حذف ملف الطفل وجميع بيانات التقدم والنجوم نهائياً من هذا الجهاز؟ لا يمكن التراجع عن هذا الإجراء.',
+            style: TextStyle(fontFamily: 'Cairo'),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(false),
+              child: const Text('إلغاء', style: TextStyle(fontFamily: 'Cairo')),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () => Navigator.of(ctx).pop(true),
+              child: const Text('نعم، احذف جميع البيانات', style: TextStyle(fontFamily: 'Cairo')),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (confirmed != true) return;
+
+    try {
+      for (final boxName in [
+        AppConstants.childProfileBox,
+        AppConstants.lessonProgressBox,
+        AppConstants.activityResultBox,
+        AppConstants.masteryRecordBox,
+        AppConstants.streakDataBox,
+        AppConstants.storyProgressBox,
+        AppConstants.parentSettingsBox,
+      ]) {
+        if (Hive.isBoxOpen(boxName)) {
+          await Hive.box(boxName).clear();
+        }
+      }
+    } catch (_) {}
+
+    ref.read(parentSettingsProvider.notifier).updateSettings(const ParentSettings());
+    ref.read(unlockedUnitsProvider.notifier).reset();
+
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('تم حذف جميع بيانات الحساب بنجاح.', style: TextStyle(fontFamily: 'Cairo')),
+        ),
+      );
+      context.go(AppRouter.onboarding);
+    }
+  }
+
+  void _showLegalDialog(BuildContext context, {required bool isPrivacy}) {
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+          title: Text(
+            isPrivacy ? 'سياسة الخصوصية وحماية الطفل (COPPA)' : 'شروط وأحكام الاستخدام',
+            style: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 18),
+          ),
+          content: SingleChildScrollView(
+            child: Text(
+              isPrivacy
+                  ? 'يلتزم تطبيق «فصيح الصغار» التزاماً كاملاً بقانون حماية خصوصية الأطفال على الإنترنت (COPPA) وسياسات عائلات Google Play وApple Kids Category:\n\n'
+                    '١. لا يجمع التطبيق أي بيانات تعريف شخصية حساسة عن الطفل، ويُحفظ اسم الطفل الرمزي وتقدمه التعليمي محلياً على الجهاز.\n'
+                    '٢. لا يحتوي التطبيق على أي إعلانات طرف ثالث أو روابط خارجية مفتوحة للطفل.\n'
+                    '٣. جميع عمليات الشراء وإدارة الحساب محمية خلف «بوابة الآباء» (Parent Gate).\n'
+                    '٤. يحق لولي الأمر حذف جميع البيانات المخزنة في أي وقت عبر زر «حذف الحساب» في لوحة تحكم الآباء.\n'
+                    '٥. للاطلاع على النسخة الكاملة: https://tparty335-coder.github.io/faseeh-kids-privacy/\n'\n                    '📧 lingobanana0@gmail.com'
+                  : 'شروط استخدام تطبيق «فصيح الصغار»:\n\n'
+                    '١. المحتوى التعليمي مخصص للأطفال من سن ٣ إلى ١٠ سنوات لتعلم القراءة والكتابة العربية السليمة.\n'
+                    '٢. أول ٥ وحدات تعليمية (أ، ب، ت، ث، ج) متاحة مجاناً بالكامل، ويمكن لولي الأمر الاشتراك لفتح كامل الحروف الـ ٢٨ أو تفعيل وضع المراجعة الحرة.\n'
+                    '٣. تُدار الاشتراكات واستعادة المشتريات حصرياً بواسطة ولي الأمر عبر حساب المتجر الرسمي.\n'
+                    '٤. النسخة الكاملة متوفرة في ملف web/terms_of_service.html.',
+              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, height: 1.5),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('إغلاق', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -59,10 +165,15 @@ class ParentDashboardScreen extends ConsumerWidget {
                           child: DropdownButton<String>(
                             value: profiles.first.id,
                             isExpanded: true,
-                            items: profiles.map((p) => DropdownMenuItem(
-                              value: p.id,
-                              child: Text(p.name, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                            )).toList(),
+                            items: profiles
+                                .map((p) => DropdownMenuItem(
+                                      value: p.id,
+                                      child: Text(
+                                        p.name,
+                                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                      ),
+                                    ))
+                                .toList(),
                             onChanged: (val) {},
                           ),
                         ),
@@ -72,7 +183,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              
+
               // Progress Report Card
               GestureDetector(
                 onTap: () => context.push('/progress-report'),
@@ -115,9 +226,21 @@ class ParentDashboardScreen extends ConsumerWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            _buildStatItem('الوقت', '${ref.watch(progressStatsProvider).lettersMastered * 5} دقيقة', Icons.timer),
-                            _buildStatItem('الدقة', '${(ref.watch(progressStatsProvider).completionPercentage * 100).toInt()}%', Icons.check_circle),
-                            _buildStatItem('الاستمرارية', '${ref.watch(streakProvider)} أيام', Icons.local_fire_department),
+                            _buildStatItem(
+                              'الوقت',
+                              '${ref.watch(progressStatsProvider).lettersMastered * 5} دقيقة',
+                              Icons.timer,
+                            ),
+                            _buildStatItem(
+                              'الدقة',
+                              '${(ref.watch(progressStatsProvider).completionPercentage * 100).toInt()}%',
+                              Icons.check_circle,
+                            ),
+                            _buildStatItem(
+                              'الاستمرارية',
+                              '${ref.watch(streakProvider)} أيام',
+                              Icons.local_fire_department,
+                            ),
                           ],
                         ),
                       ],
@@ -125,7 +248,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                   ),
                 ),
               ),
-              
+
               const SizedBox(height: 24),
               const Text(
                 'إعدادات التطبيق',
@@ -152,8 +275,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                         label: '${settings.dailyTimeLimit} دقيقة',
                         onChanged: (val) {
                           ref.read(parentSettingsProvider.notifier).updateSettings(
-                            settings.copyWith(dailyTimeLimit: val.toInt()),
-                          );
+                                settings.copyWith(dailyTimeLimit: val.toInt()),
+                              );
                         },
                       ),
                       const Divider(),
@@ -162,8 +285,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                         description: 'تشغيل أصوات التطبيق والتفاعلات',
                         value: settings.soundEnabled,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
-                          settings.copyWith(soundEnabled: val),
-                        ),
+                              settings.copyWith(soundEnabled: val),
+                            ),
                       ),
                       const Divider(),
                       SettingsToggle(
@@ -171,8 +294,8 @@ class ParentDashboardScreen extends ConsumerWidget {
                         description: 'تشغيل الموسيقى الهادئة أثناء التعلم',
                         value: settings.musicEnabled,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
-                          settings.copyWith(musicEnabled: val),
-                        ),
+                              settings.copyWith(musicEnabled: val),
+                            ),
                       ),
                       const Divider(),
                       SettingsToggle(
@@ -180,17 +303,26 @@ class ParentDashboardScreen extends ConsumerWidget {
                         description: 'تغيير ألوان التطبيق لتكون مريحة للعين',
                         value: settings.nightMode,
                         onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
-                          settings.copyWith(nightMode: val),
-                        ),
+                              settings.copyWith(nightMode: val),
+                            ),
+                      ),
+                      const Divider(),
+                      SettingsToggle(
+                        label: 'فتح جميع الحروف للمراجعة الحرة',
+                        description: 'السماح للطفل أو المعلم بتصفح جميع الحروف الـ ٢٨ دون تقيد بالتسلسل',
+                        value: settings.unlockAllLettersForReview,
+                        onChanged: (val) => ref.read(parentSettingsProvider.notifier).updateSettings(
+                              settings.copyWith(unlockAllLettersForReview: val),
+                            ),
                       ),
                     ],
                   ),
                 ),
               ),
-              
+
               const SizedBox(height: 24),
               const Text(
-                'إدارة الحسابات',
+                'إدارة الحسابات والخصوصية',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),
@@ -202,7 +334,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                   minimumSize: const Size(double.infinity, 50),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 12),
               OutlinedButton.icon(
                 onPressed: () => context.push(AppRouter.ageSelection),
                 icon: const Icon(Icons.edit),
@@ -211,11 +343,38 @@ class ParentDashboardScreen extends ConsumerWidget {
                   minimumSize: const Size(double.infinity, 50),
                 ),
               ),
+              const SizedBox(height: 12),
+              OutlinedButton.icon(
+                onPressed: () => context.push(AppRouter.placementTest),
+                icon: const Icon(Icons.quiz_outlined),
+                label: const Text('إعادة اختبار تحديد المستوى'),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () => _showLegalDialog(context, isPrivacy: true),
+                      icon: const Icon(Icons.privacy_tip_outlined, size: 18),
+                      label: const Text('سياسة الخصوصية'),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () => _showLegalDialog(context, isPrivacy: false),
+                      icon: const Icon(Icons.description_outlined, size: 18),
+                      label: const Text('شروط الاستخدام'),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 16),
               TextButton.icon(
-                onPressed: () {
-                  // Show delete confirmation
-                },
+                onPressed: () => _confirmDeleteAccount(context, ref),
                 icon: const Icon(Icons.delete, color: Colors.red),
                 label: const Text('حذف الحساب', style: TextStyle(color: Colors.red)),
                 style: TextButton.styleFrom(
