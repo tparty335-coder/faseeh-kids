@@ -606,21 +606,21 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/dal_manifest.dart": {
-    "mtime": 1794733587.7626665,
-    "seen": 1794758088.153653,
-    "ast_hash": "e9498e795d7a5d2a0397ecc05d8fff3f",
+    "mtime": 1794901568.1404867,
+    "seen": 1794902262.1855981,
+    "ast_hash": "d6c9c10fa8f0be116c60d219f6d2546b",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/dhaal_manifest.dart": {
-    "mtime": 1794733550.3295274,
-    "seen": 1794758088.1536608,
-    "ast_hash": "bd8c3350930964b73ef23ef2dbd7eb03",
+    "mtime": 1794901575.8698244,
+    "seen": 1794902262.1870413,
+    "ast_hash": "2f5b9e6c56514f00548d30fc808ca51b",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/ha_manifest.dart": {
-    "mtime": 1794733561.7817123,
-    "seen": 1794758088.1536736,
-    "ast_hash": "ab72620ef83409dea56c08848bd262ad",
+    "mtime": 1794901585.2313952,
+    "seen": 1794902262.1877267,
+    "ast_hash": "11b376187585d351aa0b49634d5e361b",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/jeem_manifest.dart": {
@@ -630,21 +630,21 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/kha_manifest.dart": {
-    "mtime": 1794733563.0751133,
-    "seen": 1794758088.15369,
-    "ast_hash": "4b75cc0420dee2c969b4f1abb66d9c62",
+    "mtime": 1794901594.7317624,
+    "seen": 1794902262.194747,
+    "ast_hash": "44ebb17b1c81e7e4b78ba02cbd6c9088",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/raa_manifest.dart": {
-    "mtime": 1794733546.6587164,
-    "seen": 1794758088.153713,
-    "ast_hash": "066eeb3e8bef371ea71494165ac01d31",
+    "mtime": 1794901602.7203836,
+    "seen": 1794902262.198831,
+    "ast_hash": "36b542662c50b7b13ac267be0c96b622",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/seen_manifest.dart": {
-    "mtime": 1794733527.3053184,
-    "seen": 1794758088.15372,
-    "ast_hash": "a5b6bd6a88fe2ffb231a8f7ac4cc221f",
+    "mtime": 1794901614.4933503,
+    "seen": 1794902262.1991496,
+    "ast_hash": "ac7bd7c2dc34ccc08acc4b17277aea71",
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/taa_manifest.dart": {
@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "lib/features/lessons/data/manifests/zaay_manifest.dart": {
-    "mtime": 1794733529.0478294,
-    "seen": 1794758088.1543384,
-    "ast_hash": "e532d3e3c6dca4b58888c6f3d1d1441c",
+    "mtime": 1794901629.1558416,
+    "seen": 1794902262.2104404,
+    "ast_hash": "9b8f146c9d07f1b4162ace0e6d6dced9",
     "semantic_hash": ""
   },
   "lib/features/lessons/logic/lesson_provider.dart": {
@@ -36474,33 +36474,33 @@
     "semantic_hash": ""
   },
   "play_store_assets/screenshots/screenshot_01_home.png": {
-    "mtime": 1794757429.2348845,
-    "seen": 1794758090.6079073,
-    "ast_hash": "d4e4f0f71825c011e2b3245cc4f0a03e",
+    "mtime": 1794897459.6004114,
+    "seen": 1794902263.8421185,
+    "ast_hash": "c72be02a287926ba5861089e7baa55cd",
     "semantic_hash": ""
   },
   "play_store_assets/screenshots/screenshot_02_letters_map.png": {
-    "mtime": 1794757432.6714761,
-    "seen": 1794758090.607911,
-    "ast_hash": "5cc1cb3e2d16e6cef97eebdad045df20",
+    "mtime": 1794897459.9642296,
+    "seen": 1794902263.842124,
+    "ast_hash": "6427d1d9ea0cf189f8d9e72b75b8eb15",
     "semantic_hash": ""
   },
   "play_store_assets/screenshots/screenshot_03_letter_lesson.png": {
-    "mtime": 1794757435.3868535,
-    "seen": 1794758090.607915,
-    "ast_hash": "4469966281dcf2300f5da0125e4300bf",
+    "mtime": 1794897460.3389695,
+    "seen": 1794902263.842128,
+    "ast_hash": "e61d768f30fce291795e4fad29a135c3",
     "semantic_hash": ""
   },
   "play_store_assets/screenshots/screenshot_04_coloring.png": {
-    "mtime": 1794757438.0946243,
-    "seen": 1794758090.60792,
-    "ast_hash": "8f2b513c5085cadee18c8541ce804804",
+    "mtime": 1794897531.0622504,
+    "seen": 1794902263.8421326,
+    "ast_hash": "59cb6ee594af034a6eceb5c7cde025a7",
     "semantic_hash": ""
   },
   "play_store_assets/screenshots/screenshot_05_parent_dashboard.png": {
-    "mtime": 1794757441.9331827,
-    "seen": 1794758090.6079242,
-    "ast_hash": "259deb2f5161ee415739dac454b433d1",
+    "mtime": 1794897531.4102588,
+    "seen": 1794902263.8421369,
+    "ast_hash": "75ce4c5cfc8ece1a43a5cda931c8900d",
     "semantic_hash": ""
   },
   "assets/audio/common/encourage_1.mp3": {
@@ -37257,12 +37257,6 @@
     "mtime": 1794854089.3132944,
     "seen": 1794854143.3383126,
     "ast_hash": "169e03eda52cfe377eb4383439b907d1",
-    "semantic_hash": ""
-  },
-  "screen_burn_test.png": {
-    "mtime": 1794854479.4684813,
-    "seen": 1794858534.4349945,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "assets/audio/lessons/jeem/sounds/word_jisr_extracted.mp3": {
