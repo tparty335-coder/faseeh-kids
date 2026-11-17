@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: تَمْر (يسار) ✅، بُرْج (وسط) ❌، بَلَح (يمين) ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/taa_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/taa_fishing_round_1.webp',
     correctWord: 'تَمْر',
     wordAudio: 'audio/games/fishing/taa_tamr.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: أَسَد (يسار) ❌، ثُعْبَان (وسط) ❌، حُوت (يمين) ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/taa_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/taa_fishing_round_2.webp',
     correctWord: 'حُوت',
     wordAudio: 'audio/games/fishing/taa_hoot.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: ذَيْل (يسار) ❌، كَتْكُوت (وسط) ✅، فِيل (يمين) ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/taa_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/taa_fishing_round_3.webp',
     correctWord: 'كَتْكُوت',
     wordAudio: 'audio/games/fishing/taa_katkoot.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: جَمَل (يسار) ❌، أَكَل (وسط) ❌، تُوت (يمين) ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/taa_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/taa_fishing_round_4.webp',
     correctWord: 'تُوت',
     wordAudio: 'audio/games/fishing/taa_toot.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',

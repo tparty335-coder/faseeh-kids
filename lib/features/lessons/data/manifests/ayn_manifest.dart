@@ -21,7 +21,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
   nextLetter: 'غ',
 
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}ayn_goal.mp3',
+    audioPath: 'audio/letters/core/ain_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الْعَيْنِ (ع)',
       'أَنْطِقُ حَرْفَ الْعَيْنِ بِالْحَرَكَاتِ الْقَصِيرَةِ وَالسُّكُونِ',
@@ -36,12 +36,12 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}ayn_cd_story_1.png',
+        imagePath: '${_dir}ayn_cd_story_1.webp',
         audioPath: '${_audio}ayn_story_1.mp3',
         captionText: 'الْجَدُّ يَحْكِي لِلْأَحْفَادِ قِصَّةَ حَرْفِ الْعَيْنِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}ayn_cd_story_nasheed.png',
+        imagePath: '${_dir}ayn_cd_story_nasheed.webp',
         audioPath: '${_audio}ayn_nasheed.mp3',
         isNasheed: true,
         captionText: 'عَيْنٌ عَلَمٌ لَوَّنَّاهُ .. فَوْقَ الشَّمْسِ وَرَفَعْنَاهُ 🎵',
@@ -68,7 +68,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}ain_fatha.mp3',
         fullRuleAudio: '${_soundsAudio}ayn_fatha_rule.mp3',
         wordAudio: '${_audio}ayn_word_p2_2.mp3',
-        slideImagePath: '${_dir}ayn_vowel_fatha.png',
+        slideImagePath: '${_dir}ayn_vowel_fatha.webp',
       ),
       VowelCardSpec(
         vowelName: 'الضَّمَّةُ',
@@ -78,7 +78,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}ain_damma.mp3',
         fullRuleAudio: '${_soundsAudio}ayn_damma_rule.mp3',
         wordAudio: '${_audio}ayn_word_p2_1.mp3',
-        slideImagePath: '${_dir}ayn_vowel_damma.png',
+        slideImagePath: '${_dir}ayn_vowel_damma.webp',
       ),
       VowelCardSpec(
         vowelName: 'الْكَسْرَةُ',
@@ -88,7 +88,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}ain_kasra.mp3',
         fullRuleAudio: '${_soundsAudio}ayn_kasra_rule.mp3',
         wordAudio: '${_audio}ayn_word_p2_3.mp3',
-        slideImagePath: '${_dir}ayn_vowel_kasra.png',
+        slideImagePath: '${_dir}ayn_vowel_kasra.webp',
       ),
       VowelCardSpec(
         vowelName: 'السُّكُونُ',
@@ -98,7 +98,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}ain_sukoon.mp3',
         fullRuleAudio: '${_soundsAudio}ayn_sukoon_rule.mp3',
         wordAudio: '${_audio}ayn_word_p1_2.mp3',
-        slideImagePath: '${_dir}ayn_vowel_sukoon.png',
+        slideImagePath: '${_dir}ayn_vowel_sukoon.webp',
       ),
     ],
   ),
@@ -110,7 +110,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'عَا',
         audioPath: '${_maddAudio}ain_alif.mp3',
-        imagePath: '${_dir}ayn_madd_aa.png',
+        imagePath: '${_dir}ayn_madd_aa.webp',
         exampleWord: 'عَادِل',
         explanation: 'عَيْنٌ مَفْتُوحَةٌ مَعَ مَدٍّ بِالْأَلِفِ: عَا',
         wordAudioPath: '${_audio}ayn_word_p2_4.mp3',
@@ -119,19 +119,19 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'عُو',
         audioPath: '${_maddAudio}ain_waw.mp3',
-        imagePath: '${_dir}ayn_madd_uu.png',
+        imagePath: '${_dir}ayn_madd_uu.webp',
         exampleWord: 'مَسْعُود',
         explanation: 'عَيْنٌ مَضْمُومَةٌ مَعَ مَدٍّ بِالْوَاوِ: عُو',
-        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_2.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_2.mp3',
         accentColor: Color(0xFF1565C0),
       ),
       MaddItem(
         displayChar: 'عِي',
         audioPath: '${_maddAudio}ain_yaa.mp3',
-        imagePath: '${_dir}ayn_madd_ii.png',
+        imagePath: '${_dir}ayn_madd_ii.webp',
         exampleWord: 'سَعِيد',
         explanation: 'عَيْنٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: عِي',
-        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_3.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_3.mp3',
         accentColor: Color(0xFF2E7D32),
       ),
     ],
@@ -141,10 +141,10 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     letterChar: 'ع',
     audioIntroPath: '${_audio}ayn_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}ayn_write_step_1.png',
-      '${_dir}ayn_write_step_2.png',
-      '${_dir}ayn_write_step_3.png',
-      '${_dir}ayn_write_step_4.png',
+      '${_dir}ayn_write_step_1.webp',
+      '${_dir}ayn_write_step_2.webp',
+      '${_dir}ayn_write_step_3.webp',
+      '${_dir}ayn_write_step_4.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -154,7 +154,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         exampleWord: 'ذِرَاع',
         exampleEmoji: '💪',
         audioPath: '${_audio}ayn_trace_isolated.mp3',
-        imagePath: '${_dir}ayn_trace_isolated.png',
+        imagePath: '${_dir}ayn_trace_isolated.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -163,7 +163,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         exampleWord: 'عُصْفُور',
         exampleEmoji: '🐦',
         audioPath: '${_coreAudio}ain_pos_start.mp3',
-        imagePath: '${_dir}ayn_trace_start.png',
+        imagePath: '${_dir}ayn_trace_start.webp',
       ),
       TracingPositionSpec(
         position: 'middle',
@@ -172,7 +172,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         exampleWord: 'مَسْعُود',
         exampleEmoji: '👦',
         audioPath: '${_coreAudio}ain_pos_middle.mp3',
-        imagePath: '${_dir}ayn_trace_middle.png',
+        imagePath: '${_dir}ayn_trace_middle.webp',
       ),
       TracingPositionSpec(
         position: 'end',
@@ -181,7 +181,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
         exampleWord: 'ضِلْع',
         exampleEmoji: '🦴',
         audioPath: '${_coreAudio}ain_pos_end.mp3',
-        imagePath: '${_dir}ayn_trace_end.png',
+        imagePath: '${_dir}ayn_trace_end.webp',
       ),
     ],
   ),
@@ -189,43 +189,43 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
   words: WordsSpec(
     pages: [
       WordsPage(
-        listImagePath: '${_dir}ayn_words_p1_list.png',
+        listImagePath: '${_dir}ayn_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}ayn_words_p1_card_1.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ثُعْبَان', cardImagePath: '${_dir}ayn_words_p1_card_2.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ضِلْع', cardImagePath: '${_dir}ayn_words_p1_card_3.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ذِرَاع', cardImagePath: '${_dir}ayn_words_p1_card_4.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}ayn_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ثُعْبَان', cardImagePath: '${_dir}ayn_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ضِلْع', cardImagePath: '${_dir}ayn_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ذِرَاع', cardImagePath: '${_dir}ayn_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}ayn_words_p2_list.png',
+        listImagePath: '${_dir}ayn_words_p2_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'عُصْفُور', cardImagePath: '${_dir}ayn_words_p2_card_1.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مَزْرَعَة', cardImagePath: '${_dir}ayn_words_p2_card_2.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عِنَب', cardImagePath: '${_dir}ayn_words_p2_card_3.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عَادِل', cardImagePath: '${_dir}ayn_words_p2_card_4.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عُصْفُور', cardImagePath: '${_dir}ayn_words_p2_card_1.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مَزْرَعَة', cardImagePath: '${_dir}ayn_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عِنَب', cardImagePath: '${_dir}ayn_words_p2_card_3.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عَادِل', cardImagePath: '${_dir}ayn_words_p2_card_4.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}ayn_words_p3_list.png',
+        listImagePath: '${_dir}ayn_words_p3_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'عُشْب', cardImagePath: '${_dir}ayn_words_p3_card_1.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُذِيع', cardImagePath: '${_dir}ayn_words_p3_card_2.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ضِفْدَع', cardImagePath: '${_dir}ayn_words_p3_card_3.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'شِرَاع', cardImagePath: '${_dir}ayn_words_p3_card_4.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عُشْب', cardImagePath: '${_dir}ayn_words_p3_card_1.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُذِيع', cardImagePath: '${_dir}ayn_words_p3_card_2.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ضِفْدَع', cardImagePath: '${_dir}ayn_words_p3_card_3.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'شِرَاع', cardImagePath: '${_dir}ayn_words_p3_card_4.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}ayn_words_p4_list.png',
+        listImagePath: '${_dir}ayn_words_p4_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'سَاعَة', cardImagePath: '${_dir}ayn_words_p4_card_1.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عُطُور', cardImagePath: '${_dir}ayn_words_p4_card_2.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'شُعْلَة', cardImagePath: '${_dir}ayn_words_p4_card_3.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'شَمْعَة', cardImagePath: '${_dir}ayn_words_p4_card_4.png', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'سَاعَة', cardImagePath: '${_dir}ayn_words_p4_card_1.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عُطُور', cardImagePath: '${_dir}ayn_words_p4_card_2.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'شُعْلَة', cardImagePath: '${_dir}ayn_words_p4_card_3.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'شَمْعَة', cardImagePath: '${_dir}ayn_words_p4_card_4.webp', cardHeight: 474, audioPath: '${_audio}ayn_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
     ],
@@ -249,11 +249,11 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     fishing: [
       FishingRound(
         word: 'مَزْرَعَة',
-        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_1.png',
+        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/ayn/ayn_fishing_1.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba62.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
         zones: [
           GameZoneChoice(label: 'مَزْرَعَة', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'حَدِيقَة', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -262,11 +262,11 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'عِنَب',
-        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_2.png',
+        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/ayn/ayn_fishing_2.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba58.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
         zones: [
           GameZoneChoice(label: 'بُرْتُقَال', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'مَوْز', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -275,11 +275,11 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'ثُعْبَان',
-        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_3.png',
+        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/ayn/ayn_fishing_3.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba56.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
         zones: [
           GameZoneChoice(label: 'قِطَّة', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'ثُعْبَان', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -288,11 +288,11 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'عَادِل',
-        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_4.png',
+        imagePath: '${_gamesDir}fishing/ayn/ayn_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/ayn/ayn_fishing_4.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba52.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
         zones: [
           GameZoneChoice(label: 'ضِيَاء', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'سَيِّد', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -303,7 +303,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(
         word: 'مَزْرَعَة',
-        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_1.png',
+        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/ayn/ayn_beehive_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -315,7 +315,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'عُصْفُور',
-        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_2.png',
+        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/ayn/ayn_beehive_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cells: [
@@ -327,7 +327,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'عِنَب',
-        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_3.png',
+        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/ayn/ayn_beehive_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -339,7 +339,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'ثُعْبَان',
-        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_4.png',
+        imagePath: '${_gamesDir}beehive/ayn/ayn_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/ayn/ayn_beehive_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -353,9 +353,9 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     circus: [
       CircusRound(
         word: 'عُصْفُور',
-        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_1.png',
+        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/ayn/ayn_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}circus/7_ba62.mp3',
+        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         zones: [
           GameZoneChoice(label: 'صُنْدُوق', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'هَاتِف', isCorrect: false, px: 269, py: 232),
@@ -364,9 +364,9 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'ثُعْبَان',
-        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_2.png',
+        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/ayn/ayn_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba59.mp3',
+        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         zones: [
           GameZoneChoice(label: 'جَمَل', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'ثُعْبَان', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/ayn/ayn_circus_2.mp3'),
@@ -375,9 +375,9 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'عِنَب',
-        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_3.png',
+        imagePath: '${_gamesDir}circus/ayn/ayn_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/ayn/ayn_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba53.mp3',
+        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         zones: [
           GameZoneChoice(label: 'عِنَب', isCorrect: true, px: 137, py: 95, wordAudio: '${_gamesAudio}circus/ayn/ayn_circus_3.mp3'),
           GameZoneChoice(label: 'قِطَّة', isCorrect: false, px: 269, py: 232),
@@ -388,7 +388,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     wordsMatch: [
       WordsMatchPair(
         word: 'عُصْفُور',
-        imagePath: '${_gamesDir}match/ayn/ayn_match_1.png',
+        imagePath: '${_gamesDir}match/ayn/ayn_match_1.webp',
         audioPath: '${_gamesAudio}match/ayn/ayn_match_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -399,7 +399,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'عِنَب',
-        imagePath: '${_gamesDir}match/ayn/ayn_match_2.png',
+        imagePath: '${_gamesDir}match/ayn/ayn_match_2.webp',
         audioPath: '${_gamesAudio}match/ayn/ayn_match_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cards: [
@@ -410,7 +410,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'ذِرَاع',
-        imagePath: '${_gamesDir}match/ayn/ayn_match_3.png',
+        imagePath: '${_gamesDir}match/ayn/ayn_match_3.webp',
         audioPath: '${_gamesAudio}match/ayn/ayn_match_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cards: [
@@ -421,7 +421,7 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'مَزْرَعَة',
-        imagePath: '${_gamesDir}match/ayn/ayn_match_4.png',
+        imagePath: '${_gamesDir}match/ayn/ayn_match_4.webp',
         audioPath: '${_gamesAudio}match/ayn/ayn_match_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -434,8 +434,8 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
     coloring: [
       ColoringRound(
         word: 'عَادِل',
-        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_1.webp',
         introAudioPath: '${_audio}ayn_word_p2_4.mp3',
         revealAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_1.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/ayn/ayn_wrong_reveal_1.mp3',
@@ -446,47 +446,47 @@ const LetterUnitManifest aynManifest = LetterUnitManifest(
           GameZoneChoice(label: 'عَادِل', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_1.png', color: Color(0xFF00838F)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_2.png', color: Color(0xFF00ACC1)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_3.png', color: Color(0xFF26C6DA)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_1.webp', color: Color(0xFF00838F)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_2.webp', color: Color(0xFF00ACC1)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_1_slice_3.webp', color: Color(0xFF26C6DA)),
         ],
       ),
       ColoringRound(
         word: 'مَسْعُود',
-        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_2.png',
-        introAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_2.mp3',
+        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_2.webp',
+        introAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_2.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/ayn/ayn_wrong_reveal_2.mp3',
-        wordAudioPath: '${_maddAudio}ain_waw.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_2.mp3',
         options: [
           GameZoneChoice(label: 'يَبِيعُ', isCorrect: false),
           GameZoneChoice(label: 'مَسْعُود', isCorrect: true),
           GameZoneChoice(label: 'مِسْمَار', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_1.png', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_2.png', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_3.png', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
         word: 'سَعِيد',
-        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_3.png',
-        introAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_3.mp3',
+        bgImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_word_3.webp',
+        introAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/ayn/ayn_coloring_reveal_3.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/ayn/ayn_wrong_reveal_3.mp3',
-        wordAudioPath: '${_maddAudio}ain_yaa.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/ayn/ayn_word_3.mp3',
         options: [
           GameZoneChoice(label: 'سَعِيد', isCorrect: true),
           GameZoneChoice(label: 'طِفْل', isCorrect: false),
           GameZoneChoice(label: 'بِنْت', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_1.png', color: Color(0xFF2E7D32)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_2.png', color: Color(0xFF43A047)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_3.png', color: Color(0xFF66BB6A)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_1.webp', color: Color(0xFF2E7D32)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_2.webp', color: Color(0xFF43A047)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ayn/ayn_coloring_round_3_slice_3.webp', color: Color(0xFF66BB6A)),
         ],
       ),
     ],

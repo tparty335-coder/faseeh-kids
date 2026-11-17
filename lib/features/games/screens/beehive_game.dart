@@ -21,25 +21,25 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  _Round(imagePath: 'assets/images/games/beehive/beehive_round_1.png', cells: [
+  _Round(imagePath: 'assets/images/games/beehive/beehive_round_1.webp', cells: [
     _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
     _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
     _CellZone(label: 'إِ', isCorrect: true,  px: 1110, py: 452), // Right (Correct for إِبْرَةٌ)
     _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
   ]),
-  _Round(imagePath: 'assets/images/games/beehive/beehive_round_2.png', cells: [
+  _Round(imagePath: 'assets/images/games/beehive/beehive_round_2.webp', cells: [
     _CellZone(label: 'أُ', isCorrect: true,  px: 985, py: 295), // Top (Correct for أُذُنٌ)
     _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
     _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right
     _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
   ]),
-  _Round(imagePath: 'assets/images/games/beehive/beehive_round_3.png', cells: [
+  _Round(imagePath: 'assets/images/games/beehive/beehive_round_3.webp', cells: [
     _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
     _CellZone(label: 'أَ', isCorrect: true,  px: 875, py: 452), // Left (Correct for أَسَدٌ)
     _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right
     _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
   ]),
-  _Round(imagePath: 'assets/images/games/beehive/beehive_round_4.png', cells: [
+  _Round(imagePath: 'assets/images/games/beehive/beehive_round_4.webp', cells: [
     _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
     _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
     _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right

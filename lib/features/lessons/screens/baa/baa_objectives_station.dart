@@ -57,8 +57,18 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
   Future<void> _playObjectivesAudio() async {
     if (!mounted) return;
     setState(() => _isPlaying = true);
-    await AudioService.instance.stop();
-    await AudioService.instance.playAsset('audio/lessons/baa/baa_objectives.mp3');
+    try {
+      await AudioService.instance.stop();
+      await AudioService.instance.playAsset(
+        'audio/sfx/celebration.mp3',
+        channel: AudioChannel.sfx,
+      );
+      await AudioService.instance.playAsset('audio/letters/core/baa_name.mp3');
+      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+      if (done != null) {
+        await done.first.timeout(const Duration(seconds: 10), onTimeout: () {});
+      }
+    } catch (_) {}
     if (mounted) setState(() => _isPlaying = false);
   }
 
@@ -69,7 +79,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
         // ── 1. خلفية المشهد ──────────────────────────────────────────────────
         Positioned.fill(
           child: Image.asset(
-            'assets/images/lessons/baa/baa_story.jpg',
+            'assets/images/lessons/baa/baa_story.webp',
             fit: BoxFit.cover,
             errorBuilder: (_, __, ___) => Container(
               decoration: const BoxDecoration(

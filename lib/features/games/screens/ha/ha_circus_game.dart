@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، حَمَل (أسفل) ← حَمَل ✅
   _Round(
-    imagePath: 'assets/images/games/circus/ha/ha_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/ha/ha_circus_round_1.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
@@ -53,7 +53,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: حِمَار (أعلى) ، حَجَر (وسط) ، فِيل (أسفل) ← حَجَر ✅
   _Round(
-    imagePath: 'assets/images/games/circus/ha/ha_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/ha/ha_circus_round_2.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: حِصَان (أعلى) ، مِطْرَقَة (وسط) ، حِمَار (أسفل) ← حِمَار ✅
   _Round(
-    imagePath: 'assets/images/games/circus/ha/ha_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/ha/ha_circus_round_3.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [

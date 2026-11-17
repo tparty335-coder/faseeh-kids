@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: رُمَّان ✅ | أَسَد ❌ | فَأْس ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_1.webp',
     correctWord: 'رُمَّان',
     wordAudio: 'audio/lessons/raa/final/raa_word_p1_2.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: وَلَد ❌ | قَلَم ❌ | رَجُل ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_2.webp',
     correctWord: 'رَجُل',
     wordAudio: 'audio/lessons/raa/final/raa_word_p1_1.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: بَاب ❌ | رِيشَة ✅ | أُذُن ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_3.webp',
     correctWord: 'رِيشَة',
     wordAudio: 'audio/lessons/raa/final/raa_word_p1_3.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: أُمِّي ❌ | أَسَد ❌ | بَحْر ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/raa/raa_fishing_round_4.webp',
     correctWord: 'بَحْر',
     wordAudio: 'audio/lessons/raa/final/raa_word_p4_1.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',

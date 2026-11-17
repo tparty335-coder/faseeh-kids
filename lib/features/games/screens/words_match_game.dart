@@ -40,7 +40,7 @@ class _Round {
 const List<_Round> _rounds = [
   // Round 1: Picture = Rabbit (أَرْنَبٌ)
   _Round(
-    imagePath: 'assets/images/games/words/words_round_1.png',
+    imagePath: 'assets/images/games/words/words_round_1.webp',
     cards: [
       _WordCard(
         word: 'أَسَدٌ',
@@ -67,7 +67,7 @@ const List<_Round> _rounds = [
   ),
   // Round 2: Picture = Pyramids (أَهْرَامٌ)
   _Round(
-    imagePath: 'assets/images/games/words/words_round_2.png',
+    imagePath: 'assets/images/games/words/words_round_2.webp',
     cards: [
       _WordCard(
         word: 'أَهْرَامٌ',
@@ -94,7 +94,7 @@ const List<_Round> _rounds = [
   ),
   // Round 3: Picture = Lion (أَسَدٌ)
   _Round(
-    imagePath: 'assets/images/games/words/words_round_3.png',
+    imagePath: 'assets/images/games/words/words_round_3.webp',
     cards: [
       _WordCard(
         word: 'أَسَدٌ',
@@ -121,7 +121,7 @@ const List<_Round> _rounds = [
   ),
   // Round 4: Picture = Apple (تُفَّاحَةٌ)
   _Round(
-    imagePath: 'assets/images/games/words/words_round_4.png',
+    imagePath: 'assets/images/games/words/words_round_4.webp',
     cards: [
       _WordCard(
         word: 'أَسَدٌ',
@@ -148,7 +148,7 @@ const List<_Round> _rounds = [
   ),
   // Round 5: Picture = Book (كِتَابٌ)
   _Round(
-    imagePath: 'assets/images/games/words/words_round_5.png',
+    imagePath: 'assets/images/games/words/words_round_5.webp',
     cards: [
       _WordCard(
         word: 'كِتَابٌ',
@@ -238,7 +238,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
       channel: AudioChannel.voice);
 
   Future<void> _playWrong() => AudioService.instance
-      .playAsset('audio/instructions/try_again.mp3', channel: AudioChannel.sfx);
+      .playAsset('audio/feedback/try_again.mp3', channel: AudioChannel.sfx);
 
   Future<void> _playWordAudio(String path) =>
       AudioService.instance.playAsset(path, channel: AudioChannel.voice);

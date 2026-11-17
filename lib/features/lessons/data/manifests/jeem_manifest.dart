@@ -29,7 +29,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
 
   // ── الأهداف ──────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}jeem_goal.mp3', // ✅ أصلي من ahdaf_a.swf (600 KB)
+    audioPath: 'audio/lessons/jeem/final/jeem_letter.mp3', // ✅ أصلي من ahdaf_a.swf (600 KB)
     objectives: [
       'أَتَعَرَّفُ عَلَى حَرْفِ الْجِيمِ (ج)',
       'أَنْطِقُ حَرْفَ الْجِيمِ بِالْحَرَكَاتِ الثَّلَاثِ',
@@ -45,38 +45,38 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_1.png',
+        imagePath: '${_dir}jeem_cd_story_1.webp',
         audioPath: '${_audio}jeem_story_1.mp3',
         captionText: 'الْعَمُّ أَحْمَدُ رَجُلٌ مَشْهُورٌ، يَعِيشُ فِي وَاحَةٍ صَحْرَاوِيَّةٍ خَضْرَاءَ، يَعْمَلُ تَاجِرًا.',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_2.png',
+        imagePath: '${_dir}jeem_cd_story_2.webp',
         audioPath: '${_audio}jeem_story_2.mp3',
         captionText: 'فِي يَوْمٍ جَاءَ بِبِضَاعَةٍ كَثِيرَةٍ عَلَى الْجَمَلِ، وَكَانَ الْحِمْلُ ثَقِيلًا.',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_3.png',
+        imagePath: '${_dir}jeem_cd_story_3.webp',
         audioPath: '${_audio}jeem_story_3.mp3',
         captionText: 'مَشَى الْجَمَلُ فِي الصَّحْرَاءِ مَسَافَةً طَوِيلَةً، وَهُوَ صَابِرٌ عَلَى ثِقَلِ الْحِمْلِ وَبُعْدِ الْمَسَافَةِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_4.png',
+        imagePath: '${_dir}jeem_cd_story_4.webp',
         audioPath: '${_audio}jeem_story_4.mp3',
         captionText: 'وَتَحَمَّلَ حَتَّى وَصَلَ إِلَى الْوَاحَةِ الْخَضْرَاءِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_5.png',
+        imagePath: '${_dir}jeem_cd_story_5.webp',
         audioPath: '${_audio}jeem_story_5.mp3',
         captionText: 'فَشَرِبَ مَاءً كَثِيرًا، وَشَكَرَ رَبَّهُ عَلَى نِعْمَةِ الْمَاءِ، وَنِعْمَةِ تَحَمُّلِ الْجُوعِ وَالْعَطَشِ وَالصَّبْرِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_6.png',
+        imagePath: '${_dir}jeem_cd_story_6.webp',
         audioPath: '${_audio}jeem_story_6.mp3',
         isNasheed: true,
         captionText: 'جِيمٌ جَمَلٌ فِي الصَّحْرَاءِ .. مِثْلُ سَفِينَةَ فَوْقَ الْمَاءِ 🎵',
       ),
       StoryScene(
-        imagePath: '${_dir}jeem_cd_story_7.png',
+        imagePath: '${_dir}jeem_cd_story_7.webp',
         audioPath: '${_audio}jeem_story_7.mp3',
         captionText: 'الْجَمَلُ يَتَحَمَّلُ الْجُوعَ وَالْعَطَشَ وَارْتِفَاعَ الْحَرَارَةِ؛ لِذَلِكَ يُطْلَقُ عَلَيْهِ: (سَفِينَةُ الصَّحْرَاءِ).',
         interaction: WordFindStoryInteraction(
@@ -138,17 +138,17 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'جَا',
         audioPath: '${_soundsAudio}jeem_madd_alif.mp3',
-        imagePath: '${_dir}jeem_madd_aa.png',
+        imagePath: '${_dir}jeem_madd_aa.webp',
       ),
       MaddItem(
         displayChar: 'جُو',
         audioPath: '${_soundsAudio}jeem_madd_waw.mp3',
-        imagePath: '${_dir}jeem_madd_uu.png',
+        imagePath: '${_dir}jeem_madd_uu.webp',
       ),
       MaddItem(
         displayChar: 'جِي',
         audioPath: '${_soundsAudio}jeem_madd_yaa.mp3',
-        imagePath: '${_dir}jeem_madd_ii.png',
+        imagePath: '${_dir}jeem_madd_ii.webp',
       ),
     ],
   ),
@@ -158,10 +158,10 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
     letterChar: 'ج',
     audioIntroPath: '${_audio}jeem_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}jeem_write_step_1.png',
-      '${_dir}jeem_write_step_2.png',
-      '${_dir}jeem_write_step_3.png',
-      '${_dir}jeem_write_step_4.png',
+      '${_dir}jeem_write_step_1.webp',
+      '${_dir}jeem_write_step_2.webp',
+      '${_dir}jeem_write_step_3.webp',
+      '${_dir}jeem_write_step_4.webp',
     ],
   ),
 
@@ -171,12 +171,12 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
     pages: [
       // صفحة 1 (ka1.swf): جَمَل (أحمر)، رَجُل (برتقالي)، جَزَر (أخضر)، رِجْل (أزرق)
       WordsPage(
-        listImagePath: '${_dir}jeem_words_p1_list.png',
+        listImagePath: '${_dir}jeem_words_p1_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'جَمَل',
-            cardImagePath: '${_dir}jeem_words_p1_card_1.png',
+            cardImagePath: '${_dir}jeem_words_p1_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p1_1.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.200, right: 0.930, bottom: 0.530),
@@ -185,7 +185,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'رَجُل',
-            cardImagePath: '${_dir}jeem_words_p1_card_2.png',
+            cardImagePath: '${_dir}jeem_words_p1_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p1_2.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.250, right: 0.480, bottom: 0.530),
@@ -194,7 +194,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'جَزَر',
-            cardImagePath: '${_dir}jeem_words_p1_card_3.png',
+            cardImagePath: '${_dir}jeem_words_p1_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p1_3.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.550, right: 0.850, bottom: 0.720),
@@ -203,7 +203,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'رِجْل',
-            cardImagePath: '${_dir}jeem_words_p1_card_4.png',
+            cardImagePath: '${_dir}jeem_words_p1_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p1_4.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900),
@@ -214,12 +214,12 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       // صفحة 2 (ka2.swf): جِذْر (أحمر)، جَابِر (برتقالي)، بُرْج (أخضر)، وُجُوه (أزرق)
       WordsPage(
-        listImagePath: '${_dir}jeem_words_p2_list.png',
+        listImagePath: '${_dir}jeem_words_p2_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'جِذْر',
-            cardImagePath: '${_dir}jeem_words_p2_card_1.png',
+            cardImagePath: '${_dir}jeem_words_p2_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p2_1.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.200, right: 0.930, bottom: 0.530),
@@ -228,7 +228,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'جَابِر',
-            cardImagePath: '${_dir}jeem_words_p2_card_2.png',
+            cardImagePath: '${_dir}jeem_words_p2_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p2_2.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.250, right: 0.480, bottom: 0.530),
@@ -237,7 +237,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'بُرْج',
-            cardImagePath: '${_dir}jeem_words_p2_card_3.png',
+            cardImagePath: '${_dir}jeem_words_p2_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p2_3.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.550, right: 0.850, bottom: 0.720),
@@ -246,7 +246,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'وُجُوه',
-            cardImagePath: '${_dir}jeem_words_p2_card_4.png',
+            cardImagePath: '${_dir}jeem_words_p2_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p2_4.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900),
@@ -257,12 +257,12 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       // صفحة 3 (ka3.swf): نَجِيب (أحمر)، شَجَرَة (برتقالي)، ثَلْج (أخضر)، تَاجِر (أزرق)
       WordsPage(
-        listImagePath: '${_dir}jeem_words_p3_list.png',
+        listImagePath: '${_dir}jeem_words_p3_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'نَجِيب',
-            cardImagePath: '${_dir}jeem_words_p3_card_1.png',
+            cardImagePath: '${_dir}jeem_words_p3_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p3_1.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.200, right: 0.930, bottom: 0.530),
@@ -271,7 +271,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'شَجَرَة',
-            cardImagePath: '${_dir}jeem_words_p3_card_2.png',
+            cardImagePath: '${_dir}jeem_words_p3_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p3_2.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.250, right: 0.480, bottom: 0.530),
@@ -280,7 +280,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'ثَلْج',
-            cardImagePath: '${_dir}jeem_words_p3_card_3.png',
+            cardImagePath: '${_dir}jeem_words_p3_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p3_3.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.550, right: 0.850, bottom: 0.720),
@@ -289,7 +289,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'تَاجِر',
-            cardImagePath: '${_dir}jeem_words_p3_card_4.png',
+            cardImagePath: '${_dir}jeem_words_p3_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p3_4.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900),
@@ -300,12 +300,12 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       // صفحة 4 (ka4.swf): جَبَل (أحمر)، ثَلَّاجَة (برتقالي)، جَرَس (أخضر)، دَجَاجَة (أزرق)
       WordsPage(
-        listImagePath: '${_dir}jeem_words_p4_list.png',
+        listImagePath: '${_dir}jeem_words_p4_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'جَبَل',
-            cardImagePath: '${_dir}jeem_words_p4_card_1.png',
+            cardImagePath: '${_dir}jeem_words_p4_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p4_1.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.200, right: 0.930, bottom: 0.530),
@@ -314,7 +314,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'ثَلَّاجَة',
-            cardImagePath: '${_dir}jeem_words_p4_card_2.png',
+            cardImagePath: '${_dir}jeem_words_p4_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p4_2.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.250, right: 0.480, bottom: 0.530),
@@ -323,7 +323,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'جَرَس',
-            cardImagePath: '${_dir}jeem_words_p4_card_3.png',
+            cardImagePath: '${_dir}jeem_words_p4_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p4_3.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.550, right: 0.850, bottom: 0.720),
@@ -332,7 +332,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَجَاجَة',
-            cardImagePath: '${_dir}jeem_words_p4_card_4.png',
+            cardImagePath: '${_dir}jeem_words_p4_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p4_4.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900),
@@ -347,63 +347,63 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
   // ── الألعاب (5 ألعاب أصلية كاملة) ─────────────────────────────────────────
   games: GamesSpec(
     fishing: [
-      FishingRound(word: 'جَمَل', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_1.png', audioPath: '${_audio}jeem_word_p1_1.mp3', isCorrect: true),
-      FishingRound(word: 'جَبَل', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_2.png', audioPath: '${_audio}jeem_word_p1_2.mp3', isCorrect: true),
-      FishingRound(word: 'جَزَرَة', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_3.png', audioPath: '${_audio}jeem_word_p1_3.mp3', isCorrect: true),
-      FishingRound(word: 'جَرَس', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_4.png', audioPath: '${_audio}jeem_word_p1_4.mp3', isCorrect: true),
+      FishingRound(word: 'جَمَل', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_1.webp', audioPath: '${_audio}jeem_word_p1_1.mp3', isCorrect: true),
+      FishingRound(word: 'جَبَل', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_2.webp', audioPath: '${_audio}jeem_word_p4_1.mp3', isCorrect: true),
+      FishingRound(word: 'جَزَرَة', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_3.webp', audioPath: '${_audio}jeem_word_p1_3.mp3', isCorrect: true),
+      FishingRound(word: 'جَرَس', imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_4.webp', audioPath: '${_audio}jeem_word_p4_3.mp3', isCorrect: true),
     ],
     beehive: [
-      BeehiveRound(word: 'جَمَل', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_1.png', audioPath: '${_audio}jeem_word_p1_1.mp3'),
-      BeehiveRound(word: 'جِسْر', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_2.png', audioPath: '${_audio}jeem_word_p3_3.mp3'),
-      BeehiveRound(word: 'جُحْر', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_3.png', audioPath: '${_audio}jeem_word_p4_1.mp3'),
-      BeehiveRound(word: 'جَبَل', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_4.png', audioPath: '${_audio}jeem_word_p1_2.mp3'),
+      BeehiveRound(word: 'جَمَل', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_1.webp', audioPath: '${_audio}jeem_word_p1_1.mp3'),
+      BeehiveRound(word: 'جِسْر', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_2.webp', audioPath: '${_soundsAudio}word_jisr_extracted.mp3'),
+      BeehiveRound(word: 'جُحْر', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_3.webp', audioPath: '${_soundsAudio}word_juhr_extracted.mp3'),
+      BeehiveRound(word: 'جَبَل', imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_4.webp', audioPath: '${_audio}jeem_word_p4_1.mp3'),
     ],
     circus: [
-      CircusRound(word: 'جَمَل', imagePath: '${_gamesDir}circus/jeem/jeem_circus_1.png', audioPath: '${_audio}jeem_word_p1_1.mp3'),
-      CircusRound(word: 'جَبَل', imagePath: '${_gamesDir}circus/jeem/jeem_circus_2.png', audioPath: '${_audio}jeem_word_p1_2.mp3'),
-      CircusRound(word: 'جَزَرَة', imagePath: '${_gamesDir}circus/jeem/jeem_circus_3.png', audioPath: '${_audio}jeem_word_p1_3.mp3'),
+      CircusRound(word: 'جَمَل', imagePath: '${_gamesDir}circus/jeem/jeem_circus_1.webp', audioPath: '${_audio}jeem_word_p1_1.mp3'),
+      CircusRound(word: 'جَبَل', imagePath: '${_gamesDir}circus/jeem/jeem_circus_2.webp', audioPath: '${_audio}jeem_word_p4_1.mp3'),
+      CircusRound(word: 'جَزَرَة', imagePath: '${_gamesDir}circus/jeem/jeem_circus_3.webp', audioPath: '${_audio}jeem_word_p1_3.mp3'),
     ],
     wordsMatch: [
-      WordsMatchPair(word: 'جَمَل', imagePath: '${_gamesDir}words/jeem/jeem_match_1.png', audioPath: '${_audio}jeem_word_p1_1.mp3'),
-      WordsMatchPair(word: 'جَبَل', imagePath: '${_gamesDir}words/jeem/jeem_match_2.png', audioPath: '${_audio}jeem_word_p1_2.mp3'),
-      WordsMatchPair(word: 'جَزَرَة', imagePath: '${_gamesDir}words/jeem/jeem_match_3.png', audioPath: '${_audio}jeem_word_p1_3.mp3'),
-      WordsMatchPair(word: 'جَرَس', imagePath: '${_gamesDir}words/jeem/jeem_match_4.png', audioPath: '${_audio}jeem_word_p1_4.mp3'),
+      WordsMatchPair(word: 'جَمَل', imagePath: '${_gamesDir}words/jeem/jeem_match_1.webp', audioPath: '${_audio}jeem_word_p1_1.mp3'),
+      WordsMatchPair(word: 'جَبَل', imagePath: '${_gamesDir}words/jeem/jeem_match_2.webp', audioPath: '${_audio}jeem_word_p4_1.mp3'),
+      WordsMatchPair(word: 'جَزَرَة', imagePath: '${_gamesDir}words/jeem/jeem_match_3.webp', audioPath: '${_audio}jeem_word_p1_3.mp3'),
+      WordsMatchPair(word: 'جَرَس', imagePath: '${_gamesDir}words/jeem/jeem_match_4.webp', audioPath: '${_audio}jeem_word_p4_3.mp3'),
     ],
     coloring: [
       ColoringRound(
         word: 'جَابِر',
-        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp',
         introAudioPath: '${_gamesAudio}coloring/jeem_paint1_word.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint1_ahsant.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.png', color: Color(0xFFC8A96E)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.png', color: Color(0xFF8D6E63)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.png', color: Color(0xFFFFD54F)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFFC8A96E)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFF8D6E63)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFFFFD54F)),
         ],
       ),
       ColoringRound(
         word: 'وُجُوه',
-        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp',
         introAudioPath: '${_gamesAudio}coloring/jeem_paint2_word.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint2_ahsant.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.png', color: Color(0xFF78909C)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.png', color: Color(0xFF4CAF50)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.png', color: Color(0xFF90A4AE)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF78909C)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF4CAF50)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF90A4AE)),
         ],
       ),
       ColoringRound(
         word: 'نَجِيب',
-        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.png',
-        introAudioPath: '${_soundsAudio}word_najeeb.mp3',
+        bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp',
+        introAudioPath: '${_audio}jeem_word_p3_1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint3_ahsant.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.png', color: Color(0xFFFF7043)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.png', color: Color(0xFF4CAF50)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.png', color: Color(0xFFFFF176)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFFFF7043)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFF4CAF50)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFFFFF176)),
         ],
       ),
     ],

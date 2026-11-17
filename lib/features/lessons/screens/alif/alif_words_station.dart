@@ -61,12 +61,12 @@ const Offset _closePos = Offset(756, 145);
 const List<_WordsPage> _pages = [
   // ─── الصفحة 1: أَشْجَار ، أَرْنَب ، أَسَد ، أَكَلَ ───
   _WordsPage(
-    listImage: '${_dir}alif_words_p1_list.png',
+    listImage: '${_dir}alif_words_p1_list.webp',
     listH: 506,
     words: [
       _WordItem(
         word: 'أَشْجَار',
-        cardImage: '${_dir}alif_words_p1_card_1.png',
+        cardImage: '${_dir}alif_words_p1_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p1_ashjar.mp3',
         triangle: _triRed,
@@ -75,7 +75,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أَرْنَب',
-        cardImage: '${_dir}alif_words_p1_card_2.png',
+        cardImage: '${_dir}alif_words_p1_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p1_arnab.mp3',
         triangle: _triOrange,
@@ -84,7 +84,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أَسَد',
-        cardImage: '${_dir}alif_words_p1_card_3.png',
+        cardImage: '${_dir}alif_words_p1_card_3.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p1_asad.mp3',
         triangle: _triGreen,
@@ -93,7 +93,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أَكَلَ',
-        cardImage: '${_dir}alif_words_p1_card_4.png',
+        cardImage: '${_dir}alif_words_p1_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p1_akala.mp3',
         triangle: _triBlue,
@@ -105,12 +105,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 2: سَأَلَ ، إِبْرَة ، قَرَأَ ، إِينَاسُ ───
   _WordsPage(
-    listImage: '${_dir}alif_words_p2_list.png',
+    listImage: '${_dir}alif_words_p2_list.webp',
     listH: 506,
     words: [
       _WordItem(
         word: 'سَأَلَ',
-        cardImage: '${_dir}alif_words_p2_card_1.png',
+        cardImage: '${_dir}alif_words_p2_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p2_saala.mp3',
         triangle: _triRed,
@@ -119,7 +119,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'إِبْرَة',
-        cardImage: '${_dir}alif_words_p2_card_2.png',
+        cardImage: '${_dir}alif_words_p2_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p2_ibra.mp3',
         triangle: _triOrange,
@@ -128,7 +128,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'قَرَأَ',
-        cardImage: '${_dir}alif_words_p2_card_3.png',
+        cardImage: '${_dir}alif_words_p2_card_3.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p2_qaraa.mp3',
         triangle: _triGreen,
@@ -137,7 +137,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'إِينَاسُ',
-        cardImage: '${_dir}alif_words_p2_card_4.png',
+        cardImage: '${_dir}alif_words_p2_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p2_inas.mp3',
         triangle: _triBlue,
@@ -149,12 +149,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 3: أُذُن ، رَأْس ، أُمِّي ، فَأْس ───
   _WordsPage(
-    listImage: '${_dir}alif_words_p3_list.png',
+    listImage: '${_dir}alif_words_p3_list.webp',
     listH: 506,
     words: [
       _WordItem(
         word: 'أُذُن',
-        cardImage: '${_dir}alif_words_p3_card_1.png',
+        cardImage: '${_dir}alif_words_p3_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p3_udhun.mp3',
         triangle: _triRed,
@@ -163,7 +163,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'رَأْس',
-        cardImage: '${_dir}alif_words_p3_card_2.png',
+        cardImage: '${_dir}alif_words_p3_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p3_ras.mp3',
         triangle: _triOrange,
@@ -172,7 +172,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أُمِّي',
-        cardImage: '${_dir}alif_words_p3_card_3.png',
+        cardImage: '${_dir}alif_words_p3_card_3.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p3_ummi.mp3',
         triangle: _triGreen,
@@ -181,7 +181,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'فَأْس',
-        cardImage: '${_dir}alif_words_p3_card_4.png',
+        cardImage: '${_dir}alif_words_p3_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p3_faas.mp3',
         triangle: _triBlue,
@@ -193,12 +193,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 4: آمَالُ ، أَهْرَام ، الأُولَى ، حِصَان ───
   _WordsPage(
-    listImage: '${_dir}alif_words_p4_list.png',
+    listImage: '${_dir}alif_words_p4_list.webp',
     listH: 506,
     words: [
       _WordItem(
         word: 'آمَالُ',
-        cardImage: '${_dir}alif_words_p4_card_1.png',
+        cardImage: '${_dir}alif_words_p4_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p4_amal.mp3',
         triangle: _triRed,
@@ -207,7 +207,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أَهْرَام',
-        cardImage: '${_dir}alif_words_p4_card_2.png',
+        cardImage: '${_dir}alif_words_p4_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p4_ahram.mp3',
         triangle: _triOrange,
@@ -216,7 +216,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'الأُولَى',
-        cardImage: '${_dir}alif_words_p4_card_3.png',
+        cardImage: '${_dir}alif_words_p4_card_3.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p4_oula.mp3',
         triangle: _triGreen,
@@ -225,7 +225,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'حِصَان',
-        cardImage: '${_dir}alif_words_p4_card_4.png',
+        cardImage: '${_dir}alif_words_p4_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p4_hisan.mp3',
         triangle: _triBlue,
@@ -237,12 +237,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 5: زَرَافَة ، بَاب ، تُفَّاحَة ، كِتَاب ───
   _WordsPage(
-    listImage: '${_dir}alif_words_p5_list.png',
+    listImage: '${_dir}alif_words_p5_list.webp',
     listH: 506,
     words: [
       _WordItem(
         word: 'زَرَافَة',
-        cardImage: '${_dir}alif_words_p5_card_1.png',
+        cardImage: '${_dir}alif_words_p5_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p5_zarafa.mp3',
         triangle: _triRed,
@@ -251,7 +251,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بَاب',
-        cardImage: '${_dir}alif_words_p5_card_2.png',
+        cardImage: '${_dir}alif_words_p5_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p5_bab.mp3',
         triangle: _triOrange,
@@ -260,7 +260,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'تُفَّاحَة',
-        cardImage: '${_dir}alif_words_p5_card_3.png',
+        cardImage: '${_dir}alif_words_p5_card_3.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p5_tuffaha.mp3',
         triangle: _triGreen,
@@ -269,7 +269,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'كِتَاب',
-        cardImage: '${_dir}alif_words_p5_card_4.png',
+        cardImage: '${_dir}alif_words_p5_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/alif/words/p5_kitab.mp3',
         triangle: _triBlue,

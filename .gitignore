@@ -72,3 +72,10 @@ docs/REA_GUIDE.md
 Faseeh_Kids_Portfolio.zip
 Faseeh_Kids_Portfolio/
 GEMINI.md
+
+# Knowledge graph cache
+graphify-out/cache/
+
+# Test artifacts
+screen_burn_test.png
+

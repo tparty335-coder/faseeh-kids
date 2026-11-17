@@ -21,7 +21,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
   nextLetter: 'ع',
 
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}dhaa_goal.mp3',
+    audioPath: 'audio/letters/core/dhaa_dh_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الظَّاءِ (ظ)',
       'أَنْطِقُ حَرْفَ الظَّاءِ بِالْحَرَكَاتِ الْقَصِيرَةِ وَالسُّكُونِ',
@@ -36,27 +36,27 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}dhaa_cd_story_1.png',
+        imagePath: '${_dir}dhaa_cd_story_1.webp',
         audioPath: '${_audio}dhaa_story_1.mp3',
         captionText: 'كَانَ الْكَلْبُ يَلْهَثُ مِنْ شِدَّةِ الْحَرِّ وَالْعَطَشِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}dhaa_cd_story_2.png',
+        imagePath: '${_dir}dhaa_cd_story_2.webp',
         audioPath: '${_audio}dhaa_story_2.mp3',
         captionText: 'أَخَذَ الْكَلْبُ يَبْحَثُ عَنِ الْمَاءِ هُنَا وَهُنَاكَ حَتَّى وَجَدَ الْمَاءَ، فَشَرِبَ حَتَّى ارْتَوَى.',
       ),
       StoryScene(
-        imagePath: '${_dir}dhaa_cd_story_3.png',
+        imagePath: '${_dir}dhaa_cd_story_3.webp',
         audioPath: '${_audio}dhaa_story_3.mp3',
         captionText: 'ذَهَبَ الْكَلْبُ إِلَى الشَّجَرَةِ لِيَسْتَظِلَّ بِظِلِّهَا، فَوَجَدَ عَظْمَةً تَحْتَ الشَّجَرَةِ فَأَكَلَهَا.',
       ),
       StoryScene(
-        imagePath: '${_dir}dhaa_cd_story_4.png',
+        imagePath: '${_dir}dhaa_cd_story_4.webp',
         audioPath: '${_audio}dhaa_story_4.mp3',
         captionText: 'نَامَ الْكَلْبُ تَحْتَ الشَّجَرَةِ حَتَّى حَلَّ الظَّلَامُ.',
       ),
       StoryScene(
-        imagePath: '${_dir}dhaa_cd_story_nasheed.png',
+        imagePath: '${_dir}dhaa_cd_story_nasheed.webp',
         audioPath: '${_audio}dhaa_nasheed.mp3',
         isNasheed: true,
         captionText: 'ظَاءٌ ظَرْفٌ لِلرِّسَالَةِ .. يَحْمِلُ أَجْمَلَ الْعِبَارَاتِ 🎵',
@@ -83,7 +83,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}dhaa_dh_fatha.mp3',
         fullRuleAudio: '${_soundsAudio}dhaa_fatha_rule.mp3',
         wordAudio: '${_audio}dhaa_word_p1_1.mp3',
-        slideImagePath: '${_dir}dhaa_vowel_fatha.png',
+        slideImagePath: '${_dir}dhaa_vowel_fatha.webp',
       ),
       VowelCardSpec(
         vowelName: 'الضَّمَّةُ',
@@ -93,7 +93,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}dhaa_dh_damma.mp3',
         fullRuleAudio: '${_soundsAudio}dhaa_damma_rule.mp3',
         wordAudio: '${_audio}dhaa_word_p3_3.mp3',
-        slideImagePath: '${_dir}dhaa_vowel_damma.png',
+        slideImagePath: '${_dir}dhaa_vowel_damma.webp',
       ),
       VowelCardSpec(
         vowelName: 'الْكَسْرَةُ',
@@ -103,7 +103,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}dhaa_dh_kasra.mp3',
         fullRuleAudio: '${_soundsAudio}dhaa_kasra_rule.mp3',
         wordAudio: '${_audio}dhaa_word_p1_4.mp3',
-        slideImagePath: '${_dir}dhaa_vowel_kasra.png',
+        slideImagePath: '${_dir}dhaa_vowel_kasra.webp',
       ),
       VowelCardSpec(
         vowelName: 'السُّكُونُ',
@@ -113,7 +113,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}dhaa_dh_sukoon.mp3',
         fullRuleAudio: '${_soundsAudio}dhaa_sukoon_rule.mp3',
         wordAudio: '${_audio}dhaa_word_p1_2.mp3',
-        slideImagePath: '${_dir}dhaa_vowel_sukoon.png',
+        slideImagePath: '${_dir}dhaa_vowel_sukoon.webp',
       ),
     ],
   ),
@@ -125,7 +125,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'ظَا',
         audioPath: '${_maddAudio}dhaa_dh_alif.mp3',
-        imagePath: '${_dir}dhaa_madd_aa.png',
+        imagePath: '${_dir}dhaa_madd_aa.webp',
         exampleWord: 'ظَافِر',
         explanation: 'ظَاءٌ مَفْتُوحَةٌ مَعَ مَدٍّ بِالْأَلِفِ: ظَا',
         wordAudioPath: '${_audio}dhaa_word_p4_1.mp3',
@@ -134,16 +134,16 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'ظُو',
         audioPath: '${_maddAudio}dhaa_dh_waw.mp3',
-        imagePath: '${_dir}dhaa_madd_uu.png',
+        imagePath: '${_dir}dhaa_madd_uu.webp',
         exampleWord: 'مَنْظُور',
         explanation: 'ظَاءٌ مَضْمُومَةٌ مَعَ مَدٍّ بِالْوَاوِ: ظُو',
-        wordAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_coloring_reveal_2.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_word_2.mp3',
         accentColor: Color(0xFF1565C0),
       ),
       MaddItem(
         displayChar: 'ظِي',
         audioPath: '${_maddAudio}dhaa_dh_yaa.mp3',
-        imagePath: '${_dir}dhaa_madd_ii.png',
+        imagePath: '${_dir}dhaa_madd_ii.webp',
         exampleWord: 'نَظِيم',
         explanation: 'ظَاءٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: ظِي',
         wordAudioPath: '${_audio}dhaa_word_p4_4.mp3',
@@ -156,10 +156,10 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     letterChar: 'ظ',
     audioIntroPath: '${_audio}dhaa_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}dhaa_write_step_1.png',
-      '${_dir}dhaa_write_step_2.png',
-      '${_dir}dhaa_write_step_3.png',
-      '${_dir}dhaa_write_step_4.png',
+      '${_dir}dhaa_write_step_1.webp',
+      '${_dir}dhaa_write_step_2.webp',
+      '${_dir}dhaa_write_step_3.webp',
+      '${_dir}dhaa_write_step_4.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -169,7 +169,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         exampleWord: 'ظَرْف',
         exampleEmoji: '✉️',
         audioPath: '${_audio}dhaa_trace_isolated.mp3',
-        imagePath: '${_dir}dhaa_trace_isolated.png',
+        imagePath: '${_dir}dhaa_trace_isolated.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -178,7 +178,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         exampleWord: 'ظَرْف',
         exampleEmoji: '✉️',
         audioPath: '${_coreAudio}dhaa_dh_pos_start.mp3',
-        imagePath: '${_dir}dhaa_trace_start.png',
+        imagePath: '${_dir}dhaa_trace_start.webp',
       ),
       TracingPositionSpec(
         position: 'middle',
@@ -187,7 +187,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         exampleWord: 'عَظْمَة',
         exampleEmoji: '🦴',
         audioPath: '${_coreAudio}dhaa_dh_pos_middle.mp3',
-        imagePath: '${_dir}dhaa_trace_middle.png',
+        imagePath: '${_dir}dhaa_trace_middle.webp',
       ),
       TracingPositionSpec(
         position: 'end',
@@ -196,7 +196,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
         exampleWord: 'حَافِظ',
         exampleEmoji: '🧒',
         audioPath: '${_coreAudio}dhaa_dh_pos_end.mp3',
-        imagePath: '${_dir}dhaa_trace_end.png',
+        imagePath: '${_dir}dhaa_trace_end.webp',
       ),
     ],
   ),
@@ -204,43 +204,43 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
   words: WordsSpec(
     pages: [
       WordsPage(
-        listImagePath: '${_dir}dhaa_words_p1_list.png',
+        listImagePath: '${_dir}dhaa_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'ظَرْف', cardImagePath: '${_dir}dhaa_words_p1_card_1.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}dhaa_words_p1_card_2.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'حَافِظ', cardImagePath: '${_dir}dhaa_words_p1_card_3.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ظِلّ', cardImagePath: '${_dir}dhaa_words_p1_card_4.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَرْف', cardImagePath: '${_dir}dhaa_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}dhaa_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'حَافِظ', cardImagePath: '${_dir}dhaa_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظِلّ', cardImagePath: '${_dir}dhaa_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}dhaa_words_p2_list.png',
+        listImagePath: '${_dir}dhaa_words_p2_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'ظَبْي', cardImagePath: '${_dir}dhaa_words_p2_card_1.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ظَهْر', cardImagePath: '${_dir}dhaa_words_p2_card_2.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُظَاهَرَة', cardImagePath: '${_dir}dhaa_words_p2_card_3.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ظُفْر', cardImagePath: '${_dir}dhaa_words_p2_card_4.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَبْي', cardImagePath: '${_dir}dhaa_words_p2_card_1.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَهْر', cardImagePath: '${_dir}dhaa_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُظَاهَرَة', cardImagePath: '${_dir}dhaa_words_p2_card_3.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظُفْر', cardImagePath: '${_dir}dhaa_words_p2_card_4.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}dhaa_words_p3_list.png',
+        listImagePath: '${_dir}dhaa_words_p3_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'ظَرِيف', cardImagePath: '${_dir}dhaa_words_p3_card_1.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ظَلَام', cardImagePath: '${_dir}dhaa_words_p3_card_2.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'يَنْظُرُ', cardImagePath: '${_dir}dhaa_words_p3_card_3.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'نَظَّارَة', cardImagePath: '${_dir}dhaa_words_p3_card_4.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَرِيف', cardImagePath: '${_dir}dhaa_words_p3_card_1.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَلَام', cardImagePath: '${_dir}dhaa_words_p3_card_2.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'يَنْظُرُ', cardImagePath: '${_dir}dhaa_words_p3_card_3.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'نَظَّارَة', cardImagePath: '${_dir}dhaa_words_p3_card_4.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}dhaa_words_p4_list.png',
+        listImagePath: '${_dir}dhaa_words_p4_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'ظَافِر', cardImagePath: '${_dir}dhaa_words_p4_card_1.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'نَظِيف', cardImagePath: '${_dir}dhaa_words_p4_card_2.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'يَسْتَيْقِظُ', cardImagePath: '${_dir}dhaa_words_p4_card_3.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'نَظِيم', cardImagePath: '${_dir}dhaa_words_p4_card_4.png', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ظَافِر', cardImagePath: '${_dir}dhaa_words_p4_card_1.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'نَظِيف', cardImagePath: '${_dir}dhaa_words_p4_card_2.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'يَسْتَيْقِظُ', cardImagePath: '${_dir}dhaa_words_p4_card_3.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'نَظِيم', cardImagePath: '${_dir}dhaa_words_p4_card_4.webp', cardHeight: 474, audioPath: '${_audio}dhaa_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
     ],
@@ -264,11 +264,11 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     fishing: [
       FishingRound(
         word: 'ظَبْي',
-        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_1.png',
+        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/dhaa/dhaa_fishing_1.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba62.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
         zones: [
           GameZoneChoice(label: 'ظَبْي', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'أَسَد', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -277,11 +277,11 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'ظَرْف',
-        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_2.png',
+        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/dhaa/dhaa_fishing_2.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba58.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
         zones: [
           GameZoneChoice(label: 'كِتَاب', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'كُرَّاسَة', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -290,11 +290,11 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_3.png',
+        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/dhaa/dhaa_fishing_3.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba56.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
         zones: [
           GameZoneChoice(label: 'رَأْس', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'عَظْمَة', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -303,11 +303,11 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'ظَهْر',
-        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_4.png',
+        imagePath: '${_gamesDir}fishing/dhaa/dhaa_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/dhaa/dhaa_fishing_4.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba52.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
         zones: [
           GameZoneChoice(label: 'ذِرَاع', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'بَطْن', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -318,7 +318,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(
         word: 'ظَرْف',
-        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_1.png',
+        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/dhaa/dhaa_beehive_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -330,7 +330,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'ظِلّ',
-        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_2.png',
+        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/dhaa/dhaa_beehive_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cells: [
@@ -342,7 +342,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'يَنْظُرُ',
-        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_3.png',
+        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/dhaa/dhaa_beehive_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -354,7 +354,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_4.png',
+        imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/dhaa/dhaa_beehive_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -368,9 +368,9 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     circus: [
       CircusRound(
         word: 'ظِلّ',
-        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_1.png',
+        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/dhaa/dhaa_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}circus/7_ba62.mp3',
+        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         zones: [
           GameZoneChoice(label: 'تُفَّاحَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'مَانْجُو', isCorrect: false, px: 269, py: 232),
@@ -379,9 +379,9 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'ظَرْف',
-        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_2.png',
+        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/dhaa/dhaa_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba59.mp3',
+        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         zones: [
           GameZoneChoice(label: 'كِتَاب', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'ظَرْف', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/dhaa/dhaa_circus_2.mp3'),
@@ -390,9 +390,9 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_3.png',
+        imagePath: '${_gamesDir}circus/dhaa/dhaa_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/dhaa/dhaa_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba53.mp3',
+        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         zones: [
           GameZoneChoice(label: 'نَمِر', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'نَخْلَة', isCorrect: false, px: 269, py: 232),
@@ -403,7 +403,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     wordsMatch: [
       WordsMatchPair(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}match/dhaa/dhaa_match_1.png',
+        imagePath: '${_gamesDir}match/dhaa/dhaa_match_1.webp',
         audioPath: '${_gamesAudio}match/dhaa/dhaa_match_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -414,7 +414,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'نَظَّارَة',
-        imagePath: '${_gamesDir}match/dhaa/dhaa_match_2.png',
+        imagePath: '${_gamesDir}match/dhaa/dhaa_match_2.webp',
         audioPath: '${_gamesAudio}match/dhaa/dhaa_match_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cards: [
@@ -425,7 +425,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'ظَرْف',
-        imagePath: '${_gamesDir}match/dhaa/dhaa_match_3.png',
+        imagePath: '${_gamesDir}match/dhaa/dhaa_match_3.webp',
         audioPath: '${_gamesAudio}match/dhaa/dhaa_match_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cards: [
@@ -436,7 +436,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'ظَبْي',
-        imagePath: '${_gamesDir}match/dhaa/dhaa_match_4.png',
+        imagePath: '${_gamesDir}match/dhaa/dhaa_match_4.webp',
         audioPath: '${_gamesAudio}match/dhaa/dhaa_match_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -449,8 +449,8 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
     coloring: [
       ColoringRound(
         word: 'ظَافِر',
-        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_1.webp',
         introAudioPath: '${_audio}dhaa_word_p4_1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_coloring_reveal_1.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_wrong_reveal_1.mp3',
@@ -461,34 +461,34 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
           GameZoneChoice(label: 'ظَافِر', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_1.png', color: Color(0xFF4527A0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_2.png', color: Color(0xFF5E35B1)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_3.png', color: Color(0xFF7E57C2)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_1.webp', color: Color(0xFF4527A0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_2.webp', color: Color(0xFF5E35B1)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_1_slice_3.webp', color: Color(0xFF7E57C2)),
         ],
       ),
       ColoringRound(
         word: 'مَنْظُور',
-        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_2.png',
-        introAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_coloring_reveal_2.mp3',
+        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_2.webp',
+        introAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_word_2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_coloring_reveal_2.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_wrong_reveal_2.mp3',
-        wordAudioPath: '${_maddAudio}dhaa_dh_waw.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_word_2.mp3',
         options: [
           GameZoneChoice(label: 'مَنْظُور', isCorrect: true),
           GameZoneChoice(label: 'سَعْد', isCorrect: false),
           GameZoneChoice(label: 'مُحَمَّد', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_1.png', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_2.png', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_3.png', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
         word: 'نَظِيم',
-        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_3.png',
+        bgImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_word_3.webp',
         introAudioPath: '${_audio}dhaa_word_p4_4.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_coloring_reveal_3.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/dhaa/dhaa_wrong_reveal_3.mp3',
@@ -499,9 +499,9 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
           GameZoneChoice(label: 'نَظِيم', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_1.png', color: Color(0xFF2E7D32)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_2.png', color: Color(0xFF43A047)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_3.png', color: Color(0xFF66BB6A)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_1.webp', color: Color(0xFF2E7D32)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_2.webp', color: Color(0xFF43A047)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/dhaa/dhaa_coloring_round_3_slice_3.webp', color: Color(0xFF66BB6A)),
         ],
       ),
     ],

@@ -63,10 +63,14 @@ class _UniversalObjectivesStationState
     setState(() => _isPlaying = true);
     try {
       await AudioService.instance.stop();
+      await AudioService.instance.playAsset(
+        'audio/sfx/celebration.mp3',
+        channel: AudioChannel.sfx,
+      );
       await AudioService.instance.playAsset(widget.spec.audioPath);
       final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
       if (done != null) {
-        await done.first.timeout(const Duration(seconds: 40), onTimeout: () {});
+        await done.first.timeout(const Duration(seconds: 10), onTimeout: () {});
       }
     } catch (_) {}
     if (mounted) setState(() => _isPlaying = false);

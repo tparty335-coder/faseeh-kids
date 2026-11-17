@@ -9,7 +9,6 @@ import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
 const String _dir = 'assets/images/lessons/raa/';
 const String _audio = 'audio/lessons/raa/final/';
 const String _vowelsAudio = 'audio/letters/short_vowels/';
-const String _maddAudio = 'audio/letters/long_vowels/';
 const String _gamesDir = 'assets/images/games/';
 const String _gamesAudio = 'audio/games/';
 
@@ -25,7 +24,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
 
   // ── الأهداف ────────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}raa_goal.mp3',
+    audioPath: 'audio/letters/core/raa_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى حَرْفِ الرَّاءِ (ر)',
       'أَنْطِقُ حَرْفَ الرَّاءِ بِالْحَرَكَاتِ الثَّلَاثِ',
@@ -41,31 +40,31 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_1.png',
+        imagePath: '${_dir}raa_cd_story_1.webp',
         audioPath: '${_audio}raa_story_1.mp3',
       ), // ذات يوم كانت الرمانة تجلس مع أخواتها من ثمار الفواكة فقالت:
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_2.png',
+        imagePath: '${_dir}raa_cd_story_2.webp',
         audioPath: '${_audio}raa_story_2.mp3',
       ), // أنا الأجمل لوناً ، والأحلى طعماً.
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_3.png',
+        imagePath: '${_dir}raa_cd_story_3.webp',
         audioPath: '${_audio}raa_story_3.mp3',
       ), // فردت البطيخة قائلة : أنا حمراء مثلك وطعمى أحلى من طعمك .
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_4.png',
+        imagePath: '${_dir}raa_cd_story_4.webp',
         audioPath: '${_audio}raa_story_4.mp3',
       ), // وأثناء ذلك مرت ريم وقالت للرمانة : لونك جميل طعمك حلو .
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_5.png',
+        imagePath: '${_dir}raa_cd_story_5.webp',
         audioPath: '${_audio}raa_story_5.mp3',
       ), // وقالت للبطيخة : طعمك حلو ، لونك جميل .
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_6.png',
+        imagePath: '${_dir}raa_cd_story_6.webp',
         audioPath: '${_audio}raa_story_6.mp3',
       ), // يا رفاق لونكم جميل ويستفيد منكم الجسم . ثم أخذت الرمانة وضحكت الفواكة .
       StoryScene(
-        imagePath: '${_dir}raa_cd_story_nasheed.png',
+        imagePath: '${_dir}raa_cd_story_nasheed.webp',
         audioPath: '${_audio}raa_nasheed.mp3',
         isNasheed: true,
       ), // راء رجل يدفع ثمنا ... يرفع علما يحمي وطنا
@@ -91,18 +90,18 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'رَا',
-        audioPath: '${_maddAudio}raa_madd_demo.mp3',
-        imagePath: '${_dir}raa_madd_aa.png',
+        audioPath: 'audio/lessons/raa/madd/raa_madd_alif.mp3',
+        imagePath: '${_dir}raa_madd_aa.webp',
       ),
       MaddItem(
         displayChar: 'رُو',
-        audioPath: '${_maddAudio}raa_madd_demo.mp3',
-        imagePath: '${_dir}raa_madd_uu.png',
+        audioPath: 'audio/lessons/raa/madd/raa_madd_waw.mp3',
+        imagePath: '${_dir}raa_madd_uu.webp',
       ),
       MaddItem(
         displayChar: 'رِي',
-        audioPath: '${_maddAudio}raa_madd_demo.mp3',
-        imagePath: '${_dir}raa_madd_ii.png',
+        audioPath: 'audio/lessons/raa/madd/raa_madd_yaa.mp3',
+        imagePath: '${_dir}raa_madd_ii.webp',
       ),
     ],
   ),
@@ -112,10 +111,10 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
     letterChar: 'ر',
     audioIntroPath: '${_audio}raa_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}raa_write_step_1.png',
-      '${_dir}raa_write_step_2.png',
-      '${_dir}raa_write_step_3.png',
-      '${_dir}raa_write_step_4.png',
+      '${_dir}raa_write_step_1.webp',
+      '${_dir}raa_write_step_2.webp',
+      '${_dir}raa_write_step_3.webp',
+      '${_dir}raa_write_step_4.webp',
     ],
   ),
 
@@ -124,12 +123,12 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
     pages: [
       // ── صفحة 1 (ka1.swf): رَجُل، رُمَان، رِجْل، ثِيرَان ──
       WordsPage(
-        listImagePath: '${_dir}raa_words_p1_list.png',
+        listImagePath: '${_dir}raa_words_p1_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'رَجُل',
-            cardImagePath: '${_dir}raa_words_p1_card_1.png',
+            cardImagePath: '${_dir}raa_words_p1_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p1_1.mp3',
             hotspot: WordHotspot(
@@ -143,7 +142,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'رُمَان',
-            cardImagePath: '${_dir}raa_words_p1_card_2.png',
+            cardImagePath: '${_dir}raa_words_p1_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p1_2.mp3',
             hotspot: WordHotspot(
@@ -157,7 +156,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'رِجْل',
-            cardImagePath: '${_dir}raa_words_p1_card_3.png',
+            cardImagePath: '${_dir}raa_words_p1_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p1_3.mp3',
             hotspot: WordHotspot(
@@ -171,7 +170,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'ثِيرَان',
-            cardImagePath: '${_dir}raa_words_p1_card_4.png',
+            cardImagePath: '${_dir}raa_words_p1_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p1_4.mp3',
             hotspot: WordHotspot(
@@ -188,12 +187,12 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
 
       // ── صفحة 2 (ka2.swf): ذِرَاع، بُرْج، رِيشَة، دَرَاجَة ──
       WordsPage(
-        listImagePath: '${_dir}raa_words_p2_list.png',
+        listImagePath: '${_dir}raa_words_p2_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'ذِرَاع',
-            cardImagePath: '${_dir}raa_words_p2_card_1.png',
+            cardImagePath: '${_dir}raa_words_p2_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p2_1.mp3',
             hotspot: WordHotspot(
@@ -207,7 +206,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'بُرْج',
-            cardImagePath: '${_dir}raa_words_p2_card_2.png',
+            cardImagePath: '${_dir}raa_words_p2_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p2_2.mp3',
             hotspot: WordHotspot(
@@ -221,7 +220,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'رِيشَة',
-            cardImagePath: '${_dir}raa_words_p2_card_3.png',
+            cardImagePath: '${_dir}raa_words_p2_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p2_3.mp3',
             hotspot: WordHotspot(
@@ -235,7 +234,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَرَاجَة',
-            cardImagePath: '${_dir}raa_words_p2_card_4.png',
+            cardImagePath: '${_dir}raa_words_p2_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p2_4.mp3',
             hotspot: WordHotspot(
@@ -252,12 +251,12 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
 
       // ── صفحة 3 (ka3.swf): عُصْفُور، ذُرَة، فَرَاشَة، قَارِب ──
       WordsPage(
-        listImagePath: '${_dir}raa_words_p3_list.png',
+        listImagePath: '${_dir}raa_words_p3_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'عُصْفُور',
-            cardImagePath: '${_dir}raa_words_p3_card_1.png',
+            cardImagePath: '${_dir}raa_words_p3_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p3_1.mp3',
             hotspot: WordHotspot(
@@ -271,7 +270,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'ذُرَة',
-            cardImagePath: '${_dir}raa_words_p3_card_2.png',
+            cardImagePath: '${_dir}raa_words_p3_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p3_2.mp3',
             hotspot: WordHotspot(
@@ -285,7 +284,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'فَرَاشَة',
-            cardImagePath: '${_dir}raa_words_p3_card_3.png',
+            cardImagePath: '${_dir}raa_words_p3_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p3_3.mp3',
             hotspot: WordHotspot(
@@ -299,7 +298,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'قَارِب',
-            cardImagePath: '${_dir}raa_words_p3_card_4.png',
+            cardImagePath: '${_dir}raa_words_p3_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p3_4.mp3',
             hotspot: WordHotspot(
@@ -316,12 +315,12 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
 
       // ── صفحة 4 (ka4.swf): نَمِر، بِرْسِيم، جَرَار، فَأْر ──
       WordsPage(
-        listImagePath: '${_dir}raa_words_p4_list.png',
+        listImagePath: '${_dir}raa_words_p4_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'نَمِر',
-            cardImagePath: '${_dir}raa_words_p4_card_1.png',
+            cardImagePath: '${_dir}raa_words_p4_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p4_1.mp3',
             hotspot: WordHotspot(
@@ -335,7 +334,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'بِرْسِيم',
-            cardImagePath: '${_dir}raa_words_p4_card_2.png',
+            cardImagePath: '${_dir}raa_words_p4_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p4_2.mp3',
             hotspot: WordHotspot(
@@ -349,7 +348,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'جَرَار',
-            cardImagePath: '${_dir}raa_words_p4_card_3.png',
+            cardImagePath: '${_dir}raa_words_p4_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p4_3.mp3',
             hotspot: WordHotspot(
@@ -363,7 +362,7 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'فَأْر',
-            cardImagePath: '${_dir}raa_words_p4_card_4.png',
+            cardImagePath: '${_dir}raa_words_p4_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}raa_word_p4_4.mp3',
             hotspot: WordHotspot(
@@ -383,63 +382,63 @@ const LetterUnitManifest raaManifest = LetterUnitManifest(
   // ── الألعاب ────────────────────────────────────────────────────────────────
   games: GamesSpec(
     fishing: [
-      FishingRound(word: 'رُمَّان', imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_1.png', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_1.mp3', isCorrect: true),
-      FishingRound(word: 'بَاب',   imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_2.png', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_2.mp3', isCorrect: false),
-      FishingRound(word: 'رِيشَة',  imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_3.png', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_3.mp3', isCorrect: true),
-      FishingRound(word: 'كِتَاب', imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_4.png', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_4.mp3', isCorrect: false),
+      FishingRound(word: 'رُمَّان', imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_1.webp', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_1.mp3', isCorrect: true),
+      FishingRound(word: 'بَاب',   imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_2.webp', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_2.mp3', isCorrect: true),
+      FishingRound(word: 'رِيشَة',  imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_3.webp', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_3.mp3', isCorrect: true),
+      FishingRound(word: 'كِتَاب', imagePath: '${_gamesDir}fishing/raa/raa_fishing_round_4.webp', audioPath: '${_gamesAudio}fishing/raa/raa_fishing_4.mp3', isCorrect: true),
     ],
     beehive: [
-      BeehiveRound(word: 'رَجُل',  imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_1.png', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_1.mp3'),
-      BeehiveRound(word: 'رُمَّان', imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_2.png', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_2.mp3'),
-      BeehiveRound(word: 'رِيشَة', imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_3.png', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_3.mp3'),
-      BeehiveRound(word: 'بَحْر',  imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_4.png', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_4.mp3'),
+      BeehiveRound(word: 'رَجُل',  imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_1.mp3'),
+      BeehiveRound(word: 'رُمَّان', imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_2.mp3'),
+      BeehiveRound(word: 'رِيشَة', imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_3.mp3'),
+      BeehiveRound(word: 'بَحْر',  imagePath: '${_gamesDir}beehive/raa/raa_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/raa/raa_beehive_4.mp3'),
     ],
     circus: [
-      CircusRound(word: 'رُمَّان', imagePath: '${_gamesDir}circus/raa/raa_circus_round_1.png', audioPath: '${_gamesAudio}circus/raa/raa_circus_1.mp3'),
-      CircusRound(word: 'رِيم',   imagePath: '${_gamesDir}circus/raa/raa_circus_round_2.png', audioPath: '${_gamesAudio}circus/raa/raa_circus_2.mp3'),
-      CircusRound(word: 'رَجُل',  imagePath: '${_gamesDir}circus/raa/raa_circus_round_3.png', audioPath: '${_gamesAudio}circus/raa/raa_circus_3.mp3'),
+      CircusRound(word: 'رُمَّان', imagePath: '${_gamesDir}circus/raa/raa_circus_round_1.webp', audioPath: '${_gamesAudio}circus/raa/raa_circus_1.mp3'),
+      CircusRound(word: 'رِيم',   imagePath: '${_gamesDir}circus/raa/raa_circus_round_2.webp', audioPath: '${_gamesAudio}circus/raa/raa_circus_2.mp3'),
+      CircusRound(word: 'رَجُل',  imagePath: '${_gamesDir}circus/raa/raa_circus_round_3.webp', audioPath: '${_gamesAudio}circus/raa/raa_circus_3.mp3'),
     ],
     wordsMatch: [
-      WordsMatchPair(word: 'رِيم',   imagePath: '${_gamesDir}match/raa/raa_match_1.png', audioPath: '${_gamesAudio}match/raa/raa_match_1.mp3'),
-      WordsMatchPair(word: 'رُمَّان', imagePath: '${_gamesDir}match/raa/raa_match_2.png', audioPath: '${_gamesAudio}match/raa/raa_match_2.mp3'),
-      WordsMatchPair(word: 'رَجُل',  imagePath: '${_gamesDir}match/raa/raa_match_3.png', audioPath: '${_gamesAudio}match/raa/raa_match_3.mp3'),
-      WordsMatchPair(word: 'بَحْر',  imagePath: '${_gamesDir}match/raa/raa_match_4.png', audioPath: '${_gamesAudio}match/raa/raa_match_4.mp3'),
+      WordsMatchPair(word: 'رِيم',   imagePath: '${_gamesDir}match/raa/raa_match_1.webp', audioPath: '${_gamesAudio}match/raa/raa_match_1.mp3'),
+      WordsMatchPair(word: 'رُمَّان', imagePath: '${_gamesDir}match/raa/raa_match_2.webp', audioPath: '${_gamesAudio}match/raa/raa_match_2.mp3'),
+      WordsMatchPair(word: 'رَجُل',  imagePath: '${_gamesDir}match/raa/raa_match_3.webp', audioPath: '${_gamesAudio}match/raa/raa_match_3.mp3'),
+      WordsMatchPair(word: 'بَحْر',  imagePath: '${_gamesDir}match/raa/raa_match_4.webp', audioPath: '${_gamesAudio}match/raa/raa_match_4.mp3'),
     ],
     coloring: [
       ColoringRound(
         word: 'رَاح',
-        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_1.webp',
         introAudioPath: '${_audio}raa_paint_word1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/raa/raa_reveal_raah.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_1.png', color: Color(0xFFC2185B)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_2.png', color: Color(0xFFE91E63)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_3.png', color: Color(0xFFF48FB1)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_1.webp', color: Color(0xFFC2185B)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_2.webp', color: Color(0xFFE91E63)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_1_slice_3.webp', color: Color(0xFFF48FB1)),
         ],
       ),
       ColoringRound(
         word: 'رُوح',
-        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_2.webp',
         introAudioPath: '${_audio}raa_paint_word2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/raa/raa_reveal_rooh.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_1.png', color: Color(0xFF880E4F)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_2.png', color: Color(0xFFAD1457)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_3.png', color: Color(0xFFF06292)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_1.webp', color: Color(0xFF880E4F)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_2.webp', color: Color(0xFFAD1457)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_2_slice_3.webp', color: Color(0xFFF06292)),
         ],
       ),
       ColoringRound(
         word: 'رِيح',
-        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_3.png',
+        bgImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/raa/raa_coloring_word_3.webp',
         introAudioPath: '${_audio}raa_paint_word3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/raa/raa_reveal_reeh.mp3',
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_1.png', color: Color(0xFFD81B60)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_2.png', color: Color(0xFFEC407A)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_3.png', color: Color(0xFFF8BBD0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_1.webp', color: Color(0xFFD81B60)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_2.webp', color: Color(0xFFEC407A)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/raa/raa_coloring_round_3_slice_3.webp', color: Color(0xFFF8BBD0)),
         ],
       ),
     ],

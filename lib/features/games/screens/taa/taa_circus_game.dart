@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (cir_t1): فِيل ❌، حِمَار ❌، تِمْسَاح ✅
   _Round(
-    imagePath: 'assets/images/games/circus/taa_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/taa_circus_round_1.webp',
     imgH: 499,
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     zones: [
@@ -53,7 +53,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (cir_t2): نَمِر ❌، حُوت ✅، ثُعْبَان ❌
   _Round(
-    imagePath: 'assets/images/games/circus/taa_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/taa_circus_round_2.webp',
     imgH: 499,
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
     zones: [
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (cir_t3): تِين ✅، بِطِّيخ ❌، عِنَب ❌
   _Round(
-    imagePath: 'assets/images/games/circus/taa_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/taa_circus_round_3.webp',
     imgH: 499,
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     zones: [

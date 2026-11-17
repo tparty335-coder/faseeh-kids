@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1 (fish1): سَمَكَة ✅ | جَمَل ❌ | أَرْنَب ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_1.webp',
     correctWord: 'سَمَكَة',
     wordAudio: 'audio/games/fishing/seen/seen_fishing_1.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2 (fish2): قُطْن ❌ | فُول ❌ | بِرْسِيم ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_2.webp',
     correctWord: 'بِرْسِيم',
     wordAudio: 'audio/games/fishing/seen/seen_fishing_2.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3 (fish3): طَائِرَة ❌ | سَيَّارَة ✅ | قِطَار ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_3.webp',
     correctWord: 'سَيَّارَة',
     wordAudio: 'audio/games/fishing/seen/seen_fishing_3.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4 (fish4): قَمَر ❌ | نَجْم ❌ | شَمْس ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/seen/seen_fishing_round_4.webp',
     correctWord: 'شَمْس',
     wordAudio: 'audio/games/fishing/seen/seen_fishing_4.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',

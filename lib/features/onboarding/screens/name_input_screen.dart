@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
+import 'package:faseeh_kids/core/utils/constants.dart';
 
 class NameInputScreen extends StatefulWidget {
   final AgeGroup ageGroup;
@@ -23,24 +25,37 @@ class _NameInputScreenState extends State<NameInputScreen> {
   final _formKey = GlobalKey<FormState>();
   final _focusNode = FocusNode();
 
-  // Emoji for the selected avatar
+  // Emoji for the selected avatar (aligned with the 5 available avatar assets)
   static const List<String> _avatarEmojis = [
-    '🦅','🦁','🐪','🐇','🦊','🐻','🦋','⭐','🌟',
+    '🦁','🐇','🐪','👑','🏆',
   ];
 
   void _proceed() {
     if (_formKey.currentState?.validate() ?? false) {
       HapticFeedback.lightImpact();
+      final childName = _controller.text.trim();
+      try {
+        if (Hive.isBoxOpen(AppConstants.childProfileBox)) {
+          final box = Hive.box(AppConstants.childProfileBox);
+          box.put('child_name', childName);
+          box.put('activeChild', childName);
+          box.put('avatar_index', widget.avatarIndex);
+          box.put(
+            'child_age',
+            widget.ageGroup == AgeGroup.preschool3to5
+                ? 4
+                : (widget.ageGroup == AgeGroup.emerging6to8 ? 7 : 9),
+          );
+        }
+      } catch (_) {}
 
       context.go(
-        AppRouter.homeMap,
-        extra: {
-          'ageGroup': widget.ageGroup,
-          'avatarIndex': widget.avatarIndex,
-          'name': _controller.text.trim(),
-          'startingUnit': 'unit_01_alif',
-          'isNewProfile': true,
-        },
+        AppRouter.placementTest,
+        extra: PlacementTestArgs(
+          ageGroup: widget.ageGroup,
+          avatarIndex: widget.avatarIndex,
+          childName: childName,
+        ),
       );
     }
   }

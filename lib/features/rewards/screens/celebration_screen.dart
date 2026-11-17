@@ -144,7 +144,7 @@ class _CelebrationScreenState extends State<CelebrationScreen> {
                         ),
                         child: ClipOval(
                           child: Image.asset(
-                            'assets/images/mascot/falcon_celebrating.jpg',
+                            'assets/images/mascot/falcon_celebrating.webp',
                             fit: BoxFit.cover,
                           ),
                         ),

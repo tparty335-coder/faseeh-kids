@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: زَيْتُون ✅ | أَسَد ❌ | فَأْس ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_1.webp',
     correctWord: 'زَيْتُون',
     wordAudio: 'audio/lessons/zaay/final/zaay_word_p1_2.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: وَلَد ❌ | قَلَم ❌ | زَهْرَة ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_2.webp',
     correctWord: 'زَهْرَة',
     wordAudio: 'audio/lessons/zaay/final/zaay_word_p1_1.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: بَاب ❌ | زَرَافَة ✅ | أُذُن ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_3.webp',
     correctWord: 'زَرَافَة',
     wordAudio: 'audio/lessons/zaay/final/zaay_word_p1_3.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: أُمِّي ❌ | أَسَد ❌ | مَوْز ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/zaay/zaay_fishing_round_4.webp',
     correctWord: 'مَوْز',
     wordAudio: 'audio/lessons/zaay/final/zaay_word_p4_1.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',

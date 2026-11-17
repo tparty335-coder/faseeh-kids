@@ -76,12 +76,34 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
     await _say(prompt, maxMs: 5600);
   }
 
+  List<String> _distractorWords() {
+    const pool = ['أَسَد', 'قَلَم', 'كِتَاب', 'فِيل', 'وَلَد', 'بَاب', 'عِنَب', 'مَوْز'];
+    final ch = widget.manifest.letter.replaceAll('ـ', '').trim();
+    final filtered = pool.where((w) => !w.contains(ch)).toList();
+    return filtered.length >= 2 ? filtered : pool;
+  }
+
   List<GameZoneChoice> _effectiveCards(WordsMatchPair rd) {
     if (rd.cards != null && rd.cards!.isNotEmpty) return rd.cards!;
+    const correctByRound = [1, 0, 2, 0];
+    final corr = correctByRound[_round % 4];
+    final d = _distractorWords();
     return [
-      GameZoneChoice(label: rd.word, isCorrect: true, colorValue: 0xFF5AC8FA),
-      const GameZoneChoice(label: 'كلمة ٢', isCorrect: false, colorValue: 0xFFFF9EB5),
-      const GameZoneChoice(label: 'كلمة ٣', isCorrect: false, colorValue: 0xFFFFD17A),
+      GameZoneChoice(
+        label: corr == 0 ? rd.word : d[(_round * 2) % d.length],
+        isCorrect: corr == 0,
+        colorValue: 0xFF5AC8FA,
+      ),
+      GameZoneChoice(
+        label: corr == 1 ? rd.word : d[(_round * 2 + 1) % d.length],
+        isCorrect: corr == 1,
+        colorValue: 0xFFFF9EB5,
+      ),
+      GameZoneChoice(
+        label: corr == 2 ? rd.word : d[(_round * 2 + 2) % d.length],
+        isCorrect: corr == 2,
+        colorValue: 0xFFFFD17A,
+      ),
     ];
   }
 

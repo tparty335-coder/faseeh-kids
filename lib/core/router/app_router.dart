@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
@@ -8,6 +9,7 @@ import 'package:faseeh_kids/features/onboarding/screens/onboarding_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/age_selection_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/avatar_selection_screen.dart';
 import 'package:faseeh_kids/features/onboarding/screens/name_input_screen.dart';
+import 'package:faseeh_kids/features/onboarding/screens/placement_test_screen.dart';
 
 // ─── Home / Oasis Map ───
 import 'package:faseeh_kids/features/home/screens/oasis_map_screen.dart';
@@ -144,7 +146,7 @@ class AppRouter {
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
     initialLocation: splash,
-    debugLogDiagnostics: true,
+    debugLogDiagnostics: kDebugMode,
     routes: [
       // ─── Onboarding Flow ───
       GoRoute(
@@ -196,10 +198,19 @@ class AppRouter {
       GoRoute(
         path: placementTest,
         name: 'placementTest',
-        pageBuilder: (context, state) => _slideTransition(
-          state: state,
-          child: const OasisMapScreen(),
-        ),
+        pageBuilder: (context, state) {
+          final args = state.extra is PlacementTestArgs
+              ? state.extra as PlacementTestArgs
+              : const PlacementTestArgs();
+          return _slideTransition(
+            state: state,
+            child: PlacementTestScreen(
+              ageGroup: args.ageGroup,
+              avatarIndex: args.avatarIndex,
+              childName: args.childName,
+            ),
+          );
+        },
       ),
 
       // ─── Main App: Oasis Map (Home) ───
@@ -211,14 +222,15 @@ class AppRouter {
           child: const OasisMapScreen(),
         ),
       ),
-      GoRoute(
-        path: '/luxury_oasis',
-        name: 'luxuryOasis',
-        pageBuilder: (context, state) => _scaleTransition(
-          state: state,
-          child: const LuxuryOasisShowcaseScreen(),
+      if (!kReleaseMode)
+        GoRoute(
+          path: '/luxury_oasis',
+          name: 'luxuryOasis',
+          pageBuilder: (context, state) => _scaleTransition(
+            state: state,
+            child: const LuxuryOasisShowcaseScreen(),
+          ),
         ),
-      ),
 
       // ─── Lessons ───
       GoRoute(
@@ -272,10 +284,13 @@ class AppRouter {
       GoRoute(
         path: parentGate,
         name: 'parentGate',
-        pageBuilder: (context, state) => _slideTransition(
-          state: state,
-          child: const ParentGateScreen(),
-        ),
+        pageBuilder: (context, state) {
+          final targetRoute = state.extra is String ? state.extra as String : null;
+          return _slideTransition(
+            state: state,
+            child: ParentGateScreen(targetRoute: targetRoute),
+          );
+        },
       ),
       GoRoute(
         path: parentDashboard,

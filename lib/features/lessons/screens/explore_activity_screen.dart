@@ -43,9 +43,9 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
   ];
 
   static const List<String> _storyImages = [
-    'assets/images/lessons/alif/alif_story_1.jpg',
-    'assets/images/lessons/alif/alif_story_2.jpg',
-    'assets/images/lessons/alif/alif_story_3.jpg',
+    'assets/images/lessons/alif/alif_story_1.webp',
+    'assets/images/lessons/alif/alif_story_2.webp',
+    'assets/images/lessons/alif/alif_story_3.webp',
   ];
 
   @override

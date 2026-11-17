@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: خَرُوف (خَـ...) ← خَ (يسار)
   _Round(
-    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_1.png',
+    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_1.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/kha/final/kha_word_p1_1.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -54,7 +54,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: خِيمَة (خِـ...) ← خِ (يمين)
   _Round(
-    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_2.png',
+    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_2.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/kha/final/kha_word_p2_1.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -67,7 +67,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: خُبْز (خُـ...) ← خُ (أعلى)
   _Round(
-    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_3.png',
+    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_3.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/kha/final/kha_word_p3_1.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
@@ -80,7 +80,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: نَخْل (...خْ...) ← خْ (أسفل)
   _Round(
-    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_4.png',
+    imagePath: 'assets/images/games/beehive/kha/kha_beehive_round_4.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/kha/final/kha_word_p4_1.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',

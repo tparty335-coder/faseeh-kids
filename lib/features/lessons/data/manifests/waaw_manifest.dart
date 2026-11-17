@@ -21,7 +21,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
   nextLetter: 'ي',
 
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}waaw_goal.mp3',
+    audioPath: 'audio/letters/core/waaw_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الْوَاوِ (و)',
       'أَنْطِقُ حَرْفَ الْوَاوِ بِالْحَرَكَاتِ الْقَصِيرَةِ وَالسُّكُونِ',
@@ -36,17 +36,17 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}waaw_cd_story_1.png',
+        imagePath: '${_dir}waaw_cd_story_1.webp',
         audioPath: '${_audio}waaw_story_1.mp3',
         captionText: 'خَرَجَتْ وِسَامُ إِلَى حَدِيقَةِ الْمَنْزِلِ لِتَتَنَزَّهَ فِي الْحَدِيقَةِ وَتَشُمَّ رَائِحَةَ الْوَرْدِ الْعَطِرَةِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}waaw_cd_story_2.png',
+        imagePath: '${_dir}waaw_cd_story_2.webp',
         audioPath: '${_audio}waaw_story_2.mp3',
         captionText: 'وَنَظَرَتْ إِلَى الْوَرْدِ بِأَلْوَانِهِ الْجَمِيلَةِ وَقَالَتْ: سُبْحَانَ اللَّهِ الَّذِي خَلَقَ وَأَبْدَعَ هَذِهِ الْأَلْوَانَ الْجَمِيلَةَ.',
       ),
       StoryScene(
-        imagePath: '${_dir}waaw_cd_story_nasheed.png',
+        imagePath: '${_dir}waaw_cd_story_nasheed.webp',
         audioPath: '${_audio}waaw_nasheed.mp3',
         isNasheed: true,
         captionText: 'وَاوٌ وَرْدَةٌ فِي الْبُسْتَانِ .. تُعْطِي عِطْرًا لِلْإِنْسَانِ 🎵',
@@ -73,7 +73,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}waaw_fatha.mp3',
         fullRuleAudio: '${_soundsAudio}waaw_fatha_rule.mp3',
         wordAudio: '${_audio}waaw_word_p2_1.mp3',
-        slideImagePath: '${_dir}waaw_vowel_fatha.png',
+        slideImagePath: '${_dir}waaw_vowel_fatha.webp',
       ),
       VowelCardSpec(
         vowelName: 'الضَّمَّةُ',
@@ -83,7 +83,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}waaw_damma.mp3',
         fullRuleAudio: '${_soundsAudio}waaw_damma_rule.mp3',
         wordAudio: '${_gamesAudio}fishing/waaw/waaw_fishing_3.mp3',
-        slideImagePath: '${_dir}waaw_vowel_damma.png',
+        slideImagePath: '${_dir}waaw_vowel_damma.webp',
       ),
       VowelCardSpec(
         vowelName: 'الْكَسْرَةُ',
@@ -93,7 +93,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}waaw_kasra.mp3',
         fullRuleAudio: '${_soundsAudio}waaw_kasra_rule.mp3',
         wordAudio: '${_gamesAudio}beehive/waaw/waaw_beehive_2.mp3',
-        slideImagePath: '${_dir}waaw_vowel_kasra.png',
+        slideImagePath: '${_dir}waaw_vowel_kasra.webp',
       ),
       VowelCardSpec(
         vowelName: 'السُّكُونُ',
@@ -103,7 +103,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}waaw_sukoon.mp3',
         fullRuleAudio: '${_soundsAudio}waaw_sukoon_rule.mp3',
         wordAudio: '${_gamesAudio}fishing/waaw/waaw_fishing_4.mp3',
-        slideImagePath: '${_dir}waaw_vowel_sukoon.png',
+        slideImagePath: '${_dir}waaw_vowel_sukoon.webp',
       ),
     ],
   ),
@@ -115,7 +115,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'وَا',
         audioPath: '${_maddAudio}waaw_alif.mp3',
-        imagePath: '${_dir}waaw_madd_aa.png',
+        imagePath: '${_dir}waaw_madd_aa.webp',
         exampleWord: 'دَوَاء',
         explanation: 'وَاوٌ مَفْتُوحَةٌ مَعَ مَدٍّ بِالْأَلِفِ: وَا',
         wordAudioPath: '${_audio}waaw_word_p3_4.mp3',
@@ -124,7 +124,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'وُو',
         audioPath: '${_maddAudio}waaw_waw.mp3',
-        imagePath: '${_dir}waaw_madd_uu.png',
+        imagePath: '${_dir}waaw_madd_uu.webp',
         exampleWord: 'طَاوُوس',
         explanation: 'وَاوٌ مَضْمُومَةٌ مَعَ مَدٍّ بِالْوَاوِ: وُو',
         wordAudioPath: '${_audio}waaw_word_p4_3.mp3',
@@ -133,10 +133,10 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'وِي',
         audioPath: '${_maddAudio}waaw_yaa.mp3',
-        imagePath: '${_dir}waaw_madd_ii.png',
+        imagePath: '${_dir}waaw_madd_ii.webp',
         exampleWord: 'طَوِيل',
         explanation: 'وَاوٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: وِي',
-        wordAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_3.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/waaw/waaw_word_3.mp3',
         accentColor: Color(0xFFD84315),
       ),
     ],
@@ -146,10 +146,10 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     letterChar: 'و',
     audioIntroPath: '${_audio}waaw_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}waaw_write_step_1.png',
-      '${_dir}waaw_write_step_2.png',
-      '${_dir}waaw_write_step_3.png',
-      '${_dir}waaw_write_step_4.png',
+      '${_dir}waaw_write_step_1.webp',
+      '${_dir}waaw_write_step_2.webp',
+      '${_dir}waaw_write_step_3.webp',
+      '${_dir}waaw_write_step_4.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -159,7 +159,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         exampleWord: 'عَمْرُو',
         exampleEmoji: '🧑',
         audioPath: '${_audio}waaw_trace_isolated.mp3',
-        imagePath: '${_dir}waaw_trace_isolated.png',
+        imagePath: '${_dir}waaw_trace_isolated.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -168,7 +168,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         exampleWord: 'وَجْه',
         exampleEmoji: '😊',
         audioPath: '${_coreAudio}waaw_pos_start.mp3',
-        imagePath: '${_dir}waaw_trace_start.png',
+        imagePath: '${_dir}waaw_trace_start.webp',
       ),
       TracingPositionSpec(
         position: 'middle',
@@ -177,7 +177,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         exampleWord: 'صُنْدُوق',
         exampleEmoji: '📦',
         audioPath: '${_coreAudio}waaw_pos_middle.mp3',
-        imagePath: '${_dir}waaw_trace_middle.png',
+        imagePath: '${_dir}waaw_trace_middle.webp',
       ),
       TracingPositionSpec(
         position: 'end',
@@ -186,7 +186,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
         exampleWord: 'طُيُور',
         exampleEmoji: '🐦',
         audioPath: '${_coreAudio}waaw_pos_end.mp3',
-        imagePath: '${_dir}waaw_trace_end.png',
+        imagePath: '${_dir}waaw_trace_end.webp',
       ),
     ],
   ),
@@ -194,43 +194,43 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
   words: WordsSpec(
     pages: [
       WordsPage(
-        listImagePath: '${_dir}waaw_words_p1_list.png',
+        listImagePath: '${_dir}waaw_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'طُيُور', cardImagePath: '${_dir}waaw_words_p1_card_1.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'نُسُور', cardImagePath: '${_dir}waaw_words_p1_card_2.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عُصْفُور', cardImagePath: '${_dir}waaw_words_p1_card_3.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'كَتْكُوت', cardImagePath: '${_dir}waaw_words_p1_card_4.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'طُيُور', cardImagePath: '${_dir}waaw_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'نُسُور', cardImagePath: '${_dir}waaw_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عُصْفُور', cardImagePath: '${_dir}waaw_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'كَتْكُوت', cardImagePath: '${_dir}waaw_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}waaw_words_p2_list.png',
+        listImagePath: '${_dir}waaw_words_p2_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'وَجْه', cardImagePath: '${_dir}waaw_words_p2_card_1.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'وَلَد', cardImagePath: '${_dir}waaw_words_p2_card_2.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُلُوك', cardImagePath: '${_dir}waaw_words_p2_card_3.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'وَرْدَة', cardImagePath: '${_dir}waaw_words_p2_card_4.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'وَجْه', cardImagePath: '${_dir}waaw_words_p2_card_1.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'وَلَد', cardImagePath: '${_dir}waaw_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُلُوك', cardImagePath: '${_dir}waaw_words_p2_card_3.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'وَرْدَة', cardImagePath: '${_dir}waaw_words_p2_card_4.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}waaw_words_p3_list.png',
+        listImagePath: '${_dir}waaw_words_p3_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}waaw_words_p3_card_1.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ثُوم', cardImagePath: '${_dir}waaw_words_p3_card_2.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'بُذُور', cardImagePath: '${_dir}waaw_words_p3_card_3.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'دَوَاء', cardImagePath: '${_dir}waaw_words_p3_card_4.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}waaw_words_p3_card_1.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ثُوم', cardImagePath: '${_dir}waaw_words_p3_card_2.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'بُذُور', cardImagePath: '${_dir}waaw_words_p3_card_3.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'دَوَاء', cardImagePath: '${_dir}waaw_words_p3_card_4.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}waaw_words_p4_list.png',
+        listImagePath: '${_dir}waaw_words_p4_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'ضَوْء', cardImagePath: '${_dir}waaw_words_p4_card_1.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عُطُور', cardImagePath: '${_dir}waaw_words_p4_card_2.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'طَاوُوس', cardImagePath: '${_dir}waaw_words_p4_card_3.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'صُنْدُوق', cardImagePath: '${_dir}waaw_words_p4_card_4.png', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ضَوْء', cardImagePath: '${_dir}waaw_words_p4_card_1.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عُطُور', cardImagePath: '${_dir}waaw_words_p4_card_2.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'طَاوُوس', cardImagePath: '${_dir}waaw_words_p4_card_3.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'صُنْدُوق', cardImagePath: '${_dir}waaw_words_p4_card_4.webp', cardHeight: 474, audioPath: '${_audio}waaw_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
     ],
@@ -254,11 +254,11 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     fishing: [
       FishingRound(
         word: 'وَجْه',
-        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_1.png',
+        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/waaw/waaw_fishing_1.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba62.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
         zones: [
           GameZoneChoice(label: 'وَجْه', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'رَجُل', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -267,11 +267,11 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'وِسَام',
-        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_2.png',
+        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/waaw/waaw_fishing_2.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba58.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
         zones: [
           GameZoneChoice(label: 'مُهَنَّد', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'حَمْزَة', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -280,11 +280,11 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'وُجُوه',
-        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_3.png',
+        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/waaw/waaw_fishing_3.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba56.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
         zones: [
           GameZoneChoice(label: 'رَأْس', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'وُجُوه', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -293,11 +293,11 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'حَوْض',
-        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_4.png',
+        imagePath: '${_gamesDir}fishing/waaw/waaw_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/waaw/waaw_fishing_4.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba52.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
         zones: [
           GameZoneChoice(label: 'طَبَق', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'مَاء', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -308,7 +308,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(
         word: 'وَجْه',
-        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_1.png',
+        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/waaw/waaw_beehive_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -320,7 +320,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'وِسَام',
-        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_2.png',
+        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/waaw/waaw_beehive_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -332,7 +332,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'طَاوُوس',
-        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_3.png',
+        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/waaw/waaw_beehive_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -344,7 +344,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'ضَوْء',
-        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_4.png',
+        imagePath: '${_gamesDir}beehive/waaw/waaw_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/waaw/waaw_beehive_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -358,9 +358,9 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     circus: [
       CircusRound(
         word: 'حُوت',
-        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_1.png',
+        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/waaw/waaw_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}circus/7_ba62.mp3',
+        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         zones: [
           GameZoneChoice(label: 'حِصَان', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'تِمْسَاح', isCorrect: false, px: 269, py: 232),
@@ -369,9 +369,9 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'طَاوُوس',
-        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_2.png',
+        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/waaw/waaw_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba59.mp3',
+        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         zones: [
           GameZoneChoice(label: 'شَجَرَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'طَاوُوس', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/waaw/waaw_circus_2.mp3'),
@@ -380,9 +380,9 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'كَتْكُوت',
-        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_3.png',
+        imagePath: '${_gamesDir}circus/waaw/waaw_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/waaw/waaw_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba53.mp3',
+        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         zones: [
           GameZoneChoice(label: 'فَرَاشَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'قِطَّة', isCorrect: false, px: 269, py: 232),
@@ -393,7 +393,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     wordsMatch: [
       WordsMatchPair(
         word: 'ثُوم',
-        imagePath: '${_gamesDir}match/waaw/waaw_match_1.png',
+        imagePath: '${_gamesDir}match/waaw/waaw_match_1.webp',
         audioPath: '${_gamesAudio}match/waaw/waaw_match_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -404,7 +404,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'دَوَاء',
-        imagePath: '${_gamesDir}match/waaw/waaw_match_2.png',
+        imagePath: '${_gamesDir}match/waaw/waaw_match_2.webp',
         audioPath: '${_gamesAudio}match/waaw/waaw_match_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cards: [
@@ -415,7 +415,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'تُوت',
-        imagePath: '${_gamesDir}match/waaw/waaw_match_3.png',
+        imagePath: '${_gamesDir}match/waaw/waaw_match_3.webp',
         audioPath: '${_gamesAudio}match/waaw/waaw_match_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cards: [
@@ -426,7 +426,7 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'طُيُور',
-        imagePath: '${_gamesDir}match/waaw/waaw_match_4.png',
+        imagePath: '${_gamesDir}match/waaw/waaw_match_4.webp',
         audioPath: '${_gamesAudio}match/waaw/waaw_match_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -439,8 +439,8 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
     coloring: [
       ColoringRound(
         word: 'دَوَاء',
-        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_1.webp',
         introAudioPath: '${_audio}waaw_word_p3_4.mp3',
         revealAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_1.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/waaw/waaw_wrong_reveal_1.mp3',
@@ -451,15 +451,15 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
           GameZoneChoice(label: 'دَوَاء', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_1.png', color: Color(0xFF00796B)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_2.png', color: Color(0xFF009688)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_3.png', color: Color(0xFF4DB6AC)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_1.webp', color: Color(0xFF00796B)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_2.webp', color: Color(0xFF009688)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_1_slice_3.webp', color: Color(0xFF4DB6AC)),
         ],
       ),
       ColoringRound(
         word: 'طَاوُوس',
-        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_2.webp',
         introAudioPath: '${_audio}waaw_word_p4_3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_2.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/waaw/waaw_wrong_reveal_2.mp3',
@@ -470,28 +470,28 @@ const LetterUnitManifest waawManifest = LetterUnitManifest(
           GameZoneChoice(label: 'فَأْر', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_1.png', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_2.png', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_3.png', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
         word: 'طَوِيل',
-        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_3.png',
-        introAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_3.mp3',
+        bgImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_word_3.webp',
+        introAudioPath: '${_gamesAudio}coloring/waaw/waaw_word_3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_3.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/waaw/waaw_wrong_reveal_3.mp3',
-        wordAudioPath: '${_gamesAudio}coloring/waaw/waaw_coloring_reveal_3.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/waaw/waaw_word_3.mp3',
         options: [
           GameZoneChoice(label: 'قَمْح', isCorrect: false),
           GameZoneChoice(label: 'خُبْز', isCorrect: false),
           GameZoneChoice(label: 'طَوِيل', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_1.png', color: Color(0xFFD84315)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_2.png', color: Color(0xFFEF6C00)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_3.png', color: Color(0xFFFFA726)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_1.webp', color: Color(0xFFD84315)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_2.webp', color: Color(0xFFEF6C00)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/waaw/waaw_coloring_round_3_slice_3.webp', color: Color(0xFFFFA726)),
         ],
       ),
     ],

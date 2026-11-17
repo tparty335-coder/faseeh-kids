@@ -64,8 +64,8 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1: إبرة ❌، أسد ❌، أولى ✅  → أ و ل ى
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_1.png',
-    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_1.png',
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_1.webp',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_1.webp',
     correctWord: 'أُولَى',
     correctAudio: 'audio/games/coloring/alif_good_olaa.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_olaa.mp3',
@@ -79,8 +79,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2: أرنب ❌، إيناس ✅، فأس ❌  → إ ي ن ا س
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_2.png',
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_2.webp',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_2.webp',
     correctWord: 'إِينَاس',
     correctAudio: 'audio/games/coloring/alif_good_inas.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_inas.mp3',
@@ -94,8 +94,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3: آمال ✅، رأس ❌، أذن ❌  → آ م ا ل
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_3.png',
+    bgImagePath: 'assets/images/games/coloring/alif_coloring_round_3.webp',
+    wordMaskPath: 'assets/images/games/coloring/alif_coloring_word_3.webp',
     correctWord: 'آمَال',
     correctAudio: 'audio/games/coloring/alif_good_amal.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_amal.mp3',
@@ -313,7 +313,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
     if (!allColored) {
       try {
         AudioService.instance.playAsset(
-          'audio/games/coloring/6_b2.mp3',
+          'audio/sfx/tap.mp3',
           channel: AudioChannel.sfx,
         );
       } catch (_) {}
@@ -326,7 +326,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
     final rd = _rounds[_round];
 
     await _say(
-      'audio/games/coloring/6_b2.mp3',
+      'audio/sfx/tap.mp3',
       maxMs: 450,
       channel: AudioChannel.sfx,
     );

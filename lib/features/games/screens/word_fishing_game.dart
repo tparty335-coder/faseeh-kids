@@ -32,7 +32,7 @@ class _RoundData {
 // مواضع الأسماك مقيسة على الصور الأصلية (1270×950)
 const List<_RoundData> _rounds = [
   _RoundData(
-    imagePath: 'assets/images/games/fishing/fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/fishing_round_1.webp',
     zones: [
       _FishZone(word: 'أَكَلَ',  hasAlif: true,  px: 155,  py: 545),
       _FishZone(word: 'بُرْجٌ',  hasAlif: false, px: 575,  py: 510),
@@ -40,7 +40,7 @@ const List<_RoundData> _rounds = [
     ],
   ),
   _RoundData(
-    imagePath: 'assets/images/games/fishing/fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/fishing_round_2.webp',
     zones: [
       _FishZone(word: 'تِينٌ',   hasAlif: false, px: 155,  py: 545),
       _FishZone(word: 'خَرَجَ',  hasAlif: false, px: 575,  py: 510),
@@ -48,7 +48,7 @@ const List<_RoundData> _rounds = [
     ],
   ),
   _RoundData(
-    imagePath: 'assets/images/games/fishing/fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/fishing_round_3.webp',
     zones: [
       _FishZone(word: 'ذَيْلٌ',  hasAlif: false, px: 155,  py: 545),
       _FishZone(word: 'رَأْسٌ',  hasAlif: true,  px: 575,  py: 510),
@@ -56,7 +56,7 @@ const List<_RoundData> _rounds = [
     ],
   ),
   _RoundData(
-    imagePath: 'assets/images/games/fishing/fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/fishing_round_4.webp',
     zones: [
       _FishZone(word: 'جَمَلٌ',  hasAlif: false, px: 155,  py: 545),
       _FishZone(word: 'نَحْلَةٌ', hasAlif: false, px: 575,  py: 510),

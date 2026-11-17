@@ -108,12 +108,22 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
     }
   }
 
+  List<String> _distractorWords() {
+    const pool = ['قَلَم', 'وَلَد', 'أَسَد', 'جَبَل', 'عِنَب', 'لَبَن'];
+    final ch = widget.manifest.letter.replaceAll('ـ', '').trim();
+    final filtered = pool.where((w) => !w.contains(ch)).toList();
+    return filtered.length >= 2 ? filtered : pool;
+  }
+
   List<GameZoneChoice> _effectiveOptions(ColoringRound rd) {
     if (rd.options != null && rd.options!.isNotEmpty) return rd.options!;
+    const correctByRound = [2, 0, 2];
+    final corr = correctByRound[_round % 3];
+    final d = _distractorWords();
     return [
-      GameZoneChoice(label: rd.word, isCorrect: true),
-      const GameZoneChoice(label: 'كلمة ٢', isCorrect: false),
-      const GameZoneChoice(label: 'كلمة ٣', isCorrect: false),
+      GameZoneChoice(label: corr == 0 ? rd.word : d[(_round * 2) % d.length], isCorrect: corr == 0),
+      GameZoneChoice(label: corr == 1 ? rd.word : d[(_round * 2 + 1) % d.length], isCorrect: corr == 1),
+      GameZoneChoice(label: corr == 2 ? rd.word : d[(_round * 2 + 2) % d.length], isCorrect: corr == 2),
     ];
   }
 
@@ -178,7 +188,7 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
 
     if (!_sliceColors.every((c) => c != null)) {
       try {
-        AudioService.instance.playAsset('audio/games/coloring/6_b2.mp3', channel: AudioChannel.sfx);
+        AudioService.instance.playAsset('audio/sfx/tap.mp3', channel: AudioChannel.sfx);
       } catch (_) {}
       return;
     }
@@ -189,7 +199,7 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
     final rd = _rounds[_round];
     final wordAudio = rd.wordAudioPath ?? rd.introAudioPath;
     final praise = _games.praiseFinishAudio ?? 'audio/games/fishing/ahsnt.mp3';
-    await _say('audio/games/coloring/6_b2.mp3', maxMs: 450, channel: AudioChannel.sfx);
+    await _say('audio/sfx/tap.mp3', maxMs: 450, channel: AudioChannel.sfx);
     if (!_alive(tk)) return;
     await _say(praise, maxMs: 2500);
     if (!_alive(tk)) return;

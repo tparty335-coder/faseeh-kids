@@ -62,8 +62,8 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1 (paint1): بقرة ❌، بطة ❌، حال ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_1.png',
-    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_1.png',
+    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_1.webp',
+    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_1.webp',
     correctWord: 'حَال',
     correctAudio: 'audio/games/coloring/4_goodthoo.mp3',
     revealAudio: 'audio/games/coloring/1_tazezpaint.mp3',
@@ -77,12 +77,12 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2 (paint2): حوت ✅، أرنب ❌، يكتب ❌
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_2.png',
-    correctWord: 'حُوت',
+    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_2.webp',
+    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_2.webp',
+    correctWord: 'نَحِيف',
     correctAudio: 'audio/games/coloring/5_goodtabeb.mp3',
     revealAudio: 'audio/games/coloring/2_rongtabeb.mp3',
-    wordAudio: 'audio/lessons/ha/sounds/word_hoot.mp3',
+    wordAudio: 'audio/lessons/ha/sounds/word_naheef.mp3',
     options: [
       _MaddOption(word: 'حُوت', hasMadd: true),
       _MaddOption(word: 'أَرْنَب', hasMadd: false),
@@ -92,12 +92,12 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3 (paint3): لبن ❌، برج ❌، حيلة ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_3.png',
+    bgImagePath: 'assets/images/games/coloring/ha/ha_coloring_round_3.webp',
+    wordMaskPath: 'assets/images/games/coloring/ha/ha_coloring_word_3.webp',
     correctWord: 'حِيلَة',
     correctAudio: 'audio/games/coloring/4_goodhobob.mp3',
     revealAudio: 'audio/games/coloring/2_ronghobob.mp3',
-    wordAudio: 'audio/lessons/ha/sounds/word_heela.mp3',
+    wordAudio: 'audio/lessons/ha/sounds/word_naheef.mp3',
     options: [
       _MaddOption(word: 'لَبَن', hasMadd: false),
       _MaddOption(word: 'بُرْج', hasMadd: false),
@@ -310,7 +310,7 @@ class _HaColoringGameState extends ConsumerState<HaColoringGame> {
     if (!allColored) {
       try {
         AudioService.instance.playAsset(
-          'audio/games/coloring/6_b2.mp3',
+          'audio/sfx/tap.mp3',
           channel: AudioChannel.sfx,
         );
       } catch (_) {}
@@ -323,7 +323,7 @@ class _HaColoringGameState extends ConsumerState<HaColoringGame> {
     final rd = _rounds[_round];
 
     await _say(
-      'audio/games/coloring/6_b2.mp3',
+      'audio/sfx/tap.mp3',
       maxMs: 450,
       channel: AudioChannel.sfx,
     );

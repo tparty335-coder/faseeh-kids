@@ -17,13 +17,13 @@ class MascotWidget extends StatelessWidget {
   String get _assetPath {
     switch (expression) {
       case MascotExpression.happy:
-        return 'assets/images/mascot/falcon_happy.jpg';
+        return 'assets/images/mascot/falcon_happy.webp';
       case MascotExpression.thinking:
-        return 'assets/images/mascot/falcon_thinking.jpg';
+        return 'assets/images/mascot/falcon_thinking.webp';
       case MascotExpression.celebrating:
-        return 'assets/images/mascot/falcon_celebrating.jpg';
+        return 'assets/images/mascot/falcon_celebrating.webp';
       case MascotExpression.encouraging:
-        return 'assets/images/mascot/falcon_encouraging.jpg';
+        return 'assets/images/mascot/falcon_encouraging.webp';
     }
   }
 

@@ -66,8 +66,8 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
         interaction: WordFindStoryInteraction(
           instructionText: 'تَامِرُ حَوْلَهُ عَنَاصِرُ كَثِيرَةٌ بِهَا حَرْفُ التَّاءِ.. ابْحَثْ عَنْهَا وَاضْغَطْ عَلَيْهَا',
           instructionAudioPath: '${_audio}taa_story_5.mp3',
-          correctAudioPath: 'assets/audio/feedback/correct.mp3',
-          wrongAudioPath: 'assets/audio/feedback/try_again.mp3',
+          correctAudioPath: 'audio/feedback/correct.mp3',
+          wrongAudioPath: 'audio/feedback/try_again.mp3',
           targets: [
             StoryTargetItem(
               label: 'بَيْت',
@@ -76,7 +76,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.50,
               bottom: 0.36,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_bayt.mp3',
+              wordAudioPath: 'audio/lessons/taa/sounds/word_bayt.mp3',
             ),
             StoryTargetItem(
               label: 'تَامِر',
@@ -85,7 +85,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.42,
               bottom: 0.65,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_tamir.mp3',
+              wordAudioPath: 'audio/lessons/taa/sounds/word_tamir.mp3',
             ),
             StoryTargetItem(
               label: 'تُفَّاح',
@@ -94,7 +94,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.30,
               bottom: 0.85,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_tufah.mp3',
+              wordAudioPath: 'audio/lessons/taa/sounds/word_tufah.mp3',
             ),
             StoryTargetItem(
               label: 'دَجَاجَة',
@@ -103,7 +103,7 @@ const LetterUnitManifest taaManifest = LetterUnitManifest(
               right: 0.82,
               bottom: 0.80,
               isCorrect: true,
-              wordAudioPath: 'assets/audio/lessons/taa/sounds/word_dajaja.mp3',
+              wordAudioPath: 'audio/lessons/taa/sounds/word_dajaja.mp3',
             ),
           ],
         ),

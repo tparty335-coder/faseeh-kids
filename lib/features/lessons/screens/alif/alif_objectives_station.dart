@@ -60,10 +60,14 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
     setState(() => _isPlaying = true);
     try {
       await AudioService.instance.stop();
-      await AudioService.instance.playAsset('audio/stories/alif_goal.mp3');
+      await AudioService.instance.playAsset(
+        'audio/sfx/celebration.mp3',
+        channel: AudioChannel.sfx,
+      );
+      await AudioService.instance.playAsset('audio/letters/core/alif_name.mp3');
       final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
       if (done != null) {
-        await done.first.timeout(const Duration(seconds: 35), onTimeout: () {});
+        await done.first.timeout(const Duration(seconds: 10), onTimeout: () {});
       }
     } catch (_) {}
     if (mounted) setState(() => _isPlaying = false);
@@ -76,7 +80,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
         // ── 1. خلفية المشهد ──────────────────────────────────────────────────
         Positioned.fill(
           child: Image.asset(
-            'assets/images/lessons/alif/alif_cd_story_1.png',
+            'assets/images/lessons/alif/alif_cd_story_1.webp',
             fit: BoxFit.cover,
             errorBuilder: (_, __, ___) => Container(
               decoration: const BoxDecoration(

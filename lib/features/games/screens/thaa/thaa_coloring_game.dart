@@ -62,8 +62,8 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1 (paint1): مثلث ❌، ثعلب ❌، ثابت ✅  → ث ا ب ت
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_1.png',
-    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.png',
+    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_1.webp',
+    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.webp',
     correctWord: 'ثَابِت',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_1.mp3',
     revealAudio: 'audio/games/coloring/thaa/thaa_reveal_1.mp3',
@@ -78,8 +78,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2 (paint2): ثوم ✅، تبحث ❌، ثلج ❌
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_2.png',
+    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_2.webp',
+    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_2.webp',
     correctWord: 'ثُوم',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_2.mp3',
     revealAudio: 'audio/games/coloring/thaa/thaa_reveal_2.mp3',
@@ -94,8 +94,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3 (paint3): كمثرى ❌، ثمرة ❌، ثيران ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_3.png',
+    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_3.webp',
+    wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_3.webp',
     correctWord: 'ثِيرَان',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_3.mp3',
     revealAudio: 'audio/games/coloring/thaa/thaa_reveal_3.mp3',
@@ -315,7 +315,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
     if (!allColored) {
       try {
         AudioService.instance.playAsset(
-          'audio/games/coloring/6_b2.mp3',
+          'audio/sfx/tap.mp3',
           channel: AudioChannel.sfx,
         );
       } catch (_) {}
@@ -328,7 +328,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
     final rd = _rounds[_round];
 
     await _say(
-      'audio/games/coloring/6_b2.mp3',
+      'audio/sfx/tap.mp3',
       maxMs: 450,
       channel: AudioChannel.sfx,
     );

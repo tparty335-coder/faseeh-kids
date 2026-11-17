@@ -163,9 +163,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Widget _buildPage(_OnboardingPage page, int index) {
     final imagePaths = [
-      'assets/images/mascot/falcon_happy.jpg',
-      'assets/images/mascot/falcon_encouraging.jpg',
-      'assets/images/mascot/falcon_celebrating.jpg',
+      'assets/images/mascot/falcon_happy.webp',
+      'assets/images/mascot/falcon_encouraging.webp',
+      'assets/images/mascot/falcon_celebrating.webp',
     ];
 
     return Padding(

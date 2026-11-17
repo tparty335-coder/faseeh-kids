@@ -2,34 +2,46 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
+import 'package:faseeh_kids/features/parent_dashboard/logic/parent_provider.dart';
 
 /// Current active child profile name
 final currentChildProvider = Provider<String>((ref) {
-  final box = Hive.box(AppConstants.childProfileBox);
-  return box.get('activeChild', defaultValue: 'طفل_1') as String;
+  try {
+    if (Hive.isBoxOpen(AppConstants.childProfileBox)) {
+      final box = Hive.box(AppConstants.childProfileBox);
+      return (box.get('child_name', defaultValue: 'بطل فصيح') as String?) ?? 'بطل فصيح';
+    }
+  } catch (_) {}
+  return 'بطل فصيح';
 });
 
-/// Progress Notifier — manages which letters are unlocked
+/// Progress Notifier — manages which letters are unlocked sequentially
 /// Reads from / writes to Hive for persistence across sessions
 class ProgressNotifier extends Notifier<List<String>> {
   static const String _hiveKey = 'unlocked_units';
 
   @override
   List<String> build() {
+    final unlockAll = ref.watch(
+      parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
+    );
     final allLetterChars = arabicLetters.map((l) => l.letter).toList();
-    final box = Hive.box(AppConstants.lessonProgressBox);
-    final stored = box.get(_hiveKey);
-    if (stored != null && stored is List) {
-      final list = List<String>.from(stored);
-      for (final char in allLetterChars) {
-        if (!list.contains(char)) {
-          list.add(char);
+    if (unlockAll) {
+      return allLetterChars;
+    }
+
+    try {
+      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+        final box = Hive.box(AppConstants.lessonProgressBox);
+        final stored = box.get(_hiveKey);
+        if (stored != null && stored is List && stored.isNotEmpty) {
+          return List<String>.from(stored);
         }
       }
-      return list;
-    }
-    // All 28 letters unlocked for seamless testing & navigation
-    return allLetterChars;
+    } catch (_) {}
+
+    // Default sequential start: first letter (أ) is unlocked
+    return [arabicLetters.first.letter];
   }
 
   /// Unlock the next letter after completing a lesson
@@ -46,7 +58,7 @@ class ProgressNotifier extends Notifier<List<String>> {
     }
   }
 
-  /// Unlock a specific letter (e.g., from placement test)
+  /// Unlock letters up to a specific index (e.g., from placement test)
   void unlockUpTo(int index) {
     final allLetters = arabicLetters.map((l) => l.letter).toList();
     final unlocked = allLetters.sublist(0, (index + 1).clamp(1, allLetters.length));
@@ -54,7 +66,13 @@ class ProgressNotifier extends Notifier<List<String>> {
     _persist();
   }
 
-  /// Reset all progress
+  /// Unlock all 28 letters
+  void unlockAll() {
+    state = arabicLetters.map((l) => l.letter).toList();
+    _persist();
+  }
+
+  /// Reset all progress back to letter Alif
   void reset() {
     state = [arabicLetters.first.letter];
     _persist();
@@ -62,8 +80,12 @@ class ProgressNotifier extends Notifier<List<String>> {
 
   /// Persist to Hive
   void _persist() {
-    final box = Hive.box(AppConstants.lessonProgressBox);
-    box.put(_hiveKey, state);
+    try {
+      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+        final box = Hive.box(AppConstants.lessonProgressBox);
+        box.put(_hiveKey, state);
+      }
+    } catch (_) {}
   }
 }
 

@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: رِجْل (أعلى يسار) ، حِصَان (وسط يمين) ، ذَيْل (أسفل يسار) ← ذَيْل ✅
   _Round(
-    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_1.webp',
     imgH: 474,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
@@ -53,7 +53,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: سَمَكَة (أعلى يسار) ، ذِئْب (وسط يمين) ، فِيل (أسفل يسار) ← ذِئْب ✅
   _Round(
-    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_2.webp',
     imgH: 474,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: فِنْجَان (أعلى يسار) ، نَخْلَة (وسط يمين) ، غِذَاء (أسفل يسار) ← غِذَاء ✅
   _Round(
-    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_3.webp',
     imgH: 474,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [

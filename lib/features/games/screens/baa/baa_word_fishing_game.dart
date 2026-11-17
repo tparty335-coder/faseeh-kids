@@ -49,9 +49,9 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: أرنب (يسار) ✅، أسد (وسط) ❌، فأس (يمين) ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/baa_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/baa_fishing_round_1.webp',
     correctWord: 'أَرْنَب',
-    wordAudio: 'audio/word_arnab.mp3',
+    wordAudio: 'audio/lessons/baa/words/p3_arnab.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
     roundEndPraise: 'audio/games/fishing/ba62.mp3',
     zones: [
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: ولد (يسار) ❌، قلم (وسط) ❌، إبرة (يمين) ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/baa_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/baa_fishing_round_2.webp',
     correctWord: 'إِبْرَة',
     wordAudio: 'audio/lessons/baa/sounds/word_ibra.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: رأس (يسار) ❌، برج (وسط) ✅، أذن (يمين) ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/baa_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/baa_fishing_round_3.webp',
     correctWord: 'بُرْج',
     wordAudio: 'audio/lessons/baa/sounds/word_borg.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: أمي (يسار) ❌، أسد (وسط) ❌، بقرة (يمين) ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/baa_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/baa_fishing_round_4.webp',
     correctWord: 'بَقَرَة',
     wordAudio: 'audio/lessons/baa/sounds/word_baqara.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',

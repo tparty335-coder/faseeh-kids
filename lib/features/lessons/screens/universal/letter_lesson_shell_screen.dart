@@ -17,16 +17,6 @@ import 'package:faseeh_kids/features/lessons/screens/universal/stations/universa
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_writing_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_words_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/taa/taa_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/ha/ha_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/kha/kha_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/dal/dal_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/raa/raa_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_games_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/seen/seen_games_station.dart';
 
 /// شاشة الدرس الشاملة — محرك موحّد يقبل أي LetterUnitManifest
 /// يُستخدم لجميع الحروف من ت فصاعداً (أ و ب يبقيان على شاشاتهما المخصصة)
@@ -334,66 +324,6 @@ class _LetterLessonShellScreenState
           onPrevious: _previousStation,
         );
       case 6: // ألعاب الحرف
-        if (m.letter == 'ت') {
-          return TaaGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ث') {
-          return ThaaGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ج') {
-          return JeemGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ح') {
-          return HaGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-                        if (m.letter == 'س') {
-          return SeenGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ز') {
-          return ZaayGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ر') {
-          return RaaGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'ذ') {
-          return DhaalGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'د') {
-          return DalGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
-        if (m.letter == 'خ') {
-          return KhaGamesStation(
-            onNext: _nextStation,
-            onPrevious: _previousStation,
-          );
-        }
         return UniversalGamesStation(
           manifest: m,
           onNext: _nextStation,

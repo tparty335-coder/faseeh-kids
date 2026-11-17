@@ -22,18 +22,18 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  _Round(imagePath: 'assets/images/games/circus/circus_round_1.png', zones: [
+  _Round(imagePath: 'assets/images/games/circus/circus_round_1.webp', zones: [
     _ImageZone(label: 'بَقَرَةٌ', hasAlif: false, px: 250, py: 210),
     _ImageZone(label: 'كَلْبٌ',  hasAlif: false, px: 450, py: 420),
     _ImageZone(label: 'أَسَدٌ',  hasAlif: true,  px: 215, py: 660, audioPath: 'audio/stories/alif_word_asad.mp3'),
   ]),
-  _Round(imagePath: 'assets/images/games/circus/circus_round_2.png', zones: [
+  _Round(imagePath: 'assets/images/games/circus/circus_round_2.webp', zones: [
     _ImageZone(label: 'دُبٌّ',    hasAlif: false, px: 250, py: 190),
-    _ImageZone(label: 'تَاجٌ',    hasAlif: true,  px: 450, py: 400, audioPath: 'audio/stories/alif_word_taj.mp3'),
+    _ImageZone(label: 'تَاجٌ',    hasAlif: true,  px: 450, py: 400, audioPath: 'audio/lessons/taa/sounds/word_taaj.mp3'),
     _ImageZone(label: 'قِطَّةٌ',  hasAlif: false, px: 215, py: 650),
   ]),
-  _Round(imagePath: 'assets/images/games/circus/circus_round_3.png', zones: [
-    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 245, py: 190, audioPath: 'audio/stories/alif_word_ras.mp3'),
+  _Round(imagePath: 'assets/images/games/circus/circus_round_3.webp', zones: [
+    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 245, py: 190, audioPath: 'audio/lessons/alif/words/p3_ras.mp3'),
     _ImageZone(label: 'بِئْرٌ',   hasAlif: false, px: 450, py: 390),
     _ImageZone(label: 'نَحْلَةٌ', hasAlif: false, px: 200, py: 640),
   ]),

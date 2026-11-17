@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// تعريف مقطع كتابة الحرف (Stroke)
@@ -1681,12 +1683,38 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
   int _currentStrokeIndex = 0;
   final List<List<Offset>> _completedStrokePaths = [];
   final List<Offset> _currentDrawingPoints = [];
+  final Set<int> _coveredGuideIndices = {};
   int _highestReachedPointIndex = 0;
+  int _mistakeCount = 0;
+  int _earnedStars = 0;
   bool _isDrawing = false;
   bool _isWrongStartShake = false;
   bool _isAllCompleted = false;
 
   late AnimationController _pulseController;
+
+  String get _starsStorageKey => 'trace_stars_${widget.letterChar}_${widget.position}';
+
+  void _loadSavedStars() {
+    try {
+      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+        final box = Hive.box(AppConstants.lessonProgressBox);
+        _earnedStars = (box.get(_starsStorageKey, defaultValue: 0) as int?) ?? 0;
+      }
+    } catch (_) {}
+  }
+
+  void _saveStars(int stars) {
+    try {
+      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+        final box = Hive.box(AppConstants.lessonProgressBox);
+        final prev = (box.get(_starsStorageKey, defaultValue: 0) as int?) ?? 0;
+        if (stars > prev) {
+          box.put(_starsStorageKey, stars);
+        }
+      }
+    } catch (_) {}
+  }
 
   @override
   void initState() {
@@ -1695,6 +1723,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       widget.letterChar,
       position: widget.position,
     );
+    _loadSavedStars();
     _pulseController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1000),
@@ -1712,6 +1741,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
           position: widget.position,
         );
         _resetCanvas();
+        _loadSavedStars();
       });
     }
   }
@@ -1727,7 +1757,9 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       _currentStrokeIndex = 0;
       _completedStrokePaths.clear();
       _currentDrawingPoints.clear();
+      _coveredGuideIndices.clear();
       _highestReachedPointIndex = 0;
+      _mistakeCount = 0;
       _isDrawing = false;
       _isWrongStartShake = false;
       _isAllCompleted = false;
@@ -1769,11 +1801,15 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
         _isWrongStartShake = false;
         _currentDrawingPoints.clear();
         _currentDrawingPoints.add(startPx);
+        _coveredGuideIndices
+          ..clear()
+          ..add(0);
         _highestReachedPointIndex = 0;
       });
     } else {
       // لمس نقطة خاطئة أو بعيدة عن النقطة المحددة
       setState(() {
+        _mistakeCount++;
         _isWrongStartShake = true;
       });
       Future.delayed(const Duration(milliseconds: 500), () {
@@ -1794,12 +1830,15 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
 
     if (guidePx.isEmpty) return;
 
-    // التحقق من التقدم على المسار
-    for (int i = _highestReachedPointIndex + 1; i < guidePx.length; i++) {
+    // التحقق من التقدم والتغطية على المسار
+    for (int i = 0; i < guidePx.length; i++) {
       final target = guidePx[i];
       final distToTarget = (touchPos - target).distance;
       if (distToTarget <= 65.0) {
-        _highestReachedPointIndex = i;
+        _coveredGuideIndices.add(i);
+        if (i > _highestReachedPointIndex) {
+          _highestReachedPointIndex = i;
+        }
       }
     }
 
@@ -1825,13 +1864,20 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
 
     if (guidePx.isEmpty) return;
 
-    // إذا قطع التلميذ نصف المسار أو وصل لأكثر من نقطة، نعتبره مكتملاً ونسحبه للنهاية
-    if (_highestReachedPointIndex >= (guidePx.length / 2).floor() || guidePx.length <= 2) {
+    // عتبة تغطية متكيفة (Adaptive threshold) حسب طول وتعقيد المقطع
+    final double adaptiveThreshold = guidePx.length <= 3 ? 0.65 : 0.55;
+    final double coverage = _coveredGuideIndices.length / guidePx.length;
+
+    if (coverage >= adaptiveThreshold ||
+        _highestReachedPointIndex >= (guidePx.length / 2).floor() ||
+        guidePx.length <= 2) {
       _completeCurrentStroke(guidePx);
     } else {
       // لم يكمل المقطع بشكل كافٍ -> إعادة المحاولة لهذا المقطع
       setState(() {
+        _mistakeCount++;
         _currentDrawingPoints.clear();
+        _coveredGuideIndices.clear();
         _highestReachedPointIndex = 0;
         _isDrawing = false;
       });
@@ -1842,17 +1888,23 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
     setState(() {
       _completedStrokePaths.add(List.from(guidePx));
       _currentDrawingPoints.clear();
+      _coveredGuideIndices.clear();
       _highestReachedPointIndex = 0;
       _isDrawing = false;
       _currentStrokeIndex++;
 
       if (_currentStrokeIndex >= _strokes.length) {
         _isAllCompleted = true;
+        _earnedStars = _mistakeCount <= 1 ? 3 : (_mistakeCount <= 3 ? 2 : 1);
+        _saveStars(_earnedStars);
+        AudioService.instance.playAsset('audio/sfx/celebration.mp3', channel: AudioChannel.sfx);
+        final encIdx = (_earnedStars % 3) + 1;
+        AudioService.instance.playAsset('audio/common/encourage_$encIdx.mp3', channel: AudioChannel.voice);
         if (widget.onComplete != null) {
           widget.onComplete!();
         }
       } else {
-        AudioService.instance.playAsset('audio/stories/alif_correct.mp3');
+        AudioService.instance.playAsset('audio/sfx/correct.mp3', channel: AudioChannel.sfx);
       }
     });
   }
@@ -1877,7 +1929,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
         : null;
 
     final currentHint = _isAllCompleted
-        ? 'مُمْتَازٌ! كَتَبْتَ حَرْفَ (${widget.letterChar}) بِنَجَاحٍ! 🎉'
+        ? 'مُمْتَازٌ! كَتَبْتَ حَرْفَ (${widget.letterChar}) بِنَجَاحٍ! (${'⭐' * _earnedStars}) 🎉'
         : (stroke?.hintText ?? '');
 
     return Directionality(
@@ -1928,6 +1980,19 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                     ),
                   ),
                 ),
+                if (_earnedStars > 0) ...[
+                  const SizedBox(width: 8),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: List.generate(3, (i) {
+                      return Icon(
+                        i < _earnedStars ? Icons.star_rounded : Icons.star_outline_rounded,
+                        color: const Color(0xFFFFB300),
+                        size: 20,
+                      );
+                    }),
+                  ),
+                ],
               ],
             ),
           ),

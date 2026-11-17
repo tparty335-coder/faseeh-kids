@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
+import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 import 'package:faseeh_kids/features/onboarding/logic/placement_algorithm.dart';
 
 /// Placement Test Screen — adaptive 10-question test
 /// P4-T009
-class PlacementTestScreen extends StatefulWidget {
+class PlacementTestScreen extends ConsumerStatefulWidget {
   final AgeGroup ageGroup;
   final int avatarIndex;
   final String childName;
@@ -21,10 +23,10 @@ class PlacementTestScreen extends StatefulWidget {
   });
 
   @override
-  State<PlacementTestScreen> createState() => _PlacementTestScreenState();
+  ConsumerState<PlacementTestScreen> createState() => _PlacementTestScreenState();
 }
 
-class _PlacementTestScreenState extends State<PlacementTestScreen> {
+class _PlacementTestScreenState extends ConsumerState<PlacementTestScreen> {
   int _currentQuestion = 0;
   final List<bool> _answers = [];
   bool _showResult = false;
@@ -115,6 +117,12 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
   }
 
   void _finishTest() {
+    final unit = _result?.startingUnit ?? 'unit_01_alif';
+    // استخراج رقم الوحدة (مثل unit_05_jeem -> فهرس 4)
+    final match = RegExp(r'unit_(\d+)').firstMatch(unit);
+    final unitIdx = match != null ? (int.tryParse(match.group(1)!) ?? 1) - 1 : 0;
+    ref.read(unlockedUnitsProvider.notifier).unlockUpTo(unitIdx.clamp(0, 27));
+
     // Navigate to home with profile data
     context.go(
       AppRouter.homeMap,
@@ -122,7 +130,7 @@ class _PlacementTestScreenState extends State<PlacementTestScreen> {
         'ageGroup': widget.ageGroup,
         'avatarIndex': widget.avatarIndex,
         'name': widget.childName,
-        'startingUnit': _result?.startingUnit ?? 'unit_01_alif',
+        'startingUnit': unit,
         'isNewProfile': true,
       },
     );

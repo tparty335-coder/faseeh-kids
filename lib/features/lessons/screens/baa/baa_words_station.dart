@@ -53,12 +53,12 @@ class _WordsPage {
 const List<_WordsPage> _pages = [
   // ─── الصفحة 1 (ka1b.swf): بَقَرَة ، بَاب ، بِطِّيخ ، بِنْت ───
   _WordsPage(
-    listImage: '${_dir}baa_words_p1_list.png',
+    listImage: '${_dir}baa_words_p1_list.webp',
     listH: 503,
     words: [
       _WordItem(
         word: 'بَقَرَة',
-        cardImage: '${_dir}baa_words_p1_card_1.png',
+        cardImage: '${_dir}baa_words_p1_card_1.webp',
         cardH: 506,
         audio: 'audio/lessons/baa/words/p1_baqara.mp3',
         triangle: _Hot(465, 90, 795, 178),
@@ -67,7 +67,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بَاب',
-        cardImage: '${_dir}baa_words_p1_card_2.png',
+        cardImage: '${_dir}baa_words_p1_card_2.webp',
         cardH: 505,
         audio: 'audio/lessons/baa/words/p1_bab.mp3',
         triangle: _Hot(78, 175, 395, 258),
@@ -76,7 +76,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بِطِّيخ',
-        cardImage: '${_dir}baa_words_p1_card_3.png',
+        cardImage: '${_dir}baa_words_p1_card_3.webp',
         cardH: 504,
         audio: 'audio/lessons/baa/words/p1_betteekh.mp3',
         triangle: _Hot(465, 270, 795, 354),
@@ -85,7 +85,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بِنْت',
-        cardImage: '${_dir}baa_words_p1_card_4.png',
+        cardImage: '${_dir}baa_words_p1_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/baa/words/p1_bint.mp3',
         triangle: _Hot(78, 356, 395, 442),
@@ -97,12 +97,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 2 (ka2b.swf): بُرْج ، يَكْتُبُ ، ثُعْبَان ، إِبْرَة ───
   _WordsPage(
-    listImage: '${_dir}baa_words_p2_list.png',
+    listImage: '${_dir}baa_words_p2_list.webp',
     listH: 470,
     words: [
       _WordItem(
         word: 'بُرْج',
-        cardImage: '${_dir}baa_words_p2_card_1.png',
+        cardImage: '${_dir}baa_words_p2_card_1.webp',
         cardH: 509,
         audio: 'audio/lessons/baa/words/p2_borg.mp3',
         triangle: _Hot(500, 88, 808, 166),
@@ -111,7 +111,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'يَكْتُبُ',
-        cardImage: '${_dir}baa_words_p2_card_2.png',
+        cardImage: '${_dir}baa_words_p2_card_2.webp',
         cardH: 511,
         audio: 'audio/lessons/baa/words/p2_yaktb.mp3',
         triangle: _Hot(138, 162, 438, 244),
@@ -120,7 +120,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'ثُعْبَان',
-        cardImage: '${_dir}baa_words_p2_card_3.png',
+        cardImage: '${_dir}baa_words_p2_card_3.webp',
         cardH: 512,
         audio: 'audio/lessons/baa/words/p2_thoban.mp3',
         triangle: _Hot(500, 252, 808, 334),
@@ -129,7 +129,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'إِبْرَة',
-        cardImage: '${_dir}baa_words_p2_card_4.png',
+        cardImage: '${_dir}baa_words_p2_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/baa/words/p2_ibra.mp3',
         triangle: _Hot(138, 336, 438, 418),
@@ -141,12 +141,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 3 (ka3b.swf): حُبُوب ، طَبِيب ، أَرْنَب ، بَطَّة ───
   _WordsPage(
-    listImage: '${_dir}baa_words_p3_list.png',
+    listImage: '${_dir}baa_words_p3_list.webp',
     listH: 512,
     words: [
       _WordItem(
         word: 'حُبُوب',
-        cardImage: '${_dir}baa_words_p3_card_1.png',
+        cardImage: '${_dir}baa_words_p3_card_1.webp',
         cardH: 515,
         audio: 'audio/lessons/baa/words/p3_hobob.mp3',
         triangle: _Hot(465, 96, 795, 182),
@@ -155,7 +155,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'طَبِيب',
-        cardImage: '${_dir}baa_words_p3_card_2.png',
+        cardImage: '${_dir}baa_words_p3_card_2.webp',
         cardH: 506,
         audio: 'audio/lessons/baa/words/p3_tabeeb.mp3',
         triangle: _Hot(78, 178, 395, 264),
@@ -164,7 +164,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'أَرْنَب',
-        cardImage: '${_dir}baa_words_p3_card_3.png',
+        cardImage: '${_dir}baa_words_p3_card_3.webp',
         cardH: 512,
         audio: 'audio/lessons/baa/words/p3_arnab.mp3',
         triangle: _Hot(465, 274, 795, 360),
@@ -173,7 +173,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بَطَّة',
-        cardImage: '${_dir}baa_words_p3_card_4.png',
+        cardImage: '${_dir}baa_words_p3_card_4.webp',
         cardH: 510,
         audio: 'audio/lessons/baa/words/p3_bata.mp3',
         triangle: _Hot(78, 362, 395, 448),
@@ -185,12 +185,12 @@ const List<_WordsPage> _pages = [
 
   // ─── الصفحة 4 (ka4b.swf): كَلْب ، بِئْر ، بِرْسِيم ، لَبَن ───
   _WordsPage(
-    listImage: '${_dir}baa_words_p4_list.png',
+    listImage: '${_dir}baa_words_p4_list.webp',
     listH: 517,
     words: [
       _WordItem(
         word: 'كَلْب',
-        cardImage: '${_dir}baa_words_p4_card_1.png',
+        cardImage: '${_dir}baa_words_p4_card_1.webp',
         cardH: 505,
         audio: 'audio/lessons/baa/words/p4_kalb.mp3',
         triangle: _Hot(465, 100, 795, 185),
@@ -199,7 +199,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بِئْر',
-        cardImage: '${_dir}baa_words_p4_card_2.png',
+        cardImage: '${_dir}baa_words_p4_card_2.webp',
         cardH: 507,
         audio: 'audio/lessons/baa/words/p4_beer.mp3',
         triangle: _Hot(78, 182, 395, 268),
@@ -208,7 +208,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'بِرْسِيم',
-        cardImage: '${_dir}baa_words_p4_card_3.png',
+        cardImage: '${_dir}baa_words_p4_card_3.webp',
         cardH: 509,
         audio: 'audio/lessons/baa/words/p4_berseem.mp3',
         triangle: _Hot(465, 278, 795, 364),
@@ -217,7 +217,7 @@ const List<_WordsPage> _pages = [
       ),
       _WordItem(
         word: 'لَبَن',
-        cardImage: '${_dir}baa_words_p4_card_4.png',
+        cardImage: '${_dir}baa_words_p4_card_4.webp',
         cardH: 506,
         audio: 'audio/lessons/baa/words/p4_laban.mp3',
         triangle: _Hot(78, 366, 395, 452),

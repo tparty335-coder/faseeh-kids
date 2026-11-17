@@ -62,8 +62,8 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1 (paint1): تَمْر ❌، بِنْت ❌، تِمْسَاح ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_1.png',
-    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_1.png',
+    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_1.webp',
+    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_1.webp',
     correctWord: 'تِمْسَاح',
     correctAudio: 'audio/games/coloring/goodtmsah.mp3',
     revealAudio: 'audio/games/coloring/rongtems.mp3',
@@ -77,8 +77,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2 (paint2): تِين ✅، تَأْكُل ❌، يَكْتُب ❌
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_2.png',
+    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_2.webp',
+    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_2.webp',
     correctWord: 'تِين',
     correctAudio: 'audio/games/coloring/goodteen.mp3',
     revealAudio: 'audio/games/coloring/rongteen.mp3',
@@ -92,8 +92,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3 (paint3): أَرْنَب ❌، يَلْعَب ❌، تُوت ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_3.png',
+    bgImagePath: 'assets/images/games/coloring/taa_coloring_round_3.webp',
+    wordMaskPath: 'assets/images/games/coloring/taa_coloring_word_3.webp',
     correctWord: 'تُوت',
     correctAudio: 'audio/games/coloring/goodtoot.mp3',
     revealAudio: 'audio/games/coloring/rongtoot.mp3',
@@ -311,7 +311,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
     if (!allColored) {
       try {
         AudioService.instance.playAsset(
-          'audio/games/coloring/6_b2.mp3',
+          'audio/sfx/tap.mp3',
           channel: AudioChannel.sfx,
         );
       } catch (_) {}
@@ -328,7 +328,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
 
     try {
       await _say(
-        'audio/games/coloring/6_b2.mp3',
+        'audio/sfx/tap.mp3',
         maxMs: 450,
         channel: AudioChannel.sfx,
       );

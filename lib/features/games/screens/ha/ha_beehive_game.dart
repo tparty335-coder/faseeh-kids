@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: حَمَل (حَـ...) ← حَ (يسار)
   _Round(
-    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_1.png',
+    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_1.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_himal.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -54,7 +54,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: حِمَار (حِـ...) ← حِ (يمين)
   _Round(
-    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_2.png',
+    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_2.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_himaar.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -65,11 +65,11 @@ const List<_Round> _rounds = [
       _CellZone(label: 'حْ', isCorrect: false, px: 754, py: 340), // أسفل
     ],
   ),
-  // الجولة 3: حُوت (حُـ...) ← حُ (أعلى)
+  // الجولة 3: لُحُوم (حُ) ← حُ (أعلى)
   _Round(
-    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_3.png',
+    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_3.webp',
     imgH: 375,
-    wordAudio: 'audio/lessons/ha/sounds/word_hoot.mp3',
+    wordAudio: 'audio/lessons/ha/sounds/word_luhoom.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cells: [
       _CellZone(label: 'حُ', isCorrect: true,  px: 886, py: 184), // أعلى (صحيح حُوت)
@@ -80,7 +80,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: نَحْل (...حْ...) ← حْ (أسفل)
   _Round(
-    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_4.png',
+    imagePath: 'assets/images/games/beehive/ha/ha_beehive_round_4.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_nahl.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',

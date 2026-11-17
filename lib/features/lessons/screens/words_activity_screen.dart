@@ -46,7 +46,7 @@ class WordsActivityScreen extends ConsumerWidget {
               };
               final imgKey = wordImageMap[word];
               final imagePath = imgKey != null
-                  ? 'assets/images/lessons/$letterKey/$imgKey.jpg'
+                  ? 'assets/images/lessons/$letterKey/$imgKey.webp'
                   : null;
               return _WordCard(
                 word: word,

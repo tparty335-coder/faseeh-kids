@@ -195,11 +195,105 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                 );
               })
             else ...[
-              // زر السماعة 🔊
+              // زر السماعة 🔊 فوق موضع الأسطوانة
               spot(item.speakerOffset, 44, () => _say(item.audioPath, maxMs: 2500)),
-              // زر الإغلاق ✖
+              // زر الإغلاق ✖ فوق موضع الأسطوانة
               spot(item.closeOffset, 44, _closeWord),
             ],
+            // شريط علوي أنيق بخط Cairo يعرض الكلمة المفتوحة أو عنوان الصفحة مع أزرار واضحة
+            Positioned(
+              top: 8,
+              left: 12,
+              right: 12,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withValues(alpha: 0.62),
+                    borderRadius: BorderRadius.circular(22),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.7), width: 1.5),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (item != null) ...[
+                        InkWell(
+                          onTap: () => _say(item.audioPath, maxMs: 2500),
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF43A047),
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(Icons.volume_up_rounded, color: Colors.white, size: 18),
+                                const SizedBox(width: 6),
+                                Text(
+                                  item.word,
+                                  style: const TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        InkWell(
+                          onTap: _closeWord,
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFE53935),
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.close_rounded, color: Colors.white, size: 18),
+                                SizedBox(width: 4),
+                                Text(
+                                  'إغلاق',
+                                  style: TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ] else ...[
+                        const Icon(Icons.menu_book_rounded, color: Colors.amber, size: 18),
+                        const SizedBox(width: 6),
+                        Flexible(
+                          child: Text(
+                            'كَلِمَاتُ حَرْفِ (${widget.letter}) — اضْغَطْ عَلَى أَيِّ كَلِمَةٍ لِسَمَاعِهَا',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              ),
+            ),
             // مصاصة الانتقال للصفحة التالية
             spot(
               effImgW == 800.0

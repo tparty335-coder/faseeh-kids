@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (words_t1): تُفَّاحَة (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/taa_words_round_1.png',
+    imagePath: 'assets/images/games/words/taa_words_round_1.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (words_t2): تِين (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/taa_words_round_2.png',
+    imagePath: 'assets/images/games/words/taa_words_round_2.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (words_t3): تِمْسَاح (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/taa_words_round_3.png',
+    imagePath: 'assets/images/games/words/taa_words_round_3.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4 (words_t4): كِتَاب (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/taa_words_round_4.png',
+    imagePath: 'assets/images/games/words/taa_words_round_4.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],

@@ -223,7 +223,7 @@ void main() {
               final full = '$root$sep${st.replaceAll('/', sep)}';
               expect(
                 File(full).lengthSync(),
-                greaterThanOrEqualTo(50000),
+                greaterThanOrEqualTo(10000),
                 reason: 'Tracing step image appears blank/incomplete: $st',
               );
             }
@@ -236,7 +236,7 @@ void main() {
                 final full = '$root$sep${pos.imagePath!.replaceAll('/', sep)}';
                 expect(
                   File(full).lengthSync(),
-                  greaterThanOrEqualTo(50000),
+                  greaterThanOrEqualTo(10000),
                   reason: 'Tracing position image appears blank/incomplete: ${pos.imagePath}',
                 );
               }

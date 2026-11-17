@@ -333,11 +333,11 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
     final letterKey = AudioRegistry.letterKeyFromChar(letterChar);
     final harakaId = haraka['id'] as String; // fatha, kasra, damma, sukoon
     
-    // The user provided accurate rule files in the root folder like: alif_fatha_rule.mp3
-    final rulePath = 'audio/${letterKey}_${harakaId}_rule.mp3';
+    final rulePath = AudioRegistry.getPath('${letterKey}_${harakaId}_rule');
     
     try {
-      // We will try to play the rule file directly via AudioService
+      if (rulePath == null) throw StateError('no rule path');
+      // Play the registered rule file via AudioService
       await AudioService.instance.playAsset(rulePath);
     } catch (e) {
       // Fallback: If rule doesn't exist, just play the short vowel sound to avoid playing the wrong MADD demo

@@ -17,7 +17,6 @@
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import '../core/constants/audio_manifest.dart';
 import '../core/utils/age_group.dart';
 
@@ -29,7 +28,6 @@ class TtsService {
   /// Static getter for legacy singleton access (AudioManager compatibility)
   static TtsService get instance => _instance;
 
-  final FlutterTts _tts = FlutterTts();
   final AudioPlayer _audioPlayer = AudioPlayer();
   bool _isInitialized = false;
   AgeGroup _currentAgeGroup = AgeGroup.preschool3to5;
@@ -37,12 +35,12 @@ class TtsService {
   /// خريطة الحروف العربية → أسماء الملفات
   static const Map<String, String> letterIds = {
     'أ': 'alif', 'ا': 'alif', 'إ': 'alif', 'آ': 'alif', 'ء': 'alif',
-    'ب': 'baa',  'ت': 'taa',  'ث': 'thaa', 'ج': 'jeem', 'ح': 'haa',
+    'ب': 'baa',  'ت': 'taa',  'ث': 'thaa', 'ج': 'jeem', 'ح': 'haa_h',
     'خ': 'khaa', 'د': 'daal', 'ذ': 'dhaal','ر': 'raa',  'ز': 'zaay',
     'س': 'seen', 'ش': 'sheen','ص': 'saad', 'ض': 'daad', 'ط': 'taa_t',
     'ظ': 'dhaa_dh','ع': 'ain','غ': 'ghain','ف': 'faa',  'ق': 'qaaf',
     'ك': 'kaaf', 'ل': 'laam', 'م': 'meem', 'ن': 'noon',
-    'ه': 'haa_h','هـ': 'haa_h','و': 'waaw','ي': 'yaa',
+    'ه': 'haa',  'هـ': 'haa', 'و': 'waaw', 'ي': 'yaa',
   };
 
   /// خريطة الحركات → لاحقات الملفات
@@ -54,16 +52,7 @@ class TtsService {
   Future<void> init({AgeGroup ageGroup = AgeGroup.preschool3to5}) async {
     if (_isInitialized) return;
     _currentAgeGroup = ageGroup;
-    try {
-      await _tts.setLanguage('ar-SA');
-      await _tts.setSpeechRate(0.45);
-      await _tts.setVolume(1.0);
-      await _tts.setPitch(1.0);
-      await _tts.awaitSpeakCompletion(true);
-      _isInitialized = true;
-    } catch (e) {
-      debugPrint('TtsService: init error — $e');
-    }
+    _isInitialized = true;
   }
 
   // ─── تحديد مسار الأصل بناءً على النص ───
@@ -98,14 +87,8 @@ class TtsService {
       return;
     }
 
-    // Fallback: TTS
-    debugPrint('TtsService: No asset for "$clean" — using TTS fallback');
-    try {
-      await _tts.stop();
-      await _tts.speak(clean);
-    } catch (e) {
-      debugPrint('TtsService: TTS error — $e');
-    }
+    // دستور فصيح: صفر نطق آلي اصطناعي (TTS) — نكتفي بتسجيل الملاحظة في التطوير فقط
+    debugPrint('TtsService: No recorded asset for "$clean" (synthetic TTS disabled)');
   }
 
   // ─── تشغيل صوت محدد بالمسار النسبي (من assets/audio/) ───
@@ -167,21 +150,14 @@ class TtsService {
     }
   }
 
-  /// Update age group speech rate (AudioManager compatibility)
+  /// Update age group (AudioManager compatibility; recorded audio only, no synthetic TTS)
   Future<void> setAgeGroup(AgeGroup ageGroup) async {
     _currentAgeGroup = ageGroup;
-    final rates = {
-      AgeGroup.preschool3to5: 0.4,
-      AgeGroup.emerging6to8: 0.5,
-      AgeGroup.independent9to10: 0.6,
-    };
-    try { await _tts.setSpeechRate(rates[ageGroup] ?? 0.45); } catch (_) {}
   }
 
   Future<void> stop() async {
     try {
       await _audioPlayer.stop();
-      await _tts.stop();
     } catch (_) {}
   }
 

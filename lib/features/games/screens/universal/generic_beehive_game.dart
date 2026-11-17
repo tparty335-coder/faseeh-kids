@@ -81,14 +81,33 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
     await _say(_rounds[_round].audioPath, maxMs: 2800);
   }
 
+  int _detectCorrectCellIndex(String word, String letter) {
+    final base = letter.replaceAll('ـ', '').trim();
+    final target = base.isEmpty ? letter : base[0];
+    for (int i = 0; i < word.length; i++) {
+      if (word[i] == target) {
+        for (int j = i + 1; j < word.length && j <= i + 2; j++) {
+          final code = word.codeUnitAt(j);
+          if (code == 0x064F) return 0; // ضمة ُ
+          if (code == 0x064E) return 1; // فتحة َ
+          if (code == 0x0650) return 2; // كسرة ِ
+          if (code == 0x0652) return 3; // سكون ْ
+        }
+      }
+    }
+    const order = [1, 2, 0, 3];
+    return order[_round % 4];
+  }
+
   List<GameZoneChoice> _effectiveCells(BeehiveRound rd) {
     if (rd.cells != null && rd.cells!.isNotEmpty) return rd.cells!;
-    final ch = widget.manifest.letter;
+    final ch = widget.manifest.letter.replaceAll('ـ', '').trim();
+    final corr = _detectCorrectCellIndex(rd.word, ch);
     return [
-      GameZoneChoice(label: '$chُ', isCorrect: false, px: 692, py: 181),
-      GameZoneChoice(label: '$chَ', isCorrect: true, px: 546, py: 269),
-      GameZoneChoice(label: '$chِ', isCorrect: false, px: 739, py: 255),
-      GameZoneChoice(label: '$chْ', isCorrect: false, px: 595, py: 350),
+      GameZoneChoice(label: '$chُ', isCorrect: corr == 0, px: 692, py: 181),
+      GameZoneChoice(label: '$chَ', isCorrect: corr == 1, px: 546, py: 269),
+      GameZoneChoice(label: '$chِ', isCorrect: corr == 2, px: 739, py: 255),
+      GameZoneChoice(label: '$chْ', isCorrect: corr == 3, px: 595, py: 350),
     ];
   }
 

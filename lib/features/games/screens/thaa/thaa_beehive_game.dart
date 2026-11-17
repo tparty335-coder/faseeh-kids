@@ -43,7 +43,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: ثَعْلَب ← ثَ (يسار)
   _Round(
-    imagePath: 'assets/images/games/beehive/thaa_beehive_round_1.png',
+    imagePath: 'assets/images/games/beehive/thaa_beehive_round_1.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -57,7 +57,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: ثِمَار ← ثِ (يمين)
   _Round(
-    imagePath: 'assets/images/games/beehive/thaa_beehive_round_2.png',
+    imagePath: 'assets/images/games/beehive/thaa_beehive_round_2.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -71,7 +71,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: ثُعْبَان ← ثُ (أعلى)
   _Round(
-    imagePath: 'assets/images/games/beehive/thaa_beehive_round_3.png',
+    imagePath: 'assets/images/games/beehive/thaa_beehive_round_3.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
@@ -83,18 +83,18 @@ const List<_Round> _rounds = [
       _CellZone(label: 'ثْ', isCorrect: false, px: 761, py: 351), // أسفل
     ],
   ),
-  // الجولة 4: مِثْقَاب ← ثْ (أسفل)
+  // الجولة 4: إِثْنَان ← ثْ (أسفل)
   _Round(
-    imagePath: 'assets/images/games/beehive/thaa_beehive_round_4.png',
+    imagePath: 'assets/images/games/beehive/thaa_beehive_round_4.webp',
     imgH: 481,
-    wordAudio: 'audio/lessons/thaa/sounds/word_mithqab.mp3',
+    wordAudio: 'audio/games/beehive/thaa/thaa_beehive_4.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
-    correctWord: 'مِثْقَابٌ',
+    correctWord: 'إِثْنَان',
     cells: [
       _CellZone(label: 'ثُ', isCorrect: false, px: 884, py: 172), // أعلى
       _CellZone(label: 'ثَ', isCorrect: false, px: 696, py: 270), // يسار
       _CellZone(label: 'ثِ', isCorrect: false, px: 946, py: 265), // يمين
-      _CellZone(label: 'ثْ', isCorrect: true,  px: 761, py: 351), // أسفل (مِثْقَاب - سكون)
+      _CellZone(label: 'ثْ', isCorrect: true,  px: 761, py: 351), // أسفل (إِثْنَان - سكون)
     ],
   ),
 ];
@@ -157,7 +157,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
     if (!mounted || _gameOver) return;
     final t = ++_token;
     // 1. صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اضغط على حرف الثاء بحركته المناسبة...")
-    await _say('assets/audio/games/beehive/thaa_beehive_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
+    await _say('audio/games/beehive/thaa_beehive_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
     if (!mounted || _gameOver || t != _token) return;
     // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
     await _playWordAudio(pauseAfter: const Duration(milliseconds: 400));

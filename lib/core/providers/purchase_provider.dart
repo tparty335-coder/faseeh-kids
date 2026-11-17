@@ -5,6 +5,7 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:faseeh_kids/features/parent_dashboard/logic/parent_provider.dart';
 import 'package:faseeh_kids/services/revenue_cat_service.dart';
 
 // ─── Notifier that holds premium status ───
@@ -48,8 +49,12 @@ final isPremiumProvider = Provider<bool>((ref) {
 // ─── Per-letter access provider ───
 final letterAccessProvider = Provider.family<bool, int>((ref, letterIndex) {
   final isPremium = ref.watch(isPremiumProvider);
-  return RevenueCatService.instance.isLetterAccessible(letterIndex)
-      || isPremium;
+  final unlockAllForReview = ref.watch(
+    parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
+  );
+  return RevenueCatService.instance.isLetterAccessible(letterIndex) ||
+      isPremium ||
+      unlockAllForReview;
 });
 
 // ─── Offerings provider ───

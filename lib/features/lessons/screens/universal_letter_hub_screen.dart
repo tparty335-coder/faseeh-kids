@@ -352,7 +352,7 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                               ),
                               child: ClipOval(
                                 child: Image.asset(
-                                  'assets/images/mascot/falcon_happy.jpg',
+                                  'assets/images/mascot/falcon_happy.webp',
                                   fit: BoxFit.cover,
                                   errorBuilder: (_, __, ___) => const Center(
                                     child: Text('🦅', style: TextStyle(fontSize: 32)),

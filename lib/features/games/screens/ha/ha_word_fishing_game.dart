@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: حَمَل ✅ | أَسَد ❌ | فَأْس ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_1.webp',
     correctWord: 'حَمَل',
     wordAudio: 'audio/lessons/ha/sounds/word_himal.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: وَلَد ❌ | قَلَم ❌ | حِصَان ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_2.webp',
     correctWord: 'حِصَان',
     wordAudio: 'audio/lessons/ha/sounds/word_hisaan.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: رَأْس ❌ | حَجَر ✅ | أُذُن ❌
   _RoundData(
-    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_3.webp',
     correctWord: 'حَجَر',
     wordAudio: 'audio/lessons/ha/sounds/word_hijar.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: أُمِّي ❌ | أَسَد ❌ | حِمَار ✅
   _RoundData(
-    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/ha/ha_fishing_round_4.webp',
     correctWord: 'حِمَار',
     wordAudio: 'audio/lessons/ha/sounds/word_himaar.mp3',
     correctPraise: 'audio/games/fishing/momtt.mp3',

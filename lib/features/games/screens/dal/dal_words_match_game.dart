@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: جَمَل (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/dal/dal_words_round_1.png',
+    imagePath: 'assets/images/games/words/dal/dal_words_round_1.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: جَبَل (1024 × 524)
   _Round(
-    imagePath: 'assets/images/games/words/dal/dal_words_round_2.png',
+    imagePath: 'assets/images/games/words/dal/dal_words_round_2.webp',
     imgH: 524,
     cardPx: 121.0,
     cardPyList: [140.0, 258.0, 385.0],
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: جَزَرَة (1024 × 574)
   _Round(
-    imagePath: 'assets/images/games/words/dal/dal_words_round_3.png',
+    imagePath: 'assets/images/games/words/dal/dal_words_round_3.webp',
     imgH: 574,
     cardPx: 136.0,
     cardPyList: [151.0, 280.0, 418.0],
@@ -100,14 +100,14 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: جَرَس (1024 × 538)
   _Round(
-    imagePath: 'assets/images/games/words/dal/dal_words_round_4.png',
+    imagePath: 'assets/images/games/words/dal/dal_words_round_4.webp',
     imgH: 538,
     cardPx: 132.0,
     cardPyList: [123.0, 254.0, 396.0],
     dropPx: 666.0,
     dropPy: 423.0,
-    correctWord: 'حُوت',
-    wordAudio: 'audio/lessons/ha/sounds/word_hoot.mp3',
+    correctWord: 'لُحُوم',
+    wordAudio: 'audio/lessons/ha/sounds/word_luhoom.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     cards: [
       _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),

@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (words1): فُسْتَان ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_1.png',
+    imagePath: 'assets/images/games/words/seen/seen_words_round_1.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (words2): يَرْسُم ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_2.png',
+    imagePath: 'assets/images/games/words/seen/seen_words_round_2.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (words3): سَبُّورَة ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_3.png',
+    imagePath: 'assets/images/games/words/seen/seen_words_round_3.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4 (words4): تِمْسَاح ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_4.png',
+    imagePath: 'assets/images/games/words/seen/seen_words_round_4.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],

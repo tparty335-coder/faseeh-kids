@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: رَجُل (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/raa/raa_words_round_1.png',
+    imagePath: 'assets/images/games/words/raa/raa_words_round_1.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: رُمَّان (1024 × 524)
   _Round(
-    imagePath: 'assets/images/games/words/raa/raa_words_round_2.png',
+    imagePath: 'assets/images/games/words/raa/raa_words_round_2.webp',
     imgH: 524,
     cardPx: 121.0,
     cardPyList: [140.0, 258.0, 385.0],
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: رِيشَة (1024 × 574)
   _Round(
-    imagePath: 'assets/images/games/words/raa/raa_words_round_3.png',
+    imagePath: 'assets/images/games/words/raa/raa_words_round_3.webp',
     imgH: 574,
     cardPx: 136.0,
     cardPyList: [151.0, 280.0, 418.0],
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: بَحْر (1024 × 538)
   _Round(
-    imagePath: 'assets/images/games/words/raa/raa_words_round_4.png',
+    imagePath: 'assets/images/games/words/raa/raa_words_round_4.webp',
     imgH: 538,
     cardPx: 132.0,
     cardPyList: [123.0, 254.0, 396.0],

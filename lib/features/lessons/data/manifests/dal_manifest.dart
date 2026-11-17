@@ -9,7 +9,6 @@ import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
 const String _dir = 'assets/images/lessons/dal/';
 const String _audio = 'audio/lessons/dal/final/';
 const String _vowelsAudio = 'audio/letters/short_vowels/';
-const String _maddAudio = 'audio/letters/long_vowels/';
 const String _gamesDir = 'assets/images/games/';
 const String _gamesAudio = 'audio/games/';
 
@@ -25,7 +24,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
 
   // ── الأهداف ────────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}dal_goal.mp3',
+    audioPath: 'audio/letters/core/daal_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى حَرْفِ الدَّالِ (د)',
       'أَنْطِقُ حَرْفَ الدَّالِ بِالْحَرَكَاتِ الثَّلَاثِ',
@@ -41,27 +40,27 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_1.png',
+        imagePath: '${_dir}dal_cd_story_1.webp',
         audioPath: '${_audio}dal_story_1.mp3',
       ), // استيقظت دلال على صوت الديك وهو يصيح .
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_2.png',
+        imagePath: '${_dir}dal_cd_story_2.webp',
         audioPath: '${_audio}dal_story_2.mp3',
       ), // صياح الديك يوقظ دلال
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_3.png',
+        imagePath: '${_dir}dal_cd_story_3.webp',
         audioPath: '${_audio}dal_story_3.mp3',
       ), // فخرجت إلى الشرفة وسمعت صوت آذان الفجر .
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_4.png',
+        imagePath: '${_dir}dal_cd_story_4.webp',
         audioPath: '${_audio}dal_story_4.mp3',
       ), // والناس يدخلون المسجد يصلون الفجر .
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_5.png',
+        imagePath: '${_dir}dal_cd_story_5.webp',
         audioPath: '${_audio}dal_story_5.mp3',
       ), // أحبت دلال الديك وكانت تسميه مؤذن الفجر .
       StoryScene(
-        imagePath: '${_dir}dal_cd_story_nasheed.png',
+        imagePath: '${_dir}dal_cd_story_nasheed.webp',
         audioPath: '${_audio}dal_nasheed.mp3',
         isNasheed: true,
       ), // دال ديك فوق الدار ... يؤذن فجراً يوقظ جاره
@@ -87,18 +86,18 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'دَا',
-        audioPath: '${_maddAudio}daal_madd_demo.mp3',
-        imagePath: '${_dir}dal_madd_aa.png',
+        audioPath: 'audio/lessons/dal/madd/dal_madd_alif.mp3',
+        imagePath: '${_dir}dal_madd_aa.webp',
       ),
       MaddItem(
         displayChar: 'دُو',
-        audioPath: '${_maddAudio}daal_madd_demo.mp3',
-        imagePath: '${_dir}dal_madd_uu.png',
+        audioPath: 'audio/lessons/dal/madd/dal_madd_waw.mp3',
+        imagePath: '${_dir}dal_madd_uu.webp',
       ),
       MaddItem(
         displayChar: 'دِي',
-        audioPath: '${_maddAudio}daal_madd_demo.mp3',
-        imagePath: '${_dir}dal_madd_ii.png',
+        audioPath: 'audio/lessons/dal/madd/dal_madd_yaa.mp3',
+        imagePath: '${_dir}dal_madd_ii.webp',
       ),
     ],
   ),
@@ -108,10 +107,10 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
     letterChar: 'د',
     audioIntroPath: '${_audio}dal_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}dal_write_step_1.png',
-      '${_dir}dal_write_step_2.png',
-      '${_dir}dal_write_step_3.png',
-      '${_dir}dal_write_step_4.png',
+      '${_dir}dal_write_step_1.webp',
+      '${_dir}dal_write_step_2.webp',
+      '${_dir}dal_write_step_3.webp',
+      '${_dir}dal_write_step_4.webp',
     ],
   ),
 
@@ -121,12 +120,12 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
     pages: [
       // صفحة 1 (ka1.swf): دَلَال (أحمر)، دِيك (برتقالي)، مَسْجِد (أخضر)، دَالْيَا (أزرق)
       WordsPage(
-        listImagePath: '${_dir}dal_words_p1_list.png',
+        listImagePath: '${_dir}dal_words_p1_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'دَلَالُ',
-            cardImagePath: '${_dir}dal_words_p1_card_1.png',
+            cardImagePath: '${_dir}dal_words_p1_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p1_1.mp3',
             hotspot: WordHotspot(
@@ -140,7 +139,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دِيكٌ',
-            cardImagePath: '${_dir}dal_words_p1_card_2.png',
+            cardImagePath: '${_dir}dal_words_p1_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p1_2.mp3',
             hotspot: WordHotspot(
@@ -154,7 +153,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'مَسْجِدٌ',
-            cardImagePath: '${_dir}dal_words_p1_card_3.png',
+            cardImagePath: '${_dir}dal_words_p1_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p1_3.mp3',
             hotspot: WordHotspot(
@@ -168,7 +167,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَالْيَا',
-            cardImagePath: '${_dir}dal_words_p1_card_4.png',
+            cardImagePath: '${_dir}dal_words_p1_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p1_4.mp3',
             hotspot: WordHotspot(
@@ -184,12 +183,12 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
       ),
       // صفحة 2 (ka2.swf): صُنْدُوق (أحمر)، حَدِيقَة (برتقالي)، دُشّ (أخضر)، دِمَاغ (أزرق)
       WordsPage(
-        listImagePath: '${_dir}dal_words_p2_list.png',
+        listImagePath: '${_dir}dal_words_p2_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'صُنْدُوق',
-            cardImagePath: '${_dir}dal_words_p2_card_1.png',
+            cardImagePath: '${_dir}dal_words_p2_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p2_1.mp3',
             hotspot: WordHotspot(
@@ -203,7 +202,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'حَدِيقَة',
-            cardImagePath: '${_dir}dal_words_p2_card_2.png',
+            cardImagePath: '${_dir}dal_words_p2_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p2_2.mp3',
             hotspot: WordHotspot(
@@ -217,7 +216,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دُشّ',
-            cardImagePath: '${_dir}dal_words_p2_card_3.png',
+            cardImagePath: '${_dir}dal_words_p2_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p2_3.mp3',
             hotspot: WordHotspot(
@@ -231,7 +230,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دِمَاغ',
-            cardImagePath: '${_dir}dal_words_p2_card_4.png',
+            cardImagePath: '${_dir}dal_words_p2_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p2_4.mp3',
             hotspot: WordHotspot(
@@ -247,12 +246,12 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
       ),
       // صفحة 3 (ka3.swf): دُبّ (أحمر)، دَجَاجَة (برتقالي)، دَرَاجَة (أخضر)، هُدْهُد (أزرق)
       WordsPage(
-        listImagePath: '${_dir}dal_words_p3_list.png',
+        listImagePath: '${_dir}dal_words_p3_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'دُبّ',
-            cardImagePath: '${_dir}dal_words_p3_card_1.png',
+            cardImagePath: '${_dir}dal_words_p3_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p3_1.mp3',
             hotspot: WordHotspot(
@@ -266,7 +265,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَجَاجَة',
-            cardImagePath: '${_dir}dal_words_p3_card_2.png',
+            cardImagePath: '${_dir}dal_words_p3_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p3_2.mp3',
             hotspot: WordHotspot(
@@ -280,7 +279,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَرَاجَة',
-            cardImagePath: '${_dir}dal_words_p3_card_3.png',
+            cardImagePath: '${_dir}dal_words_p3_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p3_3.mp3',
             hotspot: WordHotspot(
@@ -294,7 +293,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'هُدْهُد',
-            cardImagePath: '${_dir}dal_words_p3_card_4.png',
+            cardImagePath: '${_dir}dal_words_p3_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p3_4.mp3',
             hotspot: WordHotspot(
@@ -310,12 +309,12 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
       ),
       // صفحة 4 (ka4.swf): أَسَد (أحمر)، دَبَّابَة (برتقالي)، دَوَاء (أخضر)، مُهَنْدِس (أزرق)
       WordsPage(
-        listImagePath: '${_dir}dal_words_p4_list.png',
+        listImagePath: '${_dir}dal_words_p4_list.webp',
         listImageHeight: 474,
         words: [
           WordItem(
             word: 'أَسَدُ',
-            cardImagePath: '${_dir}dal_words_p4_card_1.png',
+            cardImagePath: '${_dir}dal_words_p4_card_1.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p4_1.mp3',
             hotspot: WordHotspot(
@@ -329,7 +328,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَبَّابَة',
-            cardImagePath: '${_dir}dal_words_p4_card_2.png',
+            cardImagePath: '${_dir}dal_words_p4_card_2.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p4_2.mp3',
             hotspot: WordHotspot(
@@ -343,7 +342,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'دَوَاء',
-            cardImagePath: '${_dir}dal_words_p4_card_3.png',
+            cardImagePath: '${_dir}dal_words_p4_card_3.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p4_3.mp3',
             hotspot: WordHotspot(
@@ -357,7 +356,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'مُهَنْدِس',
-            cardImagePath: '${_dir}dal_words_p4_card_4.png',
+            cardImagePath: '${_dir}dal_words_p4_card_4.webp',
             cardHeight: 474,
             audioPath: '${_audio}dal_word_p4_4.mp3',
             hotspot: WordHotspot(
@@ -379,159 +378,159 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
     fishing: [
       FishingRound(
         word: 'دُبّ',
-        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_1.png',
+        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/dal/dal_fishing_1.mp3',
         isCorrect: true,
       ),
       FishingRound(
         word: 'كِتَاب',
-        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_2.png',
+        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/dal/dal_fishing_2.mp3',
-        isCorrect: false,
+        isCorrect: true,
       ),
       FishingRound(
         word: 'دِيك',
-        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_3.png',
+        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/dal/dal_fishing_3.mp3',
         isCorrect: true,
       ),
       FishingRound(
         word: 'قَلَم',
-        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_4.png',
+        imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/dal/dal_fishing_4.mp3',
-        isCorrect: false,
+        isCorrect: true,
       ),
     ],
     beehive: [
       BeehiveRound(
         word: 'دَالْيَا',
-        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_1.png',
+        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/dal/dal_beehive_1.mp3',
       ),
       BeehiveRound(
         word: 'دِيك',
-        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_2.png',
+        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/dal/dal_beehive_2.mp3',
       ),
       BeehiveRound(
         word: 'دُبّ',
-        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_3.png',
+        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/dal/dal_beehive_3.mp3',
       ),
       BeehiveRound(
         word: 'أَسَد',
-        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_4.png',
+        imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/dal/dal_beehive_4.mp3',
       ),
     ],
     circus: [
       CircusRound(
         word: 'دُبّ',
-        imagePath: '${_gamesDir}circus/dal/dal_circus_round_1.png',
+        imagePath: '${_gamesDir}circus/dal/dal_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/dal/dal_circus_1.mp3',
       ),
       CircusRound(
         word: 'دِيك',
-        imagePath: '${_gamesDir}circus/dal/dal_circus_round_2.png',
+        imagePath: '${_gamesDir}circus/dal/dal_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/dal/dal_circus_2.mp3',
       ),
       CircusRound(
         word: 'دَرَاجَة',
-        imagePath: '${_gamesDir}circus/dal/dal_circus_round_3.png',
+        imagePath: '${_gamesDir}circus/dal/dal_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/dal/dal_circus_3.mp3',
       ),
     ],
     wordsMatch: [
       WordsMatchPair(
         word: 'دُبّ',
-        imagePath: '${_gamesDir}match/dal/dal_match_1.png',
+        imagePath: '${_gamesDir}match/dal/dal_match_1.webp',
         audioPath: '${_gamesAudio}match/dal/dal_match_1.mp3',
       ),
       WordsMatchPair(
         word: 'دِيك',
-        imagePath: '${_gamesDir}match/dal/dal_match_2.png',
+        imagePath: '${_gamesDir}match/dal/dal_match_2.webp',
         audioPath: '${_gamesAudio}match/dal/dal_match_2.mp3',
       ),
       WordsMatchPair(
         word: 'دَجَاجَة',
-        imagePath: '${_gamesDir}match/dal/dal_match_3.png',
+        imagePath: '${_gamesDir}match/dal/dal_match_3.webp',
         audioPath: '${_gamesAudio}match/dal/dal_match_3.mp3',
       ),
       WordsMatchPair(
         word: 'أَسَد',
-        imagePath: '${_gamesDir}match/dal/dal_match_4.png',
+        imagePath: '${_gamesDir}match/dal/dal_match_4.webp',
         audioPath: '${_gamesAudio}match/dal/dal_match_4.mp3',
       ),
     ],
     coloring: [
       ColoringRound(
         word: 'دَالْيَا',
-        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_1.webp',
         introAudioPath: '${_audio}dal_paint_word1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dal/dal_reveal_daar.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_1.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_1.webp',
             color: Color(0xFF00897B),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_2.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_2.webp',
             color: Color(0xFF004D40),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_3.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_1_slice_3.webp',
             color: Color(0xFFFFD54F),
           ),
         ],
       ),
       ColoringRound(
         word: 'دِيك',
-        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_2.webp',
         introAudioPath: '${_audio}dal_paint_word2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dal/dal_reveal_deek.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_1.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_1.webp',
             color: Color(0xFF26A69A),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_2.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_2.webp',
             color: Color(0xFF80CBC4),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_3.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_2_slice_3.webp',
             color: Color(0xFF90A4AE),
           ),
         ],
       ),
       ColoringRound(
         word: 'هُدْهُد',
-        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_3.png',
+        bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_3.webp',
         introAudioPath: '${_audio}dal_paint_word3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dal/dal_reveal_dood.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_1.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_1.webp',
             color: Color(0xFFFF7043),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_2.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_2.webp',
             color: Color(0xFF4CAF50),
           ),
           ColoringSlice(
             maskImagePath:
-                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_3.png',
+                '${_gamesDir}coloring/dal/dal_coloring_round_3_slice_3.webp',
             color: Color(0xFFFFF176),
           ),
         ],

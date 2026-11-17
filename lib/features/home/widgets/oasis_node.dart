@@ -111,7 +111,7 @@ class OasisNode extends StatelessWidget {
                   ),
                   child: ClipOval(
                     child: Image.asset(
-                      'assets/images/mascot/falcon_happy.jpg',
+                      'assets/images/mascot/falcon_happy.webp',
                       fit: BoxFit.cover,
                     ),
                   ),

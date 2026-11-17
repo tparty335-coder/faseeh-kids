@@ -8,7 +8,9 @@ import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 
 class ParentGateScreen extends StatefulWidget {
-  const ParentGateScreen({super.key});
+  final String? targetRoute;
+
+  const ParentGateScreen({super.key, this.targetRoute});
 
   @override
   State<ParentGateScreen> createState() => _ParentGateScreenState();
@@ -130,7 +132,7 @@ class _ParentGateScreenState extends State<ParentGateScreen> {
     if (input.length == answer.toString().length) {
       if (int.tryParse(input) == answer) {
         _countdownTimer?.cancel();
-        context.go(AppRouter.parentDashboard); // Navigate to dashboard using typed route
+        context.go(widget.targetRoute ?? AppRouter.parentDashboard);
       } else {
         _handleFailure();
       }

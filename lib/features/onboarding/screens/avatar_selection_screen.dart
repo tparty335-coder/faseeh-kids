@@ -36,7 +36,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
   // Child-friendly 3D animal and hero character avatars
   static const List<_AvatarOption> _avatars = [
     _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_lion.png',
+      imagePath: 'assets/images/avatars/avatar_lion.webp',
       fallbackEmoji: '🦁',
       label: 'أَسَد',
       title: 'الشجاع',
@@ -44,7 +44,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
       auraColor: Color(0xFFFF9966),
     ),
     _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_rabbit.png',
+      imagePath: 'assets/images/avatars/avatar_rabbit.webp',
       fallbackEmoji: '🐇',
       label: 'أَرْنَب',
       title: 'السريع',
@@ -52,7 +52,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
       auraColor: Color(0xFFDD2476),
     ),
     _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_camel.png',
+      imagePath: 'assets/images/avatars/avatar_camel.webp',
       fallbackEmoji: '🐪',
       label: 'جَمَل',
       title: 'الصبور',
@@ -60,39 +60,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
       auraColor: Color(0xFFD4A574),
     ),
     _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_fox.png',
-      fallbackEmoji: '🦊',
-      label: 'ثَعْلَب',
-      title: 'الذكي',
-      gradient: [Color(0xFFFF5722), Color(0xFFFF9800)],
-      auraColor: Color(0xFFFF5722),
-    ),
-    _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_bear.png',
-      fallbackEmoji: '🐻',
-      label: 'دُبّ',
-      title: 'اللطيف',
-      gradient: [Color(0xFF795548), Color(0xFF5D4037)],
-      auraColor: Color(0xFF795548),
-    ),
-    _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_butterfly.png',
-      fallbackEmoji: '🦋',
-      label: 'فَرَاشَة',
-      title: 'الجميلة',
-      gradient: [Color(0xFF9C27B0), Color(0xFF3F51B5)],
-      auraColor: Color(0xFF9C27B0),
-    ),
-    _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_star.png',
-      fallbackEmoji: '⭐',
-      label: 'نَجْمَة',
-      title: 'المتألقة',
-      gradient: [Color(0xFF00c6ff), Color(0xFF0072ff)],
-      auraColor: Color(0xFF00c6ff),
-    ),
-    _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_king.png',
+      imagePath: 'assets/images/avatars/avatar_king.webp',
       fallbackEmoji: '👑',
       label: 'الْمَلِك',
       title: 'الأمير',
@@ -100,7 +68,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
       auraColor: Color(0xFF8E2DE2),
     ),
     _AvatarOption(
-      imagePath: 'assets/images/avatars/avatar_champion.png',
+      imagePath: 'assets/images/avatars/avatar_champion.webp',
       fallbackEmoji: '🏆',
       label: 'الْبَطَل',
       title: 'الفائز',

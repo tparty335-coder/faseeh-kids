@@ -41,21 +41,21 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، أَرْنَب (أسفل) ← أَرْنَب ✅
   _Round(
-    imagePath: 'assets/images/games/circus/baa_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/baa_circus_round_1.webp',
     imgH: 499,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    praiseAudio: 'audio/games/beehive/4_momt.mp3',
     zones: [
       _ImageZone(label: 'تِمْسَاح', hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'أَسَد',    hasBaa: false, px: 326, py: 255),
       _ImageZone(label: 'أَرْنَب',  hasBaa: true,  px: 138, py: 392,
-          wordAudio: 'audio/word_arnab.mp3'),
+          wordAudio: 'audio/lessons/baa/words/p3_arnab.mp3'),
     ],
   ),
   // الجولة 2: حِمَار (أعلى) ، ثُعْبَان (وسط) ، فِيل (أسفل) ← ثُعْبَان ✅
   _Round(
-    imagePath: 'assets/images/games/circus/baa_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/baa_circus_round_2.webp',
     imgH: 511,
-    praiseAudio: 'audio/games/circus/6_ba59.mp3',
+    praiseAudio: 'audio/games/beehive/3_raa.mp3',
     zones: [
       _ImageZone(label: 'حِمَار',  hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'ثُعْبَان', hasBaa: true,  px: 326, py: 258,
@@ -65,9 +65,9 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: حِصَان (أعلى) ، مِطْرَقَة (وسط) ، بَاب (أسفل) ← بَاب ✅
   _Round(
-    imagePath: 'assets/images/games/circus/baa_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/baa_circus_round_3.webp',
     imgH: 520,
-    praiseAudio: 'audio/games/circus/6_ba53.mp3',
+    praiseAudio: 'audio/games/beehive/2_sah.mp3',
     zones: [
       _ImageZone(label: 'حِصَان',  hasBaa: false, px: 138, py: 116),
       _ImageZone(label: 'مِطْرَقَة', hasBaa: false, px: 326, py: 262),
@@ -129,8 +129,8 @@ class _BaaCircusGameState extends ConsumerState<BaaCircusGame> {
   Future<void> _playInstruction() async {
     if (!mounted || _gameOver) return;
     ++_token;
-    // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي بها حرف ب" (1.24s)
-    await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
+    // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي بها حرف ب"
+    await _say('audio/games/circus/9_a047.mp3', maxMs: 4500);
   }
 
   Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);

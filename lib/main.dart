@@ -9,6 +9,7 @@ import 'package:faseeh_kids/firebase_options.dart';
 import 'package:faseeh_kids/core/theme/app_theme.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/storage/hive_init.dart';
+import 'package:faseeh_kids/features/parent_dashboard/logic/parent_provider.dart';
 import 'package:faseeh_kids/services/revenue_cat_service.dart';
 
 /// فصيح الصغار — Faseeh Kids
@@ -84,11 +85,13 @@ void main() async {
 }
 
 /// Root Application Widget
-class FaseehKidsApp extends StatelessWidget {
+class FaseehKidsApp extends ConsumerWidget {
   const FaseehKidsApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final nightMode = ref.watch(parentSettingsProvider.select((s) => s.nightMode));
+
     return MaterialApp.router(
       // ─── App Identity ───
       title: 'فصيح الصغار',
@@ -97,7 +100,7 @@ class FaseehKidsApp extends StatelessWidget {
       // ─── Theme (Day Mode default, Night Mode via settings) ───
       theme: AppTheme.dayTheme,
       darkTheme: AppTheme.nightTheme,
-      themeMode: ThemeMode.light, // Will be dynamic via Riverpod in later phase
+      themeMode: nightMode ? ThemeMode.dark : ThemeMode.light,
 
       // ─── RTL Support ───
       locale: const Locale('ar'),
@@ -109,6 +112,14 @@ class FaseehKidsApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+
+      // ─── Disable font scaling (children's app uses fixed layout) ───
+      builder: (context, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(
+          textScaler: TextScaler.noScaling,
+        ),
+        child: child!,
+      ),
 
       // ─── Navigation ───
       routerConfig: AppRouter.router,

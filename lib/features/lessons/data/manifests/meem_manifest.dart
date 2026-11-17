@@ -21,7 +21,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
   nextLetter: 'ن',
 
   objectives: ObjectivesSpec(
-    audioPath: '${_audio}meem_goal.mp3',
+    audioPath: 'audio/letters/core/meem_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الْمِيمِ (م)',
       'أَنْطِقُ حَرْفَ الْمِيمِ بِالْحَرَكَاتِ الْقَصِيرَةِ وَالسُّكُونِ',
@@ -36,37 +36,37 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
   story: StorySpec(
     scenes: [
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_1.png',
+        imagePath: '${_dir}meem_cd_story_1.webp',
         audioPath: '${_audio}meem_story_1.mp3',
         captionText: 'مَرْوَانُ طِفْلٌ يُحِبُّ الْمَوْزَ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_2.png',
+        imagePath: '${_dir}meem_cd_story_2.webp',
         audioPath: '${_audio}meem_story_2.mp3',
         captionText: 'وَفِي يَوْمٍ مِنَ الْأَيَّامِ اشْتَرَتْ أُمُّهُ مَوْزًا لَهُ وَلِإِخْوَتِهِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_3.png',
+        imagePath: '${_dir}meem_cd_story_3.webp',
         audioPath: '${_audio}meem_story_3.mp3',
         captionText: 'أَكَلَ مَرْوَانُ الْكَثِيرَ مِنَ الْمَوْزِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_4.png',
+        imagePath: '${_dir}meem_cd_story_4.webp',
         audioPath: '${_audio}meem_story_4.mp3',
         captionText: 'أَكَلْتُ الْكَثِيرَ مِنَ الْمَوْزِ .. فَأَنَا أُحِبُّ الْمَوْزَ، فَشَعَرَ بِأَلَمٍ فِي بَطْنِهِ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_5.png',
+        imagePath: '${_dir}meem_cd_story_5.webp',
         audioPath: '${_audio}meem_story_5.mp3',
         captionText: 'أَسْرَعَتِ الْأُمُّ وَأَحْضَرَتِ الطَّبِيبَ وَأَعْطَاهُ الدَّوَاءَ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_6.png',
+        imagePath: '${_dir}meem_cd_story_6.webp',
         audioPath: '${_audio}meem_story_6.mp3',
         captionText: 'يَجِبُ عَلَيْنَا الِاعْتِدَالُ فِي الطَّعَامِ وَلَا نُسْرِفَ فِي أَكْلِ مَا نُحِبُّ.',
       ),
       StoryScene(
-        imagePath: '${_dir}meem_cd_story_nasheed.png',
+        imagePath: '${_dir}meem_cd_story_nasheed.webp',
         audioPath: '${_audio}meem_nasheed.mp3',
         isNasheed: true,
         captionText: 'مِيمٌ مَوْزٌ طَعْمٌ حُلْوٌ .. نَأْكُلُ مِنْهُ وَنَحْنُ نَنْمُو 🎵',
@@ -93,7 +93,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}meem_fatha.mp3',
         fullRuleAudio: '${_soundsAudio}meem_fatha_rule.mp3',
         wordAudio: '${_audio}meem_word_p2_4.mp3',
-        slideImagePath: '${_dir}meem_vowel_fatha.png',
+        slideImagePath: '${_dir}meem_vowel_fatha.webp',
       ),
       VowelCardSpec(
         vowelName: 'الضَّمَّةُ',
@@ -103,7 +103,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}meem_damma.mp3',
         fullRuleAudio: '${_soundsAudio}meem_damma_rule.mp3',
         wordAudio: '${_audio}meem_word_p2_2.mp3',
-        slideImagePath: '${_dir}meem_vowel_damma.png',
+        slideImagePath: '${_dir}meem_vowel_damma.webp',
       ),
       VowelCardSpec(
         vowelName: 'الْكَسْرَةُ',
@@ -113,7 +113,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}meem_kasra.mp3',
         fullRuleAudio: '${_soundsAudio}meem_kasra_rule.mp3',
         wordAudio: '${_audio}meem_word_p3_1.mp3',
-        slideImagePath: '${_dir}meem_vowel_kasra.png',
+        slideImagePath: '${_dir}meem_vowel_kasra.webp',
       ),
       VowelCardSpec(
         vowelName: 'السُّكُونُ',
@@ -123,7 +123,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         vowelAudio: '${_vowelsAudio}meem_sukoon.mp3',
         fullRuleAudio: '${_soundsAudio}meem_sukoon_rule.mp3',
         wordAudio: '${_audio}meem_word_p3_2.mp3',
-        slideImagePath: '${_dir}meem_vowel_sukoon.png',
+        slideImagePath: '${_dir}meem_vowel_sukoon.webp',
       ),
     ],
   ),
@@ -135,7 +135,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'مَا',
         audioPath: '${_maddAudio}meem_alif.mp3',
-        imagePath: '${_dir}meem_madd_aa.png',
+        imagePath: '${_dir}meem_madd_aa.webp',
         exampleWord: 'آمَال',
         explanation: 'مِيمٌ مَفْتُوحَةٌ مَعَ مَدٍّ بِالْأَلِفِ: مَا',
         wordAudioPath: '${_soundsAudio}meem_madd_aa.mp3',
@@ -144,7 +144,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'مُو',
         audioPath: '${_maddAudio}meem_waw.mp3',
-        imagePath: '${_dir}meem_madd_uu.png',
+        imagePath: '${_dir}meem_madd_uu.webp',
         exampleWord: 'مَحْمُود',
         explanation: 'مِيمٌ مَضْمُومَةٌ مَعَ مَدٍّ بِالْوَاوِ: مُو',
         wordAudioPath: '${_soundsAudio}meem_madd_uu.mp3',
@@ -153,10 +153,10 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       MaddItem(
         displayChar: 'مِي',
         audioPath: '${_maddAudio}meem_yaa.mp3',
-        imagePath: '${_dir}meem_madd_ii.png',
+        imagePath: '${_dir}meem_madd_ii.webp',
         exampleWord: 'سَمِير',
         explanation: 'مِيمٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: مِي',
-        wordAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_3.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/meem/meem_word_3.mp3',
         accentColor: Color(0xFFD84315),
       ),
     ],
@@ -166,10 +166,10 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     letterChar: 'م',
     audioIntroPath: '${_audio}meem_write_intro.mp3',
     stepImagePaths: [
-      '${_dir}meem_write_step_1.png',
-      '${_dir}meem_write_step_2.png',
-      '${_dir}meem_write_step_3.png',
-      '${_dir}meem_write_step_4.png',
+      '${_dir}meem_write_step_1.webp',
+      '${_dir}meem_write_step_2.webp',
+      '${_dir}meem_write_step_3.webp',
+      '${_dir}meem_write_step_4.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -179,7 +179,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         exampleWord: 'ثُوم',
         exampleEmoji: '🧄',
         audioPath: '${_audio}meem_trace_isolated.mp3',
-        imagePath: '${_dir}meem_trace_isolated.png',
+        imagePath: '${_dir}meem_trace_isolated.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -188,7 +188,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         exampleWord: 'مَوْز',
         exampleEmoji: '🍌',
         audioPath: '${_coreAudio}meem_pos_start.mp3',
-        imagePath: '${_dir}meem_trace_start.png',
+        imagePath: '${_dir}meem_trace_start.webp',
       ),
       TracingPositionSpec(
         position: 'middle',
@@ -197,7 +197,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         exampleWord: 'عَظْمَة',
         exampleEmoji: '🦴',
         audioPath: '${_coreAudio}meem_pos_middle.mp3',
-        imagePath: '${_dir}meem_trace_middle.png',
+        imagePath: '${_dir}meem_trace_middle.webp',
       ),
       TracingPositionSpec(
         position: 'end',
@@ -206,7 +206,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         exampleWord: 'قَلَم',
         exampleEmoji: '✏️',
         audioPath: '${_coreAudio}meem_pos_end.mp3',
-        imagePath: '${_dir}meem_trace_end.png',
+        imagePath: '${_dir}meem_trace_end.webp',
       ),
     ],
   ),
@@ -214,43 +214,43 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
   words: WordsSpec(
     pages: [
       WordsPage(
-        listImagePath: '${_dir}meem_words_p1_list.png',
+        listImagePath: '${_dir}meem_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'لَيْمُون', cardImagePath: '${_dir}meem_words_p1_card_1.png', cardHeight: 474, audioPath: '${_audio}meem_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'رُمَّان', cardImagePath: '${_dir}meem_words_p1_card_2.png', cardHeight: 474, audioPath: '${_audio}meem_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مَوْز', cardImagePath: '${_dir}meem_words_p1_card_3.png', cardHeight: 474, audioPath: '${_audio}meem_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'ثُوم', cardImagePath: '${_dir}meem_words_p1_card_4.png', cardHeight: 474, audioPath: '${_audio}meem_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'لَيْمُون', cardImagePath: '${_dir}meem_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'رُمَّان', cardImagePath: '${_dir}meem_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مَوْز', cardImagePath: '${_dir}meem_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'ثُوم', cardImagePath: '${_dir}meem_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}meem_words_p2_list.png',
+        listImagePath: '${_dir}meem_words_p2_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'مُهَنْدِس', cardImagePath: '${_dir}meem_words_p2_card_1.png', cardHeight: 474, audioPath: '${_audio}meem_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُذِيع', cardImagePath: '${_dir}meem_words_p2_card_2.png', cardHeight: 474, audioPath: '${_audio}meem_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُعَلِّم', cardImagePath: '${_dir}meem_words_p2_card_3.png', cardHeight: 474, audioPath: '${_audio}meem_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مَلِك', cardImagePath: '${_dir}meem_words_p2_card_4.png', cardHeight: 474, audioPath: '${_audio}meem_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُهَنْدِس', cardImagePath: '${_dir}meem_words_p2_card_1.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُذِيع', cardImagePath: '${_dir}meem_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُعَلِّم', cardImagePath: '${_dir}meem_words_p2_card_3.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مَلِك', cardImagePath: '${_dir}meem_words_p2_card_4.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}meem_words_p3_list.png',
+        listImagePath: '${_dir}meem_words_p3_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'مِصْر', cardImagePath: '${_dir}meem_words_p3_card_1.png', cardHeight: 474, audioPath: '${_audio}meem_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'شَمْس', cardImagePath: '${_dir}meem_words_p3_card_2.png', cardHeight: 474, audioPath: '${_audio}meem_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عَلَم', cardImagePath: '${_dir}meem_words_p3_card_3.png', cardHeight: 474, audioPath: '${_audio}meem_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'قَمَر', cardImagePath: '${_dir}meem_words_p3_card_4.png', cardHeight: 474, audioPath: '${_audio}meem_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مِصْر', cardImagePath: '${_dir}meem_words_p3_card_1.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p3_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'شَمْس', cardImagePath: '${_dir}meem_words_p3_card_2.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p3_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عَلَم', cardImagePath: '${_dir}meem_words_p3_card_3.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p3_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'قَمَر', cardImagePath: '${_dir}meem_words_p3_card_4.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p3_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
-        listImagePath: '${_dir}meem_words_p4_list.png',
+        listImagePath: '${_dir}meem_words_p4_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'مَزْرَعَة', cardImagePath: '${_dir}meem_words_p4_card_1.png', cardHeight: 474, audioPath: '${_audio}meem_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}meem_words_p4_card_2.png', cardHeight: 474, audioPath: '${_audio}meem_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'قَلَم', cardImagePath: '${_dir}meem_words_p4_card_3.png', cardHeight: 474, audioPath: '${_audio}meem_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}meem_words_p4_card_4.png', cardHeight: 474, audioPath: '${_audio}meem_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مَزْرَعَة', cardImagePath: '${_dir}meem_words_p4_card_1.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p4_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}meem_words_p4_card_2.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p4_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'قَلَم', cardImagePath: '${_dir}meem_words_p4_card_3.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p4_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'عَظْمَة', cardImagePath: '${_dir}meem_words_p4_card_4.webp', cardHeight: 474, audioPath: '${_audio}meem_word_p4_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
     ],
@@ -274,11 +274,11 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     fishing: [
       FishingRound(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_1.png',
+        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/meem/meem_fishing_1.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba62.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
         zones: [
           GameZoneChoice(label: 'عَظْمَة', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'وَلَد', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -287,11 +287,11 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'ثُوم',
-        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_2.png',
+        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/meem/meem_fishing_2.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba58.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
         zones: [
           GameZoneChoice(label: 'جَزَر', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'بَصَل', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -300,11 +300,11 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'مَرْيَم',
-        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_3.png',
+        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/meem/meem_fishing_3.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba56.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
         zones: [
           GameZoneChoice(label: 'سَارَة', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'مَرْيَم', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -313,11 +313,11 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       FishingRound(
         word: 'لَيْمُون',
-        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_4.png',
+        imagePath: '${_gamesDir}fishing/meem/meem_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/meem/meem_fishing_4.mp3',
         isCorrect: true,
         correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ba52.mp3',
+        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
         zones: [
           GameZoneChoice(label: 'فَرَاوِلَة', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'تُفَّاح', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -328,7 +328,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(
         word: 'مَزْرَعَة',
-        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_1.png',
+        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/meem/meem_beehive_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -340,7 +340,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'مِصْر',
-        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_2.png',
+        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/meem/meem_beehive_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -352,7 +352,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'مُذِيع',
-        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_3.png',
+        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/meem/meem_beehive_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cells: [
@@ -364,7 +364,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'شَمْس',
-        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_4.png',
+        imagePath: '${_gamesDir}beehive/meem/meem_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/meem/meem_beehive_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cells: [
@@ -378,9 +378,9 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     circus: [
       CircusRound(
         word: 'مُهَنْدِس',
-        imagePath: '${_gamesDir}circus/meem/meem_circus_round_1.png',
+        imagePath: '${_gamesDir}circus/meem/meem_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/meem/meem_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}circus/7_ba62.mp3',
+        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         zones: [
           GameZoneChoice(label: 'طَبِيب', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'فَلَّاح', isCorrect: false, px: 269, py: 232),
@@ -389,9 +389,9 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'شَمْس',
-        imagePath: '${_gamesDir}circus/meem/meem_circus_round_2.png',
+        imagePath: '${_gamesDir}circus/meem/meem_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/meem/meem_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba59.mp3',
+        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         zones: [
           GameZoneChoice(label: 'شَجَرَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'شَمْس', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/meem/meem_circus_2.mp3'),
@@ -400,9 +400,9 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       CircusRound(
         word: 'لَيْمُون',
-        imagePath: '${_gamesDir}circus/meem/meem_circus_round_3.png',
+        imagePath: '${_gamesDir}circus/meem/meem_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/meem/meem_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}circus/6_ba53.mp3',
+        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         zones: [
           GameZoneChoice(label: 'فَرَاوِلَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'تُفَّاح', isCorrect: false, px: 269, py: 232),
@@ -413,7 +413,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     wordsMatch: [
       WordsMatchPair(
         word: 'قَلَم',
-        imagePath: '${_gamesDir}match/meem/meem_match_1.png',
+        imagePath: '${_gamesDir}match/meem/meem_match_1.webp',
         audioPath: '${_gamesAudio}match/meem/meem_match_1.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -424,7 +424,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'عَظْمَة',
-        imagePath: '${_gamesDir}match/meem/meem_match_2.png',
+        imagePath: '${_gamesDir}match/meem/meem_match_2.webp',
         audioPath: '${_gamesAudio}match/meem/meem_match_2.mp3',
         praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
         cards: [
@@ -435,7 +435,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'مُعَلِّم',
-        imagePath: '${_gamesDir}match/meem/meem_match_3.png',
+        imagePath: '${_gamesDir}match/meem/meem_match_3.webp',
         audioPath: '${_gamesAudio}match/meem/meem_match_3.mp3',
         praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
         cards: [
@@ -446,7 +446,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'لَيْمُون',
-        imagePath: '${_gamesDir}match/meem/meem_match_4.png',
+        imagePath: '${_gamesDir}match/meem/meem_match_4.webp',
         audioPath: '${_gamesAudio}match/meem/meem_match_4.mp3',
         praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
         cards: [
@@ -459,8 +459,8 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
     coloring: [
       ColoringRound(
         word: 'رُمَّان',
-        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1.png',
-        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_1.png',
+        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_1.webp',
         introAudioPath: '${_audio}meem_word_p1_2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_1.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/meem/meem_wrong_reveal_1.mp3',
@@ -471,15 +471,15 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
           GameZoneChoice(label: 'رُمَّان', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_1.png', color: Color(0xFFC62828)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_2.png', color: Color(0xFFE53935)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_3.png', color: Color(0xFFEF5350)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_1.webp', color: Color(0xFFC62828)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_2.webp', color: Color(0xFFE53935)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_1_slice_3.webp', color: Color(0xFFEF5350)),
         ],
       ),
       ColoringRound(
         word: 'لَيْمُون',
-        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2.png',
-        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_2.png',
+        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_2.webp',
         introAudioPath: '${_audio}meem_word_p1_1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_2.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/meem/meem_wrong_reveal_2.mp3',
@@ -490,28 +490,28 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
           GameZoneChoice(label: 'تَمْر', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_1.png', color: Color(0xFFF9A825)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_2.png', color: Color(0xFFFBC02D)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_3.png', color: Color(0xFFFDD835)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_1.webp', color: Color(0xFFF9A825)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_2.webp', color: Color(0xFFFBC02D)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_2_slice_3.webp', color: Color(0xFFFDD835)),
         ],
       ),
       ColoringRound(
         word: 'سَمِير',
-        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3.png',
-        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_3.png',
-        introAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_3.mp3',
+        bgImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3.webp',
+        wordRevealImagePath: '${_gamesDir}coloring/meem/meem_coloring_word_3.webp',
+        introAudioPath: '${_gamesAudio}coloring/meem/meem_word_3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_3.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/meem/meem_wrong_reveal_3.mp3',
-        wordAudioPath: '${_gamesAudio}coloring/meem/meem_coloring_reveal_3.mp3',
+        wordAudioPath: '${_gamesAudio}coloring/meem/meem_word_3.mp3',
         options: [
           GameZoneChoice(label: 'عَلَم', isCorrect: false),
           GameZoneChoice(label: 'مِصْر', isCorrect: false),
           GameZoneChoice(label: 'سَمِير', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_1.png', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_2.png', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_3.png', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_1.webp', color: Color(0xFF1565C0)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_2.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: '${_gamesDir}coloring/meem/meem_coloring_round_3_slice_3.webp', color: Color(0xFF42A5F5)),
         ],
       ),
     ],

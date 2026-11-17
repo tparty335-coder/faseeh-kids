@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (cir1): شَمْس ✅
   _Round(
-    imagePath: 'assets/images/games/circus/seen/seen_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/seen/seen_circus_round_1.webp',
     imgH: 456,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
@@ -53,7 +53,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (cir2): سُلَحْفَاة ✅
   _Round(
-    imagePath: 'assets/images/games/circus/seen/seen_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/seen/seen_circus_round_2.webp',
     imgH: 456,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (cir3): سَاعَة ✅
   _Round(
-    imagePath: 'assets/images/games/circus/seen/seen_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/seen/seen_circus_round_3.webp',
     imgH: 456,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [

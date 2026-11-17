@@ -26,13 +26,13 @@ class MascotWidget extends StatelessWidget {
   String get _assetPath {
     switch (state) {
       case MascotState.happy:
-        return 'assets/images/characters/falcon/falcon_mascot_happy.png';
+        return 'assets/images/mascot/falcon_happy.webp';
       case MascotState.thinking:
-        return 'assets/images/characters/falcon/falcon_thinking.png';
+        return 'assets/images/mascot/falcon_thinking.webp';
       case MascotState.encouraging:
-        return 'assets/images/characters/falcon/falcon_encouraging.png';
+        return 'assets/images/mascot/falcon_encouraging.webp';
       case MascotState.celebrating:
-        return 'assets/images/characters/falcon/falcon_celebrating.png';
+        return 'assets/images/mascot/falcon_celebrating.webp';
     }
   }
 

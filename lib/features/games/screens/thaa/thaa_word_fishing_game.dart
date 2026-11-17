@@ -49,7 +49,7 @@ class _RoundData {
 const List<_RoundData> _rounds = [
   // الجولة 1: ثُعْبَان ✅ (يسار) | فَأْر ❌ (وسط) | أَسَد ❌ (يمين)
   _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_1.png',
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_1.webp',
     correctWord: 'ثُعْبَان',
     wordAudio: 'audio/games/fishing/thaa_thoban.mp3',
     correctPraise: 'audio/games/fishing/momt.mp3',
@@ -62,7 +62,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 2: بَطَّة ❌ (يسار) | أَرْنَب ❌ (وسط) | ثَلَّاجَة ✅ (يمين)
   _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_2.png',
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_2.webp',
     correctWord: 'ثَلَّاجَة',
     wordAudio: 'audio/games/fishing/thaa_thallaja.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',
@@ -75,7 +75,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 3: أَرْنَب ❌ (يسار) | ثَعْلَب ✅ (وسط) | كَلْب ❌ (يمين)
   _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_3.png',
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_3.webp',
     correctWord: 'ثَعْلَب',
     wordAudio: 'audio/games/fishing/thaa_thalab.mp3',
     correctPraise: 'audio/games/fishing/ahsnt.mp3',
@@ -88,7 +88,7 @@ const List<_RoundData> _rounds = [
   ),
   // الجولة 4: وَلَد ❌ (يسار) | قَلَم ❌ (وسط) | ثَلْج ✅ (يمين)
   _RoundData(
-    imagePath: 'assets/images/games/fishing/thaa_fishing_round_4.png',
+    imagePath: 'assets/images/games/fishing/thaa_fishing_round_4.webp',
     correctWord: 'ثَلْج',
     wordAudio: 'audio/games/fishing/thaa_thalj.mp3',
     correctPraise: 'audio/games/fishing/sah.mp3',

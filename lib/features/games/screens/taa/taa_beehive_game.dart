@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (bee_t1): كَـ...ـكُوتُ (كَتْكُوت) ← تْ (يمين)
   _Round(
-    imagePath: 'assets/images/games/beehive/taa_beehive_round_1.png',
+    imagePath: 'assets/images/games/beehive/taa_beehive_round_1.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/sounds/word_katkoot.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -54,7 +54,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (bee_t2): ...أْكُلُ (تَأْكُلُ) ← تَ (أعلى)
   _Round(
-    imagePath: 'assets/images/games/beehive/taa_beehive_round_2.png',
+    imagePath: 'assets/images/games/beehive/taa_beehive_round_2.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/final/taa_word_p2_1.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -67,7 +67,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (bee_t3): يَكْـ...ـبُ (يَكْتُبُ) ← تُ (يسار)
   _Round(
-    imagePath: 'assets/images/games/beehive/taa_beehive_round_3.png',
+    imagePath: 'assets/images/games/beehive/taa_beehive_round_3.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/final/taa_word_p3_1.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
@@ -80,7 +80,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4 (bee_t4): ...ـمْسَاحُ (تِمْسَاح) ← تِ (أسفل)
   _Round(
-    imagePath: 'assets/images/games/beehive/taa_beehive_round_4.png',
+    imagePath: 'assets/images/games/beehive/taa_beehive_round_4.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/final/taa_word_timsah.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',

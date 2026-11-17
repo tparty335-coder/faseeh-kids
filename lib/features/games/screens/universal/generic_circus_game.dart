@@ -75,12 +75,40 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
     }
   }
 
+  List<String> _distractorLabels() {
+    const pool = ['أَسَد', 'فِيل', 'قَلَم', 'كِتَاب', 'وَرْدَة', 'سَمَكَة'];
+    final ch = widget.manifest.letter.replaceAll('ـ', '').trim();
+    final filtered = pool.where((w) => !w.contains(ch)).toList();
+    return filtered.length >= 2 ? filtered : pool;
+  }
+
   List<GameZoneChoice> _effectiveZones(CircusRound rd) {
     if (rd.zones != null && rd.zones!.isNotEmpty) return rd.zones!;
+    const correctByRound = [2, 1, 2];
+    final corr = correctByRound[_round % 3];
+    final d = _distractorLabels();
     return [
-      GameZoneChoice(label: rd.word, isCorrect: true, px: 137, py: 98, wordAudio: rd.audioPath),
-      const GameZoneChoice(label: 'صورة ٢', isCorrect: false, px: 272, py: 240),
-      const GameZoneChoice(label: 'صورة ٣', isCorrect: false, px: 135, py: 373),
+      GameZoneChoice(
+        label: corr == 0 ? rd.word : d[(_round * 2) % d.length],
+        isCorrect: corr == 0,
+        px: 137,
+        py: 98,
+        wordAudio: corr == 0 ? rd.audioPath : null,
+      ),
+      GameZoneChoice(
+        label: corr == 1 ? rd.word : d[(_round * 2 + 1) % d.length],
+        isCorrect: corr == 1,
+        px: 272,
+        py: 240,
+        wordAudio: corr == 1 ? rd.audioPath : null,
+      ),
+      GameZoneChoice(
+        label: corr == 2 ? rd.word : d[(_round * 2 + 2) % d.length],
+        isCorrect: corr == 2,
+        px: 135,
+        py: 373,
+        wordAudio: corr == 2 ? rd.audioPath : null,
+      ),
     ];
   }
 
@@ -99,7 +127,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
         _score++;
       });
       _confetti.play();
-      final praise = rd.praiseAudio ?? 'audio/games/circus/7_ba62.mp3';
+      final praise = rd.praiseAudio ?? 'audio/games/beehive/4_momt.mp3';
       await _say(praise, maxMs: 2500);
       if (!mounted || t != _token) return;
       final wordAudio = zone.wordAudio ?? rd.audioPath;

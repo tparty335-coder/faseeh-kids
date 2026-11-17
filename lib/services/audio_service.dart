@@ -115,7 +115,7 @@ class AudioService {
   }
 
   /// Play an audio asset from the assets folder on a specific channel
-  /// [assetPath] should be relative to assets/ (e.g., 'audio/letters/alif_name.mp3')
+  /// [assetPath] should be relative to assets/ (e.g., 'audio/letters/core/alif_name.mp3')
   Future<void> playAsset(
     String assetPath, {
     AudioChannel channel = AudioChannel.voice,

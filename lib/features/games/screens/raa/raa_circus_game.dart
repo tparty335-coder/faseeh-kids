@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: رُمَّان ✅
   _Round(
-    imagePath: 'assets/images/games/circus/raa/raa_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/raa/raa_circus_round_1.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/7_ba62.mp3',
     zones: [
@@ -53,7 +53,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: رِيم ✅
   _Round(
-    imagePath: 'assets/images/games/circus/raa/raa_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/raa/raa_circus_round_2.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: رَجُل ✅
   _Round(
-    imagePath: 'assets/images/games/circus/raa/raa_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/raa/raa_circus_round_3.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [

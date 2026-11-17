@@ -84,6 +84,7 @@ flutter:
   # â”€â”€â”€ Assets (P0-T050) â”€â”€â”€
   assets:
     # Letters â€” core identity (name, sound, positions)
+    - assets/audio/letters/
     - assets/audio/letters/core/
     # Letters â€” short vowels (fatha, kasra, damma, sukoon) = phoneme layer
     - assets/audio/letters/short_vowels/
@@ -100,6 +101,7 @@ flutter:
     - assets/audio/feedback/
     # Game & activity instructions
     - assets/audio/instructions/
+    - assets/audio/common/
     - assets/audio/words_game/
     # UI sound effects
     - assets/audio/sfx/
@@ -183,6 +185,8 @@ flutter:
     - assets/audio/games/coloring/ha/
     - assets/audio/lessons/kha/
     - assets/audio/lessons/kha/final/
+    - assets/audio/lessons/kha/madd/
+    - assets/audio/lessons/kha/sounds/
     - assets/audio/games/fishing/kha/
     - assets/audio/games/beehive/kha/
     - assets/audio/games/circus/kha/

@@ -46,9 +46,9 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: حِمَار (أعلى) ، دَجَاجَة (وسط) ، ثَعْلَب (أسفل) ← ثَعْلَب ✅
   _Round(
-    imagePath: 'assets/images/games/circus/thaa_circus_round_1.png',
+    imagePath: 'assets/images/games/circus/thaa_circus_round_1.webp',
     imgH: 517,
-    afterImagePath: 'assets/images/games/circus/thaa_circus_round_1_after.png',
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_1_after.webp',
     afterImgH: 500,
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
     correctWord: 'ثَعْلَبُ',
@@ -59,26 +59,26 @@ const List<_Round> _rounds = [
           wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3'),
     ],
   ),
-  // الجولة 2: أَسَد (أعلى) ، ثِيَاب (وسط) ، بُرْج (أسفل) ← ثِيَاب ✅
+  // الجولة 2: أَسَد (أعلى) ، ثَوْب (وسط) ، بُرْج (أسفل) ← ثَوْب ✅
   _Round(
-    imagePath: 'assets/images/games/circus/thaa_circus_round_2.png',
+    imagePath: 'assets/images/games/circus/thaa_circus_round_2.webp',
     imgH: 523,
-    afterImagePath: 'assets/images/games/circus/thaa_circus_round_2_after.png',
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_2_after.webp',
     afterImgH: 516,
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
-    correctWord: 'ثِيَابُ',
+    correctWord: 'ثَوْبُ',
     zones: [
       _ImageZone(label: 'أَسَد',   hasThaa: false, px: 142.0, py: 109.5),
-      _ImageZone(label: 'ثِيَاب',  hasThaa: true,  px: 337.0, py: 249.5,
-          wordAudio: 'audio/lessons/thaa/sounds/word_thiab.mp3'),
+      _ImageZone(label: 'ثَوْب',   hasThaa: true,  px: 337.0, py: 249.5,
+          wordAudio: 'audio/games/circus/thaa/thaa_circus_2.mp3'),
       _ImageZone(label: 'بُرْج',   hasThaa: false, px: 142.0, py: 398.5),
     ],
   ),
   // الجولة 3: ثِمَار (أعلى) ، زَهْرَة (وسط) ، قَلَم (أسفل) ← ثِمَار ✅
   _Round(
-    imagePath: 'assets/images/games/circus/thaa_circus_round_3.png',
+    imagePath: 'assets/images/games/circus/thaa_circus_round_3.webp',
     imgH: 532,
-    afterImagePath: 'assets/images/games/circus/thaa_circus_round_3_after.png',
+    afterImagePath: 'assets/images/games/circus/thaa_circus_round_3_after.webp',
     afterImgH: 516,
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     correctWord: 'ثِمَارٌ',
@@ -150,7 +150,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
     if (!mounted || _gameOver) return;
     ++_token;
     // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء: "اضغط على الصورة التي اسمها به حرف الثاء"
-    await _say('assets/audio/games/circus/thaa_circus_question.mp3', pauseAfter: const Duration(milliseconds: 400));
+    await _say('audio/games/circus/thaa_circus_question.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
   Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', pauseAfter: const Duration(milliseconds: 300));

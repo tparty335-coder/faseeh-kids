@@ -62,8 +62,8 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1 (paint1): بقرة ❌، بطة ❌، خال ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_1.png',
-    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_1.png',
+    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_1.webp',
+    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_1.webp',
     correctWord: 'خَال',
     correctAudio: 'audio/games/coloring/4_goodthoo.mp3',
     revealAudio: 'audio/games/coloring/1_tazezpaint.mp3',
@@ -77,8 +77,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2 (paint2): خيمة ✅، أرنب ❌، يكتب ❌
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_2.png',
-    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_2.png',
+    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_2.webp',
+    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_2.webp',
     correctWord: 'خِيمَة',
     correctAudio: 'audio/games/coloring/5_goodtabeb.mp3',
     revealAudio: 'audio/games/coloring/2_rongtabeb.mp3',
@@ -92,8 +92,8 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3 (paint3): لبن ❌، برج ❌، فخور ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_3.png',
-    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_3.png',
+    bgImagePath: 'assets/images/games/coloring/kha/kha_coloring_round_3.webp',
+    wordMaskPath: 'assets/images/games/coloring/kha/kha_coloring_word_3.webp',
     correctWord: 'فَخُور',
     correctAudio: 'audio/games/coloring/4_goodhobob.mp3',
     revealAudio: 'audio/games/coloring/2_ronghobob.mp3',
@@ -310,7 +310,7 @@ class _HaColoringGameState extends ConsumerState<KhaColoringGame> {
     if (!allColored) {
       try {
         AudioService.instance.playAsset(
-          'audio/games/coloring/6_b2.mp3',
+          'audio/sfx/tap.mp3',
           channel: AudioChannel.sfx,
         );
       } catch (_) {}
@@ -323,7 +323,7 @@ class _HaColoringGameState extends ConsumerState<KhaColoringGame> {
     final rd = _rounds[_round];
 
     await _say(
-      'audio/games/coloring/6_b2.mp3',
+      'audio/sfx/tap.mp3',
       maxMs: 450,
       channel: AudioChannel.sfx,
     );

@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: ثُعْبَان (1024 × 544)
   _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_1.png',
+    imagePath: 'assets/images/games/words/thaa_words_round_1.webp',
     imgH: 544,
     cardPx: 139.0,
     cardPyList: [154.5, 281.5, 418.5],
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: ثَعْلَب (1024 × 504)
   _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_2.png',
+    imagePath: 'assets/images/games/words/thaa_words_round_2.webp',
     imgH: 504,
     cardPx: 134.0,
     cardPyList: [106.5, 234.5, 371.5],
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: ثَلْج (1024 × 508)
   _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_3.png',
+    imagePath: 'assets/images/games/words/thaa_words_round_3.webp',
     imgH: 508,
     cardPx: 134.0,
     cardPyList: [104.5, 231.5, 369.0],
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: ثُوم (1024 × 521)
   _Round(
-    imagePath: 'assets/images/games/words/thaa_words_round_4.png',
+    imagePath: 'assets/images/games/words/thaa_words_round_4.webp',
     imgH: 521,
     cardPx: 133.0,
     cardPyList: [115.0, 243.0, 382.0],
@@ -195,7 +195,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     if (!mounted || _gameOver) return;
     ++_token;
     // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اسحب اسم الصورة وضعها مكان النقط فيما يأتي")
-    await _say('assets/audio/games/words/thaa_words_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
+    await _say('audio/games/words/thaa_words_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
   Future<void> _playWordAudio({Duration pauseAfter = const Duration(milliseconds: 300)}) async {

@@ -41,7 +41,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: جَمَل (جَـ...) ← جَ (يسار)
   _Round(
-    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_1.png',
+    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_1.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_himal.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',
@@ -54,7 +54,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: جِسْر (جِـ...) ← جِ (يمين)
   _Round(
-    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_2.png',
+    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_2.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_himaar.mp3',
     praiseAudio: 'audio/games/beehive/3_raa.mp3',
@@ -67,9 +67,9 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: جُحْر (جُـ...) ← جُ (أعلى)
   _Round(
-    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_3.png',
+    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_3.webp',
     imgH: 375,
-    wordAudio: 'audio/lessons/ha/sounds/word_hoot.mp3',
+    wordAudio: 'audio/lessons/ha/sounds/word_luhoom.mp3',
     praiseAudio: 'audio/games/beehive/2_sah.mp3',
     cells: [
       _CellZone(label: 'ذُ', isCorrect: true,  px: 886, py: 184), // أعلى (صحيح جُحْر)
@@ -80,7 +80,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: نَجْم (...جْ...) ← جْ (أسفل)
   _Round(
-    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_4.png',
+    imagePath: 'assets/images/games/beehive/dhaal/dhaal_beehive_round_4.webp',
     imgH: 375,
     wordAudio: 'audio/lessons/ha/sounds/word_nahl.mp3',
     praiseAudio: 'audio/games/beehive/4_momt.mp3',

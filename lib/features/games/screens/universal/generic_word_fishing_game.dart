@@ -84,29 +84,39 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
     }
   }
 
+  List<String> _distractorWords() {
+    const pool = ['أَسَد', 'قَلَم', 'كِتَاب', 'فِيل', 'وَلَد', 'بَاب', 'عِنَب', 'مَوْز'];
+    final ch = widget.manifest.letter.replaceAll('ـ', '').trim();
+    final filtered = pool.where((w) => !w.contains(ch)).toList();
+    return filtered.length >= 2 ? filtered : pool;
+  }
+
   List<GameZoneChoice> _effectiveZones(FishingRound rd) {
     if (rd.zones != null && rd.zones!.isNotEmpty) return rd.zones!;
-    // مواضع افتراضية مطابقة لشاشات الأسطوانة (800×490)
+    // مواضع الأسماك الثلاث وترتيب الإجابة الصحيحة في قالب الأسطوانة الأصلي (800×490)
+    const correctByRound = [0, 2, 1, 2];
+    final corr = correctByRound[_round % 4];
+    final distractors = _distractorWords();
     return [
       GameZoneChoice(
-        label: rd.word,
-        isCorrect: rd.isCorrect,
+        label: corr == 0 ? rd.word : distractors[(_round * 2) % distractors.length],
+        isCorrect: corr == 0,
         px: 120,
         py: 425,
         w: 215,
         h: 90,
       ),
       GameZoneChoice(
-        label: 'كلمة ٢',
-        isCorrect: !rd.isCorrect,
+        label: corr == 1 ? rd.word : distractors[(_round * 2 + 1) % distractors.length],
+        isCorrect: corr == 1,
         px: 382,
         py: 382,
         w: 220,
         h: 90,
       ),
       GameZoneChoice(
-        label: 'كلمة ٣',
-        isCorrect: false,
+        label: corr == 2 ? rd.word : distractors[(_round * 2 + 2) % distractors.length],
+        isCorrect: corr == 2,
         px: 625,
         py: 425,
         w: 215,
