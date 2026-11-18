@@ -22,26 +22,47 @@ class ProgressNotifier extends Notifier<List<String>> {
 
   @override
   List<String> build() {
-    final unlockAll = ref.watch(
-      parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
-    );
     final allLetterChars = arabicLetters.map((l) => l.letter).toList();
-    if (unlockAll) {
-      return allLetterChars;
-    }
 
+    // Check if the parent explicitly disabled full review mode
+    bool explicitlyDisabled = false;
     try {
-      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
-        final box = Hive.box(AppConstants.lessonProgressBox);
-        final stored = box.get(_hiveKey);
-        if (stored != null && stored is List && stored.isNotEmpty) {
-          return List<String>.from(stored);
+      if (Hive.isBoxOpen(AppConstants.parentSettingsBox)) {
+        final parentBox = Hive.box(AppConstants.parentSettingsBox);
+        if (parentBox.get('unlockAllLettersForReview') == false) {
+          explicitlyDisabled = true;
         }
       }
     } catch (_) {}
 
+    final unlockAll = ref.watch(
+      parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
+    );
+
+    if (!unlockAll || explicitlyDisabled) {
+      try {
+        if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+          final box = Hive.box(AppConstants.lessonProgressBox);
+          final stored = box.get(_hiveKey);
+          if (stored != null && stored is List && stored.isNotEmpty) {
+            return List<String>.from(stored);
+          }
+        }
+      } catch (_) {}
+      return [arabicLetters.first.letter];
+    }
+
     // Default: all 28 letters unlocked for tester freedom of choice
+    _persistAll(allLetterChars);
     return allLetterChars;
+  }
+
+  void _persistAll(List<String> all) {
+    try {
+      if (Hive.isBoxOpen(AppConstants.lessonProgressBox)) {
+        Hive.box(AppConstants.lessonProgressBox).put(_hiveKey, all);
+      }
+    } catch (_) {}
   }
 
   /// Unlock the next letter after completing a lesson
@@ -93,8 +114,14 @@ class ProgressNotifier extends Notifier<List<String>> {
 final unlockedUnitsProvider =
     NotifierProvider<ProgressNotifier, List<String>>(ProgressNotifier.new);
 
-/// Current active unit (the last unlocked letter)
+/// Current active unit
 final currentUnitProvider = Provider<String>((ref) {
+  final unlockAll = ref.watch(
+    parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
+  );
+  if (unlockAll) {
+    return arabicLetters.first.letter;
+  }
   final unlocked = ref.watch(unlockedUnitsProvider);
   return unlocked.isNotEmpty ? unlocked.last : arabicLetters.first.letter;
 });

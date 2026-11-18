@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 
-enum NodeStatus { locked, current, completed }
+enum NodeStatus { locked, unlocked, current, completed }
 
 class OasisNode extends StatelessWidget {
   final String letter;
@@ -37,8 +37,10 @@ class OasisNode extends StatelessWidget {
           border: Border.all(
             color: isCompleted 
                 ? AppColors.success 
-                : (isCurrent ? AppColors.accent : Colors.grey.shade400),
-            width: isCurrent ? 4 : 2,
+                : (isCurrent 
+                    ? AppColors.accent 
+                    : (isLocked ? Colors.grey.shade400 : AppColors.primary)),
+            width: isCurrent ? 4 : (isLocked ? 2 : 2.5),
           ),
           boxShadow: isCurrent ? [
             BoxShadow(
@@ -46,7 +48,14 @@ class OasisNode extends StatelessWidget {
               blurRadius: 15,
               spreadRadius: 5,
             )
-          ] : null,
+          ] : [
+            if (!isLocked)
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.1),
+                blurRadius: 8,
+                offset: const Offset(0, 3),
+              ),
+          ],
         ),
         child: Stack(
           alignment: Alignment.center,

@@ -48,13 +48,14 @@ final isPremiumProvider = Provider<bool>((ref) {
 
 // ─── Per-letter access provider ───
 final letterAccessProvider = Provider.family<bool, int>((ref, letterIndex) {
-  final isPremium = ref.watch(isPremiumProvider);
   final unlockAllForReview = ref.watch(
     parentSettingsProvider.select((s) => s.unlockAllLettersForReview),
   );
-  return RevenueCatService.instance.isLetterAccessible(letterIndex) ||
-      isPremium ||
-      unlockAllForReview;
+  if (unlockAllForReview) {
+    return true;
+  }
+  final isPremium = ref.watch(isPremiumProvider);
+  return RevenueCatService.instance.isLetterAccessible(letterIndex) || isPremium;
 });
 
 // ─── Offerings provider ───

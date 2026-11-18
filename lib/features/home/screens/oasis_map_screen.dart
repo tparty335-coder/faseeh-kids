@@ -114,13 +114,12 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                               final letterChar = letters[index];
                               final isUnlocked = unlockedUnits.contains(letterChar);
                               final isCurrent = currentUnit == letterChar;
-                              final isCompleted = isUnlocked && !isCurrent;
 
                               NodeStatus status = NodeStatus.locked;
                               if (isCurrent) {
                                 status = NodeStatus.current;
-                              } else if (isCompleted) {
-                                status = NodeStatus.completed;
+                              } else if (isUnlocked) {
+                                status = NodeStatus.unlocked;
                               }
 
                               final pos = positions[index];

@@ -59,9 +59,9 @@ class ParentSettingsNotifier extends Notifier<ParentSettings> {
     try {
       if (Hive.isBoxOpen(AppConstants.parentSettingsBox)) {
         final box = Hive.box(AppConstants.parentSettingsBox);
-        if (box.get('unlockedAllForReviewV2') != true) {
+        if (box.get('unlockedAllForReviewV3') != true) {
           box.put('unlockAllLettersForReview', true);
-          box.put('unlockedAllForReviewV2', true);
+          box.put('unlockedAllForReviewV3', true);
         }
         final settings = ParentSettings(
           dailyTimeLimit: (box.get('dailyTimeLimit', defaultValue: 30) as int?) ?? 30,
