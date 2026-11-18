@@ -17,8 +17,8 @@ class ParentSettings {
     this.soundEnabled = true,
     this.musicEnabled = true,
     this.nightMode = false,
-    // مراجعة مؤقتة: جميع المراحل مفتوحة للمعاينة. للإنتاج أعدها إلى false.
-    this.unlockAllLettersForReview = false,
+    // مراجعة واختبار: جميع الحروف مفتوحة افتراضياً للمختبرين
+    this.unlockAllLettersForReview = true,
   });
 
   ParentSettings copyWith({
@@ -59,9 +59,9 @@ class ParentSettingsNotifier extends Notifier<ParentSettings> {
     try {
       if (Hive.isBoxOpen(AppConstants.parentSettingsBox)) {
         final box = Hive.box(AppConstants.parentSettingsBox);
-        if (box.get('unlockedAllForReviewV1') != true) {
-          box.put('unlockAllLettersForReview', false);
-          box.put('unlockedAllForReviewV1', true);
+        if (box.get('unlockedAllForReviewV2') != true) {
+          box.put('unlockAllLettersForReview', true);
+          box.put('unlockedAllForReviewV2', true);
         }
         final settings = ParentSettings(
           dailyTimeLimit: (box.get('dailyTimeLimit', defaultValue: 30) as int?) ?? 30,
@@ -69,7 +69,7 @@ class ParentSettingsNotifier extends Notifier<ParentSettings> {
           musicEnabled: (box.get('musicEnabled', defaultValue: true) as bool?) ?? true,
           nightMode: (box.get('nightMode', defaultValue: false) as bool?) ?? false,
           unlockAllLettersForReview:
-              (box.get('unlockAllLettersForReview', defaultValue: false) as bool?) ?? false,
+              (box.get('unlockAllLettersForReview', defaultValue: true) as bool?) ?? true,
         );
         AudioManager.instance.setSoundEnabled(settings.soundEnabled);
         return settings;

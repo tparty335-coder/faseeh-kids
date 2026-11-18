@@ -40,8 +40,8 @@ class ProgressNotifier extends Notifier<List<String>> {
       }
     } catch (_) {}
 
-    // Default sequential start: first letter (أ) is unlocked
-    return [arabicLetters.first.letter];
+    // Default: all 28 letters unlocked for tester freedom of choice
+    return allLetterChars;
   }
 
   /// Unlock the next letter after completing a lesson
