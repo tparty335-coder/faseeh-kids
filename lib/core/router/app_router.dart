@@ -147,6 +147,7 @@ class AppRouter {
     navigatorKey: _rootNavigatorKey,
     initialLocation: splash,
     debugLogDiagnostics: kDebugMode,
+    errorBuilder: (context, state) => const OasisMapScreen(),
     routes: [
       // ─── Onboarding Flow ───
       GoRoute(

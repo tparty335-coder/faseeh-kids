@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
 import '../logic/parent_provider.dart';
 import '../widgets/progress_chart.dart';
 
@@ -13,19 +14,25 @@ class ProgressReportScreen extends ConsumerWidget {
     final weeklyStats = ref.watch(weeklyStatsProvider);
     final letterMastery = ref.watch(letterMasteryGridProvider);
 
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-        backgroundColor: AppColors.background,
-        appBar: AppBar(
-          title: const Text('تقرير التقدم التفصيلي'),
-          backgroundColor: AppColors.primary,
-          foregroundColor: Colors.white,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => context.pop(),
+    return PopScope(
+      canPop: context.canPop(),
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        context.go(AppRouter.parentDashboard);
+      },
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
+          backgroundColor: AppColors.background,
+          appBar: AppBar(
+            title: const Text('تقرير التقدم التفصيلي'),
+            backgroundColor: AppColors.primary,
+            foregroundColor: Colors.white,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () => context.canPop() ? context.pop() : context.go(AppRouter.parentDashboard),
+            ),
           ),
-        ),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -124,6 +131,7 @@ class ProgressReportScreen extends ConsumerWidget {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }

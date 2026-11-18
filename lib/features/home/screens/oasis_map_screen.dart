@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/features/home/logic/home_provider.dart';
@@ -68,7 +69,13 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
 
     final positions = getNodePositions(screenWidth);
 
-    return Scaffold(
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        SystemNavigator.pop();
+      },
+      child: Scaffold(
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: Container(
@@ -243,8 +250,9 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
 
 /// Custom Painter to draw smooth connecting desert trail between stage nodes

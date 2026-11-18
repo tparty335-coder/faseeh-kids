@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:faseeh_kids/core/providers/purchase_provider.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
 
 class PaywallScreen extends ConsumerStatefulWidget {
   const PaywallScreen({super.key});
@@ -28,9 +29,15 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
     final offeringsAsync = ref.watch(offeringsProvider);
     final size = MediaQuery.of(context).size;
 
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
+    return PopScope(
+      canPop: context.canPop(),
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        context.go(AppRouter.homeMap);
+      },
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
         backgroundColor: const Color(0xFF0D1B2A),
         body: Stack(
           children: [
@@ -61,7 +68,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     alignment: Alignment.topLeft,
                     child: IconButton(
                       icon: const Icon(Icons.close_rounded, color: Colors.white70, size: 28),
-                      onPressed: () => context.pop(),
+                      onPressed: () => context.canPop() ? context.pop() : context.go(AppRouter.homeMap),
                     ),
                   ),
 
@@ -111,8 +118,9 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   // ─── Stars decoration ───
   List<Widget> _buildStars(Size size) {
@@ -488,7 +496,15 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                 setState(() => _isPurchasing = false);
 
                 if (success && mounted) {
-                  context.pop(true); // Return success to caller
+                  if (context.canPop()) {
+                    if (context.canPop()) {
+                context.pop(true);
+              } else {
+                context.go(AppRouter.homeMap);
+              }
+                  } else {
+                    context.go(AppRouter.homeMap);
+                  }
                 }
               },
         style: ElevatedButton.styleFrom(
@@ -532,7 +548,11 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                   backgroundColor: const Color(0xFF4CAF50),
                 ),
               );
-              context.pop(true);
+              if (context.canPop()) {
+                context.pop(true);
+              } else {
+                context.go(AppRouter.homeMap);
+              }
             }
           },
           child: Text(

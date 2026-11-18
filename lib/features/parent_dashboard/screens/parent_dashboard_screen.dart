@@ -122,9 +122,15 @@ class ParentDashboardScreen extends ConsumerWidget {
     final settings = ref.watch(parentSettingsProvider);
     final profiles = ref.watch(childProfilesProvider);
 
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
+    return PopScope(
+      canPop: context.canPop(),
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        context.go(AppRouter.homeMap);
+      },
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
           title: const Text('لوحة تحكم الآباء'),
@@ -385,8 +391,9 @@ class ParentDashboardScreen extends ConsumerWidget {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Widget _buildStatItem(String label, String value, IconData icon) {
     return Column(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:go_router/go_router.dart';
 
 class CelebrationScreen extends StatefulWidget {
@@ -72,7 +73,13 @@ class _CelebrationScreenState extends State<CelebrationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return PopScope(
+      canPop: context.canPop(),
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        context.go(AppRouter.homeMap);
+      },
+      child: Scaffold(
       body: Stack(
         children: [
           // Background
@@ -232,6 +239,8 @@ class _CelebrationScreenState extends State<CelebrationScreen> {
                         onPressed: () {
                           if (context.canPop()) {
                             context.pop();
+                          } else {
+                            context.go(AppRouter.homeMap);
                           }
                         },
                         child: const Text(
@@ -262,6 +271,7 @@ class _CelebrationScreenState extends State<CelebrationScreen> {
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 }

@@ -148,9 +148,15 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
     final double orbitRadiusX = isTablet ? 150.0 : 115.0;
     final double orbitRadiusY = isTablet ? 110.0 : 85.0;
 
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
+    return PopScope(
+      canPop: context.canPop(),
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        context.go(AppRouter.homeMap);
+      },
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -181,7 +187,7 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
                     children: [
                       IconButton(
                         icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand, size: 24),
-                        onPressed: () => context.pop(),
+                        onPressed: () => context.canPop() ? context.pop() : context.go(AppRouter.homeMap),
                       ),
                       const SizedBox(width: 8),
                       Expanded(
@@ -582,8 +588,9 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
 
 // ═══ END OF FILE ═══
