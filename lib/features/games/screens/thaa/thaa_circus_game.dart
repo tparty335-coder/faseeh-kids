@@ -50,13 +50,13 @@ const List<_Round> _rounds = [
     imgH: 517,
     afterImagePath: 'assets/images/games/circus/thaa_circus_round_1_after.webp',
     afterImgH: 500,
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     correctWord: 'ثَعْلَبُ',
     zones: [
       _ImageZone(label: 'حِمَار',  hasThaa: false, px: 144.5, py: 109.5),
       _ImageZone(label: 'دَجَاجَة', hasThaa: false, px: 339.5, py: 249.5),
       _ImageZone(label: 'ثَعْلَب',  hasThaa: true,  px: 142.0, py: 395.5,
-          wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3'),
+          wordAudio: 'audio/games/fishing/thaa_thalab.mp3'),
     ],
   ),
   // الجولة 2: أَسَد (أعلى) ، ثَوْب (وسط) ، بُرْج (أسفل) ← ثَوْب ✅
@@ -65,7 +65,7 @@ const List<_Round> _rounds = [
     imgH: 523,
     afterImagePath: 'assets/images/games/circus/thaa_circus_round_2_after.webp',
     afterImgH: 516,
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     correctWord: 'ثَوْبُ',
     zones: [
       _ImageZone(label: 'أَسَد',   hasThaa: false, px: 142.0, py: 109.5),
@@ -80,11 +80,11 @@ const List<_Round> _rounds = [
     imgH: 532,
     afterImagePath: 'assets/images/games/circus/thaa_circus_round_3_after.webp',
     afterImgH: 516,
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     correctWord: 'ثِمَارٌ',
     zones: [
       _ImageZone(label: 'ثِمَار',   hasThaa: true,  px: 142.0, py: 110.5,
-          wordAudio: 'audio/lessons/thaa/sounds/word_thimar.mp3'),
+          wordAudio: 'audio/letters/short_vowels/thaa_kasra.mp3'),
       _ImageZone(label: 'زَهْرَة',  hasThaa: false, px: 338.5, py: 249.5),
       _ImageZone(label: 'قَلَم',   hasThaa: false, px: 142.0, py: 401.5),
     ],
@@ -153,7 +153,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
     await _say('audio/games/circus/thaa_circus_question.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer || _isBusy) return;
@@ -232,7 +232,7 @@ class _ThaaCircusGameState extends ConsumerState<ThaaCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

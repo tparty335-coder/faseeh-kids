@@ -43,7 +43,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/baa_circus_round_1.webp',
     imgH: 499,
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     zones: [
       _ImageZone(label: 'تِمْسَاح', hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'أَسَد',    hasBaa: false, px: 326, py: 255),
@@ -55,11 +55,11 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/baa_circus_round_2.webp',
     imgH: 511,
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     zones: [
       _ImageZone(label: 'حِمَار',  hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'ثُعْبَان', hasBaa: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/baa/sounds/word_thoban.mp3'),
+          wordAudio: 'audio/games/circus/6_ba59.mp3'),
       _ImageZone(label: 'فِيل',    hasBaa: false, px: 138, py: 398),
     ],
   ),
@@ -67,12 +67,12 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/baa_circus_round_3.webp',
     imgH: 520,
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     zones: [
       _ImageZone(label: 'حِصَان',  hasBaa: false, px: 138, py: 116),
       _ImageZone(label: 'مِطْرَقَة', hasBaa: false, px: 326, py: 262),
       _ImageZone(label: 'بَاب',    hasBaa: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/baa/sounds/word_bab.mp3'),
+          wordAudio: 'audio/letters/long_vowels/baa_madd_alif.mp3'),
     ],
   ),
 ];
@@ -133,7 +133,7 @@ class _BaaCircusGameState extends ConsumerState<BaaCircusGame> {
     await _say('audio/games/circus/9_a047.mp3', maxMs: 4500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -202,7 +202,7 @@ class _BaaCircusGameState extends ConsumerState<BaaCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

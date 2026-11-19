@@ -128,7 +128,7 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
         _score++;
       });
       _confetti.play();
-      final praise = rd.praiseAudio ?? 'audio/games/beehive/4_momt.mp3';
+      final praise = rd.praiseAudio ?? 'audio/common/encourage_1.mp3';
       await _say(praise, maxMs: 2500);
       if (!mounted || t != _token) return;
       await _say(rd.audioPath, maxMs: 2800);
@@ -141,13 +141,13 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
         _tapped = idx;
         _wrongAttempts++;
       });
-      final wrong = _games.beehiveWrongAudio ?? 'audio/games/beehive/6_haw.mp3';
+      final wrong = _games.beehiveWrongAudio ?? 'audio/feedback/try_again.mp3';
       await _say(wrong, maxMs: 2500);
       if (!mounted || t != _token) return;
 
       if (_wrongAttempts >= 2) {
         setState(() => _showCorrectAnswer = true);
-        await _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+        await _say('audio/feedback/smart.mp3', maxMs: 2500);
         if (!mounted || t != _token) return;
         await _say(rd.audioPath, maxMs: 2800);
         if (!mounted || t != _token) return;
@@ -166,7 +166,7 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
       if (_score >= _rounds.length / 2) _confetti.play();
-      final fin = _games.praiseFinishAudio ?? 'audio/games/fishing/ahsnt.mp3';
+      final fin = _games.praiseFinishAudio ?? 'audio/feedback/correct.mp3';
       try {
         AudioService.instance.playAsset(fin, channel: AudioChannel.voice);
       } catch (_) {}

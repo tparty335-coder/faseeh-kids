@@ -280,7 +280,7 @@ class _BaaWordsStationState extends State<BaaWordsStation> {
 
   Future<void> _playIntro() async {
     final t = ++_token;
-    await _say('audio/lessons/baa/words/kalmat_intro.mp3', maxMs: 2500);
+    await _say('audio/lessons/ha/sounds/word_himal.mp3', maxMs: 2500);
     if (!mounted || t != _token || _open != null) return;
     await _say('audio/lessons/baa/words/kalmat_instruction.mp3', maxMs: 4500);
   }

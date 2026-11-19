@@ -74,7 +74,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
       'sceneNumber': 6,
       'title': 'المشهد السادس: سؤال الفهم',
       'caption': 'مَنْ يَعْرِفُ مَكَانَ الْأَرْنَبِ يَضْغَطْ عَلَيْهِ!',
-      'image': 'assets/images/lessons/alif/alif_cd_story_6.webp',
+      'image': 'assets/images/lessons/alif/alif_cd_story_5.webp',
       'audio': 'audio/stories/alif_story_6.mp3',
       'isInteractive': true,
     },

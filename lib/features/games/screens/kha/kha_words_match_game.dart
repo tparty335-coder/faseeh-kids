@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: خَرُوف (1024 × 486)
   _Round(
-    imagePath: 'assets/images/games/words/kha/kha_words_round_1.webp',
+    imagePath: 'assets/images/games/match/kha/kha_match_1.webp',
     imgH: 486,
     cardPx: 195.0,
     cardPyList: [125.0, 236.0, 350.0],
@@ -57,7 +57,7 @@ const List<_Round> _rounds = [
     dropPy: 394.0,
     correctWord: 'خَرُوف',
     wordAudio: 'audio/lessons/kha/final/kha_word_p1_1.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'خَرُوف', isCorrect: true,  color: Color(0xFFFF9EB5)),
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2: خِيمَة (1024 × 524)
   _Round(
-    imagePath: 'assets/images/games/words/kha/kha_words_round_2.webp',
+    imagePath: 'assets/images/games/match/kha/kha_match_2.webp',
     imgH: 524,
     cardPx: 121.0,
     cardPyList: [140.0, 258.0, 385.0],
@@ -74,7 +74,7 @@ const List<_Round> _rounds = [
     dropPy: 442.0,
     correctWord: 'خِيمَة',
     wordAudio: 'audio/lessons/kha/final/kha_word_p2_1.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cards: [
       _WordCard(word: 'خِيمَة', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3: خُبْز (1024 × 574)
   _Round(
-    imagePath: 'assets/images/games/words/kha/kha_words_round_3.webp',
+    imagePath: 'assets/images/games/match/kha/kha_match_3.webp',
     imgH: 574,
     cardPx: 136.0,
     cardPyList: [151.0, 280.0, 418.0],
@@ -91,7 +91,7 @@ const List<_Round> _rounds = [
     dropPy: 468.0,
     correctWord: 'خُبْز',
     wordAudio: 'audio/lessons/kha/final/kha_word_p3_1.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cards: [
       _WordCard(word: 'خُبْز', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4: خِيَار (1024 × 538)
   _Round(
-    imagePath: 'assets/images/games/words/kha/kha_words_round_4.webp',
+    imagePath: 'assets/images/games/match/kha/kha_match_4.webp',
     imgH: 538,
     cardPx: 132.0,
     cardPyList: [123.0, 254.0, 396.0],
@@ -108,7 +108,7 @@ const List<_Round> _rounds = [
     dropPy: 423.0,
     correctWord: 'خِيَار',
     wordAudio: 'audio/lessons/kha/final/kha_word_p2_2.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -196,7 +196,7 @@ class _HaWordsMatchGameState extends ConsumerState<KhaWordsMatchGame>
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onCardSelected(int cardIdx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -240,7 +240,7 @@ class _HaWordsMatchGameState extends ConsumerState<KhaWordsMatchGame>
         });
 
         // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-        await _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+        await _say('audio/feedback/smart.mp3', maxMs: 2500);
         if (!mounted || t != _token) return;
         await _playWordAudio();
         if (!mounted || t != _token) return;
@@ -264,7 +264,7 @@ class _HaWordsMatchGameState extends ConsumerState<KhaWordsMatchGame>
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

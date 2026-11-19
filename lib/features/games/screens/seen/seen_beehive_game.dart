@@ -44,7 +44,7 @@ const List<_Round> _rounds = [
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_1.webp',
     imgH: 440,
     wordAudio: 'audio/games/beehive/seen/seen_beehive_1.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cells: [
       _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
       _CellZone(label: 'سَ', isCorrect: true,  px: 546, py: 269),
@@ -57,7 +57,7 @@ const List<_Round> _rounds = [
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_2.webp',
     imgH: 440,
     wordAudio: 'audio/games/beehive/seen/seen_beehive_2.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cells: [
       _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
       _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
@@ -69,8 +69,8 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_3.webp',
     imgH: 440,
-    wordAudio: 'audio/games/beehive/seen/seen_beehive_3.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    wordAudio: 'audio/games/match/seen/seen_match_2.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cells: [
       _CellZone(label: 'سُ', isCorrect: true,  px: 692, py: 181),
       _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
@@ -82,8 +82,8 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/beehive/seen/seen_beehive_round_4.webp',
     imgH: 440,
-    wordAudio: 'audio/games/beehive/seen/seen_beehive_4.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    wordAudio: 'audio/games/match/seen/seen_match_1.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cells: [
       _CellZone(label: 'سُ', isCorrect: false, px: 692, py: 181),
       _CellZone(label: 'سَ', isCorrect: false, px: 546, py: 269),
@@ -161,10 +161,10 @@ class _SeenBeeHiveGameState extends ConsumerState<SeenBeeHiveGame> {
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/beehive/6_haw.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _playThisIsCorrect() =>
-      _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+      _say('audio/feedback/smart.mp3', maxMs: 2500);
 
   Future<void> _onCellTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -226,7 +226,7 @@ class _SeenBeeHiveGameState extends ConsumerState<SeenBeeHiveGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

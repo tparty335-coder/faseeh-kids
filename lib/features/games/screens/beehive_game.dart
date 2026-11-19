@@ -78,7 +78,7 @@ class _BeehiveGameState extends ConsumerState<BeehiveGame> {
     await AudioService.instance.playAsset('audio/instructions/alif_quiz_bee_explain.mp3', channel: AudioChannel.voice);
   }
   Future<void> _playCorrect() => AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
-  Future<void> _playWrong() => AudioService.instance.playAsset('audio/instructions/alif_quiz_option_d.mp3', channel: AudioChannel.sfx);
+  Future<void> _playWrong() => AudioService.instance.playAsset('audio/feedback/try_again.mp3', channel: AudioChannel.sfx);
   Future<void> _playThisIsCorrect() => AudioService.instance.playAsset('audio/feedback/wow.mp3', channel: AudioChannel.voice);
 
   Future<void> _onCellTap(int idx) async {

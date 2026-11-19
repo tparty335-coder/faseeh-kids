@@ -43,7 +43,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/dal/dal_circus_round_1.webp',
     imgH: 390,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    praiseAudio: 'audio/games/fishing/ba62.mp3',
     zones: [
       _ImageZone(label: 'تِمْسَاح', hasDal: false, px: 138, py: 114),
       _ImageZone(label: 'أَسَد',    hasDal: false, px: 326, py: 255),
@@ -59,7 +59,7 @@ const List<_Round> _rounds = [
     zones: [
       _ImageZone(label: 'حِمَار',  hasDal: false, px: 138, py: 114),
       _ImageZone(label: 'حَجَر',   hasDal: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/ha/sounds/word_hisaan.mp3'),
+          wordAudio: 'audio/lessons/baa/words/p3_tabeeb.mp3'),
       _ImageZone(label: 'فِيل',    hasDal: false, px: 138, py: 398),
     ],
   ),
@@ -72,7 +72,7 @@ const List<_Round> _rounds = [
       _ImageZone(label: 'حِصَان',  hasDal: false, px: 138, py: 116),
       _ImageZone(label: 'مِطْرَقَة', hasDal: false, px: 326, py: 262),
       _ImageZone(label: 'حِمَار', hasDal: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/ha/sounds/word_hijar.mp3'),
+          wordAudio: 'audio/lessons/ha/sounds/word_hawd.mp3'),
     ],
   ),
 ];
@@ -133,7 +133,7 @@ class _DalCircusGameState extends ConsumerState<DalCircusGame> {
     await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -202,7 +202,7 @@ class _DalCircusGameState extends ConsumerState<DalCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

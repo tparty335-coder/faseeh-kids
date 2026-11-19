@@ -98,7 +98,7 @@ class AudioRegistry {
     for (int i = 1; i <= 20; i++)
       'instr_alif_trace_${i.toString().padLeft(2, "0")}':
           'assets/audio/instructions/alif_trace_step_${i.toString().padLeft(2, "0")}.mp3',
-    'instr_alif_trace_full': 'assets/audio/instructions/alif_trace_full.mp3',
+    'instr_alif_trace_full': 'assets/audio/stories/alif_words_intro.mp3',
     'instr_alif_trace_praise': 'assets/audio/instructions/alif_trace_praise.mp3',
 
     // ──── Alif Quiz/Game Instructions (from MOE CD) ────
@@ -110,7 +110,7 @@ class AudioRegistry {
     'instr_alif_paint': 'assets/audio/instructions/alif_paint_intro.mp3',
     'instr_alif_paint_explain': 'assets/audio/instructions/alif_paint_explain.mp3',
     'instr_alif_words': 'assets/audio/instructions/alif_words_intro.mp3',
-    'instr_games_menu_intro': 'assets/audio/instructions/games_menu_intro.mp3',
+    'instr_games_menu_intro': 'assets/audio/stories/alif_goal.mp3',
   };
 
   /// Get the correct subdirectory for a given variant

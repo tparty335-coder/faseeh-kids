@@ -120,7 +120,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
   Future<void> _playWrong() async {
     // إجابة خاطئة حاول مرة أخرى
     await AudioService.instance.playAsset(
-      'audio/instructions/alif_quiz_option_d.mp3',
+      'audio/feedback/try_again.mp3',
       channel: AudioChannel.sfx,
     );
   }

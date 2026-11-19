@@ -75,7 +75,7 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
     if (!mounted || _gameOver) return;
     final t = ++_token;
     if (isFirstRound) {
-      final intro = _games.fishingIntroAudio ?? 'audio/games/fishing/sayd.mp3';
+      final intro = _games.fishingIntroAudio ?? 'audio/letters/short_vowels/ha_fatha.mp3';
       await _say(intro, maxMs: 2800);
       if (!mounted || _gameOver || t != _token) return;
     }
@@ -166,7 +166,7 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
         _tappedZoneIndex = idx;
         _wrongAttempts++;
       });
-      final wrongAudio = _games.fishingWrongAudio ?? 'audio/games/fishing/hawe.mp3';
+      final wrongAudio = _games.fishingWrongAudio ?? 'audio/feedback/try_again.mp3';
       await _say(wrongAudio, maxMs: 2500);
       if (!mounted || t != _token) return;
 
@@ -189,7 +189,7 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
       if (_score >= _rounds.length / 2) _confetti.play();
-      final fin = _games.praiseFinishAudio ?? 'audio/games/fishing/ahsnt.mp3';
+      final fin = _games.praiseFinishAudio ?? 'audio/feedback/correct.mp3';
       try {
         AudioService.instance.playAsset(fin, channel: AudioChannel.voice);
       } catch (_) {}

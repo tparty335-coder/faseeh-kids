@@ -41,38 +41,38 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1: تِمْسَاح (أعلى) ، أَسَد (وسط) ، جَمَل (أسفل) ← جَمَل ✅
   _Round(
-    imagePath: 'assets/images/games/circus/jeem_circus_round_1.webp',
+    imagePath: 'assets/images/games/circus/jeem/jeem_circus_1.webp',
     imgH: 390,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    praiseAudio: 'audio/games/fishing/ba62.mp3',
     zones: [
       _ImageZone(label: 'تِمْسَاح', hasJeem: false, px: 138, py: 114),
       _ImageZone(label: 'أَسَد',    hasJeem: false, px: 326, py: 255),
       _ImageZone(label: 'جَمَل',    hasJeem: true,  px: 138, py: 392,
-          wordAudio: 'audio/lessons/jeem/sounds/word_jamal.mp3'),
+          wordAudio: 'audio/instructions/alif_trace_step_01.mp3'),
     ],
   ),
   // الجولة 2: حِمَار (أعلى) ، جَبَل (وسط) ، فِيل (أسفل) ← جَبَل ✅
   _Round(
-    imagePath: 'assets/images/games/circus/jeem_circus_round_2.webp',
+    imagePath: 'assets/images/games/circus/jeem/jeem_circus_2.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba59.mp3',
     zones: [
       _ImageZone(label: 'حِمَار',  hasJeem: false, px: 138, py: 114),
       _ImageZone(label: 'جَبَل',   hasJeem: true,  px: 326, py: 258,
-          wordAudio: 'audio/lessons/jeem/sounds/word_jabal.mp3'),
+          wordAudio: 'audio/instructions/alif_trace_step_02.mp3'),
       _ImageZone(label: 'فِيل',    hasJeem: false, px: 138, py: 398),
     ],
   ),
   // الجولة 3: حِصَان (أعلى) ، مِطْرَقَة (وسط) ، جَزَرَة (أسفل) ← جَزَرَة ✅
   _Round(
-    imagePath: 'assets/images/games/circus/jeem_circus_round_3.webp',
+    imagePath: 'assets/images/games/circus/jeem/jeem_circus_3.webp',
     imgH: 390,
     praiseAudio: 'audio/games/circus/6_ba53.mp3',
     zones: [
       _ImageZone(label: 'حِصَان',  hasJeem: false, px: 138, py: 116),
       _ImageZone(label: 'مِطْرَقَة', hasJeem: false, px: 326, py: 262),
       _ImageZone(label: 'جَزَرَة', hasJeem: true,  px: 138, py: 404,
-          wordAudio: 'audio/lessons/jeem/sounds/word_jazara.mp3'),
+          wordAudio: 'audio/instructions/alif_trace_step_03.mp3'),
     ],
   ),
 ];
@@ -133,7 +133,7 @@ class _JeemCircusGameState extends ConsumerState<JeemCircusGame> {
     await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -202,7 +202,7 @@ class _JeemCircusGameState extends ConsumerState<JeemCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

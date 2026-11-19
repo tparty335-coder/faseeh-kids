@@ -71,7 +71,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       StoryScene(
         imagePath: '${_dir}jeem_cd_story_6.webp',
-        audioPath: '${_audio}jeem_story_6.mp3',
+        audioPath: 'audio/lessons/jeem/final/jeem_nasheed.mp3',
         isNasheed: true,
         captionText: 'جِيمٌ جَمَلٌ فِي الصَّحْرَاءِ .. مِثْلُ سَفِينَةَ فَوْقَ الْمَاءِ 🎵',
       ),
@@ -82,8 +82,8 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
         interaction: WordFindStoryInteraction(
           instructionText: 'الْجَمَلُ يَتَحَمَّلُ الْجُوعَ وَالْعَطَشَ وَارْتِفَاعَ الْحَرَارَةِ، لِذَلِكَ يُطْلَقُ عَلَيْهِ:',
           instructionAudioPath: '${_audio}jeem_story_7.mp3',
-          correctAudioPath: '${_audio}jeem_story_correct.mp3',
-          wrongAudioPath: '${_audio}jeem_story_wrong.mp3',
+          correctAudioPath: 'audio/feedback/smart.mp3',
+          wrongAudioPath: 'audio/feedback/try_again.mp3',
           targets: [
             StoryTargetItem(
               label: 'صَدِيقُ الْفَلَّاحِ',
@@ -125,8 +125,8 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       VowelItem(
         displayChar: 'جَ',
         fathaAudio: '${_soundsAudio}jeem_fatha.mp3',
-        dammaAudio: '${_soundsAudio}jeem_damma.mp3',
-        kasraAudio: '${_soundsAudio}jeem_kasra.mp3',
+        dammaAudio: 'audio/letters/short_vowels/jeem_damma.mp3',
+        kasraAudio: 'audio/letters/short_vowels/jeem_kasra.mp3',
       ),
     ],
   ),
@@ -137,7 +137,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'جَا',
-        audioPath: '${_soundsAudio}jeem_madd_alif.mp3',
+        audioPath: 'audio/letters/long_vowels/jeem_madd_demo.mp3',
         imagePath: '${_dir}jeem_madd_aa.webp',
       ),
       MaddItem(
@@ -271,9 +271,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           ),
           WordItem(
             word: 'شَجَرَة',
-            cardImagePath: '${_dir}jeem_words_p3_card_2.webp',
+            cardImagePath: 'assets/images/lessons/jeem/sounds/najm.webp',
             cardHeight: 474,
-            audioPath: '${_audio}jeem_word_p3_2.mp3',
+            audioPath: 'audio/lessons/taa/final/taa_word_p5_2.mp3',
             hotspot: WordHotspot(left: 0.140, top: 0.250, right: 0.480, bottom: 0.530),
             speakerOffset: Offset(0.163, 0.338),
             closeOffset: Offset(0.763, 0.338),
@@ -305,7 +305,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
         words: [
           WordItem(
             word: 'جَبَل',
-            cardImagePath: '${_dir}jeem_words_p4_card_1.webp',
+            cardImagePath: 'assets/images/lessons/jeem/sounds/jabal.webp',
             cardHeight: 474,
             audioPath: '${_audio}jeem_word_p4_1.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.200, right: 0.930, bottom: 0.530),
@@ -348,15 +348,15 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
   games: GamesSpec(
     fishingIntroAudio: '${_gamesAudio}fishing/fish1_5_al12.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/fish1_7_131.mp3',
-    fishingWrongAudio: '${_gamesAudio}fishing/fish1_2_hawel.mp3',
+    fishingWrongAudio: 'audio/feedback/try_again.mp3',
     beehivePromptAudio: '${_gamesAudio}beehive/bee1_6_130.mp3',
-    beehiveWrongAudio: '${_gamesAudio}beehive/bee1_3_hawel.mp3',
+    beehiveWrongAudio: 'audio/feedback/try_again.mp3',
     circusPromptAudio: '${_gamesAudio}circus/jeem/jeem_circus_prompt.mp3',
-    circusWrongAudio: '${_gamesAudio}circus/cir1_5_hawe.mp3',
+    circusWrongAudio: 'audio/feedback/try_again.mp3',
     wordsMatchPromptAudio: 'audio/instructions/words_drag_instruction.mp3',
-    wordsMatchWrongAudio: '${_gamesAudio}fishing/fish1_2_hawel.mp3',
-    coloringIntroAudio: '${_gamesAudio}coloring/6_al15.mp3',
-    coloringStep1Audio: '${_gamesAudio}coloring/3_qu2.mp3',
+    wordsMatchWrongAudio: 'audio/feedback/try_again.mp3',
+    coloringIntroAudio: 'audio/instructions/alif_paint_intro.mp3',
+    coloringStep1Audio: 'audio/instructions/alif_paint_explain.mp3',
     coloringStep2Audio: '${_gamesAudio}coloring/2_qu3.mp3',
     coloringWrongAudio: '${_gamesAudio}coloring/5_al23.mp3',
     fishing: [
@@ -365,8 +365,8 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_1.webp',
         audioPath: '${_gamesAudio}fishing/jeem/jeem_fishing_1.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/common/encourage_1.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -378,10 +378,10 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       FishingRound(
         word: 'شَجَرَة',
         imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_2.webp',
-        audioPath: '${_gamesAudio}fishing/jeem/jeem_fishing_2.mp3',
+        audioPath: 'audio/games/match/jeem/jeem_match_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
+        correctPraiseAudio: 'audio/feedback/smart.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -393,10 +393,10 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       FishingRound(
         word: 'جَمَل',
         imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_3.webp',
-        audioPath: '${_gamesAudio}fishing/jeem/jeem_fishing_3.mp3',
+        audioPath: 'audio/games/match/jeem/jeem_match_1.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -408,10 +408,10 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       FishingRound(
         word: 'ثَلَّاجَة',
         imagePath: '${_gamesDir}fishing/jeem/jeem_fishing_4.webp',
-        audioPath: '${_gamesAudio}fishing/jeem/jeem_fishing_4.mp3',
+        audioPath: 'audio/games/match/jeem/jeem_match_4.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/feedback/smart.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -424,9 +424,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(
         word: 'جَزَر',
-        imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_1.webp',
+        imagePath: 'assets/images/games/beehive/jeem_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/jeem/jeem_beehive_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 800,
         imgH: 440,
         speakerPx: 502,
@@ -440,9 +440,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'وُجُوه',
-        imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_2.webp',
+        imagePath: 'assets/images/games/beehive/jeem_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/jeem/jeem_beehive_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         imgW: 800,
         imgH: 440,
         speakerPx: 502,
@@ -456,9 +456,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'جِذْر',
-        imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_3.webp',
+        imagePath: 'assets/images/games/beehive/jeem_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/jeem/jeem_beehive_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 800,
         imgH: 440,
         speakerPx: 502,
@@ -472,9 +472,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       BeehiveRound(
         word: 'رِجْل',
-        imagePath: '${_gamesDir}beehive/jeem/jeem_beehive_round_4.webp',
-        audioPath: '${_gamesAudio}beehive/jeem/jeem_beehive_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        imagePath: 'assets/images/games/beehive/jeem_beehive_round_4.webp',
+        audioPath: 'audio/games/circus/raa/raa_circus_1.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 800,
         imgH: 440,
         speakerPx: 502,
@@ -491,8 +491,8 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       CircusRound(
         word: 'جَمَل',
         imagePath: '${_gamesDir}circus/jeem/jeem_circus_1.webp',
-        audioPath: '${_gamesAudio}circus/jeem/jeem_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}circus/cir1_4_sah.mp3',
+        audioPath: 'audio/games/match/jeem/jeem_match_1.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 800,
         imgH: 456,
         zones: [
@@ -504,8 +504,8 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       CircusRound(
         word: 'ثَلَّاجَة',
         imagePath: '${_gamesDir}circus/jeem/jeem_circus_2.webp',
-        audioPath: '${_gamesAudio}circus/jeem/jeem_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}circus/cir2_4_sah.mp3',
+        audioPath: 'audio/games/match/jeem/jeem_match_4.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 800,
         imgH: 456,
         zones: [
@@ -518,7 +518,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
         word: 'دَجَاجَة',
         imagePath: '${_gamesDir}circus/jeem/jeem_circus_3.webp',
         audioPath: '${_gamesAudio}circus/jeem/jeem_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}circus/cir3_3_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 800,
         imgH: 456,
         zones: [
@@ -531,9 +531,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
     wordsMatch: [
       WordsMatchPair(
         word: 'جَمَل',
-        imagePath: '${_gamesDir}words/jeem/jeem_match_1.webp',
+        imagePath: 'assets/images/games/match/jeem/jeem_match_1.webp',
         audioPath: '${_gamesAudio}match/jeem/jeem_match_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 800,
         imgH: 456,
         cardPx: 178,
@@ -548,9 +548,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'شَجَرَة',
-        imagePath: '${_gamesDir}words/jeem/jeem_match_2.webp',
+        imagePath: 'assets/images/games/match/jeem/jeem_match_2.webp',
         audioPath: '${_gamesAudio}match/jeem/jeem_match_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         imgW: 800,
         imgH: 456,
         cardPx: 178,
@@ -565,9 +565,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'دَجَاجَة',
-        imagePath: '${_gamesDir}words/jeem/jeem_match_3.webp',
+        imagePath: 'assets/images/games/match/jeem/jeem_match_3.webp',
         audioPath: '${_gamesAudio}match/jeem/jeem_match_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 800,
         imgH: 456,
         cardPx: 178,
@@ -582,9 +582,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ),
       WordsMatchPair(
         word: 'ثَلَّاجَة',
-        imagePath: '${_gamesDir}words/jeem/jeem_match_4.webp',
+        imagePath: 'assets/images/games/match/jeem/jeem_match_4.webp',
         audioPath: '${_gamesAudio}match/jeem/jeem_match_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 800,
         imgH: 456,
         cardPx: 178,
@@ -602,7 +602,7 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
       ColoringRound(
         word: 'جَابِر',
         bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_1.webp',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp',
+        wordRevealImagePath: 'assets/images/games/coloring/jeem_coloring_word_1.webp',
         introAudioPath: '${_gamesAudio}coloring/jeem_paint1_word.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint1_ahsant.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/jeem/jeem_paint1_wrong.mp3',
@@ -623,16 +623,16 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           GameZoneChoice(label: 'جَابِر', isCorrect: true),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFFC8A96E)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFF8D6E63)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_1.webp', color: Color(0xFFFFD54F)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_1.webp', color: Color(0xFFC8A96E)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_1.webp', color: Color(0xFF8D6E63)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_1.webp', color: Color(0xFFFFD54F)),
         ],
       ),
       ColoringRound(
         word: 'وُجُوه',
         bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_2.webp',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp',
-        introAudioPath: '${_gamesAudio}coloring/jeem_paint2_word.mp3',
+        wordRevealImagePath: 'assets/images/games/coloring/jeem_coloring_word_2.webp',
+        introAudioPath: 'audio/games/coloring/alif_good_inas.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint2_ahsant.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/jeem/jeem_paint2_wrong.mp3',
         wordAudioPath: '${_audio}jeem_word_p2_4.mp3',
@@ -652,15 +652,15 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           GameZoneChoice(label: 'جِذْر', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF78909C)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF4CAF50)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_2.webp', color: Color(0xFF90A4AE)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_2.webp', color: Color(0xFF78909C)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_2.webp', color: Color(0xFF4CAF50)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_2.webp', color: Color(0xFF90A4AE)),
         ],
       ),
       ColoringRound(
         word: 'نَجِيب',
         bgImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_3.webp',
-        wordRevealImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp',
+        wordRevealImagePath: 'assets/images/games/coloring/jeem_coloring_word_3.webp',
         introAudioPath: '${_audio}jeem_word_p3_1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/jeem_paint3_ahsant.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/jeem/jeem_paint3_wrong.mp3',
@@ -681,9 +681,9 @@ const LetterUnitManifest jeemManifest = LetterUnitManifest(
           GameZoneChoice(label: 'بُرْج', isCorrect: false),
         ],
         slices: [
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFFFF7043)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFF4CAF50)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/jeem/jeem_coloring_word_3.webp', color: Color(0xFFFFF176)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_3.webp', color: Color(0xFFFF7043)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_3.webp', color: Color(0xFF4CAF50)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/jeem_coloring_word_3.webp', color: Color(0xFFFFF176)),
         ],
       ),
     ],

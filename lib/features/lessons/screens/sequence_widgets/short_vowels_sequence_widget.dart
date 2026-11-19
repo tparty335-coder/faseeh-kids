@@ -52,7 +52,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
       case 'ث':
         return 'audio/letters/short_vowels/thaa_fatha.mp3';
       case 'ت':
-        return 'audio/lessons/taa/sounds/taa_fatha.mp3';
+        return 'audio/letters/short_vowels/taa_fatha.mp3';
       case 'ب':
         return 'audio/lessons/baa/sounds/baa_fatha.mp3';
       default:
@@ -77,7 +77,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'ثَلْج',
               'position': 'ثَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thalj.mp3',
+              'audio': 'audio/letters/short_vowels/thaa_fatha.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thalj.webp',
             },
           ],
@@ -94,7 +94,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'ثُعْبَان',
               'position': 'ثَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thoban.mp3',
+              'audio': 'audio/letters/short_vowels/thaa_damma.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thoban.webp',
             },
           ],
@@ -111,7 +111,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'ثِمَار',
               'position': 'ثَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/thaa/sounds/word_thimar.mp3',
+              'audio': 'audio/letters/short_vowels/thaa_kasra.mp3',
               'image': 'assets/images/lessons/thaa/sounds/thimar.webp',
             },
           ],
@@ -121,7 +121,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'عَلَامَةُ السُّكُونِ (ثْ)',
           'vowelMark': 'ثْ',
           'color': const Color(0xFF5D4037),
-          'vowelAudio': 'audio/lessons/thaa/sounds/thaa_sukoon.mp3',
+          'vowelAudio': 'audio/letters/short_vowels/thaa_sukun.mp3',
           'explanation': 'يُوضَعُ السُّكُونُ فَوْقَ الْحَرْفِ فَيَكُونُ بِدُونِ حَرَكَةٍ (ثْ)',
           'ruleAudio': 'audio/lessons/thaa/sounds/thaa_sukoon_rule.mp3',
           'examples': [
@@ -160,9 +160,9 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             'label': 'الضَّمَّةُ (جُ)',
             'vowelMark': 'جُ',
             'color': const Color(0xFFFF6F00),
-            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_damma.mp3',
+            'vowelAudio': 'audio/letters/short_vowels/jeem_damma.mp3',
             'explanation': 'الضَّمَّةُ تُوضَعُ فَوْقَ الْحَرْفِ وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (جُ)',
-            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_damma_rule.mp3',
+            'ruleAudio': 'audio/letters/phrases/jeem_damma_demo.mp3',
             'examples': [
               {
                 'word': 'رَجُل',
@@ -177,9 +177,9 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             'label': 'الْكَسْرَةُ (جِ)',
             'vowelMark': 'جِ',
             'color': const Color(0xFF1E88E5),
-            'vowelAudio': 'audio/lessons/jeem/sounds/jeem_kasra.mp3',
+            'vowelAudio': 'audio/letters/short_vowels/jeem_kasra.mp3',
             'explanation': 'الشَّرْطَةُ الَّتِي تُوضَعُ أَسْفَلَ الْحَرْفِ تُسَمَّى كَسْرَةً وَتُغَيِّرُ صَوْتَ الْحَرْفِ دَاخِلَ الْكَلِمَةِ إِلَى (جِ)',
-            'ruleAudio': 'audio/lessons/jeem/sounds/jeem_kasra_rule.mp3',
+            'ruleAudio': 'audio/letters/phrases/jeem_kasra_demo.mp3',
             'examples': [
               {
                 'word': 'جِذْر',
@@ -217,7 +217,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'تَ',
           'color': const Color(0xFFE53935),
           'explanation': 'الْفَتْحَةُ شَرْطَةٌ مَائِلَةٌ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تَ)',
-          'ruleAudio': 'audio/lessons/taa/sounds/taa_fatha_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/taa_fatha_rule.mp3',
           'examples': [
             {
               'word': 'تَأْكُلُ',
@@ -233,12 +233,12 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'تُ',
           'color': const Color(0xFFFF6F00),
           'explanation': 'الضَّمَّةُ وَاوٌ صَغِيرَةٌ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تُ)',
-          'ruleAudio': 'audio/lessons/taa/sounds/taa_damma_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/taa_damma_rule.mp3',
           'examples': [
             {
               'word': 'تُوتُ',
               'position': 'تَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/taa/sounds/word_toot.mp3',
+              'audio': 'audio/games/fishing/taa_toot.mp3',
               'image': 'assets/images/lessons/taa/sounds/toot.webp',
             },
           ],
@@ -249,7 +249,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'تِ',
           'color': const Color(0xFF1E88E5),
           'explanation': 'الْكَسْرَةُ شَرْطَةٌ مَائِلَةٌ تُوضَعُ تَحْتَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تِ)',
-          'ruleAudio': 'audio/lessons/taa/sounds/taa_kasra_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/taa_kasra_rule.mp3',
           'examples': [
             {
               'word': 'تِمْسَاحُ',
@@ -265,7 +265,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'تْ',
           'color': const Color(0xFF5D4037),
           'explanation': 'السُّكُونُ دَائِرَةٌ صَغِيرَةٌ تُوضَعُ فَوْقَ الْحَرْفِ فَيَسْكُنُ صَوْتُهُ (تْ)',
-          'ruleAudio': 'audio/lessons/taa/sounds/taa_sukoon_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/taa_sukoon.mp3',
           'examples': [
             {
               'word': 'كَتْكُوتُ',
@@ -291,13 +291,13 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'بَقَرَة',
               'position': 'بَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/baa/sounds/word_baqara.mp3',
+              'audio': 'audio/games/fishing/ba52.mp3',
               'image': 'assets/images/lessons/baa/sounds/baqara.webp',
             },
             {
               'word': 'بَاب',
               'position': 'بَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/baa/sounds/word_bab.mp3',
+              'audio': 'audio/letters/long_vowels/baa_madd_alif.mp3',
               'image': 'assets/images/lessons/baa/sounds/bab.webp',
             },
           ],
@@ -313,7 +313,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'بُرْج',
               'position': 'بَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/baa/sounds/word_borg.mp3',
+              'audio': 'audio/games/fishing/ba56.mp3',
               'image': 'assets/images/lessons/baa/sounds/borg.webp',
             },
             {
@@ -352,18 +352,18 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'بْ',
           'color': const Color(0xFF5D4037),
           'explanation': 'السُّكُونُ فَوْقَ الْبَاءِ يَجْعَلُهَا بِدُونِ حَرَكَةٍ فَتَسْكُنُ (بْ)',
-          'ruleAudio': 'audio/lessons/baa/sounds/baa_sukoon_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/dhaal_sukoon.mp3',
           'examples': [
             {
               'word': 'إِبْرَة',
               'position': 'بَاءٌ سَاكِنَةٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/baa/sounds/word_ibra.mp3',
+              'audio': 'audio/stories/alif_word_ibra.mp3',
               'image': 'assets/images/lessons/baa/sounds/ibra.webp',
             },
             {
               'word': 'يَكْتُبْ',
               'position': 'بَاءٌ سَاكِنَةٌ فِي آخِرِ الْكَلِمَةِ (عِنْدَ الْوَقْفِ)',
-              'audio': 'audio/lessons/baa/sounds/word_yaktub_sukoon.mp3',
+              'audio': 'audio/lessons/baa/words/p2_yaktb.mp3',
               'image': 'assets/images/lessons/baa/sounds/yaktb.webp',
             },
           ],
@@ -379,19 +379,19 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'حَ',
           'color': const Color(0xFFE53935),
           'explanation': 'الْفَتْحَةُ شَرْطَةٌ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْحَاءِ إِلَى (حَ)',
-          'ruleAudio': 'audio/lessons/ha/sounds/ha_fatha_rule.mp3',
+          'ruleAudio': 'audio/letters/short_vowels/ha_fatha.mp3',
           'examples': [
             {
               'word': 'حَوْض',
               'position': 'حَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
               'audio': 'audio/lessons/ha/sounds/word_hawd.mp3',
-              'image': 'assets/images/lessons/ha/sounds/hamal.webp',
+              'image': 'assets/images/lessons/ha/ha_word_hamal.webp',
             },
             {
               'word': 'حَمَامَة',
               'position': 'حَاءٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_hamama.mp3',
-              'image': 'assets/images/lessons/ha/sounds/hisaan.webp',
+              'audio': 'audio/games/match/ha/ha_match_3.mp3',
+              'image': 'assets/images/lessons/ha/ha_word_hisaan.webp',
             },
           ],
         },
@@ -401,19 +401,19 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'حُ',
           'color': const Color(0xFFFF6F00),
           'explanation': 'الضَّمَّةُ فَوْقَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْحَاءِ إِلَى (حُ)',
-          'ruleAudio': 'audio/lessons/ha/sounds/ha_damma_rule.mp3',
+          'ruleAudio': 'audio/feedback/smart.mp3',
           'examples': [
             {
               'word': 'حُبُوب',
               'position': 'حَاءٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_huboob.mp3',
-              'image': 'assets/images/lessons/ha/sounds/hoot.webp',
+              'audio': 'audio/lessons/ha/final/ha_word_p2_2.mp3',
+              'image': 'assets/images/lessons/ha/ha_word_hoot2.webp',
             },
             {
               'word': 'لُحُوم',
               'position': 'حَاءٌ مَضْمُومَةٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_luhoom.mp3',
-              'image': 'assets/images/lessons/ha/sounds/hujra.webp',
+              'audio': 'audio/games/match/ha/ha_match_4.mp3',
+              'image': 'assets/images/lessons/ha/ha_word_hujra.webp',
             },
           ],
         },
@@ -423,19 +423,19 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'حِ',
           'color': const Color(0xFF1E88E5),
           'explanation': 'الْكَسْرَةُ أَسْفَلَ الْحَرْفِ تُحَوِّلُ صَوْتَ الْحَاءِ إِلَى (حِ)',
-          'ruleAudio': 'audio/lessons/ha/sounds/ha_kasra_rule.mp3',
+          'ruleAudio': 'audio/letters/phrases/haa_h_kasra_demo.mp3',
           'examples': [
             {
               'word': 'حِمَار',
               'position': 'حَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_himaar.mp3',
-              'image': 'assets/images/lessons/ha/sounds/himaar.webp',
+              'audio': 'audio/lessons/ha/final/ha_word_p2_2.mp3',
+              'image': 'assets/images/lessons/ha/ha_word_himaar.webp',
             },
             {
               'word': 'حِصَان',
               'position': 'حَاءٌ مَكْسُورَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_hisaan.mp3',
-              'image': 'assets/images/lessons/ha/sounds/hisaan.webp',
+              'audio': 'audio/lessons/baa/words/p3_tabeeb.mp3',
+              'image': 'assets/images/lessons/ha/ha_word_hisaan.webp',
             },
           ],
         },
@@ -456,7 +456,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'نَحِيف',
               'position': 'حَاءٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/ha/sounds/word_naheef.mp3',
+              'audio': 'audio/games/fishing/ha/ha_fishing_1.mp3',
               'image': 'assets/images/lessons/ha/sounds/bahr.webp',
             },
           ],
@@ -570,7 +570,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'دَوَاء',
               'position': 'دَالٌ مَفْتُوحَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/games/beehive/dal/dal_beehive_1.mp3',
+              'audio': 'audio/games/match/dal/dal_match_3.mp3',
               'image': 'assets/images/lessons/dal/dal_fatha_dub.webp',
             },
             {
@@ -598,7 +598,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'دُش',
               'position': 'دَالٌ مَضْمُومَةٌ فِي أَوَّلِ الْكَلِمَةِ',
-              'audio': 'audio/games/beehive/dal/dal_beehive_3.mp3',
+              'audio': 'audio/games/match/dal/dal_match_4.mp3',
               'image': 'assets/images/lessons/dal/dal_damma_durba.webp',
             },
           ],
@@ -642,7 +642,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'أَسَد',
               'position': 'دَالٌ سَاكِنَةٌ فِي آخِرِ الْكَلِمَةِ',
-              'audio': 'audio/lessons/dal/sounds/word_asad.mp3',
+              'audio': 'audio/letters/words/alif_word.mp3',
               'image': 'assets/images/lessons/dal/dal_sukoon_asad.webp',
             },
           ],
@@ -691,7 +691,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'أُذُن',
               'position': 'ذَالٌ مَضْمُومَةٌ فِي وَسَطِ الْكَلِمَةِ',
-              'audio': 'audio/games/beehive/dhaal/dhaal_beehive_3.mp3',
+              'audio': 'audio/games/match/dhaal/dhaal_match_3.mp3',
               'image': 'assets/images/lessons/dhaal/dhaal_damma_thubab.webp',
             },
           ],
@@ -751,7 +751,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'سَ',
           'color': const Color(0xFFE53935),
           'explanation': 'نَفْتَحُ الْفَمَ عِنْدَ نُطْقِ حَرْفِ السِّينِ (سَ)',
-          'ruleAudio': 'audio/lessons/seen/sounds/seen_fatha_rule.mp3',
+          'ruleAudio': 'audio/letters/phrases/seen_fatha_demo.mp3',
           'vowelAudio': 'audio/letters/short_vowels/seen_fatha.mp3',
           'examples': [
             {
@@ -774,13 +774,13 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'سُ',
           'color': const Color(0xFFFF6F00),
           'explanation': 'نَضُمُّ الشَّفَتَيْنِ عِنْدَ نُطْقِ حَرْفِ السِّينِ (سُ)',
-          'ruleAudio': 'audio/lessons/seen/sounds/seen_damma_rule.mp3',
+          'ruleAudio': 'audio/letters/phrases/seen_damma_demo.mp3',
           'vowelAudio': 'audio/letters/short_vowels/seen_damma.mp3',
           'examples': [
             {
               'word': 'سُلَحْفَاة',
               'position': 'أَوَّلُ الْكَلِمَةِ',
-              'audio': 'audio/lessons/seen/final/seen_word_p3_3.mp3',
+              'audio': 'audio/games/circus/seen/seen_circus_2.mp3',
               'image': 'assets/images/lessons/seen/seen_words_p3_card_3.webp',
             },
             {
@@ -797,7 +797,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'سِ',
           'color': const Color(0xFF1E88E5),
           'explanation': 'نَخْفِضُ الْفَكَّ عِنْدَ نُطْقِ حَرْفِ السِّينِ (سِ)',
-          'ruleAudio': 'audio/lessons/seen/sounds/seen_kasra_rule.mp3',
+          'ruleAudio': 'audio/letters/phrases/seen_kasra_demo.mp3',
           'vowelAudio': 'audio/letters/short_vowels/seen_kasra.mp3',
           'examples': [
             {
@@ -820,7 +820,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'vowelMark': 'سْ',
           'color': const Color(0xFF43A047),
           'explanation': 'نَقِفُ عَلَى حَرْفِ السِّينِ بِسُكُونٍ هَادِئٍ (سْ)',
-          'ruleAudio': 'audio/lessons/seen/sounds/seen_sukoon_rule.mp3',
+          'ruleAudio': 'audio/lessons/saad/sounds/saad_sukoon_rule.mp3',
           'vowelAudio': 'audio/letters/short_vowels/seen_sukoon.mp3',
           'examples': [
             {
@@ -903,7 +903,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'زَيْت',
               'position': 'أَوَّلُ الْكَلِمَةِ',
-              'audio': 'audio/games/fishing/zaay/zaay_fishing_1.mp3',
+              'audio': 'audio/games/match/zaay/zaay_match_3.mp3',
               'image': 'assets/images/lessons/zaay/zaay_words_p1_card_4.webp',
             },
           ],
@@ -925,7 +925,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
             {
               'word': 'مَوْز',
               'position': 'آخِرُ الْكَلِمَةِ',
-              'audio': 'audio/games/circus/zaay/zaay_circus_3.mp3',
+              'audio': 'audio/games/match/zaay/zaay_match_4.mp3',
               'image': 'assets/images/lessons/zaay/zaay_words_p4_card_4.webp',
             },
           ],

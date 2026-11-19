@@ -43,12 +43,12 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/dhaal/dhaal_circus_round_1.webp',
     imgH: 474,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    praiseAudio: 'audio/games/fishing/ba62.mp3',
     zones: [
       _ImageZone(label: 'رِجْل',  hasDhaal: false, px: 138, py:  95),
       _ImageZone(label: 'حِصَان', hasDhaal: false, px: 440, py: 230),
       _ImageZone(label: 'ذَيْل',  hasDhaal: true,  px: 138, py: 370,
-          wordAudio: 'audio/games/circus/dhaal/dhaal_circus_1.mp3'),
+          wordAudio: 'audio/games/match/dhaal/dhaal_match_2.mp3'),
     ],
   ),
   // الجولة 2: سَمَكَة (أعلى يسار) ، ذِئْب (وسط يمين) ، فِيل (أسفل يسار) ← ذِئْب ✅
@@ -72,7 +72,7 @@ const List<_Round> _rounds = [
       _ImageZone(label: 'فِنْجَان', hasDhaal: false, px: 138, py:  95),
       _ImageZone(label: 'نَخْلَة',  hasDhaal: false, px: 440, py: 230),
       _ImageZone(label: 'غِذَاء',   hasDhaal: true,  px: 138, py: 370,
-          wordAudio: 'audio/games/circus/dhaal/dhaal_circus_3.mp3'),
+          wordAudio: 'audio/lessons/dhaal/sounds/word_ghidha.mp3'),
     ],
   ),
 ];
@@ -133,7 +133,7 @@ class _DhaalCircusGameState extends ConsumerState<DhaalCircusGame> {
     await _say('audio/games/circus/8_al13.mp3', maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -202,7 +202,7 @@ class _DhaalCircusGameState extends ConsumerState<DhaalCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

@@ -59,7 +59,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
   Timer? _followUpTimer;
 
   static const String _maddDefAudio = 'audio/lessons/baa/sounds/baa_madd_def.mp3';
-  static const String _maddTypesAudio = 'audio/lessons/baa/sounds/baa_madd_types.mp3';
+  static const String _maddTypesAudio = 'audio/lessons/taa/madd/taa_madd_types.mp3';
   static const Color _introColor = Color(0xFF6A1B9A);
 
   static const List<String> _maddNames = [

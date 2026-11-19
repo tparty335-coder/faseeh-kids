@@ -37,7 +37,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
     scenes: [
       StoryScene(
         imagePath: '${_dir}haa_end_cd_story_1.webp',
-        audioPath: '${_audio}haa_end_story_1.mp3',
+        audioPath: 'audio/letters/phrases/haa_sentence.mp3',
         captionText: 'هِنْدُ تِلْمِيذَةٌ فِي الصَّفِّ الْأَوَّلِ الِابْتِدَائِيِّ. انْتَقَلَتْ هِنْدُ وَأُسْرَتُهَا إِلَى مَنْزِلٍ جَدِيدٍ.',
       ),
       StoryScene(
@@ -81,7 +81,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         exampleWord: 'مُهَنْدِس',
         exampleEmoji: '👷',
         vowelAudio: '${_vowelsAudio}haa_fatha.mp3',
-        fullRuleAudio: '${_soundsAudio}haa_end_fatha_rule.mp3',
+        fullRuleAudio: 'audio/letters/phrases/haa_fatha_demo.mp3',
         wordAudio: '${_audio}haa_end_word_p3_2.mp3',
         slideImagePath: '${_dir}haa_end_vowel_fatha.webp',
       ),
@@ -91,8 +91,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         exampleWord: 'هُدْهُد',
         exampleEmoji: '🐦',
         vowelAudio: '${_vowelsAudio}haa_damma.mp3',
-        fullRuleAudio: '${_soundsAudio}haa_end_damma_rule.mp3',
-        wordAudio: '${_audio}haa_end_word_p1_1.mp3',
+        fullRuleAudio: 'audio/letters/phrases/haa_damma_demo.mp3',
+        wordAudio: 'audio/letters/words/haa_word.mp3',
         slideImagePath: '${_dir}haa_end_vowel_damma.webp',
       ),
       VowelCardSpec(
@@ -101,8 +101,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         exampleWord: 'هِنْد',
         exampleEmoji: '👧',
         vowelAudio: '${_vowelsAudio}haa_kasra.mp3',
-        fullRuleAudio: '${_soundsAudio}haa_end_kasra_rule.mp3',
-        wordAudio: '${_audio}haa_end_word_p1_4.mp3',
+        fullRuleAudio: 'audio/letters/phrases/haa_kasra_demo.mp3',
+        wordAudio: 'audio/letters/words/haa_word4.mp3',
         slideImagePath: '${_dir}haa_end_vowel_kasra.webp',
       ),
       VowelCardSpec(
@@ -146,7 +146,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         imagePath: '${_dir}haa_end_madd_ii.webp',
         exampleWord: 'سُهَيْر',
         explanation: 'هَاءٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: هِي',
-        wordAudioPath: '${_soundsAudio}haa_end_madd_ii.mp3',
+        wordAudioPath: 'audio/letters/long_vowels/haa_yaa.mp3',
         accentColor: Color(0xFFD84315),
       ),
     ],
@@ -154,12 +154,12 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
 
   tracing: TracingSpec(
     letterChar: 'ه',
-    audioIntroPath: '${_audio}haa_end_write_intro.mp3',
+    audioIntroPath: 'audio/lessons/faa/final/faa_write_intro.mp3',
     stepImagePaths: [
       '${_dir}haa_end_write_step_1.webp',
-      '${_dir}haa_end_write_step_2.webp',
-      '${_dir}haa_end_write_step_3.webp',
-      '${_dir}haa_end_write_step_4.webp',
+      'assets/images/lessons/haa_end/haa_end_trace_start.webp',
+      'assets/images/lessons/haa_end/haa_end_trace_middle.webp',
+      'assets/images/lessons/haa_end/haa_end_trace_end.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -168,8 +168,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         displayForm: 'ه',
         exampleWord: 'مِيَاه',
         exampleEmoji: '💧',
-        audioPath: '${_audio}haa_end_trace_isolated.mp3',
-        imagePath: '${_dir}haa_end_trace_isolated.webp',
+        audioPath: 'audio/lessons/faa/final/faa_trace_isolated.mp3',
+        imagePath: 'assets/images/lessons/haa_end/haa_end_write_step_1.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -207,10 +207,10 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         listImagePath: '${_dir}haa_end_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'هُدْهُد', cardImagePath: '${_dir}haa_end_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'فَهْد', cardImagePath: '${_dir}haa_end_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مُهْر', cardImagePath: '${_dir}haa_end_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'هِنْد', cardImagePath: '${_dir}haa_end_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'هُدْهُد', cardImagePath: '${_dir}haa_end_words_p1_card_1.webp', cardHeight: 474, audioPath: 'audio/letters/words/haa_word.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'فَهْد', cardImagePath: '${_dir}haa_end_words_p1_card_2.webp', cardHeight: 474, audioPath: 'audio/letters/words/haa_word2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مُهْر', cardImagePath: '${_dir}haa_end_words_p1_card_3.webp', cardHeight: 474, audioPath: 'audio/letters/words/haa_word3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'هِنْد', cardImagePath: '${_dir}haa_end_words_p1_card_4.webp', cardHeight: 474, audioPath: 'audio/letters/words/haa_word4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
@@ -247,28 +247,28 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
   ),
 
   games: GamesSpec(
-    fishingIntroAudio: '${_gamesAudio}fishing/sayd.mp3',
+    fishingIntroAudio: 'audio/letters/short_vowels/ha_fatha.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/haa_end/haa_end_fishing_prompt.mp3',
-    fishingWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
+    fishingWrongAudio: 'audio/feedback/try_again.mp3',
     beehivePromptAudio: '${_gamesAudio}beehive/haa_end/haa_end_beehive_prompt.mp3',
-    beehiveWrongAudio: '${_gamesAudio}beehive/6_haw.mp3',
+    beehiveWrongAudio: 'audio/feedback/try_again.mp3',
     circusPromptAudio: '${_gamesAudio}circus/haa_end/haa_end_circus_prompt.mp3',
-    circusWrongAudio: '${_gamesAudio}circus/4_hawe.mp3',
+    circusWrongAudio: 'audio/feedback/try_again.mp3',
     wordsMatchPromptAudio: 'audio/instructions/words_drag_instruction.mp3',
-    wordsMatchWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
-    coloringIntroAudio: '${_gamesAudio}coloring/6_al15.mp3',
-    coloringStep1Audio: '${_gamesAudio}coloring/3_qu2.mp3',
+    wordsMatchWrongAudio: 'audio/feedback/try_again.mp3',
+    coloringIntroAudio: 'audio/instructions/alif_paint_intro.mp3',
+    coloringStep1Audio: 'audio/instructions/alif_paint_explain.mp3',
     coloringStep2Audio: '${_gamesAudio}coloring/2_qu3.mp3',
     coloringWrongAudio: '${_gamesAudio}coloring/5_al23.mp3',
-    praiseFinishAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+    praiseFinishAudio: 'audio/feedback/correct.mp3',
     fishing: [
       FishingRound(
         word: 'مُهَنْدِس',
         imagePath: '${_gamesDir}fishing/haa_end/haa_end_fishing_round_1.webp',
-        audioPath: '${_gamesAudio}fishing/haa_end/haa_end_fishing_1.mp3',
+        audioPath: 'audio/games/beehive/haa_end/haa_end_beehive_1.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'مُهَنْدِس', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'فَلَّاح', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -280,8 +280,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/haa_end/haa_end_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/haa_end/haa_end_fishing_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'رَأْس', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'يَد', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -291,10 +291,10 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
       FishingRound(
         word: 'هُدْهُد',
         imagePath: '${_gamesDir}fishing/haa_end/haa_end_fishing_round_3.webp',
-        audioPath: '${_gamesAudio}fishing/haa_end/haa_end_fishing_3.mp3',
+        audioPath: 'audio/games/circus/haa_end/haa_end_circus_1.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/smart.mp3',
         zones: [
           GameZoneChoice(label: 'قِطّ', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'هُدْهُد', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -306,8 +306,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/haa_end/haa_end_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/haa_end/haa_end_fishing_4.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         zones: [
           GameZoneChoice(label: 'حِصَان', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'جَمَل', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -320,7 +320,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'مُهَنْدِس',
         imagePath: '${_gamesDir}beehive/haa_end/haa_end_beehive_round_1.webp',
         audioPath: '${_gamesAudio}beehive/haa_end/haa_end_beehive_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'هُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'هَ', isCorrect: true, px: 546, py: 269),
@@ -332,7 +332,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'هِنْد',
         imagePath: '${_gamesDir}beehive/haa_end/haa_end_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/haa_end/haa_end_beehive_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cells: [
           GameZoneChoice(label: 'هُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'هَ', isCorrect: false, px: 546, py: 269),
@@ -343,8 +343,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'هُدْهُد',
         imagePath: '${_gamesDir}beehive/haa_end/haa_end_beehive_round_3.webp',
-        audioPath: '${_gamesAudio}beehive/haa_end/haa_end_beehive_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        audioPath: 'audio/games/circus/haa_end/haa_end_circus_1.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cells: [
           GameZoneChoice(label: 'هُ', isCorrect: true, px: 692, py: 181),
           GameZoneChoice(label: 'هَ', isCorrect: false, px: 546, py: 269),
@@ -355,8 +355,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'نَهْر',
         imagePath: '${_gamesDir}beehive/haa_end/haa_end_beehive_round_4.webp',
-        audioPath: '${_gamesAudio}beehive/haa_end/haa_end_beehive_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        audioPath: 'audio/games/match/haa_end/haa_end_match_2.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'هُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'هَ', isCorrect: false, px: 546, py: 269),
@@ -370,7 +370,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'هُدْهُد',
         imagePath: '${_gamesDir}circus/haa_end/haa_end_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/haa_end/haa_end_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'حَمَامَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'دَجَاجَة', isCorrect: false, px: 269, py: 232),
@@ -380,11 +380,11 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
       CircusRound(
         word: 'هَرَم',
         imagePath: '${_gamesDir}circus/haa_end/haa_end_circus_round_2.webp',
-        audioPath: '${_gamesAudio}circus/haa_end/haa_end_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        audioPath: 'audio/games/match/haa_end/haa_end_match_1.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         zones: [
           GameZoneChoice(label: 'شَجَرَة', isCorrect: false, px: 137, py: 95),
-          GameZoneChoice(label: 'هَرَم', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/haa_end/haa_end_circus_2.mp3'),
+          GameZoneChoice(label: 'هَرَم', isCorrect: true, px: 269, py: 232, wordAudio: 'audio/games/match/haa_end/haa_end_match_1.mp3'),
           GameZoneChoice(label: 'مِفْتَاح', isCorrect: false, px: 135, py: 373),
         ],
       ),
@@ -392,7 +392,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'فَهْد',
         imagePath: '${_gamesDir}circus/haa_end/haa_end_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/haa_end/haa_end_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         zones: [
           GameZoneChoice(label: 'زَرَافَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'أَسَد', isCorrect: false, px: 269, py: 232),
@@ -405,7 +405,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'هَرَم',
         imagePath: '${_gamesDir}match/haa_end/haa_end_match_1.webp',
         audioPath: '${_gamesAudio}match/haa_end/haa_end_match_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'هَوَاء', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'هَرَم', isCorrect: true, colorValue: 0xFFFF9EB5),
@@ -416,7 +416,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'نَهْر',
         imagePath: '${_gamesDir}match/haa_end/haa_end_match_2.webp',
         audioPath: '${_gamesAudio}match/haa_end/haa_end_match_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         cards: [
           GameZoneChoice(label: 'نَهْر', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'ثَلْج', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -427,7 +427,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'هَاتِف',
         imagePath: '${_gamesDir}match/haa_end/haa_end_match_3.webp',
         audioPath: '${_gamesAudio}match/haa_end/haa_end_match_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cards: [
           GameZoneChoice(label: 'كَلْب', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'فَهْد', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -438,7 +438,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         word: 'هِلَال',
         imagePath: '${_gamesDir}match/haa_end/haa_end_match_4.webp',
         audioPath: '${_gamesAudio}match/haa_end/haa_end_match_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'هِلَال', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'هُدْهُد', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -462,8 +462,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_1_slice_1.webp', color: Color(0xFF43A047)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_1_slice_2.webp', color: Color(0xFF66BB6A)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_1_slice_3.webp', color: Color(0xFF81C784)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_1_slice_1.webp', color: Color(0xFF66BB6A)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_1_slice_1.webp', color: Color(0xFF81C784)),
         ],
       ),
       ColoringRound(
@@ -481,8 +481,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_2_slice_1.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_2_slice_1.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
@@ -500,8 +500,8 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_3_slice_1.webp', color: Color(0xFFD84315)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_3_slice_2.webp', color: Color(0xFFEF6C00)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_3_slice_3.webp', color: Color(0xFFFFA726)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_3_slice_1.webp', color: Color(0xFFEF6C00)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/haa_end/haa_end_coloring_round_3_slice_1.webp', color: Color(0xFFFFA726)),
         ],
       ),
     ],

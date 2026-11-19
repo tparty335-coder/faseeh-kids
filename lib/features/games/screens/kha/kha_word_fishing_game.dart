@@ -52,7 +52,7 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/kha/kha_fishing_round_1.webp',
     correctWord: 'خَرُوف',
     wordAudio: 'audio/lessons/kha/final/kha_word_p1_1.mp3',
-    correctPraise: 'audio/games/fishing/momt.mp3',
+    correctPraise: 'audio/common/encourage_1.mp3',
     roundEndPraise: 'audio/games/fishing/ba62.mp3',
     zones: [
       _FishZone(word: 'خَرُوف', hasHa: true,  px: 160, py: 390),
@@ -65,7 +65,7 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/kha/kha_fishing_round_2.webp',
     correctWord: 'خِيمَة',
     wordAudio: 'audio/lessons/kha/final/kha_word_p2_1.mp3',
-    correctPraise: 'audio/games/fishing/sah.mp3',
+    correctPraise: 'audio/feedback/smart.mp3',
     roundEndPraise: 'audio/games/fishing/ba58.mp3',
     zones: [
       _FishZone(word: 'وَلَد',  hasHa: false, px: 160, py: 390),
@@ -78,7 +78,7 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/kha/kha_fishing_round_3.webp',
     correctWord: 'خُبْز',
     wordAudio: 'audio/lessons/kha/final/kha_word_p3_1.mp3',
-    correctPraise: 'audio/games/fishing/ahsnt.mp3',
+    correctPraise: 'audio/feedback/correct.mp3',
     roundEndPraise: 'audio/games/fishing/ba56.mp3',
     zones: [
       _FishZone(word: 'رَأْس',  hasHa: false, px: 160, py: 390),
@@ -91,7 +91,7 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/kha/kha_fishing_round_4.webp',
     correctWord: 'خَاتَم',
     wordAudio: 'audio/lessons/kha/final/kha_word_p1_3.mp3',
-    correctPraise: 'audio/games/fishing/momtt.mp3',
+    correctPraise: 'audio/common/encourage_1.mp3',
     roundEndPraise: 'audio/games/fishing/ba52.mp3',
     zones: [
       _FishZone(word: 'أُمِّي',  hasHa: false, px: 160, py: 390),
@@ -165,7 +165,7 @@ class _HaWordFishingGameState extends ConsumerState<KhaWordFishingGame> {
     final t = ++_token;
     if (isFirstRound) {
       // صوت المقدمة "صيد الكلمات" (1.64s) كاملاً دون بتر
-      await _say('audio/games/fishing/sayd.mp3', maxMs: 2500);
+      await _say('audio/letters/short_vowels/ha_fatha.mp3', maxMs: 2500);
       if (!mounted || _gameOver || t != _token) return;
     }
     // صوت السؤال "اضغط على الكلمة التي بها حرف ب" (3.33s)
@@ -173,7 +173,7 @@ class _HaWordFishingGameState extends ConsumerState<KhaWordFishingGame> {
   }
 
   Future<void> _playWrong() =>
-      _say('audio/games/fishing/hawe.mp3', maxMs: 2500);
+      _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onZoneTap(int zoneIndex) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -251,7 +251,7 @@ class _HaWordFishingGameState extends ConsumerState<KhaWordFishingGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

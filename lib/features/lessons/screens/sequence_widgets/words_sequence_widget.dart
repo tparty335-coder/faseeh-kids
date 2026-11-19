@@ -151,7 +151,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'َ',
       'color': Color(0xFFD32F2F),
       'image': 'baa_words.webp',
-      'audio': 'audio/lessons/baa/sounds/word_baqara.mp3',
+      'audio': 'audio/games/fishing/ba52.mp3',
       'emoji': '🐄',
     },
     {
@@ -160,7 +160,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'َا',
       'color': Color(0xFFEF6C00),
       'image': 'baa_madd.webp',
-      'audio': 'audio/lessons/baa/sounds/word_bab.mp3',
+      'audio': 'audio/letters/long_vowels/baa_madd_alif.mp3',
       'emoji': '🚪',
     },
     {
@@ -187,7 +187,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
       'harakaChar': 'ُو',
       'color': Color(0xFF8E24AA),
       'image': 'baa_bee.webp',
-      'audio': 'audio/lessons/baa/sounds/word_hobob.mp3',
+      'audio': 'audio/letters/long_vowels/baa_madd_waw.mp3',
       'emoji': '🌾',
     },
     {

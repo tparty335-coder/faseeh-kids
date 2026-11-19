@@ -52,8 +52,8 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/taa_fishing_round_1.webp',
     correctWord: 'تَمْر',
     wordAudio: 'audio/games/fishing/taa_tamr.mp3',
-    correctPraise: 'audio/games/fishing/momt.mp3',
-    roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
+    correctPraise: 'audio/common/encourage_1.mp3',
+    roundEndPraise: 'audio/feedback/correct.mp3',
     zones: [
       _FishZone(word: 'تَمْر', hasBaa: true,  px: 160, py: 390),
       _FishZone(word: 'بُرْج', hasBaa: false, px: 500, py: 345, w: 290, h: 105),
@@ -65,8 +65,8 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/taa_fishing_round_2.webp',
     correctWord: 'حُوت',
     wordAudio: 'audio/games/fishing/taa_hoot.mp3',
-    correctPraise: 'audio/games/fishing/sah.mp3',
-    roundEndPraise: 'audio/games/fishing/momtt.mp3',
+    correctPraise: 'audio/feedback/smart.mp3',
+    roundEndPraise: 'audio/common/encourage_1.mp3',
     zones: [
       _FishZone(word: 'أَسَد',   hasBaa: false, px: 160, py: 390),
       _FishZone(word: 'ثُعْبَان', hasBaa: false, px: 500, py: 345, w: 290, h: 105),
@@ -78,8 +78,8 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/taa_fishing_round_3.webp',
     correctWord: 'كَتْكُوت',
     wordAudio: 'audio/games/fishing/taa_katkoot.mp3',
-    correctPraise: 'audio/games/fishing/ahsnt.mp3',
-    roundEndPraise: 'audio/games/fishing/momt.mp3',
+    correctPraise: 'audio/feedback/correct.mp3',
+    roundEndPraise: 'audio/common/encourage_1.mp3',
     zones: [
       _FishZone(word: 'ذَيْل',   hasBaa: false, px: 160, py: 390),
       _FishZone(word: 'كَتْكُوت', hasBaa: true,  px: 500, py: 345, w: 290, h: 105),
@@ -91,8 +91,8 @@ const List<_RoundData> _rounds = [
     imagePath: 'assets/images/games/fishing/taa_fishing_round_4.webp',
     correctWord: 'تُوت',
     wordAudio: 'audio/games/fishing/taa_toot.mp3',
-    correctPraise: 'audio/games/fishing/sah.mp3',
-    roundEndPraise: 'audio/games/fishing/ahsnt.mp3',
+    correctPraise: 'audio/feedback/smart.mp3',
+    roundEndPraise: 'audio/feedback/correct.mp3',
     zones: [
       _FishZone(word: 'جَمَل', hasBaa: false, px: 160, py: 390),
       _FishZone(word: 'أَكَل', hasBaa: false, px: 500, py: 345, w: 290, h: 105),
@@ -165,7 +165,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
     try {
       if (isFirstRound) {
         // صوت المقدمة "صيد الكلمات" (1.64s) كاملاً دون بتر
-        await _say('audio/games/fishing/sayd.mp3', pauseAfter: const Duration(milliseconds: 300));
+        await _say('audio/letters/short_vowels/ha_fatha.mp3', pauseAfter: const Duration(milliseconds: 300));
         if (!mounted || _gameOver || t != _token) return;
       }
       // صوت السؤال "اضغط على الكلمة التي بها حرف ت"
@@ -178,7 +178,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
   }
 
   Future<void> _playWrong() =>
-      _say('audio/games/fishing/hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
+      _say('audio/feedback/try_again.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onZoneTap(int zoneIndex) async {
     if (_roundDone || _showCorrectAnswer || _isBusy) return;
@@ -259,7 +259,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

@@ -37,7 +37,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
     scenes: [
       StoryScene(
         imagePath: '${_dir}laam_cd_story_1.webp',
-        audioPath: '${_audio}laam_story_1.mp3',
+        audioPath: 'audio/letters/phrases/laam_sentence.mp3',
         captionText: 'تَجْلِسُ الْأُسْرَةُ حَوْلَ مَائِدَةِ الْفَطُورِ وَتَتَنَاوَلُ اللَّبَنَ وَالْجُبْنَ.',
       ),
       StoryScene(
@@ -71,8 +71,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         exampleWord: 'شُعْلَة',
         exampleEmoji: '🔥',
         vowelAudio: '${_vowelsAudio}laam_fatha.mp3',
-        fullRuleAudio: '${_soundsAudio}laam_fatha_rule.mp3',
-        wordAudio: '${_audio}laam_word_p1_2.mp3',
+        fullRuleAudio: 'audio/letters/phrases/laam_fatha_demo.mp3',
+        wordAudio: 'audio/letters/words/laam_word2.mp3',
         slideImagePath: '${_dir}laam_vowel_fatha.webp',
       ),
       VowelCardSpec(
@@ -81,8 +81,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         exampleWord: 'لُحُوم',
         exampleEmoji: '🥩',
         vowelAudio: '${_vowelsAudio}laam_damma.mp3',
-        fullRuleAudio: '${_soundsAudio}laam_damma_rule.mp3',
-        wordAudio: '${_audio}laam_word_p1_1.mp3',
+        fullRuleAudio: 'audio/letters/phrases/laam_damma_demo.mp3',
+        wordAudio: 'audio/letters/words/laam_word.mp3',
         slideImagePath: '${_dir}laam_vowel_damma.webp',
       ),
       VowelCardSpec(
@@ -91,8 +91,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         exampleWord: 'مَلِك',
         exampleEmoji: '🤴',
         vowelAudio: '${_vowelsAudio}laam_kasra.mp3',
-        fullRuleAudio: '${_soundsAudio}laam_kasra_rule.mp3',
-        wordAudio: '${_audio}laam_word_p1_4.mp3',
+        fullRuleAudio: 'audio/letters/phrases/laam_kasra_demo.mp3',
+        wordAudio: 'audio/letters/words/laam_word4.mp3',
         slideImagePath: '${_dir}laam_vowel_kasra.webp',
       ),
       VowelCardSpec(
@@ -147,9 +147,9 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
     audioIntroPath: '${_audio}laam_write_intro.mp3',
     stepImagePaths: [
       '${_dir}laam_write_step_1.webp',
-      '${_dir}laam_write_step_2.webp',
-      '${_dir}laam_write_step_3.webp',
-      '${_dir}laam_write_step_4.webp',
+      'assets/images/lessons/laam/laam_trace_start.webp',
+      'assets/images/lessons/laam/laam_trace_middle.webp',
+      'assets/images/lessons/laam/laam_trace_end.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -158,8 +158,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         displayForm: 'ل',
         exampleWord: 'غَزَال',
         exampleEmoji: '🦌',
-        audioPath: '${_audio}laam_trace_isolated.mp3',
-        imagePath: '${_dir}laam_trace_isolated.webp',
+        audioPath: 'audio/lessons/faa/final/faa_trace_isolated.mp3',
+        imagePath: 'assets/images/lessons/laam/laam_write_step_1.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -197,10 +197,10 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         listImagePath: '${_dir}laam_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}laam_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}laam_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'شُعْلَة', cardImagePath: '${_dir}laam_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}laam_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'غَزَال', cardImagePath: '${_dir}laam_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}laam_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'مَلِك', cardImagePath: '${_dir}laam_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}laam_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'لُحُوم', cardImagePath: '${_dir}laam_words_p1_card_1.webp', cardHeight: 474, audioPath: 'audio/letters/words/laam_word.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'شُعْلَة', cardImagePath: '${_dir}laam_words_p1_card_2.webp', cardHeight: 474, audioPath: 'audio/letters/words/laam_word2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'غَزَال', cardImagePath: '${_dir}laam_words_p1_card_3.webp', cardHeight: 474, audioPath: 'audio/letters/words/laam_word3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'مَلِك', cardImagePath: '${_dir}laam_words_p1_card_4.webp', cardHeight: 474, audioPath: 'audio/letters/words/laam_word4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
@@ -237,28 +237,28 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
   ),
 
   games: GamesSpec(
-    fishingIntroAudio: '${_gamesAudio}fishing/sayd.mp3',
+    fishingIntroAudio: 'audio/letters/short_vowels/ha_fatha.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/laam/laam_fishing_prompt.mp3',
-    fishingWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
+    fishingWrongAudio: 'audio/feedback/try_again.mp3',
     beehivePromptAudio: '${_gamesAudio}beehive/laam/laam_beehive_prompt.mp3',
-    beehiveWrongAudio: '${_gamesAudio}beehive/6_haw.mp3',
+    beehiveWrongAudio: 'audio/feedback/try_again.mp3',
     circusPromptAudio: '${_gamesAudio}circus/laam/laam_circus_prompt.mp3',
-    circusWrongAudio: '${_gamesAudio}circus/4_hawe.mp3',
+    circusWrongAudio: 'audio/feedback/try_again.mp3',
     wordsMatchPromptAudio: 'audio/instructions/words_drag_instruction.mp3',
-    wordsMatchWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
-    coloringIntroAudio: '${_gamesAudio}coloring/6_al15.mp3',
-    coloringStep1Audio: '${_gamesAudio}coloring/3_qu2.mp3',
+    wordsMatchWrongAudio: 'audio/feedback/try_again.mp3',
+    coloringIntroAudio: 'audio/instructions/alif_paint_intro.mp3',
+    coloringStep1Audio: 'audio/instructions/alif_paint_explain.mp3',
     coloringStep2Audio: '${_gamesAudio}coloring/2_qu3.mp3',
     coloringWrongAudio: '${_gamesAudio}coloring/5_al23.mp3',
-    praiseFinishAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+    praiseFinishAudio: 'audio/feedback/correct.mp3',
     fishing: [
       FishingRound(
         word: 'لُحُوم',
         imagePath: '${_gamesDir}fishing/laam/laam_fishing_round_1.webp',
-        audioPath: '${_gamesAudio}fishing/laam/laam_fishing_1.mp3',
+        audioPath: 'audio/games/beehive/laam/laam_beehive_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'لُحُوم', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'سَمَك', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -270,8 +270,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/laam/laam_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/laam/laam_fishing_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'فَوَاكِه', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'عَصِير', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -283,8 +283,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/laam/laam_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/laam/laam_fishing_3.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/smart.mp3',
         zones: [
           GameZoneChoice(label: 'تِين', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'بَلَح', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -294,10 +294,10 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
       FishingRound(
         word: 'غَزَال',
         imagePath: '${_gamesDir}fishing/laam/laam_fishing_round_4.webp',
-        audioPath: '${_gamesAudio}fishing/laam/laam_fishing_4.mp3',
+        audioPath: 'audio/games/match/laam/laam_match_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         zones: [
           GameZoneChoice(label: 'أَسَد', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'بَقَرَة', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -309,8 +309,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'شُعْلَة',
         imagePath: '${_gamesDir}beehive/laam/laam_beehive_round_1.webp',
-        audioPath: '${_gamesAudio}beehive/laam/laam_beehive_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        audioPath: 'audio/games/circus/laam/laam_circus_1.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'لُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'لِ', isCorrect: false, px: 546, py: 269),
@@ -322,7 +322,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'لُحُوم',
         imagePath: '${_gamesDir}beehive/laam/laam_beehive_round_2.webp',
         audioPath: '${_gamesAudio}beehive/laam/laam_beehive_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         cells: [
           GameZoneChoice(label: 'لُ', isCorrect: true, px: 692, py: 181),
           GameZoneChoice(label: 'لِ', isCorrect: false, px: 546, py: 269),
@@ -334,7 +334,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'مَلِك',
         imagePath: '${_gamesDir}beehive/laam/laam_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/laam/laam_beehive_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cells: [
           GameZoneChoice(label: 'لُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'لِ', isCorrect: true, px: 546, py: 269),
@@ -346,7 +346,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'ضِلْع',
         imagePath: '${_gamesDir}beehive/laam/laam_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/laam/laam_beehive_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'لُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'لِ', isCorrect: false, px: 546, py: 269),
@@ -360,7 +360,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'شُعْلَة',
         imagePath: '${_gamesDir}circus/laam/laam_circus_round_1.webp',
         audioPath: '${_gamesAudio}circus/laam/laam_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'صُنْدُوق', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'فُسْتَان', isCorrect: false, px: 269, py: 232),
@@ -371,7 +371,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'نَحْلَة',
         imagePath: '${_gamesDir}circus/laam/laam_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/laam/laam_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         zones: [
           GameZoneChoice(label: 'دَجَاجَة', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'نَحْلَة', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/laam/laam_circus_2.mp3'),
@@ -382,7 +382,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'فِيل',
         imagePath: '${_gamesDir}circus/laam/laam_circus_round_3.webp',
         audioPath: '${_gamesAudio}circus/laam/laam_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         zones: [
           GameZoneChoice(label: 'فِيل', isCorrect: true, px: 137, py: 95, wordAudio: '${_gamesAudio}circus/laam/laam_circus_3.mp3'),
           GameZoneChoice(label: 'أَسَد', isCorrect: false, px: 269, py: 232),
@@ -395,7 +395,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'قَلَم',
         imagePath: '${_gamesDir}match/laam/laam_match_1.webp',
         audioPath: '${_gamesAudio}match/laam/laam_match_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'عَلَم', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'ظِلّ', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -406,7 +406,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'غَزَال',
         imagePath: '${_gamesDir}match/laam/laam_match_2.webp',
         audioPath: '${_gamesAudio}match/laam/laam_match_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         cards: [
           GameZoneChoice(label: 'غَزَال', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'فِيل', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -417,7 +417,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'لَيْمُون',
         imagePath: '${_gamesDir}match/laam/laam_match_3.webp',
         audioPath: '${_gamesAudio}match/laam/laam_match_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cards: [
           GameZoneChoice(label: 'لُحُوم', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'لَيْمُون', isCorrect: true, colorValue: 0xFFFF9EB5),
@@ -428,7 +428,7 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         word: 'مِلْح',
         imagePath: '${_gamesDir}match/laam/laam_match_4.webp',
         audioPath: '${_gamesAudio}match/laam/laam_match_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'مِلْح', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'فُول', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -452,8 +452,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_1_slice_1.webp', color: Color(0xFF00838F)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_1_slice_2.webp', color: Color(0xFF00ACC1)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_1_slice_3.webp', color: Color(0xFF26C6DA)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_1_slice_1.webp', color: Color(0xFF00ACC1)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_1_slice_1.webp', color: Color(0xFF26C6DA)),
         ],
       ),
       ColoringRound(
@@ -471,8 +471,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_2_slice_1.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_2_slice_1.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
@@ -490,8 +490,8 @@ const LetterUnitManifest laamManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_3_slice_1.webp', color: Color(0xFFD84315)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_3_slice_2.webp', color: Color(0xFFEF6C00)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/laam/laam_coloring_round_3_slice_3.webp', color: Color(0xFFFFA726)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_3_slice_1.webp', color: Color(0xFFEF6C00)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/laam/laam_coloring_round_3_slice_1.webp', color: Color(0xFFFFA726)),
         ],
       ),
     ],

@@ -69,7 +69,7 @@ const List<_ColoringRound> _rounds = [
     correctWord: 'أُولَى',
     correctAudio: 'audio/games/coloring/alif_good_olaa.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_olaa.mp3',
-    wordAudio: 'audio/lessons/alif/words/p4_oula.mp3',
+    wordAudio: 'audio/instructions/alif_trace_step_06.mp3',
     options: [
       _MaddOption(word: 'إِبْرَة', hasMadd: false),
       _MaddOption(word: 'أَسَد', hasMadd: false),
@@ -84,7 +84,7 @@ const List<_ColoringRound> _rounds = [
     correctWord: 'إِينَاس',
     correctAudio: 'audio/games/coloring/alif_good_inas.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_inas.mp3',
-    wordAudio: 'audio/lessons/alif/words/p2_inas.mp3',
+    wordAudio: 'audio/instructions/alif_trace_step_13.mp3',
     options: [
       _MaddOption(word: 'أَرْنَب', hasMadd: false),
       _MaddOption(word: 'إِينَاس', hasMadd: true),
@@ -99,7 +99,7 @@ const List<_ColoringRound> _rounds = [
     correctWord: 'آمَال',
     correctAudio: 'audio/games/coloring/alif_good_amal.mp3',
     revealAudio: 'audio/games/coloring/alif_reveal_amal.mp3',
-    wordAudio: 'audio/lessons/alif/words/p4_amal.mp3',
+    wordAudio: 'audio/instructions/alif_trace_step_08.mp3',
     options: [
       _MaddOption(word: 'آمَال', hasMadd: true),
       _MaddOption(word: 'رَأْس', hasMadd: false),
@@ -231,11 +231,11 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
     _stopAudio();
     if (!_isWordSelected) {
       if (isFirstRound) {
-        await _say('audio/games/coloring/6_al15.mp3', maxMs: 2200); // «التلوين»
+        await _say('audio/instructions/alif_paint_intro.mp3', maxMs: 2200); // «التلوين»
         if (!_alive(tk) || _isWordSelected) return;
       }
       // «اضغط على الكلمة التي بها مد»
-      await _say('audio/games/coloring/3_qu2.mp3', maxMs: 4500);
+      await _say('audio/instructions/alif_paint_explain.mp3', maxMs: 4500);
     } else {
       // «لوّن الكلمة بألوانك المفضلة»
       await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
@@ -331,7 +331,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
       channel: AudioChannel.sfx,
     );
     if (!_alive(tk)) return;
-    await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
+    await _say('audio/feedback/correct.mp3', maxMs: 2500); // «أحسنت»
     if (!_alive(tk)) return;
     await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
     if (!_alive(tk)) return;
@@ -357,7 +357,7 @@ class _ColoringMaddGameState extends ConsumerState<ColoringMaddGame> {
       _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

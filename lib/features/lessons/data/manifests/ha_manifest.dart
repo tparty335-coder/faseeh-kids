@@ -64,9 +64,9 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
   madd: MaddSpec(
     letterChar: 'ح',
     items: [
-      MaddItem(displayChar: 'حَا', audioPath: 'audio/lessons/ha/madd/ha_madd_alif.mp3', imagePath: '${_dir}ha_madd_aa.webp'),
-      MaddItem(displayChar: 'حِي', audioPath: 'audio/lessons/ha/madd/ha_madd_yaa.mp3', imagePath: '${_dir}ha_madd_ii.webp'),
-      MaddItem(displayChar: 'حُو', audioPath: 'audio/lessons/ha/madd/ha_madd_waw.mp3', imagePath: '${_dir}ha_madd_uu.webp'),
+      MaddItem(displayChar: 'حَا', audioPath: 'audio/letters/long_vowels/haa_h_madd_demo.mp3', imagePath: 'assets/images/lessons/ha/ha_word_haal.webp'),
+      MaddItem(displayChar: 'حِي', audioPath: 'audio/lessons/ha/madd/ha_madd_yaa.mp3', imagePath: 'assets/images/lessons/ha/ha_word_heela.webp'),
+      MaddItem(displayChar: 'حُو', audioPath: 'audio/lessons/ha/madd/ha_madd_waw.mp3', imagePath: 'assets/images/lessons/ha/ha_word_hoot.webp'),
     ],
   ),
 
@@ -90,10 +90,10 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         listImagePath: '${_dir}ha_words_p1_list.webp',
         listImageHeight: 503,
         words: [
-          WordItem(word: 'حَمَل',  cardImagePath: '${_dir}ha_words_p1_card_1.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حَجَر',  cardImagePath: '${_dir}ha_words_p1_card_2.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حَصَان', cardImagePath: '${_dir}ha_words_p1_card_3.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حَال',   cardImagePath: '${_dir}ha_words_p1_card_4.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حَمَل',  cardImagePath: 'assets/images/lessons/ha/ha_word_hajar.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حَجَر',  cardImagePath: 'assets/images/lessons/ha/ha_word_hulm.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p1_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حَصَان', cardImagePath: 'assets/images/lessons/ha/ha_word_hisaan.webp', cardHeight: 380, audioPath: 'audio/lessons/ha/sounds/word_hawd.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حَال',   cardImagePath: '${_dir}ha_words_p1_card_4.webp', cardHeight: 380, audioPath: 'audio/lessons/ha/sounds/word_haal.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
         ],
       ),
       // صفحة 2: حِمَار، حِصَان، حِجَاب، حِيلَة
@@ -101,10 +101,10 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         listImagePath: '${_dir}ha_words_p2_list.webp',
         listImageHeight: 503,
         words: [
-          WordItem(word: 'مِفْتَاح', cardImagePath: '${_dir}ha_words_p2_card_1.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حِصَان', cardImagePath: '${_dir}ha_words_p2_card_2.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'مِفْتَاح', cardImagePath: 'assets/images/lessons/ha/ha_word_hujra.webp', cardHeight: 380, audioPath: 'audio/lessons/ha/sounds/word_hawd.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حِصَان', cardImagePath: 'assets/images/lessons/ha/ha_word_hubb.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
           WordItem(word: 'حِجَاب', cardImagePath: '${_dir}ha_words_p2_card_3.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حِيلَة', cardImagePath: '${_dir}ha_words_p2_card_4.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حِيلَة', cardImagePath: 'assets/images/lessons/ha/ha_word_hijaab.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p2_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
         ],
       ),
       // صفحة 3: حُوت، حُجْرَة، حُبٌّ، حُلُم
@@ -112,9 +112,9 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         listImagePath: '${_dir}ha_words_p3_list.webp',
         listImageHeight: 503,
         words: [
-          WordItem(word: 'حُوت',   cardImagePath: '${_dir}ha_words_p3_card_1.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حُوت',   cardImagePath: 'assets/images/lessons/ha/ha_word_himaar.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
           WordItem(word: 'حُجْرَة', cardImagePath: '${_dir}ha_words_p3_card_2.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'حُبٌّ',   cardImagePath: '${_dir}ha_words_p3_card_3.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'حُبٌّ',   cardImagePath: 'assets/images/lessons/kha/kha_fatha_khatam.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
           WordItem(word: 'حُلُم',  cardImagePath: '${_dir}ha_words_p3_card_4.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p3_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
         ],
       ),
@@ -123,10 +123,10 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         listImagePath: '${_dir}ha_words_p4_list.webp',
         listImageHeight: 503,
         words: [
-          WordItem(word: 'نَحْل',  cardImagePath: '${_dir}ha_words_p4_card_1.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'بَحْر',  cardImagePath: '${_dir}ha_words_p4_card_2.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'فَرَح',  cardImagePath: '${_dir}ha_words_p4_card_3.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_3.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
-          WordItem(word: 'صَحْن',  cardImagePath: '${_dir}ha_words_p4_card_4.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_4.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'نَحْل',  cardImagePath: 'assets/images/lessons/ha/sounds/bahr.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_1.mp3', hotspot: WordHotspot(left: 0.04, top: 0.08, right: 0.50, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'بَحْر',  cardImagePath: 'assets/images/lessons/ha/ha_word_haal2.webp', cardHeight: 380, audioPath: '${_audio}ha_word_p4_2.mp3', hotspot: WordHotspot(left: 0.04, top: 0.33, right: 0.50, bottom: 0.57), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'فَرَح',  cardImagePath: 'assets/images/lessons/ha/ha_word_heela2.webp', cardHeight: 380, audioPath: 'audio/lessons/ha/sounds/word_farah.mp3', hotspot: WordHotspot(left: 0.04, top: 0.58, right: 0.50, bottom: 0.80), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
+          WordItem(word: 'صَحْن',  cardImagePath: '${_dir}ha_words_p4_card_4.webp', cardHeight: 380, audioPath: 'audio/lessons/ha/sounds/word_nahl.mp3', hotspot: WordHotspot(left: 0.52, top: 0.08, right: 0.97, bottom: 0.32), speakerOffset: Offset(0.15, 0.82), closeOffset: Offset(0.85, 0.08)),
         ],
       ),
       
@@ -137,20 +137,20 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
   games: GamesSpec(
     fishing: [
       FishingRound(word: 'نَحِيف', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_1.webp', audioPath: '${_gamesAudio}fishing/ha/ha_fishing_1.mp3', isCorrect: true),
-      FishingRound(word: 'لُحُوم', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_2.webp', audioPath: '${_gamesAudio}fishing/ha/ha_fishing_2.mp3', isCorrect: true),
+      FishingRound(word: 'لُحُوم', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_2.webp', audioPath: 'audio/games/match/ha/ha_match_4.mp3', isCorrect: true),
       FishingRound(word: 'حَاتِم', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_3.webp', audioPath: '${_gamesAudio}fishing/ha/ha_fishing_3.mp3', isCorrect: true),
-      FishingRound(word: 'حَمَامَة', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_4.webp', audioPath: '${_gamesAudio}fishing/ha/ha_fishing_4.mp3', isCorrect: true),
+      FishingRound(word: 'حَمَامَة', imagePath: '${_gamesDir}fishing/ha/ha_fishing_round_4.webp', audioPath: 'audio/games/match/ha/ha_match_3.mp3', isCorrect: true),
     ],
     beehive: [
-      BeehiveRound(word: 'حَمَامَة', imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/ha/ha_beehive_1.mp3'),
-      BeehiveRound(word: 'لُحُوم',  imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/ha/ha_beehive_2.mp3'),
+      BeehiveRound(word: 'حَمَامَة', imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_1.webp', audioPath: 'audio/games/match/ha/ha_match_3.mp3'),
+      BeehiveRound(word: 'لُحُوم',  imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_2.webp', audioPath: 'audio/games/match/ha/ha_match_4.mp3'),
       BeehiveRound(word: 'حِمَار',  imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/ha/ha_beehive_3.mp3'),
-      BeehiveRound(word: 'أَحْمَد', imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/ha/ha_beehive_4.mp3'),
+      BeehiveRound(word: 'أَحْمَد', imagePath: '${_gamesDir}beehive/ha/ha_beehive_round_4.webp', audioPath: 'audio/lessons/ha/sounds/word_ahmad.mp3'),
     ],
     circus: [
       CircusRound(word: 'تِمْسَاح', imagePath: '${_gamesDir}circus/ha/ha_circus_round_1.webp', audioPath: '${_gamesAudio}circus/ha/ha_circus_1.mp3'),
-      CircusRound(word: 'حِصَان',  imagePath: '${_gamesDir}circus/ha/ha_circus_round_2.webp', audioPath: '${_gamesAudio}circus/ha/ha_circus_2.mp3'),
-      CircusRound(word: 'لُحُوم',  imagePath: '${_gamesDir}circus/ha/ha_circus_round_3.webp', audioPath: '${_gamesAudio}circus/ha/ha_circus_3.mp3'),
+      CircusRound(word: 'حِصَان',  imagePath: '${_gamesDir}circus/ha/ha_circus_round_2.webp', audioPath: 'audio/games/match/ha/ha_match_2.mp3'),
+      CircusRound(word: 'لُحُوم',  imagePath: '${_gamesDir}circus/ha/ha_circus_round_3.webp', audioPath: 'audio/games/match/ha/ha_match_4.mp3'),
     ],
     wordsMatch: [
       WordsMatchPair(word: 'حَوْض',   imagePath: '${_gamesDir}match/ha/ha_match_1.webp', audioPath: '${_gamesAudio}match/ha/ha_match_1.mp3'),
@@ -164,7 +164,7 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         bgImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_1.webp',
         wordRevealImagePath: '${_gamesDir}coloring/ha/ha_coloring_word_1.webp',
         introAudioPath: '${_audio}ha_paint_word1.mp3',
-        revealAudioPath: '${_gamesAudio}coloring/ha/ha_reveal_haal.mp3',
+        revealAudioPath: 'audio/lessons/ha/final/ha_paint_word1.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_1_slice_1.webp', color: Color(0xFF42A5F5)),
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_1_slice_2.webp', color: Color(0xFF0277BD)),
@@ -176,7 +176,7 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         bgImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_2.webp',
         wordRevealImagePath: '${_gamesDir}coloring/ha/ha_coloring_word_2.webp',
         introAudioPath: '${_audio}ha_paint_word2.mp3',
-        revealAudioPath: '${_gamesAudio}coloring/ha/ha_reveal_hoot.mp3',
+        revealAudioPath: 'audio/lessons/ha/final/ha_paint_word2.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_2_slice_2.webp', color: Color(0xFF80DEEA)),
@@ -188,7 +188,7 @@ const LetterUnitManifest haManifest = LetterUnitManifest(
         bgImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_3.webp',
         wordRevealImagePath: '${_gamesDir}coloring/ha/ha_coloring_word_3.webp',
         introAudioPath: '${_audio}ha_paint_word3.mp3',
-        revealAudioPath: '${_gamesAudio}coloring/ha/ha_reveal_heela.mp3',
+        revealAudioPath: 'audio/lessons/ha/final/ha_paint_word3.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_3_slice_1.webp', color: Color(0xFFFF7043)),
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ha/ha_coloring_round_3_slice_2.webp', color: Color(0xFF4CAF50)),

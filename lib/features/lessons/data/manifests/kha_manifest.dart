@@ -38,7 +38,7 @@ const LetterUnitManifest khaManifest = LetterUnitManifest(
   // ── القصة (6 مشاهد + النشيد) ──────────────────────────────────────────────
   story: StorySpec(
     scenes: [
-      StoryScene(imagePath: '${_dir}kha_cd_story_1.webp', audioPath: '${_audio}kha_story_1.mp3'),
+      StoryScene(imagePath: '${_dir}kha_cd_story_1.webp', audioPath: 'audio/lessons/dal/final/dal_story_2.mp3'),
       StoryScene(imagePath: '${_dir}kha_cd_story_2.webp', audioPath: '${_audio}kha_story_2.mp3'),
       StoryScene(imagePath: '${_dir}kha_cd_story_3.webp', audioPath: '${_audio}kha_story_3.mp3'),
       StoryScene(imagePath: '${_dir}kha_cd_story_4.webp', audioPath: '${_audio}kha_story_4.mp3'),
@@ -65,7 +65,7 @@ const LetterUnitManifest khaManifest = LetterUnitManifest(
   madd: MaddSpec(
     letterChar: 'خ',
     items: [
-      MaddItem(displayChar: 'خَا', audioPath: 'audio/lessons/kha/madd/kha_madd_alif.mp3', imagePath: '${_dir}kha_madd_aa.webp'),
+      MaddItem(displayChar: 'خَا', audioPath: 'audio/letters/long_vowels/khaa_madd_alif.mp3', imagePath: '${_dir}kha_madd_aa.webp'),
       MaddItem(displayChar: 'خِي', audioPath: 'audio/lessons/kha/madd/kha_madd_yaa.mp3', imagePath: '${_dir}kha_madd_ii.webp'),
       MaddItem(displayChar: 'خُو', audioPath: 'audio/lessons/kha/madd/kha_madd_waw.mp3', imagePath: '${_dir}kha_madd_uu.webp'),
     ],
@@ -243,7 +243,7 @@ const LetterUnitManifest khaManifest = LetterUnitManifest(
             word: 'خَيْمَة',
             cardImagePath: '${_dir}kha_words_p4_card_3.webp',
             cardHeight: 474,
-            audioPath: '${_audio}kha_word_p4_3.mp3',
+            audioPath: 'audio/lessons/kha/sounds/word_kheema.mp3',
             hotspot: WordHotspot(left: 0.500, top: 0.550, right: 0.850, bottom: 0.720),
             speakerOffset: Offset(0.163, 0.338),
             closeOffset: Offset(0.763, 0.338),
@@ -265,21 +265,21 @@ const LetterUnitManifest khaManifest = LetterUnitManifest(
   // ── الألعاب ────────────────────────────────────────────────────────────────
   games: GamesSpec(
     fishing: [
-      FishingRound(word: 'خِيَار', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_1.webp', audioPath: '${_gamesAudio}fishing/kha/kha_fishing_1.mp3', isCorrect: true),
-      FishingRound(word: 'بِطِّيخ', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_2.webp', audioPath: '${_gamesAudio}fishing/kha/kha_fishing_2.mp3', isCorrect: true),
-      FishingRound(word: 'نَخِيل', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_3.webp', audioPath: '${_gamesAudio}fishing/kha/kha_fishing_3.mp3', isCorrect: true),
+      FishingRound(word: 'خِيَار', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_1.webp', audioPath: 'audio/games/beehive/kha/kha_beehive_3.mp3', isCorrect: true),
+      FishingRound(word: 'بِطِّيخ', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_2.webp', audioPath: 'audio/games/match/kha/kha_match_4.mp3', isCorrect: true),
+      FishingRound(word: 'نَخِيل', imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_3.webp', audioPath: 'audio/games/match/kha/kha_match_1.mp3', isCorrect: true),
       FishingRound(word: 'خُبْز',  imagePath: '${_gamesDir}fishing/kha/kha_fishing_round_4.webp', audioPath: '${_gamesAudio}fishing/kha/kha_fishing_4.mp3', isCorrect: true),
     ],
     beehive: [
-      BeehiveRound(word: 'خَرُوف', imagePath: '${_gamesDir}beehive/kha/kha_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/kha/kha_beehive_1.mp3'),
+      BeehiveRound(word: 'خَرُوف', imagePath: '${_gamesDir}beehive/kha/kha_beehive_round_1.webp', audioPath: 'audio/games/match/kha/kha_match_3.mp3'),
       BeehiveRound(word: 'خُبْز',  imagePath: '${_gamesDir}beehive/kha/kha_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/kha/kha_beehive_2.mp3'),
       BeehiveRound(word: 'خِيَار', imagePath: '${_gamesDir}beehive/kha/kha_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/kha/kha_beehive_3.mp3'),
       BeehiveRound(word: 'أُخْتِي', imagePath: '${_gamesDir}beehive/kha/kha_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/kha/kha_beehive_4.mp3'),
     ],
     circus: [
       CircusRound(word: 'خَسّ',   imagePath: '${_gamesDir}circus/kha/kha_circus_round_1.webp', audioPath: '${_gamesAudio}circus/kha/kha_circus_1.mp3'),
-      CircusRound(word: 'خُوفُو', imagePath: '${_gamesDir}circus/kha/kha_circus_round_2.webp', audioPath: '${_gamesAudio}circus/kha/kha_circus_2.mp3'),
-      CircusRound(word: 'خَرُوف', imagePath: '${_gamesDir}circus/kha/kha_circus_round_3.webp', audioPath: '${_gamesAudio}circus/kha/kha_circus_3.mp3'),
+      CircusRound(word: 'خُوفُو', imagePath: '${_gamesDir}circus/kha/kha_circus_round_2.webp', audioPath: 'audio/games/circus/kha/kha_circus_1.mp3'),
+      CircusRound(word: 'خَرُوف', imagePath: '${_gamesDir}circus/kha/kha_circus_round_3.webp', audioPath: 'audio/games/match/kha/kha_match_3.mp3'),
     ],
     wordsMatch: [
       WordsMatchPair(word: 'خَضْرَاء', imagePath: '${_gamesDir}match/kha/kha_match_1.webp', audioPath: '${_gamesAudio}match/kha/kha_match_1.mp3'),

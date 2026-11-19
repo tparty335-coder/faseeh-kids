@@ -86,7 +86,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'ذَا',
-        audioPath: 'audio/lessons/dhaal/madd/dhaal_madd_alif.mp3',
+        audioPath: 'audio/letters/long_vowels/dhaal_madd_alif.mp3',
         imagePath: '${_dir}dhaal_madd_aa.webp',
       ),
       MaddItem(
@@ -204,7 +204,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
             word: 'ذُرَة',
             cardImagePath: '${_dir}dhaal_words_p2_card_2.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dhaal_word_p2_2.mp3',
+            audioPath: 'audio/lessons/dhaal/sounds/word_dhura.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.250,
@@ -218,7 +218,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
             word: 'ذَهَب',
             cardImagePath: '${_dir}dhaal_words_p2_card_3.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dhaal_word_p2_3.mp3',
+            audioPath: 'audio/lessons/dhaal/sounds/word_dhahab.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.550,
@@ -387,13 +387,13 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
       FishingRound(
         word: 'كِتَاب',
         imagePath: '${_gamesDir}fishing/dhaal/dhaal_fishing_round_2.webp',
-        audioPath: '${_gamesAudio}fishing/dhaal/dhaal_fishing_2.mp3',
+        audioPath: 'audio/lessons/dhaal/sounds/word_mudhee.mp3',
         isCorrect: true,
       ),
       FishingRound(
         word: 'ذَهَب',
         imagePath: '${_gamesDir}fishing/dhaal/dhaal_fishing_round_3.webp',
-        audioPath: '${_gamesAudio}fishing/dhaal/dhaal_fishing_3.mp3',
+        audioPath: 'audio/lessons/dhaal/sounds/word_ghidha.mp3',
         isCorrect: true,
       ),
       FishingRound(
@@ -407,29 +407,29 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'ذَهَب',
         imagePath: '${_gamesDir}beehive/dhaal/dhaal_beehive_round_1.webp',
-        audioPath: '${_gamesAudio}beehive/dhaal/dhaal_beehive_1.mp3',
+        audioPath: 'audio/games/match/dhaal/dhaal_match_2.mp3',
       ),
       BeehiveRound(
         word: 'ذِئْب',
         imagePath: '${_gamesDir}beehive/dhaal/dhaal_beehive_round_2.webp',
-        audioPath: '${_gamesAudio}beehive/dhaal/dhaal_beehive_2.mp3',
+        audioPath: 'audio/games/match/dhaal/dhaal_match_4.mp3',
       ),
       BeehiveRound(
         word: 'ذُرَة',
         imagePath: '${_gamesDir}beehive/dhaal/dhaal_beehive_round_3.webp',
-        audioPath: '${_gamesAudio}beehive/dhaal/dhaal_beehive_3.mp3',
+        audioPath: 'audio/games/match/dhaal/dhaal_match_3.mp3',
       ),
       BeehiveRound(
         word: 'جِذْر',
         imagePath: '${_gamesDir}beehive/dhaal/dhaal_beehive_round_4.webp',
-        audioPath: '${_gamesAudio}beehive/dhaal/dhaal_beehive_4.mp3',
+        audioPath: 'audio/games/match/dhaal/dhaal_match_1.mp3',
       ),
     ],
     circus: [
       CircusRound(
         word: 'ذِئْب',
         imagePath: '${_gamesDir}circus/dhaal/dhaal_circus_round_1.webp',
-        audioPath: '${_gamesAudio}circus/dhaal/dhaal_circus_1.mp3',
+        audioPath: 'audio/games/match/dhaal/dhaal_match_2.mp3',
       ),
       CircusRound(
         word: 'ذُرَة',
@@ -439,7 +439,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
       CircusRound(
         word: 'ذَهَب',
         imagePath: '${_gamesDir}circus/dhaal/dhaal_circus_round_3.webp',
-        audioPath: '${_gamesAudio}circus/dhaal/dhaal_circus_3.mp3',
+        audioPath: 'audio/lessons/dhaal/sounds/word_ghidha.mp3',
       ),
     ],
     wordsMatch: [
@@ -471,7 +471,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
         wordRevealImagePath:
             '${_gamesDir}coloring/dhaal/dhaal_coloring_word_1.webp',
         introAudioPath: '${_audio}dhaal_paint_word1.mp3',
-        revealAudioPath: '${_gamesAudio}coloring/dhaal/dhaal_reveal_thaab.mp3',
+        revealAudioPath: 'audio/lessons/dhaal/final/dhaal_paint_word2.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:
@@ -496,7 +496,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
         wordRevealImagePath:
             '${_gamesDir}coloring/dhaal/dhaal_coloring_word_2.webp',
         introAudioPath: '${_audio}dhaal_paint_word2.mp3',
-        revealAudioPath: '${_gamesAudio}coloring/dhaal/dhaal_reveal_thooq.mp3',
+        revealAudioPath: 'audio/lessons/dhaal/final/dhaal_paint_word3.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:
@@ -522,7 +522,7 @@ const LetterUnitManifest dhaalManifest = LetterUnitManifest(
             '${_gamesDir}coloring/dhaal/dhaal_coloring_word_3.webp',
         introAudioPath: '${_audio}dhaal_paint_word3.mp3',
         revealAudioPath:
-            '${_gamesAudio}coloring/dhaal/dhaal_reveal_matheea.mp3',
+            'audio/lessons/dhaal/final/dhaal_paint_word1.mp3',
         slices: [
           ColoringSlice(
             maskImagePath:

@@ -44,7 +44,7 @@ const List<_Round> _rounds = [
     imagePath: 'assets/images/games/beehive/taa_beehive_round_1.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/sounds/word_katkoot.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cells: [
       _CellZone(label: 'تَ', isCorrect: false, px: 880, py: 170), // أعلى
       _CellZone(label: 'تُ', isCorrect: false, px: 694, py: 272), // يسار
@@ -57,7 +57,7 @@ const List<_Round> _rounds = [
     imagePath: 'assets/images/games/beehive/taa_beehive_round_2.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/final/taa_word_p2_1.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cells: [
       _CellZone(label: 'تَ', isCorrect: true,  px: 880, py: 170), // أعلى (صحيح تَأْكُلُ)
       _CellZone(label: 'تُ', isCorrect: false, px: 694, py: 272), // يسار
@@ -70,7 +70,7 @@ const List<_Round> _rounds = [
     imagePath: 'assets/images/games/beehive/taa_beehive_round_3.webp',
     imgH: 481,
     wordAudio: 'audio/lessons/taa/final/taa_word_p3_1.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cells: [
       _CellZone(label: 'تَ', isCorrect: false, px: 880, py: 170), // أعلى
       _CellZone(label: 'تُ', isCorrect: true,  px: 694, py: 272), // يسار (صحيح يَكْتُبُ)
@@ -82,8 +82,8 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/beehive/taa_beehive_round_4.webp',
     imgH: 481,
-    wordAudio: 'audio/lessons/taa/final/taa_word_timsah.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    wordAudio: 'audio/lessons/taa/final/taa_word_p2_4.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cells: [
       _CellZone(label: 'تَ', isCorrect: false, px: 880, py: 170), // أعلى
       _CellZone(label: 'تُ', isCorrect: false, px: 694, py: 272), // يسار
@@ -149,7 +149,7 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
     _isBusy = true;
     try {
       // 1. صوت التعليمات الأصلي لحرف التاء من الأسطوانة
-      await _say('audio/games/beehive/taa_khalea2.mp3', pauseAfter: const Duration(milliseconds: 300));
+      await _say('audio/games/beehive/5_khalea2.mp3', pauseAfter: const Duration(milliseconds: 300));
       if (!mounted || _gameOver || t != _token) return;
       // 2. سماع اسم الكلمة الحالية بعد انتهاء التعليمات
       await _say(_rounds[_round].wordAudio, pauseAfter: const Duration(milliseconds: 300));
@@ -173,10 +173,10 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
     }
   }
 
-  Future<void> _playWrong() => _say('audio/games/beehive/6_haw.mp3', pauseAfter: const Duration(milliseconds: 300));
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _playThisIsCorrect() =>
-      _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 300));
+      _say('audio/feedback/smart.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onCellTap(int idx) async {
     if (_roundDone || _showCorrectAnswer || _isBusy) return;
@@ -239,7 +239,7 @@ class _TaaBeeHiveGameState extends ConsumerState<TaaBeeHiveGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

@@ -89,12 +89,12 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
   // ── التخطيط والكتابة ──
   tracing: TracingSpec(
     letterChar: 'س',
-    audioIntroPath: '${_audio}seen_write_intro.mp3',
+    audioIntroPath: 'audio/lessons/laam/final/laam_write_intro.mp3',
     stepImagePaths: [
       '${_dir}seen_write_step_1.webp',
-      '${_dir}seen_write_step_2.webp',
-      '${_dir}seen_write_step_3.webp',
-      '${_dir}seen_write_step_4.webp',
+      'assets/images/lessons/seen/seen_trace_start.webp',
+      'assets/images/lessons/seen/seen_trace_middle.webp',
+      'assets/images/lessons/seen/seen_trace_end.webp',
     ],
   ),
 
@@ -109,7 +109,7 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
           WordItem(word: 'كُرْسِي', cardImagePath: '${_dir}seen_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p1_1.mp3', hotspot: WordHotspot(left: 0.480, top: 0.190, right: 0.800, bottom: 0.370), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
           WordItem(word: 'فُسْتَان', cardImagePath: '${_dir}seen_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p1_2.mp3', hotspot: WordHotspot(left: 0.140, top: 0.360, right: 0.450, bottom: 0.540), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
           WordItem(word: 'تِمْسَاح', cardImagePath: '${_dir}seen_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p1_3.mp3', hotspot: WordHotspot(left: 0.480, top: 0.550, right: 0.800, bottom: 0.730), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
-          WordItem(word: 'شَمْسَ', cardImagePath: '${_dir}seen_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p1_4.mp3', hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
+          WordItem(word: 'شَمْسَ', cardImagePath: 'assets/images/lessons/seen/seen_sukoon_example.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p1_4.mp3', hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
         ],
       ),
       // ── صفحة 2 (ka2.swf): سَمَكَة، يَرْسُمُ، تَغْسَل، نُسُور ──
@@ -130,7 +130,7 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
         words: [
           WordItem(word: 'بِرْسِيم', cardImagePath: '${_dir}seen_words_p3_card_1.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p3_1.mp3', hotspot: WordHotspot(left: 0.480, top: 0.190, right: 0.800, bottom: 0.370), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
           WordItem(word: 'سَاعَة', cardImagePath: '${_dir}seen_words_p3_card_2.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p3_2.mp3', hotspot: WordHotspot(left: 0.140, top: 0.360, right: 0.450, bottom: 0.540), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
-          WordItem(word: 'سُلَحْفَاة', cardImagePath: '${_dir}seen_words_p3_card_3.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p3_3.mp3', hotspot: WordHotspot(left: 0.480, top: 0.550, right: 0.800, bottom: 0.730), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
+          WordItem(word: 'سُلَحْفَاة', cardImagePath: '${_dir}seen_words_p3_card_3.webp', cardHeight: 474, audioPath: 'audio/games/circus/seen/seen_circus_2.mp3', hotspot: WordHotspot(left: 0.480, top: 0.550, right: 0.800, bottom: 0.730), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
           WordItem(word: 'سَيَّارَة', cardImagePath: '${_dir}seen_words_p3_card_4.webp', cardHeight: 474, audioPath: '${_audio}seen_word_p3_4.mp3', hotspot: WordHotspot(left: 0.140, top: 0.720, right: 0.450, bottom: 0.900), speakerOffset: Offset(0.174, 0.318), closeOffset: Offset(0.760, 0.316)),
         ],
       ),
@@ -159,8 +159,8 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
     beehive: [
       BeehiveRound(word: 'أَسَد', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/seen/seen_beehive_1.mp3'),
       BeehiveRound(word: 'تَغْسِل', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/seen/seen_beehive_2.mp3'),
-      BeehiveRound(word: 'يَرْسُم', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/seen/seen_beehive_3.mp3'),
-      BeehiveRound(word: 'فُسْتَان', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/seen/seen_beehive_4.mp3'),
+      BeehiveRound(word: 'يَرْسُم', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_3.webp', audioPath: 'audio/games/match/seen/seen_match_2.mp3'),
+      BeehiveRound(word: 'فُسْتَان', imagePath: '${_gamesDir}beehive/seen/seen_beehive_round_4.webp', audioPath: 'audio/games/match/seen/seen_match_1.mp3'),
     ],
     circus: [
       CircusRound(word: 'شَمْس', imagePath: '${_gamesDir}circus/seen/seen_circus_round_1.webp', audioPath: '${_gamesAudio}circus/seen/seen_circus_1.mp3'),
@@ -190,7 +190,7 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
         word: 'نُسُور',
         bgImagePath: '${_gamesDir}coloring/seen/seen_coloring_round_2.webp',
         wordRevealImagePath: '${_gamesDir}coloring/seen/seen_coloring_word_2.webp',
-        introAudioPath: '${_audio}seen_paint_word2.mp3',
+        introAudioPath: 'audio/lessons/seen/final/seen_paint_word1.mp3',
         revealAudioPath: '${_gamesAudio}coloring/seen/seen_reveal_sooh.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/seen/seen_coloring_round_2_slice_1.webp', color: Color(0xFF33691E)),

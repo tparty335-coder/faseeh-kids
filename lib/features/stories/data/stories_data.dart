@@ -83,7 +83,7 @@ final List<Story> storiesData = [
       'assets/images/lessons/jeem/jeem_cd_story_1.webp',
       'assets/images/lessons/jeem/jeem_cd_story_2.webp',
       'assets/images/lessons/jeem/jeem_cd_story_3.webp',
-      'assets/images/lessons/jeem/jeem_cd_story_nasheed.webp',
+      'assets/images/lessons/jeem/jeem_cd_story_6.webp',
     ],
     pageAudios: [
       'audio/lessons/jeem/final/jeem_story_1.mp3',
@@ -105,7 +105,7 @@ final List<Story> storiesData = [
     pageImages: [
       'assets/images/lessons/taa/taa_cd_story_1.webp',
       'assets/images/lessons/taa/taa_cd_story_3.webp',
-      'assets/images/lessons/taa/taa_cd_story_nasheed.webp',
+      'assets/images/lessons/taa/taa_cd_story_6.webp',
     ],
     pageAudios: [
       'audio/lessons/taa/final/taa_story_1.mp3',

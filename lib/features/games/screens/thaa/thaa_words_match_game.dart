@@ -56,8 +56,8 @@ const List<_Round> _rounds = [
     dropPx: 671.5,
     dropPy: 495.0,
     correctWord: 'ثُعْبَان',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thoban.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    wordAudio: 'audio/letters/short_vowels/thaa_damma.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'ثُعْبَان', isCorrect: true,  color: Color(0xFFFF9EB5)),
@@ -73,8 +73,8 @@ const List<_Round> _rounds = [
     dropPx: 667.5,
     dropPy: 452.0,
     correctWord: 'ثَعْلَب',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalab.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    wordAudio: 'audio/games/fishing/thaa_thalab.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cards: [
       _WordCard(word: 'ثَعْلَب', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -90,8 +90,8 @@ const List<_Round> _rounds = [
     dropPx: 666.0,
     dropPy: 459.0,
     correctWord: 'ثَلْج',
-    wordAudio: 'audio/lessons/thaa/sounds/word_thalj.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    wordAudio: 'audio/letters/short_vowels/thaa_fatha.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cards: [
       _WordCard(word: 'ثَلْج', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَقَرَة', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -108,7 +108,7 @@ const List<_Round> _rounds = [
     dropPy: 462.0,
     correctWord: 'ثُوم',
     wordAudio: 'audio/lessons/thaa/sounds/word_thum.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'تُفَّاح', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَصَل', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -195,14 +195,14 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
     if (!mounted || _gameOver) return;
     ++_token;
     // صوت التعليمات الأصلي من الأسطوانة لحرف الثاء ("اسحب اسم الصورة وضعها مكان النقط فيما يأتي")
-    await _say('audio/games/words/thaa_words_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
+    await _say('audio/instructions/words_drag_instruction.mp3', pauseAfter: const Duration(milliseconds: 400));
   }
 
   Future<void> _playWordAudio({Duration pauseAfter = const Duration(milliseconds: 300)}) async {
     await _say(_rounds[_round].wordAudio, pauseAfter: pauseAfter);
   }
 
-  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onCardSelected(int cardIdx) async {
     if (_roundDone || _showCorrectAnswer || _isBusy) return;
@@ -246,7 +246,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
           });
 
           // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-          await _say('audio/games/beehive/2_sah.mp3', pauseAfter: const Duration(milliseconds: 400));
+          await _say('audio/feedback/smart.mp3', pauseAfter: const Duration(milliseconds: 400));
           if (!mounted || t != _token) return;
           await _playWordAudio(pauseAfter: const Duration(milliseconds: 800));
           if (!mounted || t != _token) return;
@@ -274,7 +274,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

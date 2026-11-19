@@ -51,7 +51,7 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
       await AudioService.instance.stop();
       if (!mounted || tk != _menuToken || _selectedGame != null) return;
       await AudioService.instance.playAsset(
-        'audio/instructions/games_menu_intro.mp3',
+        'audio/stories/alif_goal.mp3',
         channel: AudioChannel.voice,
       );
     } catch (_) {}

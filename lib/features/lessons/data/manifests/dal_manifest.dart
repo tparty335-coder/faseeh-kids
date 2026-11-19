@@ -86,7 +86,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'دَا',
-        audioPath: 'audio/lessons/dal/madd/dal_madd_alif.mp3',
+        audioPath: 'audio/letters/long_vowels/daal_madd_alif.mp3',
         imagePath: '${_dir}dal_madd_aa.webp',
       ),
       MaddItem(
@@ -253,7 +253,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
             word: 'دُبّ',
             cardImagePath: '${_dir}dal_words_p3_card_1.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dal_word_p3_1.mp3',
+            audioPath: 'audio/lessons/dal/sounds/word_dubb.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.200,
@@ -316,7 +316,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
             word: 'أَسَدُ',
             cardImagePath: '${_dir}dal_words_p4_card_1.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dal_word_p4_1.mp3',
+            audioPath: 'audio/instructions/alif_trace_step_18.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.200,
@@ -344,7 +344,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
             word: 'دَوَاء',
             cardImagePath: '${_dir}dal_words_p4_card_3.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dal_word_p4_3.mp3',
+            audioPath: 'audio/games/match/dal/dal_match_3.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.550,
@@ -358,7 +358,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
             word: 'مُهَنْدِس',
             cardImagePath: '${_dir}dal_words_p4_card_4.webp',
             cardHeight: 474,
-            audioPath: '${_audio}dal_word_p4_4.mp3',
+            audioPath: 'audio/games/match/dal/dal_match_2.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.720,
@@ -397,7 +397,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
       FishingRound(
         word: 'قَلَم',
         imagePath: '${_gamesDir}fishing/dal/dal_fishing_round_4.webp',
-        audioPath: '${_gamesAudio}fishing/dal/dal_fishing_4.mp3',
+        audioPath: 'audio/games/match/dal/dal_match_3.mp3',
         isCorrect: true,
       ),
     ],
@@ -405,22 +405,22 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'دَالْيَا',
         imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_1.webp',
-        audioPath: '${_gamesAudio}beehive/dal/dal_beehive_1.mp3',
+        audioPath: 'audio/games/match/dal/dal_match_3.mp3',
       ),
       BeehiveRound(
         word: 'دِيك',
         imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_2.webp',
-        audioPath: '${_gamesAudio}beehive/dal/dal_beehive_2.mp3',
+        audioPath: 'audio/games/match/dal/dal_match_2.mp3',
       ),
       BeehiveRound(
         word: 'دُبّ',
         imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_3.webp',
-        audioPath: '${_gamesAudio}beehive/dal/dal_beehive_3.mp3',
+        audioPath: 'audio/games/match/dal/dal_match_4.mp3',
       ),
       BeehiveRound(
         word: 'أَسَد',
         imagePath: '${_gamesDir}beehive/dal/dal_beehive_round_4.webp',
-        audioPath: '${_gamesAudio}beehive/dal/dal_beehive_4.mp3',
+        audioPath: 'audio/games/match/dal/dal_match_1.mp3',
       ),
     ],
     circus: [
@@ -467,7 +467,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
         word: 'دَالْيَا',
         bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_1.webp',
         wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_1.webp',
-        introAudioPath: '${_audio}dal_paint_word1.mp3',
+        introAudioPath: 'audio/games/match/dal/dal_match_2.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dal/dal_reveal_daar.mp3',
         slices: [
           ColoringSlice(
@@ -491,7 +491,7 @@ const LetterUnitManifest dalManifest = LetterUnitManifest(
         word: 'دِيك',
         bgImagePath: '${_gamesDir}coloring/dal/dal_coloring_round_2.webp',
         wordRevealImagePath: '${_gamesDir}coloring/dal/dal_coloring_word_2.webp',
-        introAudioPath: '${_audio}dal_paint_word2.mp3',
+        introAudioPath: 'audio/games/fishing/dal/dal_fishing_3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/dal/dal_reveal_deek.mp3',
         slices: [
           ColoringSlice(

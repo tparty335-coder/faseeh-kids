@@ -62,7 +62,7 @@ class _ColoringRound {
 const List<_ColoringRound> _rounds = [
   // الجولة 1 (paint1): مثلث ❌، ثعلب ❌، ثابت ✅  → ث ا ب ت
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_1.webp',
+    bgImagePath: 'assets/images/games/coloring/thaa/thaa_coloring_1.webp',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_1.webp',
     correctWord: 'ثَابِت',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_1.mp3',
@@ -78,7 +78,7 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 2 (paint2): ثوم ✅، تبحث ❌، ثلج ❌
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_2.webp',
+    bgImagePath: 'assets/images/games/coloring/thaa/thaa_coloring_2.webp',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_2.webp',
     correctWord: 'ثُوم',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_2.mp3',
@@ -94,7 +94,7 @@ const List<_ColoringRound> _rounds = [
   ),
   // الجولة 3 (paint3): كمثرى ❌، ثمرة ❌، ثيران ✅
   _ColoringRound(
-    bgImagePath: 'assets/images/games/coloring/thaa_coloring_round_3.webp',
+    bgImagePath: 'assets/images/games/coloring/thaa/thaa_coloring_3.webp',
     wordMaskPath: 'assets/images/games/coloring/thaa/thaa_coloring_word_3.webp',
     correctWord: 'ثِيرَان',
     correctAudio: 'audio/games/coloring/thaa/thaa_good_3.mp3',
@@ -233,11 +233,11 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
     _stopAudio();
     if (!_isWordSelected) {
       if (isFirstRound) {
-        await _say('audio/games/coloring/6_al15.mp3', maxMs: 2200); // «التلوين»
+        await _say('audio/instructions/alif_paint_intro.mp3', maxMs: 2200); // «التلوين»
         if (!_alive(tk) || _isWordSelected) return;
       }
       // «اضغط على الكلمة التي بها مد»
-      await _say('audio/games/coloring/3_qu2.mp3', maxMs: 4500);
+      await _say('audio/instructions/alif_paint_explain.mp3', maxMs: 4500);
     } else {
       // «لوّن الكلمة بألوانك المفضلة»
       await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
@@ -332,7 +332,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       maxMs: 450,
       channel: AudioChannel.sfx,
     );
-    await _say('audio/games/fishing/ahsnt.mp3', pauseAfter: const Duration(milliseconds: 400)); // «أحسنت»
+    await _say('audio/feedback/correct.mp3', pauseAfter: const Duration(milliseconds: 400)); // «أحسنت»
     await _say(rd.wordAudio, pauseAfter: const Duration(milliseconds: 700)); // نطق الكلمة
     if (mounted) _advance();
   }
@@ -354,7 +354,7 @@ class _ThaaColoringGameState extends ConsumerState<ThaaColoringGame> {
       _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

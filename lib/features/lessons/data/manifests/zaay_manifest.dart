@@ -74,7 +74,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
     items: [
       MaddItem(
         displayChar: 'زَا',
-        audioPath: 'audio/lessons/zaay/madd/zaay_madd_alif.mp3',
+        audioPath: 'audio/letters/long_vowels/zaay_madd_alif.mp3',
         imagePath: '${_dir}zaay_madd_aa.webp',
       ),
       MaddItem(
@@ -93,7 +93,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
   // ── الكتابة ────────────────────────────────────────────────────────────────
   tracing: TracingSpec(
     letterChar: 'ز',
-    audioIntroPath: '${_audio}zaay_write_intro.mp3',
+    audioIntroPath: 'audio/lessons/raa/final/raa_write_intro.mp3',
     stepImagePaths: [
       '${_dir}zaay_write_step_1.webp',
       '${_dir}zaay_write_step_2.webp',
@@ -128,7 +128,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'جَزَر',
             cardImagePath: '${_dir}zaay_words_p1_card_2.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p1_2.mp3',
+            audioPath: 'audio/games/match/zaay/zaay_match_2.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.250,
@@ -142,7 +142,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زِينَة',
             cardImagePath: '${_dir}zaay_words_p1_card_3.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p1_3.mp3',
+            audioPath: 'audio/lessons/zaay/sounds/word_zeen.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.550,
@@ -156,7 +156,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'يَزُور',
             cardImagePath: '${_dir}zaay_words_p1_card_4.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p1_4.mp3',
+            audioPath: 'audio/lessons/zaay/sounds/word_zoor.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.720,
@@ -192,7 +192,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زُجَاجَة',
             cardImagePath: '${_dir}zaay_words_p2_card_2.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p2_2.mp3',
+            audioPath: 'audio/games/beehive/zaay/zaay_beehive_3.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.250,
@@ -206,7 +206,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'مَزْرَعَة',
             cardImagePath: '${_dir}zaay_words_p2_card_3.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p2_3.mp3',
+            audioPath: 'audio/games/beehive/zaay/zaay_beehive_4.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.550,
@@ -220,7 +220,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'غَزَال',
             cardImagePath: '${_dir}zaay_words_p2_card_4.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p2_4.mp3',
+            audioPath: 'audio/games/fishing/zaay/zaay_fishing_2.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.720,
@@ -242,7 +242,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زَيْتُون',
             cardImagePath: '${_dir}zaay_words_p3_card_1.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p3_1.mp3',
+            audioPath: 'audio/lessons/zaay/sounds/word_zaytoon.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.200,
@@ -256,7 +256,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زَرَافَة',
             cardImagePath: '${_dir}zaay_words_p3_card_2.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p3_2.mp3',
+            audioPath: 'audio/games/match/zaay/zaay_match_1.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.250,
@@ -284,7 +284,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زَيْت',
             cardImagePath: '${_dir}zaay_words_p3_card_4.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p3_4.mp3',
+            audioPath: 'audio/games/match/zaay/zaay_match_3.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.720,
@@ -306,7 +306,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'زَهْرَة',
             cardImagePath: '${_dir}zaay_words_p4_card_1.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p4_1.mp3',
+            audioPath: 'audio/lessons/zaay/sounds/word_zahra.mp3',
             hotspot: WordHotspot(
               left: 0.500,
               top: 0.200,
@@ -320,7 +320,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'مَوْز',
             cardImagePath: '${_dir}zaay_words_p4_card_2.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p4_2.mp3',
+            audioPath: 'audio/games/match/zaay/zaay_match_4.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.250,
@@ -348,7 +348,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
             word: 'حَازِم',
             cardImagePath: '${_dir}zaay_words_p4_card_4.webp',
             cardHeight: 474,
-            audioPath: '${_audio}zaay_word_p4_4.mp3',
+            audioPath: 'audio/games/beehive/zaay/zaay_beehive_2.mp3',
             hotspot: WordHotspot(
               left: 0.140,
               top: 0.720,
@@ -366,21 +366,21 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
   // ── الألعاب ──
   games: GamesSpec(
     fishing: [
-      FishingRound(word: 'زَهْرَة', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_1.webp', audioPath: '${_gamesAudio}fishing/zaay/zaay_fishing_1.mp3', isCorrect: true),
+      FishingRound(word: 'زَهْرَة', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_1.webp', audioPath: 'audio/games/match/zaay/zaay_match_3.mp3', isCorrect: true),
       FishingRound(word: 'بَاب', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_2.webp', audioPath: '${_gamesAudio}fishing/zaay/zaay_fishing_2.mp3', isCorrect: true),
-      FishingRound(word: 'زَيْتُون', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_3.webp', audioPath: '${_gamesAudio}fishing/zaay/zaay_fishing_3.mp3', isCorrect: true),
-      FishingRound(word: 'قَلَم', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_4.webp', audioPath: '${_gamesAudio}fishing/zaay/zaay_fishing_4.mp3', isCorrect: true),
+      FishingRound(word: 'زَيْتُون', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_3.webp', audioPath: 'audio/games/beehive/zaay/zaay_beehive_2.mp3', isCorrect: true),
+      FishingRound(word: 'قَلَم', imagePath: '${_gamesDir}fishing/zaay/zaay_fishing_round_4.webp', audioPath: 'audio/games/match/zaay/zaay_match_2.mp3', isCorrect: true),
     ],
     beehive: [
-      BeehiveRound(word: 'زَهْرَة', imagePath: '${_gamesDir}beehive/zaay/zaay_beehive_round_1.webp', audioPath: '${_gamesAudio}beehive/zaay/zaay_beehive_1.mp3'),
+      BeehiveRound(word: 'زَهْرَة', imagePath: '${_gamesDir}beehive/zaay/zaay_beehive_round_1.webp', audioPath: 'audio/games/match/zaay/zaay_match_2.mp3'),
       BeehiveRound(word: 'زُمُرُّد', imagePath: '${_gamesDir}beehive/zaay/zaay_beehive_round_2.webp', audioPath: '${_gamesAudio}beehive/zaay/zaay_beehive_2.mp3'),
       BeehiveRound(word: 'زِيَارَة', imagePath: '${_gamesDir}beehive/zaay/zaay_beehive_round_3.webp', audioPath: '${_gamesAudio}beehive/zaay/zaay_beehive_3.mp3'),
       BeehiveRound(word: 'مِيزَان', imagePath: '${_gamesDir}beehive/zaay/zaay_beehive_round_4.webp', audioPath: '${_gamesAudio}beehive/zaay/zaay_beehive_4.mp3'),
     ],
     circus: [
-      CircusRound(word: 'زَهْرَة', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_1.webp', audioPath: '${_gamesAudio}circus/zaay/zaay_circus_1.mp3'),
-      CircusRound(word: 'زَرَافَة', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_2.webp', audioPath: '${_gamesAudio}circus/zaay/zaay_circus_2.mp3'),
-      CircusRound(word: 'زَيْتُون', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_3.webp', audioPath: '${_gamesAudio}circus/zaay/zaay_circus_3.mp3'),
+      CircusRound(word: 'زَهْرَة', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_1.webp', audioPath: 'audio/games/match/zaay/zaay_match_2.mp3'),
+      CircusRound(word: 'زَرَافَة', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_2.webp', audioPath: 'audio/games/match/zaay/zaay_match_1.mp3'),
+      CircusRound(word: 'زَيْتُون', imagePath: '${_gamesDir}circus/zaay/zaay_circus_round_3.webp', audioPath: 'audio/games/match/zaay/zaay_match_4.mp3'),
     ],
     wordsMatch: [
       WordsMatchPair(word: 'زَهْرَة', imagePath: '${_gamesDir}match/zaay/zaay_match_1.webp', audioPath: '${_gamesAudio}match/zaay/zaay_match_1.mp3'),
@@ -393,7 +393,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
         word: 'زَاد',
         bgImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_1.webp',
         wordRevealImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_word_1.webp',
-        introAudioPath: '${_audio}zaay_paint_word1.mp3',
+        introAudioPath: 'audio/instructions/alif_paint_explain.mp3',
         revealAudioPath: '${_gamesAudio}coloring/zaay/zaay_reveal_zaah.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_1_slice_1.webp', color: Color(0xFF00838F)),
@@ -405,7 +405,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
         word: 'زُور',
         bgImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_2.webp',
         wordRevealImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_word_2.webp',
-        introAudioPath: '${_audio}zaay_paint_word2.mp3',
+        introAudioPath: 'audio/games/coloring/2_qu3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/zaay/zaay_reveal_zooh.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_2_slice_1.webp', color: Color(0xFF004D40)),
@@ -417,7 +417,7 @@ const LetterUnitManifest zaayManifest = LetterUnitManifest(
         word: 'زِين',
         bgImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_3.webp',
         wordRevealImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_word_3.webp',
-        introAudioPath: '${_audio}zaay_paint_word3.mp3',
+        introAudioPath: 'audio/games/coloring/2_qu3.mp3',
         revealAudioPath: '${_gamesAudio}coloring/zaay/zaay_reveal_zeeh.mp3',
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/zaay/zaay_coloring_round_3_slice_1.webp', color: Color(0xFF00897B)),

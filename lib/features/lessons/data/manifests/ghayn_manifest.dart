@@ -37,7 +37,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
     scenes: [
       StoryScene(
         imagePath: '${_dir}ghayn_cd_story_1.webp',
-        audioPath: '${_audio}ghayn_story_1.mp3',
+        audioPath: 'audio/letters/phrases/ghain_sentence.mp3',
         captionText: 'فِي يَوْمٍ مِنَ الْأَيَّامِ كَانَ الْغُرَابُ يَقِفُ عَلَى غُصْنِ شَجَرَةٍ.',
       ),
       StoryScene(
@@ -76,8 +76,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         exampleWord: 'غَزَال',
         exampleEmoji: '🦌',
         vowelAudio: '${_vowelsAudio}ghain_fatha.mp3',
-        fullRuleAudio: '${_soundsAudio}ghayn_fatha_rule.mp3',
-        wordAudio: '${_audio}ghayn_word_p1_1.mp3',
+        fullRuleAudio: 'audio/letters/phrases/ghain_fatha_demo.mp3',
+        wordAudio: 'audio/letters/words/ghain_word.mp3',
         slideImagePath: '${_dir}ghayn_vowel_fatha.webp',
       ),
       VowelCardSpec(
@@ -86,8 +86,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         exampleWord: 'غُصْن',
         exampleEmoji: '🌿',
         vowelAudio: '${_vowelsAudio}ghain_damma.mp3',
-        fullRuleAudio: '${_soundsAudio}ghayn_damma_rule.mp3',
-        wordAudio: '${_audio}ghayn_word_p1_3.mp3',
+        fullRuleAudio: 'audio/letters/phrases/ghain_damma_demo.mp3',
+        wordAudio: 'audio/letters/words/ghain_word3.mp3',
         slideImagePath: '${_dir}ghayn_vowel_damma.webp',
       ),
       VowelCardSpec(
@@ -96,8 +96,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         exampleWord: 'غِذَاء',
         exampleEmoji: '🍽️',
         vowelAudio: '${_vowelsAudio}ghain_kasra.mp3',
-        fullRuleAudio: '${_soundsAudio}ghayn_kasra_rule.mp3',
-        wordAudio: '${_audio}ghayn_word_p1_2.mp3',
+        fullRuleAudio: 'audio/letters/phrases/ghain_kasra_demo.mp3',
+        wordAudio: 'audio/letters/words/ghain_word2.mp3',
         slideImagePath: '${_dir}ghayn_vowel_kasra.webp',
       ),
       VowelCardSpec(
@@ -123,7 +123,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         imagePath: '${_dir}ghayn_madd_aa.webp',
         exampleWord: 'غَابَة',
         explanation: 'غَيْنٌ مَفْتُوحَةٌ مَعَ مَدٍّ بِالْأَلِفِ: غَا',
-        wordAudioPath: '${_audio}ghayn_word_p1_4.mp3',
+        wordAudioPath: 'audio/letters/words/ghain_word4.mp3',
         accentColor: Color(0xFF2E7D32),
       ),
       MaddItem(
@@ -149,12 +149,12 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
 
   tracing: TracingSpec(
     letterChar: 'غ',
-    audioIntroPath: '${_audio}ghayn_write_intro.mp3',
+    audioIntroPath: 'audio/lessons/yaa/final/yaa_write_intro.mp3',
     stepImagePaths: [
       '${_dir}ghayn_write_step_1.webp',
-      '${_dir}ghayn_write_step_2.webp',
-      '${_dir}ghayn_write_step_3.webp',
-      '${_dir}ghayn_write_step_4.webp',
+      'assets/images/lessons/ghayn/ghayn_trace_start.webp',
+      'assets/images/lessons/ghayn/ghayn_trace_middle.webp',
+      'assets/images/lessons/ghayn/ghayn_trace_end.webp',
     ],
     positions: [
       TracingPositionSpec(
@@ -163,8 +163,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         displayForm: 'غ',
         exampleWord: 'دِمَاغ',
         exampleEmoji: '🧠',
-        audioPath: '${_audio}ghayn_trace_isolated.mp3',
-        imagePath: '${_dir}ghayn_trace_isolated.webp',
+        audioPath: 'audio/lessons/ayn/final/ayn_trace_isolated.mp3',
+        imagePath: 'assets/images/lessons/ghayn/ghayn_write_step_1.webp',
       ),
       TracingPositionSpec(
         position: 'start',
@@ -202,10 +202,10 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         listImagePath: '${_dir}ghayn_words_p1_list.webp',
         listImageHeight: 474,
         words: [
-          WordItem(word: 'غَزَال', cardImagePath: '${_dir}ghayn_words_p1_card_1.webp', cardHeight: 474, audioPath: '${_audio}ghayn_word_p1_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'غِذَاء', cardImagePath: '${_dir}ghayn_words_p1_card_2.webp', cardHeight: 474, audioPath: '${_audio}ghayn_word_p1_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'غُصْن', cardImagePath: '${_dir}ghayn_words_p1_card_3.webp', cardHeight: 474, audioPath: '${_audio}ghayn_word_p1_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'غَابَة', cardImagePath: '${_dir}ghayn_words_p1_card_4.webp', cardHeight: 474, audioPath: '${_audio}ghayn_word_p1_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'غَزَال', cardImagePath: '${_dir}ghayn_words_p1_card_1.webp', cardHeight: 474, audioPath: 'audio/letters/words/ghain_word.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'غِذَاء', cardImagePath: '${_dir}ghayn_words_p1_card_2.webp', cardHeight: 474, audioPath: 'audio/letters/words/ghain_word2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'غُصْن', cardImagePath: '${_dir}ghayn_words_p1_card_3.webp', cardHeight: 474, audioPath: 'audio/letters/words/ghain_word3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'غَابَة', cardImagePath: '${_dir}ghayn_words_p1_card_4.webp', cardHeight: 474, audioPath: 'audio/letters/words/ghain_word4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
       ),
       WordsPage(
@@ -242,28 +242,28 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
   ),
 
   games: GamesSpec(
-    fishingIntroAudio: '${_gamesAudio}fishing/sayd.mp3',
+    fishingIntroAudio: 'audio/letters/short_vowels/ha_fatha.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/ghayn/ghayn_fishing_prompt.mp3',
-    fishingWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
+    fishingWrongAudio: 'audio/feedback/try_again.mp3',
     beehivePromptAudio: '${_gamesAudio}beehive/ghayn/ghayn_beehive_prompt.mp3',
-    beehiveWrongAudio: '${_gamesAudio}beehive/6_haw.mp3',
+    beehiveWrongAudio: 'audio/feedback/try_again.mp3',
     circusPromptAudio: '${_gamesAudio}circus/ghayn/ghayn_circus_prompt.mp3',
-    circusWrongAudio: '${_gamesAudio}circus/4_hawe.mp3',
+    circusWrongAudio: 'audio/feedback/try_again.mp3',
     wordsMatchPromptAudio: 'audio/instructions/words_drag_instruction.mp3',
-    wordsMatchWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
-    coloringIntroAudio: '${_gamesAudio}coloring/6_al15.mp3',
-    coloringStep1Audio: '${_gamesAudio}coloring/3_qu2.mp3',
+    wordsMatchWrongAudio: 'audio/feedback/try_again.mp3',
+    coloringIntroAudio: 'audio/instructions/alif_paint_intro.mp3',
+    coloringStep1Audio: 'audio/instructions/alif_paint_explain.mp3',
     coloringStep2Audio: '${_gamesAudio}coloring/2_qu3.mp3',
     coloringWrongAudio: '${_gamesAudio}coloring/5_al23.mp3',
-    praiseFinishAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+    praiseFinishAudio: 'audio/feedback/correct.mp3',
     fishing: [
       FishingRound(
         word: 'غَزَال',
         imagePath: '${_gamesDir}fishing/ghayn/ghayn_fishing_round_1.webp',
-        audioPath: '${_gamesAudio}fishing/ghayn/ghayn_fishing_1.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_4.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'غَزَال', isCorrect: true, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'أَسَد', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -273,10 +273,10 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       FishingRound(
         word: 'غُرَاب',
         imagePath: '${_gamesDir}fishing/ghayn/ghayn_fishing_round_2.webp',
-        audioPath: '${_gamesAudio}fishing/ghayn/ghayn_fishing_2.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_3.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'حَمَام', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'عُصْفُور', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -288,8 +288,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/ghayn/ghayn_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/ghayn/ghayn_fishing_3.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/smart.mp3',
         zones: [
           GameZoneChoice(label: 'مِكْوَاة', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'غَسَّالَة', isCorrect: true, px: 382, py: 382, w: 220, h: 90),
@@ -299,10 +299,10 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       FishingRound(
         word: 'رَغِيف',
         imagePath: '${_gamesDir}fishing/ghayn/ghayn_fishing_round_4.webp',
-        audioPath: '${_gamesAudio}fishing/ghayn/ghayn_fishing_4.mp3',
+        audioPath: 'audio/games/circus/ghayn/ghayn_circus_2.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         zones: [
           GameZoneChoice(label: 'جُبْن', isCorrect: false, px: 120, py: 425, w: 215, h: 90),
           GameZoneChoice(label: 'أَرُزّ', isCorrect: false, px: 382, py: 382, w: 220, h: 90),
@@ -314,8 +314,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'غَزَال',
         imagePath: '${_gamesDir}beehive/ghayn/ghayn_beehive_round_1.webp',
-        audioPath: '${_gamesAudio}beehive/ghayn/ghayn_beehive_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_4.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'غُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'غِ', isCorrect: false, px: 546, py: 269),
@@ -326,8 +326,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'غُصْن',
         imagePath: '${_gamesDir}beehive/ghayn/ghayn_beehive_round_2.webp',
-        audioPath: '${_gamesAudio}beehive/ghayn/ghayn_beehive_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_1.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         cells: [
           GameZoneChoice(label: 'غُ', isCorrect: true, px: 692, py: 181),
           GameZoneChoice(label: 'غِ', isCorrect: false, px: 546, py: 269),
@@ -339,7 +339,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غِذَاء',
         imagePath: '${_gamesDir}beehive/ghayn/ghayn_beehive_round_3.webp',
         audioPath: '${_gamesAudio}beehive/ghayn/ghayn_beehive_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cells: [
           GameZoneChoice(label: 'غُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'غِ', isCorrect: true, px: 546, py: 269),
@@ -351,7 +351,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'تَغْسِلُ',
         imagePath: '${_gamesDir}beehive/ghayn/ghayn_beehive_round_4.webp',
         audioPath: '${_gamesAudio}beehive/ghayn/ghayn_beehive_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'غُ', isCorrect: false, px: 692, py: 181),
           GameZoneChoice(label: 'غِ', isCorrect: false, px: 546, py: 269),
@@ -364,19 +364,19 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       CircusRound(
         word: 'غَزَال',
         imagePath: '${_gamesDir}circus/ghayn/ghayn_circus_round_1.webp',
-        audioPath: '${_gamesAudio}circus/ghayn/ghayn_circus_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_4.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         zones: [
           GameZoneChoice(label: 'صُنْدُوق', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'هَاتِف', isCorrect: false, px: 269, py: 232),
-          GameZoneChoice(label: 'غَزَال', isCorrect: true, px: 135, py: 373, wordAudio: '${_gamesAudio}circus/ghayn/ghayn_circus_1.mp3'),
+          GameZoneChoice(label: 'غَزَال', isCorrect: true, px: 135, py: 373, wordAudio: 'audio/games/match/ghayn/ghayn_match_4.mp3'),
         ],
       ),
       CircusRound(
         word: 'رَغِيف',
         imagePath: '${_gamesDir}circus/ghayn/ghayn_circus_round_2.webp',
         audioPath: '${_gamesAudio}circus/ghayn/ghayn_circus_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         zones: [
           GameZoneChoice(label: 'جَمَل', isCorrect: false, px: 137, py: 95),
           GameZoneChoice(label: 'رَغِيف', isCorrect: true, px: 269, py: 232, wordAudio: '${_gamesAudio}circus/ghayn/ghayn_circus_2.mp3'),
@@ -386,10 +386,10 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
       CircusRound(
         word: 'غُرَاب',
         imagePath: '${_gamesDir}circus/ghayn/ghayn_circus_round_3.webp',
-        audioPath: '${_gamesAudio}circus/ghayn/ghayn_circus_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        audioPath: 'audio/games/match/ghayn/ghayn_match_3.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         zones: [
-          GameZoneChoice(label: 'غُرَاب', isCorrect: true, px: 137, py: 95, wordAudio: '${_gamesAudio}circus/ghayn/ghayn_circus_3.mp3'),
+          GameZoneChoice(label: 'غُرَاب', isCorrect: true, px: 137, py: 95, wordAudio: 'audio/games/match/ghayn/ghayn_match_3.mp3'),
           GameZoneChoice(label: 'قِطَّة', isCorrect: false, px: 269, py: 232),
           GameZoneChoice(label: 'بَقَرَة', isCorrect: false, px: 135, py: 373),
         ],
@@ -400,7 +400,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غُصْن',
         imagePath: '${_gamesDir}match/ghayn/ghayn_match_1.webp',
         audioPath: '${_gamesAudio}match/ghayn/ghayn_match_1.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'شَجَرَة', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'نَخْلَة', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -411,7 +411,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غَابَة',
         imagePath: '${_gamesDir}match/ghayn/ghayn_match_2.webp',
         audioPath: '${_gamesAudio}match/ghayn/ghayn_match_2.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         cards: [
           GameZoneChoice(label: 'غَابَة', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'زَهْرَة', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -422,7 +422,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غُرَاب',
         imagePath: '${_gamesDir}match/ghayn/ghayn_match_3.webp',
         audioPath: '${_gamesAudio}match/ghayn/ghayn_match_3.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         cards: [
           GameZoneChoice(label: 'قِرْد', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'غُرَاب', isCorrect: true, colorValue: 0xFFFF9EB5),
@@ -433,7 +433,7 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غَزَال',
         imagePath: '${_gamesDir}match/ghayn/ghayn_match_4.webp',
         audioPath: '${_gamesAudio}match/ghayn/ghayn_match_4.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         cards: [
           GameZoneChoice(label: 'غَزَال', isCorrect: true, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'مَاعِز', isCorrect: false, colorValue: 0xFFFF9EB5),
@@ -446,10 +446,10 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         word: 'غَابَة',
         bgImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_1.webp',
         wordRevealImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_word_1.webp',
-        introAudioPath: '${_audio}ghayn_word_p1_4.mp3',
+        introAudioPath: 'audio/letters/words/ghain_word4.mp3',
         revealAudioPath: '${_gamesAudio}coloring/ghayn/ghayn_coloring_reveal_1.mp3',
         wrongRevealAudioPath: '${_gamesAudio}coloring/ghayn/ghayn_wrong_reveal_1.mp3',
-        wordAudioPath: '${_audio}ghayn_word_p1_4.mp3',
+        wordAudioPath: 'audio/letters/words/ghain_word4.mp3',
         options: [
           GameZoneChoice(label: 'نَخْلَة', isCorrect: false),
           GameZoneChoice(label: 'شَجَرَة', isCorrect: false),
@@ -457,8 +457,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_1_slice_1.webp', color: Color(0xFF1B5E20)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_1_slice_2.webp', color: Color(0xFF2E7D32)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_1_slice_3.webp', color: Color(0xFF4CAF50)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_1_slice_1.webp', color: Color(0xFF2E7D32)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_1_slice_1.webp', color: Color(0xFF4CAF50)),
         ],
       ),
       ColoringRound(
@@ -476,8 +476,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_2_slice_1.webp', color: Color(0xFF1565C0)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_2_slice_2.webp', color: Color(0xFF1E88E5)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_2_slice_3.webp', color: Color(0xFF42A5F5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_2_slice_1.webp', color: Color(0xFF1E88E5)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_2_slice_1.webp', color: Color(0xFF42A5F5)),
         ],
       ),
       ColoringRound(
@@ -495,8 +495,8 @@ const LetterUnitManifest ghaynManifest = LetterUnitManifest(
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_3_slice_1.webp', color: Color(0xFFD84315)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_3_slice_2.webp', color: Color(0xFFEF6C00)),
-          ColoringSlice(maskImagePath: '${_gamesDir}coloring/ghayn/ghayn_coloring_round_3_slice_3.webp', color: Color(0xFFFFA726)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_3_slice_1.webp', color: Color(0xFFEF6C00)),
+          ColoringSlice(maskImagePath: 'assets/images/games/coloring/ghayn/ghayn_coloring_round_3_slice_1.webp', color: Color(0xFFFFA726)),
         ],
       ),
     ],

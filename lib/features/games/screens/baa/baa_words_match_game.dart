@@ -56,8 +56,8 @@ const List<_Round> _rounds = [
     dropPx: 643.0,
     dropPy: 394.0,
     correctWord: 'بَقَرَة',
-    wordAudio: 'audio/lessons/baa/sounds/word_baqara.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    wordAudio: 'audio/games/fishing/ba52.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَقَرَة', isCorrect: true,  color: Color(0xFFFF9EB5)),
@@ -73,8 +73,8 @@ const List<_Round> _rounds = [
     dropPx: 598.0,
     dropPy: 442.0,
     correctWord: 'بَاب',
-    wordAudio: 'audio/lessons/baa/sounds/word_bab.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    wordAudio: 'audio/letters/long_vowels/baa_madd_alif.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cards: [
       _WordCard(word: 'بَاب', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -91,7 +91,7 @@ const List<_Round> _rounds = [
     dropPy: 468.0,
     correctWord: 'بِطِّيخ',
     wordAudio: 'audio/lessons/baa/sounds/word_betteekh.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cards: [
       _WordCard(word: 'بِطِّيخ', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -107,8 +107,8 @@ const List<_Round> _rounds = [
     dropPx: 666.0,
     dropPy: 423.0,
     correctWord: 'إِبْرَة',
-    wordAudio: 'audio/lessons/baa/sounds/word_ibra.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    wordAudio: 'audio/stories/alif_word_ibra.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -196,7 +196,7 @@ class _BaaWordsMatchGameState extends ConsumerState<BaaWordsMatchGame>
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onCardSelected(int cardIdx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -240,7 +240,7 @@ class _BaaWordsMatchGameState extends ConsumerState<BaaWordsMatchGame>
         });
 
         // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-        await _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+        await _say('audio/feedback/smart.mp3', maxMs: 2500);
         if (!mounted || t != _token) return;
         await _playWordAudio();
         if (!mounted || t != _token) return;
@@ -264,7 +264,7 @@ class _BaaWordsMatchGameState extends ConsumerState<BaaWordsMatchGame>
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

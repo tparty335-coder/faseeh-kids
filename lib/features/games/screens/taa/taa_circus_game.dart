@@ -43,7 +43,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/taa_circus_round_1.webp',
     imgH: 499,
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     zones: [
       _ImageZone(label: 'فِيل',    hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'حِمَار',  hasBaa: false, px: 326, py: 255),
@@ -55,7 +55,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/taa_circus_round_2.webp',
     imgH: 499,
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     zones: [
       _ImageZone(label: 'نَمِر',   hasBaa: false, px: 138, py: 114),
       _ImageZone(label: 'حُوت',    hasBaa: true,  px: 326, py: 258,
@@ -67,7 +67,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/taa_circus_round_3.webp',
     imgH: 499,
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     zones: [
       _ImageZone(label: 'تِين',   hasBaa: true,  px: 138, py: 116,
           wordAudio: 'audio/games/circus/taa_al106.mp3'),
@@ -134,13 +134,13 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
     _isBusy = true;
     try {
       // صوت التعليمات الأصلي من الأسطوانة: "اضغط على الصورة التي اسمها به حرف ت"
-      await _say('audio/games/circus/taa_al13.mp3', pauseAfter: const Duration(milliseconds: 300));
+      await _say('audio/games/circus/8_al13.mp3', pauseAfter: const Duration(milliseconds: 300));
     } finally {
       if (mounted) setState(() => _isBusy = false);
     }
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', pauseAfter: const Duration(milliseconds: 300));
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', pauseAfter: const Duration(milliseconds: 300));
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer || _isBusy) return;
@@ -210,7 +210,7 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

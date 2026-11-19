@@ -33,7 +33,7 @@ const List<_Round> _rounds = [
     _ImageZone(label: 'قِطَّةٌ',  hasAlif: false, px: 215, py: 650),
   ]),
   _Round(imagePath: 'assets/images/games/circus/circus_round_3.webp', zones: [
-    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 245, py: 190, audioPath: 'audio/lessons/alif/words/p3_ras.mp3'),
+    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 245, py: 190, audioPath: 'audio/instructions/alif_trace_step_11.mp3'),
     _ImageZone(label: 'بِئْرٌ',   hasAlif: false, px: 450, py: 390),
     _ImageZone(label: 'نَحْلَةٌ', hasAlif: false, px: 200, py: 640),
   ]),
@@ -70,7 +70,7 @@ class _CircusGameState extends ConsumerState<CircusGame> {
     await AudioService.instance.playAsset('audio/instructions/alif_quiz_fish_explain.mp3', channel: AudioChannel.voice);
   }
   Future<void> _playCorrect() => AudioService.instance.playAsset('audio/stories/alif_correct.mp3', channel: AudioChannel.sfx);
-  Future<void> _playWrong() => AudioService.instance.playAsset('audio/instructions/alif_quiz_option_d.mp3', channel: AudioChannel.sfx);
+  Future<void> _playWrong() => AudioService.instance.playAsset('audio/feedback/try_again.mp3', channel: AudioChannel.sfx);
   Future<void> _playThisIsCorrect() => AudioService.instance.playAsset('audio/feedback/wow.mp3', channel: AudioChannel.voice);
 
   Future<void> _onTap(int idx) async {

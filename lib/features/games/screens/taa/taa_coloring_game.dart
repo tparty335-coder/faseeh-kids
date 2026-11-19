@@ -67,7 +67,7 @@ const List<_ColoringRound> _rounds = [
     correctWord: 'تِمْسَاح',
     correctAudio: 'audio/games/coloring/goodtmsah.mp3',
     revealAudio: 'audio/games/coloring/rongtems.mp3',
-    wordAudio: 'audio/lessons/taa/final/taa_word_timsah.mp3',
+    wordAudio: 'audio/lessons/taa/final/taa_word_p2_4.mp3',
     options: [
       _MaddOption(word: 'تَمْر', hasMadd: false),
       _MaddOption(word: 'بِنْت', hasMadd: false),
@@ -97,7 +97,7 @@ const List<_ColoringRound> _rounds = [
     correctWord: 'تُوت',
     correctAudio: 'audio/games/coloring/goodtoot.mp3',
     revealAudio: 'audio/games/coloring/rongtoot.mp3',
-    wordAudio: 'audio/lessons/taa/sounds/word_toot.mp3',
+    wordAudio: 'audio/games/fishing/taa_toot.mp3',
     options: [
       _MaddOption(word: 'أَرْنَب', hasMadd: false),
       _MaddOption(word: 'يَلْعَب', hasMadd: false),
@@ -226,11 +226,11 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
     _stopAudio();
     if (!_isWordSelected) {
       if (isFirstRound) {
-        await _say('audio/games/coloring/6_al15.mp3', maxMs: 2200); // «التلوين»
+        await _say('audio/instructions/alif_paint_intro.mp3', maxMs: 2200); // «التلوين»
         if (!_alive(tk) || _isWordSelected) return;
       }
       // «اضغط على الكلمة التي بها مد»
-      await _say('audio/games/coloring/3_qu2.mp3', maxMs: 4500);
+      await _say('audio/instructions/alif_paint_explain.mp3', maxMs: 4500);
     } else {
       // «لوّن الكلمة بألوانك المفضلة»
       await _say('audio/games/coloring/2_qu3.mp3', maxMs: 6000);
@@ -332,7 +332,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
         maxMs: 450,
         channel: AudioChannel.sfx,
       );
-      await _say('audio/games/fishing/ahsnt.mp3', maxMs: 2500); // «أحسنت»
+      await _say('audio/feedback/correct.mp3', maxMs: 2500); // «أحسنت»
       await _say(rd.wordAudio, maxMs: 2500); // نطق الكلمة
       if (mounted) _advance();
     } finally {
@@ -359,7 +359,7 @@ class _TaaColoringGameState extends ConsumerState<TaaColoringGame> {
       _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

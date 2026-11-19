@@ -133,7 +133,7 @@ const List<_Round> _rounds = [
         word: 'تُفَّاحَةٌ',
         isCorrect: true,
         color: Color(0xFFFF9EB5),
-        audioPath: 'audio/words_game/alif_word_apple.mp3',
+        audioPath: 'audio/instructions/alif_trace_step_02.mp3',
       ),
       _WordCard(
         word: 'أُمٌّ',
@@ -166,7 +166,7 @@ const List<_Round> _rounds = [
         word: 'بَابٌ',
         isCorrect: false,
         color: Color(0xFFFFD17A),
-        audioPath: 'audio/words_game/alif_word_door.mp3',
+        audioPath: 'audio/instructions/alif_trace_step_03.mp3',
       ),
     ],
     cardPxList: [230, 230, 230],

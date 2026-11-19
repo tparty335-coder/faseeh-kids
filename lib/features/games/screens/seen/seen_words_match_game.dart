@@ -49,7 +49,7 @@ class _Round {
 const List<_Round> _rounds = [
   // الجولة 1 (words1): فُسْتَان ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_1.webp',
+    imagePath: 'assets/images/games/match/seen/seen_match_1.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -57,7 +57,7 @@ const List<_Round> _rounds = [
     dropPy: 416.0,
     correctWord: 'فُسْتَان',
     wordAudio: 'audio/games/match/seen/seen_match_1.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'قَمِيص',   isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'قُبَّعَة',  isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -66,7 +66,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 2 (words2): يَرْسُم ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_2.webp',
+    imagePath: 'assets/images/games/match/seen/seen_match_2.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -74,7 +74,7 @@ const List<_Round> _rounds = [
     dropPy: 416.0,
     correctWord: 'يَرْسُم',
     wordAudio: 'audio/games/match/seen/seen_match_2.mp3',
-    praiseAudio: 'audio/games/beehive/3_raa.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
     cards: [
       _WordCard(word: 'يَرْسُم', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'يَأْكُل', isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -83,7 +83,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 3 (words3): سَبُّورَة ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_3.webp',
+    imagePath: 'assets/images/games/match/seen/seen_match_3.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -91,7 +91,7 @@ const List<_Round> _rounds = [
     dropPy: 416.0,
     correctWord: 'سَبُّورَة',
     wordAudio: 'audio/games/match/seen/seen_match_3.mp3',
-    praiseAudio: 'audio/games/beehive/2_sah.mp3',
+    praiseAudio: 'audio/feedback/smart.mp3',
     cards: [
       _WordCard(word: 'مُعَلِّم',  isCorrect: false, color: Color(0xFF5AC8FA)),
       _WordCard(word: 'سَبُّورَة', isCorrect: true,  color: Color(0xFFFF9EB5)),
@@ -100,7 +100,7 @@ const List<_Round> _rounds = [
   ),
   // الجولة 4 (words4): تِمْسَاح ✅ (800 × 446)
   _Round(
-    imagePath: 'assets/images/games/words/seen/seen_words_round_4.webp',
+    imagePath: 'assets/images/games/match/seen/seen_match_4.webp',
     imgH: 446,
     cardPx: 166.0,
     cardPyList: [128.0, 236.0, 353.0],
@@ -108,7 +108,7 @@ const List<_Round> _rounds = [
     dropPy: 416.0,
     correctWord: 'تِمْسَاح',
     wordAudio: 'audio/games/match/seen/seen_match_4.mp3',
-    praiseAudio: 'audio/games/beehive/4_momt.mp3',
+    praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
       _WordCard(word: 'تِمْسَاح', isCorrect: true,  color: Color(0xFF5AC8FA)),
       _WordCard(word: 'حُوت',    isCorrect: false, color: Color(0xFFFF9EB5)),
@@ -196,7 +196,7 @@ class _SeenWordsMatchGameState extends ConsumerState<SeenWordsMatchGame>
     await _say(_rounds[_round].wordAudio, maxMs: 2500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/fishing/hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onCardSelected(int cardIdx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -240,7 +240,7 @@ class _SeenWordsMatchGameState extends ConsumerState<SeenWordsMatchGame>
         });
 
         // إظهار الحل مع سماع اسم الكلمة كاملاً دون تداخل صوتي
-        await _say('audio/games/beehive/2_sah.mp3', maxMs: 2500);
+        await _say('audio/feedback/smart.mp3', maxMs: 2500);
         if (!mounted || t != _token) return;
         await _playWordAudio();
         if (!mounted || t != _token) return;
@@ -264,7 +264,7 @@ class _SeenWordsMatchGameState extends ConsumerState<SeenWordsMatchGame>
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

@@ -43,7 +43,7 @@ const List<_Round> _rounds = [
   _Round(
     imagePath: 'assets/images/games/circus/seen/seen_circus_round_1.webp',
     imgH: 456,
-    praiseAudio: 'audio/games/circus/7_ba62.mp3',
+    praiseAudio: 'audio/games/fishing/ba62.mp3',
     zones: [
       _ImageZone(label: 'شَمْعَة', hasRaa: false, px: 137, py: 95),
       _ImageZone(label: 'قَمَر',   hasRaa: false, px: 269, py: 232),
@@ -133,7 +133,7 @@ class _SeenCircusGameState extends ConsumerState<SeenCircusGame> {
     await _say('audio/games/circus/seen/seen_circus_prompt.mp3', maxMs: 6500);
   }
 
-  Future<void> _playWrong() => _say('audio/games/circus/4_hawe.mp3', maxMs: 2500);
+  Future<void> _playWrong() => _say('audio/feedback/try_again.mp3', maxMs: 2500);
 
   Future<void> _onTap(int idx) async {
     if (_roundDone || _showCorrectAnswer) return;
@@ -202,7 +202,7 @@ class _SeenCircusGameState extends ConsumerState<SeenCircusGame> {
       if (_score >= _rounds.length / 2) _confetti.play();
       try {
         AudioService.instance.playAsset(
-          'audio/games/fishing/ahsnt.mp3',
+          'audio/feedback/correct.mp3',
           channel: AudioChannel.voice,
         );
       } catch (_) {}

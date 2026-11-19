@@ -22,7 +22,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
 
   // ── الأهداف ──────────────────────────────────────────────────────────────
   objectives: ObjectivesSpec(
-    audioPath: 'audio/lessons/thaa/final/thaa_letter.mp3',
+    audioPath: 'audio/letters/core/thaa_name.mp3',
     objectives: [
       'أَتَعَرَّفُ عَلَى حَرْفِ الثَّاءِ (ث)',
       'أَنْطِقُ حَرْفَ الثَّاءِ بِالْحَرَكَاتِ الثَّلَاثِ',
@@ -83,7 +83,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
               right: 0.33,
               bottom: 0.47,
               isCorrect: false,
-              wordAudioPath: 'audio/lessons/thaa/sounds/word_thimar.mp3',
+              wordAudioPath: 'audio/letters/short_vowels/thaa_kasra.mp3',
             ),
             StoryTargetItem(
               label: 'ثُعْبَان',
@@ -92,7 +92,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
               right: 0.50,
               bottom: 0.55,
               isCorrect: false,
-              wordAudioPath: 'audio/lessons/thaa/sounds/word_thoban.mp3',
+              wordAudioPath: 'audio/letters/short_vowels/thaa_damma.mp3',
             ),
             StoryTargetItem(
               label: 'ثَابِت',
@@ -119,7 +119,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
               right: 0.33,
               bottom: 0.79,
               isCorrect: false,
-              wordAudioPath: 'audio/lessons/thaa/sounds/word_thalj.mp3',
+              wordAudioPath: 'audio/letters/short_vowels/thaa_fatha.mp3',
             ),
           ],
         ),
@@ -242,7 +242,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
             word: 'اِثْنَان',
             cardImagePath: '${_dir}thaa_words_p2_card_1.webp',
             cardHeight: 474,
-            audioPath: '${_audio}thaa_word_p2_1.mp3',
+            audioPath: 'audio/games/beehive/thaa/thaa_beehive_4.mp3',
             hotspot: WordHotspot(left: 0.512, top: 0.209, right: 0.945, bottom: 0.536),
             speakerOffset: Offset(0.163, 0.338),
             closeOffset: Offset(0.763, 0.338),
@@ -368,13 +368,13 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
 
   // ── الألعاب ──────────────────────────────────────────────────────────────
   games: GamesSpec(
-    fishingIntroAudio: '${_gamesAudio}fishing/sayd.mp3',
+    fishingIntroAudio: 'audio/letters/short_vowels/ha_fatha.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/thaa_fishing_question.mp3',
-    fishingWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
-    wordsMatchPromptAudio: '${_gamesAudio}words/thaa_words_instruction.mp3',
-    wordsMatchWrongAudio: '${_gamesAudio}fishing/hawe.mp3',
-    coloringIntroAudio: '${_gamesAudio}coloring/6_al15.mp3',
-    coloringStep1Audio: '${_gamesAudio}coloring/3_qu2.mp3',
+    fishingWrongAudio: 'audio/feedback/try_again.mp3',
+    wordsMatchPromptAudio: 'audio/instructions/words_drag_instruction.mp3',
+    wordsMatchWrongAudio: 'audio/feedback/try_again.mp3',
+    coloringIntroAudio: 'audio/instructions/alif_paint_intro.mp3',
+    coloringStep1Audio: 'audio/instructions/alif_paint_explain.mp3',
     coloringStep2Audio: '${_gamesAudio}coloring/2_qu3.mp3',
     coloringWrongAudio: '${_gamesAudio}coloring/5_al23.mp3',
     fishing: [
@@ -383,8 +383,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/thaa_fishing_round_1.webp',
         audioPath: '${_gamesAudio}fishing/thaa_thoban.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/common/encourage_1.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -398,8 +398,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/thaa_fishing_round_2.webp',
         audioPath: '${_gamesAudio}fishing/thaa_thallaja.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momtt.mp3',
+        correctPraiseAudio: 'audio/feedback/smart.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -413,8 +413,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/thaa_fishing_round_3.webp',
         audioPath: '${_gamesAudio}fishing/thaa_thalab.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/momt.mp3',
+        correctPraiseAudio: 'audio/feedback/correct.mp3',
+        roundEndPraiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -428,8 +428,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
         imagePath: '${_gamesDir}fishing/thaa_fishing_round_4.webp',
         audioPath: '${_gamesAudio}fishing/thaa_thalj.mp3',
         isCorrect: true,
-        correctPraiseAudio: '${_gamesAudio}fishing/sah.mp3',
-        roundEndPraiseAudio: '${_gamesAudio}fishing/ahsnt.mp3',
+        correctPraiseAudio: 'audio/feedback/smart.mp3',
+        roundEndPraiseAudio: 'audio/feedback/correct.mp3',
         imgW: 1024,
         imgH: 465,
         zones: [
@@ -440,12 +440,12 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       ),
     ],
     beehive: [
-      BeehiveRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_1.webp', audioPath: '${_gamesAudio}beehive/thaa/thaa_beehive_1.mp3'),
-      BeehiveRound(word: 'ثَلْج', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_2.webp', audioPath: '${_gamesAudio}beehive/thaa/thaa_beehive_2.mp3'),
-      BeehiveRound(word: 'ثَوْر', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_3.webp', audioPath: '${_gamesAudio}beehive/thaa/thaa_beehive_3.mp3'),
+      BeehiveRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_1.webp', audioPath: 'audio/games/circus/thaa/thaa_circus_3.mp3'),
+      BeehiveRound(word: 'ثَلْج', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_2.webp', audioPath: 'audio/games/fishing/thaa_thoban.mp3'),
+      BeehiveRound(word: 'ثَوْر', imagePath: '${_gamesDir}beehive/thaa/thaa_beehive_3.webp', audioPath: 'audio/games/fishing/thaa_thalj.mp3'),
     ],
     circus: [
-      CircusRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}circus/thaa/thaa_circus_1.webp', audioPath: '${_gamesAudio}circus/thaa/thaa_circus_1.mp3'),
+      CircusRound(word: 'ثَعْلَب', imagePath: '${_gamesDir}circus/thaa/thaa_circus_1.webp', audioPath: 'audio/games/fishing/thaa_thalab.mp3'),
       CircusRound(word: 'ثَلَاثَة', imagePath: '${_gamesDir}circus/thaa/thaa_circus_2.webp', audioPath: '${_gamesAudio}circus/thaa/thaa_circus_2.mp3'),
       CircusRound(word: 'ثَوْر', imagePath: '${_gamesDir}circus/thaa/thaa_circus_3.webp', audioPath: '${_gamesAudio}circus/thaa/thaa_circus_3.mp3'),
     ],
@@ -453,8 +453,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       WordsMatchPair(
         word: 'ثُعْبَان',
         imagePath: '${_gamesDir}words/thaa_words_round_1.webp',
-        audioPath: '${_soundsAudio}word_thoban.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        audioPath: 'audio/letters/short_vowels/thaa_damma.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 544,
         cardPx: 138,
@@ -470,8 +470,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       WordsMatchPair(
         word: 'ثَعْلَب',
         imagePath: '${_gamesDir}words/thaa_words_round_2.webp',
-        audioPath: '${_soundsAudio}word_thalab.mp3',
-        praiseAudio: '${_gamesAudio}beehive/3_raa.mp3',
+        audioPath: 'audio/games/fishing/thaa_thalab.mp3',
+        praiseAudio: 'audio/feedback/great.mp3',
         imgW: 1024,
         imgH: 504,
         cardPx: 134,
@@ -487,8 +487,8 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
       WordsMatchPair(
         word: 'ثَلْج',
         imagePath: '${_gamesDir}words/thaa_words_round_3.webp',
-        audioPath: '${_soundsAudio}word_thalj.mp3',
-        praiseAudio: '${_gamesAudio}beehive/2_sah.mp3',
+        audioPath: 'audio/letters/short_vowels/thaa_fatha.mp3',
+        praiseAudio: 'audio/feedback/smart.mp3',
         imgW: 1024,
         imgH: 508,
         cardPx: 134,
@@ -505,7 +505,7 @@ const LetterUnitManifest thaaManifest = LetterUnitManifest(
         word: 'ثُوم',
         imagePath: '${_gamesDir}words/thaa_words_round_4.webp',
         audioPath: '${_soundsAudio}word_thum.mp3',
-        praiseAudio: '${_gamesAudio}beehive/4_momt.mp3',
+        praiseAudio: 'audio/common/encourage_1.mp3',
         imgW: 1024,
         imgH: 521,
         cardPx: 133,

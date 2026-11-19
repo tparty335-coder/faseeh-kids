@@ -101,7 +101,7 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
         await _say(_games.coloringIntroAudio!, maxMs: 2500);
         if (!_alive(tk) || _isWordSelected) return;
       }
-      final step1 = _games.coloringStep1Audio ?? 'audio/games/coloring/3_qu2.mp3';
+      final step1 = _games.coloringStep1Audio ?? 'audio/instructions/alif_paint_explain.mp3';
       await _say(step1, maxMs: 4500);
     } else {
       final step2 = _games.coloringStep2Audio ?? 'audio/games/coloring/2_qu3.mp3';
@@ -207,7 +207,7 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
     _confetti.play();
     final rd = _rounds[_round];
     final wordAudio = rd.wordAudioPath ?? rd.introAudioPath;
-    final praise = _games.praiseFinishAudio ?? 'audio/games/fishing/ahsnt.mp3';
+    final praise = _games.praiseFinishAudio ?? 'audio/feedback/correct.mp3';
     await _say('audio/sfx/tap.mp3', maxMs: 450, channel: AudioChannel.sfx);
     if (!_alive(tk)) return;
     await _say(praise, maxMs: 2500);
@@ -234,7 +234,7 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
     if (_round + 1 >= _rounds.length) {
       setState(() => _gameOver = true);
       _confetti.play();
-      final fin = _games.praiseFinishAudio ?? 'audio/games/fishing/ahsnt.mp3';
+      final fin = _games.praiseFinishAudio ?? 'audio/feedback/correct.mp3';
       try {
         AudioService.instance.playAsset(fin, channel: AudioChannel.voice);
       } catch (_) {}
