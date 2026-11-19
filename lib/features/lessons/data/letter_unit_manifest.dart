@@ -439,6 +439,8 @@ class ColoringRound {
   final double wordH;
   final double cardCx;
   final List<double> cardCyList;
+  final double cardW;
+  final double cardH;
   const ColoringRound({
     required this.word,
     required this.bgImagePath,
@@ -457,6 +459,8 @@ class ColoringRound {
     this.wordH = 125,
     this.cardCx = 68,
     this.cardCyList = const [94, 219, 347],
+    this.cardW = 114,
+    this.cardH = 92,
   });
 }
 

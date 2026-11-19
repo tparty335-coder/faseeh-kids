@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
-import 'package:faseeh_kids/core/utils/responsive.dart';
 import 'package:faseeh_kids/features/games/screens/baa/baa_word_fishing_game.dart';
 import 'package:faseeh_kids/features/games/screens/baa/baa_beehive_game.dart';
 import 'package:faseeh_kids/features/games/screens/baa/baa_circus_game.dart';
@@ -165,17 +164,29 @@ class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
               fontFamily: 'Cairo',
             ),
           ),
-          SizedBox(height: isTablet ? 24 : 16),
-          // ── شبكة الألعاب ─────────────────────────────────────────────────
+          SizedBox(height: isTablet ? 16 : 12),
+          // ── شبكة الألعاب (5 بطاقات ظاهرة بالكامل على كل الشاشات) ──────────
           Expanded(
-            child: GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: isTablet ? 20 : 14,
-              mainAxisSpacing: isTablet ? 20 : 14,
-              childAspectRatio: context.gridAspectRatio,
-              children: _games.asMap().entries.map((entry) {
-                return _buildGameTile(entry.value, entry.key, isTablet);
-              }).toList(),
+            child: LayoutBuilder(
+              builder: (context, gridBox) {
+                final cols = gridBox.maxWidth >= 560 ? 3 : 2;
+                final rows = (_games.length / cols).ceil();
+                final spacing = gridBox.maxWidth >= 600 ? 14.0 : 10.0;
+                final cellW = (gridBox.maxWidth - (cols - 1) * spacing) / cols;
+                final cellH = ((gridBox.maxHeight - (rows - 1) * spacing) / rows)
+                    .clamp(96.0, 210.0);
+                final ratio = (cellW / cellH).clamp(1.1, 2.5);
+
+                return GridView.count(
+                  crossAxisCount: cols,
+                  crossAxisSpacing: spacing,
+                  mainAxisSpacing: spacing,
+                  childAspectRatio: ratio,
+                  children: _games.asMap().entries.map((entry) {
+                    return _buildGameTile(entry.value, entry.key, isTablet);
+                  }).toList(),
+                );
+              },
             ),
           ),
         ],
@@ -192,51 +203,65 @@ class _BaaGamesStationState extends ConsumerState<BaaGamesStation> {
         setState(() => _selectedGame = game.type);
       },
       child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: game.gradient,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: game.gradient.last.withValues(alpha: 0.4),
-              blurRadius: 12,
-              offset: const Offset(0, 6),
+              color: game.gradient.last.withValues(alpha: 0.35),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
             ),
           ],
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(game.emoji,
-                style: TextStyle(fontSize: isTablet ? 64 : 52)),
-            SizedBox(height: isTablet ? 16 : 10),
-            Text(
-              game.title,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: isTablet ? 20 : 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontFamily: 'Cairo',
-              ),
-            ),
-            SizedBox(height: isTablet ? 8 : 5),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Text(
-                game.subtitle,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: isTablet ? 14 : 11,
-                  color: Colors.white70,
-                  fontFamily: 'Cairo',
+        child: LayoutBuilder(
+          builder: (ctx, box) {
+            return FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.center,
+              child: SizedBox(
+                width: box.maxWidth,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(game.emoji,
+                        style: TextStyle(fontSize: isTablet ? 44 : 34)),
+                    const SizedBox(height: 6),
+                    Text(
+                      game.title,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: isTablet ? 18 : 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: 'Cairo',
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      game.subtitle,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: isTablet ? 12 : 11,
+                        color: Colors.white70,
+                        fontFamily: 'Cairo',
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ],
+            );
+          },
         ),
       )
           .animate(delay: Duration(milliseconds: index * 80))

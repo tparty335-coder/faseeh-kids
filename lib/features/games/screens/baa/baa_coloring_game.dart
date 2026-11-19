@@ -506,6 +506,8 @@ class _BaaColoringGameState extends ConsumerState<BaaColoringGame> {
     final isSelected = _selectedOption == i;
     final isCorrect = isSelected && opt.hasMadd;
     final isWrong = isSelected && !opt.hasMadd;
+    // ✅ إخفاء الكلمات الخاطئة بشكل موحد قبل اختيار الإجابة
+    final isDisabled = _wrongPressed.contains(i);
 
     return Positioned(
       left: ox + _cardCx * scaleX - cw / 2,
@@ -518,6 +520,15 @@ class _BaaColoringGameState extends ConsumerState<BaaColoringGame> {
         child: Stack(
           alignment: Alignment.center,
           children: [
+            if (isDisabled)
+              Container(
+                width: cw * 0.96,
+                height: ch * 0.92,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: Colors.black.withValues(alpha: 0.20),
+                ),
+              ),
             if (isSelected)
               Container(
                 width: cw * 0.96,

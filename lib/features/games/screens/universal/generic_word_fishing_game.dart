@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/games/widgets/universal_game_bottom_bar.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// لعبة صيد الكلمات الموحّدة — تُغذَّى بالكامل من LetterUnitManifest
@@ -130,6 +131,9 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
     HapticFeedback.lightImpact();
 
     final t = ++_token;
+    try {
+      AudioService.instance.stop();
+    } catch (_) {}
     final rd = _rounds[_round];
     final zones = _effectiveZones(rd);
     final zone = zones[idx];
@@ -290,8 +294,11 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
                         duration: const Duration(milliseconds: 180),
                         decoration: BoxDecoration(
                           color: fill,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: ring, width: ring == Colors.transparent ? 0 : 3),
+                          borderRadius: BorderRadius.circular(zh / 2),
+                          border: Border.all(
+                            color: ring,
+                            width: ring == Colors.transparent ? 0 : 3.5,
+                          ),
                         ),
                         child: badge != null
                             ? Center(child: Text(badge, style: const TextStyle(fontSize: 32)))
@@ -339,39 +346,13 @@ class _GenericWordFishingGameState extends State<GenericWordFishingGame> {
   }
 
   Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _round > 0 ? _prevRound : null,
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('السابق', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: () => _startRound(),
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'إعادة الصوت',
-          ),
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _advanceRound,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('التالي', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-        ],
-      ),
+    return UniversalGameBottomBar(
+      onPrevious: _round > 0 ? _prevRound : null,
+      onNext: _advanceRound,
+      onReplayAudio: () => _startRound(),
+      onGamesMenu: widget.onExit,
+      accentColor: widget.manifest.topBarColor,
+      isLastRound: _round + 1 >= _rounds.length,
     );
   }
 

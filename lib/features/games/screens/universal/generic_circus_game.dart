@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/games/widgets/universal_game_bottom_bar.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// لعبة السيرك الموحّدة — تُغذَّى بالكامل من LetterUnitManifest
@@ -71,7 +72,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
     ++_token;
     final prompt = _games.circusPromptAudio;
     if (prompt != null && prompt.isNotEmpty) {
-      await _say(prompt, maxMs: 5500);
+      await _say(prompt, maxMs: 6500);
     }
   }
 
@@ -116,6 +117,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
     if (_roundDone || _showCorrectAnswer || _rounds.isEmpty) return;
     HapticFeedback.lightImpact();
     final t = ++_token;
+    AudioService.instance.stop();
     final rd = _rounds[_round];
     final zones = _effectiveZones(rd);
     final zone = zones[idx];
@@ -248,7 +250,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
                   final z = zones[i];
                   final cx = ox + z.px * sx;
                   final cy = oy + z.py * sy;
-                  final r = 68.0 * sx;
+                  final r = 72.0 * sx * (rd.imgW / 800.0);
 
                   Color fill = Colors.transparent;
                   Color ring = Colors.transparent;
@@ -325,39 +327,13 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
   }
 
   Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _round > 0 ? _prev : null,
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('السابق', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: _playInstruction,
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'إعادة الصوت',
-          ),
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _advance,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('التالي', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-        ],
-      ),
+    return UniversalGameBottomBar(
+      onPrevious: _round > 0 ? _prev : null,
+      onNext: _advance,
+      onReplayAudio: _playInstruction,
+      onGamesMenu: widget.onExit,
+      accentColor: widget.manifest.topBarColor,
+      isLastRound: _round + 1 >= _rounds.length,
     );
   }
 

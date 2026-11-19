@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/games/widgets/universal_game_bottom_bar.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// لعبة التلوين الموحّدة — تُغذَّى بالكامل من LetterUnitManifest
@@ -132,6 +133,9 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
     HapticFeedback.lightImpact();
 
     final tk = ++_token;
+    try {
+      AudioService.instance.stop();
+    } catch (_) {}
     final rd = _rounds[_round];
     final opts = _effectiveOptions(rd);
     final opt = opts[idx];
@@ -141,41 +145,46 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
       _isProcessing = true;
     });
 
-    if (opt.isCorrect) {
-      setState(() {
-        _score++;
-        _isWordSelected = true;
-        _isProcessing = false;
-      });
-      _confetti.play();
-      await _say(rd.revealAudioPath, maxMs: 3800);
-      if (!_alive(tk)) return;
-      final step2 = _games.coloringStep2Audio ?? 'audio/games/coloring/2_qu3.mp3';
-      await _say(step2, maxMs: 5500);
-      return;
-    }
+    try {
+      if (opt.isCorrect) {
+        setState(() {
+          _score++;
+          _isWordSelected = true;
+          _isProcessing = false;
+        });
+        _confetti.play();
+        await _say(rd.revealAudioPath, maxMs: 3800);
+        if (!_alive(tk)) return;
+        final step2 = _games.coloringStep2Audio ?? 'audio/games/coloring/2_qu3.mp3';
+        await _say(step2, maxMs: 5500);
+        return;
+      }
 
-    _wrongPressed.add(idx);
-    final wrongIdxs = [for (int i = 0; i < opts.length; i++) if (!opts[i].isCorrect) i];
-    if (wrongIdxs.isNotEmpty && wrongIdxs.every(_wrongPressed.contains)) {
-      final revealWrong = rd.wrongRevealAudioPath ?? rd.revealAudioPath;
-      await _say(revealWrong, maxMs: 6500);
-      if (!_alive(tk)) return;
-      setState(() {
-        _selectedOption = opts.indexWhere((o) => o.isCorrect);
-        _isWordSelected = true;
-        _isProcessing = false;
-      });
-      final step2 = _games.coloringStep2Audio ?? 'audio/games/coloring/2_qu3.mp3';
-      await _say(step2, maxMs: 5500);
-    } else {
-      final wrong = _games.coloringWrongAudio ?? 'audio/games/coloring/5_al23.mp3';
-      await _say(wrong, maxMs: 3200);
-      if (!_alive(tk)) return;
-      setState(() {
-        _selectedOption = null;
-        _isProcessing = false;
-      });
+      _wrongPressed.add(idx);
+      final wrongIdxs = [for (int i = 0; i < opts.length; i++) if (!opts[i].isCorrect) i];
+      if (wrongIdxs.isNotEmpty && wrongIdxs.every(_wrongPressed.contains)) {
+        final revealWrong = rd.wrongRevealAudioPath ?? rd.revealAudioPath;
+        await _say(revealWrong, maxMs: 6500);
+        if (!_alive(tk)) return;
+        setState(() {
+          _selectedOption = opts.indexWhere((o) => o.isCorrect);
+          _isWordSelected = true;
+          _isProcessing = false;
+        });
+        final step2 = _games.coloringStep2Audio ?? 'audio/games/coloring/2_qu3.mp3';
+        await _say(step2, maxMs: 5500);
+      } else {
+        final wrong = _games.coloringWrongAudio ?? 'audio/games/coloring/5_al23.mp3';
+        await _say(wrong, maxMs: 3200);
+        if (!_alive(tk)) return;
+        setState(() {
+          _selectedOption = null;
+        });
+      }
+    } finally {
+      if (mounted && tk == _token) {
+        setState(() => _isProcessing = false);
+      }
     }
   }
 
@@ -294,14 +303,15 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
               children: [
                 Positioned.fill(child: Image.asset(rd.bgImagePath, fit: BoxFit.contain)),
 
-                // بطاقات الخطوة 1
+                // بطاقات الخطوة 1 (مناطق ضغط شفافة تماماً تحافظ على الخط الأصلي)
                 ...List.generate(opts.length, (i) {
                   final opt = opts[i];
-                  final cw = 114 * sx, ch = 92 * sy;
+                  final cw = rd.cardW * sx, ch = rd.cardH * sy;
                   final cy = rd.cardCyList[i % rd.cardCyList.length];
                   final isSel = _selectedOption == i;
                   final isCorr = isSel && opt.isCorrect;
                   final isWrong = isSel && !opt.isCorrect;
+                  final isWrongDimmed = !isSel && _wrongPressed.contains(i);
                   return Positioned(
                     left: ox + rd.cardCx * sx - cw / 2,
                     top: oy + cy * sy - ch / 2,
@@ -311,17 +321,39 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
                       behavior: HitTestBehavior.opaque,
                       onTap: () => _onOptionTap(i),
                       child: isSel
-                          ? Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(14),
-                                border: Border.all(
-                                  color: isCorr ? Colors.green.shade600 : Colors.red.shade600,
-                                  width: 3.5,
+                          ? Stack(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14),
+                                    border: Border.all(
+                                      color: isCorr ? Colors.green.shade600 : Colors.red.shade600,
+                                      width: 3.5,
+                                    ),
+                                    color: (isCorr ? Colors.green : Colors.red).withValues(alpha: 0.16),
+                                  ),
                                 ),
-                                color: (isCorr ? Colors.green : Colors.red).withValues(alpha: 0.16),
-                              ),
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    child: Icon(
+                                      isCorr ? Icons.check_circle_rounded : Icons.cancel_rounded,
+                                      color: isCorr ? Colors.green.shade600 : Colors.red.shade600,
+                                      size: (22 * sx).clamp(16.0, 28.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ).animate().shake(duration: isWrong ? 380.ms : 0.ms)
-                          : const SizedBox.expand(),
+                          : (isWrongDimmed
+                              ? Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14),
+                                    color: Colors.black.withValues(alpha: 0.14),
+                                  ),
+                                )
+                              : const SizedBox.expand()),
                     ),
                   );
                 }),
@@ -329,54 +361,59 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
                 // الخطوة 2: الكلمة المفرغة وشرائح التلوين
                 if (_isWordSelected) _buildHollowWord(rd, ox, oy, sx, sy),
 
-                // شريط الألوان أسفل الكلمة
+                // شريط الألوان أسفل الكلمة (متموضع نسبياً مع أبعاد الكلمة)
                 if (_isWordSelected)
-                  Positioned(
-                    left: ox + 162 * sx,
-                    top: oy + 345 * sy,
-                    width: 384 * sx,
-                    height: 60 * sy,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 8 * sx),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.94),
-                        borderRadius: BorderRadius.circular(22),
-                        border: Border.all(color: widget.manifest.topBarColor, width: 2),
-                      ),
-                      child: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: _palette.map((col) {
-                            final sel = _selectedPaletteColor == col;
-                            final sz = (sel ? 34.0 : 26.0) * sx;
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 2),
-                              child: GestureDetector(
-                                onTap: () {
-                                  HapticFeedback.selectionClick();
-                                  setState(() => _selectedPaletteColor = col);
-                                },
-                                child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 160),
-                                  width: sz.clamp(18.0, 42.0),
-                                  height: sz.clamp(18.0, 42.0),
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: col,
-                                    border: Border.all(
-                                      color: sel ? Colors.black : Colors.white,
-                                      width: sel ? 3 : 1.5,
+                  () {
+                    final palH = (58.0 * (rd.imgH / 450.0)) * sy;
+                    final palTop = (oy + (rd.wordY + rd.wordH + 14.0 * (rd.imgH / 450.0)) * sy)
+                        .clamp(oy, oy + dH - palH - 4);
+                    return Positioned(
+                      left: ox + rd.wordX * sx,
+                      top: palTop,
+                      width: rd.wordW * sx,
+                      height: palH,
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 8 * sx),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.94),
+                          borderRadius: BorderRadius.circular(22),
+                          border: Border.all(color: widget.manifest.topBarColor, width: 2),
+                        ),
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: _palette.map((col) {
+                              final sel = _selectedPaletteColor == col;
+                              final sz = (sel ? 34.0 : 26.0) * sx;
+                              return Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 2),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    HapticFeedback.selectionClick();
+                                    setState(() => _selectedPaletteColor = col);
+                                  },
+                                  child: AnimatedContainer(
+                                    duration: const Duration(milliseconds: 160),
+                                    width: sz.clamp(18.0, 42.0),
+                                    height: sz.clamp(18.0, 42.0),
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: col,
+                                      border: Border.all(
+                                        color: sel ? Colors.black : Colors.white,
+                                        width: sel ? 3 : 1.5,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            );
-                          }).toList(),
+                              );
+                            }).toList(),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
+                    );
+                  }(),
 
                 Positioned(
                   top: 8,
@@ -479,39 +516,13 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
   }
 
   Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _round > 0 ? _prev : null,
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('السابق', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: () => _playRoundIntro(),
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'إعادة الصوت',
-          ),
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _advance,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('التالي', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-        ],
-      ),
+    return UniversalGameBottomBar(
+      onPrevious: _round > 0 ? _prev : null,
+      onNext: _advance,
+      onReplayAudio: () => _playRoundIntro(),
+      onGamesMenu: widget.onExit,
+      accentColor: widget.manifest.topBarColor,
+      isLastRound: _round + 1 >= _rounds.length,
     );
   }
 

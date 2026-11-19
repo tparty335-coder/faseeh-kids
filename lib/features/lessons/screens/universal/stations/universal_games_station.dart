@@ -7,7 +7,6 @@ import 'package:faseeh_kids/features/games/screens/universal/generic_circus_game
 import 'package:faseeh_kids/features/games/screens/universal/generic_words_match_game.dart';
 import 'package:faseeh_kids/features/games/screens/universal/generic_coloring_game.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
-import 'package:faseeh_kids/core/utils/responsive.dart';
 
 enum _GameType { fishing, beehive, circus, words, coloring }
 
@@ -69,16 +68,41 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
       return Column(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             color: widget.manifest.topBarColor,
             child: Row(
               children: [
-                IconButton(
-                  onPressed: _backToMenu,
-                  icon: const Icon(Icons.arrow_forward_rounded, color: Colors.white),
-                  tooltip: 'العودة للألعاب',
+                Tooltip(
+                  message: 'العودة للألعاب',
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      HapticFeedback.lightImpact();
+                      _backToMenu();
+                    },
+                    icon: const Icon(Icons.apps_rounded, size: 19),
+                    label: const Text(
+                      'قائمة الألعاب',
+                      style: TextStyle(
+                        fontFamily: 'Cairo',
+                        fontWeight: FontWeight.w800,
+                        fontSize: 13,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: widget.manifest.topBarColor,
+                      elevation: 2,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 8,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                    ),
+                  ),
                 ),
-                const SizedBox(width: 6),
+                const SizedBox(width: 10),
                 Expanded(
                   child: Text(
                     _gameTitle(_selectedGame!),
@@ -145,7 +169,6 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isLandscape = constraints.maxWidth > constraints.maxHeight;
         final isTablet = constraints.maxWidth >= 600;
 
         return Column(
@@ -178,7 +201,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -189,19 +212,20 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         AudioService.instance.stop();
                         widget.onPrevious();
                       },
-                      icon: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
+                      icon: const Icon(Icons.arrow_forward_rounded, size: 18),
                       label: const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
                           'السابق',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.w800),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey.shade200,
-                        foregroundColor: Colors.black87,
-                        elevation: 0,
+                        backgroundColor: const Color(0xFF1E88E5),
+                        foregroundColor: Colors.white,
+                        elevation: 2,
+                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
                       ),
                     ),
@@ -214,18 +238,20 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         AudioService.instance.stop();
                         widget.onNext();
                       },
-                      icon: const Icon(Icons.arrow_back_ios_rounded, size: 16),
+                      icon: const Icon(Icons.arrow_back_rounded, size: 18),
                       label: const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
                           'إنهاء الدرس 🎉',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.w800),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: m.topBarColor,
                         foregroundColor: Colors.white,
+                        elevation: 2,
+                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
                       ),
                     ),
@@ -234,16 +260,27 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
               ),
             ),
             Expanded(
-              child: GridView.builder(
-                padding: EdgeInsets.all(isTablet ? 18 : 12),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: isLandscape ? 3 : 2,
-                  crossAxisSpacing: isTablet ? 14 : 10,
-                  mainAxisSpacing: isTablet ? 14 : 10,
-                  childAspectRatio: context.isTablet ? 1.15 : (context.screenWidth < 400 ? 1.0 : 0.95),
-                ),
-                itemCount: cards.length,
-                itemBuilder: (ctx, i) {
+              child: Padding(
+                padding: EdgeInsets.all(isTablet ? 16 : 12),
+                child: LayoutBuilder(
+                  builder: (context, gridBox) {
+                    final cols = gridBox.maxWidth >= 560 ? 3 : 2;
+                    final rows = (cards.length / cols).ceil();
+                    final spacing = gridBox.maxWidth >= 600 ? 14.0 : 10.0;
+                    final cellW = (gridBox.maxWidth - (cols - 1) * spacing) / cols;
+                    final cellH = ((gridBox.maxHeight - (rows - 1) * spacing) / rows)
+                        .clamp(96.0, 210.0);
+                    final ratio = (cellW / cellH).clamp(1.1, 2.5);
+
+                    return GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: cols,
+                        crossAxisSpacing: spacing,
+                        mainAxisSpacing: spacing,
+                        childAspectRatio: ratio,
+                      ),
+                      itemCount: cards.length,
+                      itemBuilder: (ctx, i) {
                   final (emoji, title, subtitle, type, grad) = cards[i];
                   return GestureDetector(
                     onTap: () {
@@ -314,8 +351,11 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         },
                       ),
                     ),
-                  );
-                },
+                        );
+                      },
+                    );
+                  },
+                ),
               ),
             ),
           ],

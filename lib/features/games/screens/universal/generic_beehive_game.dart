@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/games/widgets/universal_game_bottom_bar.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// لعبة خلية النحل الموحّدة — تُغذَّى بالكامل من LetterUnitManifest
@@ -115,6 +116,7 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
     if (_roundDone || _showCorrectAnswer || _rounds.isEmpty) return;
     HapticFeedback.lightImpact();
     final t = ++_token;
+    AudioService.instance.stop();
     final rd = _rounds[_round];
     final cells = _effectiveCells(rd);
     final cell = cells[idx];
@@ -234,15 +236,16 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
               oy = 0;
             }
             final sx = dW / rd.imgW, sy = dH / rd.imgH;
+            final ref = rd.imgW / 800.0;
 
             return Stack(
               children: [
                 Positioned.fill(child: Image.asset(rd.imagePath, fit: BoxFit.contain)),
                 Positioned(
-                  left: ox + rd.speakerPx * sx - 28 * sx,
-                  top: oy + rd.speakerPy * sy - 28 * sy,
-                  width: 56 * sx,
-                  height: 56 * sy,
+                  left: ox + rd.speakerPx * sx - 32 * sx * ref,
+                  top: oy + rd.speakerPy * sy - 32 * sy * ref,
+                  width: 64 * sx * ref,
+                  height: 64 * sy * ref,
                   child: GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: _playCurrentWordOnly,
@@ -251,7 +254,7 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
                 ),
                 ...List.generate(cells.length, (i) {
                   final cell = cells[i];
-                  final r = 40.0 * sx;
+                  final r = 42.0 * sx * ref;
                   final cx = ox + cell.px * sx;
                   final cy = oy + cell.py * sy;
 
@@ -330,39 +333,13 @@ class _GenericBeehiveGameState extends State<GenericBeehiveGame> {
   }
 
   Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _round > 0 ? _prev : null,
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('السابق', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: _playCurrentWordOnly,
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'سماع الكلمة',
-          ),
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _advance,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('التالي', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-        ],
-      ),
+    return UniversalGameBottomBar(
+      onPrevious: _round > 0 ? _prev : null,
+      onNext: _advance,
+      onReplayAudio: _playCurrentWordOnly,
+      onGamesMenu: widget.onExit,
+      accentColor: widget.manifest.topBarColor,
+      isLastRound: _round + 1 >= _rounds.length,
     );
   }
 

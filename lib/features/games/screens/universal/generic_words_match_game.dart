@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/games/widgets/universal_game_bottom_bar.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 /// لعبة مطابقة الكلمات الموحّدة — تُغذَّى بالكامل من LetterUnitManifest
@@ -111,6 +112,9 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
     if (_roundDone || _showCorrectAnswer || _rounds.isEmpty) return;
     HapticFeedback.mediumImpact();
     final t = ++_token;
+    try {
+      AudioService.instance.stop();
+    } catch (_) {}
     final rd = _rounds[_round];
     final cards = _effectiveCards(rd);
     final card = cards[cardIdx];
@@ -231,16 +235,20 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
               oy = 0;
             }
             final sx = dW / rd.imgW, sy = dH / rd.imgH;
+            final refX = rd.imgW / 800.0;
+            final refY = rd.imgH / 446.0;
+            final dropW = 165 * refX * sx;
+            final dropH = 54 * refY * sy;
 
             return Stack(
               children: [
                 Positioned.fill(child: Image.asset(rd.imagePath, fit: BoxFit.contain)),
                 // منطقة الإسقاط
                 Positioned(
-                  left: ox + rd.dropPx * sx - 80 * sx,
-                  top: oy + rd.dropPy * sy - 26 * sy,
-                  width: 160 * sx,
-                  height: 52 * sy,
+                  left: ox + rd.dropPx * sx - dropW / 2,
+                  top: oy + rd.dropPy * sy - dropH / 2,
+                  width: dropW,
+                  height: dropH,
                   child: DragTarget<int>(
                     onWillAcceptWithDetails: (_) {
                       setState(() => _isDraggingOver = true);
@@ -273,7 +281,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                                   _droppedWord!,
                                   style: TextStyle(
                                     fontFamily: 'Cairo',
-                                    fontSize: (22 * sx).clamp(12.0, 28.0),
+                                    fontSize: (22 * refX * sx).clamp(12.0, 28.0),
                                     fontWeight: FontWeight.bold,
                                     color: Colors.green.shade900,
                                   ),
@@ -284,11 +292,11 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                     },
                   ),
                 ),
-                // بطاقات الاختيار (نقر أو سحب)
+                // بطاقات الاختيار (نقر أو سحب — اللمس أولاً دون أي حاجز)
                 ...List.generate(cards.length, (i) {
                   final card = cards[i];
                   final py = rd.cardPyList[i % rd.cardPyList.length];
-                  final cardW = 104 * sx, cardH = 68 * sy;
+                  final cardW = 112 * refX * sx, cardH = 68 * refY * sy;
                   final cx = ox + rd.cardPx * sx;
                   final cy = oy + py * sy;
                   final isShaking = _shakingCard == i;
@@ -306,6 +314,8 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                     ),
                   );
 
+                  final displayedBox = isShaking ? box.animate().shake(duration: 380.ms) : box;
+
                   return Positioned(
                     left: cx - cardW / 2,
                     top: cy - cardH / 2,
@@ -313,34 +323,43 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                     height: cardH,
                     child: isDone
                         ? box
-                        : Draggable<int>(
-                            data: i,
-                            feedback: Material(
-                              color: Colors.transparent,
-                              child: Container(
-                                width: cardW,
-                                height: cardH,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: Color(card.colorValue ?? 0xFF5AC8FA).withValues(alpha: 0.92),
-                                  borderRadius: BorderRadius.circular(14),
-                                ),
-                                child: Text(
-                                  card.label,
-                                  style: TextStyle(
-                                    fontFamily: 'Cairo',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: (20 * sx).clamp(12.0, 24.0),
-                                    color: Colors.black87,
+                        : GestureDetector(
+                            behavior: HitTestBehavior.opaque,
+                            onTap: () => _onCardSelected(i),
+                            child: Draggable<int>(
+                              data: i,
+                              maxSimultaneousDrags: isDone ? 0 : 1,
+                              feedback: Material(
+                                color: Colors.transparent,
+                                child: Container(
+                                  width: cardW,
+                                  height: cardH,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: Color(card.colorValue ?? 0xFF5AC8FA).withValues(alpha: 0.92),
+                                    borderRadius: BorderRadius.circular(14),
+                                    border: Border.all(color: Colors.white, width: 2),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withValues(alpha: 0.22),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 4),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Text(
+                                    card.label,
+                                    style: TextStyle(
+                                      fontFamily: 'Cairo',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: (20 * refX * sx).clamp(12.0, 24.0),
+                                      color: Colors.black87,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            childWhenDragging: Opacity(opacity: 0.3, child: box),
-                            child: GestureDetector(
-                              behavior: HitTestBehavior.opaque,
-                              onTap: () => _onCardSelected(i),
-                              child: isShaking ? box.animate().shake(duration: 380.ms) : box,
+                              childWhenDragging: Opacity(opacity: 0.3, child: box),
+                              child: displayedBox,
                             ),
                           ),
                   );
@@ -385,39 +404,13 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
   }
 
   Widget _buildBottomBar() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _round > 0 ? _prev : null,
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('السابق', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: _playInstruction,
-            icon: const Icon(Icons.volume_up_rounded),
-            tooltip: 'إعادة الصوت',
-          ),
-          Flexible(
-            child: TextButton.icon(
-              onPressed: _advance,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 15),
-              label: const FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text('التالي', maxLines: 1, style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ),
-        ],
-      ),
+    return UniversalGameBottomBar(
+      onPrevious: _round > 0 ? _prev : null,
+      onNext: _advance,
+      onReplayAudio: _playInstruction,
+      onGamesMenu: widget.onExit,
+      accentColor: widget.manifest.topBarColor,
+      isLastRound: _round + 1 >= _rounds.length,
     );
   }
 
