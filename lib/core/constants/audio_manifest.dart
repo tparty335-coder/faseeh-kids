@@ -144,6 +144,7 @@ class AudioManifest {
     'assets/audio/games/circus/taa/taa_circus_1.mp3',
     'assets/audio/games/circus/taa/taa_circus_2.mp3',
     'assets/audio/games/circus/taa/taa_circus_3.mp3',
+    'assets/audio/games/circus/taa/taa_circus_prompt.mp3',
     'assets/audio/games/circus/taa_al106.mp3',
     'assets/audio/games/circus/taa_al92.mp3',
     'assets/audio/games/circus/taa_t/taa_t_circus_1.mp3',

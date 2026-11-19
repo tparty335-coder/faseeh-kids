@@ -142,6 +142,7 @@ const Map<String, int> kAudioClipDurationsMs = {
   'audio/games/circus/taa/taa_circus_1.mp3': 1828,
   'audio/games/circus/taa/taa_circus_2.mp3': 1959,
   'audio/games/circus/taa/taa_circus_3.mp3': 1567,
+  'audio/games/circus/taa/taa_circus_prompt.mp3': 6150,
   'audio/games/circus/taa_al106.mp3': 862,
   'audio/games/circus/taa_al92.mp3': 1254,
   'audio/games/circus/taa_t/taa_t_circus_1.mp3': 1149,

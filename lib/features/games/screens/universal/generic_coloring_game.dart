@@ -82,14 +82,16 @@ class _GenericColoringGameState extends State<GenericColoringGame> {
 
   Future<void> _say(String path, {int maxMs = 4500, AudioChannel channel = AudioChannel.voice}) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: channel);
-      final done = AudioService.instance.onPlayerComplete(channel);
-      if (done != null) {
-        await done.first.timeout(Duration(milliseconds: maxMs), onTimeout: () {});
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await () async {
+        await AudioService.instance.stop();
+        await AudioService.instance.playAsset(path, channel: channel);
+        final done = AudioService.instance.onPlayerComplete(channel);
+        if (done != null) {
+          await done.first;
+        } else {
+          await Future.delayed(Duration(milliseconds: maxMs));
+        }
+      }().timeout(Duration(milliseconds: maxMs), onTimeout: () {});
     } catch (_) {}
   }
 

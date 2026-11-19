@@ -216,6 +216,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْفَتْحَةُ (تَ)',
           'vowelMark': 'تَ',
           'color': const Color(0xFFE53935),
+          'vowelAudio': 'audio/letters/short_vowels/taa_fatha.mp3',
           'explanation': 'الْفَتْحَةُ شَرْطَةٌ مَائِلَةٌ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تَ)',
           'ruleAudio': 'audio/letters/short_vowels/taa_fatha_rule.mp3',
           'examples': [
@@ -232,6 +233,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الضَّمَّةُ (تُ)',
           'vowelMark': 'تُ',
           'color': const Color(0xFFFF6F00),
+          'vowelAudio': 'audio/letters/short_vowels/taa_damma.mp3',
           'explanation': 'الضَّمَّةُ وَاوٌ صَغِيرَةٌ تُوضَعُ فَوْقَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تُ)',
           'ruleAudio': 'audio/letters/short_vowels/taa_damma_rule.mp3',
           'examples': [
@@ -248,6 +250,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
           'label': 'الْكَسْرَةُ (تِ)',
           'vowelMark': 'تِ',
           'color': const Color(0xFF1E88E5),
+          'vowelAudio': 'audio/letters/short_vowels/taa_kasra.mp3',
           'explanation': 'الْكَسْرَةُ شَرْطَةٌ مَائِلَةٌ تُوضَعُ تَحْتَ الْحَرْفِ فَيُصْبِحُ صَوْتُهُ (تِ)',
           'ruleAudio': 'audio/letters/short_vowels/taa_kasra_rule.mp3',
           'examples': [
