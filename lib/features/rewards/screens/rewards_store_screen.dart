@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 import 'package:faseeh_kids/features/rewards/logic/rewards_provider.dart';
 import 'package:faseeh_kids/features/rewards/widgets/badge_card.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -79,11 +80,11 @@ class RewardsStoreScreen extends ConsumerWidget {
                   SliverPadding(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0).copyWith(bottom: 24.0),
                     sliver: SliverGrid(
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: context.gridColumns,
                         mainAxisSpacing: 16.0,
                         crossAxisSpacing: 16.0,
-                        childAspectRatio: 0.8,
+                        childAspectRatio: context.gridAspectRatio,
                       ),
                       delegate: SliverChildBuilderDelegate(
                         (context, index) {

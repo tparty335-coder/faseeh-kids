@@ -7,6 +7,7 @@ import 'package:faseeh_kids/features/games/screens/universal/generic_circus_game
 import 'package:faseeh_kids/features/games/screens/universal/generic_words_match_game.dart';
 import 'package:faseeh_kids/features/games/screens/universal/generic_coloring_game.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 
 enum _GameType { fishing, beehive, circus, words, coloring }
 
@@ -239,7 +240,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                   crossAxisCount: isLandscape ? 3 : 2,
                   crossAxisSpacing: isTablet ? 14 : 10,
                   mainAxisSpacing: isTablet ? 14 : 10,
-                  childAspectRatio: isTablet ? 1.15 : 0.95,
+                  childAspectRatio: context.isTablet ? 1.15 : (context.screenWidth < 400 ? 1.0 : 0.95),
                 ),
                 itemCount: cards.length,
                 itemBuilder: (ctx, i) {

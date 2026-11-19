@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:faseeh_kids/features/games/screens/word_fishing_game.dart';
 import 'package:faseeh_kids/features/games/screens/beehive_game.dart';
@@ -142,7 +143,7 @@ class _GamesActivityScreenState extends ConsumerState<GamesActivityScreen> {
               crossAxisCount: 2,
               crossAxisSpacing: isTablet ? 20 : 14,
               mainAxisSpacing: isTablet ? 20 : 14,
-              childAspectRatio: 0.9,
+              childAspectRatio: context.gridAspectRatio,
               children: _games.asMap().entries.map((entry) {
                 return _buildGameTile(entry.value, entry.key, isTablet);
               }).toList(),

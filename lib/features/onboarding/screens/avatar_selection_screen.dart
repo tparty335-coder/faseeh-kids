@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 
 class AvatarSelectionScreen extends StatefulWidget {
   final AgeGroup? ageGroup;
@@ -93,6 +94,8 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     final isTablet = size.width > 600;
+    final cardW = context.screenWidth / context.gridColumns;
+    final avatarSize = (cardW * 0.48).clamp(60.0, 115.0);
 
     return Directionality(
       textDirection: TextDirection.rtl,
@@ -170,10 +173,10 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                     child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: isTablet ? 18 : 12,
-                        mainAxisSpacing: isTablet ? 18 : 12,
-                        childAspectRatio: isTablet ? 0.88 : 0.82,
+                        crossAxisCount: context.gridColumns,
+                        crossAxisSpacing: 12 * context.screenScale,
+                        mainAxisSpacing: 12 * context.screenScale,
+                        childAspectRatio: context.gridAspectRatio,
                       ),
                       itemCount: _avatars.length,
                       itemBuilder: (context, index) {
@@ -228,8 +231,8 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                   children: [
                                     // 3D Avatar Image
                                     Container(
-                                      width: isTablet ? 115 : 75,
-                                      height: isTablet ? 115 : 75,
+                                      width: avatarSize,
+                                      height: avatarSize,
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Colors.white.withValues(alpha: 0.15),
@@ -263,7 +266,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                     Text(
                                       avatar.label,
                                       style: TextStyle(
-                                        fontSize: isTablet ? 20 : 15,
+                                        fontSize: context.scaledFont(18),
                                         fontWeight: FontWeight.w900,
                                         color: Colors.white,
                                         fontFamily: 'Cairo',
@@ -277,7 +280,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                     Text(
                                       avatar.title,
                                       style: TextStyle(
-                                        fontSize: isTablet ? 13 : 11,
+                                        fontSize: context.scaledFont(12),
                                         fontWeight: FontWeight.w600,
                                         color: Colors.white.withValues(alpha: 0.95),
                                         fontFamily: 'Cairo',
@@ -328,7 +331,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                       onTap: _proceed,
                       child: Container(
                         width: double.infinity,
-                        height: isTablet ? 66 : 56,
+                        height: (58 * context.screenScale).clamp(50.0, 72.0),
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             colors: [Color(0xFFFFD54F), Color(0xFFFF8F00)],
@@ -348,7 +351,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                             Text(
                               'التالي',
                               style: TextStyle(
-                                fontSize: isTablet ? 24 : 20,
+                                fontSize: context.scaledFont(22),
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
                                 fontFamily: 'Cairo',

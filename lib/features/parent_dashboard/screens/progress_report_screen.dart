@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 import '../logic/parent_provider.dart';
 import '../widgets/progress_chart.dart';
 
@@ -59,8 +60,8 @@ class ProgressReportScreen extends ConsumerWidget {
                   child: GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 7,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: context.screenWidth < 400 ? 5 : 7,
                       childAspectRatio: 1,
                       crossAxisSpacing: 8,
                       mainAxisSpacing: 8,

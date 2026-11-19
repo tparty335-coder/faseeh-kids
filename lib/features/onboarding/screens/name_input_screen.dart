@@ -6,6 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
 import 'package:faseeh_kids/core/utils/constants.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 
 class NameInputScreen extends StatefulWidget {
   final AgeGroup ageGroup;
@@ -71,6 +72,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     final isTablet = size.width > 600;
+    final sx = context.screenScale;
     final emoji = widget.avatarIndex < _avatarEmojis.length
         ? _avatarEmojis[widget.avatarIndex]
         : '🦅';
@@ -91,7 +93,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
           ),
           child: SafeArea(
             child: SingleChildScrollView(
-              padding: EdgeInsets.symmetric(horizontal: isTablet ? 60 : 28),
+              padding: EdgeInsets.symmetric(horizontal: (context.screenWidth * 0.1).clamp(20.0, 80.0)),
               child: Form(
                 key: _formKey,
                 child: Column(
@@ -120,12 +122,12 @@ class _NameInputScreenState extends State<NameInputScreen> {
                       ),
                     ),
 
-                    SizedBox(height: isTablet ? 40 : 24),
+                    SizedBox(height: 28 * sx),
 
                     // ─── Big Avatar ───
                     Container(
-                      width: isTablet ? 180 : 140,
-                      height: isTablet ? 180 : 140,
+                      width: (context.screenWidth * 0.35).clamp(120.0, 180.0),
+                      height: (context.screenWidth * 0.35).clamp(120.0, 180.0),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         gradient: const LinearGradient(
@@ -142,14 +144,14 @@ class _NameInputScreenState extends State<NameInputScreen> {
                       child: Center(
                         child: Text(
                           emoji,
-                          style: TextStyle(fontSize: isTablet ? 90 : 70),
+                          style: TextStyle(fontSize: context.scaledFont(80, min: 56.0, max: 100.0)),
                         ),
                       ),
                     )
                     .animate(onPlay: (c) => c.repeat(reverse: true))
                     .scaleXY(end: 1.06, duration: 2.seconds, curve: Curves.easeInOut),
 
-                    SizedBox(height: isTablet ? 40 : 28),
+                    SizedBox(height: 32 * sx),
 
                     // ─── Title ───
                     Text(
@@ -173,7 +175,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
                       ),
                     ).animate().fadeIn(delay: 200.ms),
 
-                    SizedBox(height: isTablet ? 40 : 28),
+                    SizedBox(height: 32 * sx),
 
                     // ─── Name Field ───
                     TextFormField(

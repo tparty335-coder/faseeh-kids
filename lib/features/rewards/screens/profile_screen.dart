@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 import 'package:faseeh_kids/features/rewards/logic/rewards_provider.dart';
 import 'package:faseeh_kids/features/rewards/widgets/stat_card.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -160,7 +161,7 @@ class ProfileScreen extends ConsumerWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
-                childAspectRatio: 1.5,
+                childAspectRatio: context.screenWidth < 400 ? 1.3 : 1.5,
                 children: [
                   StatCard(
                     icon: Icons.flash_on_rounded,

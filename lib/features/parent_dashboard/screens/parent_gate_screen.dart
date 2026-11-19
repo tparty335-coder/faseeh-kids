@@ -6,6 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 
 class ParentGateScreen extends StatefulWidget {
   final String? targetRoute;
@@ -243,9 +244,9 @@ class _ParentGateScreenState extends State<ParentGateScreen> {
                         GridView.builder(
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
-                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            childAspectRatio: 1.5,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: context.gridColumns,
+                            childAspectRatio: context.screenWidth < 400 ? 1.3 : 1.5,
                             crossAxisSpacing: 16,
                             mainAxisSpacing: 16,
                           ),
