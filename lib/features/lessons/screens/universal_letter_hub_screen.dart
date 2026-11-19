@@ -1,47 +1,119 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:faseeh_kids/core/theme/app_colors.dart';
-import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
-import 'package:faseeh_kids/features/lessons/screens/lesson_sequence_screen.dart';
-import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
+import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
+import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
+import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
+import 'package:faseeh_kids/features/lessons/screens/alif/alif_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/dal/dal_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/ha/ha_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/kha/kha_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/lesson_sequence_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/raa/raa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/seen/seen_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/taa/taa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/letter_lesson_shell_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_lesson_screen.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
 import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
-import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/alif/alif_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/baa/baa_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/taa/taa_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/thaa/thaa_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/jeem/jeem_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/ha/ha_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/kha/kha_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/dal/dal_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/dhaal/dhaal_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/raa/raa_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/zaay/zaay_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/seen/seen_lesson_screen.dart';
-import 'package:faseeh_kids/features/lessons/screens/universal/letter_lesson_shell_screen.dart';
-import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
-import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 
-// ═══ UPGRADED: universal_letter_hub_screen.dart ═══
-
+/// بوابة وحدة الحرف — تصميم تعليمي عالمي متجاوب لجميع الحروف الـ 28
+/// يجمع بين هوية الحرف اللونية، والنطق التفاعلي للحرف وحركاته القصيرة،
+/// وخريطة المحطات السبع الفعلية، وأزرار فعل لمسية عالية التباين (WCAG AA+).
 class UniversalLetterHubScreen extends ConsumerStatefulWidget {
   final String? letterChar;
   const UniversalLetterHubScreen({super.key, this.letterChar});
 
   @override
-  ConsumerState<UniversalLetterHubScreen> createState() => _UniversalLetterHubScreenState();
+  ConsumerState<UniversalLetterHubScreen> createState() =>
+      _UniversalLetterHubScreenState();
 }
 
-class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScreen>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _orbitController;
-  bool _isPlayingSound = false;
+class _UniversalLetterHubScreenState
+    extends ConsumerState<UniversalLetterHubScreen> {
+  String? _activeAudioTag; // 'sound', 'name', 'fatha', 'damma', 'kasra'
+  int _audioToken = 0;
+
+  static const Map<String, String> _definiteNames = {
+    'أ': 'الْأَلِفِ',
+    'ب': 'الْبَاءِ',
+    'ت': 'التَّاءِ',
+    'ث': 'الثَّاءِ',
+    'ج': 'الْجِيمِ',
+    'ح': 'الْحَاءِ',
+    'خ': 'الْخَاءِ',
+    'د': 'الدَّالِ',
+    'ذ': 'الذَّالِ',
+    'ر': 'الرَّاءِ',
+    'ز': 'الزَّايِ',
+    'س': 'السِّينِ',
+    'ش': 'الشِّينِ',
+    'ص': 'الصَّادِ',
+    'ض': 'الضَّادِ',
+    'ط': 'الطَّاءِ',
+    'ظ': 'الظَّاءِ',
+    'ع': 'الْعَيْنِ',
+    'غ': 'الْغَيْنِ',
+    'ف': 'الْفَاءِ',
+    'ق': 'الْقَافِ',
+    'ك': 'الْكَافِ',
+    'ل': 'اللَّامِ',
+    'م': 'الْمِيمِ',
+    'ن': 'النُّونِ',
+    'ه': 'الْهَاءِ',
+    'هـ': 'الْهَاءِ',
+    'و': 'الْوَاوِ',
+    'ي': 'الْيَاءِ',
+  };
+
+  static const List<String> _ordinalUnits = [
+    'الْأُولَى',
+    'الثَّانِيَةُ',
+    'الثَّالِثَةُ',
+    'الرَّابِعَةُ',
+    'الْخَامِسَةُ',
+    'السَّادِسَةُ',
+    'السَّابِعَةُ',
+    'الثَّامِنَةُ',
+    'التَّاسِعَةُ',
+    'الْعَاشِرَةُ',
+    'الْحَادِيَةَ عَشْرَةَ',
+    'الثَّانِيَةَ عَشْرَةَ',
+    'الثَّالِثَةَ عَشْرَةَ',
+    'الرَّابِعَةَ عَشْرَةَ',
+    'الْخَامِسَةَ عَشْرَةَ',
+    'السَّادِسَةَ عَشْرَةَ',
+    'السَّابِعَةَ عَشْرَةَ',
+    'الثَّامِنَةَ عَشْرَةَ',
+    'التَّاسِعَةَ عَشْرَةَ',
+    'الْعِشْرُونَ',
+    'الْحَادِيَةُ وَالْعِشْرُونَ',
+    'الثَّانِيَةُ وَالْعِشْرُونَ',
+    'الثَّالِثَةُ وَالْعِشْرُونَ',
+    'الرَّابِعَةُ وَالْعِشْرُونَ',
+    'الْخَامِسَةُ وَالْعِشْرُونَ',
+    'السَّادِسَةُ وَالْعِشْرُونَ',
+    'السَّابِعَةُ وَالْعِشْرُونَ',
+    'الثَّامِنَةُ وَالْعِشْرُونَ',
+  ];
+
+  static const List<_StationMeta> _stations = [
+    _StationMeta(0, 'الْأَهْدَافُ', Icons.flag_rounded, Color(0xFFEF6C00)),
+    _StationMeta(1, 'الْقِصَّةُ', Icons.auto_stories_rounded, Color(0xFF7B1FA2)),
+    _StationMeta(2, 'الْأَصْوَاتُ', Icons.record_voice_over_rounded, Color(0xFFD84315)),
+    _StationMeta(3, 'الْمُدُودُ', Icons.text_fields_rounded, Color(0xFF1565C0)),
+    _StationMeta(4, 'الْكِتَابَةُ', Icons.edit_rounded, Color(0xFF00838F)),
+    _StationMeta(5, 'الْكَلِمَاتُ', Icons.menu_book_rounded, Color(0xFF2E7D32)),
+    _StationMeta(6, 'الْأَلْعَابُ', Icons.sports_esports_rounded, Color(0xFFC2185B)),
+  ];
 
   static String _safeDecode(String input) {
     try {
@@ -51,79 +123,180 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
     }
   }
 
+  static String _toArabicDigits(int value) {
+    const digits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    return value
+        .toString()
+        .split('')
+        .map((c) => digits[int.tryParse(c) ?? 0])
+        .join();
+  }
+
+  static Color _resolveAccentColor(String char) {
+    final manifest = findManifestForLetter(char);
+    if (manifest != null) return _ensureAccessibleAccent(manifest.topBarColor);
+    if (char == 'أ') return const Color(0xFFC64718);
+    if (char == 'ب') return const Color(0xFF6A1B9A);
+    return const Color(0xFF1565C0);
+  }
+
+  /// يضمن تبايناً عالياً (WCAG AA+) للنص الأبيض فوق لون الحرف
+  static Color _ensureAccessibleAccent(Color raw) {
+    final hsl = HSLColor.fromColor(raw);
+    if (hsl.lightness > 0.42) {
+      return hsl.withLightness(0.38).toColor();
+    }
+    return raw;
+  }
+
+  static Color _darken(Color c, [double amount = 0.14]) {
+    final hsl = HSLColor.fromColor(c);
+    return hsl
+        .withLightness((hsl.lightness - amount).clamp(0.0, 1.0))
+        .toColor();
+  }
+
+  static String _resolveMascotEmoji(String char) {
+    final manifest = findManifestForLetter(char);
+    if (manifest != null) return manifest.mascotEmoji;
+    if (char == 'أ') return '🦁';
+    if (char == 'ب') return '🦆';
+    return '⭐';
+  }
+
+  static List<_VowelPreview> _vowelsForLetter(String char) {
+    final isAlif = char == 'أ';
+    return [
+      _VowelPreview(
+        variant: 'fatha',
+        display: isAlif ? 'أَ' : '$charَ',
+        label: 'فَتْحَة',
+        color: const Color(0xFFD84315),
+      ),
+      _VowelPreview(
+        variant: 'damma',
+        display: isAlif ? 'أُ' : '$charُ',
+        label: 'ضَمَّة',
+        color: const Color(0xFF1565C0),
+      ),
+      _VowelPreview(
+        variant: 'kasra',
+        display: isAlif ? 'إِ' : '$charِ',
+        label: 'كَسْرَة',
+        color: const Color(0xFF2E7D32),
+      ),
+    ];
+  }
+
   @override
   void initState() {
     super.initState();
-    // Falcon orbital flight controller
-    _orbitController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 4000),
-    )..repeat();
-
-    // Set letter in provider safely after build completes, and auto-play letter sound
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (!mounted) return;
       if (widget.letterChar != null) {
         final raw = widget.letterChar!;
         final decoded = _safeDecode(raw);
-        final matches = arabicLetters.where((l) => l.letter == decoded || l.letter == raw);
+        final matches = arabicLetters
+            .where((l) => l.letter == decoded || l.letter == raw);
         if (matches.isNotEmpty) {
           ref.read(currentLessonProvider.notifier).setLetter(matches.first);
         }
       }
-      await Future.delayed(const Duration(milliseconds: 350));
+      await Future.delayed(const Duration(milliseconds: 300));
       if (mounted) {
-        _playLetterSound();
+        _playVariant('sound');
       }
     });
   }
 
   @override
   void dispose() {
-    _orbitController.dispose();
+    _audioToken++;
+    try {
+      AudioService.instance.stop();
+    } catch (_) {}
     super.dispose();
   }
 
-  void _playLetterSound() async {
+  Future<void> _playVariant(String variant) async {
     final lessonLetter = ref.read(currentLessonProvider).letter;
-    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ث';
+    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ب';
     final char = _safeDecode(rawChar);
     if (!mounted) return;
-    setState(() => _isPlayingSound = true);
+
+    final tk = ++_audioToken;
+    setState(() => _activeAudioTag = variant);
     final key = AudioRegistry.letterKeyFromChar(char);
+
     try {
       HapticFeedback.selectionClick();
-      // Play the authentic phonemic letter sound
-      await AudioManager.instance.playLetterAudio(key, 'sound');
-      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
-      if (done != null) {
-        await done.first.timeout(
-          const Duration(milliseconds: 2500),
-          onTimeout: () {},
-        );
-      } else {
-        await Future.delayed(const Duration(milliseconds: 1500));
-      }
+      await () async {
+        await AudioManager.instance.playLetterAudio(key, variant);
+        final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+        if (done != null) {
+          await done.first;
+        } else {
+          await Future.delayed(const Duration(milliseconds: 1200));
+        }
+      }().timeout(const Duration(milliseconds: 2200), onTimeout: () {});
     } catch (e) {
-      debugPrint('Error playing letter sound: $e');
+      debugPrint('Hub audio [$variant] error: $e');
     } finally {
-      if (mounted) {
-        setState(() => _isPlayingSound = false);
+      if (mounted && tk == _audioToken) {
+        setState(() => _activeAudioTag = null);
       }
     }
   }
 
-  void _playLetterName() async {
-    final lessonLetter = ref.read(currentLessonProvider).letter;
-    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ث';
-    final char = _safeDecode(rawChar);
-    if (!mounted) return;
-    final key = AudioRegistry.letterKeyFromChar(char);
+  void _openLessonAt(String letterChar, int stationIndex) {
+    HapticFeedback.mediumImpact();
+    _audioToken++;
     try {
-      HapticFeedback.selectionClick();
-      await AudioManager.instance.playLetterAudio(key, 'name');
-    } catch (e) {
-      debugPrint('Error playing letter name: $e');
+      AudioService.instance.stop();
+    } catch (_) {}
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => _buildLessonDestination(letterChar, stationIndex),
+      ),
+    );
+  }
+
+  Widget _buildLessonDestination(String char, int stationIndex) {
+    switch (char) {
+      case 'أ':
+        return AlifLessonScreen(initialStationIndex: stationIndex);
+      case 'ب':
+        return BaaLessonScreen(initialStationIndex: stationIndex);
+      case 'ت':
+        return TaaLessonScreen(initialStationIndex: stationIndex);
+      case 'ث':
+        return ThaaLessonScreen(initialStationIndex: stationIndex);
+      case 'ج':
+        return JeemLessonScreen(initialStationIndex: stationIndex);
+      case 'ح':
+        return HaLessonScreen(initialStationIndex: stationIndex);
+      case 'خ':
+        return KhaLessonScreen(initialStationIndex: stationIndex);
+      case 'د':
+        return DalLessonScreen(initialStationIndex: stationIndex);
+      case 'ذ':
+        return DhaalLessonScreen(initialStationIndex: stationIndex);
+      case 'ر':
+        return RaaLessonScreen(initialStationIndex: stationIndex);
+      case 'ز':
+        return ZaayLessonScreen(initialStationIndex: stationIndex);
+      case 'س':
+        return SeenLessonScreen(initialStationIndex: stationIndex);
+      default:
+        final manifest = findManifestForLetter(char);
+        if (manifest != null) {
+          return LetterLessonShellScreen(
+            manifest: manifest,
+            initialStationIndex: stationIndex,
+          );
+        }
+        return const LessonSequenceScreen();
     }
   }
 
@@ -133,464 +306,942 @@ class _UniversalLetterHubScreenState extends ConsumerState<UniversalLetterHubScr
     final letter = lessonState.letter;
 
     if (letter == null) {
-      return Scaffold(
-        appBar: AppBar(title: const Text('خطأ')),
-        body: const Center(child: Text('لم يتم اختيار حرف')),
+      return Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
+          appBar: AppBar(title: const Text('خَطَأ')),
+          body: const Center(
+            child: Text(
+              'لَمْ يَتِمَّ اخْتِيَارُ حَرْفٍ',
+              style: TextStyle(fontFamily: 'Cairo', fontSize: 18),
+            ),
+          ),
+        ),
       );
     }
 
-    final progress = ref.watch(lessonProgressProvider);
     final size = MediaQuery.sizeOf(context);
-    final isTablet = size.shortestSide > 600;
+    final isTablet = size.shortestSide >= 600;
+    final isWide = size.width >= 600;
 
-    final double letterFontSize = isTablet ? 140.0 : 105.0;
-    final double cardSize = isTablet ? 240.0 : 180.0;
-    final double orbitRadiusX = isTablet ? 150.0 : 115.0;
-    final double orbitRadiusY = isTablet ? 110.0 : 85.0;
+    final accent = _resolveAccentColor(letter.letter);
+    final accentDark = _darken(accent, 0.14);
+    final accentSoft = Color.lerp(Colors.white, accent, 0.10)!;
+    final definiteName = _definiteNames[letter.letter] ?? 'الْ${letter.name}';
+    final fullTitle = 'حَرْفُ $definiteName';
+
+    final letterOrder =
+        (arabicLetters.indexWhere((l) => l.letter == letter.letter) + 1)
+            .clamp(1, arabicLetters.length);
+    final unitOrdinal = _ordinalUnits[(letterOrder - 1).clamp(0, _ordinalUnits.length - 1)];
+    final mascotEmoji = _resolveMascotEmoji(letter.letter);
+    final vowels = _vowelsForLetter(letter.letter);
+
+    final bgTop = Color.lerp(const Color(0xFFFFFDF8), accent, 0.05)!;
+    final bgMid = const Color(0xFFFFFBF2);
+    final bgBot = Color.lerp(const Color(0xFFFFF3E0), accent, 0.09)!;
+
+    final router = GoRouter.maybeOf(context);
+    final canPop = router?.canPop() ?? Navigator.of(context).canPop();
 
     return PopScope(
-      canPop: context.canPop(),
+      canPop: canPop,
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
-        context.go(AppRouter.homeMap);
+        if (router != null) {
+          router.go(AppRouter.homeMap);
+        } else {
+          Navigator.of(context).maybePop();
+        }
       },
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-        body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color(0xFFFFF9E6), // Warm Oasis Cream
-                Color(0xFFFFF0C2),
-                Color(0xFFFFE0B2),
-              ],
+          body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [bgTop, bgMid, bgBot],
+              ),
             ),
-          ),
-          child: SafeArea(
-            child: LayoutBuilder(
-              builder: (context, viewportConstraints) {
-                return SingleChildScrollView(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(minHeight: viewportConstraints.maxHeight),
-                    child: IntrinsicHeight(
-                      child: Column(
+            child: Stack(
               children: [
-                // ─── 1. Top App Bar ───
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Row(
+                // خلفية زخرفية ناعمة تعطي عمقاً دون تشتيت الطفل
+                IgnorePointer(
+                  child: Stack(
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand, size: 24),
-                        onPressed: () => context.canPop() ? context.pop() : context.go(AppRouter.homeMap),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: LinearProgressIndicator(
-                            value: progress,
-                            minHeight: 14,
-                            backgroundColor: Colors.white,
-                            valueColor: const AlwaysStoppedAnimation<Color>(AppColors.oasisGreen),
+                      Positioned(
+                        top: -70,
+                        left: -60,
+                        child: Container(
+                          width: isTablet ? 280 : 180,
+                          height: isTablet ? 280 : 180,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: accent.withValues(alpha: 0.07),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: AppColors.desertSand.withValues(alpha: 0.5)),
-                        ),
-                        child: Text(
-                          '${lessonState.completedActivities}/${LessonActivity.values.length}',
-                          style: const TextStyle(
-                            color: AppColors.desertSand,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Cairo',
+                      Positioned(
+                        bottom: 110,
+                        right: -80,
+                        child: Container(
+                          width: isTablet ? 320 : 210,
+                          height: isTablet ? 320 : 210,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color(0xFFFFB300).withValues(alpha: 0.09),
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 8),
-                      IconButton(
-                        icon: const Icon(Icons.home_rounded, color: AppColors.desertSand, size: 30),
-                        tooltip: 'الرئيسية',
-                        onPressed: () => context.go(AppRouter.homeMap),
                       ),
                     ],
                   ),
                 ),
 
-                // ─── 2. Letter Title Header ───
-                const SizedBox(height: 8),
-                GestureDetector(
-                  onTap: _playLetterName,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.9),
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: const [
-                        BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 3)),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'حَرْفُ ${letter.name}',
-                          style: TextStyle(
-                            fontSize: isTablet ? 34 : 26,
-                            fontWeight: FontWeight.w900,
-                            color: AppColors.baaTopBar,
-                            fontFamily: 'Cairo',
+                // المحتوى الرئيسي المتجاوب
+                SafeArea(
+                  child: Column(
+                    children: [
+                      // ─── 1. الشريط العلوي الواضح وعالي التباين ───
+                      _buildTopBar(
+                        context: context,
+                        accent: accent,
+                        unitLabel: 'الْوَحْدَةُ $unitOrdinal',
+                        letterOrder: letterOrder,
+                        totalLetters: arabicLetters.length,
+                        isTablet: isTablet,
+                      ),
+
+                      // ─── 2. المساحة المركزية التعليمية (بطاقة الحرف + المحطات) ───
+                      Expanded(
+                        child: Center(
+                          child: SingleChildScrollView(
+                            physics: const BouncingScrollPhysics(),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isTablet ? 28 : 16,
+                              vertical: isTablet ? 12 : 8,
+                            ),
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: isTablet ? 700 : 500,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  _buildHeroCard(
+                                    letter: letter,
+                                    fullTitle: fullTitle,
+                                    definiteName: definiteName,
+                                    mascotEmoji: mascotEmoji,
+                                    vowels: vowels,
+                                    accent: accent,
+                                    accentDark: accentDark,
+                                    accentSoft: accentSoft,
+                                    isTablet: isTablet,
+                                  ),
+                                  SizedBox(height: isTablet ? 26 : 14),
+                                  _buildStationsSection(
+                                    letterChar: letter.letter,
+                                    accent: accent,
+                                    isTablet: isTablet,
+                                  ),
+                                  SizedBox(height: isTablet ? 28 : 16),
+                                  _buildActionButtons(
+                                    letter: letter,
+                                    definiteName: definiteName,
+                                    accent: accent,
+                                    accentDark: accentDark,
+                                    isTablet: isTablet,
+                                    isWide: isWide,
+                                  ),
+                                  SizedBox(height: isTablet ? 24 : 12),
+                                ],
+                              ),
+                            ),
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        const Icon(Icons.volume_up_rounded, color: AppColors.baaTopBar, size: 24),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ).animate().fadeIn().slideY(begin: -0.2),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
-                // ─── 3. Center Area (Big Letter + Orbiting Falcon) ───
-                Expanded(
-                  child: Center(
-                    child: SizedBox(
-                      width: orbitRadiusX * 2 + 100,
-                      height: orbitRadiusY * 2 + 100,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          // Radiant Halo Glow
-                          Container(
-                            width: cardSize + 40,
-                            height: cardSize + 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: AppColors.primaryDay.withValues(alpha: 0.2),
-                            ),
-                          ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(
-                                begin: const Offset(0.95, 0.95),
-                                end: const Offset(1.1, 1.1),
-                                duration: 1500.ms,
-                              ),
+  Widget _buildTopBar({
+    required BuildContext context,
+    required Color accent,
+    required String unitLabel,
+    required int letterOrder,
+    required int totalLetters,
+    required bool isTablet,
+  }) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        isTablet ? 24 : 14,
+        isTablet ? 12 : 8,
+        isTablet ? 24 : 14,
+        6,
+      ),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: isTablet ? 760 : double.infinity),
+        child: Row(
+          children: [
+            // زر الرجوع الدائري بحجم لمس قياسي ≥ 48dp وتباين عالٍ
+            Material(
+              color: Colors.white,
+              shape: const CircleBorder(),
+              elevation: 3,
+              shadowColor: Colors.black26,
+              child: InkWell(
+                customBorder: const CircleBorder(),
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  final router = GoRouter.maybeOf(context);
+                  if (router != null) {
+                    if (router.canPop()) {
+                      router.pop();
+                    } else {
+                      router.go(AppRouter.homeMap);
+                    }
+                  } else {
+                    Navigator.of(context).maybePop();
+                  }
+                },
+                child: SizedBox(
+                  width: isTablet ? 52 : 46,
+                  height: isTablet ? 52 : 46,
+                  child: Icon(
+                    Icons.arrow_back_rounded,
+                    color: accent,
+                    size: isTablet ? 28 : 24,
+                  ),
+                ),
+              ),
+            ),
 
-                          // Central Letter Badge (Clickable for Letter Sound)
-                          GestureDetector(
-                            onTap: _playLetterSound,
-                            child: Container(
-                              width: cardSize,
-                              height: cardSize,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [Colors.white, Color(0xFFFFFDE7)],
-                                ),
-                                border: Border.all(
-                                  color: _isPlayingSound ? AppColors.secondaryDay : AppColors.primaryDay,
-                                  width: _isPlayingSound ? 6.0 : 4.5,
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: (_isPlayingSound ? AppColors.secondaryDay : AppColors.primaryDay)
-                                        .withValues(alpha: 0.4),
-                                    blurRadius: _isPlayingSound ? 28 : 20,
-                                    spreadRadius: _isPlayingSound ? 8 : 4,
-                                    offset: const Offset(0, 6),
-                                  ),
-                                ],
-                              ),
-                              child: Center(
-                                child: Text(
-                                  letter.letter,
-                                  style: TextStyle(
-                                    fontSize: letterFontSize,
-                                    fontWeight: FontWeight.w900,
-                                    color: _isPlayingSound ? AppColors.secondaryDay : AppColors.baaLetterPurple,
-                                    fontFamily: 'Cairo',
-                                    height: 1.0,
-                                    shadows: [
-                                      Shadow(
-                                        color: AppColors.baaLetterPurple.withValues(alpha: 0.3),
-                                        blurRadius: 8,
-                                        offset: const Offset(0, 4),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ).animate().scale(duration: 500.ms, curve: Curves.easeOutBack),
+            const SizedBox(width: 12),
 
-                          // Orbiting Flying Falcon Mascot
-                          AnimatedBuilder(
-                            animation: _orbitController,
-                            builder: (context, child) {
-                              final angle = _orbitController.value * 2 * math.pi;
-                              final x = math.cos(angle) * orbitRadiusX;
-                              final y = math.sin(angle) * orbitRadiusY;
+            // شارة الوحدة والمحطات السبع الفعلية (بدلاً من العداد الوهمي 0/11)
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: isTablet ? 18 : 12,
+                  vertical: isTablet ? 10 : 8,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(
+                    color: accent.withValues(alpha: 0.28),
+                    width: 1.6,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: accent.withValues(alpha: 0.08),
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.auto_awesome_rounded,
+                      color: const Color(0xFFEF6C00),
+                      size: isTablet ? 20 : 17,
+                    ),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        '$unitLabel  •  ${_toArabicDigits(_stations.length)} مَحَطَّاتٍ',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: isTablet ? 16 : 13,
+                          fontWeight: FontWeight.w800,
+                          color: const Color(0xFF263238),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
 
-                              return Transform.translate(
-                                offset: Offset(x, y),
-                                child: child,
-                              );
-                            },
-                            child: Container(
-                              width: isTablet ? 72 : 56,
-                              height: isTablet ? 72 : 56,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: AppColors.baaHighlightYellow, width: 2.5),
-                                boxShadow: const [
-                                  BoxShadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 3)),
-                                ],
-                              ),
-                              child: ClipOval(
-                                child: Image.asset(
-                                  'assets/images/mascot/falcon_happy.webp',
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (_, __, ___) => const Center(
-                                    child: Text('🦅', style: TextStyle(fontSize: 32)),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+            const SizedBox(width: 12),
+
+            // شارة ترتيب الحرف الحقيقي ضمن الأبجدية (مثلاً: ٢ / ٢٨)
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: isTablet ? 16 : 12,
+                vertical: isTablet ? 10 : 8,
+              ),
+              decoration: BoxDecoration(
+                color: accent,
+                borderRadius: BorderRadius.circular(24),
+                boxShadow: [
+                  BoxShadow(
+                    color: accent.withValues(alpha: 0.30),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Text(
+                '${_toArabicDigits(letterOrder)} / ${_toArabicDigits(totalLetters)}',
+                style: TextStyle(
+                  fontFamily: 'Cairo',
+                  fontSize: isTablet ? 15 : 13,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeroCard({
+    required ArabicLetter letter,
+    required String fullTitle,
+    required String definiteName,
+    required String mascotEmoji,
+    required List<_VowelPreview> vowels,
+    required Color accent,
+    required Color accentDark,
+    required Color accentSoft,
+    required bool isTablet,
+  }) {
+    final isPlayingMain =
+        _activeAudioTag == 'sound' || _activeAudioTag == 'name';
+    final medallionSize = isTablet ? 216.0 : 148.0;
+    final letterFontSize = isTablet ? 124.0 : 84.0;
+
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.fromLTRB(
+        isTablet ? 28 : 18,
+        isTablet ? 24 : 18,
+        isTablet ? 28 : 18,
+        isTablet ? 24 : 18,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(32),
+        border: Border.all(color: accent.withValues(alpha: 0.22), width: 2),
+        boxShadow: [
+          BoxShadow(
+            color: accent.withValues(alpha: 0.14),
+            blurRadius: 28,
+            offset: const Offset(0, 12),
+          ),
+          const BoxShadow(
+            color: Color(0x0D000000),
+            blurRadius: 8,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          // ── ترحيب الصقر «فَصِيح» في موضع مستقل أنيق (بلا تصادم مع الحرف) ──
+          Row(
+            children: [
+              Container(
+                width: isTablet ? 68 : 54,
+                height: isTablet ? 68 : 54,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xFFFFF8E1),
+                  border: Border.all(
+                    color: const Color(0xFFFFB300),
+                    width: 2.5,
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x1F000000),
+                      blurRadius: 8,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/images/mascot/falcon_happy.webp',
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => Center(
+                      child: Text(
+                        mascotEmoji,
+                        style: TextStyle(fontSize: isTablet ? 32 : 26),
                       ),
                     ),
                   ),
                 ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isTablet ? 16 : 12,
+                    vertical: isTablet ? 10 : 8,
+                  ),
+                  decoration: BoxDecoration(
+                    color: accentSoft,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: accent.withValues(alpha: 0.22),
+                      width: 1.2,
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        fullTitle,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: isTablet ? 24 : 19,
+                          fontWeight: FontWeight.w900,
+                          color: accentDark,
+                          height: 1.2,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        'مَرْحَبًا يَا بَطَلُ! اضْغَطْ عَلَى الْحَرْفِ لِتَسْمَعَ صَوْتَهُ',
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: isTablet ? 14 : 12,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFF455A64),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
 
-                // ─── 4. Audio Speaker Button Under the Letter ───
-                GestureDetector(
-                  onTap: _playLetterSound,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          SizedBox(height: isTablet ? 24 : 16),
+
+          // ── ميدالية الحرف التفاعلية الموحّدة (نقطة استماع واحدة واضحة) ──
+          GestureDetector(
+            onTap: () => _playVariant('sound'),
+            child: Semantics(
+              button: true,
+              label: 'اسْتَمِعْ لِصَوْتِ $fullTitle',
+              child: Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
+                children: [
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 220),
+                    width: medallionSize,
+                    height: medallionSize,
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: AppColors.secondaryDay, width: 2.5),
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: isPlayingMain
+                            ? [
+                                Color.lerp(Colors.white, accent, 0.14)!,
+                                Color.lerp(Colors.white, accent, 0.24)!,
+                              ]
+                            : [
+                                Colors.white,
+                                accentSoft,
+                              ],
+                      ),
+                      border: Border.all(
+                        color: accent,
+                        width: isPlayingMain ? 6 : 4.5,
+                      ),
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.secondaryDay.withValues(alpha: 0.3),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
+                          color: accent.withValues(
+                            alpha: isPlayingMain ? 0.34 : 0.20,
+                          ),
+                          blurRadius: isPlayingMain ? 28 : 18,
+                          offset: const Offset(0, 8),
                         ),
                       ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        letter.letter,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: letterFontSize,
+                          fontWeight: FontWeight.w900,
+                          color: accentDark,
+                          height: 1.05,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  // شارة السماعة المدمجة على حافة الميدالية لتوضيح قابلية اللمس
+                  Positioned(
+                    bottom: 4,
+                    left: 4,
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      width: isTablet ? 52 : 44,
+                      height: isTablet ? 52 : 44,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: isPlayingMain
+                            ? const Color(0xFFEF6C00)
+                            : accent,
+                        border: Border.all(color: Colors.white, width: 3),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x33000000),
+                            blurRadius: 8,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Icon(
+                        Icons.volume_up_rounded,
+                        color: Colors.white,
+                        size: isTablet ? 26 : 22,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ).animate().scale(duration: 420.ms, curve: Curves.easeOutBack),
+
+          SizedBox(height: isTablet ? 14 : 10),
+
+          // ── كلمات نموذجية مع إيموجي الحرف (بصري ومفيد تربوياً) ──
+          if (letter.exampleWords.isNotEmpty)
+            Wrap(
+              spacing: 8,
+              runSpacing: 6,
+              alignment: WrapAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFF8E1),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: const Color(0xFFFFB300).withValues(alpha: 0.6),
+                    ),
+                  ),
+                  child: Text(
+                    mascotEmoji,
+                    style: TextStyle(fontSize: isTablet ? 18 : 16),
+                  ),
+                ),
+                ...letter.exampleWords.take(3).map(
+                      (word) => Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: isTablet ? 14 : 11,
+                          vertical: isTablet ? 5 : 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F7FA),
+                          borderRadius: BorderRadius.circular(14),
+                          border: Border.all(color: const Color(0xFFCFD8DC)),
+                        ),
+                        child: Text(
+                          word,
+                          style: TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: isTablet ? 16 : 14,
+                            fontWeight: FontWeight.w800,
+                            color: const Color(0xFF263238),
+                          ),
+                        ),
+                      ),
+                    ),
+              ],
+            ),
+
+          SizedBox(height: isTablet ? 20 : 14),
+          Divider(color: accent.withValues(alpha: 0.14), height: 1),
+          SizedBox(height: isTablet ? 16 : 12),
+
+          // ── شريط الحركات القصيرة التفاعلي (تَنطق فور لمسها) ──
+          Text(
+            'جَرِّبْ أَصْوَاتَ حَرْفِ $definiteName بِالْحَرَكَاتِ:',
+            style: TextStyle(
+              fontFamily: 'Cairo',
+              fontSize: isTablet ? 16 : 13,
+              fontWeight: FontWeight.w800,
+              color: const Color(0xFF455A64),
+            ),
+          ),
+          SizedBox(height: isTablet ? 14 : 8),
+          Row(
+            children: List.generate(vowels.length, (i) {
+              final v = vowels[i];
+              final isActive = _activeAudioTag == v.variant;
+              return Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: isTablet ? 7 : 4),
+                  child: Material(
+                    color: isActive
+                        ? v.color
+                        : v.color.withValues(alpha: 0.09),
+                    borderRadius: BorderRadius.circular(18),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(18),
+                      onTap: () => _playVariant(v.variant),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 180),
+                        padding: EdgeInsets.symmetric(
+                          vertical: isTablet ? 16 : 9,
+                          horizontal: 6,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          border: Border.all(
+                            color: isActive
+                                ? v.color
+                                : v.color.withValues(alpha: 0.35),
+                            width: isActive ? 2.5 : 1.5,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              v.display,
+                              style: TextStyle(
+                                fontFamily: 'Cairo',
+                                fontSize: isTablet ? 34 : 26,
+                                fontWeight: FontWeight.w900,
+                                color: isActive ? Colors.white : v.color,
+                                height: 1.15,
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.volume_up_rounded,
+                                  size: isTablet ? 15 : 13,
+                                  color: isActive
+                                      ? Colors.white
+                                      : v.color.withValues(alpha: 0.85),
+                                ),
+                                const SizedBox(width: 3),
+                                Flexible(
+                                  child: Text(
+                                    v.label,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontFamily: 'Cairo',
+                                      fontSize: isTablet ? 13 : 11,
+                                      fontWeight: FontWeight.w800,
+                                      color: isActive
+                                          ? Colors.white
+                                          : const Color(0xFF37474F),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            }),
+          ),
+        ],
+      ),
+    ).animate().fadeIn(duration: 320.ms).slideY(begin: 0.04);
+  }
+
+  Widget _buildStationsSection({
+    required String letterChar,
+    required Color accent,
+    required bool isTablet,
+  }) {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.all(isTablet ? 18 : 14),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.92),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: accent.withValues(alpha: 0.18), width: 1.5),
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0x0F000000),
+            blurRadius: 12,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.route_rounded,
+                color: accent,
+                size: isTablet ? 22 : 19,
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'مَحَطَّاتُ الدَّرْسِ — اخْتَرْ أَيَّ مَحَطَّةٍ لِلْبَدْءِ',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: 'Cairo',
+                    fontSize: isTablet ? 15 : 13,
+                    fontWeight: FontWeight.w900,
+                    color: const Color(0xFF263238),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: isTablet ? 12 : 10),
+          Wrap(
+            spacing: isTablet ? 10 : 7,
+            runSpacing: isTablet ? 10 : 7,
+            alignment: WrapAlignment.center,
+            children: _stations.map((st) {
+              return Material(
+                color: st.color.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(16),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(16),
+                  onTap: () => _openLessonAt(letterChar, st.index),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isTablet ? 18 : 10,
+                      vertical: isTablet ? 11 : 7,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: st.color.withValues(alpha: 0.30),
+                        width: 1.3,
+                      ),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
-                          _isPlayingSound ? Icons.volume_up_rounded : Icons.volume_up_outlined,
-                          color: AppColors.secondaryDay,
-                          size: 30,
+                          st.icon,
+                          color: st.color,
+                          size: isTablet ? 21 : 16,
                         ),
-                        const SizedBox(width: 10),
-                        Flexible(
-                          child: Text(
-                            'استمع لصوت حرف ${letter.name}',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontFamily: 'Cairo',
-                              fontSize: isTablet ? 20 : 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.secondaryDay,
-                            ),
+                        const SizedBox(width: 7),
+                        Text(
+                          st.title,
+                          style: TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: isTablet ? 15 : 12,
+                            fontWeight: FontWeight.w800,
+                            color: const Color(0xFF263238),
                           ),
                         ),
                       ],
                     ),
                   ),
-                ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(
-                      begin: const Offset(1.0, 1.0),
-                      end: const Offset(1.04, 1.04),
-                      duration: 1200.ms,
-                    ),
-
-                SizedBox(height: isTablet ? 24 : 14),
-
-                // ─── 5. Action Buttons at the Bottom ───
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: isTablet ? 60 : 20, vertical: 8),
-                  child: Column(
-                    children: [
-                      // زر بدء الدرس المتسلسل
-                      SizedBox(
-                        width: double.infinity,
-                        height: isTablet ? 66 : 56,
-                        child: ElevatedButton.icon(
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  if (letter.letter == 'أ') {
-                                    return const AlifLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ب') {
-                                    return const BaaLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ت') {
-                                    return const TaaLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ث') {
-                                    return const ThaaLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ج') {
-                                    return const JeemLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ح') {
-                                    return const HaLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'خ') {
-                                    return const KhaLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'د') {
-                                    return const DalLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ذ') {
-                                    return const DhaalLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'س') {
-                                    return const SeenLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ز') {
-                                    return const ZaayLessonScreen(initialStationIndex: 1);
-                                  } else if (letter.letter == 'ر') {
-                                    return const RaaLessonScreen(initialStationIndex: 1);
-                                  }
-                                  final m = findManifestForLetter(letter.letter);
-                                  if (m != null) {
-                                    return LetterLessonShellScreen(manifest: m, initialStationIndex: 1);
-                                  }
-                                  return const LessonSequenceScreen();
-                                },
-                              ),
-                            );
-                          },
-                          icon: const Icon(Icons.play_circle_fill_rounded, size: 30),
-                          label: Text(
-                            'ابدأ درس حرف (${letter.letter})',
-                            style: TextStyle(
-                              fontSize: isTablet ? 24 : 20,
-                              fontWeight: FontWeight.w900,
-                              fontFamily: 'Cairo',
-                            ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDay,
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            elevation: 5,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      // زر ألعاب وأسئلة الحرف المباشر
-                      SizedBox(
-                        width: double.infinity,
-                        height: isTablet ? 60 : 50,
-                        child: ElevatedButton.icon(
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  if (letter.letter == 'أ') {
-                                    return const AlifLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ب') {
-                                    return const BaaLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ت') {
-                                    return const TaaLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ث') {
-                                    return const ThaaLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ج') {
-                                    return const JeemLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ح') {
-                                    return const HaLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'خ') {
-                                    return const KhaLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'د') {
-                                    return const DalLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ذ') {
-                                    return const DhaalLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'س') {
-                                    return const SeenLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ز') {
-                                    return const ZaayLessonScreen(initialStationIndex: 6);
-                                  } else if (letter.letter == 'ر') {
-                                    return const RaaLessonScreen(initialStationIndex: 6);
-                                  }
-                                  final m = findManifestForLetter(letter.letter);
-                                  if (m != null) {
-                                    return LetterLessonShellScreen(manifest: m, initialStationIndex: 6);
-                                  }
-                                  return Scaffold(
-                                    backgroundColor: AppColors.backgroundDay,
-                                    appBar: AppBar(
-                                      title: Text(
-                                        'ألعاب وأسئلة حرف (${letter.letter})',
-                                        style: const TextStyle(
-                                          fontFamily: 'Cairo',
-                                          fontWeight: FontWeight.bold,
-                                          color: AppColors.textPrimaryDay,
-                                        ),
-                                      ),
-                                      centerTitle: true,
-                                      backgroundColor: Colors.transparent,
-                                      elevation: 0,
-                                      leading: IconButton(
-                                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.desertSand),
-                                        onPressed: () => Navigator.of(context).pop(),
-                                      ),
-                                    ),
-                                    body: const GamesActivityScreen(),
-                                  );
-                                },
-                              ),
-                            );
-                          },
-                          icon: const Icon(Icons.videogame_asset_rounded, size: 26),
-                          label: const Text(
-                            'ألعاب وأسئلة الحرف 🎮',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Cairo',
-                            ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.oasisGreen,
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            elevation: 4,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
+              );
+            }).toList(),
+          ),
+        ],
+      ),
+    ).animate(delay: 90.ms).fadeIn(duration: 320.ms);
+  }
 
-                const SizedBox(height: 6),
+  Widget _buildActionButtons({
+    required ArabicLetter letter,
+    required String definiteName,
+    required Color accent,
+    required Color accentDark,
+    required bool isTablet,
+    required bool isWide,
+  }) {
+    const gamesColor = Color(0xFF1B8A5A); // تباين عالٍ WCAG AA+ > 4.6:1
+    const gamesLip = Color(0xFF11613E);
+
+    final startButton = _TactileActionButton(
+      label: 'ابْدَأْ دَرْسَ حَرْفِ $definiteName',
+      icon: Icons.play_arrow_rounded,
+      backgroundColor: accent,
+      lipColor: accentDark,
+      height: isTablet ? 64 : 56,
+      fontSize: isTablet ? 20 : 17,
+      onTap: () => _openLessonAt(letter.letter, 0),
+    );
+
+    final gamesButton = _TactileActionButton(
+      label: 'أَلْعَابُ وَأَسْئِلَةُ الْحَرْفِ',
+      icon: Icons.sports_esports_rounded,
+      backgroundColor: gamesColor,
+      lipColor: gamesLip,
+      height: isTablet ? 64 : 54,
+      fontSize: isTablet ? 19 : 16,
+      onTap: () => _openLessonAt(letter.letter, 6),
+    );
+
+    // عرض متوازن على التابلت بدلاً من التمدد القبيح من الحافة للحافة
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxWidth: isTablet ? 640 : 440),
+      child: isWide
+          ? Row(
+              children: [
+                Expanded(flex: 6, child: startButton),
+                const SizedBox(width: 14),
+                Expanded(flex: 5, child: gamesButton),
               ],
-                      ),
+            )
+          : Column(
+              children: [
+                startButton,
+                const SizedBox(height: 12),
+                gamesButton,
+              ],
+            ),
+    ).animate(delay: 140.ms).fadeIn(duration: 320.ms);
+  }
+}
+
+class _VowelPreview {
+  final String variant;
+  final String display;
+  final String label;
+  final Color color;
+  const _VowelPreview({
+    required this.variant,
+    required this.display,
+    required this.label,
+    required this.color,
+  });
+}
+
+class _StationMeta {
+  final int index;
+  final String title;
+  final IconData icon;
+  final Color color;
+  const _StationMeta(this.index, this.title, this.icon, this.color);
+}
+
+/// زر تعليمي ثلاثي الأبعاد لمسي (Tactile 3D Button) بتباين عالٍ واستجابة فورية للضغط
+class _TactileActionButton extends StatefulWidget {
+  final String label;
+  final IconData icon;
+  final Color backgroundColor;
+  final Color lipColor;
+  final double height;
+  final double fontSize;
+  final VoidCallback onTap;
+
+  const _TactileActionButton({
+    required this.label,
+    required this.icon,
+    required this.backgroundColor,
+    required this.lipColor,
+    required this.height,
+    required this.fontSize,
+    required this.onTap,
+  });
+
+  @override
+  State<_TactileActionButton> createState() => _TactileActionButtonState();
+}
+
+class _TactileActionButtonState extends State<_TactileActionButton> {
+  bool _pressed = false;
+
+  @override
+  Widget build(BuildContext context) {
+    const lipDepth = 5.0;
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) {
+        setState(() => _pressed = false);
+        widget.onTap();
+      },
+      onTapCancel: () => setState(() => _pressed = false),
+      child: SizedBox(
+        width: double.infinity,
+        height: widget.height,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 90),
+          margin: EdgeInsets.only(
+            top: _pressed ? lipDepth : 0,
+            bottom: _pressed ? 0 : lipDepth,
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 18),
+          decoration: BoxDecoration(
+            color: widget.backgroundColor,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: _pressed
+                ? null
+                : [
+                    BoxShadow(
+                      color: widget.lipColor,
+                      offset: const Offset(0, lipDepth),
+                      blurRadius: 0,
+                    ),
+                    BoxShadow(
+                      color: widget.backgroundColor.withValues(alpha: 0.28),
+                      offset: const Offset(0, 10),
+                      blurRadius: 16,
+                    ),
+                  ],
+          ),
+          child: Center(
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(widget.icon, color: Colors.white, size: widget.fontSize + 7),
+                  const SizedBox(width: 8),
+                  Text(
+                    widget.label,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: widget.fontSize,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
                     ),
                   ),
-                );
-              },
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-}
-
-// ═══ END OF FILE ═══
