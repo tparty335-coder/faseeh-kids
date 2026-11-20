@@ -7,7 +7,6 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
-import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_objectives_station.dart';
@@ -17,6 +16,7 @@ import 'package:faseeh_kids/features/lessons/screens/universal/stations/universa
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_writing_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_words_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/universal/stations/universal_games_station.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
 
 /// شاشة الدرس الشاملة — محرك موحّد يقبل أي LetterUnitManifest
 /// يُستخدم لجميع الحروف من ت فصاعداً (أ و ب يبقيان على شاشاتهما المخصصة)
@@ -197,11 +197,13 @@ class _LetterLessonShellScreenState
                         ref
                             .read(currentLessonProvider.notifier)
                             .setLetter(nextLetterData);
-                        final regKey = AudioRegistry.letterKeyFromChar(
-                            nextLetterData.letter);
-                        AudioManager.instance.playLetterAudio(regKey, 'name');
-                        // العودة للخارطة — شاشة الحرف التالي ستُفتح من الخارطة
-                        Navigator.of(context).pop();
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (_) => UniversalLetterHubScreen(
+                              letterChar: nextLetterData.letter,
+                            ),
+                          ),
+                        );
                       },
                       icon: const Icon(Icons.play_arrow_rounded, size: 28),
                       label: Text(

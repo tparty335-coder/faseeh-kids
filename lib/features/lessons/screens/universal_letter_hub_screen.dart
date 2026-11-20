@@ -141,10 +141,14 @@ class _UniversalLetterHubScreenState
   }
 
   /// يضمن تبايناً عالياً (WCAG AA+) للنص الأبيض فوق لون الحرف
+  /// مع تحويل الأصفر الفاقع (مثل حرف الميم) إلى كهرماني دافئ غني بدلاً من الزيتوني الباهت
   static Color _ensureAccessibleAccent(Color raw) {
     final hsl = HSLColor.fromColor(raw);
+    if (hsl.hue >= 36 && hsl.hue <= 64 && hsl.lightness > 0.42) {
+      return const Color(0xFFB45309); // Rich warm amber (WCAG AA+ with white)
+    }
     if (hsl.lightness > 0.42) {
-      return hsl.withLightness(0.38).toColor();
+      return hsl.withLightness(0.36).toColor();
     }
     return raw;
   }
@@ -218,10 +222,24 @@ class _UniversalLetterHubScreenState
     super.dispose();
   }
 
+  ArabicLetter? _resolveLetter(ArabicLetter? providerLetter) {
+    if (widget.letterChar != null && widget.letterChar!.isNotEmpty) {
+      final raw = widget.letterChar!;
+      final decoded = _safeDecode(raw);
+      for (final l in arabicLetters) {
+        if (l.letter == decoded ||
+            l.letter == raw ||
+            (decoded == 'هـ' && l.letter == 'ه')) {
+          return l;
+        }
+      }
+    }
+    return providerLetter;
+  }
+
   Future<void> _playVariant(String variant) async {
-    final lessonLetter = ref.read(currentLessonProvider).letter;
-    final rawChar = widget.letterChar ?? lessonLetter?.letter ?? 'ب';
-    final char = _safeDecode(rawChar);
+    final letter = _resolveLetter(ref.read(currentLessonProvider).letter);
+    final char = letter?.letter ?? _safeDecode(widget.letterChar ?? 'ب');
     if (!mounted) return;
 
     final tk = ++_audioToken;
@@ -303,7 +321,7 @@ class _UniversalLetterHubScreenState
   @override
   Widget build(BuildContext context) {
     final lessonState = ref.watch(currentLessonProvider);
-    final letter = lessonState.letter;
+    final letter = _resolveLetter(lessonState.letter);
 
     if (letter == null) {
       return Directionality(

@@ -7,7 +7,6 @@ import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
 import 'package:faseeh_kids/features/home/logic/home_provider.dart';
 import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
 import 'package:faseeh_kids/services/audio_manager.dart';
-import 'package:faseeh_kids/services/audio_registry.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_train_navbar.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_objectives_station.dart';
@@ -17,7 +16,7 @@ import 'package:faseeh_kids/features/lessons/screens/baa/baa_madd_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_writing_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_games_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/baa/baa_words_station.dart';
-import 'package:faseeh_kids/features/lessons/screens/taa/taa_lesson_screen.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal_letter_hub_screen.dart';
 
 /// شاشة درس حرف الباء — نسخة مرآة هيكلية وبصرية 1:1 من AlifLessonScreen
 /// المحطات السبع: الأهداف، قصة الحرف، أصوات الحرف، المدود، الكتابة، كلمات الحرف، ألعاب
@@ -163,11 +162,11 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                         onPressed: () {
                           Navigator.of(dialogContext).pop();
                           ref.read(currentLessonProvider.notifier).setLetter(nextLetterData);
-                          final regKey = AudioRegistry.letterKeyFromChar(nextLetterData.letter);
-                          AudioManager.instance.playLetterAudio(regKey, 'name');
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
-                              builder: (_) => const TaaLessonScreen(initialStationIndex: 1),
+                              builder: (_) => UniversalLetterHubScreen(
+                                letterChar: nextLetterData.letter,
+                              ),
                             ),
                           );
                         },
