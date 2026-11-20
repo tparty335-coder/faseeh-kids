@@ -5,7 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-const double _imgW = 1270, _imgH = 950;
+const double _imgW = 1350, _imgH = 796;
 
 class _ImageZone {
   final String label;
@@ -23,19 +23,19 @@ class _Round {
 
 const List<_Round> _rounds = [
   _Round(imagePath: 'assets/images/games/circus/circus_round_1.webp', zones: [
-    _ImageZone(label: 'بَقَرَةٌ', hasAlif: false, px: 250, py: 210),
-    _ImageZone(label: 'كَلْبٌ',  hasAlif: false, px: 450, py: 420),
-    _ImageZone(label: 'أَسَدٌ',  hasAlif: true,  px: 215, py: 660, audioPath: 'audio/stories/alif_word_asad.mp3'),
+    _ImageZone(label: 'بَقَرَةٌ', hasAlif: false, px: 225, py: 130),
+    _ImageZone(label: 'كَلْبٌ',  hasAlif: false, px: 472, py: 365),
+    _ImageZone(label: 'أَسَدٌ',  hasAlif: true,  px: 225, py: 615, audioPath: 'audio/stories/alif_word_asad.mp3'),
   ]),
   _Round(imagePath: 'assets/images/games/circus/circus_round_2.webp', zones: [
-    _ImageZone(label: 'دُبٌّ',    hasAlif: false, px: 250, py: 190),
-    _ImageZone(label: 'تَاجٌ',    hasAlif: true,  px: 450, py: 400, audioPath: 'audio/lessons/taa/sounds/word_taaj.mp3'),
-    _ImageZone(label: 'قِطَّةٌ',  hasAlif: false, px: 215, py: 650),
+    _ImageZone(label: 'دُبٌّ',    hasAlif: false, px: 225, py: 130),
+    _ImageZone(label: 'تَاجٌ',    hasAlif: true,  px: 472, py: 365, audioPath: 'audio/lessons/taa/sounds/word_taaj.mp3'),
+    _ImageZone(label: 'قِطَّةٌ',  hasAlif: false, px: 225, py: 615),
   ]),
   _Round(imagePath: 'assets/images/games/circus/circus_round_3.webp', zones: [
-    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 245, py: 190, audioPath: 'audio/instructions/alif_trace_step_11.mp3'),
-    _ImageZone(label: 'بِئْرٌ',   hasAlif: false, px: 450, py: 390),
-    _ImageZone(label: 'نَحْلَةٌ', hasAlif: false, px: 200, py: 640),
+    _ImageZone(label: 'رَأْسٌ',   hasAlif: true,  px: 225, py: 130, audioPath: 'audio/instructions/alif_trace_step_11.mp3'),
+    _ImageZone(label: 'بِئْرٌ',   hasAlif: false, px: 472, py: 365),
+    _ImageZone(label: 'نَحْلَةٌ', hasAlif: false, px: 225, py: 615),
   ]),
 ];
 
@@ -136,7 +136,7 @@ class _CircusGameState extends ConsumerState<CircusGame> {
           ...List.generate(rd.zones.length, (i) {
             final z = rd.zones[i];
             final cx = ox + (z.px / _imgW) * dW, cy = oy + (z.py / _imgH) * dH;
-            const r = 72.0;
+            final r = (128.0 * dW / _imgW).clamp(44.0, 130.0);
             Color fill = Colors.transparent, ring = Colors.transparent;
             Widget child = const SizedBox.shrink();
 

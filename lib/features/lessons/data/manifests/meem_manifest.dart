@@ -466,7 +466,7 @@ const LetterUnitManifest meemManifest = LetterUnitManifest(
         wrongRevealAudioPath: '${_gamesAudio}coloring/meem/meem_wrong_reveal_1.mp3',
         wordAudioPath: 'audio/letters/words/meem_word2.mp3',
         options: [
-          GameZoneChoice(label: 'تَمْر', isCorrect: false),
+          GameZoneChoice(label: 'نَمِر', isCorrect: false),
           GameZoneChoice(label: 'نَمْلَة', isCorrect: false),
           GameZoneChoice(label: 'رُمَّان', isCorrect: true),
         ],

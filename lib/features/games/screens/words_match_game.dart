@@ -5,7 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-const double _imgW = 1270, _imgH = 950;
+const double _imgW = 1343, _imgH = 796;
 
 class _WordCard {
   final String word;
@@ -61,9 +61,9 @@ const List<_Round> _rounds = [
         audioPath: 'audio/instructions/alif_trace_step_10.mp3',
       ),
     ],
-    cardPxList: [230, 230, 230],
-    cardPyList: [210, 450, 690],
-    dropPx: 850, dropPy: 722,
+    cardPxList: [288, 288, 288],
+    cardPyList: [178, 360, 560],
+    dropPx: 865, dropPy: 660,
   ),
   // Round 2: Picture = Pyramids (أَهْرَامٌ)
   _Round(
@@ -88,9 +88,9 @@ const List<_Round> _rounds = [
         audioPath: 'audio/words_game/alif_word_lion.mp3',
       ),
     ],
-    cardPxList: [230, 230, 230],
-    cardPyList: [210, 450, 690],
-    dropPx: 850, dropPy: 722,
+    cardPxList: [288, 288, 288],
+    cardPyList: [178, 360, 560],
+    dropPx: 865, dropPy: 660,
   ),
   // Round 3: Picture = Lion (أَسَدٌ)
   _Round(
@@ -115,9 +115,9 @@ const List<_Round> _rounds = [
         audioPath: 'audio/words_game/alif_word_rabbit.mp3',
       ),
     ],
-    cardPxList: [230, 230, 230],
-    cardPyList: [210, 450, 690],
-    dropPx: 850, dropPy: 722,
+    cardPxList: [288, 288, 288],
+    cardPyList: [178, 360, 560],
+    dropPx: 865, dropPy: 660,
   ),
   // Round 4: Picture = Apple (تُفَّاحَةٌ)
   _Round(
@@ -142,9 +142,9 @@ const List<_Round> _rounds = [
         audioPath: 'audio/instructions/alif_trace_step_10.mp3',
       ),
     ],
-    cardPxList: [230, 230, 230],
-    cardPyList: [210, 450, 690],
-    dropPx: 850, dropPy: 722,
+    cardPxList: [288, 288, 288],
+    cardPyList: [178, 360, 560],
+    dropPx: 865, dropPy: 660,
   ),
   // Round 5: Picture = Book (كِتَابٌ)
   _Round(
@@ -169,9 +169,9 @@ const List<_Round> _rounds = [
         audioPath: 'audio/instructions/alif_trace_step_03.mp3',
       ),
     ],
-    cardPxList: [230, 230, 230],
-    cardPyList: [210, 450, 690],
-    dropPx: 850, dropPy: 722,
+    cardPxList: [288, 288, 288],
+    cardPyList: [178, 360, 560],
+    dropPx: 865, dropPy: 660,
   ),
 ];
 
@@ -328,27 +328,19 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
               child: Image.asset(rd.imagePath, fit: BoxFit.contain)),
           // White mask over printed original text area on left side
           Positioned(
-            left: ox + 155 * scaleX,
-            top: oy + 140 * scaleY,
-            width: 175 * scaleX,
-            height: 580 * scaleY,
+            left: ox + 200 * scaleX,
+            top: oy + 115 * scaleY,
+            width: 176 * scaleX,
+            height: 505 * scaleY,
             child: Container(color: Colors.white),
           ),
 
-          // Train mask (blue background)
+          // Tiny corner mask (blue background) covering cropped corner icon
           Positioned(
             right: ox,
             bottom: oy,
-            width: 450 * scaleX,
-            height: 115 * scaleY,
-            child: Container(color: const Color(0xFF58AED7)),
-          ),
-          // Hand mask (blue background)
-          Positioned(
-            left: ox,
-            bottom: oy,
-            width: 250 * scaleX,
-            height: 150 * scaleY,
+            width: 100 * scaleX,
+            height: 48 * scaleY,
             child: Container(color: const Color(0xFF58AED7)),
           ),
           // Drop target zone

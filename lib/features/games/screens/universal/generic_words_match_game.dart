@@ -59,14 +59,16 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
 
   Future<void> _say(String path, {int maxMs = 4500}) async {
     try {
-      await AudioService.instance.stop();
-      await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
-      final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
-      if (done != null) {
-        await done.first.timeout(Duration(milliseconds: maxMs), onTimeout: () {});
-      } else {
-        await Future.delayed(Duration(milliseconds: maxMs));
-      }
+      await () async {
+        await AudioService.instance.stop();
+        await AudioService.instance.playAsset(path, channel: AudioChannel.voice);
+        final done = AudioService.instance.onPlayerComplete(AudioChannel.voice);
+        if (done != null) {
+          await done.first;
+        } else {
+          await Future.delayed(Duration(milliseconds: maxMs));
+        }
+      }().timeout(Duration(milliseconds: maxMs), onTimeout: () {});
     } catch (_) {}
   }
 

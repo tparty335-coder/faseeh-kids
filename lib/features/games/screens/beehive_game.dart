@@ -5,7 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
-const double _imgW = 1270, _imgH = 950;
+const double _imgW = 1358, _imgH = 796;
 
 class _CellZone {
   final String label;
@@ -22,28 +22,28 @@ class _Round {
 
 const List<_Round> _rounds = [
   _Round(imagePath: 'assets/images/games/beehive/beehive_round_1.webp', cells: [
-    _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
-    _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
-    _CellZone(label: 'إِ', isCorrect: true,  px: 1110, py: 452), // Right (Correct for إِبْرَةٌ)
-    _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
+    _CellZone(label: 'أُ', isCorrect: false, px: 1158, py: 245), // Top
+    _CellZone(label: 'أَ', isCorrect: false, px: 912, py: 392), // Left
+    _CellZone(label: 'إِ', isCorrect: true,  px: 1242, py: 382), // Right (Correct for إِبْرَةٌ)
+    _CellZone(label: 'أْ', isCorrect: false, px: 998, py: 534), // Bottom
   ]),
   _Round(imagePath: 'assets/images/games/beehive/beehive_round_2.webp', cells: [
-    _CellZone(label: 'أُ', isCorrect: true,  px: 985, py: 295), // Top (Correct for أُذُنٌ)
-    _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
-    _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right
-    _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
+    _CellZone(label: 'أُ', isCorrect: true,  px: 1158, py: 245), // Top (Correct for أُذُنٌ)
+    _CellZone(label: 'أَ', isCorrect: false, px: 912, py: 392), // Left
+    _CellZone(label: 'إِ', isCorrect: false, px: 1242, py: 382), // Right
+    _CellZone(label: 'أْ', isCorrect: false, px: 998, py: 534), // Bottom
   ]),
   _Round(imagePath: 'assets/images/games/beehive/beehive_round_3.webp', cells: [
-    _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
-    _CellZone(label: 'أَ', isCorrect: true,  px: 875, py: 452), // Left (Correct for أَسَدٌ)
-    _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right
-    _CellZone(label: 'أْ', isCorrect: false, px: 985, py: 575), // Bottom
+    _CellZone(label: 'أُ', isCorrect: false, px: 1158, py: 245), // Top
+    _CellZone(label: 'أَ', isCorrect: true,  px: 912, py: 392), // Left (Correct for أَسَدٌ)
+    _CellZone(label: 'إِ', isCorrect: false, px: 1242, py: 382), // Right
+    _CellZone(label: 'أْ', isCorrect: false, px: 998, py: 534), // Bottom
   ]),
   _Round(imagePath: 'assets/images/games/beehive/beehive_round_4.webp', cells: [
-    _CellZone(label: 'أُ', isCorrect: false, px: 985, py: 295), // Top
-    _CellZone(label: 'أَ', isCorrect: false, px: 875, py: 452), // Left
-    _CellZone(label: 'إِ', isCorrect: false, px: 1110, py: 452), // Right
-    _CellZone(label: 'أْ', isCorrect: true,  px: 985, py: 575), // Bottom (Correct for رَأْسٌ)
+    _CellZone(label: 'أُ', isCorrect: false, px: 1158, py: 245), // Top
+    _CellZone(label: 'أَ', isCorrect: false, px: 912, py: 392), // Left
+    _CellZone(label: 'إِ', isCorrect: false, px: 1242, py: 382), // Right
+    _CellZone(label: 'أْ', isCorrect: true,  px: 998, py: 534), // Bottom (Correct for رَأْسٌ)
   ]),
 ];
 
@@ -139,7 +139,7 @@ class _BeehiveGameState extends ConsumerState<BeehiveGame> {
           ...List.generate(rd.cells.length, (i) {
             final cell = rd.cells[i];
             final cx = ox + (cell.px / _imgW) * dW, cy = oy + (cell.py / _imgH) * dH;
-            const r = 62.0;
+            final r = (68.0 * dW / _imgW).clamp(28.0, 76.0);
             Color fill = Colors.transparent, ring = Colors.white.withValues(alpha: 0.30);
             Widget child = const SizedBox.shrink();
 

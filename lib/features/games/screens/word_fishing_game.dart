@@ -6,8 +6,8 @@ import 'package:confetti/confetti.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
 // ─── ثوابت الصورة الأصلية (بيكسل) ─────────────────────────────────────────
-const double _imgW = 1270;
-const double _imgH = 950;
+const double _imgW = 1353;
+const double _imgH = 798;
 
 // ─── بيانات جولة واحدة ────────────────────────────────────────────────────
 class _FishZone {
@@ -29,38 +29,38 @@ class _RoundData {
   const _RoundData({required this.imagePath, required this.zones});
 }
 
-// مواضع الأسماك مقيسة على الصور الأصلية (1270×950)
+// مواضع الأسماك مقيسة على الصور الأصلية (1353×798)
 const List<_RoundData> _rounds = [
   _RoundData(
     imagePath: 'assets/images/games/fishing/fishing_round_1.webp',
     zones: [
-      _FishZone(word: 'أَكَلَ',  hasAlif: true,  px: 155,  py: 545),
-      _FishZone(word: 'بُرْجٌ',  hasAlif: false, px: 575,  py: 510),
-      _FishZone(word: 'كَتَبَ',  hasAlif: false, px: 955,  py: 545),
+      _FishZone(word: 'أَكَلَ',  hasAlif: true,  px: 185,  py: 515),
+      _FishZone(word: 'بُرْجٌ',  hasAlif: false, px: 525,  py: 445),
+      _FishZone(word: 'كَتَبَ',  hasAlif: false, px: 865,  py: 515),
     ],
   ),
   _RoundData(
     imagePath: 'assets/images/games/fishing/fishing_round_2.webp',
     zones: [
-      _FishZone(word: 'تِينٌ',   hasAlif: false, px: 155,  py: 545),
-      _FishZone(word: 'خَرَجَ',  hasAlif: false, px: 575,  py: 510),
-      _FishZone(word: 'أُذُنٌ',  hasAlif: true,  px: 955,  py: 545),
+      _FishZone(word: 'تِينٌ',   hasAlif: false, px: 185,  py: 515),
+      _FishZone(word: 'خَرَجَ',  hasAlif: false, px: 525,  py: 445),
+      _FishZone(word: 'أُذُنٌ',  hasAlif: true,  px: 865,  py: 515),
     ],
   ),
   _RoundData(
     imagePath: 'assets/images/games/fishing/fishing_round_3.webp',
     zones: [
-      _FishZone(word: 'ذَيْلٌ',  hasAlif: false, px: 155,  py: 545),
-      _FishZone(word: 'رَأْسٌ',  hasAlif: true,  px: 575,  py: 510),
-      _FishZone(word: 'فِيلٌ',   hasAlif: false, px: 955,  py: 545),
+      _FishZone(word: 'ذَيْلٌ',  hasAlif: false, px: 185,  py: 515),
+      _FishZone(word: 'رَأْسٌ',  hasAlif: true,  px: 525,  py: 445),
+      _FishZone(word: 'فِيلٌ',   hasAlif: false, px: 865,  py: 515),
     ],
   ),
   _RoundData(
     imagePath: 'assets/images/games/fishing/fishing_round_4.webp',
     zones: [
-      _FishZone(word: 'جَمَلٌ',  hasAlif: false, px: 155,  py: 545),
-      _FishZone(word: 'نَحْلَةٌ', hasAlif: false, px: 575,  py: 510),
-      _FishZone(word: 'إِبْرَةٌ', hasAlif: true,  px: 955,  py: 545),
+      _FishZone(word: 'جَمَلٌ',  hasAlif: false, px: 185,  py: 515),
+      _FishZone(word: 'نَحْلَةٌ', hasAlif: false, px: 525,  py: 445),
+      _FishZone(word: 'إِبْرَةٌ', hasAlif: true,  px: 865,  py: 515),
     ],
   ),
 ];
@@ -250,7 +250,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
 
                 final cx = offsetX + (zone.px / _imgW) * drawnW;
                 final cy = offsetY + (zone.py / _imgH) * drawnH;
-                const radius = 75.0; 
+                final radius = (115.0 * drawnW / _imgW).clamp(42.0, 120.0);
 
                 Color ringColor = Colors.transparent;
                 Color fillColor = Colors.transparent;

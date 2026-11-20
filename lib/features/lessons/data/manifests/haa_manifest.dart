@@ -144,7 +144,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         displayChar: 'هِي',
         audioPath: '${_maddAudio}haa_yaa.mp3',
         imagePath: '${_dir}haa_end_madd_ii.webp',
-        exampleWord: 'سُهَيْر',
+        exampleWord: 'سُهِير',
         explanation: 'هَاءٌ مَكْسُورَةٌ مَعَ مَدٍّ بِالْيَاءِ: هِي',
         wordAudioPath: 'audio/letters/long_vowels/haa_yaa.mp3',
         accentColor: Color(0xFFD84315),
@@ -218,7 +218,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         listImageHeight: 474,
         words: [
           WordItem(word: 'هَرَم', cardImagePath: '${_dir}haa_end_words_p2_card_1.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p2_1.mp3', hotspot: WordHotspot(left: 0.44, top: 0.16, right: 0.86, bottom: 0.38), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
-          WordItem(word: 'سُهَيْر', cardImagePath: '${_dir}haa_end_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
+          WordItem(word: 'سُهِير', cardImagePath: '${_dir}haa_end_words_p2_card_2.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p2_2.mp3', hotspot: WordHotspot(left: 0.11, top: 0.36, right: 0.48, bottom: 0.56), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
           WordItem(word: 'هَاتِف', cardImagePath: '${_dir}haa_end_words_p2_card_3.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p2_3.mp3', hotspot: WordHotspot(left: 0.44, top: 0.54, right: 0.87, bottom: 0.74), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
           WordItem(word: 'نَهْر', cardImagePath: '${_dir}haa_end_words_p2_card_4.webp', cardHeight: 474, audioPath: '${_audio}haa_end_word_p2_4.mp3', hotspot: WordHotspot(left: 0.11, top: 0.72, right: 0.48, bottom: 0.90), speakerOffset: Offset(0.175, 0.315), closeOffset: Offset(0.812, 0.330)),
         ],
@@ -429,7 +429,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         audioPath: '${_gamesAudio}match/haa_end/haa_end_match_3.mp3',
         praiseAudio: 'audio/feedback/smart.mp3',
         cards: [
-          GameZoneChoice(label: 'كَلْب', isCorrect: false, colorValue: 0xFF5AC8FA),
+          GameZoneChoice(label: 'هَلَب', isCorrect: false, colorValue: 0xFF5AC8FA),
           GameZoneChoice(label: 'فَهْد', isCorrect: false, colorValue: 0xFFFF9EB5),
           GameZoneChoice(label: 'هَاتِف', isCorrect: true, colorValue: 0xFFFFD17A),
         ],
@@ -486,7 +486,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         ],
       ),
       ColoringRound(
-        word: 'سُهَيْر',
+        word: 'سُهِير',
         bgImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_3.webp',
         wordRevealImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_word_3.webp',
         introAudioPath: '${_audio}haa_end_word_p2_2.mp3',
@@ -496,7 +496,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         options: [
           GameZoneChoice(label: 'كَوْثَر', isCorrect: false),
           GameZoneChoice(label: 'أَمَل', isCorrect: false),
-          GameZoneChoice(label: 'سُهَيْر', isCorrect: true),
+          GameZoneChoice(label: 'سُهِير', isCorrect: true),
         ],
         slices: [
           ColoringSlice(maskImagePath: '${_gamesDir}coloring/haa_end/haa_end_coloring_round_3_slice_1.webp', color: Color(0xFFD84315)),

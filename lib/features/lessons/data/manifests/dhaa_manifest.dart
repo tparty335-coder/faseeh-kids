@@ -331,7 +331,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'ظِلّ',
         imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_2.webp',
-        audioPath: 'audio/games/beehive/dhaa/dhaa_beehive_1.mp3',
+        audioPath: 'audio/letters/words/dhaa_dh_word4.mp3',
         praiseAudio: 'audio/feedback/great.mp3',
         cells: [
           GameZoneChoice(label: 'ظُ', isCorrect: false, px: 692, py: 181),
@@ -343,7 +343,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'يَنْظُرُ',
         imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_3.webp',
-        audioPath: 'audio/games/beehive/dhaa/dhaa_beehive_1.mp3',
+        audioPath: '${_audio}dhaa_word_p3_3.mp3',
         praiseAudio: 'audio/feedback/smart.mp3',
         cells: [
           GameZoneChoice(label: 'ظُ', isCorrect: true, px: 692, py: 181),
@@ -355,7 +355,7 @@ const LetterUnitManifest dhaaManifest = LetterUnitManifest(
       BeehiveRound(
         word: 'عَظْمَة',
         imagePath: '${_gamesDir}beehive/dhaa/dhaa_beehive_round_4.webp',
-        audioPath: 'audio/games/beehive/dhaa/dhaa_beehive_1.mp3',
+        audioPath: 'audio/letters/words/dhaa_dh_word2.mp3',
         praiseAudio: 'audio/common/encourage_1.mp3',
         cells: [
           GameZoneChoice(label: 'ظُ', isCorrect: false, px: 692, py: 181),
