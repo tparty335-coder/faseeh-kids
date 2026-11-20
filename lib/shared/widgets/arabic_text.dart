@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 enum ArabicTextVariant { heading, body, caption, label }
 
@@ -51,17 +50,12 @@ class ArabicText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = isFormal
-        ? GoogleFonts.amiri(
-            fontSize: _getFontSize(context),
-            fontWeight: _getFontWeight(),
-            color: color,
-          )
-        : GoogleFonts.cairo(
-            fontSize: _getFontSize(context),
-            fontWeight: _getFontWeight(),
-            color: color,
-          );
+    final style = TextStyle(
+      fontFamily: isFormal ? 'Amiri' : 'Cairo',
+      fontSize: _getFontSize(context),
+      fontWeight: _getFontWeight(),
+      color: color,
+    );
 
     return Text(
       text,

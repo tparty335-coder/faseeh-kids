@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 /// Faseeh Kids Theme Configuration
@@ -12,6 +11,7 @@ class AppTheme {
   static ThemeData get dayTheme {
     return ThemeData(
       useMaterial3: true,
+      fontFamily: 'Cairo',
       brightness: Brightness.light,
       primaryColor: AppColors.primaryDay,
       scaffoldBackgroundColor: AppColors.backgroundDay,
@@ -26,7 +26,8 @@ class AppTheme {
         onSurface: AppColors.textPrimaryDay,
         onError: Colors.white,
       ),
-      textTheme: GoogleFonts.cairoTextTheme().apply(
+      textTheme: ThemeData.light().textTheme.apply(
+        fontFamily: 'Cairo',
         bodyColor: AppColors.textPrimaryDay,
         displayColor: AppColors.textPrimaryDay,
       ),
@@ -73,6 +74,7 @@ class AppTheme {
   static ThemeData get nightTheme {
     return ThemeData(
       useMaterial3: true,
+      fontFamily: 'Cairo',
       brightness: Brightness.dark,
       primaryColor: AppColors.primaryNight,
       scaffoldBackgroundColor: AppColors.backgroundNight,
@@ -87,9 +89,8 @@ class AppTheme {
         onSurface: AppColors.textPrimaryNight,
         onError: Colors.white,
       ),
-      textTheme: GoogleFonts.cairoTextTheme(
-        ThemeData.dark().textTheme,
-      ).apply(
+      textTheme: ThemeData.dark().textTheme.apply(
+        fontFamily: 'Cairo',
         bodyColor: AppColors.textPrimaryNight,
         displayColor: AppColors.textPrimaryNight,
       ),

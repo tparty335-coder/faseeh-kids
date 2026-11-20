@@ -26,7 +26,7 @@ dependencies:
   audioplayers: ^5.2.1
 
   # â”€â”€â”€ Typography (P0-T009) â”€â”€â”€
-  google_fonts: ^6.2.1
+  # google_fonts removed: Cairo & Amiri bundled offline in assets/fonts/
 
   # â”€â”€â”€ Animations (P0-T010) â”€â”€â”€
   flutter_animate: ^4.2.0
@@ -534,5 +534,25 @@ flutter:
     - assets/images/games/coloring/yaa/
     - assets/animations/
 
-
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cairo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Cairo-Black.ttf
+          weight: 900
+    - family: Amiri
+      fonts:
+        - asset: assets/fonts/Amiri-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Amiri-Bold.ttf
+          weight: 700
 

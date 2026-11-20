@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
 
 /// Faseeh Kids App Typography
@@ -38,7 +37,8 @@ class AppTypography {
     final size = ageGroup == AgeGroup.preschool3to5
         ? _h1Preschool
         : _h1Standard;
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: size,
       fontWeight: FontWeight.w700,
       color: color,
@@ -54,7 +54,8 @@ class AppTypography {
     final size = ageGroup == AgeGroup.preschool3to5
         ? _h2Preschool
         : _h2Standard;
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: size,
       fontWeight: FontWeight.w600,
       color: color,
@@ -70,7 +71,8 @@ class AppTypography {
     final size = ageGroup == AgeGroup.preschool3to5
         ? _bodyPreschool
         : _bodyStandard;
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: size,
       fontWeight: FontWeight.w400,
       color: color,
@@ -86,7 +88,8 @@ class AppTypography {
     final size = ageGroup == AgeGroup.preschool3to5
         ? _buttonPreschool
         : _buttonStandard;
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: size,
       fontWeight: FontWeight.w600,
       color: color,
@@ -102,7 +105,8 @@ class AppTypography {
     final size = ageGroup == AgeGroup.preschool3to5
         ? _captionPreschool
         : _captionStandard;
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: size,
       fontWeight: FontWeight.w400,
       color: color,
@@ -112,7 +116,8 @@ class AppTypography {
 
   /// Arabic Letter Display — oversized for letter learning screens
   static TextStyle arabicLetterDisplay({Color? color}) {
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: 96.0,
       fontWeight: FontWeight.w700,
       color: color,
@@ -122,7 +127,8 @@ class AppTypography {
 
   /// Arabic Word Display — for word learning and reading
   static TextStyle arabicWordDisplay({Color? color}) {
-    return GoogleFonts.cairo(
+    return TextStyle(
+      fontFamily: 'Cairo',
       fontSize: 48.0,
       fontWeight: FontWeight.w600,
       color: color,
