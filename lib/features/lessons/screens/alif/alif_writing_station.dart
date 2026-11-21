@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/trace_sequence_widget.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/stations/unified_kiwii_writing_station.dart';
 
-/// محطة كتابة حرف الألف (أ)
-/// نسخة مرآة مطابقة لـ BaaWritingStation
+/// محطة كتابة حرف الألف (أ) — بالتصميم الفيكتوري الموحّد (Kiwii / Montessori)
 class AlifWritingStation extends StatelessWidget {
   final VoidCallback onNext;
   final VoidCallback onPrevious;
@@ -15,10 +14,10 @@ class AlifWritingStation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TraceSequenceWidget(
+    return UnifiedKiwiiWritingStation(
+      letterChar: 'أ',
       onNext: onNext,
       onPrevious: onPrevious,
-      letterChar: 'أ',
     );
   }
 }

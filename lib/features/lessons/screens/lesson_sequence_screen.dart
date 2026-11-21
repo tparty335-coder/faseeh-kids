@@ -12,7 +12,7 @@ import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/story_sequ
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/short_vowels_sequence_widget.dart';
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/long_vowels_sequence_widget.dart';
 import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/words_sequence_widget.dart';
-import 'package:faseeh_kids/features/lessons/screens/sequence_widgets/trace_sequence_widget.dart';
+import 'package:faseeh_kids/features/lessons/screens/universal/stations/unified_kiwii_writing_station.dart';
 import 'package:faseeh_kids/features/lessons/screens/games_activity_screen.dart';
 
 class LessonSequenceScreen extends ConsumerStatefulWidget {
@@ -322,7 +322,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                 letterChar: letterChar,
                 isActive: _currentPageIndex == 3,
               ),
-              TraceSequenceWidget(onNext: _nextPage, onPrevious: _previousPage, letterChar: letterChar),
+              UnifiedKiwiiWritingStation(onNext: _nextPage, onPrevious: _previousPage, letterChar: letterChar),
               // ─── 6. محطة ألعاب وأسئلة الحرف (صيد الكلمات) ───
               Column(
                 children: [

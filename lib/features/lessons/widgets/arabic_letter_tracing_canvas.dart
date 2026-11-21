@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/utils/constants.dart';
 import 'package:faseeh_kids/services/audio_service.dart';
 
@@ -117,12 +116,12 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.88, 0.82),
-          end: const Offset(0.50, 0.82),
-          pathPoints: [
-            const Offset(0.88, 0.82),
-            const Offset(0.68, 0.82),
-            const Offset(0.50, 0.82),
+          start: const Offset(0.86, 0.86),
+          end: const Offset(0.50, 0.86),
+          pathPoints: const [
+            Offset(0.86, 0.86),
+            Offset(0.68, 0.86),
+            Offset(0.50, 0.86),
           ],
           hintText: '① ابدأ من اليمين واسحب خط الاتصال ⬅️',
           strokeWidth: 20.0,
@@ -131,93 +130,93 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.50, 0.82),
-          end: const Offset(0.50, 0.28),
-          pathPoints: [
-            const Offset(0.50, 0.82),
-            const Offset(0.50, 0.55),
-            const Offset(0.50, 0.28),
+          start: const Offset(0.50, 0.86),
+          end: const Offset(0.50, 0.36),
+          pathPoints: const [
+            Offset(0.50, 0.86),
+            Offset(0.50, 0.61),
+            Offset(0.50, 0.36),
           ],
-          hintText: '② من النقطة ② اصعد بعصا الألف للأعلى ⬆️',
+          hintText: '② من النقطة (٢) اصعد بعصا الألف للأعلى ⬆️',
           strokeWidth: 20.0,
         ),
-        // ③ قوس ورأس الهمزة (من اليمين للأعلى ثم نزول لأسفل)
+        // ③ قوس الهمزة المفتوح (مطابق للرسم المدرسي ا.jpg)
         LetterStroke(
           index: 3,
           label: '٣',
-          start: const Offset(0.58, 0.09),
-          end: const Offset(0.47, 0.17),
-          pathPoints: [
-            const Offset(0.58, 0.09),
-            const Offset(0.53, 0.05),
-            const Offset(0.47, 0.05),
-            const Offset(0.47, 0.17),
+          start: const Offset(0.60, 0.08),
+          end: const Offset(0.47, 0.21),
+          pathPoints: const [
+            Offset(0.60, 0.08),
+            Offset(0.45, 0.07),
+            Offset(0.39, 0.14),
+            Offset(0.47, 0.21),
           ],
-          hintText: '③ ابدأ من اليمين ودوّر قوس الهمزة لأسفل ↶',
-          strokeWidth: 16.0,
+          hintText: '③ دوّر قوس الهمزة فوق الألف ↶',
+          strokeWidth: 15.0,
         ),
-        // ④ قاعدة وخط الهمزة الأفقي (من اليمين لليسار)
+        // ④ قاعدة الهمزة الأفقية (من اليمين لليسار بفراغ واضح فوق العصا)
         LetterStroke(
           index: 4,
           label: '٤',
-          start: const Offset(0.64, 0.17),
-          end: const Offset(0.34, 0.17),
-          pathPoints: [
-            const Offset(0.64, 0.17),
-            const Offset(0.49, 0.17),
-            const Offset(0.34, 0.17),
+          start: const Offset(0.66, 0.21),
+          end: const Offset(0.34, 0.24),
+          pathPoints: const [
+            Offset(0.66, 0.21),
+            Offset(0.50, 0.225),
+            Offset(0.34, 0.24),
           ],
-          hintText: '④ من النقطة ④ اسحب خط الهمزة الأفقي لليسار ⬅️',
-          strokeWidth: 16.0,
+          hintText: '④ اسحب خط الهمزة الأفقي لليسار ⬅️',
+          strokeWidth: 15.0,
         ),
       ];
     }
 
-    // ─── الألف المنفصلة أو أول الكلمة (أ) ───
+    // ─── الألف المنفصلة أو أول الكلمة (أ) — مطابقة لـ ا.jpg ───
     return [
-      // ① عصا الألف (من الأعلى إلى الأسفل)
+      // ① عصا الألف (من الأعلى إلى الأسفل بفراغ واضح تحت الهمزة)
       LetterStroke(
         index: 1,
         label: '١',
-        start: const Offset(0.50, 0.28),
-        end: const Offset(0.50, 0.88),
-        pathPoints: [
-          const Offset(0.50, 0.28),
-          const Offset(0.50, 0.48),
-          const Offset(0.50, 0.68),
-          const Offset(0.50, 0.88),
+        start: const Offset(0.50, 0.36),
+        end: const Offset(0.50, 0.90),
+        pathPoints: const [
+          Offset(0.50, 0.36),
+          Offset(0.50, 0.54),
+          Offset(0.50, 0.72),
+          Offset(0.50, 0.90),
         ],
         hintText: '① ابدأ من أعلى واسحب عصا الألف لأسفل ⬇️',
         strokeWidth: 20.0,
       ),
-      // ② قوس ورأس الهمزة (من اليمين للأعلى ثم نزول لأسفل)
+      // ② قوس الهمزة المفتوح (مطابق لـ ا.jpg)
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.58, 0.09),
-        end: const Offset(0.47, 0.17),
-        pathPoints: [
-          const Offset(0.58, 0.09),
-          const Offset(0.53, 0.05),
-          const Offset(0.47, 0.05),
-          const Offset(0.47, 0.17),
+        start: const Offset(0.60, 0.08),
+        end: const Offset(0.47, 0.21),
+        pathPoints: const [
+          Offset(0.60, 0.08),
+          Offset(0.45, 0.07),
+          Offset(0.39, 0.14),
+          Offset(0.47, 0.21),
         ],
-        hintText: '② ابدأ من اليمين ودوّر قوس الهمزة لأسفل ↶',
-        strokeWidth: 16.0,
+        hintText: '② دوّر قوس الهمزة فوق الألف ↶',
+        strokeWidth: 15.0,
       ),
-      // ③ قاعدة وخط الهمزة الأفقي (من اليمين لليسار)
+      // ③ قاعدة الهمزة الأفقية (من اليمين لليسار)
       LetterStroke(
         index: 3,
         label: '٣',
-        start: const Offset(0.64, 0.17),
-        end: const Offset(0.34, 0.17),
-        pathPoints: [
-          const Offset(0.64, 0.17),
-          const Offset(0.49, 0.17),
-          const Offset(0.34, 0.17),
+        start: const Offset(0.66, 0.21),
+        end: const Offset(0.34, 0.24),
+        pathPoints: const [
+          Offset(0.66, 0.21),
+          Offset(0.50, 0.225),
+          Offset(0.34, 0.24),
         ],
-        hintText: '③ من النقطة ③ اسحب خط الهمزة الأفقي لليسار ⬅️',
-        strokeWidth: 16.0,
+        hintText: '③ اسحب خط الهمزة الأفقي لليسار ⬅️',
+        strokeWidth: 15.0,
       ),
     ];
   }
@@ -666,27 +665,27 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: n1,
         label: arabicLabels[n1 - 1],
-        start: const Offset(0.58, 0.34),
-        end: const Offset(0.58, 0.34),
-        pathPoints: [const Offset(0.58, 0.34)],
+        start: const Offset(0.59, 0.30),
+        end: const Offset(0.59, 0.30),
+        pathPoints: const [Offset(0.59, 0.30)],
         hintText: 'اضغط لوضع النقطة الأولى للثاء •',
         isTapOnly: true,
       ),
       LetterStroke(
         index: n2,
         label: arabicLabels[n2 - 1],
-        start: const Offset(0.42, 0.34),
-        end: const Offset(0.42, 0.34),
-        pathPoints: [const Offset(0.42, 0.34)],
+        start: const Offset(0.41, 0.30),
+        end: const Offset(0.41, 0.30),
+        pathPoints: const [Offset(0.41, 0.30)],
         hintText: 'اضغط لوضع النقطة الثانية للثاء ••',
         isTapOnly: true,
       ),
       LetterStroke(
         index: n3,
         label: arabicLabels[n3 - 1],
-        start: const Offset(0.50, 0.22),
-        end: const Offset(0.50, 0.22),
-        pathPoints: [const Offset(0.50, 0.22)],
+        start: const Offset(0.50, 0.17),
+        end: const Offset(0.50, 0.17),
+        pathPoints: const [Offset(0.50, 0.17)],
         hintText: 'اضغط لوضع النقطة الثالثة للثاء في القمة •••',
         isTapOnly: true,
       ),
@@ -700,20 +699,23 @@ class ArabicLetterTracingData {
     required String dotMode, // 'inside' | 'none' | 'above'
   }) {
     final name = letter == 'ج' ? 'الجيم' : (letter == 'ح' ? 'الحاء' : 'الخاء');
+    final isMid = position == 'middle';
+    final isEnd = position == 'end';
+    final isJoinedLeft = position == 'start' || isMid || position == 'mid_disconnected';
     final List<LetterStroke> strokes = [];
 
-    if (position == 'start' || position == 'middle' || position == 'mid_disconnected') {
+    if (isJoinedLeft) {
       strokes.add(
         LetterStroke(
           index: 1,
           label: '١',
           start: const Offset(0.28, 0.42),
-          end: const Offset(0.75, 0.58),
+          end: const Offset(0.74, 0.58),
           pathPoints: const [
             Offset(0.28, 0.42),
-            Offset(0.48, 0.36),
-            Offset(0.66, 0.46),
-            Offset(0.75, 0.58),
+            Offset(0.46, 0.36),
+            Offset(0.64, 0.46),
+            Offset(0.74, 0.58),
           ],
           hintText: '① ابدأ من اليسار وارسم حاجب $name نحو اليمين ↷',
         ),
@@ -722,29 +724,47 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.75, 0.58),
-          end: const Offset(0.18, 0.58),
-          pathPoints: const [
-            Offset(0.75, 0.58),
-            Offset(0.46, 0.58),
-            Offset(0.18, 0.58),
-          ],
-          hintText: '② اسحب خط الاتصال على السطر لليسار ⬅️',
+          start: isMid ? const Offset(0.90, 0.58) : const Offset(0.74, 0.58),
+          end: const Offset(0.16, 0.58),
+          pathPoints: isMid
+              ? const [
+                  Offset(0.90, 0.58),
+                  Offset(0.74, 0.58),
+                  Offset(0.45, 0.58),
+                  Offset(0.16, 0.58),
+                ]
+              : const [
+                  Offset(0.74, 0.58),
+                  Offset(0.45, 0.58),
+                  Offset(0.16, 0.58),
+                ],
+          hintText: isMid
+              ? '② اسحب خط الاتصال من اليمين إلى اليسار على السطر ⬅️'
+              : '② اسحب خط الاتصال على السطر لليسار ⬅️',
         ),
       );
     } else {
-      // مفرد أو آخر الكلمة
+      // مفرد (ج) أو آخر الكلمة متصل (ـج)
       strokes.add(
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.28, 0.30),
-          end: const Offset(0.74, 0.36),
-          pathPoints: const [
-            Offset(0.28, 0.30),
-            Offset(0.50, 0.26),
-            Offset(0.74, 0.36),
-          ],
+          start: isEnd ? const Offset(0.88, 0.38) : const Offset(0.28, 0.32),
+          end: const Offset(0.72, 0.38),
+          pathPoints: isEnd
+              ? const [
+                  Offset(0.88, 0.38),
+                  Offset(0.72, 0.38),
+                  Offset(0.50, 0.28),
+                  Offset(0.28, 0.34),
+                  Offset(0.50, 0.28),
+                  Offset(0.72, 0.38),
+                ]
+              : const [
+                  Offset(0.28, 0.32),
+                  Offset(0.50, 0.28),
+                  Offset(0.72, 0.38),
+                ],
           hintText: '① ارسم حاجب $name في الأعلى ↷',
         ),
       );
@@ -752,14 +772,14 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.74, 0.36),
-          end: const Offset(0.66, 0.84),
+          start: const Offset(0.72, 0.38),
+          end: const Offset(0.66, 0.85),
           pathPoints: const [
-            Offset(0.74, 0.36),
-            Offset(0.45, 0.48),
-            Offset(0.30, 0.65),
-            Offset(0.42, 0.84),
-            Offset(0.66, 0.84),
+            Offset(0.72, 0.38),
+            Offset(0.44, 0.50),
+            Offset(0.30, 0.67),
+            Offset(0.42, 0.85),
+            Offset(0.66, 0.85),
           ],
           hintText: '② انزل ببطن $name المقوّس للأسفل ↶',
         ),
@@ -767,9 +787,7 @@ class ArabicLetterTracingData {
     }
 
     if (dotMode == 'inside') {
-      final dotPos = (position == 'start' || position == 'middle' || position == 'mid_disconnected')
-          ? const Offset(0.50, 0.76)
-          : const Offset(0.54, 0.65);
+      final dotPos = isJoinedLeft ? const Offset(0.50, 0.77) : const Offset(0.54, 0.66);
       strokes.add(
         LetterStroke(
           index: 3,
@@ -782,14 +800,14 @@ class ArabicLetterTracingData {
         ),
       );
     } else if (dotMode == 'above') {
-      const dotPos = Offset(0.50, 0.16);
+      final dotPos = isJoinedLeft ? const Offset(0.50, 0.21) : const Offset(0.50, 0.14);
       strokes.add(
         LetterStroke(
           index: 3,
           label: '٣',
           start: dotPos,
           end: dotPos,
-          pathPoints: const [dotPos],
+          pathPoints: [dotPos],
           hintText: '③ اضغط لوضع نقطة الخاء في الأعلى •',
           isTapOnly: true,
         ),
@@ -805,41 +823,70 @@ class ArabicLetterTracingData {
     required bool hasDot,
   }) {
     final name = hasDot ? 'الذال' : 'الدال';
+    final isConnectedRight = position == 'middle' || position == 'end';
     final List<LetterStroke> strokes = [
+      if (isConnectedRight)
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.88, 0.68),
+          end: const Offset(0.68, 0.68),
+          pathPoints: const [
+            Offset(0.88, 0.68),
+            Offset(0.78, 0.68),
+            Offset(0.68, 0.68),
+          ],
+          hintText: '① اسحب خط الاتصال الأيمن على السطر ⬅️',
+        ),
       LetterStroke(
-        index: 1,
-        label: '١',
-        start: const Offset(0.62, 0.34),
-        end: const Offset(0.74, 0.66),
-        pathPoints: const [
-          Offset(0.62, 0.34),
-          Offset(0.70, 0.50),
-          Offset(0.74, 0.66),
-        ],
-        hintText: '① ابدأ من أعلى وانزل بظهر $name المائل ⬇️',
+        index: isConnectedRight ? 2 : 1,
+        label: isConnectedRight ? '٢' : '١',
+        start: Offset(isConnectedRight ? 0.56 : 0.60, 0.34),
+        end: Offset(isConnectedRight ? 0.68 : 0.74, 0.68),
+        pathPoints: isConnectedRight
+            ? const [
+                Offset(0.56, 0.34),
+                Offset(0.64, 0.50),
+                Offset(0.68, 0.68),
+              ]
+            : const [
+                Offset(0.60, 0.34),
+                Offset(0.70, 0.50),
+                Offset(0.74, 0.68),
+              ],
+        hintText: 'ابدأ من أعلى وانزل بظهر $name المائل ⬇️',
       ),
       LetterStroke(
-        index: 2,
-        label: '٢',
-        start: const Offset(0.74, 0.66),
-        end: const Offset(0.28, 0.66),
-        pathPoints: const [
-          Offset(0.74, 0.66),
-          Offset(0.50, 0.66),
-          Offset(0.28, 0.66),
-        ],
-        hintText: '② اسحب قاعدة $name على السطر لليسار ⬅️',
+        index: isConnectedRight ? 3 : 2,
+        label: isConnectedRight ? '٣' : '٢',
+        start: Offset(isConnectedRight ? 0.68 : 0.74, 0.68),
+        end: Offset(isConnectedRight ? 0.24 : 0.28, 0.68),
+        pathPoints: isConnectedRight
+            ? const [
+                Offset(0.68, 0.68),
+                Offset(0.46, 0.68),
+                Offset(0.24, 0.68),
+              ]
+            : const [
+                Offset(0.74, 0.68),
+                Offset(0.51, 0.68),
+                Offset(0.28, 0.68),
+              ],
+        hintText: 'اسحب قاعدة $name على السطر لليسار ⬅️',
       ),
     ];
     if (hasDot) {
+      final dotIdx = strokes.length + 1;
+      const labels = ['١', '٢', '٣', '٤'];
+      final dotPt = Offset(isConnectedRight ? 0.54 : 0.58, 0.18);
       strokes.add(
-        const LetterStroke(
-          index: 3,
-          label: '٣',
-          start: Offset(0.56, 0.20),
-          end: Offset(0.56, 0.20),
-          pathPoints: [Offset(0.56, 0.20)],
-          hintText: '③ اضغط لوضع نقطة الذال في الأعلى •',
+        LetterStroke(
+          index: dotIdx,
+          label: labels[dotIdx - 1],
+          start: dotPt,
+          end: dotPt,
+          pathPoints: [dotPt],
+          hintText: 'اضغط لوضع نقطة الذال في الأعلى •',
           isTapOnly: true,
         ),
       );
@@ -854,42 +901,58 @@ class ArabicLetterTracingData {
     required bool hasDot,
   }) {
     final name = hasDot ? 'الزاي' : 'الراء';
+    final isConnectedRight = position == 'middle' || position == 'end';
     final List<LetterStroke> strokes = [
+      if (isConnectedRight)
+        LetterStroke(
+          index: 1,
+          label: '١',
+          start: const Offset(0.88, 0.54),
+          end: const Offset(0.64, 0.54),
+          pathPoints: const [
+            Offset(0.88, 0.54),
+            Offset(0.76, 0.54),
+            Offset(0.64, 0.54),
+          ],
+          hintText: '① اسحب خط الاتصال الأيمن على السطر ⬅️',
+        ),
       LetterStroke(
-        index: 1,
-        label: '١',
-        start: const Offset(0.66, 0.36),
-        end: const Offset(0.64, 0.56),
+        index: isConnectedRight ? 2 : 1,
+        label: isConnectedRight ? '٢' : '١',
+        start: const Offset(0.64, 0.36),
+        end: const Offset(0.62, 0.56),
         pathPoints: const [
-          Offset(0.66, 0.36),
-          Offset(0.66, 0.46),
-          Offset(0.64, 0.56),
+          Offset(0.64, 0.36),
+          Offset(0.64, 0.46),
+          Offset(0.62, 0.56),
         ],
-        hintText: '① ابدأ بسنّة $name من الأعلى للأسفل ⬇️',
+        hintText: 'ابدأ بسنّة $name من الأعلى للأسفل ⬇️',
       ),
       LetterStroke(
-        index: 2,
-        label: '٢',
-        start: const Offset(0.64, 0.56),
-        end: const Offset(0.26, 0.82),
+        index: isConnectedRight ? 3 : 2,
+        label: isConnectedRight ? '٣' : '٢',
+        start: const Offset(0.62, 0.56),
+        end: const Offset(0.24, 0.84),
         pathPoints: const [
-          Offset(0.64, 0.56),
-          Offset(0.52, 0.72),
-          Offset(0.38, 0.80),
-          Offset(0.26, 0.82),
+          Offset(0.62, 0.56),
+          Offset(0.50, 0.72),
+          Offset(0.36, 0.81),
+          Offset(0.24, 0.84),
         ],
-        hintText: '② اسحب ذيل $name المقوّس تحت السطر لليسار ↙️',
+        hintText: 'اسحب ذيل $name المقوّس تحت السطر لليسار ↙️',
       ),
     ];
     if (hasDot) {
+      final dotIdx = strokes.length + 1;
+      const labels = ['١', '٢', '٣', '٤'];
       strokes.add(
-        const LetterStroke(
-          index: 3,
-          label: '٣',
-          start: Offset(0.64, 0.20),
-          end: Offset(0.64, 0.20),
-          pathPoints: [Offset(0.64, 0.20)],
-          hintText: '③ اضغط لوضع نقطة الزاي في الأعلى •',
+        LetterStroke(
+          index: dotIdx,
+          label: labels[dotIdx - 1],
+          start: const Offset(0.64, 0.17),
+          end: const Offset(0.64, 0.17),
+          pathPoints: const [Offset(0.64, 0.17)],
+          hintText: 'اضغط لوضع نقطة الزاي في الأعلى •',
           isTapOnly: true,
         ),
       );
@@ -897,62 +960,84 @@ class ArabicLetterTracingData {
     return strokes;
   }
 
-  // ─── مقاطع عائلة السين والشين (س / ش) ───
+  // ─── مقاطع عائلة السين والشين (س / ش) — مطابقة لـ س.jpg و ش.jpg ───
   static List<LetterStroke> _getSeenFamilyStrokes(
     String position, {
     required String letter,
     required bool hasThreeDots,
   }) {
     final name = hasThreeDots ? 'الشين' : 'السين';
+    final isMidOrEnd = position == 'middle' || position == 'end';
+    final isFlatTail = position == 'start' || position == 'middle' || position == 'mid_disconnected';
     final List<LetterStroke> strokes = [
       LetterStroke(
         index: 1,
         label: '١',
-        start: const Offset(0.84, 0.44),
+        start: isMidOrEnd ? const Offset(0.92, 0.58) : const Offset(0.84, 0.37),
         end: const Offset(0.66, 0.58),
-        pathPoints: const [
-          Offset(0.84, 0.44),
-          Offset(0.84, 0.58),
-          Offset(0.75, 0.58),
-          Offset(0.66, 0.44),
-          Offset(0.66, 0.58),
-        ],
+        pathPoints: isMidOrEnd
+            ? const [
+                Offset(0.92, 0.58),
+                Offset(0.82, 0.58),
+                Offset(0.82, 0.37),
+                Offset(0.82, 0.58),
+                Offset(0.65, 0.58),
+                Offset(0.65, 0.37),
+                Offset(0.65, 0.58),
+              ]
+            : const [
+                Offset(0.84, 0.37),
+                Offset(0.84, 0.58),
+                Offset(0.66, 0.58),
+                Offset(0.66, 0.37),
+                Offset(0.66, 0.58),
+              ],
         hintText: '① ارسم السنّة الأولى والثانية لحرف $name ⬅️',
+        strokeWidth: 17.5,
       ),
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.66, 0.58),
+        start: Offset(isMidOrEnd ? 0.65 : 0.66, 0.58),
         end: const Offset(0.48, 0.58),
-        pathPoints: const [
-          Offset(0.66, 0.58),
-          Offset(0.57, 0.58),
-          Offset(0.48, 0.44),
-          Offset(0.48, 0.58),
-        ],
+        pathPoints: isMidOrEnd
+            ? const [
+                Offset(0.65, 0.58),
+                Offset(0.48, 0.58),
+                Offset(0.48, 0.37),
+                Offset(0.48, 0.58),
+              ]
+            : const [
+                Offset(0.66, 0.58),
+                Offset(0.48, 0.58),
+                Offset(0.48, 0.37),
+                Offset(0.48, 0.58),
+              ],
         hintText: '② ارسم السنّة الثالثة لحرف $name ⬅️',
+        strokeWidth: 17.5,
       ),
       LetterStroke(
         index: 3,
         label: '٣',
         start: const Offset(0.48, 0.58),
-        end: const Offset(0.18, 0.56),
-        pathPoints: (position == 'start' || position == 'middle' || position == 'mid_disconnected')
+        end: isFlatTail ? const Offset(0.14, 0.58) : const Offset(0.16, 0.52),
+        pathPoints: isFlatTail
             ? const [
                 Offset(0.48, 0.58),
-                Offset(0.32, 0.58),
-                Offset(0.18, 0.58),
+                Offset(0.31, 0.58),
+                Offset(0.14, 0.58),
               ]
             : const [
                 Offset(0.48, 0.58),
-                Offset(0.44, 0.78),
-                Offset(0.30, 0.82),
-                Offset(0.18, 0.74),
-                Offset(0.18, 0.56),
+                Offset(0.44, 0.80),
+                Offset(0.28, 0.84),
+                Offset(0.16, 0.74),
+                Offset(0.16, 0.52),
               ],
-        hintText: (position == 'start' || position == 'middle' || position == 'mid_disconnected')
+        hintText: isFlatTail
             ? '③ اسحب خط الاتصال على السطر لليسار ⬅️'
             : '③ ارسم كأس $name العميق وصعوداً لليسار ↶',
+        strokeWidth: 18.0,
       ),
     ];
     if (hasThreeDots) {
@@ -960,27 +1045,27 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 4,
           label: '٤',
-          start: Offset(0.72, 0.28),
-          end: Offset(0.72, 0.28),
-          pathPoints: [Offset(0.72, 0.28)],
+          start: Offset(0.75, 0.23),
+          end: Offset(0.75, 0.23),
+          pathPoints: [Offset(0.75, 0.23)],
           hintText: '④ اضغط لوضع النقطة الأولى للشين •',
           isTapOnly: true,
         ),
         LetterStroke(
           index: 5,
           label: '٥',
-          start: Offset(0.58, 0.28),
-          end: Offset(0.58, 0.28),
-          pathPoints: [Offset(0.58, 0.28)],
+          start: Offset(0.57, 0.23),
+          end: Offset(0.57, 0.23),
+          pathPoints: [Offset(0.57, 0.23)],
           hintText: '⑤ اضغط لوضع النقطة الثانية للشين ••',
           isTapOnly: true,
         ),
         LetterStroke(
           index: 6,
           label: '٦',
-          start: Offset(0.65, 0.18),
-          end: Offset(0.65, 0.18),
-          pathPoints: [Offset(0.65, 0.18)],
+          start: Offset(0.66, 0.11),
+          end: Offset(0.66, 0.11),
+          pathPoints: [Offset(0.66, 0.11)],
           hintText: '⑥ اضغط لوضع النقطة الثالثة للشين •••',
           isTapOnly: true,
         ),
@@ -989,7 +1074,7 @@ class ArabicLetterTracingData {
     return strokes;
   }
 
-  // ─── مقاطع عائلة الصاد والضاد (ص / ض) ───
+  // ─── مقاطع عائلة الصاد والضاد (ص / ض) — مطابقة لـ ص.jpg بعين بيضاوية واسعة ───
   static List<LetterStroke> _getSaadFamilyStrokes(String position, {required bool hasDot}) {
     final name = hasDot ? 'الضاد' : 'الصاد';
     final isMidOrEnd = position == 'middle' || position == 'end';
@@ -998,58 +1083,62 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.88, 0.58) : const Offset(0.50, 0.58),
-        end: const Offset(0.46, 0.58),
+        start: isMidOrEnd ? const Offset(0.92, 0.62) : const Offset(0.47, 0.56),
+        end: const Offset(0.46, 0.62),
         pathPoints: isMidOrEnd
             ? const [
-                Offset(0.88, 0.58),
-                Offset(0.50, 0.58),
-                Offset(0.62, 0.42),
-                Offset(0.80, 0.44),
-                Offset(0.76, 0.58),
-                Offset(0.46, 0.58),
+                Offset(0.92, 0.62),
+                Offset(0.47, 0.62),
+                Offset(0.56, 0.42),
+                Offset(0.72, 0.34),
+                Offset(0.84, 0.44),
+                Offset(0.84, 0.62),
+                Offset(0.46, 0.62),
               ]
             : const [
-                Offset(0.50, 0.58),
-                Offset(0.62, 0.42),
-                Offset(0.80, 0.44),
-                Offset(0.76, 0.58),
-                Offset(0.46, 0.58),
+                Offset(0.47, 0.56),
+                Offset(0.58, 0.40),
+                Offset(0.74, 0.34),
+                Offset(0.85, 0.44),
+                Offset(0.85, 0.62),
+                Offset(0.46, 0.62),
               ],
         hintText: '① ارسم رأس $name البيضاوي صعوداً لليمين ثم للسطر ↶',
+        strokeWidth: 17.5,
       ),
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.46, 0.58),
-        end: isFlatTail ? const Offset(0.16, 0.58) : const Offset(0.18, 0.54),
+        start: const Offset(0.46, 0.42),
+        end: isFlatTail ? const Offset(0.14, 0.62) : const Offset(0.15, 0.52),
         pathPoints: isFlatTail
             ? const [
-                Offset(0.46, 0.48),
-                Offset(0.46, 0.58),
-                Offset(0.30, 0.58),
-                Offset(0.16, 0.58),
+                Offset(0.46, 0.42),
+                Offset(0.46, 0.62),
+                Offset(0.30, 0.62),
+                Offset(0.14, 0.62),
               ]
             : const [
-                Offset(0.46, 0.48),
-                Offset(0.46, 0.58),
-                Offset(0.40, 0.78),
-                Offset(0.28, 0.80),
-                Offset(0.18, 0.68),
-                Offset(0.18, 0.54),
+                Offset(0.46, 0.42),
+                Offset(0.46, 0.62),
+                Offset(0.41, 0.82),
+                Offset(0.27, 0.85),
+                Offset(0.15, 0.72),
+                Offset(0.15, 0.52),
               ],
         hintText: isFlatTail
             ? '② ارسم سنّة $name ثم اسحب خط الاتصال ⬅️'
             : '② ارسم سنّة $name ثم الكأس العميق وصعوداً ↶',
+        strokeWidth: 18.0,
       ),
     ];
     if (hasDot) {
       strokes.add(const LetterStroke(
         index: 3,
         label: '٣',
-        start: Offset(0.66, 0.28),
-        end: Offset(0.66, 0.28),
-        pathPoints: [Offset(0.66, 0.28)],
+        start: Offset(0.68, 0.17),
+        end: Offset(0.68, 0.17),
+        pathPoints: [Offset(0.68, 0.17)],
         hintText: '③ اضغط لوضع نقطة الضاد فوق الحرف •',
         isTapOnly: true,
       ));
@@ -1057,7 +1146,7 @@ class ArabicLetterTracingData {
     return strokes;
   }
 
-  // ─── مقاطع عائلة الطاء والظاء (ط / ظ) ───
+  // ─── مقاطع عائلة الطاء والظاء (ط / ظ) — عين بيضاوية واضحة ───
   static List<LetterStroke> _getTaaTFamilyStrokes(String position, {required bool hasDot}) {
     final name = hasDot ? 'الظاء' : 'الطاء';
     final isMidOrEnd = position == 'middle' || position == 'end';
@@ -1066,39 +1155,42 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.88, 0.58) : const Offset(0.46, 0.58),
-        end: hasTail ? const Offset(0.18, 0.58) : const Offset(0.28, 0.58),
+        start: isMidOrEnd ? const Offset(0.92, 0.66) : const Offset(0.44, 0.66),
+        end: hasTail ? const Offset(0.14, 0.66) : const Offset(0.26, 0.66),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.88, 0.58),
-          const Offset(0.46, 0.58),
-          const Offset(0.58, 0.40),
-          const Offset(0.76, 0.44),
-          const Offset(0.72, 0.58),
-          const Offset(0.44, 0.58),
-          hasTail ? const Offset(0.18, 0.58) : const Offset(0.28, 0.58),
+          if (isMidOrEnd) const Offset(0.92, 0.66),
+          const Offset(0.44, 0.66),
+          const Offset(0.55, 0.44),
+          const Offset(0.73, 0.37),
+          const Offset(0.84, 0.48),
+          const Offset(0.82, 0.66),
+          const Offset(0.44, 0.66),
+          hasTail ? const Offset(0.14, 0.66) : const Offset(0.26, 0.66),
         ],
         hintText: '① ارسم قوس $name البيضاوي ثم اسحبه على السطر ⬅️',
+        strokeWidth: 17.5,
       ),
       LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.52, 0.18),
-        end: const Offset(0.52, 0.58),
+        start: const Offset(0.46, 0.13),
+        end: const Offset(0.46, 0.66),
         pathPoints: const [
-          Offset(0.52, 0.18),
-          Offset(0.52, 0.38),
-          Offset(0.52, 0.58),
+          Offset(0.46, 0.13),
+          Offset(0.46, 0.40),
+          Offset(0.46, 0.66),
         ],
         hintText: '② اسحب الألف العمودية للأسفل فوق $name ⬇️',
+        strokeWidth: 18.0,
       ),
     ];
     if (hasDot) {
       strokes.add(const LetterStroke(
         index: 3,
         label: '٣',
-        start: Offset(0.72, 0.28),
-        end: Offset(0.72, 0.28),
-        pathPoints: [Offset(0.72, 0.28)],
+        start: Offset(0.72, 0.20),
+        end: Offset(0.72, 0.20),
+        pathPoints: [Offset(0.72, 0.20)],
         hintText: '③ اضغط لوضع نقطة الظاء على اليمين •',
         isTapOnly: true,
       ));
@@ -1129,13 +1221,13 @@ class ArabicLetterTracingData {
           index: 2,
           label: '٢',
           start: const Offset(0.58, 0.54),
-          end: const Offset(0.74, 0.78),
+          end: const Offset(0.74, 0.80),
           pathPoints: const [
             Offset(0.58, 0.54),
             Offset(0.36, 0.64),
-            Offset(0.34, 0.78),
-            Offset(0.56, 0.84),
-            Offset(0.74, 0.78),
+            Offset(0.34, 0.80),
+            Offset(0.56, 0.86),
+            Offset(0.74, 0.80),
           ],
           hintText: '② أكمل القوس الكبير لأسفل نحو اليمين ↷',
         ),
@@ -1145,53 +1237,54 @@ class ArabicLetterTracingData {
         index: 1,
         label: '١',
         start: const Offset(0.68, 0.36),
-        end: const Offset(0.20, 0.58),
+        end: const Offset(0.18, 0.60),
         pathPoints: const [
           Offset(0.68, 0.36),
           Offset(0.50, 0.34),
-          Offset(0.44, 0.48),
-          Offset(0.58, 0.58),
-          Offset(0.20, 0.58),
+          Offset(0.42, 0.48),
+          Offset(0.58, 0.60),
+          Offset(0.18, 0.60),
         ],
         hintText: '① ارسم رأس $name ثم خط الاتصال على السطر ⬅️',
       ));
     } else {
-      // middle or end (muttasil closed inverted triangle)
+      // middle or end (مثلث مقلوب واسع بفتحة واضحة)
       strokes.add(LetterStroke(
         index: 1,
         label: '١',
-        start: const Offset(0.86, 0.58),
-        end: position == 'end' ? const Offset(0.74, 0.76) : const Offset(0.20, 0.58),
+        start: const Offset(0.88, 0.60),
+        end: position == 'end' ? const Offset(0.74, 0.80) : const Offset(0.16, 0.60),
         pathPoints: position == 'end'
             ? const [
-                Offset(0.86, 0.58),
-                Offset(0.64, 0.58),
-                Offset(0.50, 0.36),
-                Offset(0.66, 0.36),
-                Offset(0.56, 0.58),
-                Offset(0.38, 0.68),
-                Offset(0.36, 0.80),
-                Offset(0.58, 0.84),
-                Offset(0.74, 0.76),
+                Offset(0.88, 0.60),
+                Offset(0.66, 0.60),
+                Offset(0.44, 0.32),
+                Offset(0.72, 0.32),
+                Offset(0.56, 0.60),
+                Offset(0.36, 0.70),
+                Offset(0.36, 0.82),
+                Offset(0.58, 0.86),
+                Offset(0.74, 0.80),
               ]
             : const [
-                Offset(0.86, 0.58),
-                Offset(0.64, 0.58),
-                Offset(0.50, 0.36),
-                Offset(0.66, 0.36),
-                Offset(0.56, 0.58),
-                Offset(0.20, 0.58),
+                Offset(0.88, 0.60),
+                Offset(0.66, 0.60),
+                Offset(0.44, 0.32),
+                Offset(0.72, 0.32),
+                Offset(0.54, 0.60),
+                Offset(0.16, 0.60),
               ],
         hintText: '① اسحب من اليمين، اصعد للمثلث المقلوب ثم أكمل $name ⬅️',
+        strokeWidth: 17.5,
       ));
     }
     if (hasDot) {
       strokes.add(LetterStroke(
         index: strokes.length + 1,
         label: strokes.length == 1 ? '٢' : '٣',
-        start: const Offset(0.56, 0.20),
-        end: const Offset(0.56, 0.20),
-        pathPoints: const [Offset(0.56, 0.20)],
+        start: const Offset(0.57, 0.16),
+        end: const Offset(0.57, 0.16),
+        pathPoints: const [Offset(0.57, 0.16)],
         hintText: 'اضغط لوضع نقطة الغين في الأعلى •',
         isTapOnly: true,
       ));
@@ -1199,7 +1292,7 @@ class ArabicLetterTracingData {
     return strokes;
   }
 
-  // ─── مقاطع الفاء والقاف (ف / ق) ───
+  // ─── مقاطع الفاء والقاف (ف / ق) — رأس دائري مفتوح وواضح ───
   static List<LetterStroke> _getFaaQaafStrokes(String position, {required bool isQaaf}) {
     final name = isQaaf ? 'القاف' : 'الفاء';
     final isMidOrEnd = position == 'middle' || position == 'end';
@@ -1208,30 +1301,33 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.68, 0.44),
-        end: isLineTail ? const Offset(0.20, 0.58) : const Offset(0.22, 0.50),
+        start: isMidOrEnd ? const Offset(0.90, 0.62) : const Offset(0.76, 0.44),
+        end: isLineTail ? const Offset(0.16, 0.62) : const Offset(0.18, 0.50),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.86, 0.58),
-          if (isMidOrEnd) const Offset(0.70, 0.58),
-          const Offset(0.72, 0.36),
-          const Offset(0.58, 0.34),
-          const Offset(0.58, 0.48),
-          const Offset(0.70, 0.54),
-          const Offset(0.68, 0.58),
-          if (isLineTail) const Offset(0.20, 0.58)
+          if (isMidOrEnd) const Offset(0.90, 0.62),
+          if (isMidOrEnd) const Offset(0.74, 0.62),
+          const Offset(0.77, 0.44),
+          const Offset(0.69, 0.30),
+          const Offset(0.55, 0.32),
+          const Offset(0.51, 0.46),
+          const Offset(0.61, 0.56),
+          const Offset(0.75, 0.50),
+          const Offset(0.74, 0.62),
+          if (isLineTail) const Offset(0.16, 0.62)
           else if (isQaaf) ...[
-            const Offset(0.64, 0.78),
-            const Offset(0.44, 0.82),
-            const Offset(0.26, 0.74),
-            const Offset(0.22, 0.50),
+            const Offset(0.70, 0.80),
+            const Offset(0.46, 0.86),
+            const Offset(0.24, 0.76),
+            const Offset(0.18, 0.50),
           ] else ...[
-            const Offset(0.36, 0.58),
-            const Offset(0.22, 0.48),
+            const Offset(0.34, 0.62),
+            const Offset(0.18, 0.50),
           ],
         ],
         hintText: isQaaf
             ? '① لف رأس القاف ثم ارسم الكأس العميق ↶'
             : '① لف رأس الفاء ثم اسحب الطبق على السطر ⬅️',
+        strokeWidth: 16.5,
       ),
     ];
     if (isQaaf) {
@@ -1239,18 +1335,18 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 2,
           label: '٢',
-          start: Offset(0.72, 0.20),
-          end: Offset(0.72, 0.20),
-          pathPoints: [Offset(0.72, 0.20)],
+          start: Offset(0.74, 0.14),
+          end: Offset(0.74, 0.14),
+          pathPoints: [Offset(0.74, 0.14)],
           hintText: '② اضغط لوضع النقطة الأولى للقاف •',
           isTapOnly: true,
         ),
         LetterStroke(
           index: 3,
           label: '٣',
-          start: Offset(0.58, 0.20),
-          end: Offset(0.58, 0.20),
-          pathPoints: [Offset(0.58, 0.20)],
+          start: Offset(0.56, 0.14),
+          end: Offset(0.56, 0.14),
+          pathPoints: [Offset(0.56, 0.14)],
           hintText: '③ اضغط لوضع النقطة الثانية للقاف ••',
           isTapOnly: true,
         ),
@@ -1259,9 +1355,9 @@ class ArabicLetterTracingData {
       strokes.add(LetterStroke(
         index: 2,
         label: '٢',
-        start: const Offset(0.65, 0.20),
-        end: const Offset(0.65, 0.20),
-        pathPoints: const [Offset(0.65, 0.20)],
+        start: const Offset(0.64, 0.14),
+        end: const Offset(0.64, 0.14),
+        pathPoints: const [Offset(0.64, 0.14)],
         hintText: '② اضغط لوضع نقطة $name في الأعلى •',
         isTapOnly: true,
       ));
@@ -1275,37 +1371,45 @@ class ArabicLetterTracingData {
     final isJoinedLeft = position == 'start' || position == 'middle' || position == 'mid_disconnected';
     if (isJoinedLeft) {
       return [
+        if (isMidOrEnd)
+          const LetterStroke(
+            index: 1,
+            label: '١',
+            start: Offset(0.90, 0.64),
+            end: Offset(0.64, 0.64),
+            pathPoints: [
+              Offset(0.90, 0.64),
+              Offset(0.77, 0.64),
+              Offset(0.64, 0.64),
+            ],
+            hintText: '① اسحب خط الاتصال الأيمن على السطر ⬅️',
+            strokeWidth: 18.0,
+          ),
         LetterStroke(
-          index: 1,
-          label: '١',
-          start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.68, 0.24),
-          end: const Offset(0.62, 0.52),
-          pathPoints: isMidOrEnd
-              ? const [
-                  Offset(0.86, 0.58),
-                  Offset(0.68, 0.58),
-                  Offset(0.68, 0.24),
-                  Offset(0.46, 0.36),
-                  Offset(0.62, 0.52),
-                ]
-              : const [
-                  Offset(0.68, 0.24),
-                  Offset(0.46, 0.36),
-                  Offset(0.62, 0.52),
-                ],
-          hintText: '① ارسم خط الكاف المائل من الأعلى للداخل ↙️',
+          index: isMidOrEnd ? 2 : 1,
+          label: isMidOrEnd ? '٢' : '١',
+          start: const Offset(0.74, 0.22),
+          end: const Offset(0.64, 0.56),
+          pathPoints: const [
+            Offset(0.74, 0.22),
+            Offset(0.42, 0.36),
+            Offset(0.64, 0.56),
+          ],
+          hintText: 'ارسم خط الكاف المائل من الأعلى للداخل ↙️',
+          strokeWidth: 18.0,
         ),
         LetterStroke(
-          index: 2,
-          label: '٢',
-          start: const Offset(0.62, 0.52),
-          end: const Offset(0.20, 0.58),
+          index: isMidOrEnd ? 3 : 2,
+          label: isMidOrEnd ? '٣' : '٢',
+          start: const Offset(0.64, 0.56),
+          end: const Offset(0.16, 0.64),
           pathPoints: const [
-            Offset(0.62, 0.52),
-            Offset(0.62, 0.58),
-            Offset(0.20, 0.58),
+            Offset(0.64, 0.56),
+            Offset(0.64, 0.64),
+            Offset(0.16, 0.64),
           ],
-          hintText: '② انزل للسطر واسحب خط الاتصال لليسار ⬅️',
+          hintText: 'انزل للسطر واسحب خط الاتصال لليسار ⬅️',
+          strokeWidth: 18.0,
         ),
       ];
     }
@@ -1313,30 +1417,32 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.70, 0.22),
-        end: const Offset(0.22, 0.50),
+        start: isMidOrEnd ? const Offset(0.90, 0.68) : const Offset(0.74, 0.18),
+        end: const Offset(0.18, 0.54),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.86, 0.58),
-          if (isMidOrEnd) const Offset(0.70, 0.58),
-          const Offset(0.70, 0.22),
-          const Offset(0.70, 0.58),
-          const Offset(0.32, 0.58),
-          const Offset(0.22, 0.50),
+          if (isMidOrEnd) const Offset(0.90, 0.68),
+          if (isMidOrEnd) const Offset(0.74, 0.68),
+          const Offset(0.74, 0.18),
+          const Offset(0.74, 0.68),
+          const Offset(0.28, 0.68),
+          const Offset(0.18, 0.54),
         ],
         hintText: '① انزل عمودياً ثم اسحب القاعدة لليسار وارفع الطرف ⬅️',
+        strokeWidth: 18.5,
       ),
       const LetterStroke(
         index: 2,
         label: '٢',
-        start: Offset(0.50, 0.36),
-        end: Offset(0.38, 0.50),
+        start: Offset(0.54, 0.28),
+        end: Offset(0.36, 0.47),
         pathPoints: [
-          Offset(0.50, 0.36),
-          Offset(0.42, 0.42),
-          Offset(0.50, 0.46),
-          Offset(0.38, 0.50),
+          Offset(0.54, 0.28),
+          Offset(0.40, 0.35),
+          Offset(0.54, 0.41),
+          Offset(0.36, 0.47),
         ],
         hintText: '② ارسم الهمزة الصغيرة داخل الكاف ✍️',
+        strokeWidth: 13.5,
       ),
     ];
   }
@@ -1371,7 +1477,7 @@ class ArabicLetterTracingData {
     ];
   }
 
-  // ─── مقاطع حرف الميم (م) ───
+  // ─── مقاطع حرف الميم (م) — مطابقة لـ م.jpg بدائرة واضحة مفتوحة ───
   static List<LetterStroke> _getMeemStrokes(String position) {
     final isMidOrEnd = position == 'middle' || position == 'end';
     final isJoinedLeft = position == 'start' || position == 'middle' || position == 'mid_disconnected';
@@ -1380,17 +1486,30 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 1,
           label: '١',
-          start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.66, 0.52),
-          end: const Offset(0.20, 0.58),
-          pathPoints: [
-            if (isMidOrEnd) const Offset(0.86, 0.58),
-            if (isMidOrEnd) const Offset(0.66, 0.58),
-            const Offset(0.74, 0.44),
-            const Offset(0.60, 0.42),
-            const Offset(0.56, 0.58),
-            const Offset(0.20, 0.58),
-          ],
-          hintText: '① لف دائرة الميم الصغيرة ثم اسحبها على السطر ⬅️',
+          start: isMidOrEnd ? const Offset(0.90, 0.62) : const Offset(0.46, 0.60),
+          end: const Offset(0.15, 0.62),
+          pathPoints: isMidOrEnd
+              ? const [
+                  Offset(0.90, 0.62),
+                  Offset(0.76, 0.62),
+                  Offset(0.76, 0.40),
+                  Offset(0.62, 0.30),
+                  Offset(0.46, 0.40),
+                  Offset(0.46, 0.62),
+                  Offset(0.76, 0.62),
+                  Offset(0.15, 0.62),
+                ]
+              : const [
+                  Offset(0.46, 0.60),
+                  Offset(0.46, 0.40),
+                  Offset(0.62, 0.30),
+                  Offset(0.78, 0.40),
+                  Offset(0.78, 0.62),
+                  Offset(0.46, 0.62),
+                  Offset(0.15, 0.62),
+                ],
+          hintText: '① لف دائرة الميم الواضحة ثم اسحبها على السطر ⬅️',
+          strokeWidth: 16.5,
         ),
       ];
     }
@@ -1398,29 +1517,23 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.66, 0.48),
-        end: const Offset(0.38, 0.54),
+        start: isMidOrEnd ? const Offset(0.90, 0.56) : const Offset(0.48, 0.52),
+        end: const Offset(0.24, 0.88),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.86, 0.58),
-          const Offset(0.66, 0.48),
-          const Offset(0.74, 0.40),
-          const Offset(0.58, 0.40),
-          const Offset(0.54, 0.54),
-          const Offset(0.38, 0.54),
+          if (isMidOrEnd) const Offset(0.90, 0.56),
+          if (isMidOrEnd) const Offset(0.78, 0.56),
+          const Offset(0.48, 0.52),
+          const Offset(0.48, 0.32),
+          const Offset(0.64, 0.22),
+          const Offset(0.80, 0.32),
+          const Offset(0.80, 0.54),
+          const Offset(0.64, 0.58),
+          const Offset(0.32, 0.58),
+          const Offset(0.24, 0.66),
+          const Offset(0.24, 0.88),
         ],
-        hintText: '① ارسم رأس الميم الصغير نحو اليسار ⬅️',
-      ),
-      const LetterStroke(
-        index: 2,
-        label: '٢',
-        start: Offset(0.38, 0.54),
-        end: Offset(0.38, 0.84),
-        pathPoints: [
-          Offset(0.38, 0.54),
-          Offset(0.38, 0.70),
-          Offset(0.38, 0.84),
-        ],
-        hintText: '② اسحب ذيل الميم عمودياً للأسفل ⬇️',
+        hintText: '① لف دائرة الميم ثم اسحبها لليسار وانزل بالذيل ⬇️',
+        strokeWidth: 17.5,
       ),
     ];
   }
@@ -1433,20 +1546,20 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.70, 0.44),
-        end: isJoinedLeft ? const Offset(0.22, 0.58) : const Offset(0.28, 0.48),
+        start: isMidOrEnd ? const Offset(0.88, 0.62) : const Offset(0.72, 0.44),
+        end: isJoinedLeft ? const Offset(0.18, 0.62) : const Offset(0.26, 0.48),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.86, 0.58),
-          if (isMidOrEnd) const Offset(0.70, 0.58),
-          const Offset(0.70, 0.44),
+          if (isMidOrEnd) const Offset(0.88, 0.62),
+          if (isMidOrEnd) const Offset(0.68, 0.62),
+          Offset(isJoinedLeft ? 0.68 : 0.72, 0.44),
           if (isJoinedLeft) ...[
-            const Offset(0.68, 0.58),
-            const Offset(0.22, 0.58),
+            const Offset(0.68, 0.62),
+            const Offset(0.18, 0.62),
           ] else ...[
-            const Offset(0.68, 0.74),
-            const Offset(0.50, 0.80),
-            const Offset(0.30, 0.72),
-            const Offset(0.28, 0.48),
+            const Offset(0.70, 0.76),
+            const Offset(0.50, 0.84),
+            const Offset(0.28, 0.74),
+            const Offset(0.26, 0.48),
           ],
         ],
         hintText: isJoinedLeft
@@ -1456,117 +1569,147 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 2,
         label: '٢',
-        start: isJoinedLeft ? const Offset(0.68, 0.28) : const Offset(0.50, 0.36),
-        end: isJoinedLeft ? const Offset(0.68, 0.28) : const Offset(0.50, 0.36),
-        pathPoints: [isJoinedLeft ? const Offset(0.68, 0.28) : const Offset(0.50, 0.36)],
+        start: isJoinedLeft ? const Offset(0.68, 0.25) : const Offset(0.50, 0.30),
+        end: isJoinedLeft ? const Offset(0.68, 0.25) : const Offset(0.50, 0.30),
+        pathPoints: [isJoinedLeft ? const Offset(0.68, 0.25) : const Offset(0.50, 0.30)],
         hintText: '② اضغط لوضع نقطة النون في الأعلى •',
         isTapOnly: true,
       ),
     ];
   }
 
-  // ─── مقاطع حرف الهاء (هـ / ه) ───
+  // ─── مقاطع حرف الهاء (هـ / ه) — مطابقة لـ ه.jpg ───
   static List<LetterStroke> _getHaaEndStrokes(String position) {
     if (position == 'isolated' || position == 'end_disconnected') {
-      return [
-        const LetterStroke(
+      return const [
+        LetterStroke(
           index: 1,
           label: '١',
-          start: Offset(0.52, 0.34),
-          end: Offset(0.52, 0.34),
+          start: Offset(0.50, 0.26),
+          end: Offset(0.50, 0.26),
           pathPoints: [
-            Offset(0.52, 0.34),
-            Offset(0.68, 0.46),
-            Offset(0.64, 0.64),
-            Offset(0.42, 0.64),
-            Offset(0.38, 0.46),
-            Offset(0.52, 0.34),
+            Offset(0.50, 0.26),
+            Offset(0.70, 0.44),
+            Offset(0.66, 0.68),
+            Offset(0.34, 0.68),
+            Offset(0.30, 0.44),
+            Offset(0.50, 0.26),
           ],
           hintText: '① ارسم دائرة الهاء المغلقة ⭕',
+          strokeWidth: 18.0,
         ),
       ];
     }
     if (position == 'start' || position == 'mid_disconnected') {
-      return [
-        const LetterStroke(
+      // مطابقة لـ ه.jpg: قبة الهاء الكبيرة مع الدائرة الداخلية المفتوحة والخط الأفقي
+      return const [
+        LetterStroke(
           index: 1,
           label: '١',
-          start: Offset(0.66, 0.58),
-          end: Offset(0.20, 0.58),
+          start: Offset(0.52, 0.22),
+          end: Offset(0.14, 0.68),
           pathPoints: [
-            Offset(0.66, 0.58),
-            Offset(0.76, 0.42),
-            Offset(0.60, 0.30),
-            Offset(0.48, 0.44),
-            Offset(0.64, 0.52),
-            Offset(0.54, 0.58),
-            Offset(0.20, 0.58),
+            Offset(0.52, 0.22),
+            Offset(0.74, 0.38),
+            Offset(0.82, 0.54),
+            Offset(0.74, 0.68),
+            Offset(0.46, 0.68),
+            Offset(0.14, 0.68),
           ],
-          hintText: '① ارسم قبة الهاء ثم لف الدائرة الداخلية واخرج على السطر ⬅️',
+          hintText: '① ارسم قبة الهاء من الأعلى لليمين ثم اسحبها لليسار ⬅️',
+          strokeWidth: 16.5,
+        ),
+        LetterStroke(
+          index: 2,
+          label: '٢',
+          start: Offset(0.46, 0.38),
+          end: Offset(0.46, 0.66),
+          pathPoints: [
+            Offset(0.46, 0.38),
+            Offset(0.61, 0.46),
+            Offset(0.60, 0.62),
+            Offset(0.45, 0.66),
+            Offset(0.34, 0.54),
+            Offset(0.46, 0.38),
+          ],
+          hintText: '② لف الدائرة الداخلية لحرف الهاء ⭕',
+          strokeWidth: 15.0,
         ),
       ];
     }
     if (position == 'middle') {
-      return [
-        const LetterStroke(
+      // الهاء الوسطى (ـهـ) بحلقتين واضحتين مفتوحتين (علوية وسفلية)
+      return const [
+        LetterStroke(
           index: 1,
           label: '١',
-          start: Offset(0.86, 0.58),
-          end: Offset(0.20, 0.58),
+          start: Offset(0.90, 0.54),
+          end: Offset(0.12, 0.54),
           pathPoints: [
-            Offset(0.86, 0.58),
-            Offset(0.64, 0.58),
-            Offset(0.54, 0.36),
-            Offset(0.46, 0.58),
-            Offset(0.54, 0.76),
-            Offset(0.64, 0.58),
-            Offset(0.20, 0.58),
+            Offset(0.90, 0.54),
+            Offset(0.66, 0.54),
+            Offset(0.64, 0.30),
+            Offset(0.50, 0.22),
+            Offset(0.36, 0.30),
+            Offset(0.38, 0.54),
+            Offset(0.62, 0.54),
+            Offset(0.64, 0.78),
+            Offset(0.50, 0.86),
+            Offset(0.36, 0.78),
+            Offset(0.38, 0.54),
+            Offset(0.12, 0.54),
           ],
           hintText: '① اصعد للحلقة العليا ثم انزل للسفلى وأكمل لليسار ⬅️',
+          strokeWidth: 14.5,
         ),
       ];
     }
-    // end (connected ة / ـه)
-    return [
-      const LetterStroke(
+    // end (connected ـه بعنق واضح ورأس مفتوح)
+    return const [
+      LetterStroke(
         index: 1,
         label: '١',
-        start: Offset(0.82, 0.58),
-        end: Offset(0.60, 0.56),
+        start: Offset(0.88, 0.64),
+        end: Offset(0.64, 0.60),
         pathPoints: [
-          Offset(0.82, 0.58),
-          Offset(0.60, 0.58),
-          Offset(0.60, 0.32),
-          Offset(0.42, 0.40),
-          Offset(0.44, 0.56),
-          Offset(0.60, 0.56),
+          Offset(0.88, 0.64),
+          Offset(0.66, 0.64),
+          Offset(0.66, 0.26),
+          Offset(0.42, 0.30),
+          Offset(0.32, 0.46),
+          Offset(0.42, 0.62),
+          Offset(0.64, 0.60),
         ],
         hintText: '① اسحب على السطر ثم اصعد وأغلق عنق الهاء المتصلة ↶',
+        strokeWidth: 17.0,
       ),
     ];
   }
 
-  // ─── مقاطع حرف الواو (و) ───
+  // ─── مقاطع حرف الواو (و) — رأس دائري مفتوح وواضح ───
   static List<LetterStroke> _getWaawStrokes(String position) {
     final isConnectedRight = position == 'middle' || position == 'end';
     return [
       LetterStroke(
         index: 1,
         label: '١',
-        start: isConnectedRight ? const Offset(0.84, 0.54) : const Offset(0.62, 0.44),
-        end: const Offset(0.26, 0.76),
+        start: isConnectedRight ? const Offset(0.90, 0.54) : const Offset(0.74, 0.42),
+        end: const Offset(0.22, 0.82),
         pathPoints: [
-          if (isConnectedRight) const Offset(0.84, 0.54),
-          const Offset(0.62, 0.54),
-          const Offset(0.72, 0.36),
-          const Offset(0.56, 0.34),
-          const Offset(0.54, 0.50),
-          const Offset(0.64, 0.56),
-          const Offset(0.58, 0.72),
-          const Offset(0.42, 0.80),
-          const Offset(0.26, 0.76),
+          if (isConnectedRight) const Offset(0.90, 0.54),
+          if (isConnectedRight) const Offset(0.74, 0.54),
+          const Offset(0.75, 0.38),
+          const Offset(0.65, 0.24),
+          const Offset(0.50, 0.28),
+          const Offset(0.46, 0.44),
+          const Offset(0.58, 0.55),
+          const Offset(0.73, 0.50),
+          const Offset(0.68, 0.70),
+          const Offset(0.48, 0.84),
+          const Offset(0.22, 0.82),
         ],
         hintText: '① لف رأس الواو ثم انزل بالذيل المقوّس أسفل السطر ↙️',
+        strokeWidth: 16.5,
       ),
     ];
   }
@@ -1580,32 +1723,32 @@ class ArabicLetterTracingData {
         LetterStroke(
           index: 1,
           label: '١',
-          start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.68, 0.44),
-          end: const Offset(0.24, 0.58),
+          start: isMidOrEnd ? const Offset(0.88, 0.58) : const Offset(0.68, 0.42),
+          end: const Offset(0.20, 0.58),
           pathPoints: [
-            if (isMidOrEnd) const Offset(0.86, 0.58),
+            if (isMidOrEnd) const Offset(0.88, 0.58),
             if (isMidOrEnd) const Offset(0.68, 0.58),
-            const Offset(0.68, 0.44),
+            const Offset(0.68, 0.42),
             const Offset(0.68, 0.58),
-            const Offset(0.24, 0.58),
+            const Offset(0.20, 0.58),
           ],
           hintText: '① ارسم سنّة الياء ثم اسحب خط الاتصال على السطر ⬅️',
         ),
         const LetterStroke(
           index: 2,
           label: '٢',
-          start: Offset(0.72, 0.74),
-          end: Offset(0.72, 0.74),
-          pathPoints: [Offset(0.72, 0.74)],
+          start: Offset(0.74, 0.77),
+          end: Offset(0.74, 0.77),
+          pathPoints: [Offset(0.74, 0.77)],
           hintText: '② اضغط لوضع النقطة الأولى تحت الياء •',
           isTapOnly: true,
         ),
         const LetterStroke(
           index: 3,
           label: '٣',
-          start: Offset(0.58, 0.74),
-          end: Offset(0.58, 0.74),
-          pathPoints: [Offset(0.58, 0.74)],
+          start: Offset(0.56, 0.77),
+          end: Offset(0.56, 0.77),
+          pathPoints: [Offset(0.56, 0.77)],
           hintText: '③ اضغط لوضع النقطة الثانية تحت الياء ••',
           isTapOnly: true,
         ),
@@ -1615,36 +1758,37 @@ class ArabicLetterTracingData {
       LetterStroke(
         index: 1,
         label: '١',
-        start: isMidOrEnd ? const Offset(0.86, 0.58) : const Offset(0.74, 0.46),
-        end: const Offset(0.22, 0.52),
+        start: isMidOrEnd ? const Offset(0.88, 0.48) : const Offset(0.74, 0.36),
+        end: const Offset(0.20, 0.46),
         pathPoints: [
-          if (isMidOrEnd) const Offset(0.86, 0.58),
-          const Offset(0.74, 0.46),
-          const Offset(0.60, 0.38),
-          const Offset(0.50, 0.46),
-          const Offset(0.66, 0.58),
-          const Offset(0.60, 0.76),
-          const Offset(0.42, 0.82),
-          const Offset(0.24, 0.72),
-          const Offset(0.22, 0.52),
+          if (isMidOrEnd) const Offset(0.88, 0.48),
+          const Offset(0.74, 0.36),
+          const Offset(0.58, 0.30),
+          const Offset(0.48, 0.40),
+          const Offset(0.66, 0.52),
+          const Offset(0.60, 0.70),
+          const Offset(0.42, 0.75),
+          const Offset(0.24, 0.66),
+          const Offset(0.20, 0.46),
         ],
         hintText: '① انحني برأس الياء ثم ارسم الكأس الكبير وصعوداً لليسار ↶',
+        strokeWidth: 18.0,
       ),
       const LetterStroke(
         index: 2,
         label: '٢',
-        start: Offset(0.54, 0.88),
-        end: Offset(0.54, 0.88),
-        pathPoints: [Offset(0.54, 0.88)],
+        start: Offset(0.56, 0.90),
+        end: Offset(0.56, 0.90),
+        pathPoints: [Offset(0.56, 0.90)],
         hintText: '② اضغط لوضع النقطة الأولى تحت الياء •',
         isTapOnly: true,
       ),
       const LetterStroke(
         index: 3,
         label: '٣',
-        start: Offset(0.42, 0.88),
-        end: Offset(0.42, 0.88),
-        pathPoints: [Offset(0.42, 0.88)],
+        start: Offset(0.38, 0.90),
+        end: Offset(0.38, 0.90),
+        pathPoints: [Offset(0.38, 0.90)],
         hintText: '③ اضغط لوضع النقطة الثانية تحت الياء ••',
         isTapOnly: true,
       ),
@@ -1660,6 +1804,7 @@ class ArabicLetterTracingCanvas extends StatefulWidget {
   final String exampleEmoji;
   final VoidCallback? onComplete;
   final Color primaryColor;
+  final bool compactChrome;
 
   const ArabicLetterTracingCanvas({
     super.key,
@@ -1668,7 +1813,8 @@ class ArabicLetterTracingCanvas extends StatefulWidget {
     this.exampleWord = 'أَسَد',
     this.exampleEmoji = '🦁',
     this.onComplete,
-    this.primaryColor = const Color(0xFF673AB7), // Purple theme matching Lingo Banana
+    this.primaryColor = const Color(0xFFE53935),
+    this.compactChrome = false,
   });
 
 
@@ -1764,6 +1910,19 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       _isWrongStartShake = false;
       _isAllCompleted = false;
     });
+  }
+
+  void _onTapDown(TapDownDetails details, Size canvasSize) {
+    if (_isAllCompleted || _currentStrokeIndex >= _strokes.length) return;
+    final stroke = _strokes[_currentStrokeIndex];
+    if (!stroke.isTapOnly || stroke.pathPoints.isEmpty) return;
+    final startPx = Offset(
+      stroke.pathPoints.first.dx * canvasSize.width,
+      stroke.pathPoints.first.dy * canvasSize.height,
+    );
+    if ((details.localPosition - startPx).distance <= 68.0) {
+      _completeCurrentStroke([startPx]);
+    }
   }
 
   void _onPanStart(DragStartDetails details, Size canvasSize) {
@@ -1937,78 +2096,83 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // ─── 1. شريط الكبسولة العلوي (مثل لينغو بنانا: 1/26 🍎 APPLE) ───
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-            decoration: BoxDecoration(
-              color: widget.primaryColor.withValues(alpha: 0.15),
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(color: widget.primaryColor.withValues(alpha: 0.4), width: 2),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: AppColors.oasisGreen,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Text(
-                    _letterBadge(widget.letterChar),
-                    style: const TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+          if (!widget.compactChrome) ...[
+            // ─── 1. شريط الكبسولة العلوي (عند الاستخدام المنفرد) ───
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 7),
+              decoration: BoxDecoration(
+                color: widget.primaryColor.withValues(alpha: 0.10),
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: widget.primaryColor.withValues(alpha: 0.35), width: 1.8),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: widget.primaryColor,
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Flexible(
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
                     child: Text(
-                      '${widget.exampleEmoji} ${widget.exampleWord}',
-                      maxLines: 1,
-                      style: TextStyle(
+                      _letterBadge(widget.letterChar),
+                      style: const TextStyle(
                         fontFamily: 'Cairo',
-                        fontSize: 18,
-                        fontWeight: FontWeight.w900,
-                        color: widget.primaryColor,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ),
-                ),
-                if (_earnedStars > 0) ...[
-                  const SizedBox(width: 8),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: List.generate(3, (i) {
-                      return Icon(
-                        i < _earnedStars ? Icons.star_rounded : Icons.star_outline_rounded,
-                        color: const Color(0xFFFFB300),
-                        size: 20,
-                      );
-                    }),
+                  const SizedBox(width: 10),
+                  Flexible(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        '${widget.exampleEmoji} ${widget.exampleWord}',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 17,
+                          fontWeight: FontWeight.w900,
+                          color: widget.primaryColor,
+                        ),
+                      ),
+                    ),
                   ),
+                  if (_earnedStars > 0) ...[
+                    const SizedBox(width: 8),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: List.generate(3, (i) {
+                        return Icon(
+                          i < _earnedStars ? Icons.star_rounded : Icons.star_outline_rounded,
+                          color: const Color(0xFFFFB300),
+                          size: 20,
+                        );
+                      }),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
-          ),
+            const SizedBox(height: 12),
+          ],
 
-          const SizedBox(height: 14),
-
-          // ─── 2. إطار رسم الحرف المتوهج (Lingo Banana Canvas Box) ───
+          // ─── 2. لوحة التتبع الفيكتورية البيضاء (أسلوب Kiwii / Montessori) ───
           LayoutBuilder(
             builder: (context, outerConstraints) {
+              final maxW = outerConstraints.maxWidth.isFinite
+                  ? outerConstraints.maxWidth
+                  : 360.0;
               final screenWidth = MediaQuery.sizeOf(context).width;
               final isTablet = screenWidth > 600;
-              // تكبير تناسبي: على الفون ~320, على التابلت ~480 (مع حد أقصى)
-              final canvasWidth = isTablet
-                  ? (screenWidth * 0.55).clamp(320.0, 520.0)
-                  : math.min(320.0, outerConstraints.maxWidth);
-              final canvasHeight = canvasWidth * (340.0 / 320.0); // نفس النسبة
+              final canvasWidth = widget.compactChrome
+                  ? maxW.clamp(240.0, 440.0)
+                  : (isTablet
+                      ? (screenWidth * 0.50).clamp(320.0, 480.0)
+                      : math.min(340.0, maxW));
+              final canvasHeight = canvasWidth * (340.0 / 320.0);
 
               return Center(
                 child: AnimatedBuilder(
@@ -2018,24 +2182,32 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                       width: canvasWidth,
                       height: canvasHeight,
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2D144B), // خلفية بنفسجية داكنة فاخرة
-                        borderRadius: BorderRadius.circular(28),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(24),
                         border: Border.all(
                           color: _isWrongStartShake
                               ? Colors.redAccent
-                              : Colors.white.withValues(alpha: 0.85),
-                          width: _isWrongStartShake ? 3.5 : 2.5,
+                              : (_isAllCompleted
+                                  ? const Color(0xFF16A34A)
+                                  : (widget.compactChrome
+                                      ? widget.primaryColor.withValues(alpha: 0.14)
+                                      : widget.primaryColor.withValues(alpha: 0.28))),
+                          width: _isWrongStartShake || _isAllCompleted
+                              ? 2.8
+                              : (widget.compactChrome ? 1.2 : 2.0),
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: _isWrongStartShake
-                                ? Colors.redAccent.withValues(alpha: 0.4)
-                                : widget.primaryColor.withValues(alpha: 0.35),
-                            blurRadius: 16,
-                            spreadRadius: 2,
-                            offset: const Offset(0, 6),
-                          ),
-                        ],
+                        boxShadow: widget.compactChrome && !_isWrongStartShake
+                            ? null
+                            : [
+                                BoxShadow(
+                                  color: _isWrongStartShake
+                                      ? Colors.redAccent.withValues(alpha: 0.25)
+                                      : widget.primaryColor.withValues(alpha: 0.10),
+                                  blurRadius: 18,
+                                  spreadRadius: 1,
+                                  offset: const Offset(0, 6),
+                                ),
+                              ],
                       ),
                       child: child,
                     );
@@ -2047,18 +2219,23 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                         final size = Size(constraints.maxWidth, constraints.maxHeight);
 
                         return GestureDetector(
+                          onTapDown: (details) => _onTapDown(details, size),
                           onPanStart: (details) => _onPanStart(details, size),
                           onPanUpdate: (details) => _onPanUpdate(details, size),
                           onPanEnd: (details) => _onPanEnd(details, size),
-                          child: CustomPaint(
-                            size: size,
-                            painter: _ArabicLetterPainter(
-                              strokes: _strokes,
-                              currentStrokeIndex: _currentStrokeIndex,
-                              completedStrokePaths: _completedStrokePaths,
-                              currentDrawingPoints: _currentDrawingPoints,
-                              pulseValue: _pulseController.value,
-                              isAllCompleted: _isAllCompleted,
+                          child: AnimatedBuilder(
+                            animation: _pulseController,
+                            builder: (context, _) => CustomPaint(
+                              size: size,
+                              painter: ArabicLetterTracingPainter(
+                                strokes: _strokes,
+                                currentStrokeIndex: _currentStrokeIndex,
+                                completedStrokePaths: _completedStrokePaths,
+                                currentDrawingPoints: _currentDrawingPoints,
+                                pulseValue: _pulseController.value,
+                                isAllCompleted: _isAllCompleted,
+                                outlineColor: widget.primaryColor,
+                              ),
                             ),
                           ),
                         );
@@ -2070,308 +2247,527 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
             },
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 10),
 
-          // ─── 3. شريط التوجيه التفاعلي أسفل الإطار ───
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 300),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            decoration: BoxDecoration(
-              color: _isAllCompleted
-                  ? AppColors.oasisGreen.withValues(alpha: 0.15)
-                  : (_isWrongStartShake
-                      ? Colors.red.withValues(alpha: 0.15)
-                      : widget.primaryColor.withValues(alpha: 0.1)),
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(
-                color: _isAllCompleted
-                    ? AppColors.oasisGreen
-                    : (_isWrongStartShake ? Colors.red : widget.primaryColor.withValues(alpha: 0.3)),
-                width: 1.5,
-              ),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(
-                  _isAllCompleted
-                      ? Icons.check_circle_rounded
-                      : (_isWrongStartShake
-                          ? Icons.warning_amber_rounded
-                          : Icons.touch_app_rounded),
+          // ─── 3. شريط التوجيه التفاعلي + النجوم + زر إعادة الكتابة ───
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 260),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
                   color: _isAllCompleted
-                      ? AppColors.oasisGreen
-                      : (_isWrongStartShake ? Colors.red : widget.primaryColor),
-                  size: 22,
-                ),
-                const SizedBox(width: 8),
-                Flexible(
-                  child: Text(
-                    currentHint,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: _isAllCompleted
-                          ? AppColors.oasisGreen
-                          : (_isWrongStartShake ? Colors.red : AppColors.textPrimaryDay),
-                    ),
+                      ? const Color(0xFF16A34A).withValues(alpha: 0.12)
+                      : (_isWrongStartShake
+                          ? Colors.red.withValues(alpha: 0.12)
+                          : widget.primaryColor.withValues(alpha: 0.08)),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: _isAllCompleted
+                        ? const Color(0xFF16A34A)
+                        : (_isWrongStartShake
+                            ? Colors.red
+                            : widget.primaryColor.withValues(alpha: 0.28)),
+                    width: 1.5,
                   ),
                 ),
-              ],
-            ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      _isAllCompleted
+                          ? Icons.check_circle_rounded
+                          : (_isWrongStartShake
+                              ? Icons.warning_amber_rounded
+                              : Icons.touch_app_rounded),
+                      color: _isAllCompleted
+                          ? const Color(0xFF16A34A)
+                          : (_isWrongStartShake ? Colors.red : widget.primaryColor),
+                      size: 20,
+                    ),
+                    const SizedBox(width: 7),
+                    Flexible(
+                      child: Text(
+                        currentHint,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.bold,
+                          color: _isAllCompleted
+                              ? const Color(0xFF15803D)
+                              : (_isWrongStartShake ? Colors.red.shade700 : const Color(0xFF1B2A4A)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (_completedStrokePaths.isNotEmpty || _isAllCompleted)
+                OutlinedButton.icon(
+                  onPressed: _resetCanvas,
+                  icon: const Icon(Icons.refresh_rounded, size: 18),
+                  label: const Text(
+                    'إِعَادَةٌ',
+                    style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 13),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: widget.primaryColor,
+                    side: BorderSide(color: widget.primaryColor.withValues(alpha: 0.5)),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                  ),
+                ),
+            ],
           ),
-
-          if (_isAllCompleted) ...[
-            const SizedBox(height: 10),
-            OutlinedButton.icon(
-              onPressed: _resetCanvas,
-              icon: const Icon(Icons.refresh_rounded, size: 18),
-              label: const Text(
-                'إِعَادَةُ الْكِتَابَةِ',
-                style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 14),
-              ),
-              style: OutlinedButton.styleFrom(
-                foregroundColor: widget.primaryColor,
-                side: BorderSide(color: widget.primaryColor),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-          ],
         ],
       ),
     );
   }
 }
 
-/// الرسام المخصص لمسارات وأسهم ونقاط الحرف العربي
-class _ArabicLetterPainter extends CustomPainter {
+/// الرسام الفيكتوري المخصص بأسلوب المضمار المفرّغ ذي الإطار الملون (Kiwii / Montessori)
+/// - إطار ملون خارجي حاد ومضمار أبيض ناصع مفرّغ بدون تقاطعات داخلية
+/// - خط متقطع كحلي غامق (#1B2A4A) مع رؤوس أسهم مثلثية على المنعطفات والنهايات
+/// - نقطة بداية صفراء ذهبية نابضة (#FBBF24) + ترقيم الخطوات
+/// - دوائر مفرغة منقطة بأسهم دائرية للنقاط (ب، ت، ث، ن، ش، ذ، ز...)
+/// - تلوين تفاعلي مقصوص بدقة داخل حدود المضمار (BlendMode.srcIn)
+class ArabicLetterTracingPainter extends CustomPainter {
   final List<LetterStroke> strokes;
   final int currentStrokeIndex;
   final List<List<Offset>> completedStrokePaths;
   final List<Offset> currentDrawingPoints;
   final double pulseValue;
   final bool isAllCompleted;
+  final Color outlineColor;
 
-  _ArabicLetterPainter({
+  static const Color _navyGuide = Color(0xFF1B2A4A);
+  static const Color _goldStart = Color(0xFFFBBF24);
+  static const Color _goldBorder = Color(0xFFD97706);
+
+  ArabicLetterTracingPainter({
     required this.strokes,
     required this.currentStrokeIndex,
     required this.completedStrokePaths,
     required this.currentDrawingPoints,
     required this.pulseValue,
     required this.isAllCompleted,
+    this.outlineColor = const Color(0xFFE53935),
   });
+
+  double _trackWidthFor(LetterStroke stroke, double unit) {
+    final factor = (stroke.strokeWidth / 22.0).clamp(0.62, 1.05);
+    return (unit * 0.120 * factor).clamp(19.0, 54.0);
+  }
+
+  double _dotRadius(double unit) => (unit * 0.056).clamp(13.0, 24.0);
+
+  /// يبني مسار Bezier ناعم يحافظ على الزوايا القائمة الحادة (مثل زاوية ب، س، د، ص)
+  /// ويجعل المنحنيات (مثل قوس ن، م، هـ، و، ج) انسيابية تماماً كالخط المدرسي.
+  Path _buildSmoothPath(List<Offset> pts) {
+    final path = Path();
+    if (pts.isEmpty) return path;
+    path.moveTo(pts.first.dx, pts.first.dy);
+    if (pts.length == 1) return path;
+    if (pts.length == 2) {
+      path.lineTo(pts[1].dx, pts[1].dy);
+      return path;
+    }
+
+    for (int i = 1; i < pts.length - 1; i++) {
+      final prev = pts[i - 1];
+      final curr = pts[i];
+      final next = pts[i + 1];
+      final v1 = curr - prev;
+      final v2 = next - curr;
+      final d1 = v1.distance;
+      final d2 = v2.distance;
+      if (d1 < 0.001 || d2 < 0.001) continue;
+
+      final cosAngle = (v1.dx * v2.dx + v1.dy * v2.dy) / (d1 * d2);
+      if (cosAngle < 0.25) {
+        // زاوية حادة مقصودة (≥ ~75°): نُبقيها حادة وأنيقة بحنيٍ صغير جداً
+        final cornerPull = math.min(math.min(d1, d2) * 0.25, 10.0);
+        final before = curr - (v1 / d1) * cornerPull;
+        final after = curr + (v2 / d2) * cornerPull;
+        path.lineTo(before.dx, before.dy);
+        path.quadraticBezierTo(curr.dx, curr.dy, after.dx, after.dy);
+      } else {
+        // انحناء سلس: ربط عبر نقطة المنتصف بـ quadraticBezierTo
+        final mid = Offset((curr.dx + next.dx) / 2, (curr.dy + next.dy) / 2);
+        path.quadraticBezierTo(curr.dx, curr.dy, mid.dx, mid.dy);
+      }
+    }
+    path.lineTo(pts.last.dx, pts.last.dy);
+    return path;
+  }
+
+  bool _isDotStroke(LetterStroke s, List<Offset> pts) {
+    return s.isTapOnly || pts.length == 1;
+  }
 
   @override
   void paint(Canvas canvas, Size size) {
-    // ── 1. رسم المسار الشفاف العريض (Guide Track) — كل مقطع بعرضه ──
-    for (final stroke in strokes) {
-      final points = stroke.pathPoints.map((p) => Offset(p.dx * size.width, p.dy * size.height)).toList();
-      if (points.length == 1) {
-        canvas.drawCircle(points.first, 18.0, Paint()..color = Colors.white.withValues(alpha: 0.16));
-      } else if (points.isNotEmpty) {
-        final trackPaint = Paint()
-          ..color = Colors.white.withValues(alpha: 0.16)
-          ..strokeWidth = stroke.strokeWidth + 16.0
-          ..strokeCap = StrokeCap.round
-          ..strokeJoin = StrokeJoin.round
-          ..style = PaintingStyle.stroke;
-        final path = Path();
-        path.moveTo(points.first.dx, points.first.dy);
-        for (int i = 1; i < points.length; i++) {
-          path.lineTo(points[i].dx, points[i].dy);
-        }
-        canvas.drawPath(path, trackPaint);
-      }
+    final unit = math.min(size.width, size.height);
+    final borderW = (unit * 0.0095).clamp(2.2, 3.6);
+    final dotR = _dotRadius(unit);
+    final layerBounds = Offset.zero & size;
+
+    final scaledPtsList = <List<Offset>>[];
+    final smoothPaths = <Path?>[];
+    for (final s in strokes) {
+      final pts = s.pathPoints
+          .map((p) => Offset(p.dx * size.width, p.dy * size.height))
+          .toList();
+      scaledPtsList.add(pts);
+      smoothPaths.add(_isDotStroke(s, pts) ? null : _buildSmoothPath(pts));
     }
 
-    // ── 2. رسم الخط المنقط المركزي والأسهم التوجيهية ──
-    for (int sIdx = 0; sIdx < strokes.length; sIdx++) {
-      final stroke = strokes[sIdx];
-      final points = stroke.pathPoints.map((p) => Offset(p.dx * size.width, p.dy * size.height)).toList();
-
-      final dashPaint = Paint()
-        ..color = (sIdx == currentStrokeIndex)
-            ? Colors.cyanAccent.withValues(alpha: 0.85)
-            : Colors.white.withValues(alpha: 0.35)
-        ..strokeWidth = 3.5
-        ..style = PaintingStyle.stroke;
-
-      if (points.length == 1) {
+    // ── الطبقة 1: المضمار المفرّغ بإطار ملون متّصل نظيف (بدون خطوط متقاطعة بالداخل) ──
+    canvas.saveLayer(layerBounds, Paint());
+    // 1أ. الظل الخارجي الملون لكل المقاطع
+    for (int i = 0; i < strokes.length; i++) {
+      final s = strokes[i];
+      final pts = scaledPtsList[i];
+      if (pts.isEmpty) continue;
+      if (_isDotStroke(s, pts)) {
         canvas.drawCircle(
-          points.first,
-          10.0,
-          dashPaint..style = PaintingStyle.stroke..strokeWidth = 2.5,
+          pts.first,
+          dotR + borderW,
+          Paint()..color = outlineColor..style = PaintingStyle.fill,
         );
       } else {
-        _drawDashedPolyline(canvas, points, dashPaint);
-        if (points.length >= 2) {
-          final last = points.last;
-          final prev = points[points.length - 2];
-          final angle = (last - prev).direction;
-          _drawArrowHead(canvas, last, angle, dashPaint.color);
-        }
+        final tw = _trackWidthFor(s, unit);
+        canvas.drawPath(
+          smoothPaths[i]!,
+          Paint()
+            ..color = outlineColor
+            ..strokeWidth = tw + borderW * 2
+            ..strokeCap = StrokeCap.round
+            ..strokeJoin = StrokeJoin.round
+            ..style = PaintingStyle.stroke,
+        );
       }
     }
-
-    // ── 3. رسم المقاطع المكتملة — كل مقطع بعرضه الخاص ──
-    final baseColor = isAllCompleted ? const Color(0xFF00E676) : const Color(0xFFFFB300);
-    for (int i = 0; i < completedStrokePaths.length; i++) {
-      final pathPoints = completedStrokePaths[i];
-      final sw = (i < strokes.length) ? strokes[i].strokeWidth : 22.0;
-      final completedPaint = Paint()
-        ..color = baseColor
-        ..strokeWidth = sw
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round
-        ..style = PaintingStyle.stroke;
-      if (pathPoints.length == 1) {
-        canvas.drawCircle(pathPoints.first, sw * 0.6, Paint()..color = baseColor);
-      } else if (pathPoints.isNotEmpty) {
-        final p = Path();
-        p.moveTo(pathPoints.first.dx, pathPoints.first.dy);
-        for (int j = 1; j < pathPoints.length; j++) {
-          p.lineTo(pathPoints[j].dx, pathPoints[j].dy);
-        }
-        canvas.drawPath(p, completedPaint);
-      }
-    }
-
-
-    // ── 4. رسم الخط الحالي أثناء السحب بإصبع التلميذ ──
-    if (currentDrawingPoints.isNotEmpty) {
-      final activeDrawingPaint = Paint()
-        ..color = const Color(0xFFFFC107)
-        ..strokeWidth = 34.0
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round
-        ..style = PaintingStyle.stroke;
-
-      if (currentDrawingPoints.length == 1) {
-        canvas.drawCircle(currentDrawingPoints.first, 15.0, Paint()..color = const Color(0xFFFFC107));
+    // 1ب. تفريغ الداخل باللون الأبيض الناصع لإزالة أي تقاطعات داخلية
+    for (int i = 0; i < strokes.length; i++) {
+      final s = strokes[i];
+      final pts = scaledPtsList[i];
+      if (pts.isEmpty) continue;
+      if (_isDotStroke(s, pts)) {
+        canvas.drawCircle(
+          pts.first,
+          dotR,
+          Paint()..color = Colors.white..style = PaintingStyle.fill,
+        );
       } else {
-        final p = Path();
-        p.moveTo(currentDrawingPoints.first.dx, currentDrawingPoints.first.dy);
-        for (int i = 1; i < currentDrawingPoints.length; i++) {
-          p.lineTo(currentDrawingPoints[i].dx, currentDrawingPoints[i].dy);
+        final tw = _trackWidthFor(s, unit);
+        canvas.drawPath(
+          smoothPaths[i]!,
+          Paint()
+            ..color = Colors.white
+            ..strokeWidth = tw
+            ..strokeCap = StrokeCap.round
+            ..strokeJoin = StrokeJoin.round
+            ..style = PaintingStyle.stroke,
+        );
+      }
+    }
+    canvas.restore();
+
+    // ── الطبقة 2: التلوين التفاعلي للطفل مقصوصاً تماماً داخل حدود المضمار ──
+    if (completedStrokePaths.isNotEmpty || currentDrawingPoints.isNotEmpty) {
+      canvas.saveLayer(layerBounds, Paint());
+      // قناع المضمار الداخلي (يمنع خروج تلوين الطفل خارج الحدود الملونة أبداً)
+      for (int i = 0; i < strokes.length; i++) {
+        final s = strokes[i];
+        final pts = scaledPtsList[i];
+        if (pts.isEmpty) continue;
+        if (_isDotStroke(s, pts)) {
+          canvas.drawCircle(pts.first, dotR - 0.8, Paint()..color = Colors.white);
+        } else {
+          final tw = _trackWidthFor(s, unit);
+          canvas.drawPath(
+            smoothPaths[i]!,
+            Paint()
+              ..color = Colors.white
+              ..strokeWidth = tw - 1.2
+              ..strokeCap = StrokeCap.round
+              ..strokeJoin = StrokeJoin.round
+              ..style = PaintingStyle.stroke,
+          );
         }
-        canvas.drawPath(p, activeDrawingPaint);
       }
 
-      // نقطة متوهجة على رأس إصبع التلميذ
-      final tip = currentDrawingPoints.last;
-      canvas.drawCircle(
-        tip,
-        14.0,
-        Paint()..color = Colors.white,
-      );
-      canvas.drawCircle(
-        tip,
-        8.0,
-        Paint()..color = Colors.amber,
-      );
+      // رسم تلوين الطفل داخل القناع بـ BlendMode.srcIn
+      canvas.saveLayer(layerBounds, Paint()..blendMode = BlendMode.srcIn);
+      final fillColor = isAllCompleted
+          ? const Color(0xFF10B981).withValues(alpha: 0.85)
+          : outlineColor.withValues(alpha: 0.34);
+
+      for (int i = 0; i < completedStrokePaths.length && i < strokes.length; i++) {
+        final s = strokes[i];
+        final pts = scaledPtsList[i];
+        if (pts.isEmpty) continue;
+        if (_isDotStroke(s, pts)) {
+          canvas.drawCircle(pts.first, dotR, Paint()..color = fillColor);
+        } else {
+          final tw = _trackWidthFor(s, unit);
+          canvas.drawPath(
+            smoothPaths[i]!,
+            Paint()
+              ..color = fillColor
+              ..strokeWidth = tw
+              ..strokeCap = StrokeCap.round
+              ..strokeJoin = StrokeJoin.round
+              ..style = PaintingStyle.stroke,
+          );
+        }
+      }
+
+      if (currentDrawingPoints.isNotEmpty && currentStrokeIndex < strokes.length) {
+        final activeStroke = strokes[currentStrokeIndex];
+        final tw = _trackWidthFor(activeStroke, unit);
+        final activeInk = outlineColor.withValues(alpha: 0.52);
+        if (currentDrawingPoints.length == 1) {
+          canvas.drawCircle(currentDrawingPoints.first, tw * 0.45, Paint()..color = activeInk);
+        } else {
+          final drawPath = Path()..moveTo(currentDrawingPoints.first.dx, currentDrawingPoints.first.dy);
+          for (int j = 1; j < currentDrawingPoints.length; j++) {
+            drawPath.lineTo(currentDrawingPoints[j].dx, currentDrawingPoints[j].dy);
+          }
+          canvas.drawPath(
+            drawPath,
+            Paint()
+              ..color = activeInk
+              ..strokeWidth = tw * 0.92
+              ..strokeCap = StrokeCap.round
+              ..strokeJoin = StrokeJoin.round
+              ..style = PaintingStyle.stroke,
+          );
+        }
+      }
+      canvas.restore(); // srcIn
+      canvas.restore(); // mask
     }
 
-    // ── 5. رسم نقاط البداية المرقمة (Numbered Start Badges) ──
+    // ── الطبقة 3: الخط المتقطع الكحلي (#1B2A4A) + رؤوس الأسهم المثلثية ──
+    final dashLen = (unit * 0.025).clamp(6.0, 11.0);
+    final gapLen = (unit * 0.018).clamp(4.5, 8.0);
+    final dashStrokeW = (unit * 0.0085).clamp(2.0, 3.2);
+    final arrowSize = (unit * 0.036).clamp(9.0, 15.0);
+
+    for (int sIdx = 0; sIdx < strokes.length; sIdx++) {
+      final s = strokes[sIdx];
+      final pts = scaledPtsList[sIdx];
+      if (pts.isEmpty) continue;
+      final isCompleted = sIdx < currentStrokeIndex || isAllCompleted;
+      final isCurrent = sIdx == currentStrokeIndex && !isAllCompleted;
+
+      final guideColor = isCompleted
+          ? Colors.white.withValues(alpha: isAllCompleted ? 0.45 : 0.0)
+          : _navyGuide.withValues(alpha: isCurrent ? 0.95 : 0.65);
+
+      if (guideColor.a == 0) continue;
+
+      if (_isDotStroke(s, pts)) {
+        // الدائرة المتقطعة بسهم دائري (مثل ب، ذ، ز، ش، ن في الصور المرجعية)
+        _drawCircularDotGuide(
+          canvas,
+          pts.first,
+          dotR * 0.54,
+          guideColor,
+          dashStrokeW,
+          arrowSize * 0.72,
+        );
+      } else {
+        final path = smoothPaths[sIdx]!;
+        _drawDashedPathWithArrows(
+          canvas,
+          path,
+          guideColor,
+          dashStrokeW,
+          dashLen,
+          gapLen,
+          arrowSize,
+          unit,
+        );
+      }
+    }
+
+    // ── الطبقة 4: نقطة البداية الصفراء الذهبية (#FBBF24) + ترقيم الخطوات ──
     if (!isAllCompleted) {
-      for (int sIdx = 0; sIdx < strokes.length; sIdx++) {
-        final stroke = strokes[sIdx];
-        final startPx = Offset(stroke.start.dx * size.width, stroke.start.dy * size.height);
-        final isCurrent = (sIdx == currentStrokeIndex);
-        final isPassed = (sIdx < currentStrokeIndex);
+      final dotStartR = (unit * 0.025).clamp(7.0, 11.5);
+      final showNumbers = strokes.length > 1;
 
-        if (isPassed) continue; // تم الانتهاء منه
+      for (int sIdx = strokes.length - 1; sIdx >= 0; sIdx--) {
+        if (sIdx < currentStrokeIndex) continue;
+        final s = strokes[sIdx];
+        final pts = scaledPtsList[sIdx];
+        if (pts.isEmpty) continue;
 
-        // دائرة النبض للنقطة النشطة الحالية
+        final isCurrent = sIdx == currentStrokeIndex;
+        final isDot = _isDotStroke(s, pts);
+        final startPx = isDot
+            ? Offset(pts.first.dx + dotR * 0.54, pts.first.dy)
+            : pts.first;
+
         if (isCurrent) {
-          final pulseRadius = 18.0 + (pulseValue * 8.0);
+          final haloR = dotStartR * (1.45 + pulseValue * 0.65);
           canvas.drawCircle(
             startPx,
-            pulseRadius,
-            Paint()..color = Colors.cyanAccent.withValues(alpha: 0.35 * (1.0 - pulseValue)),
+            haloR,
+            Paint()..color = _goldStart.withValues(alpha: 0.36 * (1.0 - pulseValue)),
           );
         }
 
-        // الدائرة الخارجية للنقطة
+        final r = isDot ? dotStartR * 0.68 : (isCurrent ? dotStartR * 1.18 : dotStartR * 0.92);
         canvas.drawCircle(
           startPx,
-          16.0,
-          Paint()
-            ..color = isCurrent ? const Color(0xFF00E5FF) : Colors.white.withValues(alpha: 0.4)
-            ..style = PaintingStyle.fill,
+          r,
+          Paint()..color = isCurrent ? _goldStart : const Color(0xFFFDE047),
         );
+        if (isCurrent) {
+          canvas.drawCircle(
+            startPx,
+            r,
+            Paint()
+              ..color = _goldBorder
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 1.6,
+          );
+        }
 
-        // الدائرة البيضاء الداخلية
-        canvas.drawCircle(
-          startPx,
-          13.0,
-          Paint()
-            ..color = isCurrent ? Colors.white : Colors.grey.shade300
-            ..style = PaintingStyle.fill,
-        );
-
-        // رقم النقطة (١ ، ٢ ، ٣)
-        final textPainter = TextPainter(
-          text: TextSpan(
-            text: stroke.label,
-            style: TextStyle(
-              fontFamily: 'Cairo',
-              fontSize: 14,
-              fontWeight: FontWeight.w900,
-              color: isCurrent ? const Color(0xFF00838F) : Colors.grey.shade600,
+        if (showNumbers && !isDot) {
+          final tp = TextPainter(
+            text: TextSpan(
+              text: s.label,
+              style: TextStyle(
+                fontFamily: 'Cairo',
+                fontSize: (r * 1.15).clamp(9.0, 14.0),
+                fontWeight: FontWeight.w900,
+                color: _navyGuide,
+                height: 1.0,
+              ),
             ),
-          ),
-          textDirection: TextDirection.rtl,
-        )..layout();
+            textDirection: TextDirection.rtl,
+          )..layout();
+          tp.paint(canvas, startPx - Offset(tp.width / 2, tp.height / 2));
+        }
+      }
+    }
 
-        textPainter.paint(
-          canvas,
-          startPx - Offset(textPainter.width / 2, textPainter.height / 2),
-        );
+    // مؤشر لطيف على طرف إصبع الطفل أثناء التتبع
+    if (currentDrawingPoints.isNotEmpty && !isAllCompleted) {
+      final tip = currentDrawingPoints.last;
+      canvas.drawCircle(tip, 11.0, Paint()..color = Colors.white.withValues(alpha: 0.9));
+      canvas.drawCircle(tip, 7.0, Paint()..color = _goldStart);
+    }
+  }
+
+  void _drawDashedPathWithArrows(
+    Canvas canvas,
+    Path path,
+    Color color,
+    double strokeW,
+    double dashLen,
+    double gapLen,
+    double arrowSize,
+    double unit,
+  ) {
+    final dashPaint = Paint()
+      ..color = color
+      ..strokeWidth = strokeW
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+
+    for (final metric in path.computeMetrics()) {
+      final total = metric.length;
+      if (total < 4.0) continue;
+
+      // ترك هامش صغير قبل رأس السهم النهائي
+      final dashEndLimit = math.max(0.0, total - arrowSize * 0.55);
+      double dist = 0.0;
+      while (dist < dashEndLimit) {
+        final nextEnd = math.min(dist + dashLen, dashEndLimit);
+        canvas.drawPath(metric.extractPath(dist, nextEnd), dashPaint);
+        dist += dashLen + gapLen;
+      }
+
+      // سهم عند نهاية المسار دائماً
+      final endOffset = math.max(0.0, total - 1.0);
+      final endTan = metric.getTangentForOffset(endOffset);
+      if (endTan != null) {
+        _drawArrowHead(canvas, endTan.position, -endTan.angle, arrowSize, color);
+      }
+
+      // أسهم إضافية في المنتصف للمسارات الطويلة (مطابقة لـ ب، س، ص، م، ن، هـ)
+      if (total > unit * 0.42) {
+        final midFractions = total > unit * 0.95 ? [0.33, 0.66] : [0.50];
+        for (final f in midFractions) {
+          final tan = metric.getTangentForOffset(total * f);
+          if (tan != null) {
+            _drawArrowHead(canvas, tan.position, -tan.angle, arrowSize * 0.88, color);
+          }
+        }
       }
     }
   }
 
-  void _drawDashedPolyline(Canvas canvas, List<Offset> points, Paint paint) {
-    if (points.length < 2) return;
+  void _drawCircularDotGuide(
+    Canvas canvas,
+    Offset center,
+    double radius,
+    Color color,
+    double strokeW,
+    double arrowSize,
+  ) {
+    final rect = Rect.fromCircle(center: center, radius: radius);
+    // قوس منقط يبدأ من الساعة 3 ويدور مع عقارب الساعة 270 درجة (مثل الصور المرجعية)
+    const startAngle = 0.25;
+    const sweepTotal = math.pi * 1.48;
+    const segments = 6;
+    const segStep = sweepTotal / segments;
+    final p = Paint()
+      ..color = color
+      ..strokeWidth = strokeW * 0.9
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
 
-    const dashLength = 8.0;
-    const gapLength = 6.0;
-
-    for (int i = 0; i < points.length - 1; i++) {
-      final p1 = points[i];
-      final p2 = points[i + 1];
-      final totalDist = (p2 - p1).distance;
-      if (totalDist <= 0.0001) continue;
-      final dir = (p2 - p1) / totalDist;
-
-      double current = 0.0;
-      while (current < totalDist) {
-        final start = p1 + dir * current;
-        final endDist = math.min(current + dashLength, totalDist);
-        final end = p1 + dir * endDist;
-        canvas.drawLine(start, end, paint);
-        current += dashLength + gapLength;
-      }
+    for (int i = 0; i < segments; i++) {
+      canvas.drawArc(rect, startAngle + i * segStep, segStep * 0.58, false, p);
     }
+
+    const endAngle = startAngle + sweepTotal;
+    final tip = Offset(
+      center.dx + radius * math.cos(endAngle),
+      center.dy + radius * math.sin(endAngle),
+    );
+    final tangentAngle = endAngle + math.pi / 2;
+    _drawArrowHead(canvas, tip, tangentAngle, arrowSize, color);
   }
 
-  void _drawArrowHead(Canvas canvas, Offset tip, double angle, Color color) {
-    const arrowSize = 14.0;
+  void _drawArrowHead(
+    Canvas canvas,
+    Offset tip,
+    double angle,
+    double size,
+    Color color,
+  ) {
     final path = Path();
-
-    final p1 = tip - Offset(arrowSize * math.cos(angle - 0.5), arrowSize * math.sin(angle - 0.5));
-    final p2 = tip - Offset(arrowSize * math.cos(angle + 0.5), arrowSize * math.sin(angle + 0.5));
-
+    final p1 = tip - Offset(size * math.cos(angle - 0.52), size * math.sin(angle - 0.52));
+    final p2 = tip - Offset(size * math.cos(angle + 0.52), size * math.sin(angle + 0.52));
     path.moveTo(tip.dx, tip.dy);
     path.lineTo(p1.dx, p1.dy);
     path.lineTo(p2.dx, p2.dy);
     path.close();
-
     canvas.drawPath(path, Paint()..color = color..style = PaintingStyle.fill);
   }
 
   @override
-  bool shouldRepaint(covariant _ArabicLetterPainter oldDelegate) => true;
+  bool shouldRepaint(covariant ArabicLetterTracingPainter oldDelegate) => true;
 }
