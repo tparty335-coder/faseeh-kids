@@ -38,6 +38,8 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
   int? _activeWordIndex;
   final Set<String> _completedPositions = {};
 
+  int _defaultPosIndexFor(String letterChar) => letterChar == 'ه' ? 1 : 0;
+
   @override
   void initState() {
     super.initState();
@@ -45,6 +47,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
       widget.letterChar,
       tracingSpec: widget.tracingSpec,
     );
+    _selectedPosIndex = _defaultPosIndexFor(_profile.letterChar);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) _playAudio(_profile.introAudioPath);
     });
@@ -60,7 +63,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
           widget.letterChar,
           tracingSpec: widget.tracingSpec,
         );
-        _selectedPosIndex = 0;
+        _selectedPosIndex = _defaultPosIndexFor(_profile.letterChar);
         _activeWordIndex = null;
         _completedPositions.clear();
       });

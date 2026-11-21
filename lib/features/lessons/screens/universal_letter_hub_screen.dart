@@ -801,7 +801,7 @@ class _UniversalLetterHubScreenState
                     ),
                     child: Center(
                       child: Text(
-                        letter.letter,
+                        letter.letter == 'ه' ? 'هـ' : letter.letter,
                         style: TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: letterFontSize,

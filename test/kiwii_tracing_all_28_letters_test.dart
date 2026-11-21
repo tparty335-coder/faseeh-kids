@@ -179,5 +179,39 @@ void main() {
         expect(nextCalled, isTrue);
       }
     });
+
+    testWidgets('Haa (هـ) uses exact 1-stroke Kiwii order, defaults to هـ in writing station, and uses real Haa audio', (tester) async {
+      final strokes = ArabicLetterTracingData.getStrokesForLetter('ه', position: 'start');
+      expect(strokes.length, 1, reason: 'هـ must be 1 continuous stroke matching ه.jpg');
+      final pts = strokes.first.pathPoints;
+      expect(pts.first.dy, lessThan(0.35), reason: 'Starts at top golden dot');
+      expect(pts.any((p) => p.dx > 0.80), isTrue, reason: 'Sweeps down-right outer belly');
+      expect(pts.any((p) => p.dx < 0.40 && p.dy < 0.52), isTrue, reason: 'Loops around inner circle');
+      expect(pts.last.dx, lessThan(0.18), reason: 'Exits horizontally to left end');
+
+      final haaManifest = findManifestForLetter('ه')!;
+      expect(haaManifest.tracing.audioIntroPath, contains('haa'));
+      expect(haaManifest.tracing.audioIntroPath, isNot(contains('faa')));
+
+      await tester.binding.setSurfaceSize(const Size(800, 1280));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: UnifiedKiwiiWritingStation(
+              letterChar: 'ه',
+              tracingSpec: haaManifest.tracing,
+              onNext: () {},
+              onPrevious: () {},
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+      // Default active canvas for Haa must be 'start' (هـ), NOT isolated 'ه' circle
+      final canvasWidget = tester.widget<ArabicLetterTracingCanvas>(find.byType(ArabicLetterTracingCanvas));
+      expect(canvasWidget.position, 'start');
+      expect(tester.takeException(), isNull);
+    });
   });
 }

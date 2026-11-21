@@ -390,7 +390,7 @@ class _LetterLessonShellScreenState
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
-                          'حَرْفُ (${m.letter})',
+                          'حَرْفُ (${m.letter == 'ه' ? 'هـ' : m.letter})',
                           style: TextStyle(
                             fontFamily: 'Cairo',
                             fontSize: 13,

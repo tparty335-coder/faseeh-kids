@@ -13,7 +13,7 @@ const String _gamesAudio = 'audio/games/';
 
 const LetterUnitManifest haaManifest = LetterUnitManifest(
   letter: 'ه',
-  unitTitle: 'الوَحْدَةُ السَّادِسَةُ وَالْعِشْرُونَ | حَرْفُ الْهَاءِ (ه)',
+  unitTitle: 'الوَحْدَةُ السَّادِسَةُ وَالْعِشْرُونَ | حَرْفُ الْهَاءِ (هـ)',
   topBarColor: Color(0xFF43A047),
   highlightColor: Color(0xFFC8E6C9),
   mascotEmoji: '🦅',
@@ -23,7 +23,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
   objectives: ObjectivesSpec(
     audioPath: 'audio/letters/core/haa_name.mp3',
     objectives: [
-      'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الْهَاءِ (ه)',
+      'أَتَعَرَّفُ عَلَى شَكْلِ وَصَوْتِ حَرْفِ الْهَاءِ (هـ)',
       'أَنْطِقُ حَرْفَ الْهَاءِ بِالْحَرَكَاتِ الْقَصِيرَةِ وَالسُّكُونِ',
       'أُمَيِّزُ حَرْفَ الْهَاءِ مَعَ الْمُدُودِ الثَّلَاثَةِ (هَا، هُو، هِي)',
       'أَتَتَبَّعُ وَأَكْتُبُ حَرْفَ الْهَاءِ فِي مَوَاضِعِهِ الْمُخْتَلِفَةِ',
@@ -154,7 +154,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
 
   tracing: TracingSpec(
     letterChar: 'ه',
-    audioIntroPath: 'audio/lessons/faa/final/faa_write_intro.mp3',
+    audioIntroPath: '${_coreAudio}haa_name.mp3',
     stepImagePaths: [
       '${_dir}haa_end_write_step_1.webp',
       'assets/images/lessons/haa_end/haa_end_trace_start.webp',
@@ -168,7 +168,7 @@ const LetterUnitManifest haaManifest = LetterUnitManifest(
         displayForm: 'ه',
         exampleWord: 'مِيَاه',
         exampleEmoji: '💧',
-        audioPath: 'audio/lessons/faa/final/faa_trace_isolated.mp3',
+        audioPath: '${_coreAudio}haa_name.mp3',
         imagePath: 'assets/images/lessons/haa_end/haa_end_write_step_1.webp',
       ),
       TracingPositionSpec(

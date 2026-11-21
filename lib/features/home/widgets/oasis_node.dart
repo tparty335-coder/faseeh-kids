@@ -71,7 +71,7 @@ class OasisNode extends StatelessWidget {
                 ),
               ),
             Text(
-              letter,
+              letter == 'ه' ? 'هـ' : letter,
               style: TextStyle(
                 fontSize: nodeSize * 0.4,
                 fontWeight: FontWeight.bold,

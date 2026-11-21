@@ -1601,39 +1601,39 @@ class ArabicLetterTracingData {
       ];
     }
     if (position == 'start' || position == 'mid_disconnected') {
-      // مطابقة لـ ه.jpg: قبة الهاء الكبيرة مع الدائرة الداخلية المفتوحة والخط الأفقي
+      // مطابقة تماماً لصورة Kiwii (ه.jpg) بمسار واحد متّصل صحيح الترتيب:
+      // النقطة الصفراء أعلى القبة → نزول مائل لأسفل-اليمين → التفاف داخل الدائرة الداخلية مع عقارب الساعة → انطلاق أفقي لخط النهاية يساراً
       return const [
         LetterStroke(
           index: 1,
           label: '١',
-          start: Offset(0.52, 0.22),
-          end: Offset(0.14, 0.68),
+          start: Offset(0.52, 0.29),
+          end: Offset(0.13, 0.72),
           pathPoints: [
-            Offset(0.52, 0.22),
-            Offset(0.74, 0.38),
-            Offset(0.82, 0.54),
-            Offset(0.74, 0.68),
-            Offset(0.46, 0.68),
-            Offset(0.14, 0.68),
+            // 1. البداية من النقطة الصفراء ثم النزول المائل لليمين والأسفل
+            Offset(0.52, 0.29),
+            Offset(0.66, 0.39),
+            Offset(0.79, 0.48),
+            Offset(0.85, 0.58),
+            Offset(0.81, 0.68),
+            Offset(0.71, 0.72),
+            Offset(0.56, 0.72),
+            // 2. الالتفاف صعوداً داخل الدائرة الداخلية (مع عقارب الساعة: يسار ← أعلى ← يمين ← أسفل)
+            Offset(0.41, 0.71),
+            Offset(0.36, 0.61),
+            Offset(0.36, 0.49),
+            Offset(0.44, 0.40),
+            Offset(0.54, 0.41),
+            Offset(0.61, 0.49),
+            Offset(0.61, 0.61),
+            Offset(0.55, 0.71),
+            // 3. الانطلاق أفقياً على السطر إلى خط النهاية يساراً
+            Offset(0.42, 0.72),
+            Offset(0.27, 0.72),
+            Offset(0.13, 0.72),
           ],
-          hintText: '① ارسم قبة الهاء من الأعلى لليمين ثم اسحبها لليسار ⬅️',
-          strokeWidth: 16.5,
-        ),
-        LetterStroke(
-          index: 2,
-          label: '٢',
-          start: Offset(0.46, 0.38),
-          end: Offset(0.46, 0.66),
-          pathPoints: [
-            Offset(0.46, 0.38),
-            Offset(0.61, 0.46),
-            Offset(0.60, 0.62),
-            Offset(0.45, 0.66),
-            Offset(0.34, 0.54),
-            Offset(0.46, 0.38),
-          ],
-          hintText: '② لف الدائرة الداخلية لحرف الهاء ⭕',
-          strokeWidth: 15.0,
+          hintText: 'ابدأ من النقطة الصفراء، انزل للأسفل ثم لُفَّ الدائرة الداخلية وانطلق لخط النهاية ⬅️',
+          strokeWidth: 18.0,
         ),
       ];
     }
@@ -2006,8 +2006,11 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
     });
 
     // هل وصل لنهاية المقطع أو اقترب من النقطة الأخيرة؟
+    // في المقاطع الطويلة ذات الحلقات الداخلية (مثل هـ، م، ص) نتأكد من مرور الطفل بجزء كافٍ من الحلقة قبل الإتمام
     final distToEnd = (touchPos - guidePx.last).distance;
-    if (_highestReachedPointIndex >= guidePx.length - 1 || distToEnd <= 55.0) {
+    final minLoopPoints = guidePx.length >= 10 ? (guidePx.length * 0.45).floor() : 1;
+    final passedEnough = _coveredGuideIndices.length >= minLoopPoints;
+    if (passedEnough && (_highestReachedPointIndex >= guidePx.length - 1 || distToEnd <= 55.0)) {
       _completeCurrentStroke(guidePx);
     }
   }
@@ -2705,9 +2708,18 @@ class ArabicLetterTracingPainter extends CustomPainter {
         _drawArrowHead(canvas, endTan.position, -endTan.angle, arrowSize, color);
       }
 
-      // أسهم إضافية في المنتصف للمسارات الطويلة (مطابقة لـ ب، س، ص، م، ن، هـ)
+      // أسهم إضافية موزّعة بانتظام على المسارات الطويلة والحلقية (مطابقة لـ هـ، م، ص، ن، ب)
       if (total > unit * 0.42) {
-        final midFractions = total > unit * 0.95 ? [0.33, 0.66] : [0.50];
+        final List<double> midFractions;
+        if (total > unit * 1.85) {
+          midFractions = const [0.13, 0.28, 0.54, 0.72, 0.87];
+        } else if (total > unit * 1.35) {
+          midFractions = const [0.22, 0.50, 0.76];
+        } else if (total > unit * 0.95) {
+          midFractions = const [0.33, 0.66];
+        } else {
+          midFractions = const [0.50];
+        }
         for (final f in midFractions) {
           final tan = metric.getTangentForOffset(total * f);
           if (tan != null) {
