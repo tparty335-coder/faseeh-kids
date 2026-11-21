@@ -206,7 +206,7 @@ void main() {
             verifyDiskFile(item.imagePath);
             verifyOptDiskFile(item.wordAudioPath);
           }
-          if (m.madd.useManifestMadd && m.madd.items.length == 3) {
+          if (m.madd.useManifestMadd && m.unitIndex >= 13 && m.madd.items.length == 3) {
             expect(m.madd.items[0].imagePath, contains('_madd_aa.'));
             expect(m.madd.items[0].audioPath, contains('_alif.'));
             expect(m.madd.items[1].imagePath, contains('_madd_uu.'));

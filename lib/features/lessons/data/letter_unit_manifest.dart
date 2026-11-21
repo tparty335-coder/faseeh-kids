@@ -173,6 +173,7 @@ class MaddItem {
   final String displayChar; // 'بَا' / 'بِي' / 'بُو'
   final String audioPath;
   final String imagePath;
+  final Rect? imageCropRect;
   final String? exampleWord;
   final String? explanation;
   final String? wordAudioPath;
@@ -181,6 +182,7 @@ class MaddItem {
     required this.displayChar,
     required this.audioPath,
     required this.imagePath,
+    this.imageCropRect,
     this.exampleWord,
     this.explanation,
     this.wordAudioPath,

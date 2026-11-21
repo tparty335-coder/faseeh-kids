@@ -76,20 +76,51 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
     ],
   ),
 
-  // ── المدود ──
+  // ── المدود (تصميم موحّد حديث + تسجيلات صوتية مُحقّقة + رسوم نظيفة مقصوصة) ──
   madd: MaddSpec(
     letterChar: 'س',
+    useManifestMadd: true,
     items: [
-      MaddItem(displayChar: 'سَا', audioPath: 'audio/lessons/seen/madd/seen_madd_alif.mp3', imagePath: '${_dir}seen_madd_aa.webp'),
-      MaddItem(displayChar: 'سُو', audioPath: 'audio/lessons/seen/madd/seen_madd_waw.mp3', imagePath: '${_dir}seen_madd_uu.webp'),
-      MaddItem(displayChar: 'سِي', audioPath: 'audio/lessons/seen/madd/seen_madd_yaa.mp3', imagePath: '${_dir}seen_madd_ii.webp'),
+      MaddItem(
+        displayChar: 'سَا',
+        // "سَا — مثل كلمة تمساح" + "تمساح — بها مد بالألف"
+        audioPath: 'audio/lessons/seen/madd/seen_madd_types.mp3',
+        wordAudioPath: 'audio/letters/long_vowels/seen_madd_alif.mp3',
+        imagePath: '${_dir}seen_words_p1_card_3.webp',
+        imageCropRect: Rect.fromLTRB(0.135, 0.37, 0.47, 0.88),
+        exampleWord: 'تِمْسَاح',
+        explanation: 'فَتْحَةٌ فَوْقَ السِّينِ يَلِيهَا أَلِفٌ مَمْدُودَةٌ (سَا)، مِثْلُ: تِمْسَاح',
+        accentColor: Color(0xFFDC2626),
+      ),
+      MaddItem(
+        displayChar: 'سُو',
+        // "وقد يُمد الحرف بالواو وتوضع فوقه ضمة يليها واو مثل نسور" + "سُو مثل كلمة نسور"
+        audioPath: 'audio/lessons/seen/madd/seen_madd_waw.mp3',
+        wordAudioPath: 'audio/lessons/seen/madd/seen_madd_alif.mp3',
+        imagePath: '${_dir}seen_words_p2_card_4.webp',
+        imageCropRect: Rect.fromLTRB(0.135, 0.37, 0.47, 0.88),
+        exampleWord: 'نُسُور',
+        explanation: 'ضَمَّةٌ فَوْقَ السِّينِ يَلِيهَا وَاوٌ مَمْدُودَةٌ (سُو)، مِثْلُ: نُسُور',
+        accentColor: Color(0xFF2563EB),
+      ),
+      MaddItem(
+        displayChar: 'سِي',
+        // "برسيم — بها مد بالياء" + "برسيم"
+        audioPath: 'audio/lessons/seen/madd/seen_madd_yaa.mp3',
+        wordAudioPath: '${_audio}seen_word_p3_1.mp3',
+        imagePath: '${_dir}seen_words_p3_card_1.webp',
+        imageCropRect: Rect.fromLTRB(0.135, 0.37, 0.47, 0.88),
+        exampleWord: 'بِرْسِيم',
+        explanation: 'كَسْرَةٌ تَحْتَ السِّينِ يَلِيهَا يَاءٌ مَمْدُودَةٌ (سِي)، مِثْلُ: بِرْسِيم',
+        accentColor: Color(0xFF059669),
+      ),
     ],
   ),
 
   // ── التخطيط والكتابة ──
   tracing: TracingSpec(
     letterChar: 'س',
-    audioIntroPath: 'audio/lessons/laam/final/laam_write_intro.mp3',
+    audioIntroPath: 'audio/letters/core/seen_name.mp3',
     stepImagePaths: [
       '${_dir}seen_write_step_1.webp',
       'assets/images/lessons/seen/seen_trace_start.webp',
@@ -150,7 +181,7 @@ const LetterUnitManifest seenManifest = LetterUnitManifest(
 
   // ── الألعاب ──
   games: GamesSpec(
-    fishingIntroAudio: 'audio/letters/short_vowels/ha_fatha.mp3',
+    fishingIntroAudio: 'audio/letters/short_vowels/seen_fatha.mp3',
     fishingPromptAudio: '${_gamesAudio}fishing/seen/seen_fishing_prompt.mp3',
     fishingWrongAudio: 'audio/feedback/try_again.mp3',
     beehivePromptAudio: '${_gamesAudio}beehive/seen/seen_beehive_prompt.mp3',
