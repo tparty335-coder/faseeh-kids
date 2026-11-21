@@ -30,64 +30,69 @@ class LetterStroke {
 /// بيانات مقاطع الحروف العربية ومواضعها بدقة متناهية
 class ArabicLetterTracingData {
   static List<LetterStroke> getStrokesForLetter(String letter, {String position = 'isolated'}) {
+    // في آخر الكلمة منفصلاً (بعد حرف رافس: قَرَأَ، كِتَاب، شَارِع، مِيَاه، جِرْو)
+    // يُرسم الحرف بشكله المنفصل الكامل، وفي وسط الكلمة منفصلاً عما قبله يُرسم بشكل أول الكلمة
+    final effectivePos = position == 'end_disconnected'
+        ? 'isolated'
+        : (position == 'mid_disconnected' ? 'start' : position);
     switch (letter) {
       case 'ب':
-        return _getBaaStrokes(position);
+        return _getBaaStrokes(effectivePos);
       case 'ت':
-        return _getTaaStrokes(position);
+        return _getTaaStrokes(effectivePos);
       case 'ث':
-        return _getThaaStrokes(position);
+        return _getThaaStrokes(effectivePos);
       case 'ج':
-        return _getJeemFamilyStrokes(position, letter: 'ج', dotMode: 'inside');
+        return _getJeemFamilyStrokes(effectivePos, letter: 'ج', dotMode: 'inside');
       case 'ح':
-        return _getJeemFamilyStrokes(position, letter: 'ح', dotMode: 'none');
+        return _getJeemFamilyStrokes(effectivePos, letter: 'ح', dotMode: 'none');
       case 'خ':
-        return _getJeemFamilyStrokes(position, letter: 'خ', dotMode: 'above');
+        return _getJeemFamilyStrokes(effectivePos, letter: 'خ', dotMode: 'above');
       case 'د':
-        return _getDalFamilyStrokes(position, letter: 'د', hasDot: false);
+        return _getDalFamilyStrokes(effectivePos, letter: 'د', hasDot: false);
       case 'ذ':
-        return _getDalFamilyStrokes(position, letter: 'ذ', hasDot: true);
+        return _getDalFamilyStrokes(effectivePos, letter: 'ذ', hasDot: true);
       case 'ر':
-        return _getRaaFamilyStrokes(position, letter: 'ر', hasDot: false);
+        return _getRaaFamilyStrokes(effectivePos, letter: 'ر', hasDot: false);
       case 'ز':
-        return _getRaaFamilyStrokes(position, letter: 'ز', hasDot: true);
+        return _getRaaFamilyStrokes(effectivePos, letter: 'ز', hasDot: true);
       case 'س':
-        return _getSeenFamilyStrokes(position, letter: 'س', hasThreeDots: false);
+        return _getSeenFamilyStrokes(effectivePos, letter: 'س', hasThreeDots: false);
       case 'ش':
-        return _getSeenFamilyStrokes(position, letter: 'ش', hasThreeDots: true);
+        return _getSeenFamilyStrokes(effectivePos, letter: 'ش', hasThreeDots: true);
       case 'ص':
-        return _getSaadFamilyStrokes(position, hasDot: false);
+        return _getSaadFamilyStrokes(effectivePos, hasDot: false);
       case 'ض':
-        return _getSaadFamilyStrokes(position, hasDot: true);
+        return _getSaadFamilyStrokes(effectivePos, hasDot: true);
       case 'ط':
-        return _getTaaTFamilyStrokes(position, hasDot: false);
+        return _getTaaTFamilyStrokes(effectivePos, hasDot: false);
       case 'ظ':
-        return _getTaaTFamilyStrokes(position, hasDot: true);
+        return _getTaaTFamilyStrokes(effectivePos, hasDot: true);
       case 'ع':
-        return _getAynFamilyStrokes(position, hasDot: false);
+        return _getAynFamilyStrokes(effectivePos, hasDot: false);
       case 'غ':
-        return _getAynFamilyStrokes(position, hasDot: true);
+        return _getAynFamilyStrokes(effectivePos, hasDot: true);
       case 'ف':
-        return _getFaaQaafStrokes(position, isQaaf: false);
+        return _getFaaQaafStrokes(effectivePos, isQaaf: false);
       case 'ق':
-        return _getFaaQaafStrokes(position, isQaaf: true);
+        return _getFaaQaafStrokes(effectivePos, isQaaf: true);
       case 'ك':
-        return _getKaafStrokes(position);
+        return _getKaafStrokes(effectivePos);
       case 'ل':
-        return _getLaamStrokes(position);
+        return _getLaamStrokes(effectivePos);
       case 'م':
-        return _getMeemStrokes(position);
+        return _getMeemStrokes(effectivePos);
       case 'ن':
-        return _getNoonStrokes(position);
+        return _getNoonStrokes(effectivePos);
       case 'ه':
       case 'هـ':
-        return _getHaaEndStrokes(position);
+        return _getHaaEndStrokes(effectivePos);
       case 'و':
-        return _getWaawStrokes(position);
+        return _getWaawStrokes(effectivePos);
       case 'ي':
-        return _getYaaStrokes(position);
+        return _getYaaStrokes(effectivePos);
       default:
-        return _getAlifStrokes(position);
+        return _getAlifStrokes(effectivePos);
     }
   }
 
@@ -325,42 +330,41 @@ class ArabicLetterTracingData {
         ),
       ];
     } else if (position == 'end') {
-      // الباء في آخر الكلمة متصلة (ـب)
+      // الباء في آخر الكلمة متصلة (ـب): ذراع اتصال أيمن + سنّة يمنى + صحن + سنّة يسرى
       return [
-        // 1. خط الاتصال الأيمن
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.85, 0.65),
-          end: const Offset(0.18, 0.65),
-          pathPoints: [
-            const Offset(0.85, 0.65),
-            const Offset(0.50, 0.65),
-            const Offset(0.18, 0.65),
+          start: const Offset(0.90, 0.65),
+          end: const Offset(0.74, 0.45),
+          pathPoints: const [
+            Offset(0.90, 0.65),
+            Offset(0.74, 0.65),
+            Offset(0.74, 0.45),
           ],
-          hintText: 'ابدأ من النقطة (١) واسحب خط الاتصال لليسار ⬅️',
+          hintText: '① اسحب خط الاتصال الأيمن ثم اصعد للسنّة اليمنى ⬆️',
         ),
-        // 2. السنّة اليسرى صعوداً
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.18, 0.65),
-          end: const Offset(0.18, 0.45),
-          pathPoints: [
-            const Offset(0.18, 0.65),
-            const Offset(0.18, 0.55),
-            const Offset(0.18, 0.45),
+          start: const Offset(0.74, 0.45),
+          end: const Offset(0.16, 0.45),
+          pathPoints: const [
+            Offset(0.74, 0.45),
+            Offset(0.74, 0.65),
+            Offset(0.45, 0.65),
+            Offset(0.16, 0.65),
+            Offset(0.16, 0.45),
           ],
-          hintText: 'من النقطة (٢) ارفع السنّة اليسرى للأعلى ⬆️',
+          hintText: '② اسحب صحن الباء لليسار وارفع السنّة اليسرى للأعلى ⬅️',
         ),
-        // 3. نقطة الباء بالأسفل
         LetterStroke(
           index: 3,
           label: '٣',
-          start: const Offset(0.50, 0.82),
-          end: const Offset(0.50, 0.82),
-          pathPoints: [const Offset(0.50, 0.82)],
-          hintText: 'اضغط على النقطة (٣) لوضع نقطة الباء •',
+          start: const Offset(0.45, 0.82),
+          end: const Offset(0.45, 0.82),
+          pathPoints: const [Offset(0.45, 0.82)],
+          hintText: '③ اضغط لوضع نقطة الباء بالأسفل •',
           isTapOnly: true,
         ),
       ];
@@ -534,48 +538,50 @@ class ArabicLetterTracingData {
         ),
       ];
     } else if (position == 'end') {
-      // التاء في آخر الكلمة متصلة (ـت)
+      // التاء في آخر الكلمة متصلة (ـت): ذراع اتصال أيمن + سنّة يمنى + صحن + سنّة يسرى
       return [
         LetterStroke(
           index: 1,
           label: '١',
-          start: const Offset(0.85, 0.68),
-          end: const Offset(0.18, 0.68),
-          pathPoints: [
-            const Offset(0.85, 0.68),
-            const Offset(0.50, 0.68),
-            const Offset(0.18, 0.68),
+          start: const Offset(0.90, 0.68),
+          end: const Offset(0.74, 0.48),
+          pathPoints: const [
+            Offset(0.90, 0.68),
+            Offset(0.74, 0.68),
+            Offset(0.74, 0.48),
           ],
-          hintText: 'ابدأ من النقطة (١) واسحب جسم التاء المتصل لليسار ⬅️',
+          hintText: '① اسحب خط الاتصال الأيمن ثم اصعد لسنّة التاء اليمنى ⬆️',
         ),
         LetterStroke(
           index: 2,
           label: '٢',
-          start: const Offset(0.18, 0.68),
-          end: const Offset(0.18, 0.48),
-          pathPoints: [
-            const Offset(0.18, 0.68),
-            const Offset(0.18, 0.58),
-            const Offset(0.18, 0.48),
+          start: const Offset(0.74, 0.48),
+          end: const Offset(0.16, 0.48),
+          pathPoints: const [
+            Offset(0.74, 0.48),
+            Offset(0.74, 0.68),
+            Offset(0.45, 0.68),
+            Offset(0.16, 0.68),
+            Offset(0.16, 0.48),
           ],
-          hintText: 'من النقطة (٢) ارفع السنّة اليسرى للتاء للأعلى ⬆️',
+          hintText: '② اسحب صحن التاء لليسار وارفع السنّة اليسرى للأعلى ⬅️',
         ),
         LetterStroke(
           index: 3,
           label: '٣',
-          start: const Offset(0.57, 0.32),
-          end: const Offset(0.57, 0.32),
-          pathPoints: [const Offset(0.57, 0.32)],
-          hintText: 'اضغط على النقطة (٣) لوضع النقطة الأولى للتاء •',
+          start: const Offset(0.53, 0.32),
+          end: const Offset(0.53, 0.32),
+          pathPoints: const [Offset(0.53, 0.32)],
+          hintText: '③ اضغط لوضع النقطة الأولى للتاء •',
           isTapOnly: true,
         ),
         LetterStroke(
           index: 4,
           label: '٤',
-          start: const Offset(0.43, 0.32),
-          end: const Offset(0.43, 0.32),
-          pathPoints: [const Offset(0.43, 0.32)],
-          hintText: 'اضغط على النقطة (٤) لوضع النقطة الثانية للتاء ••',
+          start: const Offset(0.37, 0.32),
+          end: const Offset(0.37, 0.32),
+          pathPoints: const [Offset(0.37, 0.32)],
+          hintText: '④ اضغط لوضع النقطة الثانية للتاء ••',
           isTapOnly: true,
         ),
       ];
@@ -1686,30 +1692,36 @@ class ArabicLetterTracingData {
     ];
   }
 
-  // ─── مقاطع حرف الواو (و) — رأس دائري مفتوح وواضح ───
+  // ─── مقاطع حرف الواو (و / ـو) — تصميم نسخي انسيابي متقن برأس دائري متوازن وذيل هلالي رشيق ───
   static List<LetterStroke> _getWaawStrokes(String position) {
     final isConnectedRight = position == 'middle' || position == 'end';
     return [
       LetterStroke(
         index: 1,
         label: '١',
-        start: isConnectedRight ? const Offset(0.90, 0.54) : const Offset(0.74, 0.42),
-        end: const Offset(0.22, 0.82),
+        start: isConnectedRight ? const Offset(0.90, 0.50) : const Offset(0.67, 0.49),
+        end: const Offset(0.20, 0.80),
         pathPoints: [
-          if (isConnectedRight) const Offset(0.90, 0.54),
-          if (isConnectedRight) const Offset(0.74, 0.54),
-          const Offset(0.75, 0.38),
-          const Offset(0.65, 0.24),
-          const Offset(0.50, 0.28),
-          const Offset(0.46, 0.44),
-          const Offset(0.58, 0.55),
-          const Offset(0.73, 0.50),
-          const Offset(0.68, 0.70),
-          const Offset(0.48, 0.84),
-          const Offset(0.22, 0.82),
+          if (isConnectedRight) const Offset(0.90, 0.50),
+          // 1. استدارة رأس الواو الدائري الكامل مع عقارب الساعة (يسار ← أعلى ← يمين)
+          const Offset(0.67, 0.49),
+          const Offset(0.53, 0.50),
+          const Offset(0.43, 0.42),
+          const Offset(0.43, 0.30),
+          const Offset(0.52, 0.21),
+          const Offset(0.65, 0.23),
+          const Offset(0.73, 0.34),
+          const Offset(0.73, 0.48),
+          // 2. انسياب الذيل الهلالي الرشيق أسفل السطر نحو اليسار
+          const Offset(0.69, 0.64),
+          const Offset(0.58, 0.77),
+          const Offset(0.41, 0.85),
+          const Offset(0.20, 0.80),
         ],
-        hintText: '① لف رأس الواو ثم انزل بالذيل المقوّس أسفل السطر ↙️',
-        strokeWidth: 16.5,
+        hintText: isConnectedRight
+            ? 'اسحب خط الاتصال، لُفَّ رأس الواو الدائري ثم انزل بالذيل المقوّس ↙️'
+            : 'ابدأ من النقطة الصفراء، لُفَّ رأس الواو الدائري ثم انزل بالذيل المقوّس ↙️',
+        strokeWidth: 18.0,
       ),
     ];
   }

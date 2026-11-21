@@ -70,9 +70,10 @@ void main() {
 
         // Interactive short vowels present
         final isAlif = ch == 'أ';
-        expect(find.text(isAlif ? 'أَ' : '$chَ'), findsOneWidget);
-        expect(find.text(isAlif ? 'أُ' : '$chُ'), findsOneWidget);
-        expect(find.text(isAlif ? 'إِ' : '$chِ'), findsOneWidget);
+        final isHaa = ch == 'ه';
+        expect(find.text(isAlif ? 'أَ' : (isHaa ? 'هَـ' : '$chَ')), findsOneWidget);
+        expect(find.text(isAlif ? 'أُ' : (isHaa ? 'هُـ' : '$chُ')), findsOneWidget);
+        expect(find.text(isAlif ? 'إِ' : (isHaa ? 'هِـ' : '$chِ')), findsOneWidget);
 
         // All 7 stations present
         for (final st in const [

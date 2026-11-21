@@ -170,22 +170,23 @@ class _UniversalLetterHubScreenState
 
   static List<_VowelPreview> _vowelsForLetter(String char) {
     final isAlif = char == 'أ';
+    final isHaa = char == 'ه' || char == 'هـ';
     return [
       _VowelPreview(
         variant: 'fatha',
-        display: isAlif ? 'أَ' : '$charَ',
+        display: isAlif ? 'أَ' : (isHaa ? 'هَـ' : '$charَ'),
         label: 'فَتْحَة',
         color: const Color(0xFFD84315),
       ),
       _VowelPreview(
         variant: 'damma',
-        display: isAlif ? 'أُ' : '$charُ',
+        display: isAlif ? 'أُ' : (isHaa ? 'هُـ' : '$charُ'),
         label: 'ضَمَّة',
         color: const Color(0xFF1565C0),
       ),
       _VowelPreview(
         variant: 'kasra',
-        display: isAlif ? 'إِ' : '$charِ',
+        display: isAlif ? 'إِ' : (isHaa ? 'هِـ' : '$charِ'),
         label: 'كَسْرَة',
         color: const Color(0xFF2E7D32),
       ),

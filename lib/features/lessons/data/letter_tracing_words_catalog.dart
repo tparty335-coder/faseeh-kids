@@ -18,12 +18,18 @@ class TracingWordIllustration {
 }
 
 /// موضع كتابة واحد للحرف (منفصل / أول / وسط / آخر الكلمة)
+/// مع دعم الشكلين (متصل بما قبله / منفصل عما قبله بعد حرف رافس) في وسط وآخر الكلمة
 class TracingPositionItem {
   final String position; // 'isolated' | 'start' | 'middle' | 'end'
   final String shortLabel;
   final String displayForm;
   final String audioPath;
   final String exampleWord;
+  final String? primaryVariantLabel;
+  final String? altPosition; // 'mid_disconnected' | 'end_disconnected'
+  final String? altDisplayForm;
+  final String? altVariantLabel;
+  final String? altExampleWord;
 
   const TracingPositionItem({
     required this.position,
@@ -31,7 +37,14 @@ class TracingPositionItem {
     required this.displayForm,
     required this.audioPath,
     required this.exampleWord,
+    this.primaryVariantLabel,
+    this.altPosition,
+    this.altDisplayForm,
+    this.altVariantLabel,
+    this.altExampleWord,
   });
+
+  bool get hasDualVariant => altPosition != null && altDisplayForm != null;
 }
 
 /// الملف التعريفي الكامل لمحطة كتابة وتتبّع كل حرف من الحروف الـ 28 بأسلوب Kiwii / Montessori
@@ -184,6 +197,70 @@ class LetterTracingWordsCatalog {
     return trimmed;
   }
 
+  /// أمثلة عربية أصيلة مضبوطة بالشكل لشكل الحرف في آخر الكلمة (متصل بما قبله)
+  static const Map<String, String> _endConnectedWords = {
+    'أ': 'خَطَأ',
+    'ب': 'عِنَب',
+    'ت': 'بَيْت',
+    'ث': 'مُثَلَّث',
+    'ج': 'ثَلْج',
+    'ح': 'مِلْح',
+    'خ': 'بِطِّيخ',
+    'د': 'يَد',
+    'ذ': 'قُنْفُذ',
+    'ر': 'قَمَر',
+    'ز': 'خُبْز',
+    'س': 'شَمْس',
+    'ش': 'عُشّ',
+    'ص': 'مِقَصّ',
+    'ض': 'بَيْض',
+    'ط': 'بَطّ',
+    'ظ': 'حَفِظَ',
+    'ع': 'إِصْبَع',
+    'غ': 'صَمْغ',
+    'ف': 'أَنْف',
+    'ق': 'طَبَق',
+    'ك': 'سَمَك',
+    'ل': 'جَمَل',
+    'م': 'قَلَم',
+    'ن': 'عَيْن',
+    'ه': 'وَجْه',
+    'و': 'دَلْو',
+    'ي': 'ظَبْي',
+  };
+
+  /// أمثلة عربية أصيلة مضبوطة بالشكل لشكل الحرف في آخر الكلمة (منفصل عما قبله بعد حرف رافس)
+  static const Map<String, String> _endDisconnectedWords = {
+    'أ': 'قَرَأَ',
+    'ب': 'كِتَاب',
+    'ت': 'حُوت',
+    'ث': 'مِحْرَاث',
+    'ج': 'بُرْج',
+    'ح': 'تِمْسَاح',
+    'خ': 'خَوْخ',
+    'د': 'وَرْد',
+    'ذ': 'أُسْتَاذ',
+    'ر': 'دَار',
+    'ز': 'مَوْز',
+    'س': 'جَرَس',
+    'ش': 'فِرَاش',
+    'ص': 'إِجَّاص',
+    'ض': 'أَرْض',
+    'ط': 'أُخْطُبُوط',
+    'ظ': 'أَلْفَاظ',
+    'ع': 'شَارِع',
+    'غ': 'دِمَاغ',
+    'ف': 'خَرُوف',
+    'ق': 'بُرْقُوق',
+    'ك': 'شُبَّاك',
+    'ل': 'غَزَال',
+    'م': 'هَرَم',
+    'ن': 'رُمَّان',
+    'ه': 'مِيَاه',
+    'و': 'جِرْو',
+    'ي': 'شَاي',
+  };
+
   static List<String> _displayFormsFor(String letter) {
     if (letter == 'ه') return const ['ه', 'هـ', 'ـهـ', 'ـه'];
     if (_kickingLetters.contains(letter)) {
@@ -303,6 +380,9 @@ class LetterTracingWordsCatalog {
     final defaultWord2 = words.length > 2 ? words[2].word : defaultWord0;
     final defaultWord3 = words.length > 3 ? words[3].word : defaultWord0;
 
+    final endConnWord = _endConnectedWords[letter] ?? endSpec?.exampleWord ?? defaultWord3;
+    final endDiscWord = _endDisconnectedWords[letter] ?? defaultWord0;
+
     final positions = <TracingPositionItem>[
       TracingPositionItem(
         position: 'isolated',
@@ -330,6 +410,11 @@ class LetterTracingWordsCatalog {
             ? midSpec.audioPath
             : 'audio/letters/core/${coreKey}_pos_middle.mp3',
         exampleWord: midSpec?.exampleWord ?? defaultWord2,
+        primaryVariantLabel: 'مُتَّصِلٌ بِمَا قَبْلَهُ',
+        altPosition: 'mid_disconnected',
+        altDisplayForm: forms[1],
+        altVariantLabel: 'بَعْدَ حَرْفٍ رَافِسٍ',
+        altExampleWord: startSpec?.exampleWord ?? defaultWord1,
       ),
       TracingPositionItem(
         position: 'end',
@@ -338,7 +423,12 @@ class LetterTracingWordsCatalog {
         audioPath: (endSpec != null && endSpec.audioPath.isNotEmpty)
             ? endSpec.audioPath
             : 'audio/letters/core/${coreKey}_pos_end.mp3',
-        exampleWord: endSpec?.exampleWord ?? defaultWord3,
+        exampleWord: endConnWord,
+        primaryVariantLabel: 'مُتَّصِلٌ',
+        altPosition: 'end_disconnected',
+        altDisplayForm: forms[0],
+        altVariantLabel: 'مُنْفَصِلٌ',
+        altExampleWord: endDiscWord,
       ),
     ];
 

@@ -213,5 +213,85 @@ void main() {
       expect(canvasWidget.position, 'start');
       expect(tester.takeException(), isNull);
     });
+
+    testWidgets('All 28 letters support dual end-of-word forms (connected vs disconnected) with orthographically exact examples', (tester) async {
+      const kicking = {'أ', 'إ', 'آ', 'ا', 'د', 'ذ', 'ر', 'ز', 'و'};
+      String stripDiacritics(String s) => s.replaceAll(RegExp(r'[\u064B-\u065F\u0670]'), '');
+
+      for (final ch in all28Letters) {
+        final profile = LetterTracingWordsCatalog.getProfile(ch);
+        final endPos = profile.positions[3];
+        expect(endPos.position, 'end');
+        expect(endPos.hasDualVariant, isTrue, reason: 'Dual end form missing for $ch');
+        expect(endPos.altPosition, 'end_disconnected');
+        expect(endPos.altDisplayForm, ch);
+
+        // Verify connected example word has a CONNECTING letter before the last letter
+        final connChars = stripDiacritics(endPos.exampleWord).split('');
+        expect(connChars.length, greaterThanOrEqualTo(2), reason: 'Short connected word for $ch');
+        expect(
+          kicking.contains(connChars[connChars.length - 2]),
+          isFalse,
+          reason: 'Connected end word "${endPos.exampleWord}" for $ch has kicking letter before end!',
+        );
+
+        // Verify disconnected example word has a KICKING letter before the last letter
+        final discChars = stripDiacritics(endPos.altExampleWord!).split('');
+        expect(discChars.length, greaterThanOrEqualTo(2), reason: 'Short disconnected word for $ch');
+        expect(
+          kicking.contains(discChars[discChars.length - 2]),
+          isTrue,
+          reason: 'Disconnected end word "${endPos.altExampleWord}" for $ch does NOT follow a kicking letter!',
+        );
+
+        // Verify strokes for both end & end_disconnected are valid and distinct
+        final connStrokes = ArabicLetterTracingData.getStrokesForLetter(ch, position: 'end');
+        final discStrokes = ArabicLetterTracingData.getStrokesForLetter(ch, position: 'end_disconnected');
+        expect(connStrokes, isNotEmpty);
+        expect(discStrokes, isNotEmpty);
+        expect(
+          connStrokes.first.pathPoints,
+          isNot(equals(discStrokes.first.pathPoints)),
+          reason: 'Connected and disconnected end forms should differ for $ch',
+        );
+      }
+
+      // Verify interactive UI toggle on Alif (ـأ vs أ) and Waaw (ـو vs و) across narrow & wide viewports
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      for (final vp in [const Size(320, 568), const Size(800, 1280)]) {
+        await tester.binding.setSurfaceSize(vp);
+        await tester.pumpWidget(
+          MediaQuery(
+            data: MediaQueryData(size: vp, textScaler: const TextScaler.linear(1.3)),
+            child: MaterialApp(
+              home: Scaffold(
+                body: UnifiedKiwiiWritingStation(
+                  letterChar: 'أ',
+                  onNext: () {},
+                  onPrevious: () {},
+                ),
+              ),
+            ),
+          ),
+        );
+        await tester.pump();
+        await tester.tap(find.text('آخِرُ الْكَلِمَةِ'));
+        await tester.pump();
+        expect(tester.takeException(), isNull, reason: 'Overflow on end tab at $vp');
+        expect(
+          tester.widget<ArabicLetterTracingCanvas>(find.byType(ArabicLetterTracingCanvas)).position,
+          'end',
+        );
+
+        // Switch to disconnected end form (أ • قَرَأَ)
+        await tester.tap(find.textContaining('قَرَأَ'));
+        await tester.pump();
+        expect(tester.takeException(), isNull, reason: 'Overflow toggling end_disconnected at $vp');
+        expect(
+          tester.widget<ArabicLetterTracingCanvas>(find.byType(ArabicLetterTracingCanvas)).position,
+          'end_disconnected',
+        );
+      }
+    });
   });
 }

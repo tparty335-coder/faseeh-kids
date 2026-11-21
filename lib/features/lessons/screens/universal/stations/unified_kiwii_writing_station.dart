@@ -34,11 +34,22 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
 
   late TracingLetterProfile _profile;
   int _selectedPosIndex = 0;
+  bool _useAltVariant = false;
   int _audioToken = 0;
   int? _activeWordIndex;
   final Set<String> _completedPositions = {};
 
   int _defaultPosIndexFor(String letterChar) => letterChar == 'ه' ? 1 : 0;
+
+  String _activePositionCode(TracingPositionItem pos) {
+    if (_useAltVariant && pos.altPosition != null) return pos.altPosition!;
+    return pos.position;
+  }
+
+  String _activeExampleWord(TracingPositionItem pos) {
+    if (_useAltVariant && pos.altExampleWord != null) return pos.altExampleWord!;
+    return pos.exampleWord;
+  }
 
   @override
   void initState() {
@@ -48,6 +59,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
       tracingSpec: widget.tracingSpec,
     );
     _selectedPosIndex = _defaultPosIndexFor(_profile.letterChar);
+    _useAltVariant = false;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) _playAudio(_profile.introAudioPath);
     });
@@ -64,6 +76,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
           tracingSpec: widget.tracingSpec,
         );
         _selectedPosIndex = _defaultPosIndexFor(_profile.letterChar);
+        _useAltVariant = false;
         _activeWordIndex = null;
         _completedPositions.clear();
       });
@@ -89,8 +102,16 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
 
   void _onSelectPosition(int index) {
     HapticFeedback.selectionClick();
-    setState(() => _selectedPosIndex = index);
+    setState(() {
+      _selectedPosIndex = index;
+      _useAltVariant = false;
+    });
     _playAudio(_profile.positions[index].audioPath);
+  }
+
+  void _onSelectVariant(bool useAlt) {
+    HapticFeedback.selectionClick();
+    setState(() => _useAltVariant = useAlt);
   }
 
   void _onTapWord(int idx, TracingWordIllustration item) {
@@ -164,6 +185,10 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                                 children: [
                                   // عنوان Kiwii الكحلي الداكن (مثل: حرف الألف / حرف الباء / حرف الميم)
                                   _buildWorksheetHeader(accent, pos),
+                                  if (pos.hasDualVariant) ...[
+                                    const SizedBox(height: 10),
+                                    _buildDualVariantSwitcher(pos, accent),
+                                  ],
                                   const SizedBox(height: 12),
 
                                   // التخطيط المتجاوب: تابلت (كلمات يمين + الحرف بالمنتصف + كلمات يسار)
@@ -252,12 +277,131 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
     );
   }
 
+  /// شريط اختيار شكلي الحرف (متصل بما قبله / منفصل عما قبله) في وسط وآخر الكلمة
+  Widget _buildDualVariantSwitcher(TracingPositionItem pos, Color accent) {
+    final isEnd = pos.position == 'end';
+    final primaryDone = _completedPositions.contains(pos.position);
+    final altDone = pos.altPosition != null && _completedPositions.contains(pos.altPosition);
+
+    Widget buildChip({
+      required bool selected,
+      required bool done,
+      required String glyph,
+      required String label,
+      required String? word,
+      required VoidCallback onTap,
+    }) {
+      return Expanded(
+        child: Material(
+          color: selected
+              ? accent.withValues(alpha: 0.13)
+              : (done ? const Color(0xFFECFDF5) : const Color(0xFFF8FAFC)),
+          borderRadius: BorderRadius.circular(14),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(14),
+            onTap: onTap,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: selected
+                      ? accent
+                      : (done ? const Color(0xFF10B981) : const Color(0xFFE2E8F0)),
+                  width: selected ? 2.0 : 1.2,
+                ),
+              ),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: selected ? accent : Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: selected ? accent : const Color(0xFFCBD5E1),
+                        ),
+                      ),
+                      child: Text(
+                        glyph,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 17,
+                          fontWeight: FontWeight.w900,
+                          color: selected ? Colors.white : _navyTitle,
+                          height: 1.05,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 7),
+                    Text(
+                      isEnd && word != null && word.isNotEmpty
+                          ? '$label • $word'
+                          : label,
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontFamily: 'Cairo',
+                        fontSize: 13.5,
+                        fontWeight: FontWeight.w800,
+                        color: selected ? accent : const Color(0xFF334155),
+                      ),
+                    ),
+                    if (done) ...[
+                      const SizedBox(width: 4),
+                      const Icon(
+                        Icons.check_circle_rounded,
+                        size: 16,
+                        color: Color(0xFF10B981),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 480),
+      child: Row(
+        children: [
+          buildChip(
+            selected: !_useAltVariant,
+            done: primaryDone,
+            glyph: pos.displayForm,
+            label: pos.primaryVariantLabel ?? 'مُتَّصِلٌ',
+            word: pos.exampleWord,
+            onTap: () => _onSelectVariant(false),
+          ),
+          const SizedBox(width: 8),
+          buildChip(
+            selected: _useAltVariant,
+            done: altDone,
+            glyph: pos.altDisplayForm ?? pos.displayForm,
+            label: pos.altVariantLabel ?? 'مُنْفَصِلٌ',
+            word: pos.altExampleWord,
+            onTap: () => _onSelectVariant(true),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildPositionTabs(Color accent) {
     return Row(
       children: List.generate(_profile.positions.length, (i) {
         final item = _profile.positions[i];
         final isSelected = i == _selectedPosIndex;
-        final isDone = _completedPositions.contains(item.position);
+        final isDone = _completedPositions.contains(item.position) ||
+            (item.altPosition != null && _completedPositions.contains(item.altPosition));
+        final tabGlyph = item.position == 'end' && item.altDisplayForm != null
+            ? '${item.displayForm} / ${item.altDisplayForm}'
+            : item.displayForm;
 
         return Expanded(
           child: Padding(
@@ -297,7 +441,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              item.displayForm,
+                              tabGlyph,
                               maxLines: 1,
                               style: TextStyle(
                                 fontFamily: 'Cairo',
@@ -348,6 +492,8 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
   /// تخطيط التابلت والشاشات العريضة (مطابق لتكوين ا.jpg و م.jpg: كلمتان يمين + الحرف بالمنتصف + كلمتان يسار)
   Widget _buildWideWorksheetBody(TracingPositionItem pos, Color accent) {
     final words = _profile.words;
+    final activePos = _activePositionCode(pos);
+    final activeWord = _activeExampleWord(pos);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -369,13 +515,13 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
         Expanded(
           flex: 50,
           child: ArabicLetterTracingCanvas(
-            key: ValueKey('kiwii_${_profile.letterChar}_${pos.position}'),
+            key: ValueKey('kiwii_${_profile.letterChar}_$activePos'),
             letterChar: _profile.letterChar,
-            position: pos.position,
-            exampleWord: pos.exampleWord,
+            position: activePos,
+            exampleWord: activeWord,
             primaryColor: accent,
             compactChrome: true,
-            onComplete: () => _onPositionCompleted(pos.position),
+            onComplete: () => _onPositionCompleted(activePos),
           ),
         ),
         const SizedBox(width: 12),
@@ -399,16 +545,18 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
   /// تخطيط الهاتف (لوحة تتبع واسعة بالمنتصف + الكلمات الـ 4 أسفلها داخل نفس البطاقة البيضاء)
   Widget _buildCompactWorksheetBody(TracingPositionItem pos, Color accent) {
     final words = _profile.words;
+    final activePos = _activePositionCode(pos);
+    final activeWord = _activeExampleWord(pos);
     return Column(
       children: [
         ArabicLetterTracingCanvas(
-          key: ValueKey('kiwii_${_profile.letterChar}_${pos.position}'),
+          key: ValueKey('kiwii_${_profile.letterChar}_$activePos'),
           letterChar: _profile.letterChar,
-          position: pos.position,
-          exampleWord: pos.exampleWord,
+          position: activePos,
+          exampleWord: activeWord,
           primaryColor: accent,
           compactChrome: true,
-          onComplete: () => _onPositionCompleted(pos.position),
+          onComplete: () => _onPositionCompleted(activePos),
         ),
         const SizedBox(height: 14),
         const Divider(height: 1, color: Color(0xFFF1F5F9)),
