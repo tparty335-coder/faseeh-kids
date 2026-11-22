@@ -1,0 +1,568 @@
+{
+  "letter": "ا",
+  "exported_at": "2026-11-22T09:44:07.777665",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "ا",
+      "instruction": "تتبع حرف الألف في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ا",
+      "instruction": "تتبع حرف الألف في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "image_key": "lion",
+      "correct_answer": "ا",
+      "choices": [
+        "د",
+        "ط",
+        "ا",
+        "خ"
+      ],
+      "instruction": "صل الصورة بحرف الألف",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "word": "أرنب",
+      "word_voweled": "أَرْنَبٌ",
+      "image_key": "rabbit",
+      "correct_answer": "ا",
+      "choices": [
+        "خ",
+        "ا",
+        "و",
+        "ص"
+      ],
+      "instruction": "صل الصورة بحرف الألف",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "grid": [
+        "ي",
+        "ص",
+        "ا",
+        "ي",
+        "ش",
+        "ص",
+        "ا",
+        "ظ",
+        "خ",
+        "ص",
+        "ج",
+        "ط",
+        "ا",
+        "ا",
+        "خ",
+        "ا",
+        "ق",
+        "غ",
+        "ل",
+        "د"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        2,
+        6,
+        12,
+        13,
+        15
+      ],
+      "instruction": "ابحث عن حرف الألف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "و"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "grid": [
+        "ا",
+        "ج",
+        "ذ",
+        "ز",
+        "ي",
+        "ح",
+        "و",
+        "ا",
+        "ع",
+        "ش",
+        "ا",
+        "ا",
+        "ا",
+        "ن",
+        "غ",
+        "ط",
+        "ب",
+        "ن",
+        "ف",
+        "ا"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        0,
+        7,
+        10,
+        11,
+        12,
+        19
+      ],
+      "instruction": "ابحث عن حرف الألف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "و"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "forms": {
+        "isolated": "ا",
+        "initial": "ا",
+        "medial": "ـا",
+        "final": "ـا"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "أسد",
+          "voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "position": "start",
+          "syllables": [
+            "أَ",
+            "سَ",
+            "دٌ"
+          ]
+        },
+        "medial": {
+          "word": "باب",
+          "voweled": "بَابٌ",
+          "image_key": "door",
+          "position": "middle",
+          "syllables": [
+            "بَا",
+            "بٌ"
+          ]
+        },
+        "final": {
+          "word": "قمر",
+          "voweled": "قَمَرٌ",
+          "image_key": "moon",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "مَرٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الألف بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "forms": {
+        "isolated": "ا",
+        "initial": "ا",
+        "medial": "ـا",
+        "final": "ـا"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "أناناس",
+          "voweled": "أَنَانَاسٌ",
+          "image_key": "pineapple",
+          "position": "start",
+          "syllables": [
+            "أَ",
+            "نَا",
+            "نَاسٌ"
+          ]
+        },
+        "medial": {
+          "word": "كتاب",
+          "voweled": "كِتَابٌ",
+          "image_key": "book",
+          "position": "middle",
+          "syllables": [
+            "كِ",
+            "تَا",
+            "بٌ"
+          ]
+        },
+        "final": {
+          "word": "قمر",
+          "voweled": "قَمَرٌ",
+          "image_key": "moon",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "مَرٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الألف بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "image_key": "lion",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الألف في كلمة (أَسَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "image_key": "lion",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الألف في كلمة (أَسَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ا",
+      "word": "باب",
+      "word_voweled": "بَابٌ",
+      "image_key": "door",
+      "scrambled_letters": [
+        "ب",
+        "ب",
+        "ا"
+      ],
+      "correct_order": [
+        "ب",
+        "ا",
+        "ب"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ا",
+      "word": "باب",
+      "word_voweled": "بَابٌ",
+      "image_key": "door",
+      "scrambled_letters": [
+        "ب",
+        "ب",
+        "ا"
+      ],
+      "correct_order": [
+        "ب",
+        "ا",
+        "ب"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ا",
+      "word": "أرنب",
+      "word_voweled": "أَرْنَبٌ",
+      "image_key": "rabbit",
+      "separated_letters": [
+        "أ",
+        "ر",
+        "ن",
+        "ب"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "أَرْنَبٌ",
+      "correct_word": "أرنب",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ا",
+      "word": "سماء",
+      "word_voweled": "سَمَاءٌ",
+      "image_key": "sky",
+      "separated_letters": [
+        "س",
+        "م",
+        "ا",
+        "ء"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "سَمَاءٌ",
+      "correct_word": "سماء",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "word_with_blank": "قَمَ _",
+      "word_with_blank_plain": "قم _",
+      "correct_letter": "ا",
+      "position_index": 2,
+      "hint_image": "moon",
+      "choices": [
+        "ا",
+        "و",
+        "ر"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ا",
+      "letter_name": "الألف",
+      "word": "سماء",
+      "word_voweled": "سَمَاءٌ",
+      "word_with_blank": "سَمَا _",
+      "word_with_blank_plain": "سما _",
+      "correct_letter": "ا",
+      "position_index": 3,
+      "hint_image": "sky",
+      "choices": [
+        "ط",
+        "ا",
+        "و"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ا",
+      "target_letter_name": "الألف",
+      "odd_letter": "و",
+      "odd_letter_name": "الواو",
+      "items": [
+        {
+          "word": "أفعى",
+          "word_voweled": "أَفْعَى",
+          "image_key": "snake",
+          "starts_with": "ا"
+        },
+        {
+          "word": "أرنب",
+          "word_voweled": "أَرْنَبٌ",
+          "image_key": "rabbit",
+          "starts_with": "ا"
+        },
+        {
+          "word": "أناناس",
+          "word_voweled": "أَنَانَاسٌ",
+          "image_key": "pineapple",
+          "starts_with": "ا"
+        },
+        {
+          "word": "وجه",
+          "word_voweled": "وَجْهٌ",
+          "image_key": "face",
+          "starts_with": "و"
+        }
+      ],
+      "correct_odd_index": 3,
+      "correct_answer": "وجه",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الألف",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ا"
+      ],
+      "categories": {
+        "ا": []
+      },
+      "items_to_sort": [
+        {
+          "word": "أفعى",
+          "word_voweled": "أَفْعَى",
+          "image_key": "snake",
+          "correct_letter": "ا",
+          "correct_category": "ا"
+        },
+        {
+          "word": "أناناس",
+          "word_voweled": "أَنَانَاسٌ",
+          "image_key": "pineapple",
+          "correct_letter": "ا",
+          "correct_category": "ا"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الألف)",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ا",
+      "choices": [
+        "ا",
+        "و",
+        "ي"
+      ],
+      "correct_answer": "ا",
+      "hint_word": "أناناس",
+      "hint_word_voweled": "أَنَانَاسٌ",
+      "hint_image": "pineapple",
+      "instruction": "انظر إلى الصورة (أناناس) واختر الحرف المناسب لجسم الحرف (ا)",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ا",
+      "letter_b": "و",
+      "letter_a_name": "الألف",
+      "letter_b_name": "الواو",
+      "difference_ar": "الألف ليس له نقاط، والواو ليس له نقاط",
+      "choices": [
+        "ا",
+        "و"
+      ],
+      "instruction": "ما الفرق بين حرفي الألف والواو؟",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الجملُ في الصحراء.",
+        "البطةُ تسبحُ.",
+        "الحصانُ يركضُ."
+      ],
+      "images": [
+        "camel_desert",
+        "horse_run",
+        "duck_swim"
+      ],
+      "correct_pairs": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      },
+      "unit": 1,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يركضُ.",
+      "choices": [
+        "في",
+        "الحصانُ",
+        "الجملُ"
+      ],
+      "correct_word": "الحصانُ",
+      "hint_image": "horse_run",
+      "full_sentence": "الحصانُ يركضُ.",
+      "unit": 1,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

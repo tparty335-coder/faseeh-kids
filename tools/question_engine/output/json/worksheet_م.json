@@ -1,0 +1,773 @@
+{
+  "letter": "م",
+  "exported_at": "2026-11-22T11:39:35.930214",
+  "total_questions": 33,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـمـ",
+      "instruction": "تتبع حرف الميم في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـمـ",
+      "instruction": "تتبع حرف الميم في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـم",
+      "instruction": "تتبع حرف الميم في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "correct_answer": "م",
+      "choices": [
+        "م",
+        "ك",
+        "ا",
+        "د"
+      ],
+      "instruction": "صل الصورة بحرف الميم",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "correct_answer": "م",
+      "choices": [
+        "ح",
+        "م",
+        "ت",
+        "ج"
+      ],
+      "instruction": "صل الصورة بحرف الميم",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "ميزان",
+      "word_voweled": "مِيزَانٌ",
+      "image_key": "scale",
+      "correct_answer": "م",
+      "choices": [
+        "ش",
+        "و",
+        "م",
+        "ت"
+      ],
+      "instruction": "صل الصورة بحرف الميم",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "م",
+      "letter_name": "الميم",
+      "grid": [
+        "ر",
+        "ش",
+        "ب",
+        "م",
+        "م",
+        "غ",
+        "م",
+        "ذ",
+        "ا",
+        "ح",
+        "خ",
+        "ظ",
+        "ب",
+        "ز",
+        "م",
+        "ي",
+        "م",
+        "ح",
+        "ف",
+        "ش"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        3,
+        4,
+        6,
+        14,
+        16
+      ],
+      "instruction": "ابحث عن حرف الميم ولوّنه بلونك المفضل",
+      "similar_distractors": [],
+      "difficulty": 1
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "م",
+      "letter_name": "الميم",
+      "grid": [
+        "ط",
+        "م",
+        "ا",
+        "و",
+        "ك",
+        "ن",
+        "م",
+        "ض",
+        "م",
+        "ز",
+        "ه",
+        "ث",
+        "ص",
+        "م",
+        "ي",
+        "ر",
+        "ا",
+        "م",
+        "م",
+        "ق"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        1,
+        6,
+        8,
+        13,
+        17,
+        18
+      ],
+      "instruction": "ابحث عن حرف الميم ولوّنه بلونك المفضل",
+      "similar_distractors": [],
+      "difficulty": 1
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "م",
+      "letter_name": "الميم",
+      "grid": [
+        "م",
+        "ش",
+        "م",
+        "ذ",
+        "ظ",
+        "ش",
+        "ض",
+        "ه",
+        "خ",
+        "ض",
+        "ل",
+        "ن",
+        "ظ",
+        "م",
+        "ي",
+        "خ",
+        "ث",
+        "ص",
+        "ص",
+        "م"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        2,
+        13,
+        19
+      ],
+      "instruction": "ابحث عن حرف الميم ولوّنه بلونك المفضل",
+      "similar_distractors": [],
+      "difficulty": 1
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "م",
+      "letter_name": "الميم",
+      "forms": {
+        "isolated": "م",
+        "initial": "مـ",
+        "medial": "ـمـ",
+        "final": "ـم"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ميزان",
+          "voweled": "مِيزَانٌ",
+          "image_key": "scale",
+          "position": "start",
+          "syllables": [
+            "مِي",
+            "زَا",
+            "نٌ"
+          ]
+        },
+        "medial": {
+          "word": "قمر",
+          "voweled": "قَمَرٌ",
+          "image_key": "moon",
+          "position": "middle",
+          "syllables": [
+            "قَ",
+            "مَرٌ"
+          ]
+        },
+        "final": {
+          "word": "خيم",
+          "voweled": "خَيْمٌ",
+          "image_key": "tents",
+          "position": "end",
+          "syllables": [
+            "خَيْ",
+            "مٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الميم بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "م",
+      "choices": [
+        "م",
+        "مـ",
+        "ـمـ"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الميم في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "م",
+      "letter_name": "الميم",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـمـ",
+      "choices": [
+        "مـ",
+        "ـم",
+        "ـمـ"
+      ],
+      "example_word": "قمر",
+      "example_image": "moon",
+      "instruction": "اختر الشكل الصحيح لحرف الميم في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "م",
+      "letter_name": "الميم",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الميم في كلمة (مَوْزٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "م",
+      "letter_name": "الميم",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الميم في كلمة (مَوْزٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "م",
+      "letter_name": "الميم",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الميم في كلمة (مَوْزٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "م",
+      "word": "خيم",
+      "word_voweled": "خَيْمٌ",
+      "image_key": "tents",
+      "scrambled_letters": [
+        "م",
+        "ي",
+        "خ"
+      ],
+      "correct_order": [
+        "خ",
+        "ي",
+        "م"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "م",
+      "word": "ميزان",
+      "word_voweled": "مِيزَانٌ",
+      "image_key": "scale",
+      "scrambled_letters": [
+        "ز",
+        "ي",
+        "ا",
+        "م",
+        "ن"
+      ],
+      "correct_order": [
+        "م",
+        "ي",
+        "ز",
+        "ا",
+        "ن"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "م",
+      "word": "ميزان",
+      "word_voweled": "مِيزَانٌ",
+      "image_key": "scale",
+      "scrambled_letters": [
+        "م",
+        "ن",
+        "ز",
+        "ا",
+        "ي"
+      ],
+      "correct_order": [
+        "م",
+        "ي",
+        "ز",
+        "ا",
+        "ن"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "م",
+      "word": "مفتاح",
+      "word_voweled": "مِفْتَاحٌ",
+      "image_key": "key",
+      "separated_letters": [
+        "م",
+        "ف",
+        "ت",
+        "ا",
+        "ح"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "مِفْتَاحٌ",
+      "correct_word": "مفتاح",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "م",
+      "word": "نجم",
+      "word_voweled": "نَجْمٌ",
+      "word_with_blank": "نَجْ_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "م",
+      "hint_image": "star",
+      "image_key": "star",
+      "choices": [
+        "م",
+        "ف",
+        "ل"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "م",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "word_with_blank": "_َوْزٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "م",
+      "hint_image": "banana",
+      "image_key": "banana",
+      "choices": [
+        "ط",
+        "ه",
+        "م"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "ملك",
+      "word_voweled": "مَلِكٌ",
+      "word_with_blank": "_ َلِكٌ",
+      "word_with_blank_plain": "_ لك",
+      "correct_letter": "م",
+      "hint_image": "king",
+      "choices": [
+        "ع",
+        "ه",
+        "م"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "نجم",
+      "word_voweled": "نَجْمٌ",
+      "word_with_blank": "نَجْ _",
+      "word_with_blank_plain": "نج _",
+      "correct_letter": "م",
+      "position_index": 2,
+      "hint_image": "star",
+      "choices": [
+        "ظ",
+        "م",
+        "غ"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "word_with_blank": "قَ _ َرٌ",
+      "word_with_blank_plain": "ق _ ر",
+      "correct_letter": "م",
+      "position_index": 1,
+      "hint_image": "moon",
+      "choices": [
+        "م",
+        "غ",
+        "ا"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "م",
+      "letter_name": "الميم",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "image_key": "moon",
+      "letter_position": "middle",
+      "letter_position_ar": "وسط الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "وسط الكلمة",
+      "instruction": "أين يقع حرف الميم في كلمة (قمر)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "م"
+      ],
+      "categories": {
+        "م": []
+      },
+      "items_to_sort": [
+        {
+          "word": "ميزان",
+          "word_voweled": "مِيزَانٌ",
+          "image_key": "scale",
+          "correct_letter": "م",
+          "correct_category": "م"
+        },
+        {
+          "word": "مفتاح",
+          "word_voweled": "مِفْتَاحٌ",
+          "image_key": "key",
+          "correct_letter": "م",
+          "correct_category": "م"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الميم)",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "م",
+      "target_letter_name": "الميم",
+      "odd_letter": "ع",
+      "odd_letter_name": "العين",
+      "items": [
+        {
+          "word": "ملك",
+          "word_voweled": "مَلِكٌ",
+          "image_key": "king",
+          "starts_with": "م"
+        },
+        {
+          "word": "عصفور",
+          "word_voweled": "عُصْفُورٌ",
+          "image_key": "sparrow",
+          "starts_with": "ع"
+        },
+        {
+          "word": "مفتاح",
+          "word_voweled": "مِفْتَاحٌ",
+          "image_key": "key",
+          "starts_with": "م"
+        },
+        {
+          "word": "موز",
+          "word_voweled": "مَوْزٌ",
+          "image_key": "banana",
+          "starts_with": "م"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "عصفور",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الميم",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "م",
+      "letter_name": "الميم",
+      "base_without_dots": "م",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الميم",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "م",
+        "م",
+        "م",
+        "م"
+      ],
+      "categories": {
+        "م": []
+      },
+      "target_letters": [
+        "م"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الميم)",
+      "difficulty": 1
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "م",
+      "letter_b": "ن",
+      "letter_a_name": "الميم",
+      "letter_b_name": "النون",
+      "difference_ar": "الميم ليس له نقاط، والنون لها نقطة فوق",
+      "choices": [
+        "م",
+        "ن"
+      ],
+      "instruction": "ما الفرق بين حرفي الميم والنون؟",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الياسمينُ ____.",
+      "choices": [
+        "عطرٌ",
+        "يلعبُ",
+        "أصفرُ"
+      ],
+      "correct_word": "عطرٌ",
+      "hint_image": "jasmine_scent",
+      "full_sentence": "الياسمينُ عطرٌ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الليمونُ ____.",
+      "choices": [
+        "حامضٌ",
+        "الموزُ",
+        "الكلبُ"
+      ],
+      "correct_word": "حامضٌ",
+      "hint_image": "sour_lemon",
+      "full_sentence": "الليمونُ حامضٌ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الموزُ أصفرُ.",
+        "الكلبُ يلعبُ.",
+        "الليمونُ حامضٌ."
+      ],
+      "images": [
+        "sour_lemon",
+        "yellow_banana",
+        "dog_play"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 2,
+        "2": 0
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

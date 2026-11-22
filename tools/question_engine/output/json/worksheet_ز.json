@@ -1,0 +1,562 @@
+{
+  "letter": "ز",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـز",
+      "instruction": "تتبع حرف الزاي في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ز",
+      "instruction": "تتبع حرف الزاي في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "word": "زرافة",
+      "word_voweled": "زَرَافَةٌ",
+      "image_key": "giraffe",
+      "correct_answer": "ز",
+      "choices": [
+        "ن",
+        "ز",
+        "و",
+        "ف"
+      ],
+      "instruction": "صل الصورة بحرف الزاي",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "word": "زهرة",
+      "word_voweled": "زَهْرَةٌ",
+      "image_key": "flower",
+      "correct_answer": "ز",
+      "choices": [
+        "خ",
+        "ز",
+        "ل",
+        "ط"
+      ],
+      "instruction": "صل الصورة بحرف الزاي",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "grid": [
+        "ك",
+        "ز",
+        "ت",
+        "م",
+        "ه",
+        "ز",
+        "س",
+        "ه",
+        "ز",
+        "ب",
+        "ث",
+        "ز",
+        "ر",
+        "د",
+        "ز",
+        "ز",
+        "ا",
+        "ظ",
+        "ب",
+        "ج"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        1,
+        5,
+        8,
+        11,
+        14,
+        15
+      ],
+      "instruction": "ابحث عن حرف الزاي ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ر"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "grid": [
+        "ت",
+        "ز",
+        "ج",
+        "ز",
+        "ل",
+        "ت",
+        "ك",
+        "ص",
+        "ز",
+        "ك",
+        "ل",
+        "ف",
+        "ص",
+        "ز",
+        "ف",
+        "ر",
+        "ط",
+        "ض",
+        "ع",
+        "ه"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        1,
+        3,
+        8,
+        13
+      ],
+      "instruction": "ابحث عن حرف الزاي ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ر"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "forms": {
+        "isolated": "ز",
+        "initial": "ز",
+        "medial": "ـز",
+        "final": "ـز"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "زهرة",
+          "voweled": "زَهْرَةٌ",
+          "image_key": "flower",
+          "position": "start",
+          "syllables": [
+            "زَهْ",
+            "رَةٌ"
+          ]
+        },
+        "final": {
+          "word": "موز",
+          "voweled": "مَوْزٌ",
+          "image_key": "banana",
+          "position": "end",
+          "syllables": [
+            "مَوْ",
+            "زٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الزاي بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "forms": {
+        "isolated": "ز",
+        "initial": "ز",
+        "medial": "ـز",
+        "final": "ـز"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "زيتون",
+          "voweled": "زَيْتُونٌ",
+          "image_key": "olive",
+          "position": "start",
+          "syllables": [
+            "زَيْ",
+            "تُو",
+            "نٌ"
+          ]
+        },
+        "final": {
+          "word": "موز",
+          "voweled": "مَوْزٌ",
+          "image_key": "banana",
+          "position": "end",
+          "syllables": [
+            "مَوْ",
+            "زٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الزاي بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "زرافة",
+      "word_voweled": "زَرَافَةٌ",
+      "image_key": "giraffe",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الزاي في كلمة (زَرَافَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "زرافة",
+      "word_voweled": "زَرَافَةٌ",
+      "image_key": "giraffe",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الزاي في كلمة (زَرَافَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ز",
+      "word": "زرافة",
+      "word_voweled": "زَرَافَةٌ",
+      "image_key": "giraffe",
+      "scrambled_letters": [
+        "ا",
+        "ر",
+        "ز",
+        "ف",
+        "ة"
+      ],
+      "correct_order": [
+        "ز",
+        "ر",
+        "ا",
+        "ف",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ز",
+      "word": "موز",
+      "word_voweled": "مَوْزٌ",
+      "image_key": "banana",
+      "scrambled_letters": [
+        "ز",
+        "م",
+        "و"
+      ],
+      "correct_order": [
+        "م",
+        "و",
+        "ز"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ز",
+      "word": "زهرة",
+      "word_voweled": "زَهْرَةٌ",
+      "image_key": "flower",
+      "separated_letters": [
+        "ز",
+        "ه",
+        "ر",
+        "ة"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "زَهْرَةٌ",
+      "correct_word": "زهرة",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ز",
+      "word": "خبز",
+      "word_voweled": "خُبْزٌ",
+      "word_with_blank": "خُبْ_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ز",
+      "hint_image": "bread",
+      "image_key": "bread",
+      "choices": [
+        "ز",
+        "د",
+        "ر"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "word": "زرافة",
+      "word_voweled": "زَرَافَةٌ",
+      "word_with_blank": "_ َرَافَةٌ",
+      "word_with_blank_plain": "_ رافة",
+      "correct_letter": "ز",
+      "hint_image": "giraffe",
+      "choices": [
+        "ر",
+        "ث",
+        "ز"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ز",
+      "letter_name": "الزاي",
+      "word": "كنز",
+      "word_voweled": "كَنْزٌ",
+      "word_with_blank": "كَنْ _",
+      "word_with_blank_plain": "كن _",
+      "correct_letter": "ز",
+      "position_index": 2,
+      "hint_image": "treasure",
+      "choices": [
+        "س",
+        "ر",
+        "ز"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ز",
+      "target_letter_name": "الزاي",
+      "odd_letter": "ر",
+      "odd_letter_name": "الراء",
+      "items": [
+        {
+          "word": "رسالة",
+          "word_voweled": "رِسَالَةٌ",
+          "image_key": "letter",
+          "starts_with": "ر"
+        },
+        {
+          "word": "زيتون",
+          "word_voweled": "زَيْتُونٌ",
+          "image_key": "olive",
+          "starts_with": "ز"
+        },
+        {
+          "word": "زرافة",
+          "word_voweled": "زَرَافَةٌ",
+          "image_key": "giraffe",
+          "starts_with": "ز"
+        },
+        {
+          "word": "زهرة",
+          "word_voweled": "زَهْرَةٌ",
+          "image_key": "flower",
+          "starts_with": "ز"
+        }
+      ],
+      "correct_odd_index": 0,
+      "correct_answer": "رسالة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الزاي",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ز",
+      "target_letter_name": "الزاي",
+      "odd_letter": "ر",
+      "odd_letter_name": "الراء",
+      "items": [
+        {
+          "word": "زرافة",
+          "word_voweled": "زَرَافَةٌ",
+          "image_key": "giraffe",
+          "starts_with": "ز"
+        },
+        {
+          "word": "رسالة",
+          "word_voweled": "رِسَالَةٌ",
+          "image_key": "letter",
+          "starts_with": "ر"
+        },
+        {
+          "word": "زهرة",
+          "word_voweled": "زَهْرَةٌ",
+          "image_key": "flower",
+          "starts_with": "ز"
+        },
+        {
+          "word": "زيتون",
+          "word_voweled": "زَيْتُونٌ",
+          "image_key": "olive",
+          "starts_with": "ز"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "رسالة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الزاي",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ز",
+      "letter_b": "ر",
+      "letter_a_name": "الزاي",
+      "letter_b_name": "الراء",
+      "difference_ar": "الزاي لها نقطة فوق، والراء ليس لها نقاط",
+      "choices": [
+        "ر",
+        "ز"
+      ],
+      "instruction": "ما الفرق بين حرفي الزاي والراء؟",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ز",
+        "ز",
+        "ز",
+        "ز"
+      ],
+      "categories": {
+        "ز": []
+      },
+      "target_letters": [
+        "ز"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الزاي)",
+      "difficulty": 1
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "تشرقُ",
+        "الشمسُ"
+      ],
+      "correct_order": [
+        "الشمسُ",
+        "تشرقُ"
+      ],
+      "full_sentence": "الشمسُ تشرقُ.",
+      "hint_image": "sun_rise",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الزهرةُ جميلةٌ.",
+        "الذئبُ يعوي.",
+        "السمكةُ في البحر."
+      ],
+      "images": [
+        "wolf_howl",
+        "flower_pretty",
+        "fish_sea"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 0,
+        "2": 2
+      },
+      "unit": 2,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

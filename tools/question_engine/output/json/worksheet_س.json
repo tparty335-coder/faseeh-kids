@@ -1,0 +1,541 @@
+{
+  "letter": "س",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "س",
+      "letter_name": "السين",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـس",
+      "instruction": "تتبع حرف السين في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "س",
+      "letter_name": "السين",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـس",
+      "instruction": "تتبع حرف السين في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "سمكة",
+      "word_voweled": "سَمَكَةٌ",
+      "image_key": "fish",
+      "correct_answer": "س",
+      "choices": [
+        "س",
+        "م",
+        "ج",
+        "ف"
+      ],
+      "instruction": "صل الصورة بحرف السين",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "سمكة",
+      "word_voweled": "سَمَكَةٌ",
+      "image_key": "fish",
+      "correct_answer": "س",
+      "choices": [
+        "ظ",
+        "ج",
+        "ت",
+        "س"
+      ],
+      "instruction": "صل الصورة بحرف السين",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "س",
+      "letter_name": "السين",
+      "grid": [
+        "س",
+        "ص",
+        "س",
+        "ش",
+        "س",
+        "ب",
+        "ف",
+        "ص",
+        "س",
+        "ض",
+        "م",
+        "ض",
+        "م",
+        "ص",
+        "ش",
+        "ر",
+        "د",
+        "غ",
+        "ش",
+        "ض"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "instruction": "ابحث عن حرف السين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ش",
+        "ص"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "س",
+      "letter_name": "السين",
+      "grid": [
+        "خ",
+        "ص",
+        "س",
+        "ب",
+        "ع",
+        "ك",
+        "س",
+        "ه",
+        "ج",
+        "ه",
+        "ط",
+        "س",
+        "ج",
+        "ط",
+        "ك",
+        "س",
+        "ا",
+        "ص",
+        "ا",
+        "ص"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        2,
+        6,
+        11,
+        15
+      ],
+      "instruction": "ابحث عن حرف السين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ش",
+        "ص"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "س",
+      "letter_name": "السين",
+      "forms": {
+        "isolated": "س",
+        "initial": "سـ",
+        "medial": "ـسـ",
+        "final": "ـس"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "سيارة",
+          "voweled": "سَيَّارَةٌ",
+          "image_key": "car",
+          "position": "start",
+          "syllables": [
+            "سَيْ",
+            "يَا",
+            "رَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "أسد",
+          "voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "position": "middle",
+          "syllables": [
+            "أَ",
+            "سَدٌ"
+          ]
+        },
+        "final": {
+          "word": "قفص",
+          "voweled": "قَفَصٌ",
+          "image_key": "cage",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "فَصٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف السين بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "س",
+      "letter_name": "السين",
+      "forms": {
+        "isolated": "س",
+        "initial": "سـ",
+        "medial": "ـسـ",
+        "final": "ـس"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "سحابة",
+          "voweled": "سَحَابَةٌ",
+          "image_key": "cloud",
+          "position": "start",
+          "syllables": [
+            "سَ",
+            "حَا",
+            "بَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "أسد",
+          "voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "position": "middle",
+          "syllables": [
+            "أَ",
+            "سَدٌ"
+          ]
+        },
+        "final": {
+          "word": "قفص",
+          "voweled": "قَفَصٌ",
+          "image_key": "cage",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "فَصٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف السين بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "س",
+      "letter_name": "السين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "سمك",
+      "word_voweled": "سَمَكٌ",
+      "image_key": "fish",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف السين في كلمة (سَمَكٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "س",
+      "letter_name": "السين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "سمك",
+      "word_voweled": "سَمَكٌ",
+      "image_key": "fish",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف السين في كلمة (سَمَكٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "س",
+      "word": "سيارة",
+      "word_voweled": "سَيَّارَةٌ",
+      "image_key": "car",
+      "scrambled_letters": [
+        "ة",
+        "س",
+        "ي",
+        "ا",
+        "ر"
+      ],
+      "correct_order": [
+        "س",
+        "ي",
+        "ا",
+        "ر",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "س",
+      "word": "سمكة",
+      "word_voweled": "سَمَكَةٌ",
+      "image_key": "fish",
+      "scrambled_letters": [
+        "س",
+        "ة",
+        "ك",
+        "م"
+      ],
+      "correct_order": [
+        "س",
+        "م",
+        "ك",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "س",
+      "word": "مسجد",
+      "word_voweled": "مَسْجِدٌ",
+      "image_key": "mosque",
+      "separated_letters": [
+        "م",
+        "س",
+        "ج",
+        "د"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "مَسْجِدٌ",
+      "correct_word": "مسجد",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "س",
+      "word": "ملبس",
+      "word_voweled": "مَلْبَسٌ",
+      "image_key": "closet",
+      "letters_given": [
+        "م",
+        "ب",
+        "ص",
+        "س",
+        "ش",
+        "ل"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "ملبس",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "كرسي",
+      "word_voweled": "كُرْسِيٌّ",
+      "word_with_blank": "كُرْسِ _",
+      "word_with_blank_plain": "كرس _",
+      "correct_letter": "س",
+      "position_index": 3,
+      "hint_image": "chair",
+      "choices": [
+        "ص",
+        "س",
+        "ش"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "قفص",
+      "word_voweled": "قَفَصٌ",
+      "word_with_blank": "قَفَ _",
+      "word_with_blank_plain": "قف _",
+      "correct_letter": "س",
+      "position_index": 2,
+      "hint_image": "cage",
+      "choices": [
+        "ص",
+        "ش",
+        "س"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "ملبس",
+      "word_voweled": "مَلْبَسٌ",
+      "image_key": "closet",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف السين في كلمة (ملبس)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "س",
+      "letter_name": "السين",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "image_key": "lion",
+      "letter_position": "middle",
+      "letter_position_ar": "وسط الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "وسط الكلمة",
+      "instruction": "أين يقع حرف السين في كلمة (أسد)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "س",
+      "letter_b": "ش",
+      "letter_a_name": "السين",
+      "letter_b_name": "الشين",
+      "difference_ar": "السين ليس له نقاط، والشين لها ثلاث نقاط فوق",
+      "choices": [
+        "ش",
+        "س"
+      ],
+      "instruction": "ما الفرق بين حرفي السين والشين؟",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "س",
+      "letter_name": "السين",
+      "base_without_dots": "س",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف السين",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يعوي.",
+      "choices": [
+        "الذئبُ",
+        "جميلةٌ",
+        "تشرقُ"
+      ],
+      "correct_word": "الذئبُ",
+      "hint_image": "wolf_howl",
+      "full_sentence": "الذئبُ يعوي.",
+      "unit": 2,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الزهرةُ جميلةٌ.",
+        "الذئبُ يعوي.",
+        "الشمسُ تشرقُ."
+      ],
+      "images": [
+        "wolf_howl",
+        "flower_pretty",
+        "sun_rise"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 0,
+        "2": 2
+      },
+      "unit": 2,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

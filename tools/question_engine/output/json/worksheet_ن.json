@@ -1,0 +1,552 @@
+{
+  "letter": "ن",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ن",
+      "letter_name": "النون",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـن",
+      "instruction": "تتبع حرف النون في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ن",
+      "letter_name": "النون",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـن",
+      "instruction": "تتبع حرف النون في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ن",
+      "letter_name": "النون",
+      "word": "نجمة",
+      "word_voweled": "نَجْمَةٌ",
+      "image_key": "star",
+      "correct_answer": "ن",
+      "choices": [
+        "ف",
+        "ن",
+        "ك",
+        "خ"
+      ],
+      "instruction": "صل الصورة بحرف النون",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ن",
+      "letter_name": "النون",
+      "word": "نملة",
+      "word_voweled": "نَمْلَةٌ",
+      "image_key": "ant_single",
+      "correct_answer": "ن",
+      "choices": [
+        "ن",
+        "ح",
+        "د",
+        "ف"
+      ],
+      "instruction": "صل الصورة بحرف النون",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ن",
+      "letter_name": "النون",
+      "grid": [
+        "ع",
+        "و",
+        "ن",
+        "م",
+        "خ",
+        "د",
+        "ش",
+        "ب",
+        "ج",
+        "ع",
+        "ر",
+        "ب",
+        "ي",
+        "د",
+        "ت",
+        "ن",
+        "ن",
+        "ط",
+        "ز",
+        "ن"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        2,
+        15,
+        16,
+        19
+      ],
+      "instruction": "ابحث عن حرف النون ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ي"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ن",
+      "letter_name": "النون",
+      "grid": [
+        "ج",
+        "ص",
+        "غ",
+        "ي",
+        "غ",
+        "ي",
+        "و",
+        "ن",
+        "ن",
+        "ن",
+        "ي",
+        "ظ",
+        "ي",
+        "ر",
+        "ي",
+        "ع",
+        "ب",
+        "ن",
+        "ح",
+        "ي"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        7,
+        8,
+        9,
+        17
+      ],
+      "instruction": "ابحث عن حرف النون ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ي"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ن",
+      "letter_name": "النون",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـنـ",
+      "choices": [
+        "ـنـ",
+        "نـ",
+        "ن"
+      ],
+      "example_word": "منزل",
+      "example_image": "home",
+      "instruction": "اختر الشكل الصحيح لحرف النون في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ن",
+      "letter_name": "النون",
+      "forms": {
+        "isolated": "ن",
+        "initial": "نـ",
+        "medial": "ـنـ",
+        "final": "ـن"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "نملة",
+          "voweled": "نَمْلَةٌ",
+          "image_key": "ant_single",
+          "position": "start",
+          "syllables": [
+            "نَمْ",
+            "لَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "منزل",
+          "voweled": "مَنْزِلٌ",
+          "image_key": "home",
+          "position": "middle",
+          "syllables": [
+            "مَنْ",
+            "زِلٌ"
+          ]
+        },
+        "final": {
+          "word": "لبن",
+          "voweled": "لَبَنٌ",
+          "image_key": "milk",
+          "position": "end",
+          "syllables": [
+            "لَ",
+            "بَنٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف النون بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ن",
+      "letter_name": "النون",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "نملة",
+      "word_voweled": "نَمْلَةٌ",
+      "image_key": "ant",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف النون في كلمة (نَمْلَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ن",
+      "letter_name": "النون",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "نملة",
+      "word_voweled": "نَمْلَةٌ",
+      "image_key": "ant",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف النون في كلمة (نَمْلَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ن",
+      "word": "نملة",
+      "word_voweled": "نَمْلَةٌ",
+      "image_key": "ant_single",
+      "scrambled_letters": [
+        "ل",
+        "ة",
+        "ن",
+        "م"
+      ],
+      "correct_order": [
+        "ن",
+        "م",
+        "ل",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ن",
+      "word": "نملة",
+      "word_voweled": "نَمْلَةٌ",
+      "image_key": "ant_single",
+      "scrambled_letters": [
+        "ن",
+        "ل",
+        "ة",
+        "م"
+      ],
+      "correct_order": [
+        "ن",
+        "م",
+        "ل",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ن",
+      "word": "لبن",
+      "word_voweled": "لَبَنٌ",
+      "image_key": "milk",
+      "separated_letters": [
+        "ل",
+        "ب",
+        "ن"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "لَبَنٌ",
+      "correct_word": "لبن",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ن",
+      "word": "قرآن",
+      "word_voweled": "قُرْآنٌ",
+      "image_key": "quran",
+      "letters_given": [
+        "ق",
+        "ب",
+        "ن",
+        "آ",
+        "ي",
+        "ر"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "قرآن",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ن",
+      "letter_name": "النون",
+      "word": "منزل",
+      "word_voweled": "مَنْزِلٌ",
+      "word_with_blank": "مَ _ ْزِلٌ",
+      "word_with_blank_plain": "م _ زل",
+      "correct_letter": "ن",
+      "position_index": 1,
+      "hint_image": "home",
+      "choices": [
+        "ي",
+        "ن",
+        "ب"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ن",
+      "letter_name": "النون",
+      "word": "نور",
+      "word_voweled": "نُورٌ",
+      "word_with_blank": "_ ُورٌ",
+      "word_with_blank_plain": "_ ور",
+      "correct_letter": "ن",
+      "hint_image": "light_lamp",
+      "choices": [
+        "ن",
+        "ي",
+        "ب"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ن",
+      "target_letter_name": "النون",
+      "odd_letter": "ب",
+      "odd_letter_name": "الباء",
+      "items": [
+        {
+          "word": "نور",
+          "word_voweled": "نُورٌ",
+          "image_key": "light_lamp",
+          "starts_with": "ن"
+        },
+        {
+          "word": "بالون",
+          "word_voweled": "بَالُونٌ",
+          "image_key": "balloon",
+          "starts_with": "ب"
+        },
+        {
+          "word": "نجمة",
+          "word_voweled": "نَجْمَةٌ",
+          "image_key": "star",
+          "starts_with": "ن"
+        },
+        {
+          "word": "نهر",
+          "word_voweled": "نَهْرٌ",
+          "image_key": "river",
+          "starts_with": "ن"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "بالون",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف النون",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ن",
+      "target_letter_name": "النون",
+      "odd_letter": "ي",
+      "odd_letter_name": "الياء",
+      "items": [
+        {
+          "word": "نور",
+          "word_voweled": "نُورٌ",
+          "image_key": "light_lamp",
+          "starts_with": "ن"
+        },
+        {
+          "word": "يمامة",
+          "word_voweled": "يَمَامَةٌ",
+          "image_key": "dove",
+          "starts_with": "ي"
+        },
+        {
+          "word": "نجمة",
+          "word_voweled": "نَجْمَةٌ",
+          "image_key": "star",
+          "starts_with": "ن"
+        },
+        {
+          "word": "نهر",
+          "word_voweled": "نَهْرٌ",
+          "image_key": "river",
+          "starts_with": "ن"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "يمامة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف النون",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ں",
+      "choices": [
+        "ن",
+        "ت",
+        "ث"
+      ],
+      "correct_answer": "ن",
+      "hint_word": "نملة",
+      "hint_word_voweled": "نَمْلَةٌ",
+      "hint_image": "ant_single",
+      "instruction": "انظر إلى الصورة (نملة) واختر الحرف المناسب لجسم الحرف (ں)",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ن",
+        "ن",
+        "ن",
+        "ن"
+      ],
+      "categories": {
+        "ن": []
+      },
+      "target_letters": [
+        "ن"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (النون)",
+      "difficulty": 1
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الكلبُ يلعبُ.",
+        "الموزُ أصفرُ.",
+        "الياسمينُ عطرٌ."
+      ],
+      "images": [
+        "yellow_banana",
+        "dog_play",
+        "jasmine_scent"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 0,
+        "2": 2
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ أصفرُ.",
+      "choices": [
+        "حامضٌ",
+        "الموزُ",
+        "الليمونُ"
+      ],
+      "correct_word": "الموزُ",
+      "hint_image": "yellow_banana",
+      "full_sentence": "الموزُ أصفرُ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

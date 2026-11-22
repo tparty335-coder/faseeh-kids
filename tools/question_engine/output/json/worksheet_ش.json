@@ -1,0 +1,490 @@
+{
+  "letter": "ش",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "شـ",
+      "instruction": "تتبع حرف الشين في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـش",
+      "instruction": "تتبع حرف الشين في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "word": "شاة",
+      "word_voweled": "شَاةٌ",
+      "image_key": "goat",
+      "correct_answer": "ش",
+      "choices": [
+        "ش",
+        "ن",
+        "ي",
+        "ذ"
+      ],
+      "instruction": "صل الصورة بحرف الشين",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "word": "شاة",
+      "word_voweled": "شَاةٌ",
+      "image_key": "goat",
+      "correct_answer": "ش",
+      "choices": [
+        "ش",
+        "و",
+        "م",
+        "ج"
+      ],
+      "instruction": "صل الصورة بحرف الشين",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "grid": [
+        "س",
+        "ص",
+        "ي",
+        "س",
+        "ش",
+        "ط",
+        "ش",
+        "س",
+        "ص",
+        "غ",
+        "ش",
+        "ز",
+        "ش",
+        "ص",
+        "ص",
+        "ش",
+        "ط",
+        "ش",
+        "ع",
+        "ك"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        4,
+        6,
+        10,
+        12,
+        15,
+        17
+      ],
+      "instruction": "ابحث عن حرف الشين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "س",
+        "ص"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "grid": [
+        "ض",
+        "ل",
+        "و",
+        "ح",
+        "ص",
+        "ظ",
+        "ص",
+        "ش",
+        "و",
+        "ش",
+        "ث",
+        "ص",
+        "ش",
+        "خ",
+        "ش",
+        "ك",
+        "ص",
+        "س",
+        "ل",
+        "س"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        7,
+        9,
+        12,
+        14
+      ],
+      "instruction": "ابحث عن حرف الشين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "س",
+        "ص"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "شـ",
+      "choices": [
+        "ش",
+        "ـش",
+        "شـ"
+      ],
+      "example_word": "شمس",
+      "example_image": "sun",
+      "instruction": "اختر الشكل الصحيح لحرف الشين في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـشـ",
+      "choices": [
+        "شـ",
+        "ش",
+        "ـشـ"
+      ],
+      "example_word": "وشاح",
+      "example_image": "scarf",
+      "instruction": "اختر الشكل الصحيح لحرف الشين في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "شجرة",
+      "word_voweled": "شَجَرَةٌ",
+      "image_key": "tree",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الشين في كلمة (شَجَرَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "شجرة",
+      "word_voweled": "شَجَرَةٌ",
+      "image_key": "tree",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الشين في كلمة (شَجَرَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ش",
+      "word": "عيش",
+      "word_voweled": "عَيْشٌ",
+      "image_key": "bread_ar",
+      "scrambled_letters": [
+        "ي",
+        "ش",
+        "ع"
+      ],
+      "correct_order": [
+        "ع",
+        "ي",
+        "ش"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ش",
+      "word": "عيش",
+      "word_voweled": "عَيْشٌ",
+      "image_key": "bread_ar",
+      "scrambled_letters": [
+        "ي",
+        "ع",
+        "ش"
+      ],
+      "correct_order": [
+        "ع",
+        "ي",
+        "ش"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ش",
+      "word": "عيش",
+      "word_voweled": "عَيْشٌ",
+      "word_with_blank": "عَيْ_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ش",
+      "hint_image": "bread_ar",
+      "image_key": "bread_ar",
+      "choices": [
+        "ص",
+        "س",
+        "ش"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ش",
+      "word": "شجرة",
+      "word_voweled": "شَجَرَةٌ",
+      "word_with_blank": "_َجَرَةٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ش",
+      "hint_image": "tree",
+      "image_key": "tree",
+      "choices": [
+        "ص",
+        "س",
+        "ش"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "word": "فراش",
+      "word_voweled": "فَرَاشٌ",
+      "word_with_blank": "فَرَا _",
+      "word_with_blank_plain": "فرا _",
+      "correct_letter": "ش",
+      "position_index": 3,
+      "hint_image": "butterfly",
+      "choices": [
+        "ص",
+        "ش",
+        "س"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "word": "وشاح",
+      "word_voweled": "وِشَاحٌ",
+      "word_with_blank": "وِ _ َاحٌ",
+      "word_with_blank_plain": "و _ اح",
+      "correct_letter": "ش",
+      "position_index": 1,
+      "hint_image": "scarf",
+      "choices": [
+        "ص",
+        "س",
+        "ش"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ش",
+      "letter_name": "الشين",
+      "word": "جيش",
+      "word_voweled": "جَيْشٌ",
+      "image_key": "army",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف الشين في كلمة (جيش)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ش"
+      ],
+      "categories": {
+        "ش": []
+      },
+      "items_to_sort": [
+        {
+          "word": "شمس",
+          "word_voweled": "شَمْسٌ",
+          "image_key": "sun",
+          "correct_letter": "ش",
+          "correct_category": "ش"
+        },
+        {
+          "word": "شجرة",
+          "word_voweled": "شَجَرَةٌ",
+          "image_key": "tree",
+          "correct_letter": "ش",
+          "correct_category": "ش"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الشين)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ش",
+        "ش"
+      ],
+      "categories": {
+        "ش": []
+      },
+      "target_letters": [
+        "ش"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الشين)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ش",
+        "ش"
+      ],
+      "categories": {
+        "ش": []
+      },
+      "target_letters": [
+        "ش"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الشين)",
+      "difficulty": 1
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "جميلةٌ",
+        "الزهرةُ"
+      ],
+      "correct_order": [
+        "الزهرةُ",
+        "جميلةٌ"
+      ],
+      "full_sentence": "الزهرةُ جميلةٌ.",
+      "hint_image": "flower_pretty",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "تشرقُ",
+        "الشمسُ"
+      ],
+      "correct_order": [
+        "الشمسُ",
+        "تشرقُ"
+      ],
+      "full_sentence": "الشمسُ تشرقُ.",
+      "hint_image": "sun_rise",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "letter": "ف",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـف",
+      "instruction": "تتبع حرف الفاء في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ف",
+      "instruction": "تتبع حرف الفاء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "word": "فتاة",
+      "word_voweled": "فَتَاةٌ",
+      "image_key": "girl",
+      "correct_answer": "ف",
+      "choices": [
+        "خ",
+        "ص",
+        "ف",
+        "ك"
+      ],
+      "instruction": "صل الصورة بحرف الفاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "word": "فصل",
+      "word_voweled": "فَصْلٌ",
+      "image_key": "class",
+      "correct_answer": "ف",
+      "choices": [
+        "ه",
+        "ف",
+        "ش",
+        "ا"
+      ],
+      "instruction": "صل الصورة بحرف الفاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "grid": [
+        "ر",
+        "ق",
+        "ج",
+        "ق",
+        "ع",
+        "ف",
+        "ي",
+        "ظ",
+        "غ",
+        "ك",
+        "ض",
+        "ف",
+        "و",
+        "ف",
+        "ق",
+        "ق",
+        "ح",
+        "ف",
+        "ف",
+        "ز"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        5,
+        11,
+        13,
+        17,
+        18
+      ],
+      "instruction": "ابحث عن حرف الفاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ق"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "grid": [
+        "ي",
+        "ر",
+        "ح",
+        "ح",
+        "ز",
+        "ث",
+        "ف",
+        "ق",
+        "ي",
+        "د",
+        "ظ",
+        "ف",
+        "ث",
+        "ف",
+        "خ",
+        "ذ",
+        "ر",
+        "ر",
+        "ك",
+        "ف"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        6,
+        11,
+        13,
+        19
+      ],
+      "instruction": "ابحث عن حرف الفاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ق"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "فـ",
+      "choices": [
+        "ـفـ",
+        "ف",
+        "فـ"
+      ],
+      "example_word": "فيل",
+      "example_image": "elephant",
+      "instruction": "اختر الشكل الصحيح لحرف الفاء في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "forms": {
+        "isolated": "ف",
+        "initial": "فـ",
+        "medial": "ـفـ",
+        "final": "ـف"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "فراشة",
+          "voweled": "فَرَاشَةٌ",
+          "image_key": "butterfly",
+          "position": "start",
+          "syllables": [
+            "فَ",
+            "رَا",
+            "شَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "دفتر",
+          "voweled": "دَفْتَرٌ",
+          "image_key": "notebook",
+          "position": "middle",
+          "syllables": [
+            "دَفْ",
+            "تَرٌ"
+          ]
+        },
+        "final": {
+          "word": "خريف",
+          "voweled": "خَرِيفٌ",
+          "image_key": "autumn",
+          "position": "end",
+          "syllables": [
+            "خَ",
+            "رِي",
+            "فٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الفاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "فراشة",
+      "word_voweled": "فَرَاشَةٌ",
+      "image_key": "butterfly",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الفاء في كلمة (فَرَاشَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "فراشة",
+      "word_voweled": "فَرَاشَةٌ",
+      "image_key": "butterfly",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الفاء في كلمة (فَرَاشَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ف",
+      "word": "فراشة",
+      "word_voweled": "فَرَاشَةٌ",
+      "image_key": "butterfly",
+      "scrambled_letters": [
+        "ش",
+        "ف",
+        "ا",
+        "ة",
+        "ر"
+      ],
+      "correct_order": [
+        "ف",
+        "ر",
+        "ا",
+        "ش",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ف",
+      "word": "صيف",
+      "word_voweled": "صَيْفٌ",
+      "image_key": "summer",
+      "scrambled_letters": [
+        "ص",
+        "ف",
+        "ي"
+      ],
+      "correct_order": [
+        "ص",
+        "ي",
+        "ف"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ف",
+      "word": "فراشة",
+      "word_voweled": "فَرَاشَةٌ",
+      "image_key": "butterfly",
+      "separated_letters": [
+        "ف",
+        "ر",
+        "ا",
+        "ش",
+        "ة"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "فَرَاشَةٌ",
+      "correct_word": "فراشة",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ف",
+      "word": "فصل",
+      "word_voweled": "فَصْلٌ",
+      "word_with_blank": "_َصْلٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ف",
+      "hint_image": "class",
+      "image_key": "class",
+      "choices": [
+        "ف",
+        "ق",
+        "ك"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "word": "دفتر",
+      "word_voweled": "دَفْتَرٌ",
+      "word_with_blank": "دَ _ ْتَرٌ",
+      "word_with_blank_plain": "د _ تر",
+      "correct_letter": "ف",
+      "position_index": 1,
+      "hint_image": "notebook",
+      "choices": [
+        "ف",
+        "ق",
+        "س"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "word": "فتاة",
+      "word_voweled": "فَتَاةٌ",
+      "word_with_blank": "_ َتَاةٌ",
+      "word_with_blank_plain": "_ تاة",
+      "correct_letter": "ف",
+      "hint_image": "girl",
+      "choices": [
+        "ق",
+        "ط",
+        "ف"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ف"
+      ],
+      "categories": {
+        "ف": []
+      },
+      "items_to_sort": [
+        {
+          "word": "فتاة",
+          "word_voweled": "فَتَاةٌ",
+          "image_key": "girl",
+          "correct_letter": "ف",
+          "correct_category": "ف"
+        },
+        {
+          "word": "فراشة",
+          "word_voweled": "فَرَاشَةٌ",
+          "image_key": "butterfly",
+          "correct_letter": "ف",
+          "correct_category": "ف"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الفاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ف",
+      "target_letter_name": "الفاء",
+      "odd_letter": "ق",
+      "odd_letter_name": "القاف",
+      "items": [
+        {
+          "word": "فراشة",
+          "word_voweled": "فَرَاشَةٌ",
+          "image_key": "butterfly",
+          "starts_with": "ف"
+        },
+        {
+          "word": "فتاة",
+          "word_voweled": "فَتَاةٌ",
+          "image_key": "girl",
+          "starts_with": "ف"
+        },
+        {
+          "word": "قلم",
+          "word_voweled": "قَلَمٌ",
+          "image_key": "pen",
+          "starts_with": "ق"
+        },
+        {
+          "word": "فصل",
+          "word_voweled": "فَصْلٌ",
+          "image_key": "class",
+          "starts_with": "ف"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "قلم",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الفاء",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ف",
+      "letter_name": "الفاء",
+      "base_without_dots": "ڡ",
+      "correct_dot_count": 1,
+      "correct_dot_position": "above",
+      "correct_dot_position_ar": "فوق",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الفاء",
+      "difficulty": 1
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ف",
+      "letter_b": "ق",
+      "letter_a_name": "الفاء",
+      "letter_b_name": "القاف",
+      "difference_ar": "الفاء لها نقطة فوق، والقاف لها نقطتان فوق",
+      "choices": [
+        "ف",
+        "ق"
+      ],
+      "instruction": "ما الفرق بين حرفي الفاء والقاف؟",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يطيرُ",
+        "الطائرُ"
+      ],
+      "correct_order": [
+        "الطائرُ",
+        "يطيرُ"
+      ],
+      "full_sentence": "الطائرُ يطيرُ.",
+      "hint_image": "bird_fly",
+      "unit": 3,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الطائرُ ____.",
+      "choices": [
+        "القردُ",
+        "يطيرُ",
+        "الضفدعُ"
+      ],
+      "correct_word": "يطيرُ",
+      "hint_image": "bird_fly",
+      "full_sentence": "الطائرُ يطيرُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

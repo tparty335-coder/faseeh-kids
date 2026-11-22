@@ -1,0 +1,499 @@
+{
+  "letter": "ج",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ج",
+      "instruction": "تتبع حرف الجيم في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "جـ",
+      "instruction": "تتبع حرف الجيم في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "word": "جرة",
+      "word_voweled": "جَرَّةٌ",
+      "image_key": "jar",
+      "correct_answer": "ج",
+      "choices": [
+        "ع",
+        "ز",
+        "ج",
+        "س"
+      ],
+      "instruction": "صل الصورة بحرف الجيم",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "word": "جرس",
+      "word_voweled": "جَرَسٌ",
+      "image_key": "bell",
+      "correct_answer": "ج",
+      "choices": [
+        "غ",
+        "ر",
+        "ج",
+        "ق"
+      ],
+      "instruction": "صل الصورة بحرف الجيم",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "grid": [
+        "غ",
+        "م",
+        "ح",
+        "ج",
+        "خ",
+        "ج",
+        "د",
+        "خ",
+        "خ",
+        "ه",
+        "و",
+        "ا",
+        "ج",
+        "ع",
+        "ج",
+        "ج",
+        "ج",
+        "ح",
+        "ن",
+        "س"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        3,
+        5,
+        12,
+        14,
+        15,
+        16
+      ],
+      "instruction": "ابحث عن حرف الجيم ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ح",
+        "خ"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "grid": [
+        "خ",
+        "ق",
+        "خ",
+        "غ",
+        "ن",
+        "ح",
+        "س",
+        "ج",
+        "د",
+        "ك",
+        "م",
+        "خ",
+        "د",
+        "ش",
+        "خ",
+        "ج",
+        "ج",
+        "ر",
+        "ب",
+        "ج"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        7,
+        15,
+        16,
+        19
+      ],
+      "instruction": "ابحث عن حرف الجيم ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ح",
+        "خ"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـج",
+      "choices": [
+        "ـجـ",
+        "ـج",
+        "ج"
+      ],
+      "example_word": "ثلج",
+      "example_image": "snow",
+      "instruction": "اختر الشكل الصحيح لحرف الجيم في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـج",
+      "choices": [
+        "ج",
+        "ـجـ",
+        "ـج"
+      ],
+      "example_word": "ثلج",
+      "example_image": "snow",
+      "instruction": "اختر الشكل الصحيح لحرف الجيم في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "جمل",
+      "word_voweled": "جَمَلٌ",
+      "image_key": "camel",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الجيم في كلمة (جَمَلٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "جمل",
+      "word_voweled": "جَمَلٌ",
+      "image_key": "camel",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الجيم في كلمة (جَمَلٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ج",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "image_key": "face",
+      "scrambled_letters": [
+        "ج",
+        "ه",
+        "و"
+      ],
+      "correct_order": [
+        "و",
+        "ج",
+        "ه"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ج",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "image_key": "face",
+      "scrambled_letters": [
+        "و",
+        "ه",
+        "ج"
+      ],
+      "correct_order": [
+        "و",
+        "ج",
+        "ه"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ج",
+      "word": "جرس",
+      "word_voweled": "جَرَسٌ",
+      "word_with_blank": "_َرَسٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ج",
+      "hint_image": "bell",
+      "image_key": "bell",
+      "choices": [
+        "ح",
+        "خ",
+        "ج"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ج",
+      "word": "جمل",
+      "word_voweled": "جَمَلٌ",
+      "image_key": "camel",
+      "letters_given": [
+        "خ",
+        "ل",
+        "ج",
+        "ح",
+        "م"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "جمل",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "word": "جرة",
+      "word_voweled": "جَرَّةٌ",
+      "word_with_blank": "_ َرَّةٌ",
+      "word_with_blank_plain": "_ رة",
+      "correct_letter": "ج",
+      "hint_image": "jar",
+      "choices": [
+        "ج",
+        "ح",
+        "خ"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ج",
+      "letter_name": "الجيم",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "word_with_blank": "وَ _ ْهٌ",
+      "word_with_blank_plain": "و _ ه",
+      "correct_letter": "ج",
+      "position_index": 1,
+      "hint_image": "face",
+      "choices": [
+        "ج",
+        "ح",
+        "خ"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ج"
+      ],
+      "categories": {
+        "ج": []
+      },
+      "items_to_sort": [
+        {
+          "word": "جزرة",
+          "word_voweled": "جَزَرَةٌ",
+          "image_key": "carrot",
+          "correct_letter": "ج",
+          "correct_category": "ج"
+        },
+        {
+          "word": "جمل",
+          "word_voweled": "جَمَلٌ",
+          "image_key": "camel",
+          "correct_letter": "ج",
+          "correct_category": "ج"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الجيم)",
+      "difficulty": 1
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ج"
+      ],
+      "categories": {
+        "ج": []
+      },
+      "items_to_sort": [
+        {
+          "word": "جمل",
+          "word_voweled": "جَمَلٌ",
+          "image_key": "camel",
+          "correct_letter": "ج",
+          "correct_category": "ج"
+        },
+        {
+          "word": "جزرة",
+          "word_voweled": "جَزَرَةٌ",
+          "image_key": "carrot",
+          "correct_letter": "ج",
+          "correct_category": "ج"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الجيم)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ج",
+        "ج",
+        "ج",
+        "ج"
+      ],
+      "categories": {
+        "ج": []
+      },
+      "target_letters": [
+        "ج"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الجيم)",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ح",
+      "choices": [
+        "خ",
+        "ج",
+        "ح"
+      ],
+      "correct_answer": "ج",
+      "hint_word": "جرة",
+      "hint_word_voweled": "جَرَّةٌ",
+      "hint_image": "jar",
+      "instruction": "انظر إلى الصورة (جرة) واختر الحرف المناسب لجسم الحرف (ح)",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "كبيرٌ",
+        "الأسدُ"
+      ],
+      "correct_order": [
+        "الأسدُ",
+        "كبيرٌ"
+      ],
+      "full_sentence": "الأسدُ كبيرٌ.",
+      "hint_image": "big_lion",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "كبيرٌ",
+        "الأسدُ"
+      ],
+      "correct_order": [
+        "الأسدُ",
+        "كبيرٌ"
+      ],
+      "full_sentence": "الأسدُ كبيرٌ.",
+      "hint_image": "big_lion",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

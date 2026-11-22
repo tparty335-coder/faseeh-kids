@@ -1,0 +1,474 @@
+{
+  "letter": "ق",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـق",
+      "instruction": "تتبع حرف القاف في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ق",
+      "instruction": "تتبع حرف القاف في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "قطة",
+      "word_voweled": "قِطَّةٌ",
+      "image_key": "cat",
+      "correct_answer": "ق",
+      "choices": [
+        "ج",
+        "ح",
+        "ق",
+        "ز"
+      ],
+      "instruction": "صل الصورة بحرف القاف",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "image_key": "moon",
+      "correct_answer": "ق",
+      "choices": [
+        "ن",
+        "ق",
+        "ر",
+        "ع"
+      ],
+      "instruction": "صل الصورة بحرف القاف",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "grid": [
+        "ق",
+        "ف",
+        "ن",
+        "ف",
+        "ك",
+        "ق",
+        "ق",
+        "ا",
+        "خ",
+        "ر",
+        "ض",
+        "ش",
+        "ق",
+        "ق",
+        "ذ",
+        "ط",
+        "ذ",
+        "و",
+        "ف",
+        "ق"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        0,
+        5,
+        6,
+        12,
+        13,
+        19
+      ],
+      "instruction": "ابحث عن حرف القاف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ف"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "grid": [
+        "ف",
+        "ف",
+        "ف",
+        "ي",
+        "ه",
+        "ن",
+        "ق",
+        "ق",
+        "ث",
+        "ي",
+        "ا",
+        "ك",
+        "ك",
+        "ق",
+        "ف",
+        "ظ",
+        "ف",
+        "د",
+        "ق",
+        "ذ"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        6,
+        7,
+        13,
+        18
+      ],
+      "instruction": "ابحث عن حرف القاف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ف"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـقـ",
+      "choices": [
+        "ق",
+        "ـقـ",
+        "قـ"
+      ],
+      "example_word": "ورقة",
+      "example_image": "paper",
+      "instruction": "اختر الشكل الصحيح لحرف القاف في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "ق",
+      "choices": [
+        "ـق",
+        "ـقـ",
+        "ق"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف القاف في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "قرد",
+      "word_voweled": "قَرَدٌ",
+      "image_key": "monkey",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف القاف في كلمة (قَرَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "قرد",
+      "word_voweled": "قَرَدٌ",
+      "image_key": "monkey",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف القاف في كلمة (قَرَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ق",
+      "word": "ورقة",
+      "word_voweled": "وَرَقَةٌ",
+      "image_key": "paper",
+      "scrambled_letters": [
+        "ق",
+        "و",
+        "ر",
+        "ة"
+      ],
+      "correct_order": [
+        "و",
+        "ر",
+        "ق",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ق",
+      "word": "قطة",
+      "word_voweled": "قِطَّةٌ",
+      "image_key": "cat",
+      "scrambled_letters": [
+        "ط",
+        "ق",
+        "ة"
+      ],
+      "correct_order": [
+        "ق",
+        "ط",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ق",
+      "word": "قطة",
+      "word_voweled": "قِطَّةٌ",
+      "image_key": "cat",
+      "separated_letters": [
+        "ق",
+        "ط",
+        "ة"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "قِطَّةٌ",
+      "correct_word": "قطة",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ق",
+      "word": "قلم",
+      "word_voweled": "قَلَمٌ",
+      "image_key": "pen",
+      "separated_letters": [
+        "ق",
+        "ل",
+        "م"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "قَلَمٌ",
+      "correct_word": "قلم",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "قلم",
+      "word_voweled": "قَلَمٌ",
+      "word_with_blank": "_ َلَمٌ",
+      "word_with_blank_plain": "_ لم",
+      "correct_letter": "ق",
+      "hint_image": "pen",
+      "choices": [
+        "ف",
+        "ق",
+        "ص"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "ورقة",
+      "word_voweled": "وَرَقَةٌ",
+      "word_with_blank": "وَرَ _ َةٌ",
+      "word_with_blank_plain": "ور _ ة",
+      "correct_letter": "ق",
+      "position_index": 2,
+      "hint_image": "paper",
+      "choices": [
+        "و",
+        "ف",
+        "ق"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "قلم",
+      "word_voweled": "قَلَمٌ",
+      "image_key": "pen",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف القاف في كلمة (قلم)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ق",
+      "letter_name": "القاف",
+      "word": "قرد",
+      "word_voweled": "قِرْدٌ",
+      "image_key": "monkey",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف القاف في كلمة (قرد)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ق",
+        "ق"
+      ],
+      "categories": {
+        "ق": []
+      },
+      "target_letters": [
+        "ق"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (القاف)",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ٯ",
+      "choices": [
+        "ح",
+        "ق",
+        "ف"
+      ],
+      "correct_answer": "ق",
+      "hint_word": "قرد",
+      "hint_word_voweled": "قِرْدٌ",
+      "hint_image": "monkey",
+      "instruction": "انظر إلى الصورة (قرد) واختر الحرف المناسب لجسم الحرف (ٯ)",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الطائرُ ____.",
+      "choices": [
+        "الطائرُ",
+        "يقفزُ",
+        "يطيرُ"
+      ],
+      "correct_word": "يطيرُ",
+      "hint_image": "bird_fly",
+      "full_sentence": "الطائرُ يطيرُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ ضخمٌ.",
+      "choices": [
+        "القردُ",
+        "الفيلُ",
+        "الطائرُ"
+      ],
+      "correct_word": "الفيلُ",
+      "hint_image": "big_elephant",
+      "full_sentence": "الفيلُ ضخمٌ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

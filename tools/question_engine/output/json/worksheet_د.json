@@ -1,0 +1,539 @@
+{
+  "letter": "د",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "د",
+      "letter_name": "الدال",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "د",
+      "instruction": "تتبع حرف الدال في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "د",
+      "letter_name": "الدال",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـد",
+      "instruction": "تتبع حرف الدال في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "د",
+      "letter_name": "الدال",
+      "word": "دلو",
+      "word_voweled": "دَلْوٌ",
+      "image_key": "bucket",
+      "correct_answer": "د",
+      "choices": [
+        "د",
+        "ي",
+        "ب",
+        "ح"
+      ],
+      "instruction": "صل الصورة بحرف الدال",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "د",
+      "letter_name": "الدال",
+      "word": "دولفين",
+      "word_voweled": "دُلْفِينٌ",
+      "image_key": "dolphin",
+      "correct_answer": "د",
+      "choices": [
+        "د",
+        "ر",
+        "ن",
+        "ط"
+      ],
+      "instruction": "صل الصورة بحرف الدال",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "د",
+      "letter_name": "الدال",
+      "grid": [
+        "ت",
+        "ذ",
+        "ل",
+        "ظ",
+        "ذ",
+        "س",
+        "د",
+        "د",
+        "ذ",
+        "ز",
+        "د",
+        "ذ",
+        "د",
+        "ه",
+        "ض",
+        "ط",
+        "د",
+        "ف",
+        "ذ",
+        "ب"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        6,
+        7,
+        10,
+        12,
+        16
+      ],
+      "instruction": "ابحث عن حرف الدال ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ذ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "د",
+      "letter_name": "الدال",
+      "grid": [
+        "ح",
+        "ع",
+        "د",
+        "ل",
+        "ي",
+        "م",
+        "د",
+        "ج",
+        "ف",
+        "ص",
+        "ت",
+        "ح",
+        "س",
+        "د",
+        "ز",
+        "ف",
+        "م",
+        "ش",
+        "د",
+        "ذ"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        2,
+        6,
+        13,
+        18
+      ],
+      "instruction": "ابحث عن حرف الدال ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ذ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "د",
+      "letter_name": "الدال",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "د",
+      "choices": [
+        "ص",
+        "ض",
+        "د"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الدال في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "د",
+      "letter_name": "الدال",
+      "forms": {
+        "isolated": "د",
+        "initial": "د",
+        "medial": "ـد",
+        "final": "ـد"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "دجاجة",
+          "voweled": "دَجَاجَةٌ",
+          "image_key": "hen",
+          "position": "start",
+          "syllables": [
+            "دَ",
+            "جَا",
+            "جَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "مدرسة",
+          "voweled": "مَدْرَسَةٌ",
+          "image_key": "school",
+          "position": "middle",
+          "syllables": [
+            "مَدْ",
+            "رَ",
+            "سَةٌ"
+          ]
+        },
+        "final": {
+          "word": "ولد",
+          "voweled": "وَلَدٌ",
+          "image_key": "boy",
+          "position": "end",
+          "syllables": [
+            "وَ",
+            "لَدٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الدال بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "د",
+      "letter_name": "الدال",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "دجاجة",
+      "word_voweled": "دَجَاجَةٌ",
+      "image_key": "hen",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الدال في كلمة (دَجَاجَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "د",
+      "letter_name": "الدال",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "دجاجة",
+      "word_voweled": "دَجَاجَةٌ",
+      "image_key": "hen",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الدال في كلمة (دَجَاجَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "د",
+      "word": "دب",
+      "word_voweled": "دُبٌّ",
+      "image_key": "bear",
+      "scrambled_letters": [
+        "ب",
+        "د"
+      ],
+      "correct_order": [
+        "د",
+        "ب"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "د",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "image_key": "lion",
+      "scrambled_letters": [
+        "س",
+        "أ",
+        "د"
+      ],
+      "correct_order": [
+        "أ",
+        "س",
+        "د"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "د",
+      "word": "دلو",
+      "word_voweled": "دَلْوٌ",
+      "image_key": "bucket",
+      "letters_given": [
+        "ي",
+        "و",
+        "ذ",
+        "د",
+        "ل"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "دلو",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "د",
+      "word": "دلو",
+      "word_voweled": "دَلْوٌ",
+      "image_key": "bucket",
+      "letters_given": [
+        "د",
+        "ذ",
+        "ظ",
+        "و",
+        "ل"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "دلو",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "د",
+      "letter_name": "الدال",
+      "word": "دب",
+      "word_voweled": "دُبٌّ",
+      "word_with_blank": "_ ُبٌّ",
+      "word_with_blank_plain": "_ ب",
+      "correct_letter": "د",
+      "hint_image": "bear",
+      "choices": [
+        "د",
+        "ذ",
+        "ر"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "د",
+      "letter_name": "الدال",
+      "word": "أسد",
+      "word_voweled": "أَسَدٌ",
+      "word_with_blank": "أَسَ _",
+      "word_with_blank_plain": "أس _",
+      "correct_letter": "د",
+      "position_index": 2,
+      "hint_image": "lion",
+      "choices": [
+        "ص",
+        "ذ",
+        "د"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "د",
+      "target_letter_name": "الدال",
+      "odd_letter": "ذ",
+      "odd_letter_name": "الذال",
+      "items": [
+        {
+          "word": "ذهب",
+          "word_voweled": "ذَهَبٌ",
+          "image_key": "gold",
+          "starts_with": "ذ"
+        },
+        {
+          "word": "دولفين",
+          "word_voweled": "دُلْفِينٌ",
+          "image_key": "dolphin",
+          "starts_with": "د"
+        },
+        {
+          "word": "دراجة",
+          "word_voweled": "دَرَّاجَةٌ",
+          "image_key": "bicycle",
+          "starts_with": "د"
+        },
+        {
+          "word": "دجاجة",
+          "word_voweled": "دَجَاجَةٌ",
+          "image_key": "hen",
+          "starts_with": "د"
+        }
+      ],
+      "correct_odd_index": 0,
+      "correct_answer": "ذهب",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الدال",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "د",
+      "target_letter_name": "الدال",
+      "odd_letter": "ذ",
+      "odd_letter_name": "الذال",
+      "items": [
+        {
+          "word": "دولفين",
+          "word_voweled": "دُلْفِينٌ",
+          "image_key": "dolphin",
+          "starts_with": "د"
+        },
+        {
+          "word": "ذباب",
+          "word_voweled": "ذُبَابٌ",
+          "image_key": "fly",
+          "starts_with": "ذ"
+        },
+        {
+          "word": "دب",
+          "word_voweled": "دُبٌّ",
+          "image_key": "bear",
+          "starts_with": "د"
+        },
+        {
+          "word": "دجاجة",
+          "word_voweled": "دَجَاجَةٌ",
+          "image_key": "hen",
+          "starts_with": "د"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "ذباب",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الدال",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "د",
+      "letter_b": "ذ",
+      "letter_a_name": "الدال",
+      "letter_b_name": "الذال",
+      "difference_ar": "الدال ليس له نقاط، والذال لها نقطة فوق",
+      "choices": [
+        "ذ",
+        "د"
+      ],
+      "instruction": "ما الفرق بين حرفي الدال والذال؟",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "د",
+        "د"
+      ],
+      "categories": {
+        "د": []
+      },
+      "target_letters": [
+        "د"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الدال)",
+      "difficulty": 1
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "تشرقُ",
+        "الشمسُ"
+      ],
+      "correct_order": [
+        "الشمسُ",
+        "تشرقُ"
+      ],
+      "full_sentence": "الشمسُ تشرقُ.",
+      "hint_image": "sun_rise",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يعوي.",
+      "choices": [
+        "السمكةُ",
+        "في",
+        "الذئبُ"
+      ],
+      "correct_word": "الذئبُ",
+      "hint_image": "wolf_howl",
+      "full_sentence": "الذئبُ يعوي.",
+      "unit": 2,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

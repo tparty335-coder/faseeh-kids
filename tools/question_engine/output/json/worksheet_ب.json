@@ -1,0 +1,562 @@
+{
+  "letter": "ب",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "بـ",
+      "instruction": "تتبع حرف الباء في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ب",
+      "instruction": "تتبع حرف الباء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "word": "بالون",
+      "word_voweled": "بَالُونٌ",
+      "image_key": "balloon",
+      "correct_answer": "ب",
+      "choices": [
+        "خ",
+        "ب",
+        "ض",
+        "ر"
+      ],
+      "instruction": "صل الصورة بحرف الباء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "word": "بيضة",
+      "word_voweled": "بَيْضَةٌ",
+      "image_key": "egg",
+      "correct_answer": "ب",
+      "choices": [
+        "ب",
+        "ش",
+        "ت",
+        "ج"
+      ],
+      "instruction": "صل الصورة بحرف الباء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "grid": [
+        "م",
+        "ظ",
+        "ظ",
+        "ت",
+        "ب",
+        "ب",
+        "ش",
+        "ت",
+        "د",
+        "ش",
+        "ب",
+        "ذ",
+        "ي",
+        "ت",
+        "ب",
+        "ب",
+        "ي",
+        "خ",
+        "ب",
+        "و"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        4,
+        5,
+        10,
+        14,
+        15,
+        18
+      ],
+      "instruction": "ابحث عن حرف الباء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ت",
+        "ث",
+        "ن",
+        "ي"
+      ],
+      "difficulty": 5
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "grid": [
+        "ي",
+        "ن",
+        "ب",
+        "خ",
+        "ز",
+        "ب",
+        "ذ",
+        "ن",
+        "ز",
+        "د",
+        "د",
+        "ت",
+        "ب",
+        "ز",
+        "ث",
+        "ي",
+        "ا",
+        "م",
+        "ث",
+        "ب"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        2,
+        5,
+        12,
+        19
+      ],
+      "instruction": "ابحث عن حرف الباء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ت",
+        "ث",
+        "ن",
+        "ي"
+      ],
+      "difficulty": 5
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "forms": {
+        "isolated": "ب",
+        "initial": "بـ",
+        "medial": "ـبـ",
+        "final": "ـب"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "بيت",
+          "voweled": "بَيْتٌ",
+          "image_key": "house",
+          "position": "start",
+          "syllables": [
+            "بَيْ",
+            "تٌ"
+          ]
+        },
+        "medial": {
+          "word": "تفاحة",
+          "voweled": "تُفَّاحَةٌ",
+          "image_key": "apple",
+          "position": "middle",
+          "syllables": [
+            "تُفْ",
+            "فَا",
+            "حَةٌ"
+          ]
+        },
+        "final": {
+          "word": "عقرب",
+          "voweled": "عَقْرَبٌ",
+          "image_key": "scorpion",
+          "position": "end",
+          "syllables": [
+            "عَقْ",
+            "رَبٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الباء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "forms": {
+        "isolated": "ب",
+        "initial": "بـ",
+        "medial": "ـبـ",
+        "final": "ـب"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "بالون",
+          "voweled": "بَالُونٌ",
+          "image_key": "balloon",
+          "position": "start",
+          "syllables": [
+            "بَا",
+            "لُو",
+            "نٌ"
+          ]
+        },
+        "medial": {
+          "word": "كبير",
+          "voweled": "كَبِيرٌ",
+          "image_key": "big",
+          "position": "middle",
+          "syllables": [
+            "كَ",
+            "بِي",
+            "رٌ"
+          ]
+        },
+        "final": {
+          "word": "عقرب",
+          "voweled": "عَقْرَبٌ",
+          "image_key": "scorpion",
+          "position": "end",
+          "syllables": [
+            "عَقْ",
+            "رَبٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الباء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "بطة",
+      "word_voweled": "بَطَّةٌ",
+      "image_key": "duck",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الباء في كلمة (بَطَّةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "بطة",
+      "word_voweled": "بَطَّةٌ",
+      "image_key": "duck",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الباء في كلمة (بَطَّةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ب",
+      "word": "عقرب",
+      "word_voweled": "عَقْرَبٌ",
+      "image_key": "scorpion",
+      "scrambled_letters": [
+        "ب",
+        "ق",
+        "ر",
+        "ع"
+      ],
+      "correct_order": [
+        "ع",
+        "ق",
+        "ر",
+        "ب"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ب",
+      "word": "بقرة",
+      "word_voweled": "بَقَرَةٌ",
+      "image_key": "cow",
+      "scrambled_letters": [
+        "ة",
+        "ب",
+        "ق",
+        "ر"
+      ],
+      "correct_order": [
+        "ب",
+        "ق",
+        "ر",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ب",
+      "word": "بقرة",
+      "word_voweled": "بَقَرَةٌ",
+      "image_key": "cow",
+      "letters_given": [
+        "ن",
+        "ة",
+        "ر",
+        "ق",
+        "ب",
+        "ث"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "بقرة",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ب",
+      "word": "بيت",
+      "word_voweled": "بَيْتٌ",
+      "image_key": "house",
+      "separated_letters": [
+        "ب",
+        "ي",
+        "ت"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "بَيْتٌ",
+      "correct_word": "بيت",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "word_with_blank": "تُفَّ _ حَةٌ",
+      "word_with_blank_plain": "تف _ حة",
+      "correct_letter": "ب",
+      "position_index": 2,
+      "hint_image": "apple",
+      "choices": [
+        "ث",
+        "ب",
+        "ت"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "word": "كبير",
+      "word_voweled": "كَبِيرٌ",
+      "word_with_blank": "كَ _ ِيرٌ",
+      "word_with_blank_plain": "ك _ ير",
+      "correct_letter": "ب",
+      "position_index": 1,
+      "hint_image": "big",
+      "choices": [
+        "ب",
+        "ت",
+        "ن"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ب",
+      "target_letter_name": "الباء",
+      "odd_letter": "ت",
+      "odd_letter_name": "التاء",
+      "items": [
+        {
+          "word": "بالون",
+          "word_voweled": "بَالُونٌ",
+          "image_key": "balloon",
+          "starts_with": "ب"
+        },
+        {
+          "word": "بطة",
+          "word_voweled": "بَطَّةٌ",
+          "image_key": "duck",
+          "starts_with": "ب"
+        },
+        {
+          "word": "تمساح",
+          "word_voweled": "تِمْسَاحٌ",
+          "image_key": "crocodile",
+          "starts_with": "ت"
+        },
+        {
+          "word": "بيضة",
+          "word_voweled": "بَيْضَةٌ",
+          "image_key": "egg",
+          "starts_with": "ب"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "تمساح",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الباء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "word": "كبير",
+      "word_voweled": "كَبِيرٌ",
+      "image_key": "big",
+      "letter_position": "middle",
+      "letter_position_ar": "وسط الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "وسط الكلمة",
+      "instruction": "أين يقع حرف الباء في كلمة (كبير)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ب",
+      "letter_name": "الباء",
+      "base_without_dots": "ٮ",
+      "correct_dot_count": 1,
+      "correct_dot_position": "below",
+      "correct_dot_position_ar": "تحت",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الباء",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ٮ",
+      "choices": [
+        "ب",
+        "ت",
+        "ن"
+      ],
+      "correct_answer": "ب",
+      "hint_word": "بيضة",
+      "hint_word_voweled": "بَيْضَةٌ",
+      "hint_image": "egg",
+      "instruction": "انظر إلى الصورة (بيضة) واختر الحرف المناسب لجسم الحرف (ٮ)",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الأسدُ ____.",
+      "choices": [
+        "كبيرٌ",
+        "تسبحُ",
+        "الصحراء"
+      ],
+      "correct_word": "كبيرٌ",
+      "hint_image": "big_lion",
+      "full_sentence": "الأسدُ كبيرٌ.",
+      "unit": 1,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "في",
+        "الجملُ",
+        "الصحراء"
+      ],
+      "correct_order": [
+        "الجملُ",
+        "في",
+        "الصحراء"
+      ],
+      "full_sentence": "الجملُ في الصحراء.",
+      "hint_image": "camel_desert",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 3
+    }
+  ]
+}

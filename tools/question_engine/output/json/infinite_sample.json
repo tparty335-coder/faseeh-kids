@@ -1,0 +1,262 @@
+[
+  {
+    "type": "choose_haraka",
+    "type_ar": "اختر الحركة المناسبة",
+    "letter": "ق",
+    "letter_name": "القاف",
+    "haraka_key": "fatha",
+    "haraka_name": "فتحة",
+    "haraka_symbol": "َ",
+    "word": "قرد",
+    "word_voweled": "قَرَدٌ",
+    "image_key": "monkey",
+    "choices": [
+      {
+        "key": "fatha",
+        "name": "فتحة",
+        "symbol": "َ"
+      },
+      {
+        "key": "damma",
+        "name": "ضمة",
+        "symbol": "ُ"
+      },
+      {
+        "key": "kasra",
+        "name": "كسرة",
+        "symbol": "ِ"
+      }
+    ],
+    "correct_answer": "fatha",
+    "instruction": "اختر الحركة المناسبة لحرف القاف في كلمة (قَرَدٌ)",
+    "difficulty": 2
+  },
+  {
+    "type": "connect_forms",
+    "type_ar": "وصّل الحرف بموضعه",
+    "letter": "ا",
+    "letter_name": "الألف",
+    "forms": {
+      "isolated": "ا",
+      "initial": "ا",
+      "medial": "ـا",
+      "final": "ـا"
+    },
+    "sample_words": {
+      "initial": {
+        "word": "أسد",
+        "voweled": "أَسَدٌ",
+        "image_key": "lion",
+        "position": "start",
+        "syllables": [
+          "أَ",
+          "سَ",
+          "دٌ"
+        ]
+      },
+      "medial": {
+        "word": "باب",
+        "voweled": "بَابٌ",
+        "image_key": "door",
+        "position": "middle",
+        "syllables": [
+          "بَا",
+          "بٌ"
+        ]
+      },
+      "final": {
+        "word": "قمر",
+        "voweled": "قَمَرٌ",
+        "image_key": "moon",
+        "position": "end",
+        "syllables": [
+          "قَ",
+          "مَرٌ"
+        ]
+      }
+    },
+    "instruction": "وصّل كل شكل من أشكال حرف الألف بموضعه الصحيح",
+    "difficulty": 3
+  },
+  {
+    "type": "odd_one_out",
+    "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+    "target_letter": "ض",
+    "target_letter_name": "الضاد",
+    "odd_letter": "ص",
+    "odd_letter_name": "الصاد",
+    "items": [
+      {
+        "word": "صندوق",
+        "word_voweled": "صُنْدُوقٌ",
+        "image_key": "box",
+        "starts_with": "ص"
+      },
+      {
+        "word": "ضوء",
+        "word_voweled": "ضَوْءٌ",
+        "image_key": "light",
+        "starts_with": "ض"
+      },
+      {
+        "word": "ضفدع",
+        "word_voweled": "ضِفْدَعٌ",
+        "image_key": "frog",
+        "starts_with": "ض"
+      },
+      {
+        "word": "ضحية",
+        "word_voweled": "ضَحِيَّةٌ",
+        "image_key": "sacrifice",
+        "starts_with": "ض"
+      }
+    ],
+    "correct_odd_index": 0,
+    "correct_answer": "صندوق",
+    "instruction": "اختر الكلمة التي لا تبدأ بحرف الضاد",
+    "difficulty": 2
+  },
+  {
+    "type": "choose_haraka",
+    "type_ar": "اختر الحركة المناسبة",
+    "letter": "م",
+    "letter_name": "الميم",
+    "haraka_key": "fatha",
+    "haraka_name": "فتحة",
+    "haraka_symbol": "َ",
+    "word": "موز",
+    "word_voweled": "مَوْزٌ",
+    "image_key": "banana",
+    "choices": [
+      {
+        "key": "damma",
+        "name": "ضمة",
+        "symbol": "ُ"
+      },
+      {
+        "key": "fatha",
+        "name": "فتحة",
+        "symbol": "َ"
+      },
+      {
+        "key": "kasra",
+        "name": "كسرة",
+        "symbol": "ِ"
+      }
+    ],
+    "correct_answer": "fatha",
+    "instruction": "اختر الحركة المناسبة لحرف الميم في كلمة (مَوْزٌ)",
+    "difficulty": 2
+  },
+  {
+    "type": "matching_img_to_letter",
+    "type_ar": "صل الصورة بالحرف",
+    "letter": "ق",
+    "letter_name": "القاف",
+    "word": "قلم",
+    "word_voweled": "قَلَمٌ",
+    "image_key": "pen",
+    "correct_answer": "ق",
+    "choices": [
+      "ي",
+      "ظ",
+      "ق",
+      "و"
+    ],
+    "instruction": "صل الصورة بحرف القاف",
+    "difficulty": 2
+  },
+  {
+    "type": "choose_from_similar",
+    "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+    "base_form": "ط",
+    "choices": [
+      "ش",
+      "ظ",
+      "ط"
+    ],
+    "correct_answer": "ط",
+    "hint_word": "طبل",
+    "hint_word_voweled": "طَبْلٌ",
+    "hint_image": "drum",
+    "instruction": "انظر إلى الصورة (طبل) واختر الحرف المناسب لجسم الحرف (ط)",
+    "difficulty": 2
+  },
+  {
+    "type": "choose_haraka",
+    "type_ar": "اختر الحركة المناسبة",
+    "letter": "د",
+    "letter_name": "الدال",
+    "haraka_key": "fatha",
+    "haraka_name": "فتحة",
+    "haraka_symbol": "َ",
+    "word": "دجاجة",
+    "word_voweled": "دَجَاجَةٌ",
+    "image_key": "hen",
+    "choices": [
+      {
+        "key": "kasra",
+        "name": "كسرة",
+        "symbol": "ِ"
+      },
+      {
+        "key": "damma",
+        "name": "ضمة",
+        "symbol": "ُ"
+      },
+      {
+        "key": "fatha",
+        "name": "فتحة",
+        "symbol": "َ"
+      }
+    ],
+    "correct_answer": "fatha",
+    "instruction": "اختر الحركة المناسبة لحرف الدال في كلمة (دَجَاجَةٌ)",
+    "difficulty": 2
+  },
+  {
+    "type": "tracing",
+    "type_ar": "تتبع الحرف",
+    "letter": "ع",
+    "letter_name": "العين",
+    "position": "final",
+    "position_ar": "آخر الكلمة",
+    "display_form": "ـع",
+    "instruction": "تتبع حرف العين في موضع آخر الكلمة باتباع النقاط والأسهم",
+    "start_dot": true,
+    "arrows": true,
+    "practice_rows": 3,
+    "difficulty": 2
+  },
+  {
+    "type": "arrange_sentence",
+    "type_ar": "رتّب كلمات الجملة",
+    "scrambled_words": [
+      "جميلةٌ",
+      "الزهرةُ"
+    ],
+    "correct_order": [
+      "الزهرةُ",
+      "جميلةٌ"
+    ],
+    "full_sentence": "الزهرةُ جميلةٌ.",
+    "hint_image": "flower_pretty",
+    "unit": 2,
+    "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+    "difficulty": 2
+  },
+  {
+    "type": "tracing",
+    "type_ar": "تتبع الحرف",
+    "letter": "ح",
+    "letter_name": "الحاء",
+    "position": "medial",
+    "position_ar": "وسط الكلمة",
+    "display_form": "ـحـ",
+    "instruction": "تتبع حرف الحاء في موضع وسط الكلمة باتباع النقاط والأسهم",
+    "start_dot": true,
+    "arrows": true,
+    "practice_rows": 3,
+    "difficulty": 3
+  }
+]

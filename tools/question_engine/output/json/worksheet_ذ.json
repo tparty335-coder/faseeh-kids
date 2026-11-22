@@ -1,0 +1,516 @@
+{
+  "letter": "ذ",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ذ",
+      "instruction": "تتبع حرف الذال في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـذ",
+      "instruction": "تتبع حرف الذال في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "word": "ذهب",
+      "word_voweled": "ذَهَبٌ",
+      "image_key": "gold",
+      "correct_answer": "ذ",
+      "choices": [
+        "غ",
+        "ذ",
+        "ع",
+        "ر"
+      ],
+      "instruction": "صل الصورة بحرف الذال",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "word": "ذباب",
+      "word_voweled": "ذُبَابٌ",
+      "image_key": "fly",
+      "correct_answer": "ذ",
+      "choices": [
+        "غ",
+        "ح",
+        "خ",
+        "ذ"
+      ],
+      "instruction": "صل الصورة بحرف الذال",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "grid": [
+        "خ",
+        "د",
+        "ر",
+        "ل",
+        "ص",
+        "ح",
+        "ا",
+        "ذ",
+        "س",
+        "ر",
+        "ذ",
+        "ه",
+        "د",
+        "ذ",
+        "ذ",
+        "د",
+        "ذ",
+        "ي",
+        "س",
+        "ذ"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        7,
+        10,
+        13,
+        14,
+        16,
+        19
+      ],
+      "instruction": "ابحث عن حرف الذال ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "د"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "grid": [
+        "د",
+        "ه",
+        "د",
+        "ض",
+        "ذ",
+        "د",
+        "ق",
+        "ذ",
+        "ن",
+        "ز",
+        "ع",
+        "د",
+        "ظ",
+        "ذ",
+        "د",
+        "ظ",
+        "ذ",
+        "ذ",
+        "م",
+        "ص"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        4,
+        7,
+        13,
+        16,
+        17
+      ],
+      "instruction": "ابحث عن حرف الذال ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "د"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـذ",
+      "choices": [
+        "ـشـ",
+        "ذ",
+        "ـذ"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الذال في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "forms": {
+        "isolated": "ذ",
+        "initial": "ذ",
+        "medial": "ـذ",
+        "final": "ـذ"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ذهب",
+          "voweled": "ذَهَبٌ",
+          "image_key": "gold",
+          "position": "start",
+          "syllables": [
+            "ذَ",
+            "هَبٌ"
+          ]
+        },
+        "final": {
+          "word": "خبز",
+          "voweled": "خُبْزٌ",
+          "image_key": "bread",
+          "position": "end",
+          "syllables": [
+            "خُبْ",
+            "زٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الذال بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ذئب",
+      "word_voweled": "ذَئْبٌ",
+      "image_key": "wolf",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الذال في كلمة (ذَئْبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ذئب",
+      "word_voweled": "ذَئْبٌ",
+      "image_key": "wolf",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الذال في كلمة (ذَئْبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ذ",
+      "word": "تلفاذ",
+      "word_voweled": "تِلْفَازٌ",
+      "image_key": "tv",
+      "scrambled_letters": [
+        "ف",
+        "ذ",
+        "ت",
+        "ا",
+        "ل"
+      ],
+      "correct_order": [
+        "ت",
+        "ل",
+        "ف",
+        "ا",
+        "ذ"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ذ",
+      "word": "ذرة",
+      "word_voweled": "ذُرَةٌ",
+      "image_key": "corn",
+      "scrambled_letters": [
+        "ة",
+        "ر",
+        "ذ"
+      ],
+      "correct_order": [
+        "ذ",
+        "ر",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ذ",
+      "word": "تلفاذ",
+      "word_voweled": "تِلْفَازٌ",
+      "image_key": "tv",
+      "separated_letters": [
+        "ت",
+        "ل",
+        "ف",
+        "ا",
+        "ذ"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "تِلْفَازٌ",
+      "correct_word": "تلفاذ",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ذ",
+      "word": "تلفاذ",
+      "word_voweled": "تِلْفَازٌ",
+      "word_with_blank": "تِلْفَا_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ذ",
+      "hint_image": "tv",
+      "image_key": "tv",
+      "choices": [
+        "ك",
+        "ذ",
+        "د"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "word": "تلفاذ",
+      "word_voweled": "تِلْفَازٌ",
+      "word_with_blank": "تِلْفَا _",
+      "word_with_blank_plain": "تلفا _",
+      "correct_letter": "ذ",
+      "position_index": 4,
+      "hint_image": "tv",
+      "choices": [
+        "د",
+        "ي",
+        "ذ"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "word": "ذهب",
+      "word_voweled": "ذَهَبٌ",
+      "word_with_blank": "_ َهَبٌ",
+      "word_with_blank_plain": "_ هب",
+      "correct_letter": "ذ",
+      "hint_image": "gold",
+      "choices": [
+        "ق",
+        "ذ",
+        "د"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ذ",
+      "letter_name": "الذال",
+      "word": "خبز",
+      "word_voweled": "خُبْزٌ",
+      "image_key": "bread",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف الذال في كلمة (خبز)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ذ"
+      ],
+      "categories": {
+        "ذ": []
+      },
+      "items_to_sort": [
+        {
+          "word": "ذهب",
+          "word_voweled": "ذَهَبٌ",
+          "image_key": "gold",
+          "correct_letter": "ذ",
+          "correct_category": "ذ"
+        },
+        {
+          "word": "ذرة",
+          "word_voweled": "ذُرَةٌ",
+          "image_key": "corn",
+          "correct_letter": "ذ",
+          "correct_category": "ذ"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الذال)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ذ",
+        "ذ"
+      ],
+      "categories": {
+        "ذ": []
+      },
+      "target_letters": [
+        "ذ"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الذال)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ذ",
+        "ذ",
+        "ذ",
+        "ذ"
+      ],
+      "categories": {
+        "ذ": []
+      },
+      "target_letters": [
+        "ذ"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الذال)",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الشمسُ ____.",
+      "choices": [
+        "تشرقُ",
+        "الزهرةُ",
+        "الشمسُ"
+      ],
+      "correct_word": "تشرقُ",
+      "hint_image": "sun_rise",
+      "full_sentence": "الشمسُ تشرقُ.",
+      "unit": 2,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الذئبُ يعوي.",
+        "السمكةُ في البحر.",
+        "الزهرةُ جميلةٌ."
+      ],
+      "images": [
+        "flower_pretty",
+        "wolf_howl",
+        "fish_sea"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 2,
+        "2": 0
+      },
+      "unit": 2,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

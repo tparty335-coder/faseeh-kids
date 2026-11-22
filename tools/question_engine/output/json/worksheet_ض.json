@@ -1,0 +1,575 @@
+{
+  "letter": "ض",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـض",
+      "instruction": "تتبع حرف الضاد في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "ضـ",
+      "instruction": "تتبع حرف الضاد في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "word": "ضوء",
+      "word_voweled": "ضَوْءٌ",
+      "image_key": "light",
+      "correct_answer": "ض",
+      "choices": [
+        "س",
+        "ض",
+        "ب",
+        "ل"
+      ],
+      "instruction": "صل الصورة بحرف الضاد",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "word": "ضفدع",
+      "word_voweled": "ضِفْدَعٌ",
+      "image_key": "frog",
+      "correct_answer": "ض",
+      "choices": [
+        "ض",
+        "ي",
+        "ب",
+        "ر"
+      ],
+      "instruction": "صل الصورة بحرف الضاد",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "grid": [
+        "ز",
+        "ع",
+        "ض",
+        "ز",
+        "ت",
+        "ض",
+        "ط",
+        "ص",
+        "ض",
+        "ض",
+        "ع",
+        "س",
+        "و",
+        "ض",
+        "ر",
+        "م",
+        "ض",
+        "ي",
+        "ج",
+        "ص"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        2,
+        5,
+        8,
+        9,
+        13,
+        16
+      ],
+      "instruction": "ابحث عن حرف الضاد ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ص"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "grid": [
+        "ع",
+        "ض",
+        "ا",
+        "ذ",
+        "ز",
+        "ض",
+        "ا",
+        "ب",
+        "ض",
+        "خ",
+        "ج",
+        "ر",
+        "ث",
+        "ت",
+        "ل",
+        "ض",
+        "ط",
+        "ص",
+        "ض",
+        "و"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        1,
+        5,
+        8,
+        15,
+        18
+      ],
+      "instruction": "ابحث عن حرف الضاد ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ص"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "forms": {
+        "isolated": "ض",
+        "initial": "ضـ",
+        "medial": "ـضـ",
+        "final": "ـض"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ضفدع",
+          "voweled": "ضِفْدَعٌ",
+          "image_key": "frog",
+          "position": "start",
+          "syllables": [
+            "ضِفْ",
+            "دَعٌ"
+          ]
+        },
+        "medial": {
+          "word": "بيضة",
+          "voweled": "بَيْضَةٌ",
+          "image_key": "egg",
+          "position": "middle",
+          "syllables": [
+            "بَيْ",
+            "ضَةٌ"
+          ]
+        },
+        "final": {
+          "word": "مرض",
+          "voweled": "مَرَضٌ",
+          "image_key": "illness",
+          "position": "end",
+          "syllables": [
+            "مَ",
+            "رَضٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الضاد بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "forms": {
+        "isolated": "ض",
+        "initial": "ضـ",
+        "medial": "ـضـ",
+        "final": "ـض"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ضوء",
+          "voweled": "ضَوْءٌ",
+          "image_key": "light",
+          "position": "start",
+          "syllables": [
+            "ضَوْ",
+            "ءٌ"
+          ]
+        },
+        "medial": {
+          "word": "روضة",
+          "voweled": "رَوْضَةٌ",
+          "image_key": "garden",
+          "position": "middle",
+          "syllables": [
+            "رَوْ",
+            "ضَةٌ"
+          ]
+        },
+        "final": {
+          "word": "مرض",
+          "voweled": "مَرَضٌ",
+          "image_key": "illness",
+          "position": "end",
+          "syllables": [
+            "مَ",
+            "رَضٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الضاد بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ضفدع",
+      "word_voweled": "ضَفْدَعٌ",
+      "image_key": "frog",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الضاد في كلمة (ضَفْدَعٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ضفدع",
+      "word_voweled": "ضَفْدَعٌ",
+      "image_key": "frog",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الضاد في كلمة (ضَفْدَعٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ض",
+      "word": "أرض",
+      "word_voweled": "أَرْضٌ",
+      "image_key": "earth",
+      "scrambled_letters": [
+        "ض",
+        "أ",
+        "ر"
+      ],
+      "correct_order": [
+        "أ",
+        "ر",
+        "ض"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ض",
+      "word": "ضحية",
+      "word_voweled": "ضَحِيَّةٌ",
+      "image_key": "sacrifice",
+      "scrambled_letters": [
+        "ة",
+        "ح",
+        "ي",
+        "ض"
+      ],
+      "correct_order": [
+        "ض",
+        "ح",
+        "ي",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ض",
+      "word": "روضة",
+      "word_voweled": "رَوْضَةٌ",
+      "image_key": "garden",
+      "separated_letters": [
+        "ر",
+        "و",
+        "ض",
+        "ة"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "رَوْضَةٌ",
+      "correct_word": "روضة",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ض",
+      "word": "مرض",
+      "word_voweled": "مَرَضٌ",
+      "word_with_blank": "مَرَ_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ض",
+      "hint_image": "illness",
+      "image_key": "illness",
+      "choices": [
+        "ش",
+        "ص",
+        "ض"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "word": "أرض",
+      "word_voweled": "أَرْضٌ",
+      "word_with_blank": "أَرْ _",
+      "word_with_blank_plain": "أر _",
+      "correct_letter": "ض",
+      "position_index": 2,
+      "hint_image": "earth",
+      "choices": [
+        "غ",
+        "ص",
+        "ض"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "word": "ضحية",
+      "word_voweled": "ضَحِيَّةٌ",
+      "word_with_blank": "_ َحِيَّةٌ",
+      "word_with_blank_plain": "_ حية",
+      "correct_letter": "ض",
+      "hint_image": "sacrifice",
+      "choices": [
+        "ش",
+        "ص",
+        "ض"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ض",
+      "target_letter_name": "الضاد",
+      "odd_letter": "ص",
+      "odd_letter_name": "الصاد",
+      "items": [
+        {
+          "word": "ضفدع",
+          "word_voweled": "ضِفْدَعٌ",
+          "image_key": "frog",
+          "starts_with": "ض"
+        },
+        {
+          "word": "ضحية",
+          "word_voweled": "ضَحِيَّةٌ",
+          "image_key": "sacrifice",
+          "starts_with": "ض"
+        },
+        {
+          "word": "صحن",
+          "word_voweled": "صَحْنٌ",
+          "image_key": "plate",
+          "starts_with": "ص"
+        },
+        {
+          "word": "ضوء",
+          "word_voweled": "ضَوْءٌ",
+          "image_key": "light",
+          "starts_with": "ض"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "صحن",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الضاد",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ض",
+      "target_letter_name": "الضاد",
+      "odd_letter": "ص",
+      "odd_letter_name": "الصاد",
+      "items": [
+        {
+          "word": "ضحية",
+          "word_voweled": "ضَحِيَّةٌ",
+          "image_key": "sacrifice",
+          "starts_with": "ض"
+        },
+        {
+          "word": "ضفدع",
+          "word_voweled": "ضِفْدَعٌ",
+          "image_key": "frog",
+          "starts_with": "ض"
+        },
+        {
+          "word": "صقر",
+          "word_voweled": "صَقْرٌ",
+          "image_key": "falcon",
+          "starts_with": "ص"
+        },
+        {
+          "word": "ضوء",
+          "word_voweled": "ضَوْءٌ",
+          "image_key": "light",
+          "starts_with": "ض"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "صقر",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الضاد",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ض",
+        "ض",
+        "ض"
+      ],
+      "categories": {
+        "ض": []
+      },
+      "target_letters": [
+        "ض"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الضاد)",
+      "difficulty": 1
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ض",
+      "letter_name": "الضاد",
+      "base_without_dots": "ص",
+      "correct_dot_count": 1,
+      "correct_dot_position": "above",
+      "correct_dot_position_ar": "فوق",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الضاد",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "القردُ ____.",
+      "choices": [
+        "يقفزُ",
+        "الطائرُ",
+        "يتسلقُ"
+      ],
+      "correct_word": "يتسلقُ",
+      "hint_image": "monkey_climb",
+      "full_sentence": "القردُ يتسلقُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الضفدعُ يقفزُ.",
+        "الفيلُ ضخمٌ.",
+        "الطائرُ يطيرُ."
+      ],
+      "images": [
+        "bird_fly",
+        "big_elephant",
+        "frog_jump"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "unit": 3,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

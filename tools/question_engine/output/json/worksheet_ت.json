@@ -1,0 +1,538 @@
+{
+  "letter": "ت",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "تـ",
+      "instruction": "تتبع حرف التاء في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ت",
+      "instruction": "تتبع حرف التاء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "word": "تلميذ",
+      "word_voweled": "تِلْمِيذٌ",
+      "image_key": "student",
+      "correct_answer": "ت",
+      "choices": [
+        "ت",
+        "ث",
+        "ش",
+        "ب"
+      ],
+      "instruction": "صل الصورة بحرف التاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "image_key": "apple",
+      "correct_answer": "ت",
+      "choices": [
+        "غ",
+        "م",
+        "ذ",
+        "ت"
+      ],
+      "instruction": "صل الصورة بحرف التاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "grid": [
+        "ت",
+        "ث",
+        "ب",
+        "ت",
+        "ق",
+        "ح",
+        "ه",
+        "ف",
+        "ز",
+        "ت",
+        "د",
+        "ب",
+        "ث",
+        "ص",
+        "ت",
+        "م",
+        "ت",
+        "م",
+        "ذ",
+        "ش"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        0,
+        3,
+        9,
+        14,
+        16
+      ],
+      "instruction": "ابحث عن حرف التاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ث",
+        "ن"
+      ],
+      "difficulty": 4
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "grid": [
+        "ق",
+        "ث",
+        "غ",
+        "ب",
+        "ز",
+        "ع",
+        "ن",
+        "ه",
+        "د",
+        "ت",
+        "ه",
+        "د",
+        "ن",
+        "ن",
+        "ت",
+        "ن",
+        "ت",
+        "ث",
+        "ل",
+        "ت"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        9,
+        14,
+        16,
+        19
+      ],
+      "instruction": "ابحث عن حرف التاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ث",
+        "ن"
+      ],
+      "difficulty": 4
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "ت",
+      "choices": [
+        "ـت",
+        "ـتـ",
+        "ت"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف التاء في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "forms": {
+        "isolated": "ت",
+        "initial": "تـ",
+        "medial": "ـتـ",
+        "final": "ـت"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "تلميذ",
+          "voweled": "تِلْمِيذٌ",
+          "image_key": "student",
+          "position": "start",
+          "syllables": [
+            "تِلْ",
+            "مِي",
+            "ذٌ"
+          ]
+        },
+        "medial": {
+          "word": "كتاب",
+          "voweled": "كِتَابٌ",
+          "image_key": "book",
+          "position": "middle",
+          "syllables": [
+            "كِ",
+            "تَا",
+            "بٌ"
+          ]
+        },
+        "final": {
+          "word": "بيت",
+          "voweled": "بَيْتٌ",
+          "image_key": "house",
+          "position": "end",
+          "syllables": [
+            "بَيْ",
+            "تٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف التاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "image_key": "apple",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف التاء في كلمة (تُفَّاحَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "image_key": "apple",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف التاء في كلمة (تُفَّاحَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ت",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "image_key": "apple",
+      "scrambled_letters": [
+        "ح",
+        "ت",
+        "ا",
+        "ة",
+        "ف"
+      ],
+      "correct_order": [
+        "ت",
+        "ف",
+        "ا",
+        "ح",
+        "ة"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ت",
+      "word": "تمساح",
+      "word_voweled": "تِمْسَاحٌ",
+      "image_key": "crocodile",
+      "scrambled_letters": [
+        "س",
+        "ا",
+        "م",
+        "ح",
+        "ت"
+      ],
+      "correct_order": [
+        "ت",
+        "م",
+        "س",
+        "ا",
+        "ح"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ت",
+      "word": "تفاحة",
+      "word_voweled": "تُفَّاحَةٌ",
+      "image_key": "apple",
+      "separated_letters": [
+        "ت",
+        "ف",
+        "ا",
+        "ح",
+        "ة"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "تُفَّاحَةٌ",
+      "correct_word": "تفاحة",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ت",
+      "word": "كتاب",
+      "word_voweled": "كِتَابٌ",
+      "image_key": "book",
+      "separated_letters": [
+        "ك",
+        "ت",
+        "ا",
+        "ب"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "كِتَابٌ",
+      "correct_word": "كتاب",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "word": "توت",
+      "word_voweled": "تُوتٌ",
+      "word_with_blank": "_ ُوتٌ",
+      "word_with_blank_plain": "_ وت",
+      "correct_letter": "ت",
+      "hint_image": "mulberry",
+      "choices": [
+        "ن",
+        "ب",
+        "ت"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "word": "طاولة",
+      "word_voweled": "طَاوِلَةٌ",
+      "word_with_blank": "طَا _ ِلَةٌ",
+      "word_with_blank_plain": "طا _ لة",
+      "correct_letter": "ت",
+      "position_index": 2,
+      "hint_image": "table",
+      "choices": [
+        "ث",
+        "ت",
+        "ب"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "word": "صوت",
+      "word_voweled": "صَوْتٌ",
+      "image_key": "sound",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف التاء في كلمة (صوت)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ت",
+      "target_letter_name": "التاء",
+      "odd_letter": "ب",
+      "odd_letter_name": "الباء",
+      "items": [
+        {
+          "word": "بقرة",
+          "word_voweled": "بَقَرَةٌ",
+          "image_key": "cow",
+          "starts_with": "ب"
+        },
+        {
+          "word": "تلميذ",
+          "word_voweled": "تِلْمِيذٌ",
+          "image_key": "student",
+          "starts_with": "ت"
+        },
+        {
+          "word": "توت",
+          "word_voweled": "تُوتٌ",
+          "image_key": "mulberry",
+          "starts_with": "ت"
+        },
+        {
+          "word": "تفاحة",
+          "word_voweled": "تُفَّاحَةٌ",
+          "image_key": "apple",
+          "starts_with": "ت"
+        }
+      ],
+      "correct_odd_index": 0,
+      "correct_answer": "بقرة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف التاء",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ت",
+      "letter_name": "التاء",
+      "base_without_dots": "ٮ",
+      "correct_dot_count": 2,
+      "correct_dot_position": "above",
+      "correct_dot_position_ar": "فوق",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف التاء",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ٮ",
+      "choices": [
+        "ت",
+        "ب",
+        "ث"
+      ],
+      "correct_answer": "ت",
+      "hint_word": "تمساح",
+      "hint_word_voweled": "تِمْسَاحٌ",
+      "hint_image": "crocodile",
+      "instruction": "انظر إلى الصورة (تمساح) واختر الحرف المناسب لجسم الحرف (ٮ)",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يركضُ",
+        "الحصانُ"
+      ],
+      "correct_order": [
+        "الحصانُ",
+        "يركضُ"
+      ],
+      "full_sentence": "الحصانُ يركضُ.",
+      "hint_image": "horse_run",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الجملُ في الصحراء.",
+        "البطةُ تسبحُ.",
+        "الأسدُ كبيرٌ."
+      ],
+      "images": [
+        "big_lion",
+        "camel_desert",
+        "duck_swim"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 2,
+        "2": 0
+      },
+      "unit": 1,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

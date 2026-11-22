@@ -1,0 +1,529 @@
+{
+  "letter": "ل",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـل",
+      "instruction": "تتبع حرف اللام في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـلـ",
+      "instruction": "تتبع حرف اللام في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "word": "لبن",
+      "word_voweled": "لَبَنٌ",
+      "image_key": "milk",
+      "correct_answer": "ل",
+      "choices": [
+        "ط",
+        "و",
+        "ك",
+        "ل"
+      ],
+      "instruction": "صل الصورة بحرف اللام",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "word": "ليمون",
+      "word_voweled": "لَيْمُونٌ",
+      "image_key": "lemon",
+      "correct_answer": "ل",
+      "choices": [
+        "ل",
+        "ن",
+        "س",
+        "د"
+      ],
+      "instruction": "صل الصورة بحرف اللام",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "grid": [
+        "ه",
+        "ا",
+        "ف",
+        "ل",
+        "ا",
+        "ل",
+        "ل",
+        "ك",
+        "ج",
+        "ي",
+        "د",
+        "ل",
+        "ل",
+        "د",
+        "ا",
+        "ف",
+        "ف",
+        "ا",
+        "ق",
+        "ل"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        3,
+        5,
+        6,
+        11,
+        12,
+        19
+      ],
+      "instruction": "ابحث عن حرف اللام ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ك",
+        "ا"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "grid": [
+        "ا",
+        "ل",
+        "غ",
+        "ا",
+        "ط",
+        "ك",
+        "ب",
+        "م",
+        "ش",
+        "ل",
+        "د",
+        "ا",
+        "ل",
+        "ل",
+        "ل",
+        "ك",
+        "ث",
+        "ح",
+        "و",
+        "ي"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        1,
+        9,
+        12,
+        13,
+        14
+      ],
+      "instruction": "ابحث عن حرف اللام ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ك",
+        "ا"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "لـ",
+      "choices": [
+        "لـ",
+        "ـلـ",
+        "ل"
+      ],
+      "example_word": "لبن",
+      "example_image": "milk",
+      "instruction": "اختر الشكل الصحيح لحرف اللام في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "forms": {
+        "isolated": "ل",
+        "initial": "لـ",
+        "medial": "ـلـ",
+        "final": "ـل"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "لبن",
+          "voweled": "لَبَنٌ",
+          "image_key": "milk",
+          "position": "start",
+          "syllables": [
+            "لَ",
+            "بَنٌ"
+          ]
+        },
+        "medial": {
+          "word": "قلم",
+          "voweled": "قَلَمٌ",
+          "image_key": "pen",
+          "position": "middle",
+          "syllables": [
+            "قَ",
+            "لَمٌ"
+          ]
+        },
+        "final": {
+          "word": "نمل",
+          "voweled": "نَمْلٌ",
+          "image_key": "ant",
+          "position": "end",
+          "syllables": [
+            "نَمْ",
+            "لٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف اللام بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "لبن",
+      "word_voweled": "لَبَنٌ",
+      "image_key": "milk",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف اللام في كلمة (لَبَنٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "لبن",
+      "word_voweled": "لَبَنٌ",
+      "image_key": "milk",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف اللام في كلمة (لَبَنٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ل",
+      "word": "جبل",
+      "word_voweled": "جَبَلٌ",
+      "image_key": "mountain",
+      "scrambled_letters": [
+        "ب",
+        "ج",
+        "ل"
+      ],
+      "correct_order": [
+        "ج",
+        "ب",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ل",
+      "word": "ليمون",
+      "word_voweled": "لَيْمُونٌ",
+      "image_key": "lemon",
+      "scrambled_letters": [
+        "ن",
+        "و",
+        "م",
+        "ل",
+        "ي"
+      ],
+      "correct_order": [
+        "ل",
+        "ي",
+        "م",
+        "و",
+        "ن"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 3
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ل",
+      "word": "ليمون",
+      "word_voweled": "لَيْمُونٌ",
+      "word_with_blank": "_َيْمُونٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ل",
+      "hint_image": "lemon",
+      "image_key": "lemon",
+      "choices": [
+        "ا",
+        "ل",
+        "ك"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ل",
+      "word": "قلم",
+      "word_voweled": "قَلَمٌ",
+      "word_with_blank": "قَ_َمٌ",
+      "blank_position": "middle",
+      "blank_position_ar": "وسط",
+      "correct_letter": "ل",
+      "hint_image": "pen",
+      "image_key": "pen",
+      "choices": [
+        "ا",
+        "ل",
+        "ك"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "word": "عسل",
+      "word_voweled": "عَسَلٌ",
+      "word_with_blank": "عَسَ _",
+      "word_with_blank_plain": "عس _",
+      "correct_letter": "ل",
+      "position_index": 2,
+      "hint_image": "honey",
+      "choices": [
+        "ا",
+        "ل",
+        "ك"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "word": "قلم",
+      "word_voweled": "قَلَمٌ",
+      "word_with_blank": "قَ _ َمٌ",
+      "word_with_blank_plain": "ق _ م",
+      "correct_letter": "ل",
+      "position_index": 1,
+      "hint_image": "pen",
+      "choices": [
+        "ل",
+        "ا",
+        "ك"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "word": "جبل",
+      "word_voweled": "جَبَلٌ",
+      "image_key": "mountain",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف اللام في كلمة (جبل)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ل",
+      "target_letter_name": "اللام",
+      "odd_letter": "ا",
+      "odd_letter_name": "الألف",
+      "items": [
+        {
+          "word": "لؤلؤ",
+          "word_voweled": "لُؤْلُؤٌ",
+          "image_key": "pearl",
+          "starts_with": "ل"
+        },
+        {
+          "word": "لبن",
+          "word_voweled": "لَبَنٌ",
+          "image_key": "milk",
+          "starts_with": "ل"
+        },
+        {
+          "word": "لعبة",
+          "word_voweled": "لُعْبَةٌ",
+          "image_key": "toy",
+          "starts_with": "ل"
+        },
+        {
+          "word": "أفعى",
+          "word_voweled": "أَفْعَى",
+          "image_key": "snake",
+          "starts_with": "ا"
+        }
+      ],
+      "correct_odd_index": 3,
+      "correct_answer": "أفعى",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف اللام",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "base_without_dots": "ل",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف اللام",
+      "difficulty": 1
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ل",
+      "letter_name": "اللام",
+      "base_without_dots": "ل",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف اللام",
+      "difficulty": 1
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الياسمينُ عطرٌ.",
+        "الكلبُ يلعبُ.",
+        "الموزُ أصفرُ."
+      ],
+      "images": [
+        "dog_play",
+        "yellow_banana",
+        "jasmine_scent"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يلعبُ.",
+      "choices": [
+        "حامضٌ",
+        "الليمونُ",
+        "الكلبُ"
+      ],
+      "correct_word": "الكلبُ",
+      "hint_image": "dog_play",
+      "full_sentence": "الكلبُ يلعبُ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

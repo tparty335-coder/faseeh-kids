@@ -1,0 +1,541 @@
+{
+  "letter": "ع",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ع",
+      "letter_name": "العين",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ع",
+      "instruction": "تتبع حرف العين في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ع",
+      "letter_name": "العين",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـع",
+      "instruction": "تتبع حرف العين في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ع",
+      "letter_name": "العين",
+      "word": "عنب",
+      "word_voweled": "عِنَبٌ",
+      "image_key": "grapes",
+      "correct_answer": "ع",
+      "choices": [
+        "ق",
+        "ع",
+        "غ",
+        "ن"
+      ],
+      "instruction": "صل الصورة بحرف العين",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ع",
+      "letter_name": "العين",
+      "word": "عصفور",
+      "word_voweled": "عُصْفُورٌ",
+      "image_key": "sparrow",
+      "correct_answer": "ع",
+      "choices": [
+        "ح",
+        "ل",
+        "ع",
+        "ث"
+      ],
+      "instruction": "صل الصورة بحرف العين",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ع",
+      "letter_name": "العين",
+      "grid": [
+        "ع",
+        "ي",
+        "ق",
+        "ق",
+        "ج",
+        "ك",
+        "ت",
+        "ظ",
+        "د",
+        "ش",
+        "ذ",
+        "ث",
+        "ص",
+        "غ",
+        "د",
+        "س",
+        "ذ",
+        "ع",
+        "ع",
+        "ع"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        17,
+        18,
+        19
+      ],
+      "instruction": "ابحث عن حرف العين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "غ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ع",
+      "letter_name": "العين",
+      "grid": [
+        "ش",
+        "ك",
+        "ج",
+        "ك",
+        "ف",
+        "ك",
+        "ا",
+        "ز",
+        "ا",
+        "ع",
+        "ع",
+        "ض",
+        "ع",
+        "ف",
+        "ذ",
+        "ت",
+        "غ",
+        "ف",
+        "ع",
+        "ب"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        9,
+        10,
+        12,
+        18
+      ],
+      "instruction": "ابحث عن حرف العين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "غ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ع",
+      "letter_name": "العين",
+      "forms": {
+        "isolated": "ع",
+        "initial": "عـ",
+        "medial": "ـعـ",
+        "final": "ـع"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "عنب",
+          "voweled": "عِنَبٌ",
+          "image_key": "grapes",
+          "position": "start",
+          "syllables": [
+            "عِ",
+            "نَبٌ"
+          ]
+        },
+        "medial": {
+          "word": "معلم",
+          "voweled": "مُعَلِّمٌ",
+          "image_key": "teacher",
+          "position": "middle",
+          "syllables": [
+            "مُ",
+            "عَلْ",
+            "لِمٌ"
+          ]
+        },
+        "final": {
+          "word": "ربيع",
+          "voweled": "رَبِيعٌ",
+          "image_key": "spring",
+          "position": "end",
+          "syllables": [
+            "رَ",
+            "بِيعٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف العين بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ع",
+      "letter_name": "العين",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـعـ",
+      "choices": [
+        "عـ",
+        "ـعـ",
+        "ـع"
+      ],
+      "example_word": "معلم",
+      "example_image": "teacher",
+      "instruction": "اختر الشكل الصحيح لحرف العين في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ع",
+      "letter_name": "العين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "عصفور",
+      "word_voweled": "عَصْفُورٌ",
+      "image_key": "sparrow",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف العين في كلمة (عَصْفُورٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ع",
+      "letter_name": "العين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "عصفور",
+      "word_voweled": "عَصْفُورٌ",
+      "image_key": "sparrow",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف العين في كلمة (عَصْفُورٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ع",
+      "word": "جامع",
+      "word_voweled": "جَامِعٌ",
+      "image_key": "mosque2",
+      "scrambled_letters": [
+        "ع",
+        "ج",
+        "م",
+        "ا"
+      ],
+      "correct_order": [
+        "ج",
+        "ا",
+        "م",
+        "ع"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ع",
+      "word": "جامع",
+      "word_voweled": "جَامِعٌ",
+      "image_key": "mosque2",
+      "scrambled_letters": [
+        "ج",
+        "م",
+        "ع",
+        "ا"
+      ],
+      "correct_order": [
+        "ج",
+        "ا",
+        "م",
+        "ع"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ع",
+      "word": "عقرب",
+      "word_voweled": "عَقْرَبٌ",
+      "image_key": "scorpion",
+      "separated_letters": [
+        "ع",
+        "ق",
+        "ر",
+        "ب"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "عَقْرَبٌ",
+      "correct_word": "عقرب",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ع",
+      "word": "ربيع",
+      "word_voweled": "رَبِيعٌ",
+      "word_with_blank": "رَبِي_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ع",
+      "hint_image": "spring",
+      "image_key": "spring",
+      "choices": [
+        "و",
+        "غ",
+        "ع"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ع",
+      "letter_name": "العين",
+      "word": "ربيع",
+      "word_voweled": "رَبِيعٌ",
+      "word_with_blank": "رَبِي _",
+      "word_with_blank_plain": "ربي _",
+      "correct_letter": "ع",
+      "position_index": 3,
+      "hint_image": "spring",
+      "choices": [
+        "و",
+        "غ",
+        "ع"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ع",
+      "letter_name": "العين",
+      "word": "عروس",
+      "word_voweled": "عَرُوسٌ",
+      "word_with_blank": "_ َرُوسٌ",
+      "word_with_blank_plain": "_ روس",
+      "correct_letter": "ع",
+      "hint_image": "bride",
+      "choices": [
+        "ع",
+        "غ",
+        "ث"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ع",
+      "target_letter_name": "العين",
+      "odd_letter": "غ",
+      "odd_letter_name": "الغين",
+      "items": [
+        {
+          "word": "عنب",
+          "word_voweled": "عِنَبٌ",
+          "image_key": "grapes",
+          "starts_with": "ع"
+        },
+        {
+          "word": "غراب",
+          "word_voweled": "غُرَابٌ",
+          "image_key": "crow",
+          "starts_with": "غ"
+        },
+        {
+          "word": "عروس",
+          "word_voweled": "عَرُوسٌ",
+          "image_key": "bride",
+          "starts_with": "ع"
+        },
+        {
+          "word": "عقرب",
+          "word_voweled": "عَقْرَبٌ",
+          "image_key": "scorpion",
+          "starts_with": "ع"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "غراب",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف العين",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ع"
+      ],
+      "categories": {
+        "ع": []
+      },
+      "items_to_sort": [
+        {
+          "word": "عقرب",
+          "word_voweled": "عَقْرَبٌ",
+          "image_key": "scorpion",
+          "correct_letter": "ع",
+          "correct_category": "ع"
+        },
+        {
+          "word": "عنب",
+          "word_voweled": "عِنَبٌ",
+          "image_key": "grapes",
+          "correct_letter": "ع",
+          "correct_category": "ع"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (العين)",
+      "difficulty": 1
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ع",
+      "letter_name": "العين",
+      "base_without_dots": "ع",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف العين",
+      "difficulty": 1
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ع",
+      "letter_b": "غ",
+      "letter_a_name": "العين",
+      "letter_b_name": "الغين",
+      "difference_ar": "العين ليس له نقاط، والغين لها نقطة فوق",
+      "choices": [
+        "غ",
+        "ع"
+      ],
+      "instruction": "ما الفرق بين حرفي العين والغين؟",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الطائرُ يطيرُ.",
+        "الضفدعُ يقفزُ.",
+        "الفيلُ ضخمٌ."
+      ],
+      "images": [
+        "frog_jump",
+        "big_elephant",
+        "bird_fly"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      },
+      "unit": 3,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "القردُ يتسلقُ.",
+        "الضفدعُ يقفزُ.",
+        "الطائرُ يطيرُ."
+      ],
+      "images": [
+        "bird_fly",
+        "frog_jump",
+        "monkey_climb"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "unit": 3,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

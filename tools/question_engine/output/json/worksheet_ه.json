@@ -1,0 +1,540 @@
+{
+  "letter": "ه",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـهـ",
+      "instruction": "تتبع حرف الهاء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـهـ",
+      "instruction": "تتبع حرف الهاء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "word": "هرة",
+      "word_voweled": "هِرَّةٌ",
+      "image_key": "cat_f",
+      "correct_answer": "ه",
+      "choices": [
+        "ظ",
+        "ه",
+        "ي",
+        "ذ"
+      ],
+      "instruction": "صل الصورة بحرف الهاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "word": "هلال",
+      "word_voweled": "هِلَالٌ",
+      "image_key": "crescent",
+      "correct_answer": "ه",
+      "choices": [
+        "ن",
+        "ا",
+        "ظ",
+        "ه"
+      ],
+      "instruction": "صل الصورة بحرف الهاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "grid": [
+        "ه",
+        "ص",
+        "ت",
+        "ن",
+        "ز",
+        "ن",
+        "ت",
+        "غ",
+        "ه",
+        "ر",
+        "ه",
+        "ه",
+        "خ",
+        "ه",
+        "ظ",
+        "ر",
+        "ق",
+        "م",
+        "ت",
+        "ق"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        0,
+        8,
+        10,
+        11,
+        13
+      ],
+      "instruction": "ابحث عن حرف الهاء ولوّنه بلونك المفضل",
+      "similar_distractors": [],
+      "difficulty": 1
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "grid": [
+        "ه",
+        "ذ",
+        "س",
+        "ا",
+        "ع",
+        "ه",
+        "ذ",
+        "ه",
+        "ض",
+        "غ",
+        "س",
+        "غ",
+        "ه",
+        "ه",
+        "ه",
+        "خ",
+        "ث",
+        "ت",
+        "ا",
+        "د"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        0,
+        5,
+        7,
+        12,
+        13,
+        14
+      ],
+      "instruction": "ابحث عن حرف الهاء ولوّنه بلونك المفضل",
+      "similar_distractors": [],
+      "difficulty": 1
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "forms": {
+        "isolated": "ه",
+        "initial": "هـ",
+        "medial": "ـهـ",
+        "final": "ـه"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "هلال",
+          "voweled": "هِلَالٌ",
+          "image_key": "crescent",
+          "position": "start",
+          "syllables": [
+            "هِ",
+            "لَا",
+            "لٌ"
+          ]
+        },
+        "medial": {
+          "word": "نبات",
+          "voweled": "نَبَاتٌ",
+          "image_key": "plant",
+          "position": "middle",
+          "syllables": [
+            "نَ",
+            "بَا",
+            "تٌ"
+          ]
+        },
+        "final": {
+          "word": "مدينة",
+          "voweled": "مَدِينَةٌ",
+          "image_key": "city",
+          "position": "end",
+          "syllables": [
+            "مَ",
+            "دِي",
+            "نَةٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الهاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "position": "final_disconnected",
+      "position_ar": "آخر الكلمة (منفصل)",
+      "correct_form": "ـة",
+      "choices": [
+        "ـه",
+        "ـة",
+        "ه"
+      ],
+      "example_word": "وجه",
+      "example_image": "face",
+      "instruction": "اختر الشكل الصحيح لحرف الهاء في آخر الكلمة (منفصل)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "هدية",
+      "word_voweled": "هَدِيَّةٌ",
+      "image_key": "gift",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الهاء في كلمة (هَدِيَّةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "هدية",
+      "word_voweled": "هَدِيَّةٌ",
+      "image_key": "gift",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الهاء في كلمة (هَدِيَّةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ه",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "image_key": "face",
+      "scrambled_letters": [
+        "ج",
+        "و",
+        "ه"
+      ],
+      "correct_order": [
+        "و",
+        "ج",
+        "ه"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ه",
+      "word": "هلال",
+      "word_voweled": "هِلَالٌ",
+      "image_key": "crescent",
+      "scrambled_letters": [
+        "ا",
+        "ه",
+        "ل",
+        "ل"
+      ],
+      "correct_order": [
+        "ه",
+        "ل",
+        "ا",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ه",
+      "word": "هلال",
+      "word_voweled": "هِلَالٌ",
+      "image_key": "crescent",
+      "letters_given": [
+        "ه",
+        "خ",
+        "ص",
+        "ل",
+        "ا",
+        "ل"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "هلال",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ه",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "image_key": "face",
+      "separated_letters": [
+        "و",
+        "ج",
+        "ه"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "وَجْهٌ",
+      "correct_word": "وجه",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "word": "هلال",
+      "word_voweled": "هِلَالٌ",
+      "word_with_blank": "_ ِلَالٌ",
+      "word_with_blank_plain": "_ لال",
+      "correct_letter": "ه",
+      "hint_image": "crescent",
+      "choices": [
+        "ذ",
+        "ه",
+        "س"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ه",
+      "letter_name": "الهاء",
+      "word": "هرة",
+      "word_voweled": "هِرَّةٌ",
+      "word_with_blank": "_ ِرَّةٌ",
+      "word_with_blank_plain": "_ رة",
+      "correct_letter": "ه",
+      "hint_image": "cat_f",
+      "choices": [
+        "و",
+        "ه",
+        "م"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ه",
+      "target_letter_name": "الهاء",
+      "odd_letter": "ر",
+      "odd_letter_name": "الراء",
+      "items": [
+        {
+          "word": "هلال",
+          "word_voweled": "هِلَالٌ",
+          "image_key": "crescent",
+          "starts_with": "ه"
+        },
+        {
+          "word": "هرة",
+          "word_voweled": "هِرَّةٌ",
+          "image_key": "cat_f",
+          "starts_with": "ه"
+        },
+        {
+          "word": "هاتف",
+          "word_voweled": "هَاتِفٌ",
+          "image_key": "phone",
+          "starts_with": "ه"
+        },
+        {
+          "word": "ربة",
+          "word_voweled": "رَبَّةٌ",
+          "image_key": "rabbit_f",
+          "starts_with": "ر"
+        }
+      ],
+      "correct_odd_index": 3,
+      "correct_answer": "ربة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الهاء",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ه"
+      ],
+      "categories": {
+        "ه": []
+      },
+      "items_to_sort": [
+        {
+          "word": "هرة",
+          "word_voweled": "هِرَّةٌ",
+          "image_key": "cat_f",
+          "correct_letter": "ه",
+          "correct_category": "ه"
+        },
+        {
+          "word": "هلال",
+          "word_voweled": "هِلَالٌ",
+          "image_key": "crescent",
+          "correct_letter": "ه",
+          "correct_category": "ه"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الهاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ه",
+        "ه",
+        "ه"
+      ],
+      "categories": {
+        "ه": []
+      },
+      "target_letters": [
+        "ه"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الهاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ه",
+        "ه",
+        "ه",
+        "ه"
+      ],
+      "categories": {
+        "ه": []
+      },
+      "target_letters": [
+        "ه"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الهاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الموزُ أصفرُ.",
+        "الكلبُ يلعبُ.",
+        "الياسمينُ عطرٌ."
+      ],
+      "images": [
+        "dog_play",
+        "jasmine_scent",
+        "yellow_banana"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ أصفرُ.",
+      "choices": [
+        "الليمونُ",
+        "الموزُ",
+        "الياسمينُ"
+      ],
+      "correct_word": "الموزُ",
+      "hint_image": "yellow_banana",
+      "full_sentence": "الموزُ أصفرُ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

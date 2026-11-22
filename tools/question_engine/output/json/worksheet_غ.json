@@ -1,0 +1,489 @@
+{
+  "letter": "غ",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "غـ",
+      "instruction": "تتبع حرف الغين في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـغ",
+      "instruction": "تتبع حرف الغين في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "word": "غراب",
+      "word_voweled": "غُرَابٌ",
+      "image_key": "crow",
+      "correct_answer": "غ",
+      "choices": [
+        "ر",
+        "ب",
+        "غ",
+        "ي"
+      ],
+      "instruction": "صل الصورة بحرف الغين",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "word": "غزال",
+      "word_voweled": "غَزَالٌ",
+      "image_key": "gazelle2",
+      "correct_answer": "غ",
+      "choices": [
+        "غ",
+        "ط",
+        "ش",
+        "ث"
+      ],
+      "instruction": "صل الصورة بحرف الغين",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "grid": [
+        "ع",
+        "د",
+        "ط",
+        "ه",
+        "ح",
+        "غ",
+        "ش",
+        "غ",
+        "ع",
+        "غ",
+        "ك",
+        "غ",
+        "خ",
+        "س",
+        "غ",
+        "غ",
+        "ع",
+        "ع",
+        "ع",
+        "ر"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        5,
+        7,
+        9,
+        11,
+        14,
+        15
+      ],
+      "instruction": "ابحث عن حرف الغين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ع"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "grid": [
+        "ت",
+        "د",
+        "ث",
+        "ط",
+        "د",
+        "غ",
+        "غ",
+        "ه",
+        "ع",
+        "ت",
+        "ف",
+        "غ",
+        "غ",
+        "خ",
+        "ث",
+        "غ",
+        "ل",
+        "ج",
+        "و",
+        "ي"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        5,
+        6,
+        11,
+        12,
+        15
+      ],
+      "instruction": "ابحث عن حرف الغين ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ع"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـغـ",
+      "choices": [
+        "ـغـ",
+        "غ",
+        "غـ"
+      ],
+      "example_word": "مغارة",
+      "example_image": "cave",
+      "instruction": "اختر الشكل الصحيح لحرف الغين في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "غـ",
+      "choices": [
+        "غـ",
+        "ـغ",
+        "ـغـ"
+      ],
+      "example_word": "غزال",
+      "example_image": "gazelle2",
+      "instruction": "اختر الشكل الصحيح لحرف الغين في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "غزال",
+      "word_voweled": "غَزَالٌ",
+      "image_key": "gazelle2",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الغين في كلمة (غَزَالٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "غزال",
+      "word_voweled": "غَزَالٌ",
+      "image_key": "gazelle2",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الغين في كلمة (غَزَالٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "غ",
+      "word": "دماغ",
+      "word_voweled": "دِمَاغٌ",
+      "image_key": "brain",
+      "scrambled_letters": [
+        "د",
+        "غ",
+        "م",
+        "ا"
+      ],
+      "correct_order": [
+        "د",
+        "م",
+        "ا",
+        "غ"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "غ",
+      "word": "غزال",
+      "word_voweled": "غَزَالٌ",
+      "image_key": "gazelle2",
+      "scrambled_letters": [
+        "ز",
+        "ا",
+        "ل",
+        "غ"
+      ],
+      "correct_order": [
+        "غ",
+        "ز",
+        "ا",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "غ",
+      "word": "غراب",
+      "word_voweled": "غُرَابٌ",
+      "image_key": "crow",
+      "separated_letters": [
+        "غ",
+        "ر",
+        "ا",
+        "ب"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "غُرَابٌ",
+      "correct_word": "غراب",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "غ",
+      "word": "دماغ",
+      "word_voweled": "دِمَاغٌ",
+      "word_with_blank": "دِمَا_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "غ",
+      "hint_image": "brain",
+      "image_key": "brain",
+      "choices": [
+        "ع",
+        "ض",
+        "غ"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "word": "فراغ",
+      "word_voweled": "فَرَاغٌ",
+      "word_with_blank": "فَرَا _",
+      "word_with_blank_plain": "فرا _",
+      "correct_letter": "غ",
+      "position_index": 3,
+      "hint_image": "space",
+      "choices": [
+        "ع",
+        "ص",
+        "غ"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "word": "مغارة",
+      "word_voweled": "مَغَارَةٌ",
+      "word_with_blank": "مَ _ َارَةٌ",
+      "word_with_blank_plain": "م _ ارة",
+      "correct_letter": "غ",
+      "position_index": 1,
+      "hint_image": "cave",
+      "choices": [
+        "ج",
+        "غ",
+        "ع"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "غ",
+      "letter_name": "الغين",
+      "word": "غيمة",
+      "word_voweled": "غَيْمَةٌ",
+      "image_key": "cloud2",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف الغين في كلمة (غيمة)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "غ"
+      ],
+      "categories": {
+        "غ": []
+      },
+      "items_to_sort": [
+        {
+          "word": "غراب",
+          "word_voweled": "غُرَابٌ",
+          "image_key": "crow",
+          "correct_letter": "غ",
+          "correct_category": "غ"
+        },
+        {
+          "word": "غيمة",
+          "word_voweled": "غَيْمَةٌ",
+          "image_key": "cloud2",
+          "correct_letter": "غ",
+          "correct_category": "غ"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الغين)",
+      "difficulty": 1
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "غ",
+      "letter_b": "ع",
+      "letter_a_name": "الغين",
+      "letter_b_name": "العين",
+      "difference_ar": "الغين لها نقطة فوق، والعين ليس له نقاط",
+      "choices": [
+        "غ",
+        "ع"
+      ],
+      "instruction": "ما الفرق بين حرفي الغين والعين؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "غ",
+      "letter_b": "ع",
+      "letter_a_name": "الغين",
+      "letter_b_name": "العين",
+      "difference_ar": "الغين لها نقطة فوق، والعين ليس له نقاط",
+      "choices": [
+        "غ",
+        "ع"
+      ],
+      "instruction": "ما الفرق بين حرفي الغين والعين؟",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يقفزُ.",
+      "choices": [
+        "الضفدعُ",
+        "الطائرُ",
+        "القردُ"
+      ],
+      "correct_word": "الضفدعُ",
+      "hint_image": "frog_jump",
+      "full_sentence": "الضفدعُ يقفزُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يتسلقُ",
+        "القردُ"
+      ],
+      "correct_order": [
+        "القردُ",
+        "يتسلقُ"
+      ],
+      "full_sentence": "القردُ يتسلقُ.",
+      "hint_image": "monkey_climb",
+      "unit": 3,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

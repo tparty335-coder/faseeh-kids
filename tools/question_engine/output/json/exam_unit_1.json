@@ -1,0 +1,713 @@
+{
+  "unit": 1,
+  "unit_name": "الوحدة الأولى",
+  "total_marks": 100,
+  "sections_count": 5,
+  "sections": [
+    {
+      "section_id": 1,
+      "section_name": "تعرّف على الحرف",
+      "description": "التعرف على شكل الحرف والصور الدالة عليه",
+      "marks": 20,
+      "questions_count": 5,
+      "questions": [
+        {
+          "type": "matching_img_to_letter",
+          "type_ar": "صل الصورة بالحرف",
+          "letter": "ا",
+          "letter_name": "الألف",
+          "word": "أسد",
+          "word_voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "correct_answer": "ا",
+          "choices": [
+            "ب",
+            "ا",
+            "ر",
+            "ل"
+          ],
+          "instruction": "صل الصورة بحرف الألف",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "matching_img_to_letter",
+          "type_ar": "صل الصورة بالحرف",
+          "letter": "ت",
+          "letter_name": "التاء",
+          "word": "توت",
+          "word_voweled": "تُوتٌ",
+          "image_key": "mulberry",
+          "correct_answer": "ت",
+          "choices": [
+            "ص",
+            "ت",
+            "ج",
+            "ن"
+          ],
+          "instruction": "صل الصورة بحرف التاء",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "find_and_color",
+          "type_ar": "ابحث عن الحرف ولوّنه",
+          "letter": "ح",
+          "letter_name": "الحاء",
+          "grid": [
+            "ص",
+            "ف",
+            "خ",
+            "ض",
+            "ج",
+            "ز",
+            "ح",
+            "ج",
+            "ج",
+            "خ",
+            "ف",
+            "ظ",
+            "ح",
+            "خ",
+            "ج",
+            "خ",
+            "ح",
+            "ت",
+            "ح",
+            "ج"
+          ],
+          "grid_size": 20,
+          "target_count": 4,
+          "correct_positions": [
+            6,
+            12,
+            16,
+            18
+          ],
+          "instruction": "ابحث عن حرف الحاء ولوّنه بلونك المفضل",
+          "similar_distractors": [
+            "ج",
+            "خ"
+          ],
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "find_and_color",
+          "type_ar": "ابحث عن الحرف ولوّنه",
+          "letter": "ت",
+          "letter_name": "التاء",
+          "grid": [
+            "م",
+            "د",
+            "ع",
+            "ت",
+            "ث",
+            "ر",
+            "ن",
+            "ج",
+            "ظ",
+            "ن",
+            "ب",
+            "ث",
+            "ن",
+            "ت",
+            "ت",
+            "د",
+            "ث",
+            "ت",
+            "ظ",
+            "ا"
+          ],
+          "grid_size": 20,
+          "target_count": 4,
+          "correct_positions": [
+            3,
+            13,
+            14,
+            17
+          ],
+          "instruction": "ابحث عن حرف التاء ولوّنه بلونك المفضل",
+          "similar_distractors": [
+            "ب",
+            "ث",
+            "ن"
+          ],
+          "difficulty": 4,
+          "mark": 4.0
+        },
+        {
+          "type": "matching_img_to_letter",
+          "type_ar": "صل الصورة بالحرف",
+          "letter": "خ",
+          "letter_name": "الخاء",
+          "word": "خيمة",
+          "word_voweled": "خَيْمَةٌ",
+          "image_key": "tent",
+          "correct_answer": "خ",
+          "choices": [
+            "ز",
+            "ش",
+            "غ",
+            "خ"
+          ],
+          "instruction": "صل الصورة بحرف الخاء",
+          "difficulty": 2,
+          "mark": 4.0
+        }
+      ]
+    },
+    {
+      "section_id": 2,
+      "section_name": "مواضع الحرف",
+      "description": "تمييز أشكال الحرف في مختلف المواضع",
+      "marks": 20,
+      "questions_count": 5,
+      "questions": [
+        {
+          "type": "choose_correct_form",
+          "type_ar": "اختر الشكل الصحيح للحرف",
+          "letter": "خ",
+          "letter_name": "الخاء",
+          "position": "isolated",
+          "position_ar": "منفصل",
+          "correct_form": "خ",
+          "choices": [
+            "خـ",
+            "ـخـ",
+            "خ"
+          ],
+          "example_word": null,
+          "example_image": null,
+          "instruction": "اختر الشكل الصحيح لحرف الخاء في منفصل",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_correct_form",
+          "type_ar": "اختر الشكل الصحيح للحرف",
+          "letter": "ت",
+          "letter_name": "التاء",
+          "position": "medial",
+          "position_ar": "وسط الكلمة",
+          "correct_form": "ـتـ",
+          "choices": [
+            "ت",
+            "ـتـ",
+            "تـ"
+          ],
+          "example_word": "طاولة",
+          "example_image": "table",
+          "instruction": "اختر الشكل الصحيح لحرف التاء في وسط الكلمة",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "connect_forms",
+          "type_ar": "وصّل الحرف بموضعه",
+          "letter": "خ",
+          "letter_name": "الخاء",
+          "forms": {
+            "isolated": "خ",
+            "initial": "خـ",
+            "medial": "ـخـ",
+            "final": "ـخ"
+          },
+          "sample_words": {
+            "initial": {
+              "word": "خروف",
+              "voweled": "خَرُوفٌ",
+              "image_key": "sheep",
+              "position": "start",
+              "syllables": [
+                "خَ",
+                "رُو",
+                "فٌ"
+              ]
+            },
+            "medial": {
+              "word": "دخان",
+              "voweled": "دُخَانٌ",
+              "image_key": "smoke",
+              "position": "middle",
+              "syllables": [
+                "دُ",
+                "خَا",
+                "نٌ"
+              ]
+            },
+            "final": {
+              "word": "شيخ",
+              "voweled": "شَيْخٌ",
+              "image_key": "elder",
+              "position": "end",
+              "syllables": [
+                "شَيْ",
+                "خٌ"
+              ]
+            }
+          },
+          "instruction": "وصّل كل شكل من أشكال حرف الخاء بموضعه الصحيح",
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "connect_forms",
+          "type_ar": "وصّل الحرف بموضعه",
+          "letter": "ت",
+          "letter_name": "التاء",
+          "forms": {
+            "isolated": "ت",
+            "initial": "تـ",
+            "medial": "ـتـ",
+            "final": "ـت"
+          },
+          "sample_words": {
+            "initial": {
+              "word": "توت",
+              "voweled": "تُوتٌ",
+              "image_key": "mulberry",
+              "position": "start",
+              "syllables": [
+                "تُو",
+                "تٌ"
+              ]
+            },
+            "medial": {
+              "word": "كتاب",
+              "voweled": "كِتَابٌ",
+              "image_key": "book",
+              "position": "middle",
+              "syllables": [
+                "كِ",
+                "تَا",
+                "بٌ"
+              ]
+            },
+            "final": {
+              "word": "صوت",
+              "voweled": "صَوْتٌ",
+              "image_key": "sound",
+              "position": "end",
+              "syllables": [
+                "صَوْ",
+                "تٌ"
+              ]
+            }
+          },
+          "instruction": "وصّل كل شكل من أشكال حرف التاء بموضعه الصحيح",
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_correct_form",
+          "type_ar": "اختر الشكل الصحيح للحرف",
+          "letter": "خ",
+          "letter_name": "الخاء",
+          "position": "medial",
+          "position_ar": "وسط الكلمة",
+          "correct_form": "ـخـ",
+          "choices": [
+            "ـخـ",
+            "خـ",
+            "خ"
+          ],
+          "example_word": "مخبز",
+          "example_image": "bakery",
+          "instruction": "اختر الشكل الصحيح لحرف الخاء في وسط الكلمة",
+          "difficulty": 2,
+          "mark": 4.0
+        }
+      ]
+    },
+    {
+      "section_id": 3,
+      "section_name": "الحركات والتشكيل",
+      "description": "اختيار الحركة المناسبة لصوت الحرف والكلمة",
+      "marks": 20,
+      "questions_count": 5,
+      "questions": [
+        {
+          "type": "choose_haraka",
+          "type_ar": "اختر الحركة المناسبة",
+          "letter": "ا",
+          "letter_name": "الألف",
+          "haraka_key": "fatha",
+          "haraka_name": "فتحة",
+          "haraka_symbol": "َ",
+          "word": "أسد",
+          "word_voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "choices": [
+            {
+              "key": "fatha",
+              "name": "فتحة",
+              "symbol": "َ"
+            },
+            {
+              "key": "kasra",
+              "name": "كسرة",
+              "symbol": "ِ"
+            },
+            {
+              "key": "damma",
+              "name": "ضمة",
+              "symbol": "ُ"
+            }
+          ],
+          "correct_answer": "fatha",
+          "instruction": "اختر الحركة المناسبة لحرف الألف في كلمة (أَسَدٌ)",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_haraka",
+          "type_ar": "اختر الحركة المناسبة",
+          "letter": "ت",
+          "letter_name": "التاء",
+          "haraka_key": "fatha",
+          "haraka_name": "فتحة",
+          "haraka_symbol": "َ",
+          "word": "تفاحة",
+          "word_voweled": "تُفَّاحَةٌ",
+          "image_key": "apple",
+          "choices": [
+            {
+              "key": "kasra",
+              "name": "كسرة",
+              "symbol": "ِ"
+            },
+            {
+              "key": "fatha",
+              "name": "فتحة",
+              "symbol": "َ"
+            },
+            {
+              "key": "damma",
+              "name": "ضمة",
+              "symbol": "ُ"
+            }
+          ],
+          "correct_answer": "fatha",
+          "instruction": "اختر الحركة المناسبة لحرف التاء في كلمة (تُفَّاحَةٌ)",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_haraka",
+          "type_ar": "اختر الحركة المناسبة",
+          "letter": "ا",
+          "letter_name": "الألف",
+          "haraka_key": "fatha",
+          "haraka_name": "فتحة",
+          "haraka_symbol": "َ",
+          "word": "أسد",
+          "word_voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "choices": [
+            {
+              "key": "damma",
+              "name": "ضمة",
+              "symbol": "ُ"
+            },
+            {
+              "key": "kasra",
+              "name": "كسرة",
+              "symbol": "ِ"
+            },
+            {
+              "key": "fatha",
+              "name": "فتحة",
+              "symbol": "َ"
+            }
+          ],
+          "correct_answer": "fatha",
+          "instruction": "اختر الحركة المناسبة لحرف الألف في كلمة (أَسَدٌ)",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_haraka",
+          "type_ar": "اختر الحركة المناسبة",
+          "letter": "خ",
+          "letter_name": "الخاء",
+          "haraka_key": "fatha",
+          "haraka_name": "فتحة",
+          "haraka_symbol": "َ",
+          "word": "خروف",
+          "word_voweled": "خَرُوفٌ",
+          "image_key": "sheep",
+          "choices": [
+            {
+              "key": "kasra",
+              "name": "كسرة",
+              "symbol": "ِ"
+            },
+            {
+              "key": "fatha",
+              "name": "فتحة",
+              "symbol": "َ"
+            },
+            {
+              "key": "damma",
+              "name": "ضمة",
+              "symbol": "ُ"
+            }
+          ],
+          "correct_answer": "fatha",
+          "instruction": "اختر الحركة المناسبة لحرف الخاء في كلمة (خَرُوفٌ)",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "choose_haraka",
+          "type_ar": "اختر الحركة المناسبة",
+          "letter": "ث",
+          "letter_name": "الثاء",
+          "haraka_key": "fatha",
+          "haraka_name": "فتحة",
+          "haraka_symbol": "َ",
+          "word": "ثعلب",
+          "word_voweled": "ثَعْلَبٌ",
+          "image_key": "fox",
+          "choices": [
+            {
+              "key": "damma",
+              "name": "ضمة",
+              "symbol": "ُ"
+            },
+            {
+              "key": "fatha",
+              "name": "فتحة",
+              "symbol": "َ"
+            },
+            {
+              "key": "kasra",
+              "name": "كسرة",
+              "symbol": "ِ"
+            }
+          ],
+          "correct_answer": "fatha",
+          "instruction": "اختر الحركة المناسبة لحرف الثاء في كلمة (ثَعْلَبٌ)",
+          "difficulty": 2,
+          "mark": 4.0
+        }
+      ]
+    },
+    {
+      "section_id": 4,
+      "section_name": "رتّب وركّب الكلمات",
+      "description": "ترتيب الحروف وتركيب الكلمات وإكمال الناقص",
+      "marks": 20,
+      "questions_count": 5,
+      "questions": [
+        {
+          "type": "word_build",
+          "type_ar": "ركّب الكلمة من حروفها",
+          "letter": "ح",
+          "word": "حصان",
+          "word_voweled": "حِصَانٌ",
+          "image_key": "horse",
+          "letters_given": [
+            "ح",
+            "ن",
+            "ج",
+            "خ",
+            "ص",
+            "ا"
+          ],
+          "blank_boxes": 4,
+          "correct_word": "حصان",
+          "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "fill_blank_first",
+          "type_ar": "اكتب الحرف الأول الناقص",
+          "letter": "ب",
+          "letter_name": "الباء",
+          "word": "بيضة",
+          "word_voweled": "بَيْضَةٌ",
+          "word_with_blank": "_ َيْضَةٌ",
+          "word_with_blank_plain": "_ يضة",
+          "correct_letter": "ب",
+          "hint_image": "egg",
+          "choices": [
+            "ن",
+            "ب",
+            "ث"
+          ],
+          "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+          "difficulty": 1,
+          "mark": 4.0
+        },
+        {
+          "type": "connect_letters",
+          "type_ar": "صل الحروف لتكوّن كلمة",
+          "letter": "ا",
+          "word": "سماء",
+          "word_voweled": "سَمَاءٌ",
+          "image_key": "sky",
+          "separated_letters": [
+            "س",
+            "م",
+            "ا",
+            "ء"
+          ],
+          "arrow_symbol": "←",
+          "correct_connected_word": "سَمَاءٌ",
+          "correct_word": "سماء",
+          "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "word_build",
+          "type_ar": "ركّب الكلمة من حروفها",
+          "letter": "ح",
+          "word": "مسبح",
+          "word_voweled": "مَسْبَحٌ",
+          "image_key": "pool",
+          "letters_given": [
+            "ح",
+            "س",
+            "خ",
+            "ج",
+            "ب",
+            "م"
+          ],
+          "blank_boxes": 4,
+          "correct_word": "مسبح",
+          "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "fill_blank_last",
+          "type_ar": "اكتب الحرف الأخير الناقص",
+          "letter": "ا",
+          "letter_name": "الألف",
+          "word": "قمر",
+          "word_voweled": "قَمَرٌ",
+          "word_with_blank": "قَمَ _",
+          "word_with_blank_plain": "قم _",
+          "correct_letter": "ا",
+          "position_index": 2,
+          "hint_image": "moon",
+          "choices": [
+            "ح",
+            "ا",
+            "و"
+          ],
+          "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+          "difficulty": 2,
+          "mark": 4.0
+        }
+      ]
+    },
+    {
+      "section_id": 5,
+      "section_name": "اقرأ وكون الجمل",
+      "description": "قراءة الجمل وترتيبها ومطابقتها بالصور",
+      "marks": 20,
+      "questions_count": 5,
+      "questions": [
+        {
+          "type": "complete_sentence",
+          "type_ar": "أكمل الجملة",
+          "sentence_with_blank": "الحصانُ ____.",
+          "choices": [
+            "يركضُ",
+            "الصحراء",
+            "في"
+          ],
+          "correct_word": "يركضُ",
+          "hint_image": "horse_run",
+          "full_sentence": "الحصانُ يركضُ.",
+          "unit": 1,
+          "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "match_sentence_image",
+          "type_ar": "صل الجملة بالصورة",
+          "sentences": [
+            "البطةُ تسبحُ.",
+            "الحصانُ يركضُ.",
+            "الأسدُ كبيرٌ."
+          ],
+          "images": [
+            "horse_run",
+            "big_lion",
+            "duck_swim"
+          ],
+          "correct_pairs": {
+            "0": 2,
+            "1": 0,
+            "2": 1
+          },
+          "unit": 1,
+          "instruction": "صل كل جملة بالصورة المناسبة لها",
+          "difficulty": 3,
+          "mark": 4.0
+        },
+        {
+          "type": "arrange_sentence",
+          "type_ar": "رتّب كلمات الجملة",
+          "scrambled_words": [
+            "تسبحُ",
+            "البطةُ"
+          ],
+          "correct_order": [
+            "البطةُ",
+            "تسبحُ"
+          ],
+          "full_sentence": "البطةُ تسبحُ.",
+          "hint_image": "duck_swim",
+          "unit": 1,
+          "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "arrange_sentence",
+          "type_ar": "رتّب كلمات الجملة",
+          "scrambled_words": [
+            "يركضُ",
+            "الحصانُ"
+          ],
+          "correct_order": [
+            "الحصانُ",
+            "يركضُ"
+          ],
+          "full_sentence": "الحصانُ يركضُ.",
+          "hint_image": "horse_run",
+          "unit": 1,
+          "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+          "difficulty": 2,
+          "mark": 4.0
+        },
+        {
+          "type": "complete_sentence",
+          "type_ar": "أكمل الجملة",
+          "sentence_with_blank": "____ كبيرٌ.",
+          "choices": [
+            "الأسدُ",
+            "كبيرٌ",
+            "يركضُ"
+          ],
+          "correct_word": "الأسدُ",
+          "hint_image": "big_lion",
+          "full_sentence": "الأسدُ كبيرٌ.",
+          "unit": 1,
+          "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+          "difficulty": 2,
+          "mark": 4.0
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-11-22T11:39:35.932169"
+}

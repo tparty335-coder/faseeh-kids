@@ -1,0 +1,548 @@
+{
+  "letter": "ي",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـيـ",
+      "instruction": "تتبع حرف الياء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "position": "final_disconnected",
+      "position_ar": "آخر الكلمة (منفصل)",
+      "display_form": "ـى",
+      "instruction": "تتبع حرف الياء في موضع آخر الكلمة (منفصل) باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "word": "ينبوع",
+      "word_voweled": "يَنْبُوعٌ",
+      "image_key": "spring_water",
+      "correct_answer": "ي",
+      "choices": [
+        "س",
+        "ح",
+        "ب",
+        "ي"
+      ],
+      "instruction": "صل الصورة بحرف الياء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "word": "ياسمين",
+      "word_voweled": "يَاسَمِينٌ",
+      "image_key": "jasmine",
+      "correct_answer": "ي",
+      "choices": [
+        "ت",
+        "ي",
+        "ح",
+        "ج"
+      ],
+      "instruction": "صل الصورة بحرف الياء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "grid": [
+        "ي",
+        "ن",
+        "ب",
+        "ح",
+        "خ",
+        "ن",
+        "ب",
+        "ت",
+        "د",
+        "ن",
+        "ب",
+        "ي",
+        "ق",
+        "ف",
+        "ع",
+        "ز",
+        "ي",
+        "ع",
+        "ي",
+        "ظ"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        11,
+        16,
+        18
+      ],
+      "instruction": "ابحث عن حرف الياء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ن"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "grid": [
+        "ب",
+        "ظ",
+        "ز",
+        "ي",
+        "ش",
+        "ي",
+        "ف",
+        "ص",
+        "ي",
+        "ظ",
+        "و",
+        "ي",
+        "ن",
+        "ه",
+        "ت",
+        "د",
+        "ي",
+        "ي",
+        "م",
+        "ز"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        3,
+        5,
+        8,
+        11,
+        16,
+        17
+      ],
+      "instruction": "ابحث عن حرف الياء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ن"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "forms": {
+        "isolated": "ي",
+        "initial": "يـ",
+        "medial": "ـيـ",
+        "final": "ـي"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "يد",
+          "voweled": "يَدٌ",
+          "image_key": "hand",
+          "position": "start",
+          "syllables": [
+            "يَدٌ"
+          ]
+        },
+        "medial": {
+          "word": "بيت",
+          "voweled": "بَيْتٌ",
+          "image_key": "house",
+          "position": "middle",
+          "syllables": [
+            "بَيْ",
+            "تٌ"
+          ]
+        },
+        "final": {
+          "word": "قاضي",
+          "voweled": "قَاضِيٌ",
+          "image_key": "judge",
+          "position": "end",
+          "syllables": [
+            "قَا",
+            "ضِيٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الياء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "forms": {
+        "isolated": "ي",
+        "initial": "يـ",
+        "medial": "ـيـ",
+        "final": "ـي"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ياسمين",
+          "voweled": "يَاسَمِينٌ",
+          "image_key": "jasmine",
+          "position": "start",
+          "syllables": [
+            "يَا",
+            "سَ",
+            "مِينٌ"
+          ]
+        },
+        "medial": {
+          "word": "خيمة",
+          "voweled": "خَيْمَةٌ",
+          "image_key": "tent",
+          "position": "middle",
+          "syllables": [
+            "خَيْ",
+            "مَةٌ"
+          ]
+        },
+        "final": {
+          "word": "قاضي",
+          "voweled": "قَاضِيٌ",
+          "image_key": "judge",
+          "position": "end",
+          "syllables": [
+            "قَا",
+            "ضِيٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الياء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "يد",
+      "word_voweled": "يَدٌ",
+      "image_key": "hand",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الياء في كلمة (يَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "يد",
+      "word_voweled": "يَدٌ",
+      "image_key": "hand",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الياء في كلمة (يَدٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ي",
+      "word": "غالي",
+      "word_voweled": "غَالِيٌ",
+      "image_key": "precious",
+      "scrambled_letters": [
+        "ل",
+        "غ",
+        "ا",
+        "ي"
+      ],
+      "correct_order": [
+        "غ",
+        "ا",
+        "ل",
+        "ي"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ي",
+      "word": "بيت",
+      "word_voweled": "بَيْتٌ",
+      "image_key": "house",
+      "scrambled_letters": [
+        "ت",
+        "ي",
+        "ب"
+      ],
+      "correct_order": [
+        "ب",
+        "ي",
+        "ت"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ي",
+      "word": "بيت",
+      "word_voweled": "بَيْتٌ",
+      "word_with_blank": "بَ_ْتٌ",
+      "blank_position": "middle",
+      "blank_position_ar": "وسط",
+      "correct_letter": "ي",
+      "hint_image": "house",
+      "image_key": "house",
+      "choices": [
+        "ن",
+        "ي",
+        "ب"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ي",
+      "word": "غالي",
+      "word_voweled": "غَالِيٌ",
+      "word_with_blank": "غَالِ_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ي",
+      "hint_image": "precious",
+      "image_key": "precious",
+      "choices": [
+        "ن",
+        "ي",
+        "ب"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "word": "غالي",
+      "word_voweled": "غَالِيٌ",
+      "word_with_blank": "غَالِ _",
+      "word_with_blank_plain": "غال _",
+      "correct_letter": "ي",
+      "position_index": 3,
+      "hint_image": "precious",
+      "choices": [
+        "ي",
+        "ب",
+        "ن"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "word": "يد",
+      "word_voweled": "يَدٌ",
+      "word_with_blank": "_ َدٌ",
+      "word_with_blank_plain": "_ د",
+      "correct_letter": "ي",
+      "hint_image": "hand",
+      "choices": [
+        "ب",
+        "ي",
+        "ن"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ي",
+      "target_letter_name": "الياء",
+      "odd_letter": "ب",
+      "odd_letter_name": "الباء",
+      "items": [
+        {
+          "word": "يمامة",
+          "word_voweled": "يَمَامَةٌ",
+          "image_key": "dove",
+          "starts_with": "ي"
+        },
+        {
+          "word": "بطة",
+          "word_voweled": "بَطَّةٌ",
+          "image_key": "duck",
+          "starts_with": "ب"
+        },
+        {
+          "word": "ياسمين",
+          "word_voweled": "يَاسَمِينٌ",
+          "image_key": "jasmine",
+          "starts_with": "ي"
+        },
+        {
+          "word": "يد",
+          "word_voweled": "يَدٌ",
+          "image_key": "hand",
+          "starts_with": "ي"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "بطة",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الياء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "word": "خيمة",
+      "word_voweled": "خَيْمَةٌ",
+      "image_key": "tent",
+      "letter_position": "middle",
+      "letter_position_ar": "وسط الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "وسط الكلمة",
+      "instruction": "أين يقع حرف الياء في كلمة (خيمة)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "base_without_dots": "ى",
+      "correct_dot_count": 2,
+      "correct_dot_position": "below",
+      "correct_dot_position_ar": "تحت",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الياء",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ي",
+      "letter_name": "الياء",
+      "base_without_dots": "ى",
+      "correct_dot_count": 2,
+      "correct_dot_position": "below",
+      "correct_dot_position_ar": "تحت",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الياء",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الموزُ ____.",
+      "choices": [
+        "أصفرُ",
+        "الياسمينُ",
+        "عطرٌ"
+      ],
+      "correct_word": "أصفرُ",
+      "hint_image": "yellow_banana",
+      "full_sentence": "الموزُ أصفرُ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "أصفرُ",
+        "الموزُ"
+      ],
+      "correct_order": [
+        "الموزُ",
+        "أصفرُ"
+      ],
+      "full_sentence": "الموزُ أصفرُ.",
+      "hint_image": "yellow_banana",
+      "unit": 4,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "letter": "ص",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـصـ",
+      "instruction": "تتبع حرف الصاد في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـص",
+      "instruction": "تتبع حرف الصاد في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "correct_answer": "ص",
+      "choices": [
+        "ص",
+        "ذ",
+        "غ",
+        "ث"
+      ],
+      "instruction": "صل الصورة بحرف الصاد",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "correct_answer": "ص",
+      "choices": [
+        "ك",
+        "ص",
+        "ع",
+        "ق"
+      ],
+      "instruction": "صل الصورة بحرف الصاد",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "grid": [
+        "ش",
+        "ص",
+        "ر",
+        "ص",
+        "ظ",
+        "ط",
+        "ص",
+        "غ",
+        "ض",
+        "ض",
+        "م",
+        "ر",
+        "ج",
+        "ك",
+        "ن",
+        "ض",
+        "س",
+        "ض",
+        "ص",
+        "ت"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        1,
+        3,
+        6,
+        18
+      ],
+      "instruction": "ابحث عن حرف الصاد ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ض",
+        "س",
+        "ش"
+      ],
+      "difficulty": 4
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "grid": [
+        "س",
+        "د",
+        "س",
+        "ص",
+        "ص",
+        "ح",
+        "ق",
+        "س",
+        "ك",
+        "ص",
+        "ظ",
+        "ص",
+        "ج",
+        "س",
+        "ص",
+        "ف",
+        "ش",
+        "ص",
+        "س",
+        "ش"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        3,
+        4,
+        9,
+        11,
+        14,
+        17
+      ],
+      "instruction": "ابحث عن حرف الصاد ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ض",
+        "س",
+        "ش"
+      ],
+      "difficulty": 4
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـص",
+      "choices": [
+        "ـص",
+        "صـ",
+        "ص"
+      ],
+      "example_word": "خص",
+      "example_image": "hut",
+      "instruction": "اختر الشكل الصحيح لحرف الصاد في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "forms": {
+        "isolated": "ص",
+        "initial": "صـ",
+        "medial": "ـصـ",
+        "final": "ـص"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "صندوق",
+          "voweled": "صُنْدُوقٌ",
+          "image_key": "box",
+          "position": "start",
+          "syllables": [
+            "صُنْ",
+            "دُو",
+            "قٌ"
+          ]
+        },
+        "medial": {
+          "word": "قصة",
+          "voweled": "قِصَّةٌ",
+          "image_key": "story",
+          "position": "middle",
+          "syllables": [
+            "قِصْ",
+            "صَةٌ"
+          ]
+        },
+        "final": {
+          "word": "قميص",
+          "voweled": "قَمِيصٌ",
+          "image_key": "shirt",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "مِي",
+            "صٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الصاد بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الصاد في كلمة (صَقْرٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الصاد في كلمة (صَقْرٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ص",
+      "word": "قميص",
+      "word_voweled": "قَمِيصٌ",
+      "image_key": "shirt",
+      "scrambled_letters": [
+        "ي",
+        "ق",
+        "ص",
+        "م"
+      ],
+      "correct_order": [
+        "ق",
+        "م",
+        "ي",
+        "ص"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ص",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "scrambled_letters": [
+        "ص",
+        "ر",
+        "ق"
+      ],
+      "correct_order": [
+        "ص",
+        "ق",
+        "ر"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ص",
+      "word": "خص",
+      "word_voweled": "خُصٌّ",
+      "image_key": "hut",
+      "separated_letters": [
+        "خ",
+        "ص"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "خُصٌّ",
+      "correct_word": "خص",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_letters",
+      "type_ar": "صل الحروف لتكوّن كلمة",
+      "letter": "ص",
+      "word": "صابون",
+      "word_voweled": "صَابُونٌ",
+      "image_key": "soap",
+      "separated_letters": [
+        "ص",
+        "ا",
+        "ب",
+        "و",
+        "ن"
+      ],
+      "arrow_symbol": "←",
+      "correct_connected_word": "صَابُونٌ",
+      "correct_word": "صابون",
+      "instruction": "صل الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "word": "قميص",
+      "word_voweled": "قَمِيصٌ",
+      "word_with_blank": "قَمِي _",
+      "word_with_blank_plain": "قمي _",
+      "correct_letter": "ص",
+      "position_index": 3,
+      "hint_image": "shirt",
+      "choices": [
+        "ص",
+        "ض",
+        "س"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "word": "قصة",
+      "word_voweled": "قِصَّةٌ",
+      "word_with_blank": "قِ _ َّةٌ",
+      "word_with_blank_plain": "ق _ ة",
+      "correct_letter": "ص",
+      "position_index": 1,
+      "hint_image": "story",
+      "choices": [
+        "ش",
+        "ض",
+        "ص"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ص",
+      "letter_name": "الصاد",
+      "word": "صقر",
+      "word_voweled": "صَقْرٌ",
+      "image_key": "falcon",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف الصاد في كلمة (صقر)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ص"
+      ],
+      "categories": {
+        "ص": []
+      },
+      "items_to_sort": [
+        {
+          "word": "صقر",
+          "word_voweled": "صَقْرٌ",
+          "image_key": "falcon",
+          "correct_letter": "ص",
+          "correct_category": "ص"
+        },
+        {
+          "word": "صابون",
+          "word_voweled": "صَابُونٌ",
+          "image_key": "soap",
+          "correct_letter": "ص",
+          "correct_category": "ص"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الصاد)",
+      "difficulty": 1
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ص",
+      "letter_b": "ض",
+      "letter_a_name": "الصاد",
+      "letter_b_name": "الضاد",
+      "difference_ar": "الصاد ليس له نقاط، والضاد لها نقطة فوق",
+      "choices": [
+        "ص",
+        "ض"
+      ],
+      "instruction": "ما الفرق بين حرفي الصاد والضاد؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ص",
+      "letter_b": "ض",
+      "letter_a_name": "الصاد",
+      "letter_b_name": "الضاد",
+      "difference_ar": "الصاد ليس له نقاط، والضاد لها نقطة فوق",
+      "choices": [
+        "ص",
+        "ض"
+      ],
+      "instruction": "ما الفرق بين حرفي الصاد والضاد؟",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "تشرقُ",
+        "الشمسُ"
+      ],
+      "correct_order": [
+        "الشمسُ",
+        "تشرقُ"
+      ],
+      "full_sentence": "الشمسُ تشرقُ.",
+      "hint_image": "sun_rise",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يعوي",
+        "الذئبُ"
+      ],
+      "correct_order": [
+        "الذئبُ",
+        "يعوي"
+      ],
+      "full_sentence": "الذئبُ يعوي.",
+      "hint_image": "wolf_howl",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

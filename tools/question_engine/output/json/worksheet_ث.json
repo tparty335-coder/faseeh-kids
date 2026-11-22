@@ -1,0 +1,521 @@
+{
+  "letter": "ث",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "ثـ",
+      "instruction": "تتبع حرف الثاء في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "ثـ",
+      "instruction": "تتبع حرف الثاء في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "word": "ثعلب",
+      "word_voweled": "ثَعْلَبٌ",
+      "image_key": "fox",
+      "correct_answer": "ث",
+      "choices": [
+        "ي",
+        "ق",
+        "و",
+        "ث"
+      ],
+      "instruction": "صل الصورة بحرف الثاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "word": "ثور",
+      "word_voweled": "ثَوْرٌ",
+      "image_key": "bull",
+      "correct_answer": "ث",
+      "choices": [
+        "ث",
+        "ن",
+        "ا",
+        "م"
+      ],
+      "instruction": "صل الصورة بحرف الثاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "grid": [
+        "خ",
+        "ث",
+        "خ",
+        "ث",
+        "ت",
+        "ت",
+        "ح",
+        "ف",
+        "ن",
+        "م",
+        "ذ",
+        "و",
+        "ف",
+        "خ",
+        "د",
+        "و",
+        "ث",
+        "ث",
+        "ت",
+        "خ"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        1,
+        3,
+        16,
+        17
+      ],
+      "instruction": "ابحث عن حرف الثاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ت"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "grid": [
+        "ت",
+        "ز",
+        "ث",
+        "س",
+        "ث",
+        "ح",
+        "ف",
+        "ف",
+        "ن",
+        "ت",
+        "ت",
+        "و",
+        "ش",
+        "ر",
+        "ث",
+        "ض",
+        "ت",
+        "ر",
+        "ت",
+        "ث"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        2,
+        4,
+        14,
+        19
+      ],
+      "instruction": "ابحث عن حرف الثاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ب",
+        "ت"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "forms": {
+        "isolated": "ث",
+        "initial": "ثـ",
+        "medial": "ـثـ",
+        "final": "ـث"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ثلاجة",
+          "voweled": "ثَلَّاجَةٌ",
+          "image_key": "fridge",
+          "position": "start",
+          "syllables": [
+            "ثَلْ",
+            "لَا",
+            "جَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "مثلث",
+          "voweled": "مُثَلَّثٌ",
+          "image_key": "triangle",
+          "position": "middle",
+          "syllables": [
+            "مُ",
+            "ثَلْ",
+            "لَثٌ"
+          ]
+        },
+        "final": {
+          "word": "أثاث",
+          "voweled": "أَثَاثٌ",
+          "image_key": "furniture",
+          "position": "end",
+          "syllables": [
+            "أَ",
+            "ثَا",
+            "ثٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الثاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "ث",
+      "choices": [
+        "ـث",
+        "ثـ",
+        "ث"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الثاء في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ثعلب",
+      "word_voweled": "ثَعْلَبٌ",
+      "image_key": "fox",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الثاء في كلمة (ثَعْلَبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ثعلب",
+      "word_voweled": "ثَعْلَبٌ",
+      "image_key": "fox",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الثاء في كلمة (ثَعْلَبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ث",
+      "word": "مثلث",
+      "word_voweled": "مُثَلَّثٌ",
+      "image_key": "triangle",
+      "scrambled_letters": [
+        "م",
+        "ل",
+        "ث",
+        "ث"
+      ],
+      "correct_order": [
+        "م",
+        "ث",
+        "ل",
+        "ث"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ث",
+      "word": "ثور",
+      "word_voweled": "ثَوْرٌ",
+      "image_key": "bull",
+      "scrambled_letters": [
+        "ر",
+        "و",
+        "ث"
+      ],
+      "correct_order": [
+        "ث",
+        "و",
+        "ر"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ث",
+      "word": "تراث",
+      "word_voweled": "تُرَاثٌ",
+      "word_with_blank": "تُرَا_ٌ",
+      "blank_position": "last",
+      "blank_position_ar": "آخر",
+      "correct_letter": "ث",
+      "hint_image": "heritage",
+      "image_key": "heritage",
+      "choices": [
+        "ت",
+        "ب",
+        "ث"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ث",
+      "word": "مثلث",
+      "word_voweled": "مُثَلَّثٌ",
+      "word_with_blank": "مُ_َلَّثٌ",
+      "blank_position": "middle",
+      "blank_position_ar": "وسط",
+      "correct_letter": "ث",
+      "hint_image": "triangle",
+      "image_key": "triangle",
+      "choices": [
+        "ب",
+        "ت",
+        "ث"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "word": "تراث",
+      "word_voweled": "تُرَاثٌ",
+      "word_with_blank": "تُرَا _",
+      "word_with_blank_plain": "ترا _",
+      "correct_letter": "ث",
+      "position_index": 3,
+      "hint_image": "heritage",
+      "choices": [
+        "ب",
+        "ت",
+        "ث"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "word": "مثلث",
+      "word_voweled": "مُثَلَّثٌ",
+      "word_with_blank": "مُ _ َلَّثٌ",
+      "word_with_blank_plain": "م _ لث",
+      "correct_letter": "ث",
+      "position_index": 1,
+      "hint_image": "triangle",
+      "choices": [
+        "ت",
+        "ب",
+        "ث"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ث"
+      ],
+      "categories": {
+        "ث": []
+      },
+      "items_to_sort": [
+        {
+          "word": "ثلاجة",
+          "word_voweled": "ثَلَّاجَةٌ",
+          "image_key": "fridge",
+          "correct_letter": "ث",
+          "correct_category": "ث"
+        },
+        {
+          "word": "ثعلب",
+          "word_voweled": "ثَعْلَبٌ",
+          "image_key": "fox",
+          "correct_letter": "ث",
+          "correct_category": "ث"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الثاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "word": "ثمرة",
+      "word_voweled": "ثَمَرَةٌ",
+      "image_key": "fruit",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف الثاء في كلمة (ثمرة)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ث",
+      "letter_b": "ت",
+      "letter_a_name": "الثاء",
+      "letter_b_name": "التاء",
+      "difference_ar": "الثاء لها ثلاث نقاط فوق، والتاء لها نقطتان فوق",
+      "choices": [
+        "ث",
+        "ت"
+      ],
+      "instruction": "ما الفرق بين حرفي الثاء والتاء؟",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ث",
+      "letter_name": "الثاء",
+      "base_without_dots": "ٮ",
+      "correct_dot_count": 3,
+      "correct_dot_position": "above",
+      "correct_dot_position_ar": "فوق",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الثاء",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يركضُ",
+        "الحصانُ"
+      ],
+      "correct_order": [
+        "الحصانُ",
+        "يركضُ"
+      ],
+      "full_sentence": "الحصانُ يركضُ.",
+      "hint_image": "horse_run",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الحصانُ يركضُ.",
+        "الجملُ في الصحراء.",
+        "الأسدُ كبيرٌ."
+      ],
+      "images": [
+        "camel_desert",
+        "horse_run",
+        "big_lion"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 0,
+        "2": 2
+      },
+      "unit": 1,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

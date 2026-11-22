@@ -1,0 +1,526 @@
+{
+  "letter": "ر",
+  "exported_at": "2026-11-22T09:44:07.803139",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـر",
+      "instruction": "تتبع حرف الراء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـر",
+      "instruction": "تتبع حرف الراء في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "word": "روضة",
+      "word_voweled": "رَوْضَةٌ",
+      "image_key": "garden",
+      "correct_answer": "ر",
+      "choices": [
+        "ر",
+        "ز",
+        "ن",
+        "ح"
+      ],
+      "instruction": "صل الصورة بحرف الراء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "word": "رسالة",
+      "word_voweled": "رِسَالَةٌ",
+      "image_key": "letter",
+      "correct_answer": "ر",
+      "choices": [
+        "ن",
+        "ر",
+        "ا",
+        "ب"
+      ],
+      "instruction": "صل الصورة بحرف الراء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "grid": [
+        "ظ",
+        "ك",
+        "ف",
+        "ر",
+        "ز",
+        "ا",
+        "خ",
+        "ر",
+        "ث",
+        "ه",
+        "ح",
+        "ر",
+        "ز",
+        "م",
+        "ط",
+        "ر",
+        "ط",
+        "ر",
+        "ش",
+        "ر"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        3,
+        7,
+        11,
+        15,
+        17,
+        19
+      ],
+      "instruction": "ابحث عن حرف الراء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ز"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "grid": [
+        "ر",
+        "خ",
+        "ر",
+        "ت",
+        "ص",
+        "ذ",
+        "س",
+        "ن",
+        "ر",
+        "ج",
+        "ذ",
+        "ا",
+        "ظ",
+        "ر",
+        "ي",
+        "ف",
+        "خ",
+        "ه",
+        "ز",
+        "ق"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        2,
+        8,
+        13
+      ],
+      "instruction": "ابحث عن حرف الراء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ز"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "forms": {
+        "isolated": "ر",
+        "initial": "ر",
+        "medial": "ـر",
+        "final": "ـر"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "روضة",
+          "voweled": "رَوْضَةٌ",
+          "image_key": "garden",
+          "position": "start",
+          "syllables": [
+            "رَوْ",
+            "ضَةٌ"
+          ]
+        },
+        "medial": {
+          "word": "برتقال",
+          "voweled": "بُرْتُقَالٌ",
+          "image_key": "orange",
+          "position": "middle",
+          "syllables": [
+            "بُرْ",
+            "تُ",
+            "قَا",
+            "لٌ"
+          ]
+        },
+        "final": {
+          "word": "قمر",
+          "voweled": "قَمَرٌ",
+          "image_key": "moon",
+          "position": "end",
+          "syllables": [
+            "قَ",
+            "مَرٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الراء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "ر",
+      "choices": [
+        "ر",
+        "هـ",
+        "و"
+      ],
+      "example_word": "رمانة",
+      "example_image": "pomegranate",
+      "instruction": "اختر الشكل الصحيح لحرف الراء في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "رجل",
+      "word_voweled": "رَجُلٌ",
+      "image_key": "man",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الراء في كلمة (رَجُلٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "رجل",
+      "word_voweled": "رَجُلٌ",
+      "image_key": "man",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الراء في كلمة (رَجُلٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ر",
+      "word": "طير",
+      "word_voweled": "طَيْرٌ",
+      "image_key": "bird",
+      "scrambled_letters": [
+        "ر",
+        "ي",
+        "ط"
+      ],
+      "correct_order": [
+        "ط",
+        "ي",
+        "ر"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ر",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "image_key": "moon",
+      "scrambled_letters": [
+        "ق",
+        "ر",
+        "م"
+      ],
+      "correct_order": [
+        "ق",
+        "م",
+        "ر"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ر",
+      "word": "رسالة",
+      "word_voweled": "رِسَالَةٌ",
+      "word_with_blank": "_ِسَالَةٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ر",
+      "hint_image": "letter",
+      "image_key": "letter",
+      "choices": [
+        "ر",
+        "ز",
+        "د"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ر",
+      "word": "رأس",
+      "word_voweled": "رَأْسٌ",
+      "word_with_blank": "_َأْسٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ر",
+      "hint_image": "head",
+      "image_key": "head",
+      "choices": [
+        "ح",
+        "ز",
+        "ر"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "word": "قمر",
+      "word_voweled": "قَمَرٌ",
+      "word_with_blank": "قَمَ _",
+      "word_with_blank_plain": "قم _",
+      "correct_letter": "ر",
+      "position_index": 2,
+      "hint_image": "moon",
+      "choices": [
+        "ر",
+        "ذ",
+        "ز"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "word": "برتقال",
+      "word_voweled": "بُرْتُقَالٌ",
+      "word_with_blank": "بُ _ ْتُقَالٌ",
+      "word_with_blank_plain": "ب _ تقال",
+      "correct_letter": "ر",
+      "position_index": 1,
+      "hint_image": "orange",
+      "choices": [
+        "ي",
+        "ز",
+        "ر"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "word": "رمانة",
+      "word_voweled": "رُمَّانَةٌ",
+      "image_key": "pomegranate",
+      "letter_position": "start",
+      "letter_position_ar": "أول الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "أول الكلمة",
+      "instruction": "أين يقع حرف الراء في كلمة (رمانة)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ر",
+      "target_letter_name": "الراء",
+      "odd_letter": "ز",
+      "odd_letter_name": "الزاي",
+      "items": [
+        {
+          "word": "رسالة",
+          "word_voweled": "رِسَالَةٌ",
+          "image_key": "letter",
+          "starts_with": "ر"
+        },
+        {
+          "word": "روضة",
+          "word_voweled": "رَوْضَةٌ",
+          "image_key": "garden",
+          "starts_with": "ر"
+        },
+        {
+          "word": "زيتون",
+          "word_voweled": "زَيْتُونٌ",
+          "image_key": "olive",
+          "starts_with": "ز"
+        },
+        {
+          "word": "رمانة",
+          "word_voweled": "رُمَّانَةٌ",
+          "image_key": "pomegranate",
+          "starts_with": "ر"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "زيتون",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الراء",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ر",
+      "letter_name": "الراء",
+      "base_without_dots": "ر",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الراء",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ر",
+        "ر"
+      ],
+      "categories": {
+        "ر": []
+      },
+      "target_letters": [
+        "ر"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الراء)",
+      "difficulty": 1
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يعوي",
+        "الذئبُ"
+      ],
+      "correct_order": [
+        "الذئبُ",
+        "يعوي"
+      ],
+      "full_sentence": "الذئبُ يعوي.",
+      "hint_image": "wolf_howl",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "في",
+        "البحر",
+        "السمكةُ"
+      ],
+      "correct_order": [
+        "السمكةُ",
+        "في",
+        "البحر"
+      ],
+      "full_sentence": "السمكةُ في البحر.",
+      "hint_image": "fish_sea",
+      "unit": 2,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 3
+    }
+  ]
+}

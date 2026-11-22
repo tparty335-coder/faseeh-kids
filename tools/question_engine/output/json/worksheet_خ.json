@@ -1,0 +1,507 @@
+{
+  "letter": "خ",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "خ",
+      "instruction": "تتبع حرف الخاء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـخـ",
+      "instruction": "تتبع حرف الخاء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "word": "خروف",
+      "word_voweled": "خَرُوفٌ",
+      "image_key": "sheep",
+      "correct_answer": "خ",
+      "choices": [
+        "ه",
+        "ف",
+        "س",
+        "خ"
+      ],
+      "instruction": "صل الصورة بحرف الخاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "word": "خزانة",
+      "word_voweled": "خِزَانَةٌ",
+      "image_key": "closet",
+      "correct_answer": "خ",
+      "choices": [
+        "ز",
+        "خ",
+        "ح",
+        "ب"
+      ],
+      "instruction": "صل الصورة بحرف الخاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "grid": [
+        "ذ",
+        "خ",
+        "ق",
+        "ح",
+        "ف",
+        "خ",
+        "ح",
+        "ر",
+        "ف",
+        "و",
+        "ح",
+        "ز",
+        "خ",
+        "ل",
+        "خ",
+        "غ",
+        "د",
+        "خ",
+        "خ",
+        "ظ"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        1,
+        5,
+        12,
+        14,
+        17,
+        18
+      ],
+      "instruction": "ابحث عن حرف الخاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ج",
+        "ح"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "grid": [
+        "خ",
+        "ص",
+        "و",
+        "ب",
+        "ش",
+        "ه",
+        "ج",
+        "ع",
+        "ع",
+        "خ",
+        "خ",
+        "ع",
+        "م",
+        "ذ",
+        "ح",
+        "ج",
+        "ج",
+        "ل",
+        "خ",
+        "ب"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        9,
+        10,
+        18
+      ],
+      "instruction": "ابحث عن حرف الخاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ج",
+        "ح"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "خ",
+      "choices": [
+        "ـخـ",
+        "خ",
+        "ـخ"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الخاء في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـخ",
+      "choices": [
+        "ـخ",
+        "خـ",
+        "ـخـ"
+      ],
+      "example_word": "مطبخ",
+      "example_image": "kitchen",
+      "instruction": "اختر الشكل الصحيح لحرف الخاء في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "خروف",
+      "word_voweled": "خَرُوفٌ",
+      "image_key": "sheep",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الخاء في كلمة (خَرُوفٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "خروف",
+      "word_voweled": "خَرُوفٌ",
+      "image_key": "sheep",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الخاء في كلمة (خَرُوفٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "خ",
+      "word": "مطبخ",
+      "word_voweled": "مَطْبَخٌ",
+      "image_key": "kitchen",
+      "scrambled_letters": [
+        "خ",
+        "ب",
+        "م",
+        "ط"
+      ],
+      "correct_order": [
+        "م",
+        "ط",
+        "ب",
+        "خ"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "خ",
+      "word": "شيخ",
+      "word_voweled": "شَيْخٌ",
+      "image_key": "elder",
+      "scrambled_letters": [
+        "خ",
+        "ش",
+        "ي"
+      ],
+      "correct_order": [
+        "ش",
+        "ي",
+        "خ"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "خ",
+      "word": "خزانة",
+      "word_voweled": "خِزَانَةٌ",
+      "image_key": "closet",
+      "letters_given": [
+        "ة",
+        "ن",
+        "ا",
+        "خ",
+        "ج",
+        "ز",
+        "ح"
+      ],
+      "blank_boxes": 5,
+      "correct_word": "خزانة",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 4
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "خ",
+      "word": "خزانة",
+      "word_voweled": "خِزَانَةٌ",
+      "word_with_blank": "_ِزَانَةٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "خ",
+      "hint_image": "closet",
+      "image_key": "closet",
+      "choices": [
+        "ج",
+        "خ",
+        "ح"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "word": "مخبز",
+      "word_voweled": "مَخْبَزٌ",
+      "word_with_blank": "مَ _ ْبَزٌ",
+      "word_with_blank_plain": "م _ بز",
+      "correct_letter": "خ",
+      "position_index": 1,
+      "hint_image": "bakery",
+      "choices": [
+        "خ",
+        "ح",
+        "ج"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "word": "شيخ",
+      "word_voweled": "شَيْخٌ",
+      "word_with_blank": "شَيْ _",
+      "word_with_blank_plain": "شي _",
+      "correct_letter": "خ",
+      "position_index": 2,
+      "hint_image": "elder",
+      "choices": [
+        "ج",
+        "ح",
+        "خ"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "خ",
+      "target_letter_name": "الخاء",
+      "odd_letter": "ج",
+      "odd_letter_name": "الجيم",
+      "items": [
+        {
+          "word": "خبز",
+          "word_voweled": "خُبْزٌ",
+          "image_key": "bread",
+          "starts_with": "خ"
+        },
+        {
+          "word": "جمل",
+          "word_voweled": "جَمَلٌ",
+          "image_key": "camel",
+          "starts_with": "ج"
+        },
+        {
+          "word": "خيمة",
+          "word_voweled": "خَيْمَةٌ",
+          "image_key": "tent",
+          "starts_with": "خ"
+        },
+        {
+          "word": "خزانة",
+          "word_voweled": "خِزَانَةٌ",
+          "image_key": "closet",
+          "starts_with": "خ"
+        }
+      ],
+      "correct_odd_index": 1,
+      "correct_answer": "جمل",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الخاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "خ",
+      "letter_name": "الخاء",
+      "word": "مطبخ",
+      "word_voweled": "مَطْبَخٌ",
+      "image_key": "kitchen",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف الخاء في كلمة (مطبخ)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ح",
+      "choices": [
+        "خ",
+        "ح",
+        "ج"
+      ],
+      "correct_answer": "خ",
+      "hint_word": "خضار",
+      "hint_word_voweled": "خُضَارٌ",
+      "hint_image": "vegetables",
+      "instruction": "انظر إلى الصورة (خضار) واختر الحرف المناسب لجسم الحرف (ح)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ح",
+      "choices": [
+        "خ",
+        "ح",
+        "ج"
+      ],
+      "correct_answer": "خ",
+      "hint_word": "خروف",
+      "hint_word_voweled": "خَرُوفٌ",
+      "hint_image": "sheep",
+      "instruction": "انظر إلى الصورة (خروف) واختر الحرف المناسب لجسم الحرف (ح)",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الجملُ في ____.",
+      "choices": [
+        "الأسدُ",
+        "يركضُ",
+        "الصحراء"
+      ],
+      "correct_word": "الصحراء",
+      "hint_image": "camel_desert",
+      "full_sentence": "الجملُ في الصحراء.",
+      "unit": 1,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "البطةُ تسبحُ.",
+        "الحصانُ يركضُ.",
+        "الجملُ في الصحراء."
+      ],
+      "images": [
+        "camel_desert",
+        "horse_run",
+        "duck_swim"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "unit": 1,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+{
+  "letter": "ح",
+  "exported_at": "2026-11-22T09:44:07.793565",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ح",
+      "instruction": "تتبع حرف الحاء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "display_form": "ح",
+      "instruction": "تتبع حرف الحاء في موضع منفصل باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 1
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "word": "حوت",
+      "word_voweled": "حُوتٌ",
+      "image_key": "whale",
+      "correct_answer": "ح",
+      "choices": [
+        "ض",
+        "ح",
+        "ن",
+        "ط"
+      ],
+      "instruction": "صل الصورة بحرف الحاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "word": "حصان",
+      "word_voweled": "حِصَانٌ",
+      "image_key": "horse",
+      "correct_answer": "ح",
+      "choices": [
+        "ض",
+        "ص",
+        "ه",
+        "ح"
+      ],
+      "instruction": "صل الصورة بحرف الحاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "grid": [
+        "ج",
+        "ظ",
+        "ح",
+        "ح",
+        "و",
+        "ح",
+        "ح",
+        "ص",
+        "ه",
+        "ك",
+        "خ",
+        "ص",
+        "ا",
+        "خ",
+        "ك",
+        "ح",
+        "ط",
+        "ن",
+        "خ",
+        "ط"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        2,
+        3,
+        5,
+        6,
+        15
+      ],
+      "instruction": "ابحث عن حرف الحاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ج",
+        "خ"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "grid": [
+        "ح",
+        "ح",
+        "ا",
+        "ر",
+        "ص",
+        "خ",
+        "م",
+        "غ",
+        "ي",
+        "ل",
+        "و",
+        "ح",
+        "ي",
+        "ف",
+        "ش",
+        "ح",
+        "ع",
+        "ب",
+        "ظ",
+        "ت"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        1,
+        11,
+        15
+      ],
+      "instruction": "ابحث عن حرف الحاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ج",
+        "خ"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "حـ",
+      "choices": [
+        "ـحـ",
+        "ـح",
+        "حـ"
+      ],
+      "example_word": "حصان",
+      "example_image": "horse",
+      "instruction": "اختر الشكل الصحيح لحرف الحاء في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "forms": {
+        "isolated": "ح",
+        "initial": "حـ",
+        "medial": "ـحـ",
+        "final": "ـح"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "حلوى",
+          "voweled": "حَلْوَى",
+          "image_key": "candy",
+          "position": "start",
+          "syllables": [
+            "حَلْ",
+            "وَى"
+          ]
+        },
+        "medial": {
+          "word": "محفظة",
+          "voweled": "مَحْفَظَةٌ",
+          "image_key": "bag",
+          "position": "middle",
+          "syllables": [
+            "مَحْ",
+            "فَ",
+            "ظَةٌ"
+          ]
+        },
+        "final": {
+          "word": "تفاح",
+          "voweled": "تُفَّاحٌ",
+          "image_key": "apples",
+          "position": "end",
+          "syllables": [
+            "تُفْ",
+            "فَا",
+            "حٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الحاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "حصان",
+      "word_voweled": "حَصَانٌ",
+      "image_key": "horse",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الحاء في كلمة (حَصَانٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "حصان",
+      "word_voweled": "حَصَانٌ",
+      "image_key": "horse",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الحاء في كلمة (حَصَانٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ح",
+      "word": "حلوى",
+      "word_voweled": "حَلْوَى",
+      "image_key": "candy",
+      "scrambled_letters": [
+        "و",
+        "ل",
+        "ى",
+        "ح"
+      ],
+      "correct_order": [
+        "ح",
+        "ل",
+        "و",
+        "ى"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ح",
+      "word": "مسبح",
+      "word_voweled": "مَسْبَحٌ",
+      "image_key": "pool",
+      "scrambled_letters": [
+        "م",
+        "ب",
+        "ح",
+        "س"
+      ],
+      "correct_order": [
+        "م",
+        "س",
+        "ب",
+        "ح"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ح",
+      "word": "حلوى",
+      "word_voweled": "حَلْوَى",
+      "word_with_blank": "_َلْوَى",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ح",
+      "hint_image": "candy",
+      "image_key": "candy",
+      "choices": [
+        "ج",
+        "ح",
+        "خ"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ح",
+      "word": "حوت",
+      "word_voweled": "حُوتٌ",
+      "word_with_blank": "_ُوتٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ح",
+      "hint_image": "whale",
+      "image_key": "whale",
+      "choices": [
+        "ح",
+        "خ",
+        "ج"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_middle",
+      "type_ar": "اكتب الحرف الأوسط الناقص",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "word": "محفظة",
+      "word_voweled": "مَحْفَظَةٌ",
+      "word_with_blank": "مَ _ ْفَظَةٌ",
+      "word_with_blank_plain": "م _ فظة",
+      "correct_letter": "ح",
+      "position_index": 1,
+      "hint_image": "bag",
+      "choices": [
+        "ج",
+        "خ",
+        "ح"
+      ],
+      "instruction": "اختر الحرف الأوسط الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "word": "تفاح",
+      "word_voweled": "تُفَّاحٌ",
+      "word_with_blank": "تُفَّا _",
+      "word_with_blank_plain": "تفا _",
+      "correct_letter": "ح",
+      "position_index": 3,
+      "hint_image": "apples",
+      "choices": [
+        "خ",
+        "ج",
+        "ح"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ح",
+      "target_letter_name": "الحاء",
+      "odd_letter": "خ",
+      "odd_letter_name": "الخاء",
+      "items": [
+        {
+          "word": "خبز",
+          "word_voweled": "خُبْزٌ",
+          "image_key": "bread",
+          "starts_with": "خ"
+        },
+        {
+          "word": "حصان",
+          "word_voweled": "حِصَانٌ",
+          "image_key": "horse",
+          "starts_with": "ح"
+        },
+        {
+          "word": "حمار",
+          "word_voweled": "حِمَارٌ",
+          "image_key": "donkey",
+          "starts_with": "ح"
+        },
+        {
+          "word": "حلوى",
+          "word_voweled": "حَلْوَى",
+          "image_key": "candy",
+          "starts_with": "ح"
+        }
+      ],
+      "correct_odd_index": 0,
+      "correct_answer": "خبز",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الحاء",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ح"
+      ],
+      "categories": {
+        "ح": []
+      },
+      "items_to_sort": [
+        {
+          "word": "حوت",
+          "word_voweled": "حُوتٌ",
+          "image_key": "whale",
+          "correct_letter": "ح",
+          "correct_category": "ح"
+        },
+        {
+          "word": "حصان",
+          "word_voweled": "حِصَانٌ",
+          "image_key": "horse",
+          "correct_letter": "ح",
+          "correct_category": "ح"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الحاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ح",
+      "choices": [
+        "ح",
+        "خ",
+        "ج"
+      ],
+      "correct_answer": "ح",
+      "hint_word": "حمار",
+      "hint_word_voweled": "حِمَارٌ",
+      "hint_image": "donkey",
+      "instruction": "انظر إلى الصورة (حمار) واختر الحرف المناسب لجسم الحرف (ح)",
+      "difficulty": 2
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ح",
+      "letter_name": "الحاء",
+      "base_without_dots": "ح",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الحاء",
+      "difficulty": 1
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "البطةُ تسبحُ.",
+        "الأسدُ كبيرٌ.",
+        "الحصانُ يركضُ."
+      ],
+      "images": [
+        "horse_run",
+        "big_lion",
+        "duck_swim"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "unit": 1,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "تسبحُ",
+        "البطةُ"
+      ],
+      "correct_order": [
+        "البطةُ",
+        "تسبحُ"
+      ],
+      "full_sentence": "البطةُ تسبحُ.",
+      "hint_image": "duck_swim",
+      "unit": 1,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

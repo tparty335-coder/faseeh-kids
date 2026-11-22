@@ -1,0 +1,517 @@
+{
+  "letter": "و",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـو",
+      "instruction": "تتبع حرف الواو في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "و",
+      "instruction": "تتبع حرف الواو في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "word": "وجه",
+      "word_voweled": "وَجْهٌ",
+      "image_key": "face",
+      "correct_answer": "و",
+      "choices": [
+        "ك",
+        "ع",
+        "ض",
+        "و"
+      ],
+      "instruction": "صل الصورة بحرف الواو",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "word": "ولد",
+      "word_voweled": "وَلَدٌ",
+      "image_key": "boy",
+      "correct_answer": "و",
+      "choices": [
+        "ش",
+        "ع",
+        "و",
+        "م"
+      ],
+      "instruction": "صل الصورة بحرف الواو",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "و",
+      "letter_name": "الواو",
+      "grid": [
+        "ح",
+        "ر",
+        "خ",
+        "و",
+        "ا",
+        "و",
+        "ا",
+        "و",
+        "ش",
+        "ا",
+        "ر",
+        "ن",
+        "ز",
+        "ه",
+        "ا",
+        "ق",
+        "و",
+        "و",
+        "ر",
+        "ر"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        3,
+        5,
+        7,
+        16,
+        17
+      ],
+      "instruction": "ابحث عن حرف الواو ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ا",
+        "ر"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "و",
+      "letter_name": "الواو",
+      "grid": [
+        "خ",
+        "ر",
+        "خ",
+        "ر",
+        "ع",
+        "ر",
+        "ا",
+        "و",
+        "ر",
+        "و",
+        "ا",
+        "ذ",
+        "و",
+        "و",
+        "و",
+        "ز",
+        "ا",
+        "غ",
+        "ج",
+        "غ"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        7,
+        9,
+        12,
+        13,
+        14
+      ],
+      "instruction": "ابحث عن حرف الواو ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ا",
+        "ر"
+      ],
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـو",
+      "choices": [
+        "ـو",
+        "ـز",
+        "ـذ"
+      ],
+      "example_word": "تلفاز",
+      "example_image": "tv",
+      "instruction": "اختر الشكل الصحيح لحرف الواو في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "و",
+      "letter_name": "الواو",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـو",
+      "choices": [
+        "ـصـ",
+        "ـو",
+        "ـبـ"
+      ],
+      "example_word": "قوس",
+      "example_image": "bow",
+      "instruction": "اختر الشكل الصحيح لحرف الواو في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "و",
+      "letter_name": "الواو",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "وردة",
+      "word_voweled": "وَرْدَةٌ",
+      "image_key": "rose",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الواو في كلمة (وَرْدَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "و",
+      "letter_name": "الواو",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "وردة",
+      "word_voweled": "وَرْدَةٌ",
+      "image_key": "rose",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الواو في كلمة (وَرْدَةٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "و",
+      "word": "ضوء",
+      "word_voweled": "ضَوْءٌ",
+      "image_key": "light",
+      "scrambled_letters": [
+        "ض",
+        "ء",
+        "و"
+      ],
+      "correct_order": [
+        "ض",
+        "و",
+        "ء"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "و",
+      "word": "جدول",
+      "word_voweled": "جَدْوَلٌ",
+      "image_key": "schedule",
+      "scrambled_letters": [
+        "ل",
+        "و",
+        "د",
+        "ج"
+      ],
+      "correct_order": [
+        "ج",
+        "د",
+        "و",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "و",
+      "word": "جدول",
+      "word_voweled": "جَدْوَلٌ",
+      "image_key": "schedule",
+      "letters_given": [
+        "ج",
+        "ا",
+        "ل",
+        "د",
+        "ر",
+        "و"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "جدول",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "و",
+      "word": "جدول",
+      "word_voweled": "جَدْوَلٌ",
+      "image_key": "schedule",
+      "letters_given": [
+        "ل",
+        "ج",
+        "ر",
+        "د",
+        "ا",
+        "و"
+      ],
+      "blank_boxes": 4,
+      "correct_word": "جدول",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 3
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "و",
+      "letter_name": "الواو",
+      "word": "وسادة",
+      "word_voweled": "وِسَادَةٌ",
+      "word_with_blank": "_ ِسَادَةٌ",
+      "word_with_blank_plain": "_ سادة",
+      "correct_letter": "و",
+      "hint_image": "pillow",
+      "choices": [
+        "ا",
+        "ر",
+        "و"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "و",
+      "letter_name": "الواو",
+      "word": "تلفاز",
+      "word_voweled": "تِلْفَازٌ",
+      "word_with_blank": "تِلْفَا _",
+      "word_with_blank_plain": "تلفا _",
+      "correct_letter": "و",
+      "position_index": 4,
+      "hint_image": "tv",
+      "choices": [
+        "ا",
+        "ر",
+        "و"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "و",
+      "target_letter_name": "الواو",
+      "odd_letter": "ا",
+      "odd_letter_name": "الألف",
+      "items": [
+        {
+          "word": "وسادة",
+          "word_voweled": "وِسَادَةٌ",
+          "image_key": "pillow",
+          "starts_with": "و"
+        },
+        {
+          "word": "وردة",
+          "word_voweled": "وَرْدَةٌ",
+          "image_key": "rose",
+          "starts_with": "و"
+        },
+        {
+          "word": "أفعى",
+          "word_voweled": "أَفْعَى",
+          "image_key": "snake",
+          "starts_with": "ا"
+        },
+        {
+          "word": "وجه",
+          "word_voweled": "وَجْهٌ",
+          "image_key": "face",
+          "starts_with": "و"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "أفعى",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الواو",
+      "difficulty": 2
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "و",
+      "target_letter_name": "الواو",
+      "odd_letter": "ا",
+      "odd_letter_name": "الألف",
+      "items": [
+        {
+          "word": "أسد",
+          "word_voweled": "أَسَدٌ",
+          "image_key": "lion",
+          "starts_with": "ا"
+        },
+        {
+          "word": "وجه",
+          "word_voweled": "وَجْهٌ",
+          "image_key": "face",
+          "starts_with": "و"
+        },
+        {
+          "word": "وردة",
+          "word_voweled": "وَرْدَةٌ",
+          "image_key": "rose",
+          "starts_with": "و"
+        },
+        {
+          "word": "وسادة",
+          "word_voweled": "وِسَادَةٌ",
+          "image_key": "pillow",
+          "starts_with": "و"
+        }
+      ],
+      "correct_odd_index": 0,
+      "correct_answer": "أسد",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الواو",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "و",
+      "letter_b": "ا",
+      "letter_a_name": "الواو",
+      "letter_b_name": "الألف",
+      "difference_ar": "الواو ليس له نقاط، والألف ليس له نقاط",
+      "choices": [
+        "و",
+        "ا"
+      ],
+      "instruction": "ما الفرق بين حرفي الواو والألف؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "و",
+      "letter_b": "ر",
+      "letter_a_name": "الواو",
+      "letter_b_name": "الراء",
+      "difference_ar": "الواو ليس له نقاط، والراء ليس لها نقاط",
+      "choices": [
+        "و",
+        "ر"
+      ],
+      "instruction": "ما الفرق بين حرفي الواو والراء؟",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "حامضٌ",
+        "الليمونُ"
+      ],
+      "correct_order": [
+        "الليمونُ",
+        "حامضٌ"
+      ],
+      "full_sentence": "الليمونُ حامضٌ.",
+      "hint_image": "sour_lemon",
+      "unit": 4,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "الموزُ ____.",
+      "choices": [
+        "الكلبُ",
+        "أصفرُ",
+        "الياسمينُ"
+      ],
+      "correct_word": "أصفرُ",
+      "hint_image": "yellow_banana",
+      "full_sentence": "الموزُ أصفرُ.",
+      "unit": 4,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}

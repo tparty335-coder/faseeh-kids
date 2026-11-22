@@ -1,0 +1,475 @@
+{
+  "letter": "ط",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـط",
+      "instruction": "تتبع حرف الطاء في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـطـ",
+      "instruction": "تتبع حرف الطاء في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "طاولة",
+      "word_voweled": "طَاوِلَةٌ",
+      "image_key": "table",
+      "correct_answer": "ط",
+      "choices": [
+        "ط",
+        "س",
+        "ر",
+        "و"
+      ],
+      "instruction": "صل الصورة بحرف الطاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "طفل",
+      "word_voweled": "طِفْلٌ",
+      "image_key": "child",
+      "correct_answer": "ط",
+      "choices": [
+        "و",
+        "ب",
+        "ط",
+        "س"
+      ],
+      "instruction": "صل الصورة بحرف الطاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "grid": [
+        "ح",
+        "و",
+        "ط",
+        "ي",
+        "ط",
+        "ط",
+        "ق",
+        "م",
+        "ه",
+        "ن",
+        "خ",
+        "د",
+        "ب",
+        "ط",
+        "س",
+        "ط",
+        "ث",
+        "د",
+        "ق",
+        "ط"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        2,
+        4,
+        5,
+        13,
+        15,
+        19
+      ],
+      "instruction": "ابحث عن حرف الطاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ظ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "grid": [
+        "ش",
+        "ط",
+        "ط",
+        "ظ",
+        "ك",
+        "ث",
+        "ص",
+        "ط",
+        "ص",
+        "ط",
+        "ي",
+        "خ",
+        "م",
+        "ق",
+        "ث",
+        "ط",
+        "ط",
+        "ت",
+        "ي",
+        "ي"
+      ],
+      "grid_size": 20,
+      "target_count": 6,
+      "correct_positions": [
+        1,
+        2,
+        7,
+        9,
+        15,
+        16
+      ],
+      "instruction": "ابحث عن حرف الطاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ظ"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "correct_form": "ـطـ",
+      "choices": [
+        "طـ",
+        "ـطـ",
+        "ـط"
+      ],
+      "example_word": "قطط",
+      "example_image": "cats",
+      "instruction": "اختر الشكل الصحيح لحرف الطاء في وسط الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "position": "isolated",
+      "position_ar": "منفصل",
+      "correct_form": "ط",
+      "choices": [
+        "ـطـ",
+        "ط",
+        "طـ"
+      ],
+      "example_word": null,
+      "example_image": null,
+      "instruction": "اختر الشكل الصحيح لحرف الطاء في منفصل",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "طائر",
+      "word_voweled": "طَائِرٌ",
+      "image_key": "bird",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الطاء في كلمة (طَائِرٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "طائر",
+      "word_voweled": "طَائِرٌ",
+      "image_key": "bird",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الطاء في كلمة (طَائِرٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ط",
+      "word": "طبل",
+      "word_voweled": "طَبْلٌ",
+      "image_key": "drum",
+      "scrambled_letters": [
+        "ل",
+        "ب",
+        "ط"
+      ],
+      "correct_order": [
+        "ط",
+        "ب",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ط",
+      "word": "قط",
+      "word_voweled": "قِطٌّ",
+      "image_key": "cat",
+      "scrambled_letters": [
+        "ط",
+        "ق"
+      ],
+      "correct_order": [
+        "ق",
+        "ط"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ط",
+      "word": "طاولة",
+      "word_voweled": "طَاوِلَةٌ",
+      "image_key": "table",
+      "letters_given": [
+        "ا",
+        "ي",
+        "ط",
+        "ل",
+        "ظ",
+        "ة",
+        "و"
+      ],
+      "blank_boxes": 5,
+      "correct_word": "طاولة",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 4
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ط",
+      "word": "طبل",
+      "word_voweled": "طَبْلٌ",
+      "image_key": "drum",
+      "letters_given": [
+        "ب",
+        "ط",
+        "و",
+        "ظ",
+        "ل"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "طبل",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "قط",
+      "word_voweled": "قِطٌّ",
+      "word_with_blank": "قِ _",
+      "word_with_blank_plain": "ق _",
+      "correct_letter": "ط",
+      "position_index": 1,
+      "hint_image": "cat",
+      "choices": [
+        "ط",
+        "ظ",
+        "ا"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "طفل",
+      "word_voweled": "طِفْلٌ",
+      "word_with_blank": "_ ِفْلٌ",
+      "word_with_blank_plain": "_ فل",
+      "correct_letter": "ط",
+      "hint_image": "child",
+      "choices": [
+        "غ",
+        "ط",
+        "ظ"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "بسط",
+      "word_voweled": "بِسَاطٌ",
+      "image_key": "carpet",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف الطاء في كلمة (بسط)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "word": "قطط",
+      "word_voweled": "قِطَطٌ",
+      "image_key": "cats",
+      "letter_position": "middle",
+      "letter_position_ar": "وسط الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "وسط الكلمة",
+      "instruction": "أين يقع حرف الطاء في كلمة (قطط)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ط",
+        "ط",
+        "ط",
+        "ط"
+      ],
+      "categories": {
+        "ط": []
+      },
+      "target_letters": [
+        "ط"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الطاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "place_dots",
+      "type_ar": "ضع النقاط في مكانها",
+      "letter": "ط",
+      "letter_name": "الطاء",
+      "base_without_dots": "ط",
+      "correct_dot_count": 0,
+      "correct_dot_position": null,
+      "correct_dot_position_ar": "بدون نقاط",
+      "instruction": "ضع النقاط في مكانها الصحيح لتكوين حرف الطاء",
+      "difficulty": 1
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يقفزُ.",
+      "choices": [
+        "الضفدعُ",
+        "ضخمٌ",
+        "يقفزُ"
+      ],
+      "correct_word": "الضفدعُ",
+      "hint_image": "frog_jump",
+      "full_sentence": "الضفدعُ يقفزُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "arrange_sentence",
+      "type_ar": "رتّب كلمات الجملة",
+      "scrambled_words": [
+        "يطيرُ",
+        "الطائرُ"
+      ],
+      "correct_order": [
+        "الطائرُ",
+        "يطيرُ"
+      ],
+      "full_sentence": "الطائرُ يطيرُ.",
+      "hint_image": "bird_fly",
+      "unit": 3,
+      "instruction": "رتّب كلمات الجملة لتكوين جملة صحيحة ومفيدة",
+      "difficulty": 2
+    }
+  ]
+}

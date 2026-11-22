@@ -1,0 +1,524 @@
+{
+  "letter": "ك",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "position": "medial",
+      "position_ar": "وسط الكلمة",
+      "display_form": "ـكـ",
+      "instruction": "تتبع حرف الكاف في موضع وسط الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 3
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "كـ",
+      "instruction": "تتبع حرف الكاف في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "word": "كرة",
+      "word_voweled": "كُرَةٌ",
+      "image_key": "ball",
+      "correct_answer": "ك",
+      "choices": [
+        "ك",
+        "د",
+        "ش",
+        "س"
+      ],
+      "instruction": "صل الصورة بحرف الكاف",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "word": "كبش",
+      "word_voweled": "كَبْشٌ",
+      "image_key": "ram",
+      "correct_answer": "ك",
+      "choices": [
+        "ك",
+        "س",
+        "ا",
+        "ه"
+      ],
+      "instruction": "صل الصورة بحرف الكاف",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "grid": [
+        "ك",
+        "خ",
+        "خ",
+        "ظ",
+        "ك",
+        "ز",
+        "م",
+        "ع",
+        "ظ",
+        "ر",
+        "ص",
+        "ت",
+        "ا",
+        "ا",
+        "ه",
+        "ا",
+        "ك",
+        "ذ",
+        "ك",
+        "ث"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        0,
+        4,
+        16,
+        18
+      ],
+      "instruction": "ابحث عن حرف الكاف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ل"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "grid": [
+        "ل",
+        "ر",
+        "ل",
+        "ا",
+        "ص",
+        "ض",
+        "ل",
+        "ك",
+        "ك",
+        "د",
+        "ض",
+        "د",
+        "ل",
+        "ك",
+        "ض",
+        "ت",
+        "ك",
+        "ح",
+        "ج",
+        "د"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        7,
+        8,
+        13,
+        16
+      ],
+      "instruction": "ابحث عن حرف الكاف ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ل"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "forms": {
+        "isolated": "ك",
+        "initial": "كـ",
+        "medial": "ـكـ",
+        "final": "ـك"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "كلب",
+          "voweled": "كَلْبٌ",
+          "image_key": "dog",
+          "position": "start",
+          "syllables": [
+            "كَلْ",
+            "بٌ"
+          ]
+        },
+        "medial": {
+          "word": "مكتب",
+          "voweled": "مَكْتَبٌ",
+          "image_key": "desk",
+          "position": "middle",
+          "syllables": [
+            "مَكْ",
+            "تَبٌ"
+          ]
+        },
+        "final": {
+          "word": "ديك",
+          "voweled": "دِيكٌ",
+          "image_key": "rooster",
+          "position": "end",
+          "syllables": [
+            "دِي",
+            "كٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الكاف بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "correct_form": "كـ",
+      "choices": [
+        "كـ",
+        "ـكـ",
+        "ك"
+      ],
+      "example_word": "كلب",
+      "example_image": "dog",
+      "instruction": "اختر الشكل الصحيح لحرف الكاف في أول الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "كلب",
+      "word_voweled": "كَلْبٌ",
+      "image_key": "dog",
+      "choices": [
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الكاف في كلمة (كَلْبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "كلب",
+      "word_voweled": "كَلْبٌ",
+      "image_key": "dog",
+      "choices": [
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الكاف في كلمة (كَلْبٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ك",
+      "word": "ديك",
+      "word_voweled": "دِيكٌ",
+      "image_key": "rooster",
+      "scrambled_letters": [
+        "د",
+        "ك",
+        "ي"
+      ],
+      "correct_order": [
+        "د",
+        "ي",
+        "ك"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ك",
+      "word": "سمك",
+      "word_voweled": "سَمَكٌ",
+      "image_key": "fishes",
+      "scrambled_letters": [
+        "س",
+        "ك",
+        "م"
+      ],
+      "correct_order": [
+        "س",
+        "م",
+        "ك"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ك",
+      "word": "ديك",
+      "word_voweled": "دِيكٌ",
+      "image_key": "rooster",
+      "letters_given": [
+        "ك",
+        "ي",
+        "ع",
+        "د",
+        "ل"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "ديك",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_word",
+      "type_ar": "أكمل الكلمة بالحرف الناقص",
+      "letter": "ك",
+      "word": "كبش",
+      "word_voweled": "كَبْشٌ",
+      "word_with_blank": "_َبْشٌ",
+      "blank_position": 0,
+      "blank_position_ar": "أول",
+      "correct_letter": "ك",
+      "hint_image": "ram",
+      "image_key": "ram",
+      "choices": [
+        "ذ",
+        "ك",
+        "ل"
+      ],
+      "instruction": "أكمل الكلمة بالحرف الناقص المناسب للصورة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "word": "سمك",
+      "word_voweled": "سَمَكٌ",
+      "word_with_blank": "سَمَ _",
+      "word_with_blank_plain": "سم _",
+      "correct_letter": "ك",
+      "position_index": 2,
+      "hint_image": "fishes",
+      "choices": [
+        "ك",
+        "ت",
+        "ل"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "word": "ديك",
+      "word_voweled": "دِيكٌ",
+      "word_with_blank": "دِي _",
+      "word_with_blank_plain": "دي _",
+      "correct_letter": "ك",
+      "position_index": 2,
+      "hint_image": "rooster",
+      "choices": [
+        "ك",
+        "ع",
+        "ل"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "find_letter_position",
+      "type_ar": "أين الحرف في الكلمة؟",
+      "letter": "ك",
+      "letter_name": "الكاف",
+      "word": "سمك",
+      "word_voweled": "سَمَكٌ",
+      "image_key": "fishes",
+      "letter_position": "end",
+      "letter_position_ar": "آخر الكلمة",
+      "choices": [
+        "أول الكلمة",
+        "وسط الكلمة",
+        "آخر الكلمة"
+      ],
+      "correct_answer": "آخر الكلمة",
+      "instruction": "أين يقع حرف الكاف في كلمة (سمك)؟",
+      "difficulty": 2
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ك"
+      ],
+      "categories": {
+        "ك": []
+      },
+      "items_to_sort": [
+        {
+          "word": "كبش",
+          "word_voweled": "كَبْشٌ",
+          "image_key": "ram",
+          "correct_letter": "ك",
+          "correct_category": "ك"
+        },
+        {
+          "word": "كتاب",
+          "word_voweled": "كِتَابٌ",
+          "image_key": "book",
+          "correct_letter": "ك",
+          "correct_category": "ك"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الكاف)",
+      "difficulty": 1
+    },
+    {
+      "type": "sort_similar",
+      "type_ar": "صنّف الحروف المتشابهة",
+      "cards": [
+        "ك",
+        "ك",
+        "ك"
+      ],
+      "categories": {
+        "ك": []
+      },
+      "target_letters": [
+        "ك"
+      ],
+      "instruction": "صنّف الحروف في مجموعاتها المناسبة: (الكاف)",
+      "difficulty": 1
+    },
+    {
+      "type": "choose_from_similar",
+      "type_ar": "اختر الحرف الصحيح من بين المتشابهات",
+      "base_form": "ك",
+      "choices": [
+        "ن",
+        "ل",
+        "ك"
+      ],
+      "correct_answer": "ك",
+      "hint_word": "كرة",
+      "hint_word_voweled": "كُرَةٌ",
+      "hint_image": "ball",
+      "instruction": "انظر إلى الصورة (كرة) واختر الحرف المناسب لجسم الحرف (ك)",
+      "difficulty": 2
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الياسمينُ عطرٌ.",
+        "الكلبُ يلعبُ.",
+        "الموزُ أصفرُ."
+      ],
+      "images": [
+        "yellow_banana",
+        "jasmine_scent",
+        "dog_play"
+      ],
+      "correct_pairs": {
+        "0": 1,
+        "1": 2,
+        "2": 0
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    },
+    {
+      "type": "match_sentence_image",
+      "type_ar": "صل الجملة بالصورة",
+      "sentences": [
+        "الياسمينُ عطرٌ.",
+        "الليمونُ حامضٌ.",
+        "الكلبُ يلعبُ."
+      ],
+      "images": [
+        "dog_play",
+        "sour_lemon",
+        "jasmine_scent"
+      ],
+      "correct_pairs": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "unit": 4,
+      "instruction": "صل كل جملة بالصورة المناسبة لها",
+      "difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "letter": "ظ",
+  "exported_at": "2026-11-22T09:44:07.810533",
+  "total_questions": 22,
+  "questions": [
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "display_form": "ـظ",
+      "instruction": "تتبع حرف الظاء في موضع آخر الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "tracing",
+      "type_ar": "تتبع الحرف",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "position": "initial",
+      "position_ar": "أول الكلمة",
+      "display_form": "ظـ",
+      "instruction": "تتبع حرف الظاء في موضع أول الكلمة باتباع النقاط والأسهم",
+      "start_dot": true,
+      "arrows": true,
+      "practice_rows": 3,
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "correct_answer": "ظ",
+      "choices": [
+        "خ",
+        "و",
+        "ظ",
+        "ق"
+      ],
+      "instruction": "صل الصورة بحرف الظاء",
+      "difficulty": 2
+    },
+    {
+      "type": "matching_img_to_letter",
+      "type_ar": "صل الصورة بالحرف",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "correct_answer": "ظ",
+      "choices": [
+        "ج",
+        "ظ",
+        "س",
+        "ث"
+      ],
+      "instruction": "صل الصورة بحرف الظاء",
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "grid": [
+        "ث",
+        "د",
+        "ر",
+        "ر",
+        "ص",
+        "ض",
+        "ط",
+        "ظ",
+        "ز",
+        "ر",
+        "ا",
+        "م",
+        "ظ",
+        "ع",
+        "ظ",
+        "ح",
+        "ض",
+        "ظ",
+        "ك",
+        "ط"
+      ],
+      "grid_size": 20,
+      "target_count": 4,
+      "correct_positions": [
+        7,
+        12,
+        14,
+        17
+      ],
+      "instruction": "ابحث عن حرف الظاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ط"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "find_and_color",
+      "type_ar": "ابحث عن الحرف ولوّنه",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "grid": [
+        "س",
+        "ط",
+        "ل",
+        "و",
+        "ظ",
+        "ب",
+        "ظ",
+        "ظ",
+        "ظ",
+        "د",
+        "ت",
+        "ج",
+        "ظ",
+        "ع",
+        "ض",
+        "ق",
+        "ص",
+        "ك",
+        "ت",
+        "ش"
+      ],
+      "grid_size": 20,
+      "target_count": 5,
+      "correct_positions": [
+        4,
+        6,
+        7,
+        8,
+        12
+      ],
+      "instruction": "ابحث عن حرف الظاء ولوّنه بلونك المفضل",
+      "similar_distractors": [
+        "ط"
+      ],
+      "difficulty": 2
+    },
+    {
+      "type": "choose_correct_form",
+      "type_ar": "اختر الشكل الصحيح للحرف",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "position": "final",
+      "position_ar": "آخر الكلمة",
+      "correct_form": "ـظ",
+      "choices": [
+        "ـظ",
+        "ـظـ",
+        "ظـ"
+      ],
+      "example_word": "لفظ",
+      "example_image": "word_speak",
+      "instruction": "اختر الشكل الصحيح لحرف الظاء في آخر الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "connect_forms",
+      "type_ar": "وصّل الحرف بموضعه",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "forms": {
+        "isolated": "ظ",
+        "initial": "ظـ",
+        "medial": "ـظـ",
+        "final": "ـظ"
+      },
+      "sample_words": {
+        "initial": {
+          "word": "ظل",
+          "voweled": "ظِلٌّ",
+          "image_key": "shadow",
+          "position": "start",
+          "syllables": [
+            "ظِلٌّ"
+          ]
+        },
+        "medial": {
+          "word": "حظيرة",
+          "voweled": "حَظِيرَةٌ",
+          "image_key": "barn",
+          "position": "middle",
+          "syllables": [
+            "حَ",
+            "ظِي",
+            "رَةٌ"
+          ]
+        },
+        "final": {
+          "word": "لفظ",
+          "voweled": "لَفْظٌ",
+          "image_key": "word_speak",
+          "position": "end",
+          "syllables": [
+            "لَفْ",
+            "ظٌ"
+          ]
+        }
+      },
+      "instruction": "وصّل كل شكل من أشكال حرف الظاء بموضعه الصحيح",
+      "difficulty": 3
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الظاء في كلمة (ظَبْيٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "choose_haraka",
+      "type_ar": "اختر الحركة المناسبة",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "haraka_key": "fatha",
+      "haraka_name": "فتحة",
+      "haraka_symbol": "َ",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "choices": [
+        {
+          "key": "damma",
+          "name": "ضمة",
+          "symbol": "ُ"
+        },
+        {
+          "key": "fatha",
+          "name": "فتحة",
+          "symbol": "َ"
+        },
+        {
+          "key": "kasra",
+          "name": "كسرة",
+          "symbol": "ِ"
+        }
+      ],
+      "correct_answer": "fatha",
+      "instruction": "اختر الحركة المناسبة لحرف الظاء في كلمة (ظَبْيٌ)",
+      "difficulty": 2
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ظ",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "scrambled_letters": [
+        "ب",
+        "ي",
+        "ظ"
+      ],
+      "correct_order": [
+        "ظ",
+        "ب",
+        "ي"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "scramble",
+      "type_ar": "رتّب حروف الكلمة",
+      "letter": "ظ",
+      "word": "ظل",
+      "word_voweled": "ظِلٌّ",
+      "image_key": "shadow",
+      "scrambled_letters": [
+        "ل",
+        "ظ"
+      ],
+      "correct_order": [
+        "ظ",
+        "ل"
+      ],
+      "instruction": "رتّب الحروف لتكوّن الكلمة المناسبة للصورة",
+      "difficulty": 1
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ظ",
+      "word": "حفظ",
+      "word_voweled": "حِفْظٌ",
+      "image_key": "memorize",
+      "letters_given": [
+        "ظ",
+        "ط",
+        "ف",
+        "ح",
+        "ض"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "حفظ",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "word_build",
+      "type_ar": "ركّب الكلمة من حروفها",
+      "letter": "ظ",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "image_key": "gazelle",
+      "letters_given": [
+        "ظ",
+        "ي",
+        "ط",
+        "ب",
+        "ل"
+      ],
+      "blank_boxes": 3,
+      "correct_word": "ظبي",
+      "instruction": "ركّب الكلمة من حروفها واكتبها في المربعات الفارغة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_last",
+      "type_ar": "اكتب الحرف الأخير الناقص",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "word": "لفظ",
+      "word_voweled": "لَفْظٌ",
+      "word_with_blank": "لَفْ _",
+      "word_with_blank_plain": "لف _",
+      "correct_letter": "ظ",
+      "position_index": 2,
+      "hint_image": "word_speak",
+      "choices": [
+        "ص",
+        "ظ",
+        "ط"
+      ],
+      "instruction": "اختر الحرف الأخير الناقص لتكتمل الكلمة",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank_first",
+      "type_ar": "اكتب الحرف الأول الناقص",
+      "letter": "ظ",
+      "letter_name": "الظاء",
+      "word": "ظبي",
+      "word_voweled": "ظَبْيٌ",
+      "word_with_blank": "_ َبْيٌ",
+      "word_with_blank_plain": "_ بي",
+      "correct_letter": "ظ",
+      "hint_image": "gazelle",
+      "choices": [
+        "ب",
+        "ظ",
+        "ط"
+      ],
+      "instruction": "اختر الحرف الأول الناقص لتكتمل الكلمة",
+      "difficulty": 1
+    },
+    {
+      "type": "classify_by_letter",
+      "type_ar": "صنّف الكلمات حسب حرف بدايتها",
+      "letters": [
+        "ظ"
+      ],
+      "categories": {
+        "ظ": []
+      },
+      "items_to_sort": [
+        {
+          "word": "ظل",
+          "word_voweled": "ظِلٌّ",
+          "image_key": "shadow",
+          "correct_letter": "ظ",
+          "correct_category": "ظ"
+        },
+        {
+          "word": "ظبي",
+          "word_voweled": "ظَبْيٌ",
+          "image_key": "gazelle",
+          "correct_letter": "ظ",
+          "correct_category": "ظ"
+        }
+      ],
+      "instruction": "صنّف الكلمات والصور وضع كل منها تحت حرف بدايتها الصحيح (الظاء)",
+      "difficulty": 1
+    },
+    {
+      "type": "odd_one_out",
+      "type_ar": "اختر الكلمة التي لا تبدأ بنفس الحرف",
+      "target_letter": "ظ",
+      "target_letter_name": "الظاء",
+      "odd_letter": "ط",
+      "odd_letter_name": "الطاء",
+      "items": [
+        {
+          "word": "ظل",
+          "word_voweled": "ظِلٌّ",
+          "image_key": "shadow",
+          "starts_with": "ظ"
+        },
+        {
+          "word": "ظرف",
+          "word_voweled": "ظَرْفٌ",
+          "image_key": "envelope",
+          "starts_with": "ظ"
+        },
+        {
+          "word": "طائر",
+          "word_voweled": "طَائِرٌ",
+          "image_key": "bird_fly",
+          "starts_with": "ط"
+        },
+        {
+          "word": "ظبي",
+          "word_voweled": "ظَبْيٌ",
+          "image_key": "gazelle",
+          "starts_with": "ظ"
+        }
+      ],
+      "correct_odd_index": 2,
+      "correct_answer": "طائر",
+      "instruction": "اختر الكلمة التي لا تبدأ بحرف الظاء",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ظ",
+      "letter_b": "ط",
+      "letter_a_name": "الظاء",
+      "letter_b_name": "الطاء",
+      "difference_ar": "الظاء لها نقطة فوق، والطاء ليس لها نقاط",
+      "choices": [
+        "ط",
+        "ظ"
+      ],
+      "instruction": "ما الفرق بين حرفي الظاء والطاء؟",
+      "difficulty": 2
+    },
+    {
+      "type": "spot_difference",
+      "type_ar": "ما الفرق بين الحرفين؟",
+      "letter_a": "ظ",
+      "letter_b": "ط",
+      "letter_a_name": "الظاء",
+      "letter_b_name": "الطاء",
+      "difference_ar": "الظاء لها نقطة فوق، والطاء ليس لها نقاط",
+      "choices": [
+        "ظ",
+        "ط"
+      ],
+      "instruction": "ما الفرق بين حرفي الظاء والطاء؟",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ يتسلقُ.",
+      "choices": [
+        "القردُ",
+        "الضفدعُ",
+        "يقفزُ"
+      ],
+      "correct_word": "القردُ",
+      "hint_image": "monkey_climb",
+      "full_sentence": "القردُ يتسلقُ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    },
+    {
+      "type": "complete_sentence",
+      "type_ar": "أكمل الجملة",
+      "sentence_with_blank": "____ ضخمٌ.",
+      "choices": [
+        "الفيلُ",
+        "يطيرُ",
+        "الضفدعُ"
+      ],
+      "correct_word": "الفيلُ",
+      "hint_image": "big_elephant",
+      "full_sentence": "الفيلُ ضخمٌ.",
+      "unit": 3,
+      "instruction": "اختر الكلمة المناسبة لإكمال الجملة",
+      "difficulty": 2
+    }
+  ]
+}
