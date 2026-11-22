@@ -9,6 +9,7 @@ import '../logic/parent_provider.dart';
 import '../widgets/settings_toggle.dart';
 
 import 'package:faseeh_kids/features/rewards/logic/rewards_provider.dart';
+import 'package:faseeh_kids/features/assessment/logic/assessment_provider.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 
 class ParentDashboardScreen extends ConsumerWidget {
@@ -253,6 +254,103 @@ class ParentDashboardScreen extends ConsumerWidget {
                     ),
                   ),
                 ),
+              ),
+
+              const SizedBox(height: 16),
+
+              // Assessment & Remedial Clinic Card
+              Builder(
+                builder: (context) {
+                  final diag = ref.watch(assessmentDiagnosticsProvider);
+                  final prescription = diag.buildPrescription();
+                  return Card(
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.school_rounded,
+                                color: Color(0xFF0284C7),
+                              ),
+                              const SizedBox(width: 8),
+                              const Expanded(
+                                child: Text(
+                                  'مركز القياس والخطة العلاجية',
+                                  style: TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                '${diag.unitResults.length} / 4 وحدات',
+                                style: const TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF0284C7),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            prescription.summaryAr,
+                            style: const TextStyle(
+                              fontFamily: 'Cairo',
+                              fontSize: 13.5,
+                              height: 1.45,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: [
+                              ElevatedButton.icon(
+                                onPressed: () => context.push(
+                                  AppRouter.assessmentHub,
+                                  extra: 0,
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF0284C7),
+                                  foregroundColor: Colors.white,
+                                ),
+                                icon: const Icon(Icons.quiz_rounded, size: 18),
+                                label: const Text(
+                                  'اختبارات الوحدات',
+                                  style: TextStyle(fontFamily: 'Cairo'),
+                                ),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () => context.push(
+                                  AppRouter.assessmentHub,
+                                  extra: 1,
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFFEA580C),
+                                  foregroundColor: Colors.white,
+                                ),
+                                icon: const Icon(Icons.healing_rounded, size: 18),
+                                label: const Text(
+                                  'عيادة التقوية للضعفاء',
+                                  style: TextStyle(fontFamily: 'Cairo'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
               ),
 
               const SizedBox(height: 24),

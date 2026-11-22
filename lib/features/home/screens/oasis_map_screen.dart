@@ -2,18 +2,38 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:faseeh_kids/core/theme/app_colors.dart';
-import 'package:faseeh_kids/features/home/logic/home_provider.dart';
-import 'package:faseeh_kids/features/home/widgets/oasis_node.dart';
-import 'package:faseeh_kids/features/home/widgets/bottom_nav_bar.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-
 import 'package:go_router/go_router.dart';
-import 'package:faseeh_kids/core/router/app_router.dart';
-import 'package:faseeh_kids/services/audio_manager.dart';
-import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
-import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
+
 import 'package:faseeh_kids/core/providers/purchase_provider.dart';
+import 'package:faseeh_kids/core/router/app_router.dart';
+import 'package:faseeh_kids/core/theme/app_colors.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
+import 'package:faseeh_kids/features/assessment/data/assessment_curriculum_data.dart';
+import 'package:faseeh_kids/features/assessment/logic/assessment_provider.dart';
+import 'package:faseeh_kids/features/assessment/models/assessment_models.dart';
+import 'package:faseeh_kids/features/home/logic/home_provider.dart';
+import 'package:faseeh_kids/features/home/widgets/bottom_nav_bar.dart';
+import 'package:faseeh_kids/features/home/widgets/oasis_node.dart';
+import 'package:faseeh_kids/features/lessons/data/arabic_letters_data.dart';
+import 'package:faseeh_kids/features/lessons/logic/lesson_provider.dart';
+import 'package:faseeh_kids/services/audio_manager.dart';
+
+/// عنصر واحد على خريطة الواحات: إما محطة حرف (١..٢٨) أو بوابة اختبار وحدة (بعد كل ٧ حروف)
+class _OasisMapStep {
+  final String? letterChar;
+  final int? letterIndex;
+  final int? checkpointUnitIndex; // 1..4 بعد كل ٧ حروف
+
+  const _OasisMapStep.letter(this.letterChar, this.letterIndex)
+      : checkpointUnitIndex = null;
+
+  const _OasisMapStep.checkpoint(this.checkpointUnitIndex)
+      : letterChar = null,
+        letterIndex = null;
+
+  bool get isCheckpoint => checkpointUnitIndex != null;
+}
 
 class OasisMapScreen extends ConsumerStatefulWidget {
   const OasisMapScreen({super.key});
@@ -25,8 +45,20 @@ class OasisMapScreen extends ConsumerStatefulWidget {
 class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
   final ScrollController _scrollController = ScrollController();
 
-  // Dynamic: pull all 28 letters from the data source
   List<String> get letters => arabicLetters.map((l) => l.letter).toList();
+
+  /// بناء خطوات الخريطة: ٢٨ حرفاً + ٤ بوابات قياس مستوى (بوابة بعد كل ٧ حروف) = ٣٢ محطة
+  List<_OasisMapStep> get _mapSteps {
+    final steps = <_OasisMapStep>[];
+    final all = letters;
+    for (int i = 0; i < all.length; i++) {
+      steps.add(_OasisMapStep.letter(all[i], i));
+      if ((i + 1) % 7 == 0) {
+        steps.add(_OasisMapStep.checkpoint((i + 1) ~/ 7));
+      }
+    }
+    return steps;
+  }
 
   @override
   void initState() {
@@ -50,24 +82,37 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
     final unlockedUnits = ref.watch(unlockedUnitsProvider);
     final currentUnit = ref.watch(currentUnitProvider);
     final currentIndex = ref.watch(homeNavIndexProvider);
+    final diagnostics = ref.watch(assessmentDiagnosticsProvider);
 
-    final screenWidth = MediaQuery.sizeOf(context).width;
-    const double nodeHeightStep = 125.0;
-    final double totalMapHeight = letters.length * nodeHeightStep + 360.0;
-    final double mapAmplitude = (screenWidth * 0.28).clamp(80.0, 140.0);
+    final screenWidth = context.screenWidth;
+    final isCompact = context.isUltraCompact || context.isSmallPhone;
+    final double nodeSize = (screenWidth * 0.18).clamp(64.0, 96.0);
+    final double checkpointWidth = isCompact ? 156.0 : (context.isTablet ? 210.0 : 184.0);
+    final double checkpointHeight = isCompact ? 62.0 : (context.isTablet ? 76.0 : 68.0);
 
-    // Calculate node coordinates along mathematical S-curve
-    List<Offset> getNodePositions(double width) {
+    final steps = _mapSteps;
+    final double nodeHeightStep = isCompact ? 112.0 : (context.isTablet ? 136.0 : 124.0);
+    final double totalMapHeight = steps.length * nodeHeightStep + 340.0;
+    final double mapAmplitude =
+        (screenWidth * 0.25).clamp(62.0, context.isTablet ? 165.0 : 120.0);
+
+    List<Offset> getStepPositions(double width) {
       final centerX = width / 2;
-      return List.generate(letters.length, (index) {
-        // Starting at 240px from bottom gives letter Alif (index 0) comfortable, prominent visibility
-        final y = totalMapHeight - (index * nodeHeightStep + 240.0);
-        final x = centerX + math.sin(index * 0.75) * mapAmplitude;
+      return List.generate(steps.length, (index) {
+        final step = steps[index];
+        final y = totalMapHeight - (index * nodeHeightStep + 230.0);
+        // بوابات قياس المستوى تتوسط الطريق بوضوح وبروز أنيق
+        final x = step.isCheckpoint
+            ? centerX
+            : centerX + math.sin(index * 0.78) * mapAmplitude;
         return Offset(x, y);
       });
     }
 
-    final positions = getNodePositions(screenWidth);
+    final positions = getStepPositions(screenWidth);
+    final progressValue =
+        letters.isEmpty ? 0.0 : (unlockedUnits.length / letters.length).clamp(0.0, 1.0);
+    final prescription = diagnostics.buildPrescription();
 
     return PopScope(
       canPop: false,
@@ -76,182 +121,404 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
         SystemNavigator.pop();
       },
       child: Scaffold(
-      body: Directionality(
-        textDirection: TextDirection.rtl,
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/backgrounds/desert_path_map.webp'),
-              fit: BoxFit.cover,
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/backgrounds/desert_path_map.webp'),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          child: SafeArea(
-            child: Stack(
-              children: [
-                // Scrollable Geometrically-Mapped Oasis Path
-                SingleChildScrollView(
-                  controller: _scrollController,
-                  physics: const BouncingScrollPhysics(),
-                  padding: const EdgeInsets.only(top: 80, bottom: 140),
-                  child: SizedBox(
-                    height: totalMapHeight,
-                    width: screenWidth,
-                    child: Stack(
-                      children: [
-                        // Custom Painter for the winding desert road path
-                        CustomPaint(
-                          painter: _OasisPathPainter(
-                            positions: positions,
-                            unlockedCount: unlockedUnits.length,
+            child: SafeArea(
+              child: Stack(
+                children: [
+                  // ── مسار الواحات القابل للتمرير (٢٨ حرفاً + ٤ بوابات قياس مستوى) ──
+                  SingleChildScrollView(
+                    controller: _scrollController,
+                    physics: const BouncingScrollPhysics(),
+                    padding: EdgeInsets.only(
+                      top: isCompact ? 76 : 90,
+                      bottom: isCompact ? 120 : 140,
+                    ),
+                    child: SizedBox(
+                      height: totalMapHeight,
+                      width: screenWidth,
+                      child: Stack(
+                        children: [
+                          CustomPaint(
+                            painter: _OasisPathPainter(
+                              positions: positions,
+                              unlockedCount: unlockedUnits.length,
+                            ),
+                            size: Size(screenWidth, totalMapHeight),
                           ),
-                          size: Size(screenWidth, totalMapHeight),
-                        ),
+                          for (int stepIdx = 0; stepIdx < steps.length; stepIdx++)
+                            Builder(
+                              builder: (context) {
+                                final step = steps[stepIdx];
+                                final pos = positions[stepIdx];
 
-                        // Render Oasis Nodes anchored at exact path coordinates
-                        for (int index = 0; index < letters.length; index++) ...[
-                          Builder(
-                            builder: (context) {
-                              final letterChar = letters[index];
-                              final isUnlocked = unlockedUnits.contains(letterChar);
-                              final isCurrent = currentUnit == letterChar;
+                                if (step.isCheckpoint) {
+                                  final unitIdx = step.checkpointUnitIndex!;
+                                  final unitSpec =
+                                      AssessmentCurriculumData.unitByIndex(unitIdx);
+                                  final unitRes = diagnostics.unitResults[unitIdx];
+                                  return Positioned(
+                                    left: (pos.dx - checkpointWidth / 2)
+                                        .clamp(8.0, math.max(8.0, screenWidth - checkpointWidth - 8.0)),
+                                    top: pos.dy - checkpointHeight / 2,
+                                    child: _UnitCheckpointGate(
+                                      unit: unitSpec,
+                                      result: unitRes,
+                                      width: checkpointWidth,
+                                      height: checkpointHeight,
+                                      compact: isCompact,
+                                      onTap: () {
+                                        HapticFeedback.mediumImpact();
+                                        context.push(
+                                          AppRouter.assessmentSession,
+                                          extra: AssessmentSessionArgs(
+                                            mode: AssessmentSessionMode.unitExam,
+                                            unitIndex: unitSpec.unitIndex,
+                                            targetLetters: unitSpec.letters,
+                                            questionCount: 10,
+                                            titleAr: 'اخْتِبَارُ ${unitSpec.titleAr}',
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  );
+                                }
 
-                              NodeStatus status = NodeStatus.locked;
-                              if (isCurrent) {
-                                status = NodeStatus.current;
-                              } else if (isUnlocked) {
-                                status = NodeStatus.unlocked;
-                              }
+                                final letterChar = step.letterChar!;
+                                final letterIndex = step.letterIndex!;
+                                final isUnlocked = unlockedUnits.contains(letterChar);
+                                final isCurrent = currentUnit == letterChar;
 
-                              final pos = positions[index];
-                              final isAccessible = ref.watch(letterAccessProvider(index));
+                                NodeStatus status = NodeStatus.locked;
+                                if (isCurrent) {
+                                  status = NodeStatus.current;
+                                } else if (isUnlocked) {
+                                  status = NodeStatus.unlocked;
+                                }
 
-                              return Positioned(
-                                left: pos.dx - 40.0, // Center 80px width node
-                                top: pos.dy - 40.0,
-                                child: OasisNode(
-                                  letter: letterChar,
-                                  status: status,
-                                  isPremiumLocked: !isAccessible,
-                                  onTap: () {
-                                    if (status != NodeStatus.locked) {
-                                      if (!isAccessible) {
-                                        // Show parent gate before paywall (COPPA compliance)
-                                        context.push(AppRouter.parentGate, extra: AppRouter.paywall);
-                                        return;
+                                final isAccessible =
+                                    ref.watch(letterAccessProvider(letterIndex));
+
+                                return Positioned(
+                                  left: pos.dx - nodeSize / 2,
+                                  top: pos.dy - nodeSize / 2,
+                                  child: OasisNode(
+                                    letter: letterChar,
+                                    status: status,
+                                    isPremiumLocked: !isAccessible,
+                                    onTap: () {
+                                      if (status != NodeStatus.locked) {
+                                        if (!isAccessible) {
+                                          context.push(
+                                            AppRouter.parentGate,
+                                            extra: AppRouter.paywall,
+                                          );
+                                          return;
+                                        }
+
+                                        final letterData = arabicLetters.firstWhere(
+                                          (l) => l.letter == letterChar,
+                                          orElse: () => arabicLetters.first,
+                                        );
+                                        ref
+                                            .read(currentLessonProvider.notifier)
+                                            .setLetter(letterData);
+                                        context.push('/lesson/${letterData.letter}');
+                                      } else {
+                                        AudioManager.instance.playFeedback('try_again');
                                       }
-
-                                      final letterData = arabicLetters.firstWhere(
-                                        (l) => l.letter == letterChar,
-                                        orElse: () => arabicLetters.first,
-                                      );
-                                      ref.read(currentLessonProvider.notifier).setLetter(letterData);
-                                      context.push('/lesson/${letterData.letter}');
-                                    } else {
-                                      AudioManager.instance.playFeedback('try_again');
-                                    }
-                                  },
-                                ).animate().fadeIn(delay: (index * 40).ms, duration: 350.ms),
-                              );
-                            },
-                          ),
+                                    },
+                                  ).animate().fadeIn(
+                                        delay: (math.min(stepIdx, 12) * 35).ms,
+                                        duration: 320.ms,
+                                      ),
+                                );
+                              },
+                            ),
                         ],
-                      ],
+                      ),
                     ),
                   ),
-                ),
 
-                // Top Progress Bar with Parent Gate Button
-                Positioned(
-                  top: 12,
-                  left: 16,
-                  right: 16,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.95),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: AppColors.desertSand.withValues(alpha: 0.5), width: 1.5),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.12),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.family_restroom, color: AppColors.desertSand, size: 26),
-                          tooltip: 'بوابة الآباء',
-                          onPressed: () {
-                            context.push(AppRouter.parentGate);
-                          },
+                  // ── الشريط العلوي المتجاوب (متوازن من 320dp حتى 960dp) ──
+                  Positioned(
+                    top: isCompact ? 8 : 12,
+                    left: 0,
+                    right: 0,
+                    child: ResponsiveContentFrame(
+                      maxWidth: 740,
+                      padding: EdgeInsets.symmetric(horizontal: isCompact ? 10 : 16),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: isCompact ? 10 : 14,
+                          vertical: isCompact ? 7 : 10,
                         ),
-                        const SizedBox(width: 6),
-                        const Text(
-                          'التقدم الكلي',
-                          style: TextStyle(
-                            fontFamily: 'Cairo',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                            color: AppColors.textPrimary,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.96),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: AppColors.desertSand.withValues(alpha: 0.55),
+                            width: 1.5,
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: LinearProgressIndicator(
-                              value: unlockedUnits.length / letters.length,
-                              minHeight: 12,
-                              backgroundColor: Colors.grey.shade200,
-                              valueColor: const AlwaysStoppedAnimation<Color>(AppColors.success),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.12),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
                             ),
-                          ),
+                          ],
                         ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '${((unlockedUnits.length / letters.length) * 100).toInt()}%',
-                          style: const TextStyle(
-                            fontFamily: 'Cairo',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                            color: AppColors.textPrimary,
-                          ),
+                        child: Row(
+                          children: [
+                            IconButton(
+                              padding: EdgeInsets.zero,
+                              constraints: BoxConstraints(
+                                minWidth: isCompact ? 34 : 40,
+                                minHeight: isCompact ? 34 : 40,
+                              ),
+                              icon: Icon(
+                                Icons.family_restroom,
+                                color: AppColors.desertSand,
+                                size: isCompact ? 22 : 26,
+                              ),
+                              tooltip: 'بوابة الآباء',
+                              onPressed: () {
+                                context.push(AppRouter.parentGate);
+                              },
+                            ),
+                            SizedBox(width: isCompact ? 4 : 8),
+                            if (!context.isUltraCompact) ...[
+                              Text(
+                                'التَّقَدُّمُ',
+                                style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: context.scaledFont(14, min: 12, max: 16),
+                                  color: AppColors.textPrimary,
+                                ),
+                              ),
+                              SizedBox(width: isCompact ? 6 : 10),
+                            ],
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: LinearProgressIndicator(
+                                  value: progressValue,
+                                  minHeight: isCompact ? 10 : 12,
+                                  backgroundColor: Colors.grey.shade200,
+                                  valueColor: const AlwaysStoppedAnimation<Color>(
+                                    AppColors.success,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: isCompact ? 6 : 10),
+                            Text(
+                              '${(progressValue * 100).toInt()}%',
+                              style: TextStyle(
+                                fontFamily: 'Cairo',
+                                fontWeight: FontWeight.w900,
+                                fontSize: context.scaledFont(13.5, min: 11.5, max: 16),
+                                color: AppColors.textPrimary,
+                              ),
+                            ),
+                            SizedBox(width: isCompact ? 6 : 10),
+                            // زر الوصول السريع لمركز القياس وعيادة التقوية
+                            Material(
+                              color: prescription.hasDiagnosedWeaknesses
+                                  ? const Color(0xFFEA580C)
+                                  : const Color(0xFF0284C7),
+                              borderRadius: BorderRadius.circular(14),
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(14),
+                                onTap: () => context.push(
+                                  AppRouter.assessmentHub,
+                                  extra: prescription.hasDiagnosedWeaknesses ? 1 : 0,
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: isCompact ? 8 : 12,
+                                    vertical: isCompact ? 6 : 8,
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(
+                                        prescription.hasDiagnosedWeaknesses
+                                            ? Icons.healing_rounded
+                                            : Icons.quiz_rounded,
+                                        color: Colors.white,
+                                        size: isCompact ? 16 : 18,
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        prescription.hasDiagnosedWeaknesses
+                                            ? 'تَقْوِيَةٌ'
+                                            : 'قِيَاسٌ',
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: context.scaledFont(12, min: 10.5, max: 14),
+                                          fontWeight: FontWeight.w900,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ).animate().slideY(begin: -0.6, end: 0, duration: 420.ms),
                     ),
-                  ).animate().slideY(begin: -1.0, end: 0, duration: 500.ms),
-                ),
+                  ),
 
-                // Bottom Navigation Bar
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: OasisBottomNavBar(
-                    currentIndex: currentIndex,
-                    onTap: (index) {
-                      ref.read(homeNavIndexProvider.notifier).state = index;
-                      if (index == 1) {
-                        context.push(AppRouter.rewardsStore);
-                      } else if (index == 2) {
-                        context.push('/story/story_1');
-                      } else if (index == 3) {
-                        context.push(AppRouter.profile);
-                      }
-                    },
-                  ).animate().slideY(begin: 1.0, end: 0, duration: 500.ms),
-                ),
-              ],
+                  // ── شريط التنقل السفلي المتجاوب ──
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: OasisBottomNavBar(
+                      currentIndex: currentIndex,
+                      onTap: (index) {
+                        ref.read(homeNavIndexProvider.notifier).state = index;
+                        if (index == 1) {
+                          context.push(AppRouter.rewardsStore);
+                        } else if (index == 2) {
+                          context.push(AppRouter.assessmentHub);
+                        } else if (index == 3) {
+                          context.push(AppRouter.profile);
+                        }
+                      },
+                    ).animate().slideY(begin: 0.8, end: 0, duration: 420.ms),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
+
+/// بوابة اختبار قياس المستوى الذهبية بعد كل ٧ حروف على خريطة الواحات
+class _UnitCheckpointGate extends StatelessWidget {
+  final AssessmentUnitSpec unit;
+  final UnitAssessmentResult? result;
+  final double width;
+  final double height;
+  final bool compact;
+  final VoidCallback onTap;
+
+  const _UnitCheckpointGate({
+    required this.unit,
+    required this.result,
+    required this.width,
+    required this.height,
+    required this.compact,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final mastery = result?.masteryLevel;
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(24),
+        child: Container(
+          width: width,
+          height: height,
+          padding: EdgeInsets.symmetric(
+            horizontal: compact ? 10 : 14,
+            vertical: compact ? 6 : 8,
+          ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [unit.primaryColor, unit.secondaryColor],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+            ),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: Colors.white, width: 3),
+            boxShadow: [
+              BoxShadow(
+                color: unit.primaryColor.withValues(alpha: 0.38),
+                blurRadius: 14,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: compact ? 36 : 42,
+                height: compact ? 36 : 42,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.22),
+                  shape: BoxShape.circle,
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  mastery?.badgeEmoji ?? '🏆',
+                  style: TextStyle(fontSize: compact ? 20 : 24),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'قِيَاسُ ${unit.titleAr}',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: compact ? 12.5 : 14.5,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        result != null
+                            ? 'النَّتِيجَةُ: ${result!.percent.round()}%'
+                            : 'بَعْدَ ٧ حُرُوفٍ • ابْدَأْ',
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: compact ? 10.5 : 12,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white.withValues(alpha: 0.94),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 /// Custom Painter to draw smooth connecting desert trail between stage nodes
@@ -279,8 +546,8 @@ class _OasisPathPainter extends CustomPainter {
 
       path.quadraticBezierTo(p1.dx, p1.dy, controlPointX, controlPointY);
     }
+    path.lineTo(positions.last.dx, positions.last.dy);
 
-    // Outer shadow / border path
     final borderPaint = Paint()
       ..color = const Color(0xFFD4A017).withValues(alpha: 0.4)
       ..strokeWidth = 16.0
@@ -289,7 +556,6 @@ class _OasisPathPainter extends CustomPainter {
 
     canvas.drawPath(path, borderPaint);
 
-    // Inner desert road path
     final roadPaint = Paint()
       ..color = const Color(0xFFFFF3E0).withValues(alpha: 0.9)
       ..strokeWidth = 10.0
@@ -301,6 +567,7 @@ class _OasisPathPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _OasisPathPainter oldDelegate) {
-    return oldDelegate.positions != positions || oldDelegate.unlockedCount != unlockedCount;
+    return oldDelegate.positions != positions ||
+        oldDelegate.unlockedCount != unlockedCount;
   }
 }

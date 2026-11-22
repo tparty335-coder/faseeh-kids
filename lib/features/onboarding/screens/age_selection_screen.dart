@@ -4,9 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:faseeh_kids/core/theme/app_colors.dart';
 import 'package:faseeh_kids/core/router/app_router.dart';
 import 'package:faseeh_kids/core/utils/age_group.dart';
+import 'package:faseeh_kids/core/utils/responsive.dart';
 
 /// Age Selection Screen — choose age group (3 cards)
-/// P4-T006
+/// Fully responsive from 320×533 compact phones to 960×1600 tablets
 class AgeSelectionScreen extends StatefulWidget {
   const AgeSelectionScreen({super.key});
 
@@ -23,122 +24,135 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
 
   void _proceed() {
     if (_selected == null) return;
-    // Pass age group to avatar selection via extra
     context.go(AppRouter.avatarSelection, extra: _selected);
   }
 
   @override
   Widget build(BuildContext context) {
+    final isCompact = context.isUltraCompact || context.isShortScreen;
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: AppColors.backgroundDay,
         body: SafeArea(
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 600),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: IconButton(
-                        icon: const Icon(Icons.arrow_back, color: AppColors.textPrimaryDay),
-                        onPressed: () {
-                          if (context.canPop()) {
-                            context.pop();
-                          } else {
-                            context.go(AppRouter.onboarding);
-                          }
-                        },
+          child: ResponsiveContentFrame(
+            maxWidth: 600,
+            padding: EdgeInsets.symmetric(horizontal: isCompact ? 16 : 24),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back, color: AppColors.textPrimaryDay),
+                    onPressed: () {
+                      if (context.canPop()) {
+                        context.pop();
+                      } else {
+                        context.go(AppRouter.onboarding);
+                      }
+                    },
+                  ),
+                ),
+
+                // Scrollable center prevents overflow on short/old phones (320×533 / 360×640)
+                Expanded(
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      return SingleChildScrollView(
+                        physics: const BouncingScrollPhysics(),
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: isCompact ? 4 : 12),
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  'كم عمرك؟',
+                                  style: TextStyle(
+                                    fontFamily: 'Cairo',
+                                    fontSize: context.scaledFont(36, min: 26, max: 42),
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.textPrimaryDay,
+                                  ),
+                                ),
+                              ).animate().fadeIn(duration: 500.ms).slideY(begin: -0.2, end: 0),
+                              const SizedBox(height: 6),
+                              Text(
+                                'اختر فئتك العمرية لنبدأ معاً',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontSize: context.scaledFont(18, min: 14, max: 21),
+                                  color: AppColors.textSecondaryDay,
+                                ),
+                              ).animate().fadeIn(delay: 200.ms, duration: 400.ms),
+                              SizedBox(height: isCompact ? 16 : 32),
+                              _buildAgeCard(
+                                context: context,
+                                group: AgeGroup.preschool3to5,
+                                emoji: '🧒',
+                                color: const Color(0xFFFF9800),
+                                delay: 0,
+                                compact: isCompact,
+                              ),
+                              SizedBox(height: isCompact ? 12 : 18),
+                              _buildAgeCard(
+                                context: context,
+                                group: AgeGroup.emerging6to8,
+                                emoji: '👦',
+                                color: const Color(0xFF2196F3),
+                                delay: 100,
+                                compact: isCompact,
+                              ),
+                              SizedBox(height: isCompact ? 12 : 18),
+                              _buildAgeCard(
+                                context: context,
+                                group: AgeGroup.independent9to10,
+                                emoji: '🧑',
+                                color: const Color(0xFF4CAF50),
+                                delay: 200,
+                                compact: isCompact,
+                              ),
+                              SizedBox(height: isCompact ? 14 : 24),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+
+                Padding(
+                  padding: EdgeInsets.only(bottom: isCompact ? 12 : 24, top: 6),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: isCompact ? 52 : 60,
+                    child: ElevatedButton(
+                      onPressed: _selected != null ? _proceed : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primaryDay,
+                        foregroundColor: Colors.white,
+                        disabledBackgroundColor: AppColors.disabledDay,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 16),
-    
-                    // Title
-                    const Text(
-                      'كم عمرك؟',
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.textPrimaryDay,
-                      ),
-                    )
-                        .animate()
-                        .fadeIn(duration: 500.ms)
-                        .slideY(begin: -0.2, end: 0),
-    
-                    const SizedBox(height: 8),
-    
-                    const Text(
-                      'اختر فئتك العمرية لنبدأ معاً',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: AppColors.textSecondaryDay,
-                      ),
-                    ).animate().fadeIn(delay: 200.ms, duration: 400.ms),
-    
-                    const SizedBox(height: 48),
-    
-                    // Age group cards
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          _buildAgeCard(
-                            group: AgeGroup.preschool3to5,
-                            icon: Icons.child_care,
-                            emoji: '🧒',
-                            color: const Color(0xFFFF9800),
-                            delay: 0,
-                          ),
-                          const SizedBox(height: 20),
-                          _buildAgeCard(
-                            group: AgeGroup.emerging6to8,
-                            icon: Icons.school,
-                            emoji: '👦',
-                            color: const Color(0xFF2196F3),
-                            delay: 100,
-                          ),
-                          const SizedBox(height: 20),
-                          _buildAgeCard(
-                            group: AgeGroup.independent9to10,
-                            icon: Icons.auto_stories,
-                            emoji: '🧑',
-                            color: const Color(0xFF4CAF50),
-                            delay: 200,
-                          ),
-                        ],
-                      ),
-                    ),
-    
-                    // Next button
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 32),
-                      child: SizedBox(
-                        width: double.infinity,
-                        height: 64,
-                        child: ElevatedButton(
-                          onPressed: _selected != null ? _proceed : null,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDay,
-                            foregroundColor: Colors.white,
-                            disabledBackgroundColor: AppColors.disabledDay,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                          ),
-                          child: const Text(
-                            'التالي',
-                            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, height: 1.2),
-                          ),
+                      child: Text(
+                        'التالي',
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: context.scaledFont(20, min: 16, max: 24),
+                          fontWeight: FontWeight.w700,
+                          height: 1.2,
                         ),
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
         ),
@@ -147,19 +161,21 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
   }
 
   Widget _buildAgeCard({
+    required BuildContext context,
     required AgeGroup group,
-    required IconData icon,
     required String emoji,
     required Color color,
     required int delay,
+    required bool compact,
   }) {
     final isSelected = _selected == group;
+    final boxSize = compact ? 48.0 : 58.0;
 
     return GestureDetector(
       onTap: () => _selectAgeGroup(group),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        height: 100,
+        constraints: BoxConstraints(minHeight: compact ? 74 : 94),
         decoration: BoxDecoration(
           color: isSelected ? color.withValues(alpha: 0.15) : Colors.white,
           borderRadius: BorderRadius.circular(20),
@@ -183,27 +199,25 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                   ),
                 ],
         ),
-        transform: isSelected
-            ? Matrix4.diagonal3Values(1.03, 1.03, 1.03)
-            : Matrix4.identity(),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: EdgeInsets.symmetric(
+            horizontal: compact ? 14 : 22,
+            vertical: compact ? 10 : 14,
+          ),
           child: Row(
             children: [
-              // Icon
               Container(
-                width: 60,
-                height: 60,
+                width: boxSize,
+                height: boxSize,
                 decoration: BoxDecoration(
                   color: color.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Center(
-                  child: Text(emoji, style: const TextStyle(fontSize: 28)),
+                  child: Text(emoji, style: TextStyle(fontSize: compact ? 24 : 28)),
                 ),
               ),
-              const SizedBox(width: 16),
-              // Text
+              SizedBox(width: compact ? 12 : 16),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -212,30 +226,31 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                     Text(
                       group.labelAr,
                       style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Cairo',
+                        fontSize: context.scaledFont(17, min: 14, max: 20),
+                        fontWeight: FontWeight.w700,
                         color: isSelected ? color : AppColors.textPrimaryDay,
                       ),
                     ),
                     Text(
                       '${group.ageRange} سنوات',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontFamily: 'Cairo',
+                        fontSize: context.scaledFont(13.5, min: 12, max: 16),
                         color: isSelected
-                            ? color.withValues(alpha: 0.8)
+                            ? color.withValues(alpha: 0.85)
                             : AppColors.textSecondaryDay,
                       ),
                     ),
                   ],
                 ),
               ),
-              // Check
               if (isSelected)
-                Icon(Icons.check_circle, color: color, size: 28),
+                Icon(Icons.check_circle, color: color, size: compact ? 24 : 28),
             ],
           ),
         ),
-      ).animate(delay: Duration(milliseconds: delay)).fadeIn(duration: 400.ms).slideX(begin: 0.1, end: 0),
+      ).animate(delay: Duration(milliseconds: delay)).fadeIn(duration: 400.ms).slideX(begin: 0.08, end: 0),
     );
   }
 }

@@ -35,6 +35,9 @@ import 'package:faseeh_kids/features/stories/screens/story_reader_screen.dart';
 
 // ─── Paywall ───
 import 'package:faseeh_kids/features/paywall/screens/paywall_screen.dart';
+import 'package:faseeh_kids/features/assessment/models/assessment_models.dart';
+import 'package:faseeh_kids/features/assessment/screens/assessment_hub_screen.dart';
+import 'package:faseeh_kids/features/assessment/screens/assessment_session_screen.dart';
 
 /// Strongly Typed Route Argument Classes (Prevents runtime Map casting crashes)
 class NameInputArgs {
@@ -94,6 +97,8 @@ class AppRouter {
   static const String storyReader = '/story/:storyId';
   static const String letterExplorer = '/letter/:letterId';
   static const String paywall = '/paywall';
+  static const String assessmentHub = '/assessment';
+  static const String assessmentSession = '/assessment/session';
 
   /// Custom slide transition (RTL aware)
   static CustomTransitionPage<void> _slideTransition({
@@ -364,6 +369,35 @@ class AppRouter {
           return _slideTransition(
             state: state,
             child: const PaywallScreen(),
+          );
+        },
+      ),
+
+      // ─── Assessment Hub, Unit Checkpoints & Remedial Clinic ───
+      GoRoute(
+        path: assessmentHub,
+        name: 'assessmentHub',
+        pageBuilder: (context, state) {
+          final initialTab = state.extra is int ? state.extra as int : 0;
+          return _slideTransition(
+            state: state,
+            child: AssessmentHubScreen(initialTab: initialTab),
+          );
+        },
+      ),
+      GoRoute(
+        path: assessmentSession,
+        name: 'assessmentSession',
+        pageBuilder: (context, state) {
+          final args = state.extra is AssessmentSessionArgs
+              ? state.extra as AssessmentSessionArgs
+              : const AssessmentSessionArgs(
+                  mode: AssessmentSessionMode.unitExam,
+                  unitIndex: 1,
+                );
+          return _slideTransition(
+            state: state,
+            child: AssessmentSessionScreen(args: args),
           );
         },
       ),
