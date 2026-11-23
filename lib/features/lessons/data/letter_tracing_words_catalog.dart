@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_unit_manifest.dart';
+import 'package:faseeh_kids/features/lessons/data/verified_illustration_crop_rects.dart';
 
 /// كلمة مصوّرة ناطقة مرافقة لبطاقة تتبّع الحرف (مقصوصة بدقة على خلفية بيضاء ناصعة)
 class TracingWordIllustration {
@@ -167,27 +168,30 @@ class LetterTracingWordsCatalog {
     'ي': Color(0xFF0284C7), // أزرق بحري
   };
 
-  /// مستطيل القص النظيف (0..1) لاستخراج الرسم الكرتوني فقط على خلفية بيضاء نقية
+  /// مستطيل القص النظيف المحسوب بدقة البكسل والمُحقَّق بصرياً لكل صورة على حدة (يمنع قصّ الرأس أو الأطراف نهائياً)
   static Rect cropRectForImage(String imagePath) {
+    final verified = kVerifiedIllustrationCropRects[imagePath];
+    if (verified != null) return verified;
+
     if (imagePath.contains('words_round_1.webp') ||
         imagePath.contains('words_round_2.webp') ||
         imagePath.contains('words_round_3.webp')) {
-      return const Rect.fromLTRB(0.45, 0.29, 0.86, 0.76);
+      return const Rect.fromLTRB(0.41, 0.31, 0.88, 0.78);
     }
     if (imagePath.contains('baa_words_round_2.webp')) {
-      return const Rect.fromLTRB(0.41, 0.33, 0.86, 0.77);
+      return const Rect.fromLTRB(0.40, 0.36, 0.86, 0.76);
     }
     if (imagePath.contains('baa_words_round_4.webp')) {
-      return const Rect.fromLTRB(0.43, 0.33, 0.86, 0.70);
+      return const Rect.fromLTRB(0.42, 0.35, 0.86, 0.64);
     }
     if (imagePath.contains('baa_words_round_')) {
-      return const Rect.fromLTRB(0.41, 0.33, 0.86, 0.72);
+      return const Rect.fromLTRB(0.40, 0.36, 0.87, 0.71);
     }
     if (imagePath.contains('thaa_words_round_')) {
-      return const Rect.fromLTRB(0.44, 0.38, 0.88, 0.82);
+      return const Rect.fromLTRB(0.39, 0.31, 0.88, 0.83);
     }
-    // جميع صور 800×446 القياسية (match/*/*_match_1..4.webp)
-    return const Rect.fromLTRB(0.44, 0.38, 0.88, 0.84);
+    // الاحتياطي الآمن الواسع لصور 800×446 القياسية (match/*/*_match_1..4.webp)
+    return const Rect.fromLTRB(0.37, 0.34, 0.895, 0.88);
   }
 
   static String normalizeLetter(String letterChar) {
@@ -269,57 +273,57 @@ class LetterTracingWordsCatalog {
     return [letter, '$letterـ', 'ـ$letterـ', 'ـ$letter'];
   }
 
-  static List<TracingWordIllustration> _alifWords() => const [
+  static List<TracingWordIllustration> _alifWords() => [
         TracingWordIllustration(
           word: 'أَسَدٌ',
           imagePath: 'assets/images/games/words/words_round_3.webp',
           audioPath: 'audio/words_game/alif_word_lion.mp3',
-          cropRect: Rect.fromLTRB(0.45, 0.29, 0.86, 0.76),
+          cropRect: cropRectForImage('assets/images/games/words/words_round_3.webp'),
         ),
         TracingWordIllustration(
           word: 'أَرْنَبٌ',
           imagePath: 'assets/images/games/words/words_round_1.webp',
           audioPath: 'audio/words_game/alif_word_rabbit.mp3',
-          cropRect: Rect.fromLTRB(0.45, 0.29, 0.86, 0.76),
+          cropRect: cropRectForImage('assets/images/games/words/words_round_1.webp'),
         ),
         TracingWordIllustration(
           word: 'أَهْرَامٌ',
           imagePath: 'assets/images/games/words/words_round_2.webp',
           audioPath: 'audio/words_game/alif_word_pyramids.mp3',
-          cropRect: Rect.fromLTRB(0.45, 0.29, 0.86, 0.76),
+          cropRect: cropRectForImage('assets/images/games/words/words_round_2.webp'),
         ),
         TracingWordIllustration(
           word: 'إِبْرَةٌ',
           imagePath: 'assets/images/games/words/baa_words_round_4.webp',
           audioPath: 'audio/stories/alif_word_ibra.mp3',
-          cropRect: Rect.fromLTRB(0.43, 0.33, 0.86, 0.70),
+          cropRect: cropRectForImage('assets/images/games/words/baa_words_round_4.webp'),
         ),
       ];
 
-  static List<TracingWordIllustration> _baaWords() => const [
+  static List<TracingWordIllustration> _baaWords() => [
         TracingWordIllustration(
           word: 'بَقَرَةٌ',
           imagePath: 'assets/images/games/words/baa_words_round_1.webp',
           audioPath: 'audio/games/fishing/ba52.mp3',
-          cropRect: Rect.fromLTRB(0.41, 0.33, 0.86, 0.72),
+          cropRect: cropRectForImage('assets/images/games/words/baa_words_round_1.webp'),
         ),
         TracingWordIllustration(
           word: 'بَابٌ',
           imagePath: 'assets/images/games/words/baa_words_round_2.webp',
           audioPath: 'audio/letters/long_vowels/baa_madd_alif.mp3',
-          cropRect: Rect.fromLTRB(0.41, 0.33, 0.86, 0.77),
+          cropRect: cropRectForImage('assets/images/games/words/baa_words_round_2.webp'),
         ),
         TracingWordIllustration(
           word: 'بِطِّيخٌ',
           imagePath: 'assets/images/games/words/baa_words_round_3.webp',
           audioPath: 'audio/lessons/baa/sounds/word_betteekh.mp3',
-          cropRect: Rect.fromLTRB(0.41, 0.33, 0.86, 0.72),
+          cropRect: cropRectForImage('assets/images/games/words/baa_words_round_3.webp'),
         ),
         TracingWordIllustration(
           word: 'إِبْرَةٌ',
           imagePath: 'assets/images/games/words/baa_words_round_4.webp',
           audioPath: 'audio/lessons/baa/words/p2_ibra.mp3',
-          cropRect: Rect.fromLTRB(0.43, 0.33, 0.86, 0.70),
+          cropRect: cropRectForImage('assets/images/games/words/baa_words_round_4.webp'),
         ),
       ];
 

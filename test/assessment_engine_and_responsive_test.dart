@@ -9,6 +9,7 @@ import 'package:faseeh_kids/features/assessment/models/assessment_models.dart';
 import 'package:faseeh_kids/features/assessment/screens/assessment_hub_screen.dart';
 import 'package:faseeh_kids/features/assessment/screens/assessment_session_screen.dart';
 import 'package:faseeh_kids/features/home/screens/oasis_map_screen.dart';
+import 'package:faseeh_kids/features/lessons/data/verified_illustration_crop_rects.dart';
 import 'package:faseeh_kids/features/onboarding/screens/age_selection_screen.dart';
 
 /// أحجام الشاشات العالمية الستة (من أقدم الهواتف الصغيرة حتى تابلت المستخدم Lenovo TB350XU)
@@ -57,6 +58,7 @@ void main() {
         'assets/images/lessons/noon/noon_words_p2_card_3.webp', // نُسُورٌ
         'assets/images/lessons/noon/noon_words_p1_card_4.webp', // رُمَّانٌ
         'assets/images/lessons/waaw/waaw_words_p2_card_2.webp', // وَلَدٌ
+        'assets/images/lessons/waaw/waaw_words_p2_card_4.webp', // وَرْدَةٌ (مُصلَحة بوردة حمراء كاملة)
       };
 
       for (final item in AssessmentCurriculumData.globalIllustrationBank) {
@@ -71,6 +73,11 @@ void main() {
           isVerifiedCatalog || isVerifiedExtra,
           isTrue,
           reason: 'Unverified legacy illustration leaked into bank: ${item.word} -> ${item.imagePath}',
+        );
+        expect(
+          kVerifiedIllustrationCropRects.containsKey(item.imagePath),
+          isTrue,
+          reason: 'Illustration ${item.imagePath} MUST have a pixel-verified cropRect so nothing is ever clipped!',
         );
         expect(
           File(item.imagePath).existsSync(),

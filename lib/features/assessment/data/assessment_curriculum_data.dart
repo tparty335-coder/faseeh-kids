@@ -284,25 +284,31 @@ class AssessmentCurriculumData {
     return letters[normalized] ?? letters['أ']!;
   }
 
-  /// بطاقات إضافية مُحقَّقة بالعين المجردة (١٠٠٪ مطابقة) للحروف الثلاثة (ن، ر، و) التي لا تبدأ بها بطاقات wordsMatch
+  /// بطاقات إضافية مُحقَّقة بالعين المجردة (١٠٠٪ مطابقة وبلا أي أيقونات مقصوصة) للحروف (ن، ر، و)
   static const List<TracingWordIllustration> _visuallyVerifiedExtraStarts = [
     TracingWordIllustration(
       word: 'نُسُورٌ',
       imagePath: 'assets/images/lessons/noon/noon_words_p2_card_3.webp',
       audioPath: 'audio/lessons/noon/final/noon_word_p2_3.mp3',
-      cropRect: Rect.fromLTRB(0.24, 0.22, 0.77, 0.67),
+      cropRect: Rect.fromLTRB(0.24, 0.22, 0.72, 0.67),
     ),
     TracingWordIllustration(
       word: 'رُمَّانٌ',
       imagePath: 'assets/images/lessons/noon/noon_words_p1_card_4.webp',
       audioPath: 'audio/letters/words/noon_word4.mp3',
-      cropRect: Rect.fromLTRB(0.13, 0.36, 0.51, 0.86),
+      cropRect: Rect.fromLTRB(0.14, 0.36, 0.51, 0.85),
     ),
     TracingWordIllustration(
       word: 'وَلَدٌ',
       imagePath: 'assets/images/lessons/waaw/waaw_words_p2_card_2.webp',
       audioPath: 'audio/lessons/waaw/final/waaw_word_p2_2.mp3',
-      cropRect: Rect.fromLTRB(0.19, 0.21, 0.48, 0.92),
+      cropRect: Rect.fromLTRB(0.22, 0.22, 0.48, 0.91),
+    ),
+    TracingWordIllustration(
+      word: 'وَرْدَةٌ',
+      imagePath: 'assets/images/lessons/waaw/waaw_words_p2_card_4.webp',
+      audioPath: 'audio/lessons/waaw/final/waaw_word_p2_4.mp3',
+      cropRect: Rect.fromLTRB(0.22, 0.24, 0.39, 0.90),
     ),
   ];
 
@@ -383,7 +389,7 @@ class AssessmentCurriculumData {
   /// بنك الصور الكرتونية النقية والمُحقَّقة ١٠٠٪ فقط (خلفية بيضاء نظيفة + تطابق تام — بلا أي استيراد عشوائي لملفات قديمة!)
   static List<TracingWordIllustration>? _cachedGlobalBank;
 
-  /// كلمات مصورة مُستبعدة تربوياً لأنها مربكة للطفل (مثل: شراع تبدو كمركب/سفينة، ذيل مقصوص، قارب/مركب، مصر خريطة...)
+  /// كلمات مصورة مُستبعدة تربوياً لأنها مربكة للطفل أو تحتوي نصاً مكتوباً يكشف الإجابة
   static const Set<String> _ambiguousBannedWords = {
     'شراع',
     'ذيل',
@@ -397,6 +403,9 @@ class AssessmentCurriculumData {
     'مريضة',
     'رضيع',
     'فصل',
+    'ملح',
+    'معلم',
+    'نهر',
   };
 
   static List<TracingWordIllustration> get globalIllustrationBank {

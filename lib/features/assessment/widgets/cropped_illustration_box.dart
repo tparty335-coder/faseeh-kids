@@ -128,7 +128,7 @@ class _IllustrationCropPainter extends CustomPainter {
       image,
       src,
       dst,
-      Paint()..filterQuality = FilterQuality.medium,
+      Paint()..filterQuality = FilterQuality.high,
     );
   }
 
