@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_tracing_words_catalog.dart';
 
 /// وحدة تقييم واحدة تضم ٧ حروف عربية متتالية (٢٨ حرفاً = ٤ وحدات قياس)
@@ -280,8 +281,189 @@ class AssessmentCurriculumData {
     return letters[normalized] ?? letters['أ']!;
   }
 
-  /// استخراج كلمة مصورة مضمونة على القرص من كتالوج التتبع الموثّق
+  /// مستطيل القص النظيف لبطاقات محطة الكلمات (words_p*_card_*.webp)
+  static const Rect _wordCardCropRect = Rect.fromLTRB(0.135, 0.37, 0.47, 0.88);
+
+  /// إزالة جميع علامات التشكيل والتطويل من الكلمة العربية للتحليل اللغوي الدقيق
+  static String stripDiacritics(String input) {
+    return input
+        .replaceAll(RegExp(r'[\u064B-\u065F\u0670\u0640]'), '')
+        .trim();
+  }
+
+  /// توحيد الحرف العربي (أ/إ/آ/ا -> أ ، هـ -> ه)
+  static String normalizeChar(String ch) {
+    final t = ch.trim();
+    if (t == 'أ' || t == 'إ' || t == 'آ' || t == 'ا') return 'أ';
+    if (t == 'هـ') return 'ه';
+    return t;
+  }
+
+  /// استخراج جميع الحروف الأساسية داخل الكلمة (مع تضمين ت و هـ عند وجود ة لمنع أي لبس للمشتتات)
+  static Set<String> wordLetterSet(String word) {
+    final plain = stripDiacritics(word);
+    final result = <String>{};
+    for (int i = 0; i < plain.length; i++) {
+      final ch = plain[i];
+      if (ch == 'ة') {
+        result.add('ت');
+        result.add('ه');
+      } else if (ch == 'ى') {
+        result.add('ي');
+        result.add('أ');
+      } else {
+        result.add(normalizeChar(ch));
+      }
+    }
+    return result;
+  }
+
+  /// هل تحتوي الكلمة على هذا الحرف في أي موضع؟
+  static bool wordContainsLetter(String word, String letter) {
+    return wordLetterSet(word).contains(normalizeChar(letter));
+  }
+
+  /// هل تبدأ الكلمة فعلاً بهذا الحرف؟
+  static bool wordStartsWithLetter(String word, String letter) {
+    final plain = stripDiacritics(word);
+    if (plain.isEmpty) return false;
+    return normalizeChar(plain[0]) == normalizeChar(letter);
+  }
+
+  /// إزالة الحركة عن الحرف الأول فقط (لإخفاء إجابة سؤال الحركة قبل الحل)
+  static String stripFirstLetterHaraka(String voweledWord) {
+    if (voweledWord.isEmpty) return voweledWord;
+    int i = 1;
+    while (i < voweledWord.length &&
+        RegExp(r'[\u064B-\u065F\u0670]').hasMatch(voweledWord[i])) {
+      i++;
+    }
+    // توحيد الهمزة المكسورة (إ) إلى (أ) عند إخفاء الحركة حتى لا تكشف الإجابة!
+    final first = voweledWord[0] == 'إ' ? 'أ' : voweledWord[0];
+    return '$first${voweledWord.substring(i)}';
+  }
+
+  /// استخراج الحركة القصيرة على الحرف الأول من الكلمة المشكولة ('fatha' | 'damma' | 'kasra' | null)
+  static String? leadingHarakaOf(String voweledWord) {
+    if (voweledWord.isEmpty) return null;
+    if (voweledWord[0] == 'إ') return 'kasra';
+    for (int i = 1; i < voweledWord.length; i++) {
+      final ch = voweledWord[i];
+      if (ch == '\u064E') return 'fatha';
+      if (ch == '\u064F') return 'damma';
+      if (ch == '\u0650') return 'kasra';
+      if (ch == '\u0651') continue; // تخطي الشدة إن وُجدت
+      break;
+    }
+    return null;
+  }
+
+  /// بنك الصور الكرتونية الموثّقة الشامل لكل التطبيق (مبني مرة واحدة من كتالوج التتبع + بطاقات الكلمات)
+  static List<TracingWordIllustration>? _cachedGlobalBank;
+
+  static List<TracingWordIllustration> get globalIllustrationBank {
+    if (_cachedGlobalBank != null) return _cachedGlobalBank!;
+    final bank = <TracingWordIllustration>[];
+    final seenKey = <String>{};
+
+    void addItem(TracingWordIllustration item) {
+      final cleanWord = stripDiacritics(item.word);
+      if (cleanWord.isEmpty || item.imagePath.isEmpty) return;
+      final key = '${cleanWord}_${item.imagePath}';
+      if (seenKey.add(key)) {
+        bank.add(item);
+      }
+    }
+
+    // 1. جميع بطاقات الكلمات الموثّقة من كتالوج التتبع (٢٨ حرفاً × ٤ كلمات)
+    for (final l in allLetterChars) {
+      final profile = LetterTracingWordsCatalog.getProfile(l);
+      for (final w in profile.words) {
+        addItem(w);
+      }
+    }
+
+    // 2. جميع بطاقات محطة الكلمات في المانيفستات الـ ٢٦ (تغطية ضخمة وموثّقة على القرص)
+    for (final manifest in allCurriculumManifests) {
+      for (final page in manifest.words.pages) {
+        for (final card in page.words) {
+          addItem(
+            TracingWordIllustration(
+              word: card.word,
+              imagePath: card.cardImagePath,
+              audioPath: card.audioPath,
+              cropRect: _wordCardCropRect,
+            ),
+          );
+        }
+      }
+    }
+
+    _cachedGlobalBank = List.unmodifiable(bank);
+    return _cachedGlobalBank!;
+  }
+
+  /// جميع الصور الموثّقة التي تبدأ كلمتها فعلياً بالحرف المطلوب (مضمونة لكل الـ ٢٨ حرفاً!)
+  static List<TracingWordIllustration> startingIllustrationsFor(String rawLetter) {
+    final target = normalizeChar(rawLetter);
+    final seenWords = <String>{};
+    final result = <TracingWordIllustration>[];
+    for (final item in globalIllustrationBank) {
+      if (wordStartsWithLetter(item.word, target)) {
+        final plain = stripDiacritics(item.word);
+        if (seenWords.add(plain)) {
+          result.add(item);
+        }
+      }
+    }
+    return result;
+  }
+
+  /// البحث عن صورة كرتونية مطابقة تماماً للكلمة المطلوبة (مع دعم حذف الـ التعريف مثل الْحِصَانُ -> حِصَان)
+  static TracingWordIllustration? illustrationForExactWord(String rawWord) {
+    var clean = stripDiacritics(rawWord);
+    if (clean.startsWith('ال') && clean.length > 3) {
+      clean = clean.substring(2);
+    }
+    // توحيد الهمزات للمطابقة فقط
+    String normWord(String s) => s
+        .replaceAll('أ', 'ا')
+        .replaceAll('إ', 'ا')
+        .replaceAll('آ', 'ا')
+        .replaceAll('ة', 'ه');
+
+    final targetNorm = normWord(clean);
+    for (final item in globalIllustrationBank) {
+      var itemClean = stripDiacritics(item.word);
+      if (itemClean.startsWith('ال') && itemClean.length > 3) {
+        itemClean = itemClean.substring(2);
+      }
+      if (normWord(itemClean) == targetNorm) {
+        return item;
+      }
+    }
+    return null;
+  }
+
+  /// البحث عن صورة كرتونية تبدأ بالحرف المطلوب وبنفس الحركة القصيرة تماماً
+  static TracingWordIllustration? illustrationForLetterAndHaraka(
+    String rawLetter,
+    String haraka,
+  ) {
+    for (final item in startingIllustrationsFor(rawLetter)) {
+      if (leadingHarakaOf(item.word) == haraka) {
+        return item;
+      }
+    }
+    return null;
+  }
+
+  /// استخراج كلمة مصورة تبدأ بالحرف المطلوب (بديل آمن تماماً لـ primaryIllustrationFor)
   static TracingWordIllustration primaryIllustrationFor(String rawLetter, {int index = 0}) {
+    final starts = startingIllustrationsFor(rawLetter);
+    if (starts.isNotEmpty) {
+      return starts[index % starts.length];
+    }
     final profile = LetterTracingWordsCatalog.getProfile(rawLetter);
     if (profile.words.isEmpty) {
       return LetterTracingWordsCatalog.getProfile('أ').words.first;

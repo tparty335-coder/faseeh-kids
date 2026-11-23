@@ -274,23 +274,34 @@ class ArabicQuestionEngine {
     }
   }
 
-  List<String> _distractorLettersFor(LetterKnowledgeSpec spec, int count) {
+  List<String> _distractorLettersFor(
+    LetterKnowledgeSpec spec,
+    int count, {
+    Set<String> exclude = const {},
+  }) {
+    final excluded = {
+      AssessmentCurriculumData.normalizeChar(spec.letter),
+      for (final e in exclude) AssessmentCurriculumData.normalizeChar(e),
+    };
     final pool = <String>[];
-    // نعطي أولوية علمية للحروف المتشابهة ثم حروف نفس الوحدة ثم باقي الحروف
+    // نعطي أولوية علمية للحروف المتشابهة ثم حروف نفس الوحدة ثم باقي الحروف مع استبعاد أي حرف محظور
     for (final s in spec.similarLetters) {
-      if (s != spec.letter && AssessmentCurriculumData.letters.containsKey(s)) {
-        pool.add(s);
+      final normS = AssessmentCurriculumData.normalizeChar(s);
+      if (!excluded.contains(normS) &&
+          AssessmentCurriculumData.letters.containsKey(normS) &&
+          !pool.contains(normS)) {
+        pool.add(normS);
       }
     }
     final unitLetters = _shuffled(
       AssessmentCurriculumData.unitByIndex(spec.unitIndex)
           .letters
-          .where((l) => l != spec.letter && !pool.contains(l)),
+          .where((l) => !excluded.contains(AssessmentCurriculumData.normalizeChar(l)) && !pool.contains(l)),
     );
     pool.addAll(unitLetters);
     final others = _shuffled(
       AssessmentCurriculumData.allLetterChars
-          .where((l) => l != spec.letter && !pool.contains(l)),
+          .where((l) => !excluded.contains(AssessmentCurriculumData.normalizeChar(l)) && !pool.contains(l)),
     );
     pool.addAll(others);
     return pool.take(count).toList();
@@ -405,17 +416,25 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 3. تحدّي الحروف المتشابهة والنقاط
+  /// 3. تحدّي الحروف المتشابهة والنقاط (بلا أي التباس أو تداخل في المشتتات)
   GeneratedQuestion _genSimilarLettersSpot(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
-    final siblings = _distractorLettersFor(spec, 3);
     final useDotRiddle = _rng.nextBool();
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(
-      spec.letter,
-      index: _rng.nextInt(4),
+    final starts = AssessmentCurriculumData.startingIllustrationsFor(spec.letter);
+    final illus = starts.isNotEmpty
+        ? _pick(starts)
+        : AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+
+    // نستبعد أي حرف موجود في الكلمة التوضيحية لمنع أي التباس
+    final siblings = _distractorLettersFor(
+      spec,
+      3,
+      exclude: useDotRiddle
+          ? const {}
+          : AssessmentCurriculumData.wordLetterSet(illus.word),
     );
 
     final choices = _shuffled([
@@ -446,11 +465,11 @@ class ArabicQuestionEngine {
           : 'اسْتَمِعْ جَيِّدًا وَاخْتَرْ حَرْفَ ${spec.nameAr} مِنْ بَيْنِ الْحُرُوفِ الْمُتَشَابِهَةِ',
       promptBadgeAr: 'تَمْيِيزُ الْمُتَشَابِهَاتِ',
       displayPrompt: useDotRiddle ? spec.dotDescriptionAr : 'حَرْفُ ${spec.nameAr}',
-      secondaryPrompt: useDotRiddle ? 'مِثْلُ: ${illus.word}' : illus.word,
+      secondaryPrompt: useDotRiddle ? null : 'مِثْلُ: ${illus.word}',
       scaffoldHintAr: 'رَكِّزْ عَلَى النُّقَطِ: ${spec.dotDescriptionAr}',
       audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      imagePath: useDotRiddle ? null : illus.imagePath,
+      imageCropRect: useDotRiddle ? null : illus.cropRect,
       choices: choices,
       correctText: spec.displayChar,
       isScaffolded: scaffolded,
@@ -458,40 +477,62 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 4. اكتشف المختلف (Odd One Out)
+  /// 4. اكتشف المختلف (Odd One Out — مضمون ١٠٠٪ بلا تداخل بين الحرف المستهدف والغريب)
   GeneratedQuestion _genOddOneOut(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
-    // 3 بطاقات تنتمي لنفس الحرف (أو حروف متكررة) و1 بطاقة مختلفة
-    final oddLetter = _distractorLettersFor(spec, 3).first;
-    final oddSpec = AssessmentCurriculumData.letterSpec(oddLetter);
-    final oddIllus = AssessmentCurriculumData.primaryIllustrationFor(
-      oddLetter,
-      index: _rng.nextInt(4),
+    final oddCandidates = _distractorLettersFor(spec, 6);
+    final sameStarts = _shuffled(
+      AssessmentCurriculumData.startingIllustrationsFor(spec.letter),
     );
-    final sameProfile = LetterTracingWordsCatalog.getProfile(spec.letter);
-    final sameWords = _shuffled(sameProfile.words).take(3).toList();
 
-    final useWordsMode = sameWords.length >= 3 && _rng.nextBool();
+    String oddLetter = oddCandidates.first;
+    TracingWordIllustration? chosenOddIllus;
+    List<TracingWordIllustration> chosenSameWords = const [];
+
+    // نبحث عن حرف مختلف له صورة تبدأ به ولا تحتوي حرفنا، وعن ٣ كلمات تبدأ بحرفنا ولا تحتوي الحرف المختلف
+    if (sameStarts.length >= 3) {
+      for (final cand in oddCandidates) {
+        final oddStarts = _shuffled(
+          AssessmentCurriculumData.startingIllustrationsFor(cand),
+        ).where((w) => !AssessmentCurriculumData.wordContainsLetter(w.word, spec.letter)).toList();
+        if (oddStarts.isEmpty) continue;
+
+        final cleanSame = sameStarts
+            .where((w) => !AssessmentCurriculumData.wordContainsLetter(w.word, cand))
+            .take(3)
+            .toList();
+        if (cleanSame.length >= 3) {
+          oddLetter = cand;
+          chosenOddIllus = oddStarts.first;
+          chosenSameWords = cleanSame;
+          break;
+        }
+      }
+    }
+
+    final oddSpec = AssessmentCurriculumData.letterSpec(oddLetter);
+    final useWordsMode =
+        chosenSameWords.length >= 3 && chosenOddIllus != null && _rng.nextBool();
     final choices = useWordsMode
         ? _shuffled([
             for (int i = 0; i < 3; i++)
               QuestionChoice(
                 id: 'same_$i',
-                label: sameWords[i].word,
-                imagePath: sameWords[i].imagePath,
-                imageCropRect: sameWords[i].cropRect,
-                audioPath: sameWords[i].audioPath,
+                label: chosenSameWords[i].word,
+                imagePath: chosenSameWords[i].imagePath,
+                imageCropRect: chosenSameWords[i].cropRect,
+                audioPath: chosenSameWords[i].audioPath,
                 isCorrect: false,
               ),
             QuestionChoice(
               id: 'odd_${oddSpec.letter}',
-              label: oddIllus.word,
-              imagePath: oddIllus.imagePath,
-              imageCropRect: oddIllus.cropRect,
-              audioPath: oddIllus.audioPath,
+              label: chosenOddIllus.word,
+              imagePath: chosenOddIllus.imagePath,
+              imageCropRect: chosenOddIllus.cropRect,
+              audioPath: chosenOddIllus.audioPath,
               isCorrect: true,
             ),
           ])
@@ -510,7 +551,7 @@ class ArabicQuestionEngine {
       domain: SkillDomain.similarLetters,
       type: ExerciseType.oddOneOut,
       instructionAr: useWordsMode
-          ? 'ثَلَاثُ كَلِمَاتٍ فِيهَا حَرْفُ ${spec.nameAr} وَوَاحِدَةٌ مُخْتَلِفَةٌ — اضْغَطْ عَلَى الْمُخْتَلِفَةِ!'
+          ? 'ثَلَاثُ كَلِمَاتٍ تَبْدَأُ بِحَرْفِ ${spec.nameAr} وَوَاحِدَةٌ تَبْدَأُ بِحَرْفٍ مُخْتَلِفٍ — اضْغَطْ عَلَى الْمُخْتَلِفَةِ!'
           : 'ثَلَاثُ بَطَاقَاتٍ لِحَرْفِ ${spec.nameAr} وَوَاحِدَةٌ مُخْتَلِفَةٌ — اكْتَشِفْهَا!',
       promptBadgeAr: 'اكْتَشِفِ الْغَرِيبَ',
       displayPrompt: spec.displayChar,
@@ -586,7 +627,7 @@ class ArabicQuestionEngine {
           ),
     );
 
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(word.plainWord);
 
     return GeneratedQuestion(
       id: _nextId('form'),
@@ -605,8 +646,8 @@ class ArabicQuestionEngine {
               ? 'الْحَرْفُ الَّذِي قَبْلَهُ رَافِسٌ؛ لِذَلِكَ لَا يَمُدُّ يَدَهُ إِلَيْهِ!'
               : 'انْظُرْ هَلْ يَمُدُّ يَدَهُ لِمَا قَبْلَهُ وَمَا بَعْدَهُ؟',
       audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       choices: choices,
       correctText: correctForm,
       isScaffolded: scaffolded,
@@ -614,15 +655,21 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 6. أين يقع الحرف في الكلمة؟ (أول / وسط / آخر)
+  /// 6. أين يقع الحرف في الكلمة؟ (أول / وسط / آخر — بكلمة تحتوي الحرف مرة واحدة فقط لمنع أي التباس!)
   GeneratedQuestion _genIdentifyLetterPosition(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
-    final word = _pick(spec.words);
+    final unambiguousWords = spec.words.where((w) {
+      final count = w.baseLetters
+          .where((c) => AssessmentCurriculumData.normalizeChar(c) == spec.letter)
+          .length;
+      return count == 1;
+    }).toList();
+    final word = _pick(unambiguousWords.isNotEmpty ? unambiguousWords : spec.words);
     final pos = word.positionInWord; // 'start' | 'middle' | 'end'
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(word.plainWord);
 
     final choices = [
       QuestionChoice(
@@ -661,8 +708,8 @@ class ArabicQuestionEngine {
       secondaryPrompt: spec.displayChar,
       scaffoldHintAr: 'ابْدَأْ بِالْحَرْفِ الْأَوَّلِ مِنَ الْيَمِينِ وَابْحَثْ عَنْ حَرْفِ ${spec.nameAr} (${spec.displayChar}).',
       audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       choices: choices,
       correctText: pos,
       isScaffolded: scaffolded,
@@ -670,7 +717,7 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 7. اختر الحركة المناسبة للصورة والكلمة (مثل مجلد اختار الحركة المناسبة و ك.jpg)
+  /// 7. اختر الحركة المناسبة للصورة والكلمة (بصورة مطابقة تماماً لنفس الكلمة والحركة أو بطاقة صوتية نقية)
   GeneratedQuestion _genChooseHaraka(
     LetterKnowledgeSpec spec,
     Color accent,
@@ -679,28 +726,31 @@ class ArabicQuestionEngine {
     final harakaKinds = ['fatha', 'damma', 'kasra'];
     final chosen = _pick(harakaKinds);
 
-    final String targetWord;
+    final String fallbackWord;
     final String audioPath;
     switch (chosen) {
       case 'fatha':
-        targetWord = spec.fathaWord;
+        fallbackWord = spec.fathaWord;
         audioPath = spec.fathaAudioPath;
         break;
       case 'damma':
-        targetWord = spec.dammaWord;
+        fallbackWord = spec.dammaWord;
         audioPath = spec.dammaAudioPath;
         break;
       default:
-        targetWord = spec.kasraWord;
+        fallbackWord = spec.kasraWord;
         audioPath = spec.kasraAudioPath;
         break;
     }
 
-    // استبدال الحرف الأول المشكول بنقطٍ أو إظهار الكلمة كاملة مع التركيز على صوت الحركة
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(
+    // نبحث عن صورة كرتونية تبدأ بنفس الحرف وبنفس الحركة تماماً (مثل تُفَّاحَة للضمة، حِصَان للكسرة، بَقَرَة للفتحة)
+    final matchingIllus = AssessmentCurriculumData.illustrationForLetterAndHaraka(
       spec.letter,
-      index: harakaKinds.indexOf(chosen),
+      chosen,
     );
+    final targetWord = matchingIllus?.word ?? fallbackWord;
+    // نخفي حركة الحرف الأول قبل الإجابة حتى يعتمد الطفل على السمع والفهم ولا يغش من التشكيل!
+    final maskedWord = AssessmentCurriculumData.stripFirstLetterHaraka(targetWord);
     final base = spec.letter == 'أ' ? 'أ' : spec.letter;
 
     final choices = [
@@ -738,18 +788,19 @@ class ArabicQuestionEngine {
 
     return GeneratedQuestion(
       id: _nextId('haraka'),
-      signature: 'haraka_${spec.letter}_$chosen',
+      signature: 'haraka_${spec.letter}_${chosen}_$targetWord',
       letter: spec.letter,
       unitIndex: spec.unitIndex,
       domain: SkillDomain.phonicsHarakat,
       type: ExerciseType.chooseHaraka,
       instructionAr: 'اسْتَمِعْ لِلصَّوْتِ وَاخْتَرِ الْحَرَكَةَ الْمُنَاسِبَةَ لِحَرْفِ ${spec.nameAr}',
       promptBadgeAr: 'الْحَرَكَاتُ الْقَصِيرَةُ',
-      displayPrompt: targetWord,
+      displayPrompt: maskedWord,
+      secondaryPrompt: targetWord,
       scaffoldHintAr: hint,
       audioPath: audioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      imagePath: matchingIllus?.imagePath,
+      imageCropRect: matchingIllus?.cropRect,
       choices: choices,
       correctText: chosen,
       isScaffolded: scaffolded,
@@ -757,15 +808,24 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 8. صل الصورة بالحرف الأول (مثل مجلد توصيل صور بحروف)
+  /// 8. صل الصورة بحرفها الأول — مضمون ١٠٠٪ أن الكلمة تبدأ بالحرف، وصفر حروف مشتتة موجودة داخل الكلمة!
   GeneratedQuestion _genMatchPictureToLetter(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
-    final profile = LetterTracingWordsCatalog.getProfile(spec.letter);
-    final illus = _pick(profile.words);
-    final distractors = _distractorLettersFor(spec, 3);
+    final starts = AssessmentCurriculumData.startingIllustrationsFor(spec.letter);
+    final illus = starts.isNotEmpty
+        ? _pick(starts)
+        : AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+
+    // قانون تربوي صارم: يُمنع منعاً باتاً وضع أي حرف موجود داخل الكلمة كخيار خاطئ!
+    final forbiddenLetters = AssessmentCurriculumData.wordLetterSet(illus.word);
+    final distractors = _distractorLettersFor(
+      spec,
+      3,
+      exclude: forbiddenLetters,
+    );
 
     final choices = _shuffled([
       QuestionChoice(
@@ -790,11 +850,11 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.phonicsHarakat,
       type: ExerciseType.matchPictureToLetter,
-      instructionAr: 'انْظُرْ إِلَى الصُّورَةِ وَاسْتَمِعْ — بِأَيِّ حَرْفٍ تَرْتَبِطُ هَذِهِ الصُّورَةُ؟',
-      promptBadgeAr: 'الصُّورَةُ وَحَرْفُهَا',
+      instructionAr: 'انْظُرْ إِلَى الصُّورَةِ وَاسْتَمِعْ — بِأَيِّ حَرْفٍ تَبْدَأُ هَذِهِ الْكَلِمَةُ؟',
+      promptBadgeAr: 'الْحَرْفُ الْأَوَّلُ لِلصُّورَةِ',
       displayPrompt: scaffolded ? illus.word : null,
       secondaryPrompt: illus.word,
-      scaffoldHintAr: 'انْطِقِ اسْمَ الصُّورَةِ بِبُطْءٍ: «${illus.word}» — سَتَسْمَعُ حَرْفَ ${spec.nameAr}!',
+      scaffoldHintAr: 'انْطِقْ أَوَّلَ صَوْتٍ فِي كَلِمَةِ «${illus.word}» — إِنَّهُ حَرْفُ ${spec.nameAr}!',
       audioPath: illus.audioPath,
       imagePath: illus.imagePath,
       imageCropRect: illus.cropRect,
@@ -805,21 +865,28 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 9. رتّب حروف الكلمة (مستلهم مباشرة من رتب حروف الكلمة.jpg)
+  /// 9. رتّب حروف الكلمة (مع صورة مطابقة للكلمة نفسها فقط)
   GeneratedQuestion _genUnscrambleWord(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
     final candidates = spec.words.where((w) => w.baseLetters.length >= 2 && w.baseLetters.length <= 4).toList();
-    final word = _pick(candidates.isNotEmpty ? candidates : spec.words);
+    // نُفضّل الكلمات التي لها صورة كرتونية مطابقة تماماً على القرص
+    final withExactImg = candidates
+        .where((w) => AssessmentCurriculumData.illustrationForExactWord(w.plainWord) != null)
+        .toList();
+    final word = _pick(
+      withExactImg.isNotEmpty
+          ? withExactImg
+          : (candidates.isNotEmpty ? candidates : spec.words),
+    );
     final correctOrder = List<String>.from(word.baseLetters);
     var scrambled = _shuffled(correctOrder);
-    // ضمان أن الحروف مبعثرة فعلاً وليست مطابقة للترتيب الأصلي
     if (correctOrder.length >= 2 && _listEquals(scrambled, correctOrder)) {
       scrambled = scrambled.reversed.toList();
     }
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(word.plainWord);
 
     return GeneratedQuestion(
       id: _nextId('unsc'),
@@ -832,9 +899,9 @@ class ArabicQuestionEngine {
       promptBadgeAr: 'تَرْتِيبُ ${correctOrder.length} حُرُوفٍ',
       displayPrompt: word.voweledWord,
       scaffoldHintAr: 'الْحَرْفُ الْأَوَّلُ هُوَ (${correctOrder.first}) وَالْكَلِمَةُ هِيَ: ${word.voweledWord}',
-      audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      audioPath: exactIllus?.audioPath ?? spec.nameAudioPath,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       sequenceItems: scrambled,
       correctSequence: correctOrder,
       correctText: word.voweledWord,
@@ -843,14 +910,13 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 10. ركّب الكلمة من الحروف المقطّعة (مثل تركيب كلمات من ثلاثة/أربعة حروف.jpg)
+  /// 10. ركّب الكلمة من الحروف المقطّعة
   GeneratedQuestion _genJoinLettersToWord(
     LetterKnowledgeSpec spec,
     Color accent,
     bool scaffolded,
   ) {
     final word = _pick(spec.words);
-    // نختار ٣ كلمات أخرى من نفس الوحدة كمشتتات حقيقية
     final unitLetters = AssessmentCurriculumData.unitByIndex(spec.unitIndex).letters;
     final distractorWords = <String>[];
     for (final l in _shuffled(unitLetters)) {
@@ -869,7 +935,7 @@ class ArabicQuestionEngine {
       for (int i = 0; i < distractorWords.length; i++)
         QuestionChoice(id: 'join_d_$i', label: distractorWords[i], isCorrect: false),
     ]);
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(word.plainWord);
 
     return GeneratedQuestion(
       id: _nextId('join'),
@@ -881,10 +947,10 @@ class ArabicQuestionEngine {
       instructionAr: 'ادْمُجِ الْحُرُوفَ الْمُقَطَّعَةَ وَاخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ',
       promptBadgeAr: 'رَكِّبِ الْكَلِمَةَ',
       displayPrompt: word.positionalTiles.join('  +  '),
-      scaffoldHintAr: 'اقْرَأِ الْحُرُوفَ مِنْ الْيَمِينِ لِلْيَسَارِ بِالْتَّرْتِيبِ: ${word.positionalTiles.join(" ← ")}',
-      audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      scaffoldHintAr: 'اقْرَأِ الْحُرُوفَ مِنْ الْيَمِينِ لِلْيَسَارِ بِالتَّرْتِيبِ: ${word.positionalTiles.join(" ← ")}',
+      audioPath: exactIllus?.audioPath ?? spec.nameAudioPath,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       sequenceItems: word.positionalTiles,
       choices: choices,
       correctText: word.voweledWord,
@@ -936,13 +1002,20 @@ class ArabicQuestionEngine {
       );
     }
 
-    final word = _pick(spec.words);
+    final withExact = spec.words
+        .where((w) => AssessmentCurriculumData.illustrationForExactWord(w.plainWord) != null)
+        .toList();
+    final word = _pick(withExact.isNotEmpty ? withExact : spec.words);
     final idx = word.baseLetters.indexOf(spec.letter);
     final safeIdx = idx >= 0 ? idx : 0;
     final masked = List<String>.from(word.positionalTiles);
     masked[safeIdx] = ' ؟ ';
 
-    final distractors = _distractorLettersFor(spec, 3);
+    final distractors = _distractorLettersFor(
+      spec,
+      3,
+      exclude: AssessmentCurriculumData.wordLetterSet(word.plainWord),
+    );
     final choices = _shuffled([
       QuestionChoice(id: 'miss_ok', label: spec.displayChar, isCorrect: true),
       for (final d in distractors)
@@ -952,7 +1025,7 @@ class ArabicQuestionEngine {
           isCorrect: false,
         ),
     ]);
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(spec.letter);
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(word.plainWord);
 
     return GeneratedQuestion(
       id: _nextId('miss'),
@@ -964,12 +1037,12 @@ class ArabicQuestionEngine {
       instructionAr: 'اخْتَرِ الْحَرْفَ النَّاقِصَ لِإِكْمَالِ الْكَلِمَةِ الصَّحِيحَةِ',
       promptBadgeAr: 'الْحَرْفُ النَّاقِصُ',
       displayPrompt: masked.join('  '),
-      secondaryPrompt: scaffolded ? word.voweledWord : null,
+      secondaryPrompt: word.voweledWord,
       sequenceItems: masked,
       scaffoldHintAr: 'الْكَلِمَةُ الْكَامِلَةُ هِيَ: «${word.voweledWord}» — وَيَنْقُصُهَا حَرْفُ ${spec.nameAr}.',
-      audioPath: spec.nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      audioPath: exactIllus?.audioPath ?? spec.nameAudioPath,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       choices: choices,
       correctText: spec.displayChar,
       isScaffolded: scaffolded,
@@ -977,7 +1050,7 @@ class ArabicQuestionEngine {
     );
   }
 
-  /// 12. كوّن الجملة الصحيحة (مستلهم من مجلد تكوين جملة)
+  /// 12. كوّن الجملة الصحيحة (بصورة مطابقة لموضوع الجملة تماماً — مثل حِصَان لجملة الْحِصَانُ!)
   GeneratedQuestion _genBuildSentence(
     LetterKnowledgeSpec spec,
     Color accent,
@@ -990,7 +1063,10 @@ class ArabicQuestionEngine {
     if (correctOrder.length >= 2 && _listEquals(scrambled, correctOrder)) {
       scrambled = scrambled.reversed.toList();
     }
-    final illus = AssessmentCurriculumData.primaryIllustrationFor(sentence.hintLetter);
+    // نطابق صورة موضوع الجملة (أول كلمة مثل الْحِصَانُ -> حِصَان، الْأَسَدُ -> أَسَد) بدقة!
+    final exactIllus = AssessmentCurriculumData.illustrationForExactWord(
+      sentence.words.first,
+    );
 
     return GeneratedQuestion(
       id: _nextId('sent'),
@@ -1003,9 +1079,10 @@ class ArabicQuestionEngine {
       promptBadgeAr: 'تَكْوِينُ جُمْلَةٍ',
       displayPrompt: sentence.fullSentence,
       scaffoldHintAr: 'ابْدَأْ بِالْكَلِمَةِ الْأُولَى: «${correctOrder.first}»',
-      audioPath: AssessmentCurriculumData.letterSpec(sentence.hintLetter).nameAudioPath,
-      imagePath: illus.imagePath,
-      imageCropRect: illus.cropRect,
+      audioPath: exactIllus?.audioPath ??
+          AssessmentCurriculumData.letterSpec(sentence.hintLetter).nameAudioPath,
+      imagePath: exactIllus?.imagePath,
+      imageCropRect: exactIllus?.cropRect,
       sequenceItems: scrambled,
       correctSequence: correctOrder,
       correctText: sentence.fullSentence,

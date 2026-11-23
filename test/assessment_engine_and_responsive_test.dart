@@ -108,6 +108,88 @@ void main() {
       expect(generated, 28 * 13);
     });
 
+    test('IRONCLAD PEDAGOGICAL LAW: Zero ambiguous distractors & exact word-picture alignment across all 28 letters', () {
+      final engine = ArabicQuestionEngine(seed: 2026);
+      for (int round = 0; round < 5; round++) {
+        for (final letter in AssessmentCurriculumData.allLetterChars) {
+          // 1. matchPictureToLetter: word MUST start with letter AND ZERO distractors may appear anywhere in word!
+          final picQ = engine.generateQuestion(
+            letter: letter,
+            type: ExerciseType.matchPictureToLetter,
+          );
+          final word = picQ.secondaryPrompt!;
+          expect(
+            AssessmentCurriculumData.wordStartsWithLetter(word, letter),
+            isTrue,
+            reason: 'matchPictureToLetter for $letter picked "$word" which does NOT start with $letter!',
+          );
+          for (final choice in picQ.choices.where((c) => !c.isCorrect)) {
+            expect(
+              AssessmentCurriculumData.wordContainsLetter(word, choice.label),
+              isFalse,
+              reason: 'AMBIGUOUS DISTRACTOR! For "$word" (letter=$letter), wrong option "${choice.label}" is actually INSIDE the word!',
+            );
+          }
+
+          // 2. identifyLetterPosition: target letter MUST occur exactly once in the word!
+          final posQ = engine.generateQuestion(
+            letter: letter,
+            type: ExerciseType.identifyLetterPosition,
+          );
+          final posWordPlain = AssessmentCurriculumData.stripDiacritics(posQ.displayPrompt!);
+          final occurrences = posWordPlain
+              .split('')
+              .where((ch) => AssessmentCurriculumData.normalizeChar(ch) == letter)
+              .length;
+          expect(
+            occurrences,
+            1,
+            reason: 'identifyLetterPosition for $letter picked "${posQ.displayPrompt}" with $occurrences occurrences!',
+          );
+
+          // 3. oddOneOut (when words mode): 3 start with letter, 1 odd does NOT contain letter!
+          final oddQ = engine.generateQuestion(
+            letter: letter,
+            type: ExerciseType.oddOneOut,
+          );
+          if (oddQ.choices.any((c) => c.imagePath != null)) {
+            final oddChoice = oddQ.choices.firstWhere((c) => c.isCorrect);
+            expect(
+              AssessmentCurriculumData.wordContainsLetter(oddChoice.label, letter),
+              isFalse,
+              reason: 'oddOneOut odd word "${oddChoice.label}" accidentally contains $letter!',
+            );
+            for (final same in oddQ.choices.where((c) => !c.isCorrect)) {
+              expect(
+                AssessmentCurriculumData.wordStartsWithLetter(same.label, letter),
+                isTrue,
+                reason: 'oddOneOut same word "${same.label}" does not start with $letter!',
+              );
+            }
+          }
+
+          // 4. chooseHaraka: if illustration shown, its word starts with letter AND matches chosen haraka!
+          final hQ = engine.generateQuestion(
+            letter: letter,
+            type: ExerciseType.chooseHaraka,
+          );
+          if (hQ.imagePath != null) {
+            final fullWord = hQ.secondaryPrompt!;
+            expect(
+              AssessmentCurriculumData.wordStartsWithLetter(fullWord, letter),
+              isTrue,
+              reason: 'chooseHaraka word "$fullWord" must start with $letter',
+            );
+            expect(
+              AssessmentCurriculumData.leadingHarakaOf(fullWord),
+              hQ.correctText,
+              reason: 'chooseHaraka word "$fullWord" haraka must match ${hQ.correctText}',
+            );
+          }
+        }
+      }
+    });
+
     test('Unit exams cover all 6 skill domains across all 4 units with spiral review', () {
       final engine = ArabicQuestionEngine(seed: 101);
       for (int unitIdx = 1; unitIdx <= 4; unitIdx++) {

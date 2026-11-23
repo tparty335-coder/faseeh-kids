@@ -1014,12 +1014,12 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                 FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
-                    q.displayPrompt!,
+                    _solved ? (q.secondaryPrompt ?? q.displayPrompt!) : q.displayPrompt!,
                     style: TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: context.scaledFont(30, min: 22, max: 40),
+                      fontSize: context.scaledFont(32, min: 22, max: 42),
                       fontWeight: FontWeight.w900,
-                      color: _navy,
+                      color: _solved ? const Color(0xFF15803D) : _navy,
                     ),
                   ),
                 ),
@@ -1380,47 +1380,62 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: q.accentColor.withValues(alpha: 0.25), width: 2),
           ),
-          child: Wrap(
-            alignment: WrapAlignment.center,
-            spacing: isCompact ? 6 : 10,
-            runSpacing: 8,
-            children: q.sequenceItems.map((tile) {
-              final isBlank = tile.trim() == '؟';
-              return Container(
-                constraints: BoxConstraints(
-                  minWidth: isCompact ? 42 : 52,
-                  minHeight: isCompact ? 46 : 56,
+          child: Column(
+            children: [
+              if (q.imagePath != null && q.imageCropRect != null) ...[
+                CroppedIllustrationBox(
+                  imagePath: q.imagePath!,
+                  cropRect: q.imageCropRect!,
+                  width: isCompact ? 86 : 112,
+                  height: isCompact ? 86 : 112,
+                  borderRadius: 18,
+                  borderColor: q.accentColor.withValues(alpha: 0.2),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                decoration: BoxDecoration(
-                  color: isBlank
-                      ? (_solved ? const Color(0xFFDCFCE7) : const Color(0xFFFEF3C7))
-                      : const Color(0xFFF8FAFC),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: isBlank
-                        ? (_solved ? const Color(0xFF16A34A) : const Color(0xFFF59E0B))
-                        : const Color(0xFFCBD5E1),
-                    width: isBlank ? 2.4 : 1.5,
-                  ),
-                ),
-                child: Center(
-                  widthFactor: 1,
-                  heightFactor: 1,
-                  child: Text(
-                    isBlank && _solved ? (q.correctText ?? tile) : tile,
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: context.scaledFont(24, min: 19, max: 32),
-                      fontWeight: FontWeight.w900,
-                      color: isBlank
-                          ? (_solved ? const Color(0xFF15803D) : const Color(0xFFD97706))
-                          : _navy,
+                const SizedBox(height: 12),
+              ],
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: isCompact ? 6 : 10,
+                runSpacing: 8,
+                children: q.sequenceItems.map((tile) {
+                  final isBlank = tile.trim() == '؟';
+                  return Container(
+                    constraints: BoxConstraints(
+                      minWidth: isCompact ? 42 : 52,
+                      minHeight: isCompact ? 46 : 56,
                     ),
-                  ),
-                ),
-              );
-            }).toList(),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: isBlank
+                          ? (_solved ? const Color(0xFFDCFCE7) : const Color(0xFFFEF3C7))
+                          : const Color(0xFFF8FAFC),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(
+                        color: isBlank
+                            ? (_solved ? const Color(0xFF16A34A) : const Color(0xFFF59E0B))
+                            : const Color(0xFFCBD5E1),
+                        width: isBlank ? 2.4 : 1.5,
+                      ),
+                    ),
+                    child: Center(
+                      widthFactor: 1,
+                      heightFactor: 1,
+                      child: Text(
+                        isBlank && _solved ? (q.correctText ?? tile) : tile,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: context.scaledFont(24, min: 19, max: 32),
+                          fontWeight: FontWeight.w900,
+                          color: isBlank
+                              ? (_solved ? const Color(0xFF15803D) : const Color(0xFFD97706))
+                              : _navy,
+                        ),
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ],
           ),
         ),
         SizedBox(height: isCompact ? 12 : 16),
