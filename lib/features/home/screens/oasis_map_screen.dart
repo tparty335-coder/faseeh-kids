@@ -484,7 +484,7 @@ class _UnitCheckpointGate extends StatelessWidget {
                       fit: BoxFit.scaleDown,
                       alignment: Alignment.centerRight,
                       child: Text(
-                        'قِيَاسُ ${unit.titleAr}',
+                        'اخْتِبَارُ: ${unit.titleAr}',
                         maxLines: 1,
                         style: TextStyle(
                           fontFamily: 'Cairo',

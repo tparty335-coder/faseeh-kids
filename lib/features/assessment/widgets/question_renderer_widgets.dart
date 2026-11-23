@@ -1191,18 +1191,21 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                           width: 2,
                         ),
                       ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        text,
-                        style: TextStyle(
-                          fontFamily: 'Cairo',
-                          fontSize: isSentence
-                              ? context.scaledFont(17, min: 14, max: 22)
-                              : context.scaledFont(26, min: 22, max: 34),
-                          fontWeight: FontWeight.w900,
-                          color: _solved
-                              ? Colors.white
-                              : (filled ? _navy : const Color(0xFF94A3B8)),
+                      child: Center(
+                        widthFactor: 1,
+                        heightFactor: 1,
+                        child: Text(
+                          text,
+                          style: TextStyle(
+                            fontFamily: 'Cairo',
+                            fontSize: isSentence
+                                ? context.scaledFont(17, min: 14, max: 22)
+                                : context.scaledFont(26, min: 22, max: 34),
+                            fontWeight: FontWeight.w900,
+                            color: _solved
+                                ? Colors.white
+                                : (filled ? _navy : const Color(0xFF94A3B8)),
+                          ),
                         ),
                       ),
                     ),
@@ -1260,16 +1263,19 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                         width: 2,
                       ),
                     ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      q.sequenceItems[idx],
-                      style: TextStyle(
-                        fontFamily: 'Cairo',
-                        fontSize: isSentence
-                            ? context.scaledFont(17, min: 14, max: 22)
-                            : context.scaledFont(28, min: 22, max: 36),
-                        fontWeight: FontWeight.w900,
-                        color: _navy,
+                    child: Center(
+                      widthFactor: 1,
+                      heightFactor: 1,
+                      child: Text(
+                        q.sequenceItems[idx],
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: isSentence
+                              ? context.scaledFont(17, min: 14, max: 22)
+                              : context.scaledFont(28, min: 22, max: 36),
+                          fontWeight: FontWeight.w900,
+                          color: _navy,
+                        ),
                       ),
                     ),
                   ),
@@ -1330,14 +1336,17 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: q.accentColor.withValues(alpha: 0.45), width: 1.8),
                   ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    q.sequenceItems[i],
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: context.scaledFont(28, min: 22, max: 36),
-                      fontWeight: FontWeight.w900,
-                      color: _navy,
+                  child: Center(
+                    widthFactor: 1,
+                    heightFactor: 1,
+                    child: Text(
+                      q.sequenceItems[i],
+                      style: TextStyle(
+                        fontFamily: 'Cairo',
+                        fontSize: context.scaledFont(28, min: 22, max: 36),
+                        fontWeight: FontWeight.w900,
+                        color: _navy,
+                      ),
                     ),
                   ),
                 ),
@@ -1395,16 +1404,19 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     width: isBlank ? 2.4 : 1.5,
                   ),
                 ),
-                alignment: Alignment.center,
-                child: Text(
-                  isBlank && _solved ? (q.correctText ?? tile) : tile,
-                  style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: context.scaledFont(24, min: 19, max: 32),
-                    fontWeight: FontWeight.w900,
-                    color: isBlank
-                        ? (_solved ? const Color(0xFF15803D) : const Color(0xFFD97706))
-                        : _navy,
+                child: Center(
+                  widthFactor: 1,
+                  heightFactor: 1,
+                  child: Text(
+                    isBlank && _solved ? (q.correctText ?? tile) : tile,
+                    style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: context.scaledFont(24, min: 19, max: 32),
+                      fontWeight: FontWeight.w900,
+                      color: isBlank
+                          ? (_solved ? const Color(0xFF15803D) : const Color(0xFFD97706))
+                          : _navy,
+                    ),
                   ),
                 ),
               );
