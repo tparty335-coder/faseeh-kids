@@ -160,7 +160,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
                         fontSize: isTablet ? 48 : 38,
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         shadows: const [Shadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 4))],
                       ),
                     ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.2),
@@ -171,7 +171,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
                       style: TextStyle(
                         fontSize: isTablet ? 22 : 18,
                         color: Colors.white70,
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                       ),
                     ).animate().fadeIn(delay: 200.ms),
 
@@ -188,14 +188,14 @@ class _NameInputScreenState extends State<NameInputScreen> {
                         fontSize: isTablet ? 36 : 28,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xFF1A237E),
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                       ),
                       decoration: InputDecoration(
                         hintText: 'أكتب اسمك',
                         hintStyle: TextStyle(
                           fontSize: isTablet ? 32 : 24,
                           color: Colors.grey.shade400,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                         ),
                         filled: true,
                         fillColor: Colors.white,
@@ -258,7 +258,7 @@ class _NameInputScreenState extends State<NameInputScreen> {
                                 fontSize: isTablet ? 28 : 24,
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                               ),
                             ),
                             const SizedBox(width: 8),

@@ -268,7 +268,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     child: Text(
                       'مَرْكَزُ الْقِيَاسِ وَالتَّقْوِيَةِ الذَّكِيُّ',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(19, min: 15, max: 26),
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
@@ -280,7 +280,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: context.scaledFont(12, min: 10, max: 15),
                       fontWeight: FontWeight.w700,
                       color: Colors.white.withValues(alpha: 0.92),
@@ -324,7 +324,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     Text(
                       '${diag.unitResults.length}/4 وَحَدَاتٍ',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(13, min: 11.5, max: 15.5),
                         fontWeight: FontWeight.w900,
                         color: const Color(0xFF92400E),
@@ -402,7 +402,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                           t.$2,
                           maxLines: 1,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize:
                                 context.scaledFont(14, min: 11.5, max: 17),
                             fontWeight: FontWeight.w900,
@@ -552,7 +552,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize:
                                 context.scaledFont(17, min: 14.5, max: 21),
                             fontWeight: FontWeight.w900,
@@ -562,7 +562,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                         Text(
                           'اخْتِبَارُ قِيَاسٍ بَعْدَ ٧ حُرُوفٍ',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize:
                                 context.scaledFont(11.5, min: 10.5, max: 14),
                             fontWeight: FontWeight.w700,
@@ -585,7 +585,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                       child: Text(
                         '${mastery.badgeEmoji} ${result.percent.round()}%',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(13, min: 11.5, max: 15.5),
                           fontWeight: FontWeight.w900,
                           color: mastery.color,
@@ -652,7 +652,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                                       child: Text(
                                         spec.displayChar,
                                         style: TextStyle(
-                                          fontFamily: 'Cairo',
+                                          fontFamily: 'NotoNaskhArabic',
                                           fontSize: isCompact ? 16 : 21,
                                           fontWeight: FontWeight.w900,
                                           color: isWeak
@@ -694,7 +694,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                                   ? 'ابْدَأْ اخْتِبَارَ الْوَحْدَةِ (١٠ أَسْئِلَةٍ)'
                                   : 'أَعِدِ الْقِيَاسَ بِأَسْئِلَةٍ جَدِيدَةٍ',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: context.scaledFont(
                                   14.5,
                                   min: 12,
@@ -796,7 +796,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                           child: Text(
                             'عِيَادَةُ صَقْرٍ لِلتَّقْوِيَةِ الذَّكِيَّةِ 🩺',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: context.scaledFont(
                                 11.5,
                                 min: 10,
@@ -811,7 +811,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                         Text(
                           prescription.headlineAr,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize:
                                 context.scaledFont(16.5, min: 14, max: 21),
                             fontWeight: FontWeight.w900,
@@ -827,7 +827,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
               Text(
                 prescription.summaryAr,
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: context.scaledFont(14, min: 12, max: 16.5),
                   fontWeight: FontWeight.w700,
                   color: const Color(0xFF334155),
@@ -860,7 +860,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                                 ? 'ابْدَأْ خُطَّتَكَ الْعِلَاجِيَّةَ الْمُخَصَّصَةَ الْآنَ'
                                 : 'ابْدَأْ جَلْسَةَ التَّأْسِيسِ وَالتَّقْوِيَةِ',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: context.scaledFont(
                                 15,
                                 min: 12.5,
@@ -885,7 +885,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
         Text(
           '🩺 اخْتَرْ مَسَارَ التَّقْوِيَةِ حَسَبَ نَوْعِ الضَّعْفِ:',
           style: TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: context.scaledFont(16.5, min: 13.5, max: 20),
             fontWeight: FontWeight.w900,
             color: PlayfulPalette.ink,
@@ -994,7 +994,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     Text(
                       domain.titleAr,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(15.5, min: 13, max: 18.5),
                         fontWeight: FontWeight.w900,
                         color: PlayfulPalette.ink,
@@ -1003,7 +1003,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     Text(
                       domain.subtitleAr,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(12, min: 10.5, max: 14.5),
                         fontWeight: FontWeight.w600,
                         color: const Color(0xFF64748B),
@@ -1026,7 +1026,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                   child: Text(
                     '$pct%',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 13,
                       fontWeight: FontWeight.w900,
                       color: isWeak
@@ -1049,7 +1049,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
           Text(
             domain.remedialAdviceAr,
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: context.scaledFont(12.5, min: 11, max: 15),
               fontWeight: FontWeight.w600,
               color: const Color(0xFF475569),
@@ -1081,7 +1081,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                     child: Text(
                       'ابْدَأْ تَمَارِينَ التَّقْوِيَةِ',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(13.5, min: 11.5, max: 15.5),
                         fontWeight: FontWeight.w900,
                       ),
@@ -1201,7 +1201,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                       child: Text(
                         spec.displayChar,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isCompact ? 18 : 22,
                           fontWeight: FontWeight.w900,
                           color: selected ? Colors.white : PlayfulPalette.ink,
@@ -1269,7 +1269,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                   child: Text(
                     'تَوْلِيدُ جَوْلَةٍ جَدِيدَةٍ الْآنَ (لَانِهَائِيٌّ)',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: context.scaledFont(17, min: 14, max: 21),
                       fontWeight: FontWeight.w900,
                     ),
@@ -1320,7 +1320,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                 child: Text(
                   stepNum,
                   style: const TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 15,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
@@ -1332,7 +1332,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
                 child: Text(
                   title,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: context.scaledFont(14.5, min: 12.5, max: 18),
                     fontWeight: FontWeight.w900,
                     color: PlayfulPalette.ink,
@@ -1394,7 +1394,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
               child: Text(
                 label,
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: context.scaledFont(13, min: 11, max: 15.5),
                   fontWeight: FontWeight.w900,
                   color: selected ? Colors.white : PlayfulPalette.ink,

@@ -170,7 +170,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
               child: Center(
                 child: Text(
                   '★',
-                  style: TextStyle(fontFamily: 'Cairo', 
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                     fontSize: 48,
                     color: Colors.white,
                   ),
@@ -194,7 +194,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
         Text(
           'فصيح الصغار المميز',
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: 'Cairo', 
+          style: TextStyle(fontFamily: 'NotoNaskhArabic', 
             fontSize: 28,
             fontWeight: FontWeight.w900,
             color: Colors.white,
@@ -205,7 +205,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
         Text(
           'افتح كامل رحلة الحروف العربية الـ 28',
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: 'Cairo', 
+          style: TextStyle(fontFamily: 'NotoNaskhArabic', 
             fontSize: 16,
             color: Colors.white70,
             fontWeight: FontWeight.w500,
@@ -245,7 +245,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                 Expanded(
                   child: Text(
                     text,
-                    style: TextStyle(fontFamily: 'Cairo', 
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                       fontSize: 14,
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -333,7 +333,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                         children: [
                           Text(
                             _packageTitle(pkg.packageType),
-                            style: TextStyle(fontFamily: 'Cairo', 
+                            style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                               fontSize: 16,
                               fontWeight: FontWeight.w700,
                               color: Colors.white,
@@ -349,7 +349,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                               ),
                               child: Text(
                                 'الأفضل قيمةً',
-                                style: TextStyle(fontFamily: 'Cairo', 
+                                style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                                   fontSize: 10,
                                   fontWeight: FontWeight.w800,
                                   color: Colors.black,
@@ -361,7 +361,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                       ),
                       Text(
                         _packageSubtitle(pkg.packageType),
-                        style: TextStyle(fontFamily: 'Cairo', 
+                        style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                           fontSize: 12,
                           color: Colors.white60,
                         ),
@@ -371,7 +371,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                 ),
                 Text(
                   pkg.storeProduct.priceString,
-                  style: TextStyle(fontFamily: 'Cairo', 
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                     fontSize: 18,
                     fontWeight: FontWeight.w900,
                     color: isSelected ? const Color(0xFFFFD700) : Colors.white,
@@ -437,7 +437,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                     children: [
                       Row(
                         children: [
-                          Text(title, style: TextStyle(fontFamily: 'Cairo', 
+                          Text(title, style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                             fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white,
                           )),
                           if (best) ...[
@@ -448,18 +448,18 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                                 color: const Color(0xFFFFD700),
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              child: Text('الأفضل قيمةً', style: TextStyle(fontFamily: 'Cairo', 
+                              child: Text('الأفضل قيمةً', style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                                 fontSize: 10, fontWeight: FontWeight.w800, color: Colors.black,
                               )),
                             ),
                           ],
                         ],
                       ),
-                      Text(sub, style: TextStyle(fontFamily: 'Cairo', fontSize: 12, color: Colors.white60)),
+                      Text(sub, style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 12, color: Colors.white60)),
                     ],
                   ),
                 ),
-                Text(price, style: TextStyle(fontFamily: 'Cairo', 
+                Text(price, style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                   fontSize: 18, fontWeight: FontWeight.w900,
                   color: isSelected ? const Color(0xFFFFD700) : Colors.white,
                 )),
@@ -522,7 +522,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
               )
             : Text(
                 'ابدأ الرحلة الكاملة ✨',
-                style: TextStyle(fontFamily: 'Cairo', 
+                style: TextStyle(fontFamily: 'NotoNaskhArabic', 
                   fontSize: 18,
                   fontWeight: FontWeight.w900,
                 ),
@@ -543,7 +543,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('تم استعادة اشتراكك بنجاح! 🎉',
-                    style: TextStyle(fontFamily: 'Cairo', fontSize: 14)),
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 14)),
                   backgroundColor: const Color(0xFF4CAF50),
                 ),
               );
@@ -556,13 +556,13 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
           },
           child: Text(
             'استعادة المشتريات',
-            style: TextStyle(fontFamily: 'Cairo', color: Colors.white54, fontSize: 13),
+            style: TextStyle(fontFamily: 'NotoNaskhArabic', color: Colors.white54, fontSize: 13),
           ),
         ),
         Text(
           'يُجدَّد الاشتراك تلقائياً · يمكن الإلغاء في أي وقت\nيخضع للشروط والأحكام وسياسة الخصوصية',
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: 'Cairo', color: Colors.white38, fontSize: 10),
+          style: TextStyle(fontFamily: 'NotoNaskhArabic', color: Colors.white38, fontSize: 10),
         ),
       ],
     );
@@ -590,7 +590,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('سيتم تفعيل المدفوعات قريباً!',
-            style: const TextStyle(fontFamily: 'Cairo')),
+            style: const TextStyle(fontFamily: 'NotoNaskhArabic')),
         backgroundColor: Colors.orange,
       ),
     );

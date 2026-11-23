@@ -159,8 +159,8 @@ class _WordBuilderGameState extends ConsumerState<WordBuilderGame> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('رتّب الحروف لتكوّن كلمة', style: TextStyle(fontSize: isTablet ? 26 : 20, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'Cairo')),
-              Text('الجولة ${_round + 1}/$_totalRounds', style: TextStyle(fontSize: isTablet ? 18 : 14, color: Colors.grey, fontFamily: 'Cairo')),
+              Text('رتّب الحروف لتكوّن كلمة', style: TextStyle(fontSize: isTablet ? 26 : 20, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'NotoNaskhArabic')),
+              Text('الجولة ${_round + 1}/$_totalRounds', style: TextStyle(fontSize: isTablet ? 18 : 14, color: Colors.grey, fontFamily: 'NotoNaskhArabic')),
               SizedBox(height: isTablet ? 40 : 24),
 
               // Answer slots
@@ -188,7 +188,7 @@ class _WordBuilderGameState extends ConsumerState<WordBuilderGame> {
                       child: Center(
                         child: Text(
                           char ?? '',
-                          style: TextStyle(fontSize: isTablet ? 42 : 34, fontFamily: 'Cairo', fontWeight: FontWeight.bold, color: _isComplete ? Colors.white : AppColors.skyBlue),
+                          style: TextStyle(fontSize: isTablet ? 42 : 34, fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, color: _isComplete ? Colors.white : AppColors.skyBlue),
                         ),
                       ),
                     ),
@@ -202,7 +202,7 @@ class _WordBuilderGameState extends ConsumerState<WordBuilderGame> {
               TextButton.icon(
                 onPressed: _resetAnswer,
                 icon: const Icon(Icons.refresh_rounded, color: Colors.grey),
-                label: Text('إعادة', style: TextStyle(color: Colors.grey, fontFamily: 'Cairo', fontSize: isTablet ? 18 : 14)),
+                label: Text('إعادة', style: TextStyle(color: Colors.grey, fontFamily: 'NotoNaskhArabic', fontSize: isTablet ? 18 : 14)),
               ),
 
               SizedBox(height: isTablet ? 32 : 16),
@@ -232,7 +232,7 @@ class _WordBuilderGameState extends ConsumerState<WordBuilderGame> {
                         boxShadow: [BoxShadow(color: Colors.orange.withValues(alpha: 0.4), blurRadius: 8, offset: const Offset(0, 4))],
                       ),
                       child: Center(
-                        child: Text(char, style: TextStyle(fontSize: isTablet ? 42 : 34, fontFamily: 'Cairo', fontWeight: FontWeight.bold, color: Colors.white)),
+                        child: Text(char, style: TextStyle(fontSize: isTablet ? 42 : 34, fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, color: Colors.white)),
                       ),
                     ).animate().scale(begin: const Offset(0.8, 0.8), duration: 200.ms),
                   );

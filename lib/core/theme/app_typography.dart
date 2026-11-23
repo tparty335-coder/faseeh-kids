@@ -38,7 +38,7 @@ class AppTypography {
         ? _h1Preschool
         : _h1Standard;
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: size,
       fontWeight: FontWeight.w700,
       color: color,
@@ -55,7 +55,7 @@ class AppTypography {
         ? _h2Preschool
         : _h2Standard;
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: size,
       fontWeight: FontWeight.w600,
       color: color,
@@ -72,7 +72,7 @@ class AppTypography {
         ? _bodyPreschool
         : _bodyStandard;
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: size,
       fontWeight: FontWeight.w400,
       color: color,
@@ -89,7 +89,7 @@ class AppTypography {
         ? _buttonPreschool
         : _buttonStandard;
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: size,
       fontWeight: FontWeight.w600,
       color: color,
@@ -106,7 +106,7 @@ class AppTypography {
         ? _captionPreschool
         : _captionStandard;
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: size,
       fontWeight: FontWeight.w400,
       color: color,
@@ -117,7 +117,7 @@ class AppTypography {
   /// Arabic Letter Display — oversized for letter learning screens
   static TextStyle arabicLetterDisplay({Color? color}) {
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: 96.0,
       fontWeight: FontWeight.w700,
       color: color,
@@ -128,7 +128,7 @@ class AppTypography {
   /// Arabic Word Display — for word learning and reading
   static TextStyle arabicWordDisplay({Color? color}) {
     return TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: 48.0,
       fontWeight: FontWeight.w600,
       color: color,

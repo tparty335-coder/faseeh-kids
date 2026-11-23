@@ -147,7 +147,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                     fontSize: isTablet ? 36 : 26,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     shadows: const [
                       Shadow(color: Colors.black45, blurRadius: 10, offset: Offset(0, 4)),
                     ],
@@ -160,7 +160,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                   style: TextStyle(
                     fontSize: isTablet ? 18 : 14,
                     color: Colors.white70,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ).animate().fadeIn(delay: 200.ms),
 
@@ -269,7 +269,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                         fontSize: context.scaledFont(18),
                                         fontWeight: FontWeight.w900,
                                         color: Colors.white,
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         shadows: const [
                                           Shadow(color: Colors.black45, blurRadius: 6, offset: Offset(0, 2)),
                                         ],
@@ -283,7 +283,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                         fontSize: context.scaledFont(12),
                                         fontWeight: FontWeight.w600,
                                         color: Colors.white.withValues(alpha: 0.95),
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                       ),
                                     ),
                                   ],
@@ -354,7 +354,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                                 fontSize: context.scaledFont(22),
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                               ),
                             ),
                             const SizedBox(width: 8),

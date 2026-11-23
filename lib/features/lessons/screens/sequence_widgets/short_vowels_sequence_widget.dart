@@ -1250,7 +1250,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -1324,7 +1324,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                     child: Text(
                                       h['vowelMark'] as String,
                                       style: TextStyle(
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         fontSize: 42,
                                         fontWeight: FontWeight.w900,
                                         color: color,
@@ -1342,7 +1342,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                     child: Text(
                                       h['explanation'] as String,
                                       style: const TextStyle(
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: AppColors.textPrimaryDay,
@@ -1395,7 +1395,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                                 Text(
                                                   examples[i]['word'] as String,
                                                   style: TextStyle(
-                                                    fontFamily: 'Cairo',
+                                                    fontFamily: 'NotoNaskhArabic',
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
                                                     color: currentEx == i ? Colors.white : color,
@@ -1406,7 +1406,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                                   Text(
                                                     '(${examples[i]['position']})',
                                                     style: TextStyle(
-                                                      fontFamily: 'Cairo',
+                                                      fontFamily: 'NotoNaskhArabic',
                                                       fontSize: 12,
                                                       fontWeight: FontWeight.w600,
                                                       color: currentEx == i ? Colors.white.withValues(alpha: 0.9) : Colors.grey.shade600,
@@ -1445,7 +1445,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                       Text(
                                         ex['word'] as String,
                                         style: TextStyle(
-                                          fontFamily: 'Cairo',
+                                          fontFamily: 'NotoNaskhArabic',
                                           fontSize: 34,
                                           fontWeight: FontWeight.w900,
                                           color: color,
@@ -1465,7 +1465,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
-                                                fontFamily: 'Cairo',
+                                                fontFamily: 'NotoNaskhArabic',
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.bold,
                                                 color: color,
@@ -1518,7 +1518,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                           'اضْغَطْ لِسَمَاعِ نُطْقِ الْكَلِمَةِ',
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(fontFamily: 'Cairo', fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
+                                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
                                         ),
                                       ),
                                     ],
@@ -1547,7 +1547,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                       'المثال السابق',
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 14),
+                                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 14),
                                     ),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: color,
@@ -1592,7 +1592,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                                       'المثال التالي',
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 14),
+                                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 14),
                                     ),
                                     icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
                                     style: ElevatedButton.styleFrom(
@@ -1625,7 +1625,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                   onPressed: _previousPage,
                   icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                   label: const Text('السابق',
-                      style: TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold)),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryDay,
                     foregroundColor: Colors.white,
@@ -1664,7 +1664,7 @@ class _ShortVowelsSequenceWidgetState extends State<ShortVowelsSequenceWidget> {
                       _currentPage == _harakat.length - 1 ? 'التالي: الْمُدُود' : 'التالي',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
                     style: ElevatedButton.styleFrom(

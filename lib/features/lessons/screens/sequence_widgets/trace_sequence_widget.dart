@@ -912,7 +912,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -972,7 +972,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                       child: Text(
                                         s['title'] as String,
                                         style: TextStyle(
-                                          fontFamily: 'Cairo',
+                                          fontFamily: 'NotoNaskhArabic',
                                           fontSize: isTablet ? 22 : 18,
                                           fontWeight: FontWeight.w900,
                                           color: color,
@@ -998,7 +998,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                 Text(
                                   s['subtitle'] as String,
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 17,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.grey.shade700,
@@ -1035,7 +1035,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
-                                                fontFamily: 'Cairo',
+                                                fontFamily: 'NotoNaskhArabic',
                                                 fontSize: 22,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.grey.shade800,
@@ -1073,7 +1073,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                     s['formsNote'] as String,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontFamily: 'Cairo',
+                                      fontFamily: 'NotoNaskhArabic',
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: color.withValues(alpha: 0.8),
@@ -1108,7 +1108,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                                 child: Text(
                                                   f,
                                                   style: TextStyle(
-                                                    fontFamily: 'Cairo',
+                                                    fontFamily: 'NotoNaskhArabic',
                                                     fontSize: 30,
                                                     fontWeight: FontWeight.w900,
                                                     color: isActive ? Colors.white : Colors.grey.shade500,
@@ -1120,7 +1120,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                                                 Text(
                                                   labels[fi] as String,
                                                   style: TextStyle(
-                                                    fontFamily: 'Cairo',
+                                                    fontFamily: 'NotoNaskhArabic',
                                                     fontSize: 14,
                                                     color: isActive ? color : Colors.grey,
                                                     fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
@@ -1170,7 +1170,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                   icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                   label: const Text(
                     'السابق',
-                    style: TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryDay,
@@ -1213,7 +1213,7 @@ class _TraceSequenceWidgetState extends State<TraceSequenceWidget> {
                       _currentStep == _steps.length - 1 ? 'التالي: ألعاب الحرف 🎮' : 'التالي',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     icon: Icon(
                       _currentStep == _steps.length - 1 ? Icons.videogame_asset_rounded : Icons.arrow_forward_ios_rounded,

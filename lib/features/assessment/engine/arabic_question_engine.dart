@@ -353,10 +353,10 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.visualRecognition,
       type: ExerciseType.findAndTapGrid,
-      instructionAr: 'ابْحَثْ عَنْ جَمِيعِ بَطَاقَاتِ حَرْفِ ${spec.nameAr} وَلَوِّنْهَا بِاللَّمْسِ',
+      instructionAr: 'ابْحَثْ عَنْ جَمِيعِ بَطَاقَاتِ حَرْفِ ${spec.genitiveNameAr} وَلَوِّنْهَا بِاللَّمْسِ',
       promptBadgeAr: 'ابْحَثْ عَنْ $targetCount حُرُوفٍ',
       displayPrompt: spec.displayChar,
-      scaffoldHintAr: 'تَذَكَّرْ: حَرْفُ ${spec.nameAr} (${spec.displayChar}) — ${spec.dotDescriptionAr}',
+      scaffoldHintAr: 'تَذَكَّرْ: حَرْفُ ${spec.genitiveNameAr} (${spec.displayChar}) — ${spec.dotDescriptionAr}',
       audioPath: spec.nameAudioPath,
       choices: shuffled,
       isScaffolded: scaffolded,
@@ -402,7 +402,7 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.visualRecognition,
       type: ExerciseType.circleMatchLetter,
-      instructionAr: 'صِلْ كُلَّ أَشْكَالِ حَرْفِ ${spec.nameAr} بِالدَّائِرَةِ فِي الْمُنْتَصَفِ',
+      instructionAr: 'صِلْ كُلَّ أَشْكَالِ حَرْفِ ${spec.genitiveNameAr} بِالدَّائِرَةِ فِي الْمُنْتَصَفِ',
       promptBadgeAr: 'أَصِبْ ٣ أَشْكَالٍ صَحِيحَةٍ',
       displayPrompt: spec.displayChar,
       secondaryPrompt: illus.word,
@@ -462,9 +462,9 @@ class ArabicQuestionEngine {
       type: ExerciseType.similarLettersSpot,
       instructionAr: useDotRiddle
           ? 'أَيُّ حَرْفٍ مِنَ الْمُتَشَابِهَاتِ يَنْطَبِقُ عَلَيْهِ هَذَا الْوَصْفُ؟'
-          : 'اسْتَمِعْ جَيِّدًا وَاخْتَرْ حَرْفَ ${spec.nameAr} مِنْ بَيْنِ الْحُرُوفِ الْمُتَشَابِهَةِ',
+          : 'اسْتَمِعْ جَيِّدًا وَاخْتَرْ حَرْفَ ${spec.genitiveNameAr} مِنْ بَيْنِ الْحُرُوفِ الْمُتَشَابِهَةِ',
       promptBadgeAr: 'تَمْيِيزُ الْمُتَشَابِهَاتِ',
-      displayPrompt: useDotRiddle ? spec.dotDescriptionAr : 'حَرْفُ ${spec.nameAr}',
+      displayPrompt: useDotRiddle ? spec.dotDescriptionAr : 'حَرْفُ ${spec.genitiveNameAr}',
       secondaryPrompt: useDotRiddle ? null : 'مِثْلُ: ${illus.word}',
       scaffoldHintAr: 'رَكِّزْ عَلَى النُّقَطِ: ${spec.dotDescriptionAr}',
       audioPath: spec.nameAudioPath,
@@ -551,11 +551,11 @@ class ArabicQuestionEngine {
       domain: SkillDomain.similarLetters,
       type: ExerciseType.oddOneOut,
       instructionAr: useWordsMode
-          ? 'ثَلَاثُ كَلِمَاتٍ تَبْدَأُ بِحَرْفِ ${spec.nameAr} وَوَاحِدَةٌ تَبْدَأُ بِحَرْفٍ مُخْتَلِفٍ — اضْغَطْ عَلَى الْمُخْتَلِفَةِ!'
-          : 'ثَلَاثُ بَطَاقَاتٍ لِحَرْفِ ${spec.nameAr} وَوَاحِدَةٌ مُخْتَلِفَةٌ — اكْتَشِفْهَا!',
+          ? 'ثَلَاثُ كَلِمَاتٍ تَبْدَأُ بِحَرْفِ ${spec.genitiveNameAr} وَوَاحِدَةٌ تَبْدَأُ بِحَرْفٍ مُخْتَلِفٍ — اضْغَطْ عَلَى الْمُخْتَلِفَةِ!'
+          : 'ثَلَاثُ بَطَاقَاتٍ لِحَرْفِ ${spec.genitiveNameAr} وَوَاحِدَةٌ مُخْتَلِفَةٌ — اكْتَشِفْهَا!',
       promptBadgeAr: 'اكْتَشِفِ الْغَرِيبَ',
       displayPrompt: spec.displayChar,
-      scaffoldHintAr: 'حَرْفُ ${spec.nameAr} يَتَكَرَّرُ ٣ مَرَّاتٍ، أَمَّا الْمُخْتَلِفُ فَهُوَ حَرْفُ ${oddSpec.nameAr}.',
+      scaffoldHintAr: 'حَرْفُ ${spec.genitiveNameAr} يَتَكَرَّرُ ٣ مَرَّاتٍ، أَمَّا الْمُخْتَلِفُ فَهُوَ حَرْفُ ${oddSpec.genitiveNameAr}.',
       audioPath: spec.nameAudioPath,
       choices: choices,
       isScaffolded: scaffolded,
@@ -577,12 +577,16 @@ class ArabicQuestionEngine {
         safeIdx > 0 && AssessmentCurriculumData.kickingLetters.contains(word.baseLetters[safeIdx - 1]);
 
     String posLabel;
+    String posGenitive;
     if (safeIdx == 0) {
       posLabel = 'أَوَّلُ الْكَلِمَةِ';
+      posGenitive = 'أَوَّلِ الْكَلِمَةِ';
     } else if (safeIdx == word.baseLetters.length - 1) {
       posLabel = prevKicking ? 'آخِرُ الْكَلِمَةِ (مُنْفَصِلٌ بَعْدَ حَرْفٍ رَافِسٍ)' : 'آخِرُ الْكَلِمَةِ (مُتَّصِلٌ)';
+      posGenitive = prevKicking ? 'آخِرِ الْكَلِمَةِ (مُنْفَصِلًا بَعْدَ حَرْفٍ رَافِسٍ)' : 'آخِرِ الْكَلِمَةِ';
     } else {
       posLabel = prevKicking ? 'وَسَطُ الْكَلِمَةِ (بَعْدَ حَرْفٍ رَافِسٍ)' : 'وَسَطُ الْكَلِمَةِ (مُتَّصِلٌ)';
+      posGenitive = prevKicking ? 'وَسَطِ الْكَلِمَةِ (بَعْدَ حَرْفٍ رَافِسٍ)' : 'وَسَطِ الْكَلِمَةِ';
     }
 
     // نعرض المقاطع مع فراغ في موضع الحرف المستهدف
@@ -636,12 +640,12 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.letterPositions,
       type: ExerciseType.chooseLetterForm,
-      instructionAr: 'اخْتَرِ الشَّكْلَ الصَّحِيحَ لِحَرْفِ ${spec.nameAr} فِي $posLabel',
+      instructionAr: 'اخْتَرِ الشَّكْلَ الصَّحِيحَ لِحَرْفِ ${spec.genitiveNameAr} فِي $posGenitive',
       promptBadgeAr: posLabel,
       displayPrompt: maskedTiles.join('  '),
       secondaryPrompt: word.voweledWord,
       scaffoldHintAr: spec.isKicking
-          ? 'تَذَكَّرْ: حَرْفُ ${spec.nameAr} حَرْفٌ رَافِسٌ لَا يَتَّصِلُ بِمَا بَعْدَهُ أَبَدًا!'
+          ? 'تَذَكَّرْ: حَرْفُ ${spec.genitiveNameAr} حَرْفٌ رَافِسٌ لَا يَتَّصِلُ بِمَا بَعْدَهُ أَبَدًا!'
           : prevKicking
               ? 'الْحَرْفُ الَّذِي قَبْلَهُ رَافِسٌ؛ لِذَلِكَ لَا يَمُدُّ يَدَهُ إِلَيْهِ!'
               : 'انْظُرْ هَلْ يَمُدُّ يَدَهُ لِمَا قَبْلَهُ وَمَا بَعْدَهُ؟',
@@ -675,21 +679,21 @@ class ArabicQuestionEngine {
       QuestionChoice(
         id: 'pos_start',
         label: 'أَوَّلُ الْكَلِمَةِ',
-        sublabel: spec.initialForm,
+        sublabel: '0', // رمز الموضع البصري (أول الكلمة يميناً) بدون كشف شكل الحرف!
         isCorrect: pos == 'start',
         accentColor: const Color(0xFF0284C7),
       ),
       QuestionChoice(
         id: 'pos_middle',
         label: 'وَسَطُ الْكَلِمَةِ',
-        sublabel: spec.medialConnectedForm,
+        sublabel: '1', // رمز الموضع البصري (وسط الكلمة)
         isCorrect: pos == 'middle',
         accentColor: const Color(0xFF7C3AED),
       ),
       QuestionChoice(
         id: 'pos_end',
         label: 'آخِرُ الْكَلِمَةِ',
-        sublabel: spec.finalConnectedForm,
+        sublabel: '2', // رمز الموضع البصري (آخر الكلمة يساراً)
         isCorrect: pos == 'end',
         accentColor: const Color(0xFF16A34A),
       ),
@@ -702,11 +706,11 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.letterPositions,
       type: ExerciseType.identifyLetterPosition,
-      instructionAr: 'أَيْنَ يَقَعُ حَرْفُ ${spec.nameAr} فِي هَذِهِ الْكَلِمَةِ؟',
+      instructionAr: 'أَيْنَ يَقَعُ حَرْفُ ${spec.genitiveNameAr} فِي هَذِهِ الْكَلِمَةِ؟',
       promptBadgeAr: 'حَدِّدِ الْمَوْضِعَ',
       displayPrompt: word.voweledWord,
       secondaryPrompt: spec.displayChar,
-      scaffoldHintAr: 'ابْدَأْ بِالْحَرْفِ الْأَوَّلِ مِنَ الْيَمِينِ وَابْحَثْ عَنْ حَرْفِ ${spec.nameAr} (${spec.displayChar}).',
+      scaffoldHintAr: 'اقْرَأِ الْكَلِمَةَ مِنَ الْيَمِينِ لِلْيَسَارِ وَابْحَثْ عَنْ مَكَانِ حَرْفِ ${spec.genitiveNameAr} (${spec.displayChar}).',
       audioPath: spec.nameAudioPath,
       imagePath: exactIllus?.imagePath,
       imageCropRect: exactIllus?.cropRect,
@@ -793,7 +797,7 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.phonicsHarakat,
       type: ExerciseType.chooseHaraka,
-      instructionAr: 'اسْتَمِعْ لِلصَّوْتِ وَاخْتَرِ الْحَرَكَةَ الْمُنَاسِبَةَ لِحَرْفِ ${spec.nameAr}',
+      instructionAr: 'اسْتَمِعْ لِلصَّوْتِ وَاخْتَرِ الْحَرَكَةَ الْمُنَاسِبَةَ لِحَرْفِ ${spec.genitiveNameAr}',
       promptBadgeAr: 'الْحَرَكَاتُ الْقَصِيرَةُ',
       displayPrompt: maskedWord,
       secondaryPrompt: targetWord,
@@ -854,7 +858,7 @@ class ArabicQuestionEngine {
       promptBadgeAr: 'الْحَرْفُ الْأَوَّلُ لِلصُّورَةِ',
       displayPrompt: scaffolded ? illus.word : null,
       secondaryPrompt: illus.word,
-      scaffoldHintAr: 'انْطِقْ أَوَّلَ صَوْتٍ فِي كَلِمَةِ «${illus.word}» — إِنَّهُ حَرْفُ ${spec.nameAr}!',
+      scaffoldHintAr: 'انْطِقْ أَوَّلَ صَوْتٍ فِي كَلِمَةِ «${illus.word}» — إِنَّهُ حَرْفُ ${spec.genitiveNameAr}!',
       audioPath: illus.audioPath,
       imagePath: illus.imagePath,
       imageCropRect: illus.cropRect,
@@ -1039,7 +1043,7 @@ class ArabicQuestionEngine {
       displayPrompt: masked.join('  '),
       secondaryPrompt: word.voweledWord,
       sequenceItems: masked,
-      scaffoldHintAr: 'الْكَلِمَةُ الْكَامِلَةُ هِيَ: «${word.voweledWord}» — وَيَنْقُصُهَا حَرْفُ ${spec.nameAr}.',
+      scaffoldHintAr: 'الْكَلِمَةُ الْكَامِلَةُ هِيَ: «${word.voweledWord}» — وَيَنْقُصُهَا حَرْفُ ${spec.genitiveNameAr}.',
       audioPath: exactIllus?.audioPath ?? spec.nameAudioPath,
       imagePath: exactIllus?.imagePath,
       imageCropRect: exactIllus?.cropRect,
@@ -1126,7 +1130,7 @@ class ArabicQuestionEngine {
       unitIndex: spec.unitIndex,
       domain: SkillDomain.sentenceAndTracing,
       type: ExerciseType.tracingDrill,
-      instructionAr: 'تَتَبَّعْ مَسَارَ حَرْفِ ${spec.nameAr} فِي $posAr مِنَ النُّقْطَةِ الذَّهَبِيَّةِ',
+      instructionAr: 'تَتَبَّعْ مَسَارَ حَرْفِ ${spec.genitiveNameAr} فِي $posAr مِنَ النُّقْطَةِ الذَّهَبِيَّةِ',
       promptBadgeAr: 'التَّتَبُّعُ الْحَرَكِيُّ',
       displayPrompt: spec.displayChar,
       secondaryPrompt: illus.word,

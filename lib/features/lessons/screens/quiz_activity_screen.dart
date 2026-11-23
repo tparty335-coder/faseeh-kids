@@ -142,7 +142,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                     fontSize: titleFontSize,
                     fontWeight: FontWeight.bold,
                     color: AppColors.desertSand,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ),
                 if (_hintWord.isNotEmpty)
@@ -150,7 +150,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                     'في كلمة: $_hintWord',
                     style: TextStyle(
                       fontSize: titleFontSize * 0.7,
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       color: AppColors.desertSand.withValues(alpha: 0.8),
                     ),
                   ),
@@ -202,7 +202,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                         option,
                         style: TextStyle(
                           fontSize: optionFontSize,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           color: isSelected ? Colors.white : AppColors.skyBlue,
                         ),
                       ),
@@ -225,7 +225,7 @@ class _QuizActivityScreenState extends ConsumerState<QuizActivityScreen> {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   color: _isCorrect == true ? AppColors.oasisGreen : Colors.orange,
                 ),
               ),

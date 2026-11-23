@@ -57,7 +57,7 @@ class PhrasesActivityScreen extends ConsumerWidget {
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      style: const TextStyle(fontSize: 48, fontFamily: 'Cairo', color: AppColors.textPrimary, height: 1.5),
+                      style: const TextStyle(fontSize: 48, fontFamily: 'NotoNaskhArabic', color: AppColors.textPrimary, height: 1.5),
                       children: _buildHighlightedText(sentenceText, letter.letter),
                     ),
                   ).animate().fadeIn(duration: 500.ms).scale(begin: const Offset(0.8, 0.8)),

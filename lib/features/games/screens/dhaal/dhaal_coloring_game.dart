@@ -729,7 +729,7 @@ class _DhaalColoringGameState extends ConsumerState<DhaalColoringGame> {
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -771,7 +771,7 @@ class _DhaalColoringGameState extends ConsumerState<DhaalColoringGame> {
         child: Text(
           t,
           style: const TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 15,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -819,7 +819,7 @@ class _DhaalColoringGameState extends ConsumerState<DhaalColoringGame> {
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.amber,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ),
                 const SizedBox(height: 28),
@@ -843,7 +843,7 @@ class _DhaalColoringGameState extends ConsumerState<DhaalColoringGame> {
                   icon: const Icon(Icons.replay_rounded),
                   label: const Text(
                     'الْعَبْ مَرَّةً أُخْرَى',
-                    style: TextStyle(fontFamily: 'Cairo', fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber.shade700,

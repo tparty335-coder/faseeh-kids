@@ -336,7 +336,7 @@ class _Juicy3DButtonState extends State<Juicy3DButton> {
           data: IconThemeData(color: widget.foregroundColor),
           child: DefaultTextStyle.merge(
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               color: widget.foregroundColor,
               fontWeight: FontWeight.w900,
             ),
@@ -440,7 +440,7 @@ class FalconCompanionBubble extends StatelessWidget {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: context.scaledFont(11.5, min: 10, max: 14),
                               fontWeight: FontWeight.w900,
                               color: PlayfulPalette.darken(accent, 0.12),
@@ -450,7 +450,7 @@ class FalconCompanionBubble extends StatelessWidget {
                       Text(
                         messageAr,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(15.5, min: 12.5, max: 20),
                           fontWeight: FontWeight.w900,
                           color: PlayfulPalette.ink,

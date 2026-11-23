@@ -142,7 +142,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                     ref.read(currentLessonProvider.notifier).nextActivity();
                   },
                   icon: const Icon(Icons.check_circle_outline, size: 28),
-                  label: Text('انتهيت', style: TextStyle(fontSize: isTablet ? 24 : 20, fontWeight: FontWeight.bold, fontFamily: 'Cairo')),
+                  label: Text('انتهيت', style: TextStyle(fontSize: isTablet ? 24 : 20, fontWeight: FontWeight.bold, fontFamily: 'NotoNaskhArabic')),
                 ).animate().scale(delay: 200.ms)
               else
                 // Next Haraka button
@@ -156,7 +156,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                   onPressed: () {
                     _pageController.nextPage(duration: 400.ms, curve: Curves.easeInOut);
                   },
-                  label: const Text('الحركة التالية', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'Cairo')),
+                  label: const Text('الحركة التالية', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'NotoNaskhArabic')),
                   icon: const Icon(Icons.arrow_forward_ios_rounded, size: 20),
                 ),
             ],
@@ -221,7 +221,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                 fontSize: isTablet ? 36 : 28,
                 fontWeight: FontWeight.bold,
                 color: color,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
             ),
           ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.2),
@@ -250,7 +250,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                 style: TextStyle(
                   fontSize: letterFontSize,
                   color: AppColors.desertSand,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   height: 1,
                 ),
               ),
@@ -286,7 +286,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                       fontSize: isTablet ? 24 : 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                     ),
                   ),
                 ],
@@ -309,7 +309,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
               children: [
                 Text(
                   'مثال:',
-                  style: TextStyle(fontSize: isTablet ? 20 : 16, color: Colors.grey, fontFamily: 'Cairo'),
+                  style: TextStyle(fontSize: isTablet ? 20 : 16, color: Colors.grey, fontFamily: 'NotoNaskhArabic'),
                 ),
                 const SizedBox(width: 12),
                 Text(
@@ -318,7 +318,7 @@ class _ListenActivityScreenState extends ConsumerState<ListenActivityScreen> {
                     fontSize: isTablet ? 32 : 24,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textPrimaryDay,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ),
               ],

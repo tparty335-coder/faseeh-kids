@@ -162,8 +162,8 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
           child: Column(
             children: [
               // Title + round info
-              Text('لوّن حروف الكلمة!', style: TextStyle(fontSize: isTablet ? 28 : 22, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'Cairo')),
-              Text('الكلمة ${_round + 1}/$_totalRounds', style: TextStyle(fontSize: isTablet ? 18 : 14, color: Colors.grey, fontFamily: 'Cairo')),
+              Text('لوّن حروف الكلمة!', style: TextStyle(fontSize: isTablet ? 28 : 22, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'NotoNaskhArabic')),
+              Text('الكلمة ${_round + 1}/$_totalRounds', style: TextStyle(fontSize: isTablet ? 18 : 14, color: Colors.grey, fontFamily: 'NotoNaskhArabic')),
 
               SizedBox(height: isTablet ? 32 : 20),
 
@@ -209,7 +209,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
                               char,
                               style: TextStyle(
                                 fontSize: charFontSize,
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontWeight: FontWeight.bold,
                                 color: colored != null
                                     ? _contrastColor(colored)
@@ -251,7 +251,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
                   children: [
                     Container(width: 12, height: 12, decoration: const BoxDecoration(color: AppColors.oasisGreen, shape: BoxShape.circle)),
                     const SizedBox(width: 8),
-                    Text('الدائرة الخضراء = حرف المدّ', style: TextStyle(fontSize: isTablet ? 16 : 13, color: AppColors.oasisGreen, fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+                    Text('الدائرة الخضراء = حرف المدّ', style: TextStyle(fontSize: isTablet ? 16 : 13, color: AppColors.oasisGreen, fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -259,7 +259,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
               SizedBox(height: isTablet ? 32 : 20),
 
               // Color palette
-              Text('اختر اللون:', style: TextStyle(fontSize: isTablet ? 20 : 16, color: AppColors.desertSand, fontFamily: 'Cairo')),
+              Text('اختر اللون:', style: TextStyle(fontSize: isTablet ? 20 : 16, color: AppColors.desertSand, fontFamily: 'NotoNaskhArabic')),
               SizedBox(height: isTablet ? 16 : 10),
               Wrap(
                 spacing: isTablet ? 16 : 10,
@@ -297,7 +297,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
 
               // Progress + actions
               if (_isComplete) ...[
-                Text('أحسنت! الكلمة ملوّنة 🎨', style: TextStyle(fontSize: isTablet ? 26 : 20, fontWeight: FontWeight.bold, color: AppColors.oasisGreen, fontFamily: 'Cairo'))
+                Text('أحسنت! الكلمة ملوّنة 🎨', style: TextStyle(fontSize: isTablet ? 26 : 20, fontWeight: FontWeight.bold, color: AppColors.oasisGreen, fontFamily: 'NotoNaskhArabic'))
                   .animate().scale(),
                 const SizedBox(height: 16),
                 ElevatedButton.icon(
@@ -305,7 +305,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
                   icon: const Icon(Icons.arrow_forward_rounded),
                   label: Text(
                     _round < _totalRounds - 1 ? 'كلمة أخرى' : 'انتهينا! 🎉',
-                    style: TextStyle(fontFamily: 'Cairo', fontSize: isTablet ? 22 : 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: isTablet ? 22 : 18, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.oasisGreen,
@@ -319,7 +319,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
                 TextButton.icon(
                   onPressed: () => setState(() => _charColors = {}),
                   icon: const Icon(Icons.refresh_rounded, color: Colors.grey),
-                  label: Text('إعادة التلوين', style: TextStyle(color: Colors.grey, fontFamily: 'Cairo', fontSize: isTablet ? 18 : 14)),
+                  label: Text('إعادة التلوين', style: TextStyle(color: Colors.grey, fontFamily: 'NotoNaskhArabic', fontSize: isTablet ? 18 : 14)),
                 ),
                 // Completion progress
                 LinearProgressIndicator(
@@ -330,7 +330,7 @@ class _ColoringGameState extends ConsumerState<ColoringGame> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 SizedBox(height: isTablet ? 8 : 4),
-                Text('${_charColors.length}/${_currentWordChars.length} حروف ملوّنة', style: TextStyle(fontSize: isTablet ? 16 : 13, color: Colors.grey, fontFamily: 'Cairo')),
+                Text('${_charColors.length}/${_currentWordChars.length} حروف ملوّنة', style: TextStyle(fontSize: isTablet ? 16 : 13, color: Colors.grey, fontFamily: 'NotoNaskhArabic')),
               ],
               SizedBox(height: isTablet ? 24 : 16),
             ],

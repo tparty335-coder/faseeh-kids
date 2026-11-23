@@ -148,12 +148,12 @@ class _PositionCard extends StatelessWidget {
                 ),
                 Text(
                   displayChar,
-                  style: const TextStyle(fontSize: 40, fontFamily: 'Cairo', color: AppColors.skyBlue, height: 1.2),
+                  style: const TextStyle(fontSize: 40, fontFamily: 'NotoNaskhArabic', color: AppColors.skyBlue, height: 1.2),
                 ),
                 if (exampleWord.isNotEmpty)
                   Text(
                     exampleWord,
-                    style: const TextStyle(fontSize: 20, fontFamily: 'Cairo', color: AppColors.textPrimary),
+                    style: const TextStyle(fontSize: 20, fontFamily: 'NotoNaskhArabic', color: AppColors.textPrimary),
                   ),
               ],
             ),

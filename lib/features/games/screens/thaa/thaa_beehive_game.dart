@@ -384,7 +384,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                             color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                           ),
                         ),
                       ),
@@ -408,7 +408,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                         child: Text(
                           rd.correctWord,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: (34 * dW / _imgW).clamp(20.0, 44.0),
                             fontWeight: FontWeight.w900,
                             color: const Color(0xFF1B5E20),
@@ -539,7 +539,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -581,7 +581,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
         child: Text(
           t,
           style: const TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 15,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -620,7 +620,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ).animate(delay: 400.ms).fadeIn(),
                 const SizedBox(height: 30),
@@ -642,7 +642,7 @@ class _ThaaBeeHiveGameState extends ConsumerState<ThaaBeeHiveGame> {
                     });
                   },
                   icon: const Icon(Icons.replay_rounded),
-                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)),
+                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
                     foregroundColor: Colors.black87,

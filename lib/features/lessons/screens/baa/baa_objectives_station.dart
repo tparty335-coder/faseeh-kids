@@ -127,7 +127,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: AppColors.baaTopBar,
@@ -196,7 +196,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                             child: const Text(
                               'بَطَّةُ الْبَاءِ',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -212,7 +212,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                             ),
                             label: Text(
                               _isPlaying ? 'جارٍ الاستماع' : 'اسْتَمِعْ لِلْأَهْدَافِ',
-                              style: const TextStyle(fontFamily: 'Cairo', fontSize: 12, fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.baaSpeaker,
@@ -258,7 +258,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.baaObjectivesTitle,
@@ -299,7 +299,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
                                     child: Text(
                                       _objectives[index],
                                       style: const TextStyle(
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         fontSize: 13,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.baaObjectivesText,
@@ -330,7 +330,7 @@ class _BaaObjectivesStationState extends State<BaaObjectivesStation>
             icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
             label: const Text(
               'ابْدَأِ الدَّرْسَ (قِصَّةُ الْحَرْفِ)',
-              style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.nextButton,

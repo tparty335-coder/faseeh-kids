@@ -65,11 +65,11 @@ class OasisBottomNavBar extends StatelessWidget {
               unselectedFontSize: (labelSize - 1).clamp(10.0, 14.0),
               selectedLabelStyle: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
               unselectedLabelStyle: const TextStyle(
                 fontWeight: FontWeight.w600,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
               items: List.generate(items.length, (index) {
                 final item = items[index];

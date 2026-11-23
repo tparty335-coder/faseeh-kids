@@ -103,7 +103,7 @@ class BaaTrainNavBar extends StatelessWidget {
                         s['title'] as String,
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isActive ? 12 : 10,
                           fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
                           color: isActive ? color : Colors.brown.shade700,

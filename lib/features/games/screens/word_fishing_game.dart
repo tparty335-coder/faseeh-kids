@@ -320,7 +320,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
                           color: Colors.white,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                         ),
                       ),
                     ).animate().fadeIn().scale(),
@@ -486,7 +486,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -515,7 +515,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
           Text(
             '$_score',
             style: const TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 18,
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -536,7 +536,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
       child: Text(
         'سؤال ${_round + 1} / ${_rounds.length}',
         style: const TextStyle(
-          fontFamily: 'Cairo',
+          fontFamily: 'NotoNaskhArabic',
           fontSize: 16,
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -585,7 +585,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                 ),
               ).animate(delay: 400.ms).fadeIn().slideY(begin: 0.3),
               const SizedBox(height: 12),
@@ -594,7 +594,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
                 style: const TextStyle(
                   fontSize: 20,
                   color: Colors.yellow,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontWeight: FontWeight.bold,
                 ),
               ).animate(delay: 600.ms).fadeIn(),
@@ -615,7 +615,7 @@ class _WordFishingGameState extends ConsumerState<WordFishingGame> {
                 icon: const Icon(Icons.replay_rounded),
                 label: const Text(
                   'الْعَبْ مَرَّةً أُخْرَى',
-                  style: TextStyle(fontFamily: 'Cairo', fontSize: 18),
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.amber,

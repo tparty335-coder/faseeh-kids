@@ -319,7 +319,7 @@ class _AssessmentSessionScreenState
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize:
                                   context.scaledFont(13.5, min: 11, max: 17),
                               fontWeight: FontWeight.w900,
@@ -344,7 +344,7 @@ class _AssessmentSessionScreenState
                           child: Text(
                             '${_currentIndex + 1} / ${_questions.length}',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize:
                                   context.scaledFont(12, min: 10.5, max: 15),
                               fontWeight: FontWeight.w900,
@@ -401,7 +401,7 @@ class _AssessmentSessionScreenState
                     Text(
                       '$_starsEarned',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(14, min: 12, max: 18),
                         fontWeight: FontWeight.w900,
                         color: const Color(0xFFB45309),
@@ -474,7 +474,7 @@ class _AssessmentSessionScreenState
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
-                                            fontFamily: 'Cairo',
+                                            fontFamily: 'NotoNaskhArabic',
                                             fontSize: context.scaledFont(
                                               12.5,
                                               min: 10.5,
@@ -528,7 +528,7 @@ class _AssessmentSessionScreenState
                                           ? 'إِخْفَاءُ التَّلْمِيحِ'
                                           : 'تَلْمِيحٌ',
                                       style: TextStyle(
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         fontSize: context.scaledFont(
                                           12,
                                           min: 10.5,
@@ -569,7 +569,7 @@ class _AssessmentSessionScreenState
                                   child: Text(
                                     q.scaffoldHintAr!,
                                     style: TextStyle(
-                                      fontFamily: 'Cairo',
+                                      fontFamily: 'NotoNaskhArabic',
                                       fontSize: context.scaledFont(
                                         13.5,
                                         min: 11.5,
@@ -664,7 +664,7 @@ class _AssessmentSessionScreenState
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     14.5,
                                     min: 12,
@@ -693,7 +693,7 @@ class _AssessmentSessionScreenState
                                     ? 'السُّؤَالُ التَّالِي'
                                     : 'عَرْضُ النَّتِيجَةِ وَالتَّشْخِيصِ',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     17,
                                     min: 14,
@@ -798,7 +798,7 @@ class _AssessmentSessionScreenState
                           child: Text(
                             '${mastery.badgeEmoji} ${mastery.titleAr}',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: context.scaledFont(24, min: 19, max: 32),
                               fontWeight: FontWeight.w900,
                               color: mastery.color,
@@ -828,7 +828,7 @@ class _AssessmentSessionScreenState
                               child: Text(
                                 '$percentInt%  (${res.correctCount} مِنْ ${res.totalQuestions} مِنْ أَوَّلِ مُحَاوَلَةٍ)',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     14.5,
                                     min: 12,
@@ -854,7 +854,7 @@ class _AssessmentSessionScreenState
                               child: Text(
                                 '⭐ $_starsEarned نَجْمَةً',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     14.5,
                                     min: 12,
@@ -873,7 +873,7 @@ class _AssessmentSessionScreenState
                           mastery.recommendationAr,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: context.scaledFont(14.5, min: 12, max: 18),
                             fontWeight: FontWeight.w700,
                             color: const Color(0xFF334155),
@@ -917,7 +917,7 @@ class _AssessmentSessionScreenState
                               child: Text(
                                 'التَّحْلِيلُ الْعِلْمِيُّ لِلْمَهَارَاتِ',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     16.5,
                                     min: 14,
@@ -961,7 +961,7 @@ class _AssessmentSessionScreenState
                                           child: Text(
                                             domain.titleAr,
                                             style: TextStyle(
-                                              fontFamily: 'Cairo',
+                                              fontFamily: 'NotoNaskhArabic',
                                               fontSize: context.scaledFont(
                                                 14,
                                                 min: 12,
@@ -975,7 +975,7 @@ class _AssessmentSessionScreenState
                                         Text(
                                           '$pct%',
                                           style: TextStyle(
-                                            fontFamily: 'Cairo',
+                                            fontFamily: 'NotoNaskhArabic',
                                             fontSize: context.scaledFont(
                                               14,
                                               min: 12,
@@ -1006,7 +1006,7 @@ class _AssessmentSessionScreenState
                           Text(
                             '🎯 حُرُوفٌ تَحْتَاجُ تَقْوِيَةً إِضَافِيَّةً:',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: context.scaledFont(
                                 14.5,
                                 min: 12.5,
@@ -1046,7 +1046,7 @@ class _AssessmentSessionScreenState
                                 child: Text(
                                   '${spec.displayChar}  (${spec.nameAr})',
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: context.scaledFont(
                                       14,
                                       min: 12,
@@ -1086,7 +1086,7 @@ class _AssessmentSessionScreenState
                               child: Text(
                                 'ابْدَأِ التَّمَارِينَ الْعِلَاجِيَّةَ لِنِقَاطِ الضَّعْفِ الْآنَ',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(
                                     15.5,
                                     min: 13,
@@ -1121,7 +1121,7 @@ class _AssessmentSessionScreenState
                             child: Text(
                               'جَوْلَةٌ جَدِيدَةٌ بِأَسْئِلَةٍ جَدِيدَةٍ (تَوْلِيدٌ لَانِهَائِيٌّ)',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: context.scaledFont(
                                   15,
                                   min: 13,
@@ -1162,7 +1162,7 @@ class _AssessmentSessionScreenState
                             child: Text(
                               'الْعَوْدَةُ لِمَرْكَزِ الْقِيَاسِ وَالتَّقْوِيَةِ',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: context.scaledFont(
                                   14.5,
                                   min: 12.5,

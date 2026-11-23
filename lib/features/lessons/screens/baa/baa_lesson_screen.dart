@@ -135,7 +135,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                   const Text(
                     'مُمْتَازٌ يَا بَطَل! 🎉',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 26,
                       fontWeight: FontWeight.w900,
                       color: AppColors.primaryDay,
@@ -146,7 +146,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                     'أَكْمَلْتَ دَرْسَ حَرْفِ (ب) بِنَجَاحٍ!\nوَتَمَّ فَتْحُ حَرْفِ (ت) وَتَوْثِيقُ التَّقَدُّمِ ⭐',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey.shade800,
@@ -174,7 +174,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                         label: Text(
                           'الانْتِقَالُ إِلَى حَرْفِ (${nextLetterData.letter}) 🚀',
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                           ),
@@ -201,7 +201,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                       label: const Text(
                         'الْعَوْدَةُ إِلَى خَرِيطَةِ الْحُرُوفِ 🗺️',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -223,7 +223,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                     label: Text(
                       'إِعَادَةُ دَرْسِ حَرْفِ (ب) 🔄',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 13,
                         color: Colors.grey.shade600,
                         fontWeight: FontWeight.bold,
@@ -268,7 +268,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -284,7 +284,7 @@ class _BaaLessonScreenState extends ConsumerState<BaaLessonScreen> {
                         child: const Text(
                           'حَرْفُ (ب)',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: AppColors.baaTopBar,

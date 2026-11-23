@@ -158,7 +158,7 @@ class _CircusGameState extends ConsumerState<CircusGame> {
           if (_showCorrectAnswer)
             Positioned(top: oy + dH * 0.35, left: 0, right: 0, child: Center(
               child: Container(padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12), decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.75), borderRadius: BorderRadius.circular(16), border: Border.all(color: Colors.greenAccent, width: 2)),
-                child: const Text('هَذِهِ هِيَ الْإِجَابَةُ الصَّحِيحَةُ', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Cairo'))).animate().fadeIn().scale(),
+                child: const Text('هَذِهِ هِيَ الْإِجَابَةُ الصَّحِيحَةُ', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'NotoNaskhArabic'))).animate().fadeIn().scale(),
             )),
 
           Positioned(top: 10, left: 0, right: 0, child: _topBar()),
@@ -204,7 +204,7 @@ class _CircusGameState extends ConsumerState<CircusGame> {
         child: Container(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10), decoration: BoxDecoration(color: const Color(0xFFE53935), borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.red.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 3))]),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             if (isNext) Icon(icon, color: Colors.white, size: 20), if (isNext) const SizedBox(width: 6),
-            Text(label, style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text(label, style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
             if (!isNext) const SizedBox(width: 6), if (!isNext) Icon(icon, color: Colors.white, size: 20),
           ]),
         ),
@@ -217,16 +217,16 @@ class _CircusGameState extends ConsumerState<CircusGame> {
     GestureDetector(onTap: _playInstruction, child: Container(padding: const EdgeInsets.all(9), decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle), child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 26))),
     const SizedBox(width: 10), _chip('${_round + 1} / ${_rounds.length}'),
   ]);
-  Widget _chip(String t) => Container(padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6), decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(20)), child: Text(t, style: const TextStyle(fontFamily: 'Cairo', fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold)));
+  Widget _chip(String t) => Container(padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6), decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(20)), child: Text(t, style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold)));
   Widget _gameOverScreen() => Stack(children: [
     Positioned.fill(child: Image.asset(_rounds.last.imagePath, fit: BoxFit.contain)), Positioned.fill(child: Container(color: Colors.black.withValues(alpha: 0.65))),
     Align(alignment: Alignment.topCenter, child: ConfettiWidget(confettiController: _confetti, blastDirectionality: BlastDirectionality.explosive, numberOfParticles: 50, gravity: 0.3, colors: const [Colors.yellow, Colors.green, Colors.red, Colors.purple, Colors.orange])),
     Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
       Text(_score == _rounds.length ? '🏆' : '🎯', style: const TextStyle(fontSize: 90)).animate().scale(begin: const Offset(0, 0), curve: Curves.elasticOut, duration: 800.ms),
       const SizedBox(height: 20),
-      Text(_score == _rounds.length ? 'مُمْتَازٌ! أَجَبْتَ عَلَى كُلِّ الأَسْئِلَةِ!' : 'أَحْسَنْتَ! إِجَابَتُكَ: $_score / ${_rounds.length}', textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'Cairo')).animate(delay: 400.ms).fadeIn(),
+      Text(_score == _rounds.length ? 'مُمْتَازٌ! أَجَبْتَ عَلَى كُلِّ الأَسْئِلَةِ!' : 'أَحْسَنْتَ! إِجَابَتُكَ: $_score / ${_rounds.length}', textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white, fontFamily: 'NotoNaskhArabic')).animate(delay: 400.ms).fadeIn(),
       const SizedBox(height: 30),
-      ElevatedButton.icon(onPressed: () { setState(() { _round = 0; _score = 0; _gameOver = false; _tapped = null; _roundDone = false; _wrongAttempts = 0; _showCorrectAnswer = false; }); Future.delayed(const Duration(milliseconds: 500), _playInstruction); }, icon: const Icon(Icons.replay_rounded), label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)), style: ElevatedButton.styleFrom(backgroundColor: Colors.amber, foregroundColor: Colors.black87, padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))).animate(delay: 700.ms).fadeIn().scale(begin: const Offset(0.8, 0.8)),
+      ElevatedButton.icon(onPressed: () { setState(() { _round = 0; _score = 0; _gameOver = false; _tapped = null; _roundDone = false; _wrongAttempts = 0; _showCorrectAnswer = false; }); Future.delayed(const Duration(milliseconds: 500), _playInstruction); }, icon: const Icon(Icons.replay_rounded), label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18)), style: ElevatedButton.styleFrom(backgroundColor: Colors.amber, foregroundColor: Colors.black87, padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))).animate(delay: 700.ms).fadeIn().scale(begin: const Offset(0.8, 0.8)),
     ])),
   ]);
 }

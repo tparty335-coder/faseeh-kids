@@ -153,7 +153,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
                         fontSize: isTablet ? 28 : 22,
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                       ),
                     ),
                   ),
@@ -202,7 +202,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
       label: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(label, style: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 14)),
+          Text(label, style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 14)),
           if (isNext) const SizedBox(width: 4),
           if (isNext) Icon(icon, size: 16),
         ],
@@ -252,7 +252,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
                 fontSize: 16,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
             ),
             const SizedBox(height: 4),
@@ -266,7 +266,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.white70,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                 ),
               ),
             ),
@@ -311,7 +311,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF6A1B9A),
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                           ),
                         ),
                       ),
@@ -339,7 +339,7 @@ class _HaGamesStationState extends ConsumerState<KhaGamesStation> {
                     child: Text(
                       'القائمة',
                       maxLines: 1,
-                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                   style: ElevatedButton.styleFrom(

@@ -271,7 +271,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                     hotspot.hintText,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 14,
                       color: Colors.white,
                       shadows: [Shadow(color: Colors.black, blurRadius: 4)],
@@ -303,7 +303,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
               mc.question,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: 16,
                 fontWeight: FontWeight.w900,
                 color: widget.accentColor,
@@ -422,7 +422,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
@@ -485,7 +485,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                             Text(
                               '${_currentSceneIndex + 1}/${_scenes.length}',
                               style: const TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -582,7 +582,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                       scene.captionText!,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: screenSize.width > 600 ? 17 : 13,
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF3E2723),
@@ -606,7 +606,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                           child: Text(
                             _currentSceneIndex == 0 ? 'الأهداف' : 'المشهد السابق',
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
@@ -640,7 +640,7 @@ class _UniversalStoryStationState extends State<UniversalStoryStation> {
                                 ? 'إِنْهَاءُ الْقِصَّةِ 🎉'
                                 : 'الْمَشْهَدُ التَّالِي',
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),

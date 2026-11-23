@@ -11,7 +11,7 @@ class AppTheme {
   static ThemeData get dayTheme {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       brightness: Brightness.light,
       primaryColor: AppColors.primaryDay,
       scaffoldBackgroundColor: AppColors.backgroundDay,
@@ -27,7 +27,7 @@ class AppTheme {
         onError: Colors.white,
       ),
       textTheme: ThemeData.light().textTheme.apply(
-        fontFamily: 'Cairo',
+        fontFamily: 'NotoNaskhArabic',
         bodyColor: AppColors.textPrimaryDay,
         displayColor: AppColors.textPrimaryDay,
       ),
@@ -74,7 +74,7 @@ class AppTheme {
   static ThemeData get nightTheme {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       brightness: Brightness.dark,
       primaryColor: AppColors.primaryNight,
       scaffoldBackgroundColor: AppColors.backgroundNight,
@@ -90,7 +90,7 @@ class AppTheme {
         onError: Colors.white,
       ),
       textTheme: ThemeData.dark().textTheme.apply(
-        fontFamily: 'Cairo',
+        fontFamily: 'NotoNaskhArabic',
         bodyColor: AppColors.textPrimaryNight,
         displayColor: AppColors.textPrimaryNight,
       ),

@@ -189,7 +189,7 @@ class _CatchLetterGameState extends ConsumerState<CatchLetterGame> with SingleTi
                     children: [
                       const Icon(Icons.catching_pokemon_rounded, color: AppColors.oasisGreen, size: 20),
                       const SizedBox(width: 6),
-                      Text('اصطد: $_targetChar', style: const TextStyle(color: AppColors.oasisGreen, fontFamily: 'Cairo', fontSize: 18, fontWeight: FontWeight.bold)),
+                      Text('اصطد: $_targetChar', style: const TextStyle(color: AppColors.oasisGreen, fontFamily: 'NotoNaskhArabic', fontSize: 18, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -226,7 +226,7 @@ class _CatchLetterGameState extends ConsumerState<CatchLetterGame> with SingleTi
                   ],
                 ),
                 child: Center(
-                  child: Text(fl.char, style: TextStyle(fontSize: isTablet ? 36 : 30, fontFamily: 'Cairo', color: Colors.white, fontWeight: FontWeight.bold)),
+                  child: Text(fl.char, style: TextStyle(fontSize: isTablet ? 36 : 30, fontFamily: 'NotoNaskhArabic', color: Colors.white, fontWeight: FontWeight.bold)),
                 ),
               ),
             ),
@@ -241,9 +241,9 @@ class _CatchLetterGameState extends ConsumerState<CatchLetterGame> with SingleTi
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(_won ? '🎉 أحسنت!' : '💔 حاول مرة أخرى', style: TextStyle(fontSize: isTablet ? 48 : 36, color: Colors.white, fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+                  Text(_won ? '🎉 أحسنت!' : '💔 حاول مرة أخرى', style: TextStyle(fontSize: isTablet ? 48 : 36, color: Colors.white, fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold)),
                   const SizedBox(height: 16),
-                  Text('النقاط: $_score', style: const TextStyle(fontSize: 28, color: Colors.white70, fontFamily: 'Cairo')),
+                  Text('النقاط: $_score', style: const TextStyle(fontSize: 28, color: Colors.white70, fontFamily: 'NotoNaskhArabic')),
                   const SizedBox(height: 24),
                   if (!_won)
                     ElevatedButton.icon(
@@ -258,7 +258,7 @@ class _CatchLetterGameState extends ConsumerState<CatchLetterGame> with SingleTi
                         _startGame();
                       },
                       icon: const Icon(Icons.refresh_rounded),
-                      label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'Cairo', fontSize: 20)),
+                      label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 20)),
                       style: ElevatedButton.styleFrom(backgroundColor: AppColors.oasisGreen, foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16)),
                     ),
                 ],
@@ -304,7 +304,7 @@ class _HudItem extends StatelessWidget {
         children: [
           Icon(icon, color: color, size: 18),
           const SizedBox(width: 4),
-          Text(value, style: TextStyle(color: color, fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
+          Text(value, style: TextStyle(color: color, fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold)),
         ],
       ),
     );

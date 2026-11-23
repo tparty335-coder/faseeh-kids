@@ -154,7 +154,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                         child: Text(
                           'السَّابِقُ',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -172,7 +172,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                         '🎮 أَلْعَابُ حَرْفِ الثَّاءِ',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
                           color: Color(0xFF6A1B9A),
@@ -190,7 +190,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                         child: Text(
                           'إِنْهَاءُ الدَّرْسِ',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -271,7 +271,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                 fontSize: isTablet ? 20 : 16,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
             ),
             const SizedBox(height: 4),
@@ -285,7 +285,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.white70,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                 ),
               ),
             ),
@@ -330,7 +330,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF6A1B9A),
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                           ),
                         ),
                       ),
@@ -358,7 +358,7 @@ class _ThaaGamesStationState extends ConsumerState<ThaaGamesStation> {
                     child: Text(
                       'الْأَلْعَابُ',
                       maxLines: 1,
-                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                   style: ElevatedButton.styleFrom(

@@ -2132,7 +2132,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                     child: Text(
                       _letterBadge(widget.letterChar),
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -2147,7 +2147,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                         '${widget.exampleEmoji} ${widget.exampleWord}',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 17,
                           fontWeight: FontWeight.w900,
                           color: widget.primaryColor,
@@ -2310,7 +2310,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                         currentHint,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 13.5,
                           fontWeight: FontWeight.bold,
                           color: _isAllCompleted
@@ -2328,7 +2328,7 @@ class _ArabicLetterTracingCanvasState extends State<ArabicLetterTracingCanvas>
                   icon: const Icon(Icons.refresh_rounded, size: 18),
                   label: const Text(
                     'إِعَادَةٌ',
-                    style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 13),
+                    style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 13),
                   ),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: widget.primaryColor,
@@ -2662,7 +2662,7 @@ class ArabicLetterTracingPainter extends CustomPainter {
             text: TextSpan(
               text: s.label,
               style: TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: (r * 1.15).clamp(9.0, 14.0),
                 fontWeight: FontWeight.w900,
                 color: _navyGuide,

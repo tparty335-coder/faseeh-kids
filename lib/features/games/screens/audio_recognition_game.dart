@@ -158,7 +158,7 @@ class _AudioRecognitionGameState extends ConsumerState<AudioRecognitionGame> {
                     children: [
                       Icon(Icons.volume_up_rounded, color: Colors.white, size: isTablet ? 60 : 50),
                       const SizedBox(height: 8),
-                      Text('استمع', style: TextStyle(color: Colors.white, fontFamily: 'Cairo', fontSize: isTablet ? 20 : 16, fontWeight: FontWeight.bold)),
+                      Text('استمع', style: TextStyle(color: Colors.white, fontFamily: 'NotoNaskhArabic', fontSize: isTablet ? 20 : 16, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -168,7 +168,7 @@ class _AudioRecognitionGameState extends ConsumerState<AudioRecognitionGame> {
 
               SizedBox(height: isTablet ? 48 : 32),
 
-              Text('أي حرف سمعت؟', style: TextStyle(fontSize: isTablet ? 28 : 22, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'Cairo')),
+              Text('أي حرف سمعت؟', style: TextStyle(fontSize: isTablet ? 28 : 22, fontWeight: FontWeight.bold, color: AppColors.desertSand, fontFamily: 'NotoNaskhArabic')),
               SizedBox(height: isTablet ? 32 : 20),
 
               // Options
@@ -205,7 +205,7 @@ class _AudioRecognitionGameState extends ConsumerState<AudioRecognitionGame> {
                         child: Text(opt,
                           style: TextStyle(
                             fontSize: isTablet ? 64 : 52,
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             color: (_roundComplete && (isSelected || isCorrect)) ? Colors.white : AppColors.skyBlue,
                           ),
                         ),
@@ -239,8 +239,8 @@ class _InfoChip extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(label, style: TextStyle(fontSize: 13, color: color, fontFamily: 'Cairo')),
-          Text(value, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: color, fontFamily: 'Cairo')),
+          Text(label, style: TextStyle(fontSize: 13, color: color, fontFamily: 'NotoNaskhArabic')),
+          Text(value, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: color, fontFamily: 'NotoNaskhArabic')),
         ],
       ),
     );

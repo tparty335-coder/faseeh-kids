@@ -154,7 +154,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                         child: Text(
                           'السَّابِقُ',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -172,7 +172,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                         '🎮 أَلْعَابُ حَرْفِ الْجِيمِ',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
                           color: Color(0xFF00695C),
@@ -190,7 +190,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                         child: Text(
                           'إِنْهَاءُ الدَّرْسِ',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -271,7 +271,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                 fontSize: isTablet ? 20 : 16,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
             ),
             const SizedBox(height: 4),
@@ -285,7 +285,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.white70,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                 ),
               ),
             ),
@@ -330,7 +330,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF00695C),
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                           ),
                         ),
                       ),
@@ -358,7 +358,7 @@ class _JeemGamesStationState extends ConsumerState<JeemGamesStation> {
                     child: Text(
                       'الْأَلْعَابُ',
                       maxLines: 1,
-                      style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 16),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                   style: ElevatedButton.styleFrom(

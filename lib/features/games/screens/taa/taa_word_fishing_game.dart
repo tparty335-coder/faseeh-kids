@@ -504,7 +504,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -546,7 +546,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
         child: Text(
           t,
           style: const TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 15,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -579,7 +579,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
                     style: const TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       color: Colors.amber,
                     ),
                   ).animate().fadeIn(duration: 600.ms).scaleXY(begin: 0.7, curve: Curves.elasticOut),
@@ -588,7 +588,7 @@ class _TaaWordFishingGameState extends ConsumerState<TaaWordFishingGame> {
                     icon: const Icon(Icons.replay_rounded, size: 26),
                     label: const Text(
                       'الْعَبْ مَرَّةً أُخْرَى',
-                      style: TextStyle(fontFamily: 'Cairo', fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber.shade700,

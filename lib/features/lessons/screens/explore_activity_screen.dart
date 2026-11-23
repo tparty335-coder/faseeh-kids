@@ -225,7 +225,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
             fontSize: isTablet ? 32 : 26,
             fontWeight: FontWeight.bold,
             color: AppColors.desertSand,
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
           ),
         ).animate().fadeIn().slideY(begin: -0.2),
         const SizedBox(height: 4),
@@ -235,7 +235,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
           style: TextStyle(
             fontSize: isTablet ? 16 : 14,
             color: AppColors.textSecondaryDay,
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
           ),
         ),
       ],
@@ -282,7 +282,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: isActive ? Colors.white : Colors.grey.shade600,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ),
               const SizedBox(width: 4),
@@ -292,7 +292,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
                   color: isCompleted || isActive ? Colors.white : Colors.grey.shade600,
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                 ),
               ),
             ],
@@ -314,7 +314,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
         style: TextStyle(
           fontSize: isTablet ? 20 : 17,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Cairo',
+          fontFamily: 'NotoNaskhArabic',
         ),
       ),
       style: ElevatedButton.styleFrom(
@@ -390,7 +390,7 @@ class _ExploreActivityScreenState extends ConsumerState<ExploreActivityScreen> {
                                     const SizedBox(height: 8),
                                     Text(
                                       'قصة ${index + 1}',
-                                      style: const TextStyle(fontFamily: 'Cairo', color: Colors.grey),
+                                      style: const TextStyle(fontFamily: 'NotoNaskhArabic', color: Colors.grey),
                                     ),
                                   ],
                                 ),

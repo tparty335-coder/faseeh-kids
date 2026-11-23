@@ -332,7 +332,7 @@ class _UniversalLetterHubScreenState
           body: const Center(
             child: Text(
               'لَمْ يَتِمَّ اخْتِيَارُ حَرْفٍ',
-              style: TextStyle(fontFamily: 'Cairo', fontSize: 18),
+              style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18),
             ),
           ),
         ),
@@ -586,7 +586,7 @@ class _UniversalLetterHubScreenState
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isTablet ? 16 : 13,
                           fontWeight: FontWeight.w800,
                           color: const Color(0xFF263238),
@@ -620,7 +620,7 @@ class _UniversalLetterHubScreenState
               child: Text(
                 '${_toArabicDigits(letterOrder)} / ${_toArabicDigits(totalLetters)}',
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: isTablet ? 15 : 13,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -731,7 +731,7 @@ class _UniversalLetterHubScreenState
                       Text(
                         fullTitle,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isTablet ? 24 : 19,
                           fontWeight: FontWeight.w900,
                           color: accentDark,
@@ -742,7 +742,7 @@ class _UniversalLetterHubScreenState
                       Text(
                         'مَرْحَبًا يَا بَطَلُ! اضْغَطْ عَلَى الْحَرْفِ لِتَسْمَعَ صَوْتَهُ',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isTablet ? 14 : 12,
                           fontWeight: FontWeight.w700,
                           color: const Color(0xFF455A64),
@@ -804,7 +804,7 @@ class _UniversalLetterHubScreenState
                       child: Text(
                         letter.letter == 'ه' ? 'هـ' : letter.letter,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: letterFontSize,
                           fontWeight: FontWeight.w900,
                           color: accentDark,
@@ -885,7 +885,7 @@ class _UniversalLetterHubScreenState
                         child: Text(
                           word,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: isTablet ? 16 : 14,
                             fontWeight: FontWeight.w800,
                             color: const Color(0xFF263238),
@@ -904,7 +904,7 @@ class _UniversalLetterHubScreenState
           Text(
             'جَرِّبْ أَصْوَاتَ حَرْفِ $definiteName بِالْحَرَكَاتِ:',
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: isTablet ? 16 : 13,
               fontWeight: FontWeight.w800,
               color: const Color(0xFF455A64),
@@ -947,7 +947,7 @@ class _UniversalLetterHubScreenState
                             Text(
                               v.display,
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: isTablet ? 34 : 26,
                                 fontWeight: FontWeight.w900,
                                 color: isActive ? Colors.white : v.color,
@@ -973,7 +973,7 @@ class _UniversalLetterHubScreenState
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      fontFamily: 'Cairo',
+                                      fontFamily: 'NotoNaskhArabic',
                                       fontSize: isTablet ? 13 : 11,
                                       fontWeight: FontWeight.w800,
                                       color: isActive
@@ -1035,7 +1035,7 @@ class _UniversalLetterHubScreenState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: isTablet ? 15 : 13,
                     fontWeight: FontWeight.w900,
                     color: const Color(0xFF263238),
@@ -1080,7 +1080,7 @@ class _UniversalLetterHubScreenState
                         Text(
                           st.title,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: isTablet ? 15 : 12,
                             fontWeight: FontWeight.w800,
                             color: const Color(0xFF263238),
@@ -1249,7 +1249,7 @@ class _TactileActionButtonState extends State<_TactileActionButton> {
                     widget.label,
                     maxLines: 1,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: widget.fontSize,
                       fontWeight: FontWeight.w900,
                       color: Colors.white,

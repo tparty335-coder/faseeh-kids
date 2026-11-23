@@ -238,7 +238,7 @@ class _PillActionButton extends StatelessWidget {
                         label,
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: compact ? 14 : 15,
                           fontWeight: FontWeight.w800,
                           color: fg,

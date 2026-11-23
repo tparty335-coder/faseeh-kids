@@ -149,7 +149,7 @@ class _UniversalObjectivesStationState
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.w900,
                           color: color,
@@ -207,7 +207,7 @@ class _UniversalObjectivesStationState
                         'الرُّجُوعُ لِلْخَرِيطَةِ',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -235,7 +235,7 @@ class _UniversalObjectivesStationState
                         'ابْدَأِ الدَّرْسَ (قِصَّةُ الْحَرْفِ)',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -301,7 +301,7 @@ class _UniversalObjectivesStationState
               child: Text(
                 'صَدِيقُ حَرْفِ (${widget.letter})',
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -318,7 +318,7 @@ class _UniversalObjectivesStationState
               label: Text(
                 _isPlaying ? 'جارٍ الاستماع' : 'اسْتَمِعْ لِلْأَهْدَافِ',
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
@@ -363,7 +363,7 @@ class _UniversalObjectivesStationState
             child: Text(
               'صَدِيقُ حَرْفِ (${widget.letter}) يُرَحِّبُ بِكُمْ!',
               style: TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: 14,
                 fontWeight: FontWeight.w900,
                 color: color,
@@ -378,7 +378,7 @@ class _UniversalObjectivesStationState
             ),
             label: Text(
               _isPlaying ? 'يُتلى الآن' : 'اسْتَمِعْ',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 12, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 12, fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.deepOrange,
@@ -420,7 +420,7 @@ class _UniversalObjectivesStationState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 17,
                     fontWeight: FontWeight.w900,
                     color: Color(0xFFBF360C),
@@ -454,7 +454,7 @@ class _UniversalObjectivesStationState
                           child: Text(
                             '${i + 1}',
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 11,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -466,7 +466,7 @@ class _UniversalObjectivesStationState
                         child: Text(
                           widget.spec.objectives[i],
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 14,
                             fontWeight: FontWeight.w800,
                             color: Color(0xFF1A237E),

@@ -106,6 +106,10 @@ class LetterKnowledgeSpec {
   String get fathaAudioPath => 'audio/letters/short_vowels/${coreAudioKey}_fatha.mp3';
   String get dammaAudioPath => 'audio/letters/short_vowels/${coreAudioKey}_damma.mp3';
   String get kasraAudioPath => 'audio/letters/short_vowels/${coreAudioKey}_kasra.mp3';
+
+  /// صيغة الاسم مجروراً بالإضافة (مثل: الْجِيمِ، الْبَاءِ، الشِّينِ) لصحة الإعراب بعد (حَرْفُ / حَرْفِ / لِحَرْفِ)
+  String get genitiveNameAr =>
+      nameAr.endsWith('\u064F') ? '${nameAr.substring(0, nameAr.length - 1)}\u0650' : nameAr;
 }
 
 /// قاعدة البيانات العلمية الشاملة لجميع الوحدات الأربع (٢٨ حرفاً)
@@ -379,6 +383,22 @@ class AssessmentCurriculumData {
   /// بنك الصور الكرتونية النقية والمُحقَّقة ١٠٠٪ فقط (خلفية بيضاء نظيفة + تطابق تام — بلا أي استيراد عشوائي لملفات قديمة!)
   static List<TracingWordIllustration>? _cachedGlobalBank;
 
+  /// كلمات مصورة مُستبعدة تربوياً لأنها مربكة للطفل (مثل: شراع تبدو كمركب/سفينة، ذيل مقصوص، قارب/مركب، مصر خريطة...)
+  static const Set<String> _ambiguousBannedWords = {
+    'شراع',
+    'ذيل',
+    'قارب',
+    'جذر',
+    'غصن',
+    'زيت',
+    'مصر',
+    'يرسم',
+    'مهندس',
+    'مريضة',
+    'رضيع',
+    'فصل',
+  };
+
   static List<TracingWordIllustration> get globalIllustrationBank {
     if (_cachedGlobalBank != null) return _cachedGlobalBank!;
     final bank = <TracingWordIllustration>[];
@@ -387,6 +407,7 @@ class AssessmentCurriculumData {
     void addItem(TracingWordIllustration item) {
       final cleanWord = stripDiacritics(item.word);
       if (cleanWord.isEmpty || item.imagePath.isEmpty) return;
+      if (_ambiguousBannedWords.contains(cleanWord)) return;
       final key = '${cleanWord}_${item.imagePath}';
       if (seenKey.add(key)) {
         bank.add(item);
@@ -799,7 +820,7 @@ class AssessmentCurriculumData {
         similar: ['س', 'ث', 'ص'],
         fathaWord: 'شَمْسٌ',
         dammaWord: 'شُبَّاكٌ',
-        kasraWord: 'شِرَاعٌ',
+        kasraWord: 'شِبْلٌ',
         words: [
           _w('شمس', 'شَمْسٌ', ['ش', 'م', 'س'], 'ش', 'start', haraka: 'fatha'),
           _w('شجر', 'شَجَرٌ', ['ش', 'ج', 'ر'], 'ش', 'start', haraka: 'fatha'),

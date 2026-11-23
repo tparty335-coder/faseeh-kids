@@ -298,7 +298,7 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                               Text(
                                 'التَّقَدُّمُ',
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontWeight: FontWeight.bold,
                                   fontSize: context.scaledFont(14, min: 12, max: 16),
                                   color: AppColors.textPrimary,
@@ -323,7 +323,7 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                             Text(
                               '${(progressValue * 100).toInt()}%',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontWeight: FontWeight.w900,
                                 fontSize: context.scaledFont(13.5, min: 11.5, max: 16),
                                 color: AppColors.textPrimary,
@@ -363,7 +363,7 @@ class _OasisMapScreenState extends ConsumerState<OasisMapScreen> {
                                             ? 'تَقْوِيَةٌ'
                                             : 'قِيَاسٌ',
                                         style: TextStyle(
-                                          fontFamily: 'Cairo',
+                                          fontFamily: 'NotoNaskhArabic',
                                           fontSize: context.scaledFont(12, min: 10.5, max: 14),
                                           fontWeight: FontWeight.w900,
                                           color: Colors.white,
@@ -487,7 +487,7 @@ class _UnitCheckpointGate extends StatelessWidget {
                         'اخْتِبَارُ: ${unit.titleAr}',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: compact ? 12.5 : 14.5,
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
@@ -503,7 +503,7 @@ class _UnitCheckpointGate extends StatelessWidget {
                             : 'بَعْدَ ٧ حُرُوفٍ • ابْدَأْ',
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: compact ? 10.5 : 12,
                           fontWeight: FontWeight.w700,
                           color: Colors.white.withValues(alpha: 0.94),

@@ -119,7 +119,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                   const Text(
                     'مُمْتَازٌ يَا بَطَل! 🎉',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 26,
                       fontWeight: FontWeight.w900,
                       color: AppColors.primaryDay,
@@ -133,7 +133,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                     'أَكْمَلْتَ دَرْسَ حَرْفِ ($currentLetter) بِنَجَاحٍ!\nوَتَمَّ فَتْحُ وَتَوْثِيقُ التَّقَدُّمِ بِنَجَاح ⭐',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey.shade800,
@@ -165,7 +165,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                         label: Text(
                           'الانْتِقَالُ إِلَى حَرْفِ (${nextLetterData.letter}) مُبَاشَرَةً 🚀',
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                           ),
@@ -194,7 +194,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                       label: const Text(
                         'الْعَوْدَةُ إِلَى خَرِيطَةِ الْحُرُوفِ 🗺️',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -219,7 +219,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                     label: Text(
                       'إِعَادَةُ دَرْسِ حَرْفِ ($currentLetter) 🔄',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 13,
                         color: Colors.grey.shade600,
                         fontWeight: FontWeight.bold,
@@ -258,7 +258,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                   'الدرس المتسلسل: حرف $letterChar',
                   style: const TextStyle(
                     color: AppColors.textPrimaryDay,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -272,7 +272,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                   child: Text(
                     '${_currentPageIndex + 1} / 6',
                     style: const TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primaryDay,
@@ -336,7 +336,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                         OutlinedButton.icon(
                           onPressed: _previousPage,
                           icon: const Icon(Icons.arrow_back_ios_rounded, size: 16),
-                          label: const Text('السابق: الكتابة', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+                          label: const Text('السابق: الكتابة', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold)),
                           style: OutlinedButton.styleFrom(
                             foregroundColor: AppColors.primaryDay,
                             side: const BorderSide(color: AppColors.primaryDay, width: 2),
@@ -347,7 +347,7 @@ class _LessonSequenceScreenState extends ConsumerState<LessonSequenceScreen> {
                         ElevatedButton.icon(
                           onPressed: _handleLessonCompleted,
                           icon: const Icon(Icons.check_circle_rounded, size: 20),
-                          label: const Text('إنهاء الدرس 🎉', style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
+                          label: const Text('إنهاء الدرس 🎉', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold)),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.oasisGreen,
                             foregroundColor: Colors.white,

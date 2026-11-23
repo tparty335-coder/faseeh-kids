@@ -741,7 +741,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -795,7 +795,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                   onPressed: _previousPage,
                   icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                   label: const Text('السابق',
-                      style: TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold)),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryDay,
                     foregroundColor: Colors.white,
@@ -837,7 +837,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                               : 'الْمَدُّ التَّالِي',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontFamily: 'Cairo', fontSize: 15, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
                     style: ElevatedButton.styleFrom(
@@ -884,7 +884,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                     child: Text(
                       'مَا هُوَ الْمَدُّ؟',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 24,
                         fontWeight: FontWeight.w900,
                         color: color,
@@ -898,7 +898,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                 page['explanation'] as String,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 17,
                   fontWeight: FontWeight.bold,
                   color: AppColors.textPrimaryDay,
@@ -926,7 +926,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: color,
@@ -947,7 +947,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
         Text(
           'وَالْمَدُّ ثَلاثَةُ أَنْوَاعٍ:',
           style: TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: color,
@@ -1001,7 +1001,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                           Text(
                             ex['label'] as String,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 15,
                               fontWeight: FontWeight.w900,
                               color: exColor,
@@ -1011,7 +1011,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                           Text(
                             ex['explanation'] as String,
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 13,
                               color: AppColors.textPrimaryDay,
                             ),
@@ -1020,7 +1020,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                           Text(
                             ex['exampleWord'] as String,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 22,
                               fontWeight: FontWeight.w900,
                               color: exColor,
@@ -1064,7 +1064,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                 child: Text(
                   m['maddChar'] as String,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 48,
                     fontWeight: FontWeight.w900,
                     color: color,
@@ -1079,7 +1079,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                     Text(
                       m['label'] as String,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 18,
                         fontWeight: FontWeight.w900,
                         color: color,
@@ -1089,7 +1089,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                     Text(
                       m['explanation'] as String,
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimaryDay,
@@ -1128,7 +1128,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                     const Text(
                       'مِثَالٌ: ',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.grey,
@@ -1140,7 +1140,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 36,
                           fontWeight: FontWeight.w900,
                           color: color,
@@ -1190,7 +1190,7 @@ class _LongVowelsSequenceWidgetState extends State<LongVowelsSequenceWidget> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: color,

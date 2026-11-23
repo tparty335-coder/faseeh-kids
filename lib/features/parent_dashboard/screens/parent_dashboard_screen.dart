@@ -24,16 +24,16 @@ class ParentDashboardScreen extends ConsumerWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           title: const Text(
             'حذف الحساب وبيانات الطفل',
-            style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+            style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
           ),
           content: const Text(
             'هل أنت متأكد من حذف ملف الطفل وجميع بيانات التقدم والنجوم نهائياً من هذا الجهاز؟ لا يمكن التراجع عن هذا الإجراء.',
-            style: TextStyle(fontFamily: 'Cairo'),
+            style: TextStyle(fontFamily: 'NotoNaskhArabic'),
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(ctx).pop(false),
-              child: const Text('إلغاء', style: TextStyle(fontFamily: 'Cairo')),
+              child: const Text('إلغاء', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -41,7 +41,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                 foregroundColor: Colors.white,
               ),
               onPressed: () => Navigator.of(ctx).pop(true),
-              child: const Text('نعم، احذف جميع البيانات', style: TextStyle(fontFamily: 'Cairo')),
+              child: const Text('نعم، احذف جميع البيانات', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
             ),
           ],
         ),
@@ -72,7 +72,7 @@ class ParentDashboardScreen extends ConsumerWidget {
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('تم حذف جميع بيانات الحساب بنجاح.', style: TextStyle(fontFamily: 'Cairo')),
+          content: Text('تم حذف جميع بيانات الحساب بنجاح.', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
         ),
       );
       context.go(AppRouter.onboarding);
@@ -88,7 +88,7 @@ class ParentDashboardScreen extends ConsumerWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           title: Text(
             isPrivacy ? 'سياسة الخصوصية وحماية الطفل (COPPA)' : 'شروط وأحكام الاستخدام',
-            style: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold, fontSize: 18),
+            style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold, fontSize: 18),
           ),
           content: SingleChildScrollView(
             child: Text(
@@ -104,13 +104,13 @@ class ParentDashboardScreen extends ConsumerWidget {
                     '٢. أول ٥ وحدات تعليمية (أ، ب، ت، ث، ج) متاحة مجاناً بالكامل، ويمكن لولي الأمر الاشتراك لفتح كامل الحروف الـ ٢٨ أو تفعيل وضع المراجعة الحرة.\n'
                     '٣. تُدار الاشتراكات واستعادة المشتريات حصرياً بواسطة ولي الأمر عبر حساب المتجر الرسمي.\n'
                     '٤. النسخة الكاملة متوفرة في الرابط الرسمي للشروط.',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, height: 1.5),
+              style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 14, height: 1.5),
             ),
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(ctx).pop(),
-              child: const Text('إغلاق', style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold)),
+              child: const Text('إغلاق', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold)),
             ),
           ],
         ),
@@ -284,7 +284,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                                 child: Text(
                                   'مركز القياس والخطة العلاجية',
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -293,7 +293,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                               Text(
                                 '${diag.unitResults.length} / 4 وحدات',
                                 style: const TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xFF0284C7),
                                 ),
@@ -304,7 +304,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                           Text(
                             prescription.summaryAr,
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 13.5,
                               height: 1.45,
                             ),
@@ -326,7 +326,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                                 icon: const Icon(Icons.quiz_rounded, size: 18),
                                 label: const Text(
                                   'اختبارات الوحدات',
-                                  style: TextStyle(fontFamily: 'Cairo'),
+                                  style: TextStyle(fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                               ElevatedButton.icon(
@@ -341,7 +341,7 @@ class ParentDashboardScreen extends ConsumerWidget {
                                 icon: const Icon(Icons.healing_rounded, size: 18),
                                 label: const Text(
                                   'عيادة التقوية للضعفاء',
-                                  style: TextStyle(fontFamily: 'Cairo'),
+                                  style: TextStyle(fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                             ],

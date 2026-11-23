@@ -128,7 +128,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: AppColors.baaTopBar,
@@ -197,7 +197,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
                             child: const Text(
                               'أَسَدُ الْأَلِفِ',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -214,7 +214,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
                             label: Text(
                               _isPlaying ? 'جارٍ الاستماع' : 'اسْتَمِعْ لِلْأَهْدَافِ',
                               style: const TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -262,7 +262,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.baaObjectivesTitle,
@@ -301,7 +301,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
                                     child: Text(
                                       _objectives[index],
                                       style: const TextStyle(
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                         fontSize: 13,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.baaObjectivesText,
@@ -332,7 +332,7 @@ class _AlifObjectivesStationState extends State<AlifObjectivesStation>
             icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),
             label: const Text(
               'ابْدَأِ الدَّرْسَ (قِصَّةُ الْحَرْفِ)',
-              style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.nextButton,

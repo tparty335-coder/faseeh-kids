@@ -139,7 +139,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
               SizedBox(width: 8),
               Text(
                 'اختر الإجابة الصحيحة أولاً يا بطل: ماذا نأخذ من البقرة؟',
-                style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -243,7 +243,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: isTablet ? 18 : 13,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
@@ -450,7 +450,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                                                   Text(
                                                     'مُمْتَازٌ! نَأْخُذُ مِنَ الْبَقَرَةِ اللَّبَنَ!',
                                                     style: TextStyle(
-                                                      fontFamily: 'Cairo',
+                                                      fontFamily: 'NotoNaskhArabic',
                                                       fontSize: 22,
                                                       fontWeight: FontWeight.w900,
                                                       color: Color(0xFF2E7D32),
@@ -493,7 +493,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                           Text(
                             'مَاذَا نَأْخُذُ مِنَ الْبَقَرَةِ؟',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: isTablet ? 22 : 18,
                               fontWeight: FontWeight.w900,
                               color: const Color(0xFF1B5E20),
@@ -555,7 +555,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                         currentScene['caption'] as String,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: isTablet ? 24 : 19,
                           fontWeight: FontWeight.bold,
                           color: const Color(0xFF3E2723),
@@ -581,7 +581,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: isTablet ? 18 : 15,
                               fontWeight: FontWeight.bold,
                             ),
@@ -611,7 +611,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: isTablet ? 18 : 15,
                               fontWeight: FontWeight.bold,
                             ),
@@ -710,7 +710,7 @@ class _BaaStoryStationState extends State<BaaStoryStation> {
             Text(
               label,
               style: TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: isTablet ? 20 : 16,
                 fontWeight: FontWeight.bold,
                 color: isSelected && !isCorrect ? Colors.red.shade800 : const Color(0xFF2E7D32),

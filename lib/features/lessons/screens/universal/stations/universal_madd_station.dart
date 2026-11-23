@@ -339,7 +339,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                               topText,
                               maxLines: 1,
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: isIntro ? 18 : 22,
                                 fontWeight: FontWeight.w900,
                                 color: isSelected ? Colors.white : col,
@@ -360,7 +360,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                           subText,
                           maxLines: 1,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 11.5,
                             fontWeight: FontWeight.w800,
                             color: isSelected
@@ -424,7 +424,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       child: Text(
                         'مَا هُوَ الْمَدُّ؟',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 26,
                           fontWeight: FontWeight.w900,
                           color: _navy,
@@ -439,7 +439,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                 'الْمَدُّ هُوَ إِطَالَةُ زَمَنِ صَوْتِ الْحَرَكَةِ (الْفَتْحَةِ أَوِ الضَّمَّةِ أَوِ الْكَسْرَةِ) إِلَى الضِّعْفِ أَوْ أَكْثَرَ.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 16.5,
                   fontWeight: FontWeight.w700,
                   color: Color(0xFF334155),
@@ -472,7 +472,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                               Text(
                                 _maddLetters[i],
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: isWide ? 32 : 26,
                                   fontWeight: FontWeight.w900,
                                   color: col,
@@ -486,7 +486,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                                   _maddShortLabels[i],
                                   maxLines: 1,
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 13,
                                     fontWeight: FontWeight.w800,
                                     color: col,
@@ -499,7 +499,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                                   'قَبْلَهُ ${_maddShortVowelNames[i]}',
                                   maxLines: 1,
                                   style: const TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 11.5,
                                     fontWeight: FontWeight.w700,
                                     color: Color(0xFF475569),
@@ -538,7 +538,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       const Text(
                         'اسْتَمِعْ لِشَرْحِ الْمَدِّ كَامِلاً',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.w900,
                         ),
@@ -564,7 +564,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                   child: Text(
                     'أَمْثِلَةُ الْمَدِّ مَعَ حَرْفِ ($letterDisplay)',
                     style: const TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
                       color: _navy,
@@ -655,7 +655,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                           child: Text(
                             '$shortGlyph  +  $maddLetter  =  ${item.displayChar}',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 15,
                               fontWeight: FontWeight.w900,
                               color: col,
@@ -718,7 +718,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                   child: Text(
                     '$shortGlyph  +  $maddLetter  =  ${item.displayChar}',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
                       color: col,
@@ -758,7 +758,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
               Text(
                 _maddFullNames[idx % 3],
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 12.5,
                   fontWeight: FontWeight.w700,
                   color: Color(0xFF64748B),
@@ -789,7 +789,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                         Text(
                           'اسْتَمِعْ (${item.displayChar})',
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontWeight: FontWeight.w800,
                             fontSize: 13.5,
                           ),
@@ -844,7 +844,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                 'اضْغَطْ لِتُقَارِنَ بَيْنَ الصَّوْتِ الْقَصِيرِ وَالطَّوِيلِ:',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 13.5,
                   fontWeight: FontWeight.w800,
                   color: Color(0xFF475569),
@@ -869,7 +869,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       child: Text(
                         '+',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 28,
                           fontWeight: FontWeight.w900,
                           color: Color(0xFF94A3B8),
@@ -889,7 +889,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                           Text(
                             maddLetter,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 32,
                               fontWeight: FontWeight.w900,
                               color: accent,
@@ -899,7 +899,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                           const Text(
                             'حَرْفُ الْمَدِّ',
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 11,
                               fontWeight: FontWeight.w800,
                               color: Color(0xFF64748B),
@@ -913,7 +913,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       child: Text(
                         '=',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 28,
                           fontWeight: FontWeight.w900,
                           color: Color(0xFF94A3B8),
@@ -1035,7 +1035,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                   Text(
                     glyph,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: emphasized ? 36 : 32,
                       fontWeight: FontWeight.w900,
                       color: emphasized && highlighted ? Colors.white : color,
@@ -1053,7 +1053,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
               Text(
                 caption,
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 11,
                   fontWeight: FontWeight.w800,
                   color: emphasized && highlighted
@@ -1115,7 +1115,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
           child: Text(
             maddTitle,
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 14.5,
               fontWeight: FontWeight.w900,
               color: accent,
@@ -1149,7 +1149,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
               item.explanation!,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 color: Color(0xFF334155),
@@ -1186,7 +1186,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                     Text(
                       'اسْتَمِعْ لِلْمَدِّ (${item.displayChar})',
                       style: const TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontWeight: FontWeight.w900,
                         fontSize: 14,
                       ),
@@ -1219,7 +1219,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       Text(
                         item.exampleWord ?? 'الْكَلِمَةُ',
                         style: const TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontWeight: FontWeight.w900,
                           fontSize: 14,
                         ),
@@ -1271,7 +1271,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       Text(
                         'السَّابِقُ',
                         maxLines: 1,
-                        style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -1288,7 +1288,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
               child: Text(
                 '${_selected + 1} / $totalTabs',
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 12.5,
                   fontWeight: FontWeight.w900,
                   color: accent,
@@ -1316,7 +1316,7 @@ class _ManifestMaddViewState extends State<_ManifestMaddView> {
                       Text(
                         nextLabel,
                         maxLines: 1,
-                        style: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -1350,7 +1350,7 @@ class _HighlightedMaddWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final baseStyle = TextStyle(
-      fontFamily: 'Cairo',
+      fontFamily: 'NotoNaskhArabic',
       fontSize: fontSize,
       fontWeight: FontWeight.w900,
       color: const Color(0xFF1B2A4A),

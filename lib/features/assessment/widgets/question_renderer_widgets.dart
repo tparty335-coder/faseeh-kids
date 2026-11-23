@@ -314,7 +314,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     child: Text(
                       q.displayPrompt ?? q.letter,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: isCompact ? 28 : (isWide ? 40 : 34),
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
@@ -331,7 +331,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     Text(
                       'تَمَّ اصْطِيَادُ $found مِنْ $totalTargets',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(17, min: 14, max: 22),
                         fontWeight: FontWeight.w900,
                         color: PlayfulPalette.ink,
@@ -458,7 +458,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     child: Text(
                       q.displayPrompt ?? q.letter,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: isCompact ? 42 : (isWide ? 64 : 52),
                         fontWeight: FontWeight.w900,
                         color: q.accentColor,
@@ -476,7 +476,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                       Text(
                         q.secondaryPrompt!,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(19, min: 15, max: 25),
                           fontWeight: FontWeight.w900,
                           color: PlayfulPalette.ink,
@@ -595,7 +595,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                           ? TextAlign.center
                           : TextAlign.start,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(19, min: 15, max: 26),
                         fontWeight: FontWeight.w900,
                         color: const Color(0xFF4C1D95),
@@ -616,7 +616,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                         child: Text(
                           q.secondaryPrompt!,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: context.scaledFont(16, min: 13, max: 20),
                             fontWeight: FontWeight.w800,
                             color: PlayfulPalette.grapeDeep,
@@ -701,7 +701,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                       c.label,
                       maxLines: 1,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(17, min: 14, max: 22),
                         fontWeight: FontWeight.w900,
                         color: PlayfulPalette.ink,
@@ -767,7 +767,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                 child: Text(
                   q.displayPrompt ?? '',
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: context.scaledFont(38, min: 26, max: 52),
                     fontWeight: FontWeight.w900,
                     color: PlayfulPalette.ink,
@@ -775,21 +775,21 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                   ),
                 ),
               ),
-              if (q.secondaryPrompt != null) ...[
+              if (_solved && q.secondaryPrompt != null) ...[
                 const SizedBox(height: 10),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                   decoration: BoxDecoration(
-                    color: q.accentColor.withValues(alpha: 0.12),
+                    color: PlayfulPalette.emerald.withValues(alpha: 0.14),
                     borderRadius: BorderRadius.circular(999),
                   ),
                   child: Text(
-                    'الْكَلِمَةُ: ${q.secondaryPrompt}',
+                    'الْكَلِمَةُ الصَّحِيحَةُ: ${q.secondaryPrompt}',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: context.scaledFont(16, min: 13.5, max: 21),
                       fontWeight: FontWeight.w900,
-                      color: PlayfulPalette.darken(q.accentColor, 0.15),
+                      color: PlayfulPalette.emeraldDeep,
                     ),
                   ),
                 ),
@@ -846,9 +846,9 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     borderRadius: BorderRadius.circular(999),
                   ),
                   child: Text(
-                    'ابْحَثْ عَنْ حَرْفِ: ${q.secondaryPrompt}',
+                    'الْحَرْفُ الْمَطْلُوبُ: (${q.secondaryPrompt})',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: context.scaledFont(16, min: 13.5, max: 20),
                       fontWeight: FontWeight.w900,
                       color: PlayfulPalette.darken(q.accentColor, 0.12),
@@ -861,9 +861,9 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                 child: Text(
                   q.displayPrompt ?? '',
                   style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: context.scaledFont(48, min: 34, max: 64),
-                    fontWeight: FontWeight.w900,
+                    fontFamily: 'NotoNaskhArabic',
+                    fontSize: context.scaledFont(52, min: 36, max: 68),
+                    fontWeight: FontWeight.w700,
                     color: PlayfulPalette.ink,
                   ),
                 ),
@@ -878,15 +878,15 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
               for (int i = 0; i < q.choices.length; i++) ...[
                 if (i > 0) const SizedBox(width: 12),
                 Expanded(
-                  child: _ToyBlockChoiceTile(
-                    label: q.choices[i].sublabel ?? q.choices[i].label,
-                    sublabel: q.choices[i].label,
+                  child: _PositionChoiceTile(
+                    label: q.choices[i].label,
+                    activeSlotIndex: int.tryParse(q.choices[i].sublabel ?? '') ?? i,
                     isSelectedCorrect: _solved && q.choices[i].isCorrect,
                     isSelectedWrong: _wrongChoiceIds.contains(q.choices[i].id),
                     accent: q.choices[i].accentColor ?? PlayfulPalette.ocean,
                     compact: isCompact,
                     isWide: isWide,
-                    minHeight: isWide ? 124 : 98,
+                    minHeight: isWide ? 128 : 104,
                     onTap: () => _handleSingleChoiceTap(q.choices[i]),
                   ),
                 ),
@@ -898,15 +898,15 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
             children: [
               for (int i = 0; i < q.choices.length; i++) ...[
                 if (i > 0) const SizedBox(height: 10),
-                _ToyBlockChoiceTile(
+                _PositionChoiceTile(
                   label: q.choices[i].label,
-                  sublabel: q.choices[i].sublabel,
+                  activeSlotIndex: int.tryParse(q.choices[i].sublabel ?? '') ?? i,
                   isSelectedCorrect: _solved && q.choices[i].isCorrect,
                   isSelectedWrong: _wrongChoiceIds.contains(q.choices[i].id),
                   accent: q.choices[i].accentColor ?? PlayfulPalette.ocean,
                   compact: isCompact,
                   isWide: false,
-                  minHeight: 72,
+                  minHeight: 76,
                   onTap: () => _handleSingleChoiceTap(q.choices[i]),
                 ),
               ],
@@ -989,7 +989,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                           ? (q.secondaryPrompt ?? q.displayPrompt!)
                           : q.displayPrompt!,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(40, min: 28, max: 54),
                         fontWeight: FontWeight.w900,
                         color: _solved
@@ -1090,7 +1090,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     child: Text(
                       q.secondaryPrompt ?? q.displayPrompt ?? '',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(26, min: 20, max: 34),
                         fontWeight: FontWeight.w900,
                         color: _solved
@@ -1112,7 +1112,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                       Text(
                         'اضْغَطْ عَلَى الصُّورَةِ لِسَمَاعِ اسْمِهَا',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(13.5, min: 11.5, max: 16),
                           fontWeight: FontWeight.w800,
                           color: const Color(0xFF64748B),
@@ -1222,7 +1222,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                         child: Text(
                           text,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: isSentence
                                 ? context.scaledFont(19, min: 15, max: 24)
                                 : context.scaledFont(30, min: 24, max: 38),
@@ -1245,7 +1245,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                   '✨ ${q.correctText!} ✨',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: context.scaledFont(24, min: 18, max: 32),
                     fontWeight: FontWeight.w900,
                     color: PlayfulPalette.emeraldDeep,
@@ -1304,7 +1304,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                     child: Text(
                       q.sequenceItems[idx],
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: isSentence
                             ? context.scaledFont(19, min: 15, max: 24)
                             : context.scaledFont(32, min: 24, max: 40),
@@ -1365,7 +1365,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                       Text(
                         '+',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(24, min: 18, max: 32),
                           fontWeight: FontWeight.w900,
                           color: q.accentColor,
@@ -1392,7 +1392,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                         child: Text(
                           q.sequenceItems[i],
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: context.scaledFont(30, min: 22, max: 40),
                             fontWeight: FontWeight.w900,
                             color: PlayfulPalette.ink,
@@ -1478,7 +1478,7 @@ class _InteractiveQuestionBodyState extends State<InteractiveQuestionBody> {
                       child: Text(
                         isBlank && _solved ? (q.correctText ?? tile) : tile,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(28, min: 20, max: 36),
                           fontWeight: FontWeight.w900,
                           color: isBlank
@@ -1700,7 +1700,7 @@ class _ToyBlockChoiceTileState extends State<_ToyBlockChoiceTile> {
                       widget.label,
                       maxLines: 1,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: widget.isWide
                             ? context.scaledFont(54, min: 34, max: 66)
                             : context.scaledFont(38, min: 24, max: 48),
@@ -1718,7 +1718,7 @@ class _ToyBlockChoiceTileState extends State<_ToyBlockChoiceTile> {
                       widget.sublabel!,
                       maxLines: 1,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(13.5, min: 11, max: 17),
                         fontWeight: FontWeight.w800,
                         color: widget.isSelectedCorrect
@@ -1740,6 +1740,160 @@ class _ToyBlockChoiceTileState extends State<_ToyBlockChoiceTile> {
                   size: 22,
                 ),
               ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// بطاقة اختيار موضع الحرف في الكلمة (أول / وسط / آخر) بمؤشر بصري من ٣ خانات بدون كشف شكل الحرف
+class _PositionChoiceTile extends StatefulWidget {
+  final String label;
+  final int activeSlotIndex; // 0 = أول (يمين)، 1 = وسط، 2 = آخر (يسار)
+  final bool isSelectedCorrect;
+  final bool isSelectedWrong;
+  final Color accent;
+  final bool compact;
+  final bool isWide;
+  final double minHeight;
+  final VoidCallback onTap;
+
+  const _PositionChoiceTile({
+    required this.label,
+    required this.activeSlotIndex,
+    required this.isSelectedCorrect,
+    required this.isSelectedWrong,
+    required this.accent,
+    required this.compact,
+    required this.isWide,
+    required this.minHeight,
+    required this.onTap,
+  });
+
+  @override
+  State<_PositionChoiceTile> createState() => _PositionChoiceTileState();
+}
+
+class _PositionChoiceTileState extends State<_PositionChoiceTile> {
+  bool _pressed = false;
+
+  @override
+  Widget build(BuildContext context) {
+    Color bg = Color.lerp(Colors.white, widget.accent, 0.06)!;
+    Color border = widget.accent.withValues(alpha: 0.78);
+    Color lip = widget.accent.withValues(alpha: 0.55);
+    Color fg = PlayfulPalette.darken(widget.accent, 0.24);
+    Color activeSlotColor = widget.accent;
+
+    if (widget.isSelectedCorrect) {
+      bg = PlayfulPalette.emerald;
+      border = PlayfulPalette.emeraldDeep;
+      lip = PlayfulPalette.emeraldDeep;
+      fg = Colors.white;
+      activeSlotColor = Colors.white;
+    } else if (widget.isSelectedWrong) {
+      bg = const Color(0xFFFEE2E2);
+      border = PlayfulPalette.coral;
+      lip = PlayfulPalette.coralDeep;
+      fg = const Color(0xFFB91C1C);
+      activeSlotColor = PlayfulPalette.coral;
+    }
+
+    final lipDepth = widget.compact ? 4.0 : 6.0;
+    final slotSize = widget.compact ? 18.0 : (widget.isWide ? 26.0 : 22.0);
+
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) {
+        setState(() => _pressed = false);
+        widget.onTap();
+      },
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 110),
+        transform: Matrix4.translationValues(0, _pressed ? lipDepth - 1.5 : 0, 0),
+        constraints: BoxConstraints(minHeight: widget.minHeight),
+        padding: EdgeInsets.symmetric(
+          horizontal: widget.compact ? 10 : 14,
+          vertical: widget.compact ? 10 : 14,
+        ),
+        decoration: BoxDecoration(
+          color: bg,
+          borderRadius: BorderRadius.circular(widget.compact ? 18 : 24),
+          border: Border.all(color: border, width: 2.6),
+          boxShadow: [
+            BoxShadow(
+              color: lip,
+              offset: Offset(0, _pressed ? 1.5 : lipDepth),
+              blurRadius: 0,
+            ),
+            if (!_pressed)
+              BoxShadow(
+                color: const Color(0xFF0F172A).withValues(alpha: 0.06),
+                offset: Offset(0, lipDepth + 5),
+                blurRadius: 12,
+              ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // مؤشر بصري مكاني من ٣ خانات باتجاه القراءة العربي (يمين ← وسط ← يسار)
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: List.generate(3, (slot) {
+                final isActive = slot == widget.activeSlotIndex;
+                return Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  width: isActive ? slotSize * 1.35 : slotSize,
+                  height: slotSize,
+                  decoration: BoxDecoration(
+                    color: isActive
+                        ? activeSlotColor
+                        : (widget.isSelectedCorrect
+                            ? Colors.white.withValues(alpha: 0.25)
+                            : widget.accent.withValues(alpha: 0.14)),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: isActive
+                          ? activeSlotColor
+                          : (widget.isSelectedCorrect
+                              ? Colors.white.withValues(alpha: 0.55)
+                              : widget.accent.withValues(alpha: 0.40)),
+                      width: 2,
+                    ),
+                  ),
+                  alignment: Alignment.center,
+                  child: isActive
+                      ? Icon(
+                          Icons.star_rounded,
+                          size: slotSize * 0.62,
+                          color: widget.isSelectedCorrect
+                              ? PlayfulPalette.emeraldDeep
+                              : Colors.white,
+                        )
+                      : null,
+                );
+              }),
+            ),
+            SizedBox(height: widget.compact ? 8 : 12),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                widget.label,
+                maxLines: 1,
+                style: TextStyle(
+                  fontFamily: 'NotoNaskhArabic',
+                  fontSize: widget.isWide
+                      ? context.scaledFont(23, min: 17, max: 28)
+                      : context.scaledFont(19, min: 15, max: 24),
+                  fontWeight: FontWeight.w700,
+                  color: fg,
+                ),
+              ),
+            ),
           ],
         ),
       ),

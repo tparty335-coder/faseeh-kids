@@ -246,7 +246,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                 _profile.definiteTitle,
                 maxLines: 1,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 28,
                   fontWeight: FontWeight.w900,
                   color: _navyTitle,
@@ -328,7 +328,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                       child: Text(
                         glyph,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 17,
                           fontWeight: FontWeight.w900,
                           color: selected ? Colors.white : _navyTitle,
@@ -343,7 +343,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                           : label,
                       maxLines: 1,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 13.5,
                         fontWeight: FontWeight.w800,
                         color: selected ? accent : const Color(0xFF334155),
@@ -444,7 +444,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                               tabGlyph,
                               maxLines: 1,
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 21,
                                 fontWeight: FontWeight.w900,
                                 color: isSelected ? Colors.white : _navyTitle,
@@ -469,7 +469,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                           item.shortLabel,
                           maxLines: 1,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 11,
                             fontWeight: FontWeight.w700,
                             color: isSelected
@@ -627,7 +627,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                         item.word,
                         maxLines: 1,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: compact ? 13.5 : 19,
                           fontWeight: FontWeight.w900,
                           color: accent,
@@ -690,7 +690,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                       Text(
                         'السَّابِقُ',
                         maxLines: 1,
-                        style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -708,7 +708,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
               child: Text(
                 '${_completedPositions.length} / 4',
                 style: TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 12.5,
                   fontWeight: FontWeight.w900,
                   color: accent,
@@ -741,7 +741,7 @@ class _UnifiedKiwiiWritingStationState extends State<UnifiedKiwiiWritingStation>
                       Text(
                         'كَلِمَاتُ الْحَرْفِ',
                         maxLines: 1,
-                        style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                        style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

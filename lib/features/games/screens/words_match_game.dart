@@ -426,7 +426,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
                     child: Text(
                       _droppedWord!,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 42 * scaleX,
                         fontWeight: FontWeight.bold,
                         color: _showCorrectAnswer
@@ -493,7 +493,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
           child: Text(
             card.word,
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 38 * scaleX,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -542,7 +542,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
                       child: Text(
                         card.word,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 40 * scaleX,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -648,7 +648,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
             if (isNext) const SizedBox(width: 6),
             Text(label,
                 style: const TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white)),
@@ -688,7 +688,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
             borderRadius: BorderRadius.circular(20)),
         child: Text(t,
             style: const TextStyle(
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 fontSize: 16,
                 color: Colors.white,
                 fontWeight: FontWeight.bold)),
@@ -736,7 +736,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontFamily: 'Cairo'),
+                  fontFamily: 'NotoNaskhArabic'),
             ).animate(delay: 400.ms).fadeIn(),
             const SizedBox(height: 30),
             ElevatedButton.icon(
@@ -759,7 +759,7 @@ class _WordsMatchGameState extends ConsumerState<WordsMatchGame>
               icon: const Icon(Icons.replay_rounded),
               label: const Text('الْعَبْ مَرَّةً أُخْرَى',
                   style:
-                      TextStyle(fontFamily: 'Cairo', fontSize: 18)),
+                      TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18)),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,
                 foregroundColor: Colors.black87,

@@ -413,7 +413,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
                     child: Text(
                       _droppedWord!,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 28 * scaleX,
                         fontWeight: FontWeight.bold,
                         color: _showCorrectAnswer ? Colors.brown.shade800 : Colors.green.shade900,
@@ -476,7 +476,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
           child: Text(
             card.word,
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 24 * scaleX,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -626,7 +626,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -668,7 +668,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
         child: Text(
           t,
           style: const TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 15,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -707,7 +707,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ).animate(delay: 400.ms).fadeIn(),
                 const SizedBox(height: 30),
@@ -730,7 +730,7 @@ class _ThaaWordsMatchGameState extends ConsumerState<ThaaWordsMatchGame>
                     });
                   },
                   icon: const Icon(Icons.replay_rounded),
-                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)),
+                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
                     foregroundColor: Colors.black87,

@@ -83,7 +83,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                     label: const Text(
                       'قائمة الألعاب',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontWeight: FontWeight.w800,
                         fontSize: 13,
                       ),
@@ -110,7 +110,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
@@ -193,7 +193,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         fontSize: isTablet ? 26 : 20,
                         fontWeight: FontWeight.w900,
                         color: Colors.white,
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                       ),
                     ),
                   ),
@@ -218,7 +218,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         child: Text(
                           'السابق',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.w800),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.w800),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -244,7 +244,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                         child: Text(
                           'إنهاء الدرس 🎉',
                           maxLines: 1,
-                          style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.w800),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.w800),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -328,7 +328,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                                         fontSize: 15,
                                         fontWeight: FontWeight.w900,
                                         color: Colors.white,
-                                        fontFamily: 'Cairo',
+                                        fontFamily: 'NotoNaskhArabic',
                                       ),
                                     ),
                                   ),
@@ -341,7 +341,7 @@ class _UniversalGamesStationState extends State<UniversalGamesStation> {
                                     style: const TextStyle(
                                       fontSize: 11,
                                       color: Colors.white,
-                                      fontFamily: 'Cairo',
+                                      fontFamily: 'NotoNaskhArabic',
                                     ),
                                   ),
                                 ],

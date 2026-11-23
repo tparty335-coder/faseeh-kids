@@ -135,7 +135,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                   const Text(
                     'مُمْتَازٌ يَا بَطَل! 🎉',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 26,
                       fontWeight: FontWeight.w900,
                       color: AppColors.primaryDay,
@@ -146,7 +146,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                     'أَكْمَلْتَ دَرْسَ حَرْفِ (أ) بِنَجَاحٍ!\nوَتَمَّ فَتْحُ حَرْفِ (ب) وَتَوْثِيقُ التَّقَدُّمِ ⭐',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey.shade800,
@@ -174,7 +174,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                         label: Text(
                           'الانْتِقَالُ إِلَى حَرْفِ (${nextLetterData.letter}) مُبَاشَرَةً 🚀',
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                           ),
@@ -201,7 +201,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                       label: const Text(
                         'الْعَوْدَةُ إِلَى خَرِيطَةِ الْحُرُوفِ 🗺️',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -223,7 +223,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                     label: Text(
                       'إِعَادَةُ دَرْسِ حَرْفِ (أ) 🔄',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: 13,
                         color: Colors.grey.shade600,
                         fontWeight: FontWeight.bold,
@@ -268,7 +268,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -284,7 +284,7 @@ class _AlifLessonScreenState extends ConsumerState<AlifLessonScreen> {
                         child: const Text(
                           'حَرْفُ (أ)',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: AppColors.baaTopBar,

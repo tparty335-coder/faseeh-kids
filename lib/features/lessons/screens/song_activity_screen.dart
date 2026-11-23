@@ -49,7 +49,7 @@ class SongActivityScreen extends ConsumerWidget {
               fontSize: 28,
               fontWeight: FontWeight.bold,
               color: AppColors.desertSand,
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
             ),
           ),
           

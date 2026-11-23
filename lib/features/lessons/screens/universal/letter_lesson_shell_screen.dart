@@ -162,7 +162,7 @@ class _LetterLessonShellScreenState
                 const Text(
                   'مُمْتَازٌ يَا بَطَل! 🎉',
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 26,
                     fontWeight: FontWeight.w900,
                     color: AppColors.primaryDay,
@@ -177,7 +177,7 @@ class _LetterLessonShellScreenState
                         'أَتْمَمْتَ جَمِيعَ الْحُرُوفِ الْعَرَبِيَّةِ وَتَوْثِيقُ التَّقَدُّمِ 🎓⭐',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.grey.shade800,
@@ -209,7 +209,7 @@ class _LetterLessonShellScreenState
                       label: Text(
                         'الانْتِقَالُ إِلَى حَرْفِ (${nextLetterData.letter}) 🚀',
                         style: const TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 17,
                           fontWeight: FontWeight.w900,
                         ),
@@ -239,7 +239,7 @@ class _LetterLessonShellScreenState
                     label: const Text(
                       'الْعَوْدَةُ إِلَى خَرِيطَةِ الْحُرُوفِ 🗺️',
                       style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
@@ -264,7 +264,7 @@ class _LetterLessonShellScreenState
                   label: Text(
                     'إِعَادَةُ دَرْسِ حَرْفِ (${m.letter}) 🔄',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: 13,
                       color: Colors.grey.shade600,
                       fontWeight: FontWeight.bold,
@@ -375,7 +375,7 @@ class _LetterLessonShellScreenState
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -392,7 +392,7 @@ class _LetterLessonShellScreenState
                         child: Text(
                           'حَرْفُ (${m.letter == 'ه' ? 'هـ' : m.letter})',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: m.topBarColor,
@@ -485,7 +485,7 @@ class _StationPlaceholder extends StatelessWidget {
           Text(
             stationName,
             style: const TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 24,
               fontWeight: FontWeight.w900,
               color: AppColors.primaryDay,
@@ -495,7 +495,7 @@ class _StationPlaceholder extends StatelessWidget {
           Text(
             'حَرْفُ ($letter) — قِيدَ الْبِنَاءِ 🔧',
             style: TextStyle(
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
               fontSize: 15,
               color: Colors.grey.shade600,
             ),
@@ -509,7 +509,7 @@ class _StationPlaceholder extends StatelessWidget {
                   onPressed: onPrevious,
                   icon: const Icon(Icons.arrow_forward_rounded),
                   label: const Text('السَّابِقُ',
-                      style: TextStyle(fontFamily: 'Cairo')),
+                      style: TextStyle(fontFamily: 'NotoNaskhArabic')),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryDay,
                     foregroundColor: Colors.white,
@@ -525,7 +525,7 @@ class _StationPlaceholder extends StatelessWidget {
                     : Icons.arrow_back_rounded),
                 label: Text(
                   isLast ? 'إِنْهَاءُ الدَّرْسِ 🎉' : 'التَّالِي',
-                  style: const TextStyle(fontFamily: 'Cairo'),
+                  style: const TextStyle(fontFamily: 'NotoNaskhArabic'),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.oasisGreen,
@@ -608,7 +608,7 @@ class _UniversalTrainNavBar extends StatelessWidget {
                       Text(
                         _labels[i],
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: 9,
                           fontWeight: isActive
                               ? FontWeight.w900

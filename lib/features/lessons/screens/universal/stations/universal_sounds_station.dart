@@ -126,7 +126,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                       selectedColor: col,
                       backgroundColor: col.withValues(alpha: 0.12),
                       labelStyle: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontWeight: FontWeight.w800,
                         fontSize: 15,
                         color: selected ? Colors.white : col,
@@ -202,7 +202,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                                 fontSize: 38,
                                 fontWeight: FontWeight.w900,
                                 color: accent,
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                               ),
                             ),
                           ),
@@ -217,7 +217,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     color: accent,
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                   ),
                                 ),
                                 Text(
@@ -226,7 +226,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                                     fontSize: 22,
                                     fontWeight: FontWeight.w900,
                                     color: AppColors.textPrimaryDay,
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                   ),
                                 ),
                               ],
@@ -247,7 +247,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                             label: Text(
                               'صوت (${card.displayForm})',
                               style: const TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -266,7 +266,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                             label: const Text(
                               'الشرح والقاعدة',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -286,7 +286,7 @@ class _ManifestSoundsViewState extends State<_ManifestSoundsView> {
                               label: Text(
                                 card.exampleWord,
                                 style: const TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -351,7 +351,7 @@ Widget _buildStationNavBar({
                 child: Text(
                   'السابق',
                   maxLines: 1,
-                  style: TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
                 ),
               ),
               style: ElevatedButton.styleFrom(
@@ -375,7 +375,7 @@ Widget _buildStationNavBar({
                   nextLabel,
                   maxLines: 1,
                   style: const TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontWeight: FontWeight.bold,
                   ),
                 ),

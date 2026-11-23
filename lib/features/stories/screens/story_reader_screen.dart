@@ -181,7 +181,7 @@ class _StoryReaderScreenState extends ConsumerState<StoryReaderScreen> {
                     label: Text(
                       s.letterTag != null ? 'حرف (${s.letterTag})' : s.title,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
                         color: selected ? Colors.white : Colors.brown.shade800,

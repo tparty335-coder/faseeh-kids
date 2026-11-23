@@ -459,7 +459,7 @@ class _BaaWordsStationState extends State<BaaWordsStation> {
                         child: Text(
                           arabicNums[i],
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: active ? Colors.white : const Color(0xFFC2185B),
@@ -499,7 +499,7 @@ class _BaaWordsStationState extends State<BaaWordsStation> {
       label: Text(
         label,
         style: const TextStyle(
-          fontFamily: 'Cairo',
+          fontFamily: 'NotoNaskhArabic',
           fontWeight: FontWeight.bold,
           fontSize: 15,
         ),

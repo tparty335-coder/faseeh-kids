@@ -102,7 +102,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
       return const Center(
         child: Text(
           'لَا تُوجَدُ كَلِمَاتٌ لِهَذَا الْحَرْفِ',
-          style: TextStyle(fontFamily: 'Cairo', fontSize: 18),
+          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18),
         ),
       );
     }
@@ -169,7 +169,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                   alignment: Alignment.center,
                   child: Text(
                     item != null ? item.word : 'كَلِمَاتُ حَرْفِ (${widget.letter})',
-                    style: const TextStyle(fontFamily: 'Cairo', fontSize: 24, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -234,7 +234,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                                 Text(
                                   item.word,
                                   style: const TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w900,
                                     color: Colors.white,
@@ -262,7 +262,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                                 Text(
                                   'إغلاق',
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: 13,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
@@ -281,7 +281,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -345,7 +345,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
                 ),
@@ -386,7 +386,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                   child: Text(
                     i < arabicNums.length ? arabicNums[i] : '${i + 1}',
                     style: TextStyle(
-                      fontFamily: 'Cairo',
+                      fontFamily: 'NotoNaskhArabic',
                       fontSize: active ? 15 : 12,
                       fontWeight: FontWeight.w900,
                       color: active ? Colors.white : const Color(0xFF880E4F),
@@ -413,7 +413,7 @@ class _UniversalWordsStationState extends State<UniversalWordsStation> {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
                 ),

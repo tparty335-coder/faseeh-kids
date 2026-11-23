@@ -144,7 +144,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
               Flexible(
                 child: Text(
                   'ابحث عن الأرنب المختبئ واضغط عليه أولاً يا بطل!',
-                  style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -242,7 +242,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: isTablet ? 18 : 13,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
@@ -454,7 +454,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                                                     Text(
                                                       'أَحْسَنْتَ! وَجَدْتَ الْأَرْنَبَ الْمُخْتَبِئَ!',
                                                       style: TextStyle(
-                                                        fontFamily: 'Cairo',
+                                                        fontFamily: 'NotoNaskhArabic',
                                                         fontSize: 22,
                                                         fontWeight: FontWeight.w900,
                                                         color: Color(0xFF2E7D32),
@@ -496,7 +496,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                       currentScene['caption'] as String,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: isTablet ? 24 : 19,
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF3E2723),
@@ -521,7 +521,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: isTablet ? 18 : 15,
                               fontWeight: FontWeight.bold,
                             ),
@@ -549,7 +549,7 @@ class _AlifStoryStationState extends State<AlifStoryStation> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontFamily: 'Cairo',
+                              fontFamily: 'NotoNaskhArabic',
                               fontSize: isTablet ? 18 : 15,
                               fontWeight: FontWeight.bold,
                             ),

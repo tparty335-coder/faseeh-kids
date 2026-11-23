@@ -222,7 +222,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                           ),
                         ),
                       ),
@@ -256,7 +256,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                                 child: Text(
                                   _storyFrames[i]['caption'] as String,
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(fontFamily: 'Cairo', fontSize: 16),
+                                  style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16),
                                 ),
                               ),
                             ),
@@ -402,7 +402,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                                           child: Text(
                                             'أَحْسَنْتَ! وَجَدْتَ الْأَرْنَبَ الْمُخْتَبِئَ! 🎉',
                                             style: TextStyle(
-                                              fontFamily: 'Cairo', fontSize: 16,
+                                              fontFamily: 'NotoNaskhArabic', fontSize: 16,
                                               fontWeight: FontWeight.bold, color: Colors.white,
                                             ),
                                           ),
@@ -437,7 +437,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                   frame['caption'] as String,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                     fontSize: isTablet ? 28 : 22,
                     fontWeight: FontWeight.w900,
                     color: AppColors.textPrimaryDay,
@@ -467,7 +467,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                       },
                       icon: const Icon(Icons.arrow_back_ios_rounded, size: 18),
                       label: const Text('السابق',
-                          style: TextStyle(fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold)),
+                          style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primaryDay,
                         foregroundColor: Colors.white,
@@ -502,7 +502,7 @@ class _StorySequenceWidgetState extends State<StorySequenceWidget> {
                       label: Text(
                         isLast ? 'التالي: الْحَرَكَات' : 'التالي',
                         style: const TextStyle(
-                          fontFamily: 'Cairo', fontSize: 16, fontWeight: FontWeight.bold,
+                          fontFamily: 'NotoNaskhArabic', fontSize: 16, fontWeight: FontWeight.bold,
                         ),
                       ),
                       icon: const Icon(Icons.arrow_forward_ios_rounded, size: 18),

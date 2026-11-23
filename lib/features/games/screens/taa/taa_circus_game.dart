@@ -440,7 +440,7 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
               Text(
                 label,
                 style: const TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'NotoNaskhArabic',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -482,7 +482,7 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
         child: Text(
           t,
           style: const TextStyle(
-            fontFamily: 'Cairo',
+            fontFamily: 'NotoNaskhArabic',
             fontSize: 15,
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -521,7 +521,7 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ).animate(delay: 400.ms).fadeIn(),
                 const SizedBox(height: 30),
@@ -543,7 +543,7 @@ class _TaaCircusGameState extends ConsumerState<TaaCircusGame> {
                     });
                   },
                   icon: const Icon(Icons.replay_rounded),
-                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'Cairo', fontSize: 18)),
+                  label: const Text('الْعَبْ مَرَّةً أُخْرَى', style: TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 18)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
                     foregroundColor: Colors.black87,

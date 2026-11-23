@@ -76,7 +76,7 @@ class OasisNode extends StatelessWidget {
                 fontSize: nodeSize * 0.4,
                 fontWeight: FontWeight.bold,
                 color: isLocked ? Colors.grey.shade500 : AppColors.textPrimary,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
               ),
             ),
             if (isCompleted && !isPremiumLocked)

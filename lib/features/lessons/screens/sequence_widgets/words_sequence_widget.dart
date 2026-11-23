@@ -294,7 +294,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
               fontSize: 22,
               fontWeight: FontWeight.bold,
               color: AppColors.primaryDay,
-              fontFamily: 'Cairo',
+              fontFamily: 'NotoNaskhArabic',
             ),
           ).animate().fadeIn(duration: 400.ms),
           const SizedBox(height: 6),
@@ -351,7 +351,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: color,
-                    fontFamily: 'Cairo',
+                    fontFamily: 'NotoNaskhArabic',
                   ),
                 ),
                 const SizedBox(width: 8),
@@ -391,7 +391,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                           color: color,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                         ),
                       ),
                     ]),
@@ -420,7 +420,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
                 fontSize: 42,
                 fontWeight: FontWeight.w900,
                 color: color,
-                fontFamily: 'Cairo',
+                fontFamily: 'NotoNaskhArabic',
                 height: 1.2,
               ),
             ),
@@ -434,7 +434,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
             icon: const Icon(Icons.volume_up_rounded, size: 26),
             label: const Text(
               'استمع',
-              style: TextStyle(fontSize: 20, fontFamily: 'Cairo', fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontFamily: 'NotoNaskhArabic', fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: color,
@@ -462,7 +462,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
             icon: const Icon(Icons.arrow_back_ios_new, size: 16),
             label: Text(
               _currentPage == 0 ? 'السابق: المدود' : 'السابق',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 14, fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primaryDay,
@@ -499,7 +499,7 @@ class _WordsSequenceWidgetState extends State<WordsSequenceWidget> {
             onPressed: _goNext,
             icon: Text(
               _currentPage == _words.length - 1 ? 'التالي: الكتابة' : 'التالي',
-              style: const TextStyle(fontFamily: 'Cairo', fontSize: 14, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontFamily: 'NotoNaskhArabic', fontSize: 14, fontWeight: FontWeight.bold),
             ),
             label: const Icon(Icons.arrow_forward_ios, size: 16),
             style: ElevatedButton.styleFrom(

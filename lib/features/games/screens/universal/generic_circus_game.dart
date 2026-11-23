@@ -211,7 +211,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
   @override
   Widget build(BuildContext context) {
     if (_rounds.isEmpty) {
-      return const Center(child: Text('لا توجد جولات متاحة', style: TextStyle(fontFamily: 'Cairo')));
+      return const Center(child: Text('لا توجد جولات متاحة', style: TextStyle(fontFamily: 'NotoNaskhArabic')));
     }
     if (_gameOver) return _buildGameOver();
     return Column(
@@ -304,7 +304,7 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
                         '🎪 الجولة ${_round + 1} / ${_rounds.length}  •  ⭐ $_score',
                         style: const TextStyle(
                           color: Colors.white,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontWeight: FontWeight.bold,
                           fontSize: 13,
                         ),
@@ -348,10 +348,10 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
           const SizedBox(height: 12),
           Text(
             'رائع في سيرك (${widget.manifest.letter})!',
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, fontFamily: 'Cairo'),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, fontFamily: 'NotoNaskhArabic'),
           ),
           const SizedBox(height: 8),
-          Text('النتيجة: $_score / ${_rounds.length}', style: const TextStyle(fontSize: 18, fontFamily: 'Cairo')),
+          Text('النتيجة: $_score / ${_rounds.length}', style: const TextStyle(fontSize: 18, fontFamily: 'NotoNaskhArabic')),
           const SizedBox(height: 16),
           Wrap(
             spacing: 12,
@@ -370,12 +370,12 @@ class _GenericCircusGameState extends State<GenericCircusGame> {
                   _playInstruction();
                 },
                 icon: const Icon(Icons.refresh_rounded),
-                label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'Cairo')),
+                label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
               ),
               if (widget.onExit != null)
                 OutlinedButton(
                   onPressed: widget.onExit,
-                  child: const Text('قائمة الألعاب', style: TextStyle(fontFamily: 'Cairo')),
+                  child: const Text('قائمة الألعاب', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
                 ),
             ],
           ),

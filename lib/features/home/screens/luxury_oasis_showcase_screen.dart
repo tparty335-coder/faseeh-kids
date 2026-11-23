@@ -178,7 +178,7 @@ class _LuxuryOasisShowcaseScreenState
                             const Text(
                               'رِحْلَةُ الْحُرُوفِ الْعَرَبِيَّةِ',
                               style: TextStyle(
-                                fontFamily: 'Cairo',
+                                fontFamily: 'NotoNaskhArabic',
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFFFFE082),
@@ -212,7 +212,7 @@ class _LuxuryOasisShowcaseScreenState
                         Text(
                           'وَاحَاتُ فَصِيحْ',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -316,7 +316,7 @@ class _LuxuryOasisShowcaseScreenState
                         Text(
                           'المستوى ١',
                           style: TextStyle(
-                            fontFamily: 'Cairo',
+                            fontFamily: 'NotoNaskhArabic',
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFFFFE082),
@@ -527,7 +527,7 @@ class _LuxuryOasisNode extends StatelessWidget {
                     child: Text(
                       letter,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: isCurrent ? 44 : 36,
                         fontWeight: FontWeight.w900,
                         color: isUnlocked ? const Color(0xFFFFF9C4) : Colors.white38,

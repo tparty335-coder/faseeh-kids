@@ -51,7 +51,7 @@ class ArabicText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = TextStyle(
-      fontFamily: isFormal ? 'Amiri' : 'Cairo',
+      fontFamily: isFormal ? 'Amiri' : 'NotoNaskhArabic',
       fontSize: _getFontSize(context),
       fontWeight: _getFontWeight(),
       color: color,

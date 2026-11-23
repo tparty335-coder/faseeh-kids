@@ -167,7 +167,7 @@ class _WordCard extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                style: const TextStyle(fontSize: 48, fontFamily: 'Cairo'),
+                style: const TextStyle(fontSize: 48, fontFamily: 'NotoNaskhArabic'),
                 children: _buildHighlightedText(),
               ),
             ),

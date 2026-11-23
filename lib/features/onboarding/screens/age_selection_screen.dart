@@ -72,7 +72,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                                 child: Text(
                                   'كم عمرك؟',
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: context.scaledFont(36, min: 26, max: 42),
                                     fontWeight: FontWeight.w700,
                                     color: AppColors.textPrimaryDay,
@@ -84,7 +84,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                                 'اختر فئتك العمرية لنبدأ معاً',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontFamily: 'Cairo',
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: context.scaledFont(18, min: 14, max: 21),
                                   color: AppColors.textSecondaryDay,
                                 ),
@@ -143,7 +143,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                       child: Text(
                         'التالي',
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontSize: context.scaledFont(20, min: 16, max: 24),
                           fontWeight: FontWeight.w700,
                           height: 1.2,
@@ -226,7 +226,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                     Text(
                       group.labelAr,
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(17, min: 14, max: 20),
                         fontWeight: FontWeight.w700,
                         color: isSelected ? color : AppColors.textPrimaryDay,
@@ -235,7 +235,7 @@ class _AgeSelectionScreenState extends State<AgeSelectionScreen> {
                     Text(
                       '${group.ageRange} سنوات',
                       style: TextStyle(
-                        fontFamily: 'Cairo',
+                        fontFamily: 'NotoNaskhArabic',
                         fontSize: context.scaledFont(13.5, min: 12, max: 16),
                         color: isSelected
                             ? color.withValues(alpha: 0.85)

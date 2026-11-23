@@ -204,7 +204,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
   @override
   Widget build(BuildContext context) {
     if (_rounds.isEmpty) {
-      return const Center(child: Text('لا توجد جولات متاحة', style: TextStyle(fontFamily: 'Cairo')));
+      return const Center(child: Text('لا توجد جولات متاحة', style: TextStyle(fontFamily: 'NotoNaskhArabic')));
     }
     if (_gameOver) return _buildGameOver();
     return Column(
@@ -282,7 +282,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                                 child: Text(
                                   _droppedWord!,
                                   style: TextStyle(
-                                    fontFamily: 'Cairo',
+                                    fontFamily: 'NotoNaskhArabic',
                                     fontSize: (22 * refX * sx).clamp(12.0, 28.0),
                                     fontWeight: FontWeight.bold,
                                     color: Colors.green.shade900,
@@ -346,7 +346,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                         maxLines: 1,
                         textDirection: TextDirection.rtl,
                         style: TextStyle(
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontWeight: FontWeight.w900,
                           fontSize: (22 * refX * sx).clamp(13.0, 26.0),
                           color: const Color(0xFF0F172A),
@@ -391,7 +391,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                                   child: Text(
                                     card.label,
                                     style: TextStyle(
-                                      fontFamily: 'Cairo',
+                                      fontFamily: 'NotoNaskhArabic',
                                       fontWeight: FontWeight.bold,
                                       fontSize: (20 * refX * sx).clamp(12.0, 24.0),
                                       color: Colors.black87,
@@ -420,7 +420,7 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                         '📝 الجولة ${_round + 1} / ${_rounds.length}  •  ⭐ $_score',
                         style: const TextStyle(
                           color: Colors.white,
-                          fontFamily: 'Cairo',
+                          fontFamily: 'NotoNaskhArabic',
                           fontWeight: FontWeight.bold,
                           fontSize: 13,
                         ),
@@ -464,10 +464,10 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
           const SizedBox(height: 12),
           Text(
             'ممتاز في مطابقة (${widget.manifest.letter})!',
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, fontFamily: 'Cairo'),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, fontFamily: 'NotoNaskhArabic'),
           ),
           const SizedBox(height: 8),
-          Text('النتيجة: $_score / ${_rounds.length}', style: const TextStyle(fontSize: 18, fontFamily: 'Cairo')),
+          Text('النتيجة: $_score / ${_rounds.length}', style: const TextStyle(fontSize: 18, fontFamily: 'NotoNaskhArabic')),
           const SizedBox(height: 16),
           Wrap(
             spacing: 12,
@@ -486,12 +486,12 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                   _playInstruction();
                 },
                 icon: const Icon(Icons.refresh_rounded),
-                label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'Cairo')),
+                label: const Text('العب مجدداً', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
               ),
               if (widget.onExit != null)
                 OutlinedButton(
                   onPressed: widget.onExit,
-                  child: const Text('قائمة الألعاب', style: TextStyle(fontFamily: 'Cairo')),
+                  child: const Text('قائمة الألعاب', style: TextStyle(fontFamily: 'NotoNaskhArabic')),
                 ),
             ],
           ),

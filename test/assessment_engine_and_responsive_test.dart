@@ -96,6 +96,27 @@ void main() {
       ]) {
         expect(File(mascot).existsSync(), isTrue, reason: 'Missing mascot asset $mascot');
       }
+
+      // Confirm unified primary-school Noto Naskh Arabic font files exist on disk
+      for (final font in const [
+        'assets/fonts/NotoNaskhArabic-Regular.ttf',
+        'assets/fonts/NotoNaskhArabic-Medium.ttf',
+        'assets/fonts/NotoNaskhArabic-SemiBold.ttf',
+        'assets/fonts/NotoNaskhArabic-Bold.ttf',
+      ]) {
+        expect(File(font).existsSync(), isTrue, reason: 'Missing Naskh font $font');
+      }
+
+      // Confirm cognitively confusing/ambiguous words (like شراع sailboat) are permanently banned
+      const bannedWords = {'شراع', 'ذيل', 'قارب', 'جذر', 'غصن', 'زيت', 'مصر', 'يرسم'};
+      for (final item in AssessmentCurriculumData.globalIllustrationBank) {
+        final plain = AssessmentCurriculumData.stripDiacritics(item.word);
+        expect(
+          bannedWords.contains(plain),
+          isFalse,
+          reason: 'Ambiguous/confusing word "$plain" must stay banned from globalIllustrationBank!',
+        );
+      }
     });
 
     test('Every letter × every exercise type (364 combinations) generates valid questions with real assets on disk', () {
@@ -191,6 +212,12 @@ void main() {
             occurrences,
             1,
             reason: 'identifyLetterPosition for $letter picked "${posQ.displayPrompt}" with $occurrences occurrences!',
+          );
+          // Choices must use clean slot indices ('0','1','2') and NEVER spoil the connected letter form!
+          expect(
+            posQ.choices.map((c) => c.sublabel).toList(),
+            const ['0', '1', '2'],
+            reason: 'identifyLetterPosition must use non-spoiler position slots 0,1,2!',
           );
 
           // 3. oddOneOut (when words mode): 3 start with letter, 1 odd does NOT contain letter!
