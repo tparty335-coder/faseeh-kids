@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:faseeh_kids/features/lessons/data/all_letter_manifests.dart';
 import 'package:faseeh_kids/features/lessons/data/letter_tracing_words_catalog.dart';
 
 /// وحدة تقييم واحدة تضم ٧ حروف عربية متتالية (٢٨ حرفاً = ٤ وحدات قياس)
@@ -281,8 +280,27 @@ class AssessmentCurriculumData {
     return letters[normalized] ?? letters['أ']!;
   }
 
-  /// مستطيل القص النظيف لبطاقات محطة الكلمات (words_p*_card_*.webp)
-  static const Rect _wordCardCropRect = Rect.fromLTRB(0.135, 0.37, 0.47, 0.88);
+  /// بطاقات إضافية مُحقَّقة بالعين المجردة (١٠٠٪ مطابقة) للحروف الثلاثة (ن، ر، و) التي لا تبدأ بها بطاقات wordsMatch
+  static const List<TracingWordIllustration> _visuallyVerifiedExtraStarts = [
+    TracingWordIllustration(
+      word: 'نُسُورٌ',
+      imagePath: 'assets/images/lessons/noon/noon_words_p2_card_3.webp',
+      audioPath: 'audio/lessons/noon/final/noon_word_p2_3.mp3',
+      cropRect: Rect.fromLTRB(0.24, 0.22, 0.77, 0.67),
+    ),
+    TracingWordIllustration(
+      word: 'رُمَّانٌ',
+      imagePath: 'assets/images/lessons/noon/noon_words_p1_card_4.webp',
+      audioPath: 'audio/letters/words/noon_word4.mp3',
+      cropRect: Rect.fromLTRB(0.13, 0.36, 0.51, 0.86),
+    ),
+    TracingWordIllustration(
+      word: 'وَلَدٌ',
+      imagePath: 'assets/images/lessons/waaw/waaw_words_p2_card_2.webp',
+      audioPath: 'audio/lessons/waaw/final/waaw_word_p2_2.mp3',
+      cropRect: Rect.fromLTRB(0.19, 0.21, 0.48, 0.92),
+    ),
+  ];
 
   /// إزالة جميع علامات التشكيل والتطويل من الكلمة العربية للتحليل اللغوي الدقيق
   static String stripDiacritics(String input) {
@@ -358,7 +376,7 @@ class AssessmentCurriculumData {
     return null;
   }
 
-  /// بنك الصور الكرتونية الموثّقة الشامل لكل التطبيق (مبني مرة واحدة من كتالوج التتبع + بطاقات الكلمات)
+  /// بنك الصور الكرتونية النقية والمُحقَّقة ١٠٠٪ فقط (خلفية بيضاء نظيفة + تطابق تام — بلا أي استيراد عشوائي لملفات قديمة!)
   static List<TracingWordIllustration>? _cachedGlobalBank;
 
   static List<TracingWordIllustration> get globalIllustrationBank {
@@ -375,7 +393,7 @@ class AssessmentCurriculumData {
       }
     }
 
-    // 1. جميع بطاقات الكلمات الموثّقة من كتالوج التتبع (٢٨ حرفاً × ٤ كلمات)
+    // 1. جميع بطاقات الكلمات الكرتونية النقية على خلفية بيضاء من كتالوج التتبع الموثّق (١١٢ بطاقة)
     for (final l in allLetterChars) {
       final profile = LetterTracingWordsCatalog.getProfile(l);
       for (final w in profile.words) {
@@ -383,20 +401,9 @@ class AssessmentCurriculumData {
       }
     }
 
-    // 2. جميع بطاقات محطة الكلمات في المانيفستات الـ ٢٦ (تغطية ضخمة وموثّقة على القرص)
-    for (final manifest in allCurriculumManifests) {
-      for (final page in manifest.words.pages) {
-        for (final card in page.words) {
-          addItem(
-            TracingWordIllustration(
-              word: card.word,
-              imagePath: card.cardImagePath,
-              audioPath: card.audioPath,
-              cropRect: _wordCardCropRect,
-            ),
-          );
-        }
-      }
+    // 2. البطاقات الثلاث المُحقَّقة بالعين المجردة لحروف (ن، ر، و)
+    for (final extra in _visuallyVerifiedExtraStarts) {
+      addItem(extra);
     }
 
     _cachedGlobalBank = List.unmodifiable(bank);

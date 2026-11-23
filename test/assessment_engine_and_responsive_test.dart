@@ -52,6 +52,52 @@ void main() {
       expect(seen.length, 28);
     });
 
+    test('Verified pure-white illustration bank covers all 28 starting letters & bans corrupted legacy cards', () {
+      const allowedExtraLessons = {
+        'assets/images/lessons/noon/noon_words_p2_card_3.webp', // نُسُورٌ
+        'assets/images/lessons/noon/noon_words_p1_card_4.webp', // رُمَّانٌ
+        'assets/images/lessons/waaw/waaw_words_p2_card_2.webp', // وَلَدٌ
+      };
+
+      for (final item in AssessmentCurriculumData.globalIllustrationBank) {
+        expect(
+          item.imagePath.contains('ha_word_haal2'),
+          isFalse,
+          reason: 'Corrupted dove/sea card must NEVER enter globalIllustrationBank!',
+        );
+        final isVerifiedCatalog = item.imagePath.startsWith('assets/images/games/');
+        final isVerifiedExtra = allowedExtraLessons.contains(item.imagePath);
+        expect(
+          isVerifiedCatalog || isVerifiedExtra,
+          isTrue,
+          reason: 'Unverified legacy illustration leaked into bank: ${item.word} -> ${item.imagePath}',
+        );
+        expect(
+          File(item.imagePath).existsSync(),
+          isTrue,
+          reason: 'Illustration file missing on disk: ${item.imagePath}',
+        );
+      }
+
+      for (final letter in AssessmentCurriculumData.allLetterChars) {
+        final starts = AssessmentCurriculumData.startingIllustrationsFor(letter);
+        expect(
+          starts,
+          isNotEmpty,
+          reason: 'Letter $letter has NO verified starting illustration!',
+        );
+      }
+
+      for (final mascot in const [
+        'assets/images/mascot/falcon_happy.webp',
+        'assets/images/mascot/falcon_thinking.webp',
+        'assets/images/mascot/falcon_encouraging.webp',
+        'assets/images/mascot/falcon_celebrating.webp',
+      ]) {
+        expect(File(mascot).existsSync(), isTrue, reason: 'Missing mascot asset $mascot');
+      }
+    });
+
     test('Every letter × every exercise type (364 combinations) generates valid questions with real assets on disk', () {
       final engine = ArabicQuestionEngine(seed: 42);
       int generated = 0;
