@@ -1617,10 +1617,10 @@ class _ToyBlockChoiceTileState extends State<_ToyBlockChoiceTile> {
 
   @override
   Widget build(BuildContext context) {
-    Color bg = Colors.white;
-    Color border = widget.accent.withValues(alpha: 0.72);
-    Color lip = widget.accent.withValues(alpha: 0.42);
-    Color fg = PlayfulPalette.ink;
+    Color bg = Color.lerp(Colors.white, widget.accent, 0.06)!;
+    Color border = widget.accent.withValues(alpha: 0.78);
+    Color lip = widget.accent.withValues(alpha: 0.55);
+    Color fg = PlayfulPalette.darken(widget.accent, 0.24);
 
     if (widget.isSelectedCorrect) {
       bg = PlayfulPalette.emerald;
@@ -1702,8 +1702,8 @@ class _ToyBlockChoiceTileState extends State<_ToyBlockChoiceTile> {
                       style: TextStyle(
                         fontFamily: 'Cairo',
                         fontSize: widget.isWide
-                            ? context.scaledFont(40, min: 28, max: 50)
-                            : context.scaledFont(32, min: 22, max: 42),
+                            ? context.scaledFont(54, min: 34, max: 66)
+                            : context.scaledFont(38, min: 24, max: 48),
                         fontWeight: FontWeight.w900,
                         color: fg,
                       ),

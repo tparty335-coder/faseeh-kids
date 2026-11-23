@@ -298,21 +298,60 @@ class _GenericWordsMatchGameState extends State<GenericWordsMatchGame> {
                 ...List.generate(cards.length, (i) {
                   final card = cards[i];
                   final py = rd.cardPyList[i % rd.cardPyList.length];
-                  final cardW = 112 * refX * sx, cardH = 68 * refY * sy;
+                  // عرض كافٍ ليغطي تماماً البطاقة القديمة المرسومة في الصورة ويحتوي النص العربي بأناقة
+                  final cardW = 144 * refX * sx, cardH = 74 * refY * sy;
                   final cx = ox + rd.cardPx * sx;
                   final cy = oy + py * sy;
                   final isShaking = _shakingCard == i;
                   final isDone = _roundDone || _showCorrectAnswer;
 
+                  final cardColor = Color(card.colorValue ?? 0xFF5AC8FA);
                   final box = Container(
                     width: cardW,
                     height: cardH,
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.transparent,
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color.lerp(cardColor, Colors.white, 0.35)!,
+                          cardColor,
+                        ],
+                      ),
                       borderRadius: BorderRadius.circular(14),
-                      border: (card.isCorrect && _showCorrectAnswer)
-                          ? Border.all(color: Colors.green, width: 3)
-                          : (isShaking ? Border.all(color: Colors.red, width: 3) : null),
+                      border: Border.all(
+                        color: (card.isCorrect && _showCorrectAnswer)
+                            ? Colors.green.shade700
+                            : (isShaking
+                                ? Colors.red.shade600
+                                : Color.lerp(cardColor, Colors.black, 0.20)!),
+                        width: (card.isCorrect && _showCorrectAnswer) || isShaking
+                            ? 3.0
+                            : 2.0,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.14),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        card.label,
+                        maxLines: 1,
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.w900,
+                          fontSize: (22 * refX * sx).clamp(13.0, 26.0),
+                          color: const Color(0xFF0F172A),
+                        ),
+                      ),
                     ),
                   );
 

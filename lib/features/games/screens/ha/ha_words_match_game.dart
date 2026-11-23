@@ -8,7 +8,7 @@ import 'package:faseeh_kids/services/audio_service.dart';
 // ─── لعبة الكلمات لحرف الباء ─────────────────────────────────────────────────
 // مطابقة تماماً لشاشات الأسطوانة الأصلية ومحرك لعبة الكلمات لحرف الألف
 
-const double _imgW = 1024;
+const double _imgW = 800;
 
 class _WordCard {
   final String word;
@@ -47,72 +47,72 @@ class _Round {
 }
 
 const List<_Round> _rounds = [
-  // الجولة 1: حَمَل (1024 × 486)
+  // الجولة 1: حَوْض (800 × 446)
   _Round(
     imagePath: 'assets/images/games/match/ha/ha_match_1.webp',
-    imgH: 486,
-    cardPx: 195.0,
-    cardPyList: [125.0, 236.0, 350.0],
-    dropPx: 643.0,
-    dropPy: 394.0,
-    correctWord: 'حَمَل',
-    wordAudio: 'audio/lessons/ha/sounds/word_himal.mp3',
+    imgH: 446,
+    cardPx: 170.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 525.0,
+    dropPy: 420.0,
+    correctWord: 'حَوْض',
+    wordAudio: 'audio/games/match/ha/ha_match_1.mp3',
     praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
-      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'حَمَل', isCorrect: true,  color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'حَوْض', isCorrect: true, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'إِبْرَة', isCorrect: false, color: Color(0xFFFFD17A)),
+    ],
+  ),
+  // الجولة 2: حِصَان (800 × 446)
+  _Round(
+    imagePath: 'assets/images/games/match/ha/ha_match_2.webp',
+    imgH: 446,
+    cardPx: 170.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 550.0,
+    dropPy: 420.0,
+    correctWord: 'حِصَان',
+    wordAudio: 'audio/games/match/ha/ha_match_2.mp3',
+    praiseAudio: 'audio/feedback/great.mp3',
+    cards: [
+      _WordCard(word: 'حِصَان', isCorrect: true, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'أَسَد', isCorrect: false, color: Color(0xFFFF9EB5)),
       _WordCard(word: 'أَرْنَب', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 2: حِصَان (1024 × 524)
-  _Round(
-    imagePath: 'assets/images/games/match/ha/ha_match_2.webp',
-    imgH: 524,
-    cardPx: 121.0,
-    cardPyList: [140.0, 258.0, 385.0],
-    dropPx: 598.0,
-    dropPy: 442.0,
-    correctWord: 'حِصَان',
-    wordAudio: 'audio/lessons/baa/words/p3_tabeeb.mp3',
-    praiseAudio: 'audio/feedback/great.mp3',
-    cards: [
-      _WordCard(word: 'حِصَان', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بُرْج', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFFD17A)),
-    ],
-  ),
-  // الجولة 3: حِمَار (1024 × 574)
+  // الجولة 3: حَمَامَة (800 × 446)
   _Round(
     imagePath: 'assets/images/games/match/ha/ha_match_3.webp',
-    imgH: 574,
-    cardPx: 136.0,
-    cardPyList: [151.0, 280.0, 418.0],
-    dropPx: 658.0,
-    dropPy: 468.0,
-    correctWord: 'حِمَار',
-    wordAudio: 'audio/lessons/ha/final/ha_word_p2_2.mp3',
+    imgH: 446,
+    cardPx: 170.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 550.0,
+    dropPy: 420.0,
+    correctWord: 'حَمَامَة',
+    wordAudio: 'audio/games/match/ha/ha_match_3.mp3',
     praiseAudio: 'audio/feedback/smart.mp3',
     cards: [
-      _WordCard(word: 'حِمَار', isCorrect: true,  color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'بَلَح', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'عِنَب', isCorrect: false, color: Color(0xFFFFD17A)),
+      _WordCard(word: 'حَمَامَة', isCorrect: true, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'قِطَّة', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'بَطَّة', isCorrect: false, color: Color(0xFFFFD17A)),
     ],
   ),
-  // الجولة 4: حُوت (1024 × 538)
+  // الجولة 4: لُحُوم (800 × 446)
   _Round(
     imagePath: 'assets/images/games/match/ha/ha_match_4.webp',
-    imgH: 538,
-    cardPx: 132.0,
-    cardPyList: [123.0, 254.0, 396.0],
-    dropPx: 666.0,
-    dropPy: 423.0,
+    imgH: 446,
+    cardPx: 170.0,
+    cardPyList: [128.0, 236.0, 353.0],
+    dropPx: 550.0,
+    dropPy: 420.0,
     correctWord: 'لُحُوم',
     wordAudio: 'audio/games/match/ha/ha_match_4.mp3',
     praiseAudio: 'audio/common/encourage_1.mp3',
     cards: [
-      _WordCard(word: 'فَأْس', isCorrect: false, color: Color(0xFF5AC8FA)),
-      _WordCard(word: 'قَلَم', isCorrect: false, color: Color(0xFFFF9EB5)),
-      _WordCard(word: 'حُوت', isCorrect: true,  color: Color(0xFFFFD17A)),
+      _WordCard(word: 'دَجَاجَة', isCorrect: false, color: Color(0xFF5AC8FA)),
+      _WordCard(word: 'بَطَّة', isCorrect: false, color: Color(0xFFFF9EB5)),
+      _WordCard(word: 'لُحُوم', isCorrect: true, color: Color(0xFFFFD17A)),
     ],
   ),
 ];
@@ -423,7 +423,7 @@ class _HaWordsMatchGameState extends ConsumerState<HaWordsMatchGame>
     final card = rd.cards[i];
     final cx = ox + rd.cardPx * scaleX;
     final cy = oy + rd.cardPyList[i] * scaleY;
-    const cW = 112.0, cH = 74.0;
+    const cW = 144.0, cH = 74.0;
     final cardW = cW * scaleX, cardH = cH * scaleY;
     final isShaking = _shakingCard == i;
     final isDone = _roundDone || _showCorrectAnswer;
@@ -431,9 +431,47 @@ class _HaWordsMatchGameState extends ConsumerState<HaWordsMatchGame>
     Widget cardFace = Container(
       width: cardW,
       height: cardH,
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       decoration: BoxDecoration(
-        color: Colors.transparent, // شفاف ليظهر كرت الأسطوانة المرسوم تحتها تماماً
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color.lerp(card.color, Colors.white, 0.35)!,
+            card.color,
+          ],
+        ),
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          color: (card.isCorrect && _showCorrectAnswer)
+              ? Colors.green.shade700
+              : (isShaking
+                  ? Colors.red.shade600
+                  : Color.lerp(card.color, Colors.black, 0.20)!),
+          width: (card.isCorrect && _showCorrectAnswer) || isShaking ? 3.0 : 2.0,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.14),
+            blurRadius: 4,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          card.word,
+          maxLines: 1,
+          textDirection: TextDirection.rtl,
+          style: TextStyle(
+            fontFamily: 'Cairo',
+            fontWeight: FontWeight.w900,
+            fontSize: (22 * scaleX).clamp(13.0, 26.0),
+            color: const Color(0xFF0F172A),
+          ),
+        ),
       ),
     );
 

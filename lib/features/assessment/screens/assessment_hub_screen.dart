@@ -220,7 +220,7 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
               lipDepth: 3,
               padding: EdgeInsets.all(isCompact ? 8 : 11),
               child: Icon(
-                Icons.arrow_forward_rounded,
+                Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: isCompact ? 20 : 24,
               ),
@@ -596,62 +596,82 @@ class _AssessmentHubScreenState extends ConsumerState<AssessmentHubScreen> {
               ),
             ),
 
-            // جسم البطاقة: مكعبات الحروف الـ ٧ + زر الإطلاق ثلاثي الأبعاد
+            // جسم البطاقة: مكعبات الحروف الـ ٧ في صف واحد متناسق + زر الإطلاق ثلاثي الأبعاد
             Padding(
               padding: EdgeInsets.all(isCompact ? 12 : 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Wrap(
-                    spacing: isCompact ? 6 : 8,
-                    runSpacing: 8,
-                    children: unit.letters.map((l) {
-                      final spec = AssessmentCurriculumData.letterSpec(l);
-                      final isWeak = result?.weakLetters.contains(l) ?? false;
-                      final tileColor =
-                          isWeak ? PlayfulPalette.coral : unit.primaryColor;
-                      return Container(
-                        width: isCompact ? 34 : 42,
-                        height: isCompact ? 34 : 42,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: isWeak
-                              ? const Color(0xFFFFF1F2)
-                              : tileColor.withValues(alpha: 0.11),
-                          borderRadius: BorderRadius.circular(13),
-                          border: Border.all(
-                            color: isWeak
-                                ? PlayfulPalette.coral
-                                : tileColor.withValues(alpha: 0.40),
-                            width: 1.8,
+                  Row(
+                    children: [
+                      for (int idx = 0; idx < unit.letters.length; idx++) ...[
+                        if (idx > 0) SizedBox(width: isCompact ? 4 : 6),
+                        Expanded(
+                          child: Builder(
+                            builder: (context) {
+                              final l = unit.letters[idx];
+                              final spec =
+                                  AssessmentCurriculumData.letterSpec(l);
+                              final isWeak =
+                                  result?.weakLetters.contains(l) ?? false;
+                              final tileColor = isWeak
+                                  ? PlayfulPalette.coral
+                                  : unit.primaryColor;
+                              return AspectRatio(
+                                aspectRatio: 1.0,
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: isWeak
+                                        ? const Color(0xFFFFF1F2)
+                                        : tileColor.withValues(alpha: 0.11),
+                                    borderRadius: BorderRadius.circular(
+                                      isCompact ? 10 : 13,
+                                    ),
+                                    border: Border.all(
+                                      color: isWeak
+                                          ? PlayfulPalette.coral
+                                          : tileColor.withValues(alpha: 0.42),
+                                      width: 1.8,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: isWeak
+                                            ? const Color(0xFFFCA5A5)
+                                            : tileColor.withValues(alpha: 0.26),
+                                        offset: const Offset(0, 3),
+                                        blurRadius: 0,
+                                      ),
+                                    ],
+                                  ),
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(2),
+                                      child: Text(
+                                        spec.displayChar,
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: isCompact ? 16 : 21,
+                                          fontWeight: FontWeight.w900,
+                                          color: isWeak
+                                              ? PlayfulPalette.coralDeep
+                                              : PlayfulPalette.darken(
+                                                  tileColor,
+                                                  0.12,
+                                                ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: isWeak
-                                  ? const Color(0xFFFCA5A5)
-                                  : tileColor.withValues(alpha: 0.24),
-                              offset: const Offset(0, 3),
-                              blurRadius: 0,
-                            ),
-                          ],
                         ),
-                        child: FittedBox(
-                          fit: BoxFit.scaleDown,
-                          child: Text(
-                            spec.displayChar,
-                            style: TextStyle(
-                              fontFamily: 'Cairo',
-                              fontSize: isCompact ? 17 : 21,
-                              fontWeight: FontWeight.w900,
-                              color: isWeak
-                                  ? PlayfulPalette.coralDeep
-                                  : PlayfulPalette.darken(tileColor, 0.12),
-                            ),
-                          ),
-                        ),
-                      );
-                    }).toList(),
+                      ],
+                    ],
                   ),
                   const SizedBox(height: 16),
                   Juicy3DButton(
